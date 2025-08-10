@@ -16,21 +16,21 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Singapore Office",
-      details: ["16 Collyer Quay, #10-00", "Income at Raffles", "Singapore 049318"],
-    },
-    {
-      icon: Phone,
-      title: "Direct Line",
-      details: ["+65 6223 1910", "Available 9 AM - 6 PM SGT"],
+      details: ["39B Neil Rd (Level 3)", "Singapore 088823"],
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["hlteo@bethelchambers.com", "Response within 24 hours"],
+      details: ["hl@huilinglawoffice.com", "Response within 24 hours"],
+    },
+    {
+      icon: MessageCircle,
+      title: "WhatsApp",
+      details: ["+65 97265330", "Quick consultation inquiries"],
     },
     {
       icon: Globe,
-      title: "Global Reach",
+      title: "Global Partners",
       details: ["Cross-border expertise", "Dual English & Singapore Law"],
     },
   ];
@@ -86,7 +86,17 @@ const Contact = () => {
                     </h4>
                     {info.details.map((detail, detailIndex) => (
                       <p key={detailIndex} className="text-muted-foreground font-light">
-                        {detail}
+                        {info.title === "Email" && detailIndex === 0 ? (
+                          <a href={`mailto:${detail}`} className="hover:text-accent transition-smooth">
+                            {detail}
+                          </a>
+                        ) : info.title === "WhatsApp" && detailIndex === 0 ? (
+                          <a href={`https://wa.me/${detail.replace(/\s/g, '')}`} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-smooth">
+                            {detail}
+                          </a>
+                        ) : (
+                          detail
+                        )}
                       </p>
                     ))}
                   </div>

@@ -1,12 +1,12 @@
 import { 
   MapPin, 
-  Phone, 
   Mail, 
   Linkedin, 
   BookOpen, 
   Scale,
   Rocket,
-  Plane
+  Plane,
+  MessageCircle
 } from "lucide-react";
 
 const Footer = () => {
@@ -100,26 +100,39 @@ const Footer = () => {
                 <div className="flex items-start space-x-3">
                   <MapPin className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
                   <div className="text-muted-foreground text-sm font-light">
-                    <div>16 Collyer Quay, #10-00</div>
-                    <div>Income at Raffles</div>
-                    <div>Singapore 049318</div>
+                    <div>39B Neil Rd (Level 3)</div>
+                    <div>Singapore 088823</div>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-foreground" />
-                  <span className="text-muted-foreground text-sm font-light">+65 6223 1910</span>
+                  <Mail className="h-5 w-5 text-foreground" />
+                  <a 
+                    href="mailto:hl@huilinglawoffice.com"
+                    className="text-muted-foreground hover:text-foreground transition-smooth text-sm font-light"
+                  >
+                    hl@huilinglawoffice.com
+                  </a>
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-foreground" />
-                  <span className="text-muted-foreground text-sm font-light">hlteo@bethelchambers.com</span>
+                  <MessageCircle className="h-5 w-5 text-foreground" />
+                  <a 
+                    href="https://wa.me/6597265330"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground transition-smooth text-sm font-light"
+                  >
+                    WhatsApp: +65 97265330
+                  </a>
                 </div>
 
                 <div className="flex items-center space-x-3">
                   <Linkedin className="h-5 w-5 text-foreground" />
                   <a 
-                    href="#" 
+                    href="https://www.linkedin.com/company/beyondhorizonslegal" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-foreground transition-smooth text-sm font-light"
                   >
                     Connect on LinkedIn
