@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Award, BookOpen, Users, TrendingUp, ExternalLink } from "lucide-react";
 import founderPortrait from "@/assets/founder-portrait.jpg";
-import asianLuxuryHillsOfficeTeam from "@/assets/asian-luxury-hills-office-team.jpg";
+import asianExpansiveLuxuryOfficeTeam from "@/assets/asian-expansive-luxury-office-team.jpg";
 
 const About = () => {
   const achievements = [
@@ -62,8 +62,8 @@ const About = () => {
           <div className="space-y-12">
             <div className="relative">
               <img
-                src={asianLuxuryHillsOfficeTeam}
-                alt="Beyond Horizons Legal Team - Asian Professionals in Luxury Office with Rolling Hills"
+                src={asianExpansiveLuxuryOfficeTeam}
+                alt="Beyond Horizons Legal Team - Asian Professionals in Expansive Luxury Office"
                 className="w-full max-w-md mx-auto rounded shadow-minimal"
               />
               <p className="text-xs text-muted-foreground text-center mt-2 font-light italic">
