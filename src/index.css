@@ -193,4 +193,26 @@
       padding-right: 3rem;
     }
   }
+
+  /* Breathing Button Animation */
+  .btn-breathing {
+    position: relative;
+    border: 1px solid currentColor;
+    animation: breathing 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+  }
+
+  .btn-breathing:hover {
+    animation: none;
+    transform: scale(1.02);
+  }
+
+  @keyframes breathing {
+    0%, 100% {
+      border-width: 1px;
+    }
+    50% {
+      border-width: 2px;
+    }
+  }
 }

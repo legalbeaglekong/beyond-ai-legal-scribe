@@ -91,7 +91,7 @@ const Contact = () => {
                             {detail}
                           </a>
                         ) : info.title === "WhatsApp" && detailIndex === 0 ? (
-                          <a href="https://wa.me/6597265330" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl animate-pulse hover:animate-none transform hover:scale-105">
+                          <a href="https://wa.me/6597265330" target="_blank" rel="noopener noreferrer" className="inline-flex items-center btn-breathing bg-black text-white px-4 py-2 rounded-lg border-black">
                             <MessageCircle className="h-4 w-4 mr-2" />
                             {detail}
                           </a>
@@ -135,7 +135,7 @@ const Contact = () => {
                   how our innovative legal strategies can accelerate your business objectives.
                 </p>
                 <div className="space-y-6">
-                <Button variant="default" size="lg" className="w-full text-lg bg-gradient-to-r from-primary to-primary-glow shadow-elegant hover:shadow-glow animate-pulse hover:animate-none transform hover:scale-105 transition-all duration-300" asChild>
+                <Button variant="default" size="lg" className="w-full text-lg btn-breathing bg-black text-white border-black hover:bg-black" asChild>
                   <a 
                     href="https://outlook.office.com/bookwithme/user/c79273fd7b174b88a10e537f3ae6e251@huilinglawoffice.com/meetingtype/gilpmYHK-EawFiSPKhEVhQ2?anonymous&ep=mlink&ismsaljsauthenabled=true"
                     target="_blank"
