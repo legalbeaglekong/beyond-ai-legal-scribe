@@ -8,8 +8,11 @@ const Hero = () => {
       <div className="max-w-5xl mx-auto container-padding text-center">
         {/* Tagline */}
         <div className="mb-16">
-          <p className="text-muted-foreground font-light text-sm uppercase tracking-wide mb-8">
-            Being Legal Solutions for Tomorrow's Leaders
+          <p className="text-muted-foreground font-light text-sm uppercase tracking-wide mb-2">
+            Crafted for Visionaries
+          </p>
+          <p className="text-muted-foreground font-light text-xs uppercase tracking-wide">
+            Pioneering AI-Native Legal Services in APAC
           </p>
         </div>
 
