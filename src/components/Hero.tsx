@@ -18,13 +18,13 @@ const Hero = () => {
 
         {/* Main Headline */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-12 leading-tight">
-          Pioneering Legal Solutions for Transportation & Space Innovation
+          Elite Expertise. AI-Powered Precision. Clarity in Complexity.
         </h1>
 
         {/* Subheadline */}
         <p className="text-xl md:text-2xl text-muted-foreground mb-16 leading-relaxed max-w-4xl mx-auto font-light">
-          Empowering visionary clients who are shaping the future of aviation, maritime, 
-          space exploration, and sustainable technologies with bespoke legal strategies.
+          Led by seasoned partners from the world's top firms, we deliver superior, efficient outcomes 
+          in high-stakes restructuring and complex cross-border transactions across Asia.
         </p>
 
         {/* Key Value Props */}
