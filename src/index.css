@@ -6,13 +6,18 @@
 
 @layer base {
   :root {
-    /* Pure Minimalist Palette */
+    /* Pure Minimalist Palette with Sage Green Accents */
     --background: 0 0% 100%;
     --foreground: 0 0% 0%;
 
-    /* Clean Black & White */
+    /* Clean Black & White with Sage Accent */
     --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
+
+    /* Sage Green Accent */
+    --accent: 120 25% 35%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 120 30% 85%;
 
     /* Subtle Grays */
     --secondary: 0 0% 96%;
