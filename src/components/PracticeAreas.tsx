@@ -30,9 +30,10 @@ const PracticeAreas = () => {
     },
     {
       icon: Building,
-      title: "Asset Recovery & Restructuring",
-      description: "Comprehensive solutions for asset recovery, restructuring and insolvency matters, work-outs, turnarounds and special situations requiring innovative legal strategies.",
-      expertise: ["Asset Recovery", "Restructuring & Insolvency", "Work-outs", "Turnarounds"],
+      title: "Restructuring & Work-outs",
+      description: "Comprehensive solutions for corporate restructuring, insolvency matters, work-outs, turnarounds and special situations requiring innovative legal strategies and creative deal structuring.",
+      highlight: "Led complex cross-border restructuring for major Asian conglomerate",
+      expertise: ["Corporate Restructuring", "Work-outs & Turnarounds", "Insolvency", "Special Situations"],
     },
     {
       icon: DollarSign,
