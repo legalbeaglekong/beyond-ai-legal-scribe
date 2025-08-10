@@ -58,13 +58,7 @@ const CookieConsent = () => {
                 </div>
                 <p className="text-sm text-muted-foreground font-light leading-relaxed max-w-2xl">
                   We use essential cookies to ensure our website functions properly and provide you with the best user experience. 
-                  These cookies help us remember your preferences and improve our services.{" "}
-                  <button 
-                    className="text-foreground hover:text-accent transition-smooth underline underline-offset-2"
-                    onClick={() => window.open('/privacy-policy', '_blank')}
-                  >
-                    Learn more about our privacy practices
-                  </button>
+                  These cookies help us remember your preferences and improve our services.
                 </p>
               </div>
             </div>
