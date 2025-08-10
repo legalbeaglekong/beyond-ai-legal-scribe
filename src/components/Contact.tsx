@@ -91,7 +91,7 @@ const Contact = () => {
                             {detail}
                           </a>
                         ) : info.title === "WhatsApp" && detailIndex === 0 ? (
-                          <a href="https://wa.me/6597265330" target="_blank" rel="noopener noreferrer" className="inline-flex items-center btn-breathing bg-black text-white px-4 py-2 rounded-lg border-black">
+                          <a href="https://wa.me/6597265330" target="_blank" rel="noopener noreferrer" className="inline-flex items-center btn-ring-pulse px-4 py-2 rounded-lg">
                             <MessageCircle className="h-4 w-4 mr-2" />
                             {detail}
                           </a>
@@ -135,7 +135,7 @@ const Contact = () => {
                   how our innovative legal strategies can accelerate your business objectives.
                 </p>
                 <div className="space-y-6">
-                <Button variant="default" size="lg" className="w-full text-lg btn-breathing bg-black text-white border-black hover:bg-black" asChild>
+                <Button variant="default" size="lg" className="w-full text-lg btn-ring-pulse" asChild>
                   <a 
                     href="https://outlook.office.com/bookwithme/user/c79273fd7b174b88a10e537f3ae6e251@huilinglawoffice.com/meetingtype/gilpmYHK-EawFiSPKhEVhQ2?anonymous&ep=mlink&ismsaljsauthenabled=true"
                     target="_blank"

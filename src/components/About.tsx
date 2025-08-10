@@ -133,7 +133,7 @@ const About = () => {
                 who understands your industry's unique challenges.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="default" size="lg" asChild>
+                <Button variant="default" size="lg" className="btn-ring-pulse" asChild>
                   <a 
                     href="https://outlook.office.com/bookwithme/user/c79273fd7b174b88a10e537f3ae6e251@huilinglawoffice.com/meetingtype/gilpmYHK-EawFiSPKhEVhQ2?anonymous&ep=mlink&ismsaljsauthenabled=true"
                     target="_blank"
