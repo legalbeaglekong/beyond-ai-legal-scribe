@@ -61,8 +61,8 @@ const About = () => {
           <div className="space-y-12">
             <div className="relative">
               <img
-                src="/src/assets/leadership-centered-ai-team.jpg"
-                alt="Beyond Horizons Legal Team - Leadership-Centered Diverse Practice"
+                src="/src/assets/elegant-leadership-golf-ai-team.jpg"
+                alt="Beyond Horizons Legal Team - Elite Leadership with AI Integration"
                 className="w-full max-w-md mx-auto rounded shadow-minimal"
               />
             </div>
