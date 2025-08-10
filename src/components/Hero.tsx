@@ -12,7 +12,7 @@ const Hero = () => {
             Crafted for Visionaries
           </p>
           <p className="text-muted-foreground font-light text-xs uppercase tracking-wide">
-            Pioneering AI-Native Legal Services in APAC
+            Pioneering AI-Native Legal Services
           </p>
         </div>
 
