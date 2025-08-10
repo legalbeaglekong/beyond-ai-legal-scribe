@@ -18,9 +18,9 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="text-xl font-bold text-primary">
-              <span className="text-gradient">Beyond Horizons</span>
-              <div className="text-xs font-normal text-muted-foreground mt-1">
+            <div className="text-xl font-bold text-primary font-serif-heading">
+              <span className="text-gradient accent-dot">Beyond Horizons</span>
+              <div className="text-xs font-sans-light text-muted-foreground mt-1 uppercase tracking-widest">
                 Bethel Chambers LLC
               </div>
             </div>
@@ -33,7 +33,7 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-accent transition-smooth font-medium"
+                  className="text-foreground hover:text-accent transition-smooth font-sans-light text-sm"
                 >
                   {item.name}
                 </a>

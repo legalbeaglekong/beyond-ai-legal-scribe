@@ -47,10 +47,10 @@ const About = () => {
           <Badge variant="outline" className="mb-4 text-accent border-accent">
             Global Authority
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Meet Your <span className="text-gradient">Legal Strategist</span>
+          <h2 className="text-4xl md:text-5xl font-serif-heading font-bold text-foreground mb-6">
+            Meet Your <span className="text-gradient accent-dot">Legal Strategist</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-sans-light leading-relaxed">
             Hui Ling Teo combines unparalleled legal expertise with visionary business acumen to guide
             tomorrow's most innovative companies through complex regulatory landscapes.
           </p>
@@ -73,11 +73,11 @@ const About = () => {
             </div>
 
             <div className="text-center lg:text-left space-y-4">
-              <h3 className="text-3xl font-bold text-foreground">Hui Ling Teo</h3>
-              <p className="text-lg text-accent font-semibold">
+              <h3 className="text-3xl font-serif-heading font-bold text-foreground">Hui Ling Teo</h3>
+              <p className="text-lg text-accent font-sans-light tracking-wide">
                 Legal Strategist | Business Builder | Global Market Leader
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed font-sans-light italic">
                 "I see legal challenges through a business perspective rather than just legal — this unique
                 approach enables me to craft solutions that drive innovation while ensuring compliance in
                 the most complex regulatory environments."

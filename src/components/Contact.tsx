@@ -57,10 +57,10 @@ const Contact = () => {
           <Badge variant="outline" className="mb-4 text-accent border-accent">
             Get Started Today
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Schedule Your <span className="text-gradient">Strategic Consultation</span>
+          <h2 className="text-4xl md:text-5xl font-serif-heading font-bold text-foreground mb-6">
+            Schedule Your <span className="text-gradient accent-dot">Strategic Consultation</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-sans-light leading-relaxed">
             Ready to transform your legal strategy and pioneer the future of your industry? 
             Let's discuss how our expertise can accelerate your vision.
           </p>

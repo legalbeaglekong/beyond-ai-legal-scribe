@@ -68,10 +68,10 @@ const PracticeAreas = () => {
           <Badge variant="outline" className="mb-4 text-accent border-accent">
             Specialized Expertise
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Leading-Edge <span className="text-gradient">Practice Areas</span>
+          <h2 className="text-4xl md:text-5xl font-serif-heading font-bold text-foreground mb-6">
+            Leading-Edge <span className="text-gradient divider-line">Practice Areas</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-sans-light leading-relaxed">
             We provide bespoke legal solutions across the most innovative sectors of transportation 
             and space technology, where no two solutions are alike and every deal sets new precedents.
           </p>

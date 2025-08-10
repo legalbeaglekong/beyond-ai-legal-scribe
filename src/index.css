@@ -1,65 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Premium Legal Firm Design System - Beyond Horizons */
+/* Elegant Sage Green & Charcoal Design System - Beyond Horizons */
 
 @layer base {
   :root {
-    /* Core Brand Colors - Professional Deep Blues and Teals */
-    --background: 0 0% 100%;
-    --foreground: 215 25% 12%;
+    /* Sophisticated Sage Green & Charcoal Palette */
+    --background: 120 20% 98%;
+    --foreground: 25 15% 15%;
 
-    /* Premium Navy for Authority */
-    --primary: 215 40% 15%;
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 215 50% 25%;
+    /* Rich Charcoal for Authority */
+    --primary: 25 20% 20%;
+    --primary-foreground: 120 20% 98%;
+    --primary-glow: 25 25% 30%;
 
-    /* Innovation Teal Accent */
-    --accent: 180 65% 25%;
-    --accent-foreground: 0 0% 98%;
-    --accent-light: 180 45% 85%;
+    /* Elegant Sage Green Accent */
+    --accent: 120 25% 35%;
+    --accent-foreground: 120 20% 98%;
+    --accent-light: 120 30% 85%;
 
-    /* Professional Secondary */
-    --secondary: 215 20% 95%;
-    --secondary-foreground: 215 25% 12%;
+    /* Warm Light Sage Background */
+    --secondary: 120 25% 94%;
+    --secondary-foreground: 25 15% 15%;
 
     /* Sophisticated Muted Tones */
-    --muted: 215 15% 96%;
-    --muted-foreground: 215 12% 45%;
+    --muted: 120 20% 95%;
+    --muted-foreground: 25 10% 45%;
 
     /* Card and UI Elements */
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 12%;
+    --card: 120 30% 99%;
+    --card-foreground: 25 15% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 12%;
+    --popover: 120 30% 99%;
+    --popover-foreground: 25 15% 15%;
 
-    /* Professional Gold Accent for CTAs */
-    --gold: 43 85% 58%;
-    --gold-foreground: 215 25% 12%;
+    /* Warm Gold Accent for CTAs */
+    --gold: 35 85% 58%;
+    --gold-foreground: 25 15% 15%;
 
     /* Status Colors */
-    --destructive: 0 75% 55%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 120 20% 98%;
 
     /* Border and Input */
-    --border: 215 15% 88%;
-    --input: 215 15% 92%;
-    --ring: 215 40% 15%;
+    --border: 120 20% 88%;
+    --input: 120 20% 92%;
+    --ring: 25 20% 20%;
 
-    /* Sophisticated Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(215 40% 15%), hsl(180 65% 25%));
-    --gradient-accent: linear-gradient(120deg, hsl(180 65% 25%), hsl(180 45% 35%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(215 15% 98%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(215 10% 96%));
+    /* Elegant Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(25 20% 20%), hsl(120 25% 35%));
+    --gradient-accent: linear-gradient(120deg, hsl(120 25% 35%), hsl(120 30% 45%));
+    --gradient-subtle: linear-gradient(180deg, hsl(120 20% 98%), hsl(120 25% 96%));
+    --gradient-card: linear-gradient(145deg, hsl(120 30% 99%), hsl(120 25% 94%));
 
-    /* Premium Shadows */
-    --shadow-elegant: 0 4px 32px -4px hsl(215 40% 15% / 0.1);
-    --shadow-hover: 0 8px 48px -8px hsl(215 40% 15% / 0.15);
-    --shadow-glow: 0 0 40px hsl(180 65% 25% / 0.2);
+    /* Refined Shadows */
+    --shadow-elegant: 0 4px 32px -4px hsl(25 20% 20% / 0.08);
+    --shadow-hover: 0 8px 48px -8px hsl(25 20% 20% / 0.12);
+    --shadow-glow: 0 0 40px hsl(120 25% 35% / 0.15);
 
     /* Animation Variables */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -129,13 +127,26 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.025em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Crimson Text', serif;
     font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .font-serif-heading {
+    font-family: 'Crimson Text', serif;
+  }
+
+  .font-sans-light {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.05em;
   }
 }
 
@@ -181,5 +192,37 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  /* Elegant Design Elements */
+  .divider-line {
+    position: relative;
+  }
+
+  .divider-line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: hsl(var(--accent));
+    transform: translateY(-50%);
+  }
+
+  .accent-dot {
+    position: relative;
+  }
+
+  .accent-dot::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: hsl(var(--accent));
+    border-radius: 50%;
+    top: 50%;
+    right: -12px;
+    transform: translateY(-50%);
   }
 }
