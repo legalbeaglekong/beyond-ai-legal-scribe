@@ -17,15 +17,28 @@ const Hero = () => {
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-12 leading-tight">
-          Elite Expertise. AI-Powered Precision. Clarity in Complexity.
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-8 leading-tight">
+          Elite Legal Expertise
         </h1>
 
+        {/* Subheader */}
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-muted-foreground mb-12 leading-tight">
+          Clarity in Complexity
+        </h2>
+
         {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-muted-foreground mb-16 leading-relaxed max-w-4xl mx-auto font-light">
+        <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto font-light">
           Led by seasoned partners from the world's top firms, we deliver superior, efficient outcomes 
           in high-stakes restructuring and complex cross-border transactions across Asia.
         </p>
+
+        {/* Outcomes-Based Pricing Highlight */}
+        <div className="bg-gradient-to-r from-primary/10 to-primary-glow/10 border border-primary/20 rounded-lg p-6 mb-16 max-w-2xl mx-auto">
+          <p className="text-lg font-medium text-primary mb-2">Outcomes-Based Pricing</p>
+          <p className="text-muted-foreground text-sm">
+            Transparent, performance-driven fees aligned with your success. No hourly billing complexity.
+          </p>
+        </div>
 
         {/* Key Value Props */}
         <div className="flex flex-wrap justify-center items-center gap-12 mb-16 text-muted-foreground">
