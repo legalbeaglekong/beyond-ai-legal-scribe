@@ -26,7 +26,7 @@ const Contact = () => {
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      details: ["+65 97265330", "Quick consultation inquiries"],
+      details: ["Chat with us on WhatsApp", "Quick consultation inquiries"],
     },
     {
       icon: Globe,

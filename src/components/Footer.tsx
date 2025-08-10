@@ -123,7 +123,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-foreground transition-smooth text-sm font-light"
                   >
-                    WhatsApp: +65 97265330
+                    Chat on WhatsApp
                   </a>
                 </div>
 
