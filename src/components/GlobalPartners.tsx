@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Globe, Users, Building, Scale } from "lucide-react";
-import GlobalPartnersMap from "./GlobalPartnersMap";
 
 const GlobalPartners = () => {
   const stats = [
@@ -63,10 +62,6 @@ const GlobalPartners = () => {
           })}
         </div>
 
-        {/* Interactive Map */}
-        <div className="mb-16">
-          <GlobalPartnersMap />
-        </div>
 
         {/* Regions Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
