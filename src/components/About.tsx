@@ -77,7 +77,7 @@ const About = () => {
                 In 2024, our founding team with decades of big law experience saw a unique opportunity: to build a new kind of law team from the ground up — elite lawyers united by one mission: to redesign legal services for tomorrow's visionaries.
               </p>
               <p className="text-muted-foreground leading-relaxed font-light">
-                We built Beyond Horizons Legal as an AI-native law firm, leveraging cutting-edge technology to deliver cost-effective, precise, and innovative legal solutions. Our approach breaks traditional molds, making top-tier legal expertise accessible without the overhead or delays common in legacy firms.
+                We built Beyond Horizons Legal as an AI-native team, leveraging cutting-edge technology to deliver cost-effective, precise, and innovative legal solutions. Our approach breaks traditional molds, making top-tier legal expertise accessible without the overhead or delays common in legacy firms.
               </p>
               <p className="text-muted-foreground leading-relaxed font-light">
                 We regularly work across and collaborate with Magic Circle, AM Law Top 100 and White Shoe firms worldwide, combining global experience with our AI-driven efficiency to serve clients who expect more — faster, smarter, and better.

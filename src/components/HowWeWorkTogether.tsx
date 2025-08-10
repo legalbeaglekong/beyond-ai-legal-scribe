@@ -9,7 +9,7 @@ const HowWeWorkTogether = () => {
         </header>
         <div className="mt-6 space-y-6 text-muted-foreground leading-relaxed">
           <p>
-            As an AI-native law firm, we operate almost entirely virtually, giving us the flexibility to work whenever and wherever best serves your needs.
+            As an AI-native team, we operate almost entirely virtually, giving us the flexibility to work whenever and wherever best serves your needs.
           </p>
           <p>
             This means you get round-the-clock service and responsiveness, no matter your time zone or schedule.
