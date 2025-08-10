@@ -13,8 +13,8 @@ const Footer = () => {
   const practiceAreas = [
     "Aviation & Aircraft Engines",
     "Maritime Innovations",
+    "Restructuring & Work-outs",
     "Low Carbon & Alternative Fuels",
-    "Complex Transaction Structuring",
     "Space Exploration & Commercialization",
   ];
 
