@@ -124,9 +124,15 @@ const Contact = () => {
                   how our innovative legal strategies can accelerate your business objectives.
                 </p>
                 <div className="space-y-6">
-                  <Button variant="default" size="lg" className="w-full text-lg">
-                    Book Consultation Now
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                  <Button variant="default" size="lg" className="w-full text-lg" asChild>
+                    <a 
+                      href="https://outlook.office.com/bookwithme/user/c79273fd7b174b88a10e537f3ae6e251@huilinglawoffice.com/meetingtype/gilpmYHK-EawFiSPKhEVhQ2?anonymous&ep=mlink&ismsaljsauthenabled=true"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Book Consultation Now
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </a>
                   </Button>
                   <div className="flex items-center justify-center text-muted-foreground text-sm font-light">
                     <Clock className="h-4 w-4 mr-2" />

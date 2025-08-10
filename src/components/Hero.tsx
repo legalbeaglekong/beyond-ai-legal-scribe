@@ -42,9 +42,15 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
-          <Button variant="default" size="lg" className="text-base px-12 py-4">
-            Schedule Strategic Consultation
-            <ArrowRight className="ml-2 h-4 w-4" />
+          <Button variant="default" size="lg" className="text-base px-12 py-4" asChild>
+            <a 
+              href="https://outlook.office.com/bookwithme/user/c79273fd7b174b88a10e537f3ae6e251@huilinglawoffice.com/meetingtype/gilpmYHK-EawFiSPKhEVhQ2?anonymous&ep=mlink&ismsaljsauthenabled=true"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Schedule Strategic Consultation
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
           </Button>
           <Button variant="outline" size="lg" className="text-base px-12 py-4">
             Explore Our Expertise

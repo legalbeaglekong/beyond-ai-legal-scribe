@@ -146,9 +146,15 @@ const PracticeAreas = () => {
             Partner with the legal team that understands your vision and has the expertise 
             to turn innovation into reality while navigating complex regulatory landscapes.
           </p>
-          <Button variant="default" size="lg" className="text-lg px-12 py-4">
-            Schedule Your Strategic Consultation
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button variant="default" size="lg" className="text-lg px-12 py-4" asChild>
+            <a 
+              href="https://outlook.office.com/bookwithme/user/c79273fd7b174b88a10e537f3ae6e251@huilinglawoffice.com/meetingtype/gilpmYHK-EawFiSPKhEVhQ2?anonymous&ep=mlink&ismsaljsauthenabled=true"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Schedule Your Strategic Consultation
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
           </Button>
         </div>
       </div>
