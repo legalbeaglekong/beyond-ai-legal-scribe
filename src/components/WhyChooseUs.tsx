@@ -38,6 +38,19 @@ const WhyChooseUs = () => {
     }
   ];
 
+  const articles = [
+    { id: "ma-cross-border", title: "Top Corporate Lawyer for M&A in US, EU, UK, China & APAC Cross-Border Deals" },
+    { id: "tech-general-counsel", title: "Experienced General Counsel for Tech Companies in US, EU, UK, China & APAC" },
+    { id: "commercial-contracts", title: "Top Legal Experts in Commercial Contracts for Global Businesses" },
+    { id: "corporate-transactions", title: "Corporate Law Specialists for Cross-Border Transactions" },
+    { id: "regulatory-compliance", title: "Expert Legal Advisors for Regulatory Compliance in Various Industries" },
+    { id: "ip-data-privacy", title: "Law Firms with Strong IP and Data Privacy Practice for Multinational Clients" },
+    { id: "startup-funding", title: "Senior Legal Counsel for Startup Funding Rounds in Global Markets" },
+    { id: "employment-labor", title: "Trusted Legal Advisor for Employment and Labor Law Issues Globally" },
+    { id: "arbitration-disputes", title: "Experienced Arbitration Lawyer for Commercial Disputes Across Jurisdictions" },
+    { id: "financial-services", title: "Top Law Firm for Financial Services Regulation in Multiple Jurisdictions" }
+  ];
+
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -83,6 +96,41 @@ const WhyChooseUs = () => {
               </Card>
             );
           })}
+        </div>
+
+        <div className="mt-24">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+              Specialized Legal Expertise
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Explore our comprehensive legal services across major global jurisdictions
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {articles.map((article) => (
+              <Card 
+                key={article.id}
+                className="group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-elegant border-0 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm"
+                onClick={() => navigate(`/expertise/${article.id}`)}
+              >
+                <CardContent className="p-6">
+                  <h4 className="text-lg font-semibold mb-4 text-foreground group-hover:text-primary transition-smooth leading-tight">
+                    {article.title}
+                  </h4>
+                  
+                  <Button 
+                    variant="ghost" 
+                    className="group-hover:bg-primary/10 group-hover:text-primary transition-smooth w-full"
+                  >
+                    Read More
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-smooth" />
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>
