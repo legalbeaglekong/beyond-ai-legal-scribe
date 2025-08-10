@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Award, BookOpen, Users, TrendingUp, ExternalLink } from "lucide-react";
 import founderPortrait from "@/assets/founder-portrait.jpg";
-import trendyAiNativeLawyers from "@/assets/trendy-ai-native-lawyers.jpg";
+import fiveTrendyLawyersFinal from "@/assets/five-trendy-lawyers-final.jpg";
 
 const About = () => {
   const achievements = [
@@ -62,8 +62,8 @@ const About = () => {
           <div className="space-y-12">
             <div className="relative">
               <img
-                src={trendyAiNativeLawyers}
-                alt="Beyond Horizons Legal Team - Trendy AI-Native Lawyers in High-Tech Office"
+                src={fiveTrendyLawyersFinal}
+                alt="Beyond Horizons Legal Team - Five Trendy Lawyers with Modern Furniture"
                 className="w-full max-w-md mx-auto rounded shadow-minimal"
               />
               <p className="text-xs text-muted-foreground text-center mt-2 font-light italic">
