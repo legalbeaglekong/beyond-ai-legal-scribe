@@ -5,32 +5,36 @@ import { ExternalLink, Calendar, ArrowRight } from "lucide-react";
 const Insights = () => {
   const latestPosts = [
     {
-      title: "The Legal Framework for Space Mining: Navigating Uncharted Territory",
-      excerpt: "As commercial space ventures advance toward asteroid mining, understanding the complex legal landscape becomes crucial for industry pioneers.",
-      date: "December 15, 2024",
+      title: "Your AI Just Threatened You. Now What?",
+      excerpt: "When AI Refuses to Die: Legal Reflections on Blackmail, Shutdown Resistance & the Future of AI Governance",
+      date: "May 29, 2024",
       readTime: "8 min read",
-      category: "Space Law",
+      category: "AI Law",
+      url: "https://beyondhorizons.substack.com/p/your-ai-just-threatened-you-now-what"
     },
     {
-      title: "ESG Compliance in Aviation: Beyond Carbon Offsetting",
-      excerpt: "Modern aviation companies must navigate an evolving ESG landscape that extends far beyond traditional carbon offset strategies.",
-      date: "December 10, 2024", 
+      title: "Trump's Deep-Sea Power Play: Executive Order Sparks Global Race for Ocean Minerals",
+      excerpt: "From the Clarion-Clipperton Zone to the Cook Islands, the seabed is the new frontier of critical minerals, climate politics, and maritime law.",
+      date: "May 27, 2024", 
       readTime: "6 min read",
-      category: "Aviation Law",
-    },
-    {
-      title: "Autonomous Vessels: Regulatory Challenges in Maritime Innovation",
-      excerpt: "The rise of autonomous shipping presents unprecedented legal challenges that require innovative regulatory approaches.",
-      date: "December 5, 2024",
-      readTime: "7 min read", 
       category: "Maritime Law",
+      url: "https://beyondhorizons.substack.com/p/trumps-deep-sea-power-play-executive"
     },
     {
-      title: "Green Hydrogen Projects: Structuring Deals for the Energy Transition",
-      excerpt: "Legal strategies for financing and structuring green hydrogen initiatives across international jurisdictions.",
-      date: "November 28, 2024",
+      title: "VietJet Faces Scrutiny from Singapore's Advertising Authority",
+      excerpt: "A Spotlight on Greenwashing with Regulatory Penalties in Asia's Aviation Industry - In a landmark ruling, VietJet, Vietnam's prominent low-cost airline, encountered regulatory penalties from Singapore's Advertising Standards Authority.",
+      date: "January 13, 2024",
+      readTime: "7 min read", 
+      category: "Aviation Law",
+      url: "https://beyondhorizons.substack.com/p/vietjet-faces-scrutiny-from-singapores"
+    },
+    {
+      title: "Real World Asset Tokenization of Aircraft Assets? Who STO my (aircraft) ABS?",
+      excerpt: "RWA Tokenisation Securitised Token Offerings and decentralised finance solutions to render aircraft ABS (Asset Backed Securitisations) obsolete?",
+      date: "August 22, 2024",
       readTime: "9 min read",
-      category: "Energy Law",
+      category: "FinTech Law",
+      url: "https://beyondhorizons.substack.com/p/who-sto-my-aircraft-abs-securitised"
     },
   ];
 
@@ -88,9 +92,15 @@ const Insights = () => {
                     <span className="text-muted-foreground text-sm font-light">
                       {post.readTime}
                     </span>
-                    <Button variant="ghost" size="sm" className="text-accent hover:text-foreground">
-                      Read More
-                      <ArrowRight className="ml-1 h-3 w-3" />
+                    <Button variant="ghost" size="sm" className="text-accent hover:text-foreground" asChild>
+                      <a 
+                        href={post.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        Read More
+                        <ArrowRight className="ml-1 h-3 w-3" />
+                      </a>
                     </Button>
                   </div>
                 </div>
