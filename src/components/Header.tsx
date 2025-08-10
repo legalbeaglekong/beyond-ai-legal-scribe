@@ -8,7 +8,7 @@ const Header = () => {
   const navigation = [
     { name: "About", href: "#about" },
     { name: "Practice Areas", href: "#practice-areas" },
-    { name: "Insights", href: "#insights" },
+    { name: "Insights", href: "https://beyondhorizons.substack.com/", external: true },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -32,6 +32,8 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noopener noreferrer" : undefined}
                   className="text-foreground hover:text-accent transition-smooth font-light"
                 >
                   {item.name}
