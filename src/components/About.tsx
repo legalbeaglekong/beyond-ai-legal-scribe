@@ -65,6 +65,9 @@ const About = () => {
                 alt="Beyond Horizons Legal Team - Expanded Aviation Manufacturing AI Practice"
                 className="w-full max-w-md mx-auto rounded shadow-minimal"
               />
+              <p className="text-xs text-muted-foreground text-center mt-2 font-light italic">
+                *Photo is illustrative
+              </p>
             </div>
 
             <div className="text-center lg:text-left space-y-6">
