@@ -115,19 +115,31 @@ const Insights = () => {
             Stay Updated
           </h3>
           <p className="text-muted-foreground font-light mb-8 max-w-2xl mx-auto">
-            Subscribe to our insights newsletter for the latest developments in transportation law, 
+            Stay informed with our specialized newsletters covering legal developments, 
             space innovation, and regulatory trends affecting your industry.
           </p>
-          <Button variant="default" size="lg" asChild>
-            <a 
-              href="https://beyondhorizons.substack.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              Subscribe to Newsletter
-              <ExternalLink className="ml-2 h-4 w-4" />
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button variant="default" size="lg" asChild>
+              <a 
+                href="https://beyondhorizons.substack.com/s/beyond-legal" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Subscribe for Legal Updates
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a 
+                href="https://beyondhorizons.substack.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Subscribe for Industry Updates on New Tech and Energy Transition in APAC
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
