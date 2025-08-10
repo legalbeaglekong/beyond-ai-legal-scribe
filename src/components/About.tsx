@@ -71,14 +71,15 @@ const About = () => {
             </div>
 
             <div className="text-center lg:text-left space-y-6">
-              <h3 className="text-3xl font-bold text-foreground">Beyond Horizons Legal Team</h3>
-              <p className="text-lg text-muted-foreground font-light">
-                Expert Legal Solutions | Global Partners | Market Leaders
+              <h3 className="text-3xl font-bold text-foreground">Beyond Horizons Legal — Genesis Story</h3>
+              <p className="text-muted-foreground leading-relaxed font-light">
+                In 2024, our founding team with decades of big law experience saw a unique opportunity: to build a new kind of law team from the ground up — elite lawyers united by one mission: to redesign legal services for tomorrow's visionaries.
               </p>
-              <p className="text-muted-foreground leading-relaxed font-light italic">
-                "We see legal challenges through a business perspective rather than just legal — this unique
-                approach enables us to craft solutions that drive innovation while ensuring compliance in
-                the most complex regulatory environments and challenging situations."
+              <p className="text-muted-foreground leading-relaxed font-light">
+                We built Beyond Horizons Legal as an AI-native law firm, leveraging cutting-edge technology to deliver cost-effective, precise, and innovative legal solutions. Our approach breaks traditional molds, making top-tier legal expertise accessible without the overhead or delays common in legacy firms.
+              </p>
+              <p className="text-muted-foreground leading-relaxed font-light">
+                We regularly work across and collaborate with Magic Circle, AM Law Top 100 and White Shoe firms worldwide, combining global experience with our AI-driven efficiency to serve clients who expect more — faster, smarter, and better.
               </p>
             </div>
 
