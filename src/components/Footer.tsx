@@ -153,7 +153,7 @@ const Footer = () => {
             </div>
             
             <div className="flex items-center space-x-8 text-sm text-muted-foreground font-light">
-              <a href="#" className="hover:text-foreground transition-smooth">Privacy Policy</a>
+              <a href="https://bethelchambers.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-smooth">Privacy Policy</a>
               <a href="#" className="hover:text-foreground transition-smooth">Terms of Service</a>
               <a href="#" className="hover:text-foreground transition-smooth">Professional Standards</a>
             </div>
