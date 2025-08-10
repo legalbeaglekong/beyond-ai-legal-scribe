@@ -13,14 +13,14 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-elegant">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-minimal">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="text-xl font-bold text-primary font-serif-heading">
-              <span className="text-gradient accent-dot">Beyond Horizons</span>
-              <div className="text-xs font-sans-light text-muted-foreground mt-1 uppercase tracking-widest">
+            <div className="text-xl font-bold text-primary">
+              <span className="accent-dot">Beyond Horizons</span>
+              <div className="text-xs font-light text-muted-foreground mt-1 uppercase tracking-wide">
                 Bethel Chambers LLC
               </div>
             </div>
@@ -33,7 +33,7 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-accent transition-smooth font-sans-light text-sm"
+                  className="text-foreground hover:text-muted-foreground transition-smooth font-light"
                 >
                   {item.name}
                 </a>
@@ -43,7 +43,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="premium" size="lg">
+            <Button variant="default" size="lg">
               Schedule Consultation
             </Button>
           </div>
@@ -78,7 +78,7 @@ const Header = () => {
                 </a>
               ))}
               <div className="px-3 py-2">
-                <Button variant="premium" size="lg" className="w-full">
+                <Button variant="default" size="lg" className="w-full">
                   Schedule Consultation
                 </Button>
               </div>

@@ -19,7 +19,6 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'serif': ['Crimson Text', 'serif'],
 				'sans': ['Inter', 'sans-serif'],
 			},
 			colors: {

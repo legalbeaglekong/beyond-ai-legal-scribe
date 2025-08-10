@@ -1,5 +1,3 @@
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 import { 
   MapPin, 
   Phone, 
@@ -28,55 +26,48 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-primary text-primary-foreground">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-background border-t border-border">
+      <div className="max-w-6xl mx-auto container-padding">
         {/* Main Footer Content */}
-        <div className="py-16">
-          <div className="grid lg:grid-cols-4 gap-12">
+        <div className="py-20">
+          <div className="grid lg:grid-cols-4 gap-16">
             {/* Company Info */}
-            <div className="lg:col-span-1 space-y-6">
+            <div className="lg:col-span-1 space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-gold mb-2">Beyond Horizons</h3>
-                <p className="text-primary-foreground/80 text-sm">Bethel Chambers LLC</p>
-                <Badge variant="outline" className="mt-3 border-gold text-gold">
+                <h3 className="text-2xl font-bold text-foreground mb-2 accent-dot">Beyond Horizons</h3>
+                <p className="text-muted-foreground text-sm font-light">Bethel Chambers LLC</p>
+                <span className="text-foreground text-xs font-medium uppercase tracking-wide mt-3 inline-block">
                   Global Market Leader
-                </Badge>
+                </span>
               </div>
               
-              <p className="text-primary-foreground/80 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed font-light">
                 Pioneering legal solutions for transportation and space innovation, 
                 empowering visionary clients to shape tomorrow's industries.
               </p>
 
               {/* Recognition */}
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <Scale className="h-4 w-4 text-gold" />
-                  <span className="text-sm text-primary-foreground/80">
-                    Chambers Global 2025 - Band 3
-                  </span>
+              <div className="space-y-3">
+                <div className="text-sm text-muted-foreground font-light">
+                  Chambers Global 2025 - Band 3
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Scale className="h-4 w-4 text-gold" />
-                  <span className="text-sm text-primary-foreground/80">
-                    Legal 500 Next Generation Partner
-                  </span>
+                <div className="text-sm text-muted-foreground font-light">
+                  Legal 500 Next Generation Partner
                 </div>
               </div>
             </div>
 
             {/* Practice Areas */}
-            <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-gold">Practice Areas</h4>
+            <div className="space-y-8">
+              <h4 className="text-lg font-medium text-foreground">Practice Areas</h4>
               <ul className="space-y-3">
                 {practiceAreas.map((area, index) => (
                   <li key={index}>
                     <a 
                       href="#practice-areas" 
-                      className="text-primary-foreground/80 hover:text-gold transition-smooth text-sm flex items-center space-x-2"
+                      className="text-muted-foreground hover:text-foreground transition-smooth text-sm font-light"
                     >
-                      <div className="w-1.5 h-1.5 bg-gold rounded-full"></div>
-                      <span>{area}</span>
+                      {area}
                     </a>
                   </li>
                 ))}
@@ -84,14 +75,14 @@ const Footer = () => {
             </div>
 
             {/* Resources */}
-            <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-gold">Resources & Insights</h4>
+            <div className="space-y-8">
+              <h4 className="text-lg font-medium text-foreground">Resources & Insights</h4>
               <ul className="space-y-3">
                 {resources.map((resource, index) => (
                   <li key={index}>
                     <a 
                       href="#" 
-                      className="text-primary-foreground/80 hover:text-gold transition-smooth text-sm flex items-center space-x-2"
+                      className="text-muted-foreground hover:text-foreground transition-smooth text-sm font-light flex items-center space-x-2"
                     >
                       <resource.icon className="h-4 w-4" />
                       <span>{resource.name}</span>
@@ -102,13 +93,13 @@ const Footer = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-gold">Contact Information</h4>
+            <div className="space-y-8">
+              <h4 className="text-lg font-medium text-foreground">Contact Information</h4>
               
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-gold flex-shrink-0 mt-0.5" />
-                  <div className="text-primary-foreground/80 text-sm">
+                  <MapPin className="h-5 w-5 text-foreground flex-shrink-0 mt-0.5" />
+                  <div className="text-muted-foreground text-sm font-light">
                     <div>16 Collyer Quay, #10-00</div>
                     <div>Income at Raffles</div>
                     <div>Singapore 049318</div>
@@ -116,20 +107,20 @@ const Footer = () => {
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-gold" />
-                  <span className="text-primary-foreground/80 text-sm">+65 6223 1910</span>
+                  <Phone className="h-5 w-5 text-foreground" />
+                  <span className="text-muted-foreground text-sm font-light">+65 6223 1910</span>
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-gold" />
-                  <span className="text-primary-foreground/80 text-sm">hlteo@bethelchambers.com</span>
+                  <Mail className="h-5 w-5 text-foreground" />
+                  <span className="text-muted-foreground text-sm font-light">hlteo@bethelchambers.com</span>
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <Linkedin className="h-5 w-5 text-gold" />
+                  <Linkedin className="h-5 w-5 text-foreground" />
                   <a 
                     href="#" 
-                    className="text-primary-foreground/80 hover:text-gold transition-smooth text-sm"
+                    className="text-muted-foreground hover:text-foreground transition-smooth text-sm font-light"
                   >
                     Connect on LinkedIn
                   </a>
@@ -139,35 +130,35 @@ const Footer = () => {
           </div>
         </div>
 
-        <Separator className="bg-primary-foreground/20" />
+        <hr className="minimal-divider" />
 
         {/* Bottom Footer */}
-        <div className="py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-primary-foreground/80 text-sm">
+        <div className="py-12">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <div className="text-muted-foreground text-sm font-light">
               © 2024 Beyond Horizons, Bethel Chambers LLC. All rights reserved.
             </div>
             
-            <div className="flex items-center space-x-6 text-sm text-primary-foreground/80">
-              <a href="#" className="hover:text-gold transition-smooth">Privacy Policy</a>
-              <a href="#" className="hover:text-gold transition-smooth">Terms of Service</a>
-              <a href="#" className="hover:text-gold transition-smooth">Professional Standards</a>
+            <div className="flex items-center space-x-8 text-sm text-muted-foreground font-light">
+              <a href="#" className="hover:text-foreground transition-smooth">Privacy Policy</a>
+              <a href="#" className="hover:text-foreground transition-smooth">Terms of Service</a>
+              <a href="#" className="hover:text-foreground transition-smooth">Professional Standards</a>
             </div>
           </div>
 
           {/* Special Recognition */}
-          <div className="mt-6 pt-6 border-t border-primary-foreground/20">
-            <div className="flex flex-wrap justify-center items-center gap-6 text-xs text-primary-foreground/60">
+          <div className="mt-12 pt-8 border-t border-border">
+            <div className="flex flex-wrap justify-center items-center gap-8 text-xs text-muted-foreground font-light">
               <div className="flex items-center space-x-2">
-                <Plane className="h-4 w-4 text-gold" />
+                <Plane className="h-4 w-4 text-foreground" />
                 <span>Aviation Finance Excellence</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Rocket className="h-4 w-4 text-gold" />
+                <Rocket className="h-4 w-4 text-foreground" />
                 <span>Space Innovation Legal Pioneer</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Scale className="h-4 w-4 text-gold" />
+                <Scale className="h-4 w-4 text-foreground" />
                 <span>$2.8B+ Transformational Deals</span>
               </div>
             </div>

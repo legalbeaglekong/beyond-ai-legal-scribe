@@ -2,68 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Elegant Sage Green & Charcoal Design System - Beyond Horizons */
+/* Minimalist Design System - Beyond Horizons */
 
 @layer base {
   :root {
-    /* Sophisticated Sage Green & Charcoal Palette */
-    --background: 120 20% 98%;
-    --foreground: 25 15% 15%;
+    /* Pure Minimalist Palette */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
 
-    /* Rich Charcoal for Authority */
-    --primary: 25 20% 20%;
-    --primary-foreground: 120 20% 98%;
-    --primary-glow: 25 25% 30%;
+    /* Clean Black & White */
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Elegant Sage Green Accent */
-    --accent: 120 25% 35%;
-    --accent-foreground: 120 20% 98%;
-    --accent-light: 120 30% 85%;
+    /* Subtle Grays */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
 
-    /* Warm Light Sage Background */
-    --secondary: 120 25% 94%;
-    --secondary-foreground: 25 15% 15%;
-
-    /* Sophisticated Muted Tones */
-    --muted: 120 20% 95%;
-    --muted-foreground: 25 10% 45%;
+    --muted: 0 0% 98%;
+    --muted-foreground: 0 0% 45%;
 
     /* Card and UI Elements */
-    --card: 120 30% 99%;
-    --card-foreground: 25 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
 
-    --popover: 120 30% 99%;
-    --popover-foreground: 25 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
 
-    /* Warm Gold Accent for CTAs */
-    --gold: 35 85% 58%;
-    --gold-foreground: 25 15% 15%;
+    /* Accent - Minimal Black */
+    --accent: 0 0% 0%;
+    --accent-foreground: 0 0% 100%;
 
     /* Status Colors */
     --destructive: 0 70% 50%;
-    --destructive-foreground: 120 20% 98%;
+    --destructive-foreground: 0 0% 100%;
 
     /* Border and Input */
-    --border: 120 20% 88%;
-    --input: 120 20% 92%;
-    --ring: 25 20% 20%;
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 0 0% 0%;
 
-    /* Elegant Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(25 20% 20%), hsl(120 25% 35%));
-    --gradient-accent: linear-gradient(120deg, hsl(120 25% 35%), hsl(120 30% 45%));
-    --gradient-subtle: linear-gradient(180deg, hsl(120 20% 98%), hsl(120 25% 96%));
-    --gradient-card: linear-gradient(145deg, hsl(120 30% 99%), hsl(120 25% 94%));
+    /* Minimal Shadows */
+    --shadow-minimal: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
 
-    /* Refined Shadows */
-    --shadow-elegant: 0 4px 32px -4px hsl(25 20% 20% / 0.08);
-    --shadow-hover: 0 8px 48px -8px hsl(25 20% 20% / 0.12);
-    --shadow-glow: 0 0 40px hsl(120 25% 35% / 0.15);
+    /* Clean Transitions */
+    --transition-smooth: all 0.2s ease;
 
-    /* Animation Variables */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-    --radius: 0.75rem;
+    --radius: 0.375rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -129,100 +114,78 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.025em;
+    font-weight: 400;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Crimson Text', serif;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-  }
-
-  .font-serif-heading {
-    font-family: 'Crimson Text', serif;
-  }
-
-  .font-sans-light {
     font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  .font-light {
     font-weight: 300;
-    letter-spacing: 0.05em;
+  }
+
+  .font-medium {
+    font-weight: 500;
   }
 }
 
 @layer components {
-  .gradient-hero {
-    background: var(--gradient-hero);
-  }
-
-  .gradient-accent {
-    background: var(--gradient-accent);
-  }
-
-  .gradient-subtle {
-    background: var(--gradient-subtle);
-  }
-
-  .gradient-card {
-    background: var(--gradient-card);
-  }
-
-  .shadow-elegant {
-    box-shadow: var(--shadow-elegant);
+  .shadow-minimal {
+    box-shadow: var(--shadow-minimal);
   }
 
   .shadow-hover {
     box-shadow: var(--shadow-hover);
   }
 
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
-  }
-
   .transition-smooth {
     transition: var(--transition-smooth);
   }
 
-  .transition-bounce {
-    transition: var(--transition-bounce);
-  }
-
-  .text-gradient {
-    background: var(--gradient-accent);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* Elegant Design Elements */
-  .divider-line {
-    position: relative;
-  }
-
-  .divider-line::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: hsl(var(--accent));
-    transform: translateY(-50%);
-  }
-
-  .accent-dot {
-    position: relative;
-  }
-
+  /* Minimal Design Elements */
   .accent-dot::after {
     content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: hsl(var(--accent));
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: currentColor;
     border-radius: 50%;
-    top: 50%;
-    right: -12px;
-    transform: translateY(-50%);
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  .minimal-divider {
+    height: 1px;
+    background: hsl(var(--border));
+    border: none;
+  }
+
+  /* Clean spacing utilities */
+  .section-padding {
+    padding: 6rem 0;
+  }
+
+  .container-padding {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-padding {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-padding {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
   }
 }
