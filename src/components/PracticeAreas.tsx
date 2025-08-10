@@ -29,17 +29,22 @@ const PracticeAreas = () => {
       expertise: ["Autonomous Vessels", "Electric Ships", "Maritime Finance", "Port Technology"],
     },
     {
+      icon: Building,
+      title: "Asset Recovery & Restructuring",
+      description: "Comprehensive solutions for asset recovery, restructuring and insolvency matters, work-outs, turnarounds and special situations requiring innovative legal strategies.",
+      expertise: ["Asset Recovery", "Restructuring & Insolvency", "Work-outs", "Turnarounds"],
+    },
+    {
+      icon: DollarSign,
+      title: "Private Credit & Special Situations",
+      description: "Specialized advisory for private credit transactions, alternative financing structures, and complex special situations requiring bespoke legal solutions.",
+      expertise: ["Private Credit", "Alternative Financing", "Special Situations", "Structured Solutions"],
+    },
+    {
       icon: Fuel,
       title: "Low Carbon & Alternative Fuels",
       description: "Specialized legal advisory for Sustainable Aviation Fuel (SAF), green hydrogen, biofuels, and breakthrough energy technologies.",
       expertise: ["Sustainable Aviation Fuel", "Green Hydrogen", "Biofuel Projects", "Carbon Credits"],
-    },
-    {
-      icon: Building,
-      title: "Complex Transaction Structuring",
-      description: "Innovative financing structures and market entry strategies for transformational deals that consistently win 'innovative deal of the year' recognition.",
-      highlight: "Leading first-of-its-kind large ticket deals in excess of USD 2.8 billion",
-      expertise: ["Cross-Border Transactions", "Structured Finance", "Market Entry", "Risk Management"],
     },
     {
       icon: Rocket,

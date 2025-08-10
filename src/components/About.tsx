@@ -48,11 +48,11 @@ const About = () => {
             Global Authority
           </p>
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-8">
-            Meet Your Legal Strategist
+            Meet Your Legal Team
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
-            Hui Ling Teo combines unparalleled legal expertise with visionary business acumen to guide
-            tomorrow's most innovative companies through complex regulatory landscapes.
+            Our experienced legal team combines unparalleled expertise with visionary business acumen to guide
+            tomorrow's most innovative companies through complex regulatory landscapes and challenging situations.
           </p>
         </div>
 
@@ -61,21 +61,21 @@ const About = () => {
           <div className="space-y-12">
             <div className="relative">
               <img
-                src={founderPortrait}
-                alt="Hui Ling Teo - Legal Strategist and Business Builder"
+                src="/src/assets/team-portrait.jpg"
+                alt="Beyond Horizons Legal Team"
                 className="w-full max-w-md mx-auto rounded shadow-minimal"
               />
             </div>
 
             <div className="text-center lg:text-left space-y-6">
-              <h3 className="text-3xl font-bold text-foreground">Hui Ling Teo</h3>
+              <h3 className="text-3xl font-bold text-foreground">Beyond Horizons Legal Team</h3>
               <p className="text-lg text-muted-foreground font-light">
-                Legal Strategist | Business Builder | Global Market Leader
+                Expert Legal Solutions | Global Partners | Market Leaders
               </p>
               <p className="text-muted-foreground leading-relaxed font-light italic">
-                "I see legal challenges through a business perspective rather than just legal — this unique
-                approach enables me to craft solutions that drive innovation while ensuring compliance in
-                the most complex regulatory environments."
+                "We see legal challenges through a business perspective rather than just legal — this unique
+                approach enables us to craft solutions that drive innovation while ensuring compliance in
+                the most complex regulatory environments and challenging situations."
               </p>
             </div>
 

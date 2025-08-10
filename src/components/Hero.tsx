@@ -9,7 +9,7 @@ const Hero = () => {
         {/* Tagline */}
         <div className="mb-16">
           <p className="text-muted-foreground font-light text-sm uppercase tracking-wide mb-8">
-            Legal Innovation for Tomorrow's Leaders
+            Being Legal Solutions for Tomorrow's Leaders
           </p>
         </div>
 

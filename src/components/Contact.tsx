@@ -168,10 +168,10 @@ const Contact = () => {
             {/* Global Presence */}
             <div className="text-center p-8 border border-border rounded">
               <Globe className="h-8 w-8 text-foreground mx-auto mb-4" />
-              <h4 className="font-medium text-foreground mb-2">Global Presence</h4>
+              <h4 className="font-medium text-foreground mb-2">Global Partners</h4>
               <p className="text-muted-foreground text-sm font-light">
-                Serving clients across Asia-Pacific, Europe, and the Americas with 
-                expertise in cross-border transactions and international compliance.
+                Working with trusted global partners for over a decade on world-leading matters 
+                across Asia-Pacific, Europe, and the Americas.
               </p>
             </div>
           </div>
