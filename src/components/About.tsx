@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Award, BookOpen, Users, TrendingUp, ExternalLink } from "lucide-react";
 import founderPortrait from "@/assets/founder-portrait.jpg";
-import teamPortrait from "@/assets/expanded-aircraft-hangar-ai-team.jpg";
+import realisticTeamPortrait from "@/assets/realistic-team-portrait.jpg";
 
 const About = () => {
   const achievements = [
@@ -62,8 +62,8 @@ const About = () => {
           <div className="space-y-12">
             <div className="relative">
               <img
-                src={teamPortrait}
-                alt="Beyond Horizons Legal Team - Expanded Aviation Manufacturing AI Practice"
+                src={realisticTeamPortrait}
+                alt="Beyond Horizons Legal Team - Professional Corporate Law Practice"
                 className="w-full max-w-md mx-auto rounded shadow-minimal"
               />
               <p className="text-xs text-muted-foreground text-center mt-2 font-light italic">
