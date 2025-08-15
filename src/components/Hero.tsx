@@ -4,74 +4,39 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
-    <section className="section-padding min-h-screen flex items-center justify-center bg-background">
-      <div className="max-w-5xl mx-auto container-padding text-center">
-        {/* Tagline */}
-        <div className="mb-24">
-          <p className="text-muted-foreground font-light text-sm uppercase tracking-wide">
-            Crafted for Visionaries
-          </p>
-        </div>
-
-        {/* Main Headline */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-16 leading-tight">
-          Proven Legal Expertise.
-        </h1>
-
-        {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-muted-foreground mb-16 leading-relaxed max-w-4xl mx-auto font-light">
-          Led by seasoned partners from the world's top firms, we deliver superior, efficient outcomes 
-          in high-stakes restructuring and complex cross-border transactions across Asia.
-        </p>
-
-        {/* Outcomes-Based Pricing Highlight */}
-        <div className="bg-secondary border border-border rounded p-8 mb-24 max-w-2xl mx-auto">
-          <p className="text-lg font-medium text-foreground mb-3">Outcomes-Based Pricing</p>
-          <p className="text-muted-foreground">
-            Transparent, performance-driven fees aligned with your success. No hourly billing complexity.
-          </p>
-        </div>
-
-        {/* Key Value Props */}
-        <div className="flex flex-wrap justify-center items-center gap-16 mb-24 text-muted-foreground">
-          <div className="flex items-center space-x-3">
-            <div className="w-2 h-2 bg-foreground rounded-full"></div>
-            <span className="font-light">Global Market Leader</span>
-          </div>
-          <div className="flex items-center space-x-3">
-            <div className="w-2 h-2 bg-foreground rounded-full"></div>
-            <span className="font-light">Innovation-First Approach</span>
-          </div>
-          <div className="flex items-center space-x-3">
-            <div className="w-2 h-2 bg-foreground rounded-full"></div>
-            <span className="font-light">Chambers & Partners Ranked</span>
+    <section className="hero-background min-h-screen flex items-center justify-center">
+      <div className="hero-content max-w-4xl mx-auto container-padding text-center text-white">
+        {/* Logo/Title centered */}
+        <div className="mb-16">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-semibold text-white mb-8 leading-none tracking-wide">
+            BEYOND HORIZONS
+          </h1>
+          <div className="w-full max-w-md mx-auto mt-12">
+            <div className="relative">
+              <input 
+                type="text" 
+                placeholder="Search" 
+                className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-none backdrop-blur-sm text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all"
+              />
+              <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 text-white/70 hover:text-white transition-colors">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-32">
-          <Button variant="default" size="lg" className="text-base px-16 py-4" asChild>
-            <a 
-              href="https://outlook.office.com/bookwithme/user/c79273fd7b174b88a10e537f3ae6e251@huilinglawoffice.com/meetingtype/gilpmYHK-EawFiSPKhEVhQ2?anonymous&ep=mlink&ismsaljsauthenabled=true"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Schedule Strategic Consultation
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
-          </Button>
-          <Button variant="outline" size="lg" className="text-base px-16 py-4">
-            Explore Our Expertise
-          </Button>
+        {/* Scroll down indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-white/80">
+          <div className="flex flex-col items-center space-y-2">
+            <svg className="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+            <span className="text-xs uppercase tracking-wider">SCROLL DOWN</span>
+          </div>
         </div>
 
-        {/* Credentials Preview */}
-        <div className="text-muted-foreground">
-          <hr className="minimal-divider max-w-xs mx-auto mb-12" />
-          <p className="font-light">
-            Trusted by industry leaders • USD 2.8B+ in transformational deals • Band 3 Global Ranking
-          </p>
-        </div>
       </div>
     </section>
   );
