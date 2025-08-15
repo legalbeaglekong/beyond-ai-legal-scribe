@@ -14,7 +14,7 @@ const GlobalPartners = () => {
     {
       name: "Europe",
       description: "Magic Circle partnerships in London, Frankfurt, and key European financial centers",
-      firms: ["London Magic Circle Firm", "Frankfurt Elite Practice"]
+      firms: ["London Magic Circle Firm", "Frankfurt Proven Practice"]
     },
     {
       name: "North America", 
@@ -24,7 +24,7 @@ const GlobalPartners = () => {
     {
       name: "Asia-Pacific",
       description: "Leading partnerships across Singapore, Hong Kong, Tokyo, and Sydney",
-      firms: ["Singapore Leading Firm", "Hong Kong Top Tier", "Tokyo Premier Firm", "Sydney Elite Practice"]
+      firms: ["Singapore Leading Firm", "Hong Kong Top Tier", "Tokyo Premier Firm", "Sydney Proven Practice"]
     },
     {
       name: "Middle East",

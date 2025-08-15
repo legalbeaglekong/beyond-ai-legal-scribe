@@ -74,7 +74,7 @@ const About = () => {
             <div className="text-center lg:text-left space-y-6">
               <h3 className="text-3xl font-bold text-foreground">Beyond Horizons Legal — Genesis Story</h3>
               <p className="text-muted-foreground leading-relaxed font-light">
-                In 2024, our founding team with decades of big law experience saw a unique opportunity: to build a new kind of law team from the ground up — elite lawyers united by one mission: to redesign legal services for tomorrow's visionaries.
+                In 2024, our founding team with decades of big law experience saw a unique opportunity: to build a new kind of law team from the ground up — proven lawyers united by one mission: to redesign legal services for tomorrow's visionaries.
               </p>
               <p className="text-muted-foreground leading-relaxed font-light">
                 We built Beyond Horizons Legal powered by our inhouse AI native alternative legal service provider, leveraging cutting-edge technology to deliver cost-effective, precise, and innovative legal solutions. Our approach breaks traditional molds, making top-tier legal expertise accessible without the overhead or delays common in legacy firms.

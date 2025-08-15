@@ -15,7 +15,7 @@ const Hero = () => {
 
         {/* Main Headline */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-16 leading-tight">
-          Elite Legal Expertise.
+          Proven Legal Expertise.
         </h1>
 
         {/* Subheadline */}

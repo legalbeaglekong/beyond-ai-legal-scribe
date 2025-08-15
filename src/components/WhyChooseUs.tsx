@@ -19,7 +19,7 @@ const WhyChooseUs = () => {
       id: "cost-efficiency", 
       icon: DollarSign,
       title: "Unmatched Cost Efficiency",
-      description: "Transparent pricing and lean operations make elite legal services accessible without premium costs.",
+      description: "Transparent pricing and lean operations make proven legal services accessible without premium costs.",
       gradient: "from-green-600 to-blue-600"
     },
     {
