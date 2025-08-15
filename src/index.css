@@ -8,12 +8,12 @@
   :root {
     /* Warm Natural Color Palette */
     --background: 45 35% 98%;
-    --foreground: 25 30% 20%;
+    --foreground: 220 30% 20%;
 
-    /* Warm Wood Brown Primary */
-    --primary: 25 45% 35%;
+    /* Navy Blue Primary */
+    --primary: 220 70% 25%;
     --primary-foreground: 45 35% 98%;
-    --primary-glow: 25 45% 45%;
+    --primary-glow: 220 60% 35%;
 
     /* Soft Green Accent */
     --accent: 120 25% 55%;
@@ -21,45 +21,46 @@
     --accent-light: 120 20% 90%;
 
     /* Muted Earth Tones */
-    --secondary: 35 25% 92%;
-    --secondary-foreground: 25 30% 20%;
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 220 30% 20%;
 
-    --muted: 40 20% 95%;
-    --muted-foreground: 25 20% 45%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 45%;
 
     /* Card and UI Elements */
     --card: 45 40% 99%;
-    --card-foreground: 25 30% 20%;
+    --card-foreground: 220 30% 20%;
 
     --popover: 45 40% 99%;
-    --popover-foreground: 25 30% 20%;
+    --popover-foreground: 220 30% 20%;
 
     /* Brushed Gold */
     --gold: 45 70% 65%;
-    --gold-foreground: 25 30% 20%;
+    --gold-foreground: 220 30% 20%;
 
     /* Status Colors */
     --destructive: 0 70% 50%;
     --destructive-foreground: 45 35% 98%;
 
     /* Border and Input */
-    --border: 35 15% 85%;
-    --input: 40 20% 96%;
+    --border: 0 0% 85%;
+    --input: 0 0% 96%;
     --ring: 45 70% 65%;
 
-    /* Warm Natural Shadows */
-    --shadow-minimal: 0 2px 12px 0 rgba(139, 117, 91, 0.08);
-    --shadow-hover: 0 8px 28px 0 rgba(139, 117, 91, 0.15);
+    /* Refined Natural Shadows */
+    --shadow-minimal: 0 2px 12px 0 rgba(30, 41, 59, 0.08);
+    --shadow-hover: 0 8px 28px 0 rgba(30, 41, 59, 0.15);
     --shadow-gold: 0 4px 20px 0 rgba(188, 156, 109, 0.20);
     --shadow-green: 0 4px 16px 0 rgba(138, 154, 138, 0.12);
+    --shadow-navy: 0 6px 24px 0 rgba(30, 41, 59, 0.12);
 
     /* Smooth Natural Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-gentle: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
 
-    /* Warm Natural Gradients */
+    /* Refined Natural Gradients */
     --gradient-warm-earth: linear-gradient(135deg, hsl(35, 30%, 88%), hsl(45, 40%, 94%));
-    --gradient-wood-gold: linear-gradient(135deg, hsl(25, 45%, 35%), hsl(45, 70%, 65%));
+    --gradient-navy-gold: linear-gradient(135deg, hsl(220, 70%, 25%), hsl(45, 70%, 65%));
     --gradient-green-mist: linear-gradient(180deg, hsl(120, 20%, 95%), hsl(120, 25%, 90%));
 
     /* Biophilic Elements */
@@ -78,44 +79,44 @@
   }
 
   .dark {
-    --background: 25 20% 8%;
+    --background: 220 25% 8%;
     --foreground: 45 25% 92%;
 
-    --card: 25 25% 10%;
+    --card: 220 30% 10%;
     --card-foreground: 45 25% 92%;
 
-    --popover: 25 25% 10%;
+    --popover: 220 30% 10%;
     --popover-foreground: 45 25% 92%;
 
     --primary: 45 60% 55%;
-    --primary-foreground: 25 20% 8%;
+    --primary-foreground: 220 25% 8%;
 
-    --secondary: 25 15% 15%;
+    --secondary: 0 0% 15%;
     --secondary-foreground: 45 25% 92%;
 
-    --muted: 25 15% 15%;
-    --muted-foreground: 35 20% 65%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
     --accent: 120 20% 45%;
     --accent-foreground: 45 25% 92%;
 
     --gold: 45 65% 60%;
-    --gold-foreground: 25 20% 8%;
+    --gold-foreground: 220 25% 8%;
 
     --destructive: 0 75% 50%;
     --destructive-foreground: 45 25% 92%;
 
-    --border: 25 15% 18%;
-    --input: 25 15% 15%;
+    --border: 0 0% 18%;
+    --input: 0 0% 15%;
     --ring: 45 60% 55%;
     
-    --sidebar-background: 25 25% 10%;
+    --sidebar-background: 220 30% 10%;
     --sidebar-foreground: 45 20% 85%;
     --sidebar-primary: 45 60% 55%;
-    --sidebar-primary-foreground: 25 20% 8%;
-    --sidebar-accent: 25 15% 18%;
+    --sidebar-primary-foreground: 220 25% 8%;
+    --sidebar-accent: 0 0% 18%;
     --sidebar-accent-foreground: 45 20% 85%;
-    --sidebar-border: 25 15% 18%;
+    --sidebar-border: 0 0% 18%;
     --sidebar-ring: 45 60% 55%;
   }
 }
@@ -235,7 +236,7 @@
   /* Warm Gold Button Animation */
   .btn-ring-pulse {
     position: relative;
-    background: var(--gradient-wood-gold);
+    background: var(--gradient-navy-gold);
     color: hsl(var(--gold-foreground));
     border: 2px solid hsl(var(--gold));
     transition: var(--transition-smooth);
@@ -301,13 +302,13 @@
     border-color: hsl(var(--accent));
   }
 
-  /* Warm Natural Gradient Utilities */
+  /* Refined Natural Gradient Utilities */
   .bg-gradient-warm-earth {
     background: var(--gradient-warm-earth);
   }
 
-  .bg-gradient-wood-gold {
-    background: var(--gradient-wood-gold);
+  .bg-gradient-navy-gold {
+    background: var(--gradient-navy-gold);
   }
 
   .bg-gradient-green-mist {
