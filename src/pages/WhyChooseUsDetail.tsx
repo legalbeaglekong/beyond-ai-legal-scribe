@@ -22,7 +22,7 @@ const WhyChooseUsDetail = () => {
           "Advanced data security protocols built for AI environments",
           "Client communications enhanced through AI capabilities"
         ],
-        analysis: "Unlike traditional law firms that retrofit AI tools as an afterthought, Beyond Horizons designed its workflows, data security protocols, and client communications to maximize AI benefits while maintaining strict confidentiality and legal privilege. Our AI-native approach delivers unprecedented cost efficiency, faster turnaround times, and enhanced accuracy. We regularly collaborate with Magic Circle and White Shoe firms globally, demonstrating our ability to meet the highest international standards while driving innovation.",
+        analysis: "Unlike traditional law firms that retrofit AI tools as an afterthought, Beyond Horizons designed its workflows, data security protocols, and client communications to maximize AI benefits while maintaining strict confidentiality and legal privilege. Our approach powered by our inhouse AI native alternative legal service provider delivers unprecedented cost efficiency, faster turnaround times, and enhanced accuracy. We regularly collaborate with Magic Circle and White Shoe firms globally, demonstrating our ability to meet the highest international standards while driving innovation.",
         conclusion: "Choosing Beyond Horizons means choosing a future-focused law firm that combines elite legal expertise with cutting-edge technology to deliver exceptional client outcomes."
       }
     },
@@ -31,14 +31,14 @@ const WhyChooseUsDetail = () => {
       title: "Unmatched Cost Efficiency and Client Focus",
       gradient: "from-green-600 to-blue-600",
       content: {
-        intro: "At Beyond Horizons Legal, we understand that clients expect more than just legal advice — they want value, transparency, and speed. By integrating AI natively into our operations, we significantly reduce overhead costs typically associated with large law firms.",
+        intro: "At Beyond Horizons Legal, we understand that clients expect more than just legal advice — they want value, transparency, and speed. By utilizing our inhouse AI native alternative legal service provider, we significantly reduce overhead costs typically associated with large law firms.",
         highlights: [
           "Competitive and transparent pricing structure",
-          "Lean operations through AI-assisted workflows",
+          "Lean operations through our inhouse AI native alternative legal service provider workflows",
           "Rapid response times and thorough due diligence",
           "Clear communication throughout legal processes"
         ],
-        analysis: "Our lean structure and AI-assisted workflows allow us to offer competitive and transparent pricing without compromising quality. Clients benefit from rapid responses, thorough due diligence, and clear communication throughout the process. This approach ensures that elite legal services are accessible to a broader range of clients — from high-growth startups to established multinational corporations — without the premium price tag of traditional firms.",
+        analysis: "Our lean structure and workflows powered by our inhouse AI native alternative legal service provider allow us to offer competitive and transparent pricing without compromising quality. Clients benefit from rapid responses, thorough due diligence, and clear communication throughout the process. This approach ensures that elite legal services are accessible to a broader range of clients — from high-growth startups to established multinational corporations — without the premium price tag of traditional firms.",
         conclusion: "We deliver exceptional value by combining operational efficiency with unwavering commitment to legal excellence."
       }
     },

@@ -2,29 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Minimalist Design System - Beyond Horizons */
+/* Traditional Conservative Design System - Beyond Horizons */
 
 @layer base {
   :root {
-    /* Pure Minimalist Palette with Sage Green Accents */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    /* Traditional Navy and Gold Palette */
+    --background: 0 0% 99%;
+    --foreground: 210 100% 8%;
 
-    /* Clean Black & White with Sage Accent */
-    --primary: 0 0% 0%;
+    /* Navy Primary */
+    --primary: 210 100% 15%;
     --primary-foreground: 0 0% 100%;
 
-    /* Sage Green Accent */
-    --accent: 120 25% 35%;
-    --accent-foreground: 0 0% 100%;
-    --accent-light: 120 30% 85%;
+    /* Gold Accent */
+    --accent: 43 96% 50%;
+    --accent-foreground: 210 100% 8%;
+    --accent-light: 43 100% 95%;
 
-    /* Subtle Grays */
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
+    /* Traditional Grays */
+    --secondary: 210 20% 95%;
+    --secondary-foreground: 210 100% 8%;
 
-    --muted: 0 0% 98%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 210 20% 97%;
+    --muted-foreground: 210 25% 40%;
 
     /* Card and UI Elements */
     --card: 0 0% 100%;
@@ -46,12 +46,12 @@
     --input: 0 0% 96%;
     --ring: 0 0% 0%;
 
-    /* Minimal Shadows */
-    --shadow-minimal: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-    --shadow-hover: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+    /* Traditional Shadows */
+    --shadow-minimal: 0 2px 8px 0 rgba(33, 64, 154, 0.08);
+    --shadow-hover: 0 8px 24px 0 rgba(33, 64, 154, 0.12);
 
-    /* Clean Transitions */
-    --transition-smooth: all 0.2s ease;
+    /* Professional Transitions */
+    --transition-smooth: all 0.3s ease;
 
     --radius: 0.375rem;
 
@@ -194,12 +194,12 @@
     }
   }
 
-  /* Ring Pulse Button Animation */
+  /* Traditional Button Animation */
   .btn-ring-pulse {
     position: relative;
-    background: black;
-    color: white;
-    border: none;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border: 2px solid hsl(var(--accent));
     transition: all 0.3s ease;
     overflow: visible;
   }
@@ -207,19 +207,20 @@
   .btn-ring-pulse::before {
     content: '';
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 2px solid hsl(var(--accent) / 0.4);
     border-radius: inherit;
-    animation: ringPulse 3.5s ease-in-out infinite;
+    animation: ringPulse 2.5s ease-in-out infinite;
     pointer-events: none;
   }
 
   .btn-ring-pulse:hover {
-    background: #333;
-    color: #f0f0f0;
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+    border-color: hsl(var(--primary));
   }
 
   .btn-ring-pulse:hover::before {
