@@ -153,15 +153,6 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Secondary Options */}
-            <div className="space-y-4">
-              <Button variant="outline" size="lg" className="w-full">
-                Request Information Package
-              </Button>
-              <Button variant="ghost" size="lg" className="w-full">
-                Download Our Insights
-              </Button>
-            </div>
 
             {/* Trust Indicators */}
             <div className="bg-secondary rounded p-8 text-center">
