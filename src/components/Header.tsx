@@ -6,10 +6,10 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "ABOUT", href: "#about" },
-    { name: "EXPERTISE", href: "#expertise" },
-    { name: "INSIGHTS", href: "https://beyondhorizons.substack.com/", external: true },
-    { name: "CONTACT", href: "#contact" },
+    { name: "About", href: "#about" },
+    { name: "Work", href: "#expertise" },
+    { name: "Insights", href: "https://beyondhorizons.substack.com/", external: true },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (

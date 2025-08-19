@@ -8,14 +8,17 @@ const Hero = () => {
       <div className="hero-content max-w-4xl mx-auto container-padding text-center text-white">
         {/* Logo/Title centered */}
         <div className="mb-16">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-semibold text-white mb-8 leading-none tracking-wide">
-            BEYOND HORIZONS
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-semibold text-white mb-4 leading-none tracking-wide">
+            BEYOND
           </h1>
+          <p className="text-xl md:text-2xl text-white/80 font-light tracking-wide mb-12">
+            Horizons
+          </p>
           <div className="w-full max-w-md mx-auto mt-12">
             <div className="relative">
               <input 
                 type="text" 
-                placeholder="Search" 
+                placeholder="" 
                 className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-none backdrop-blur-sm text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all"
               />
               <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 text-white/70 hover:text-white transition-colors">
@@ -33,7 +36,7 @@ const Hero = () => {
             <svg className="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
-            <span className="text-xs uppercase tracking-wider">SCROLL DOWN</span>
+            <span className="text-xs uppercase tracking-wider opacity-60">Scroll</span>
           </div>
         </div>
 
