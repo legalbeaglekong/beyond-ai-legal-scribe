@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Bot, DollarSign, Globe, Shield } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import professionalHandshake from "@/assets/professional-handshake.jpg";
 
 const WhyChooseUs = () => {
   const navigate = useNavigate();
@@ -83,6 +84,15 @@ const WhyChooseUs = () => {
               </Card>
             );
           })}
+        </div>
+
+        {/* Professional Image Section */}
+        <div className="mt-20 mb-16 text-center">
+          <img
+            src={professionalHandshake}
+            alt="Professional Partnership"
+            className="w-80 h-80 object-cover rounded-full mx-auto shadow-minimal"
+          />
         </div>
 
         <div className="mt-16 text-center">

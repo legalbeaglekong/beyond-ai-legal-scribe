@@ -11,6 +11,8 @@ import {
   Globe,
   Lightbulb 
 } from "lucide-react";
+import abstractGeometric from "@/assets/abstract-geometric.jpg";
+import legalWorkspace from "@/assets/legal-workspace.jpg";
 
 const PracticeAreas = () => {
   const practiceAreas = [
@@ -88,56 +90,78 @@ const PracticeAreas = () => {
           </div>
         </div>
 
+        {/* Visual Break with Abstract Image */}
+        <div className="relative my-24">
+          <img
+            src={abstractGeometric}
+            alt="Professional Abstract Design"
+            className="w-full h-64 object-cover rounded shadow-minimal opacity-80"
+          />
+        </div>
+
         {/* Practice Areas Grid */}
         <div className="space-y-20">
           {practiceAreas.map((area, index) => (
-            <div key={index} className="grid lg:grid-cols-2 gap-16 items-start">
-              {/* Content */}
-              <div className="space-y-8">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-secondary rounded flex items-center justify-center">
-                    <area.icon className="h-6 w-6 text-foreground" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground">
-                    {area.title}
-                  </h3>
-                </div>
-
-                <p className="text-muted-foreground text-lg leading-relaxed font-light">
-                  {area.description}
-                </p>
-
-                {area.highlight && (
-                  <div className="bg-secondary p-6 rounded">
-                    <p className="text-foreground font-medium text-sm uppercase tracking-wide mb-2">
-                      Notable Achievement
-                    </p>
-                    <p className="text-foreground">
-                      {area.highlight}
-                    </p>
-                  </div>
-                )}
-
-                <Button variant="outline" className="hover:bg-primary hover:text-primary-foreground transition-smooth">
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
-
-              {/* Expertise Areas */}
-              <div className="space-y-8">
-                <h4 className="text-lg font-medium text-foreground">Key Expertise Areas</h4>
-                <div className="space-y-3">
-                  {area.expertise.map((skill, skillIndex) => (
-                    <div 
-                      key={skillIndex} 
-                      className="text-muted-foreground font-light py-2 border-b border-border"
-                    >
-                      {skill}
+            <div key={index} className="space-y-16">
+              <div className="grid lg:grid-cols-2 gap-16 items-start">
+                {/* Content */}
+                <div className="space-y-8">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-secondary rounded flex items-center justify-center">
+                      <area.icon className="h-6 w-6 text-foreground" />
                     </div>
-                  ))}
+                    <h3 className="text-2xl font-bold text-foreground">
+                      {area.title}
+                    </h3>
+                  </div>
+
+                  <p className="text-muted-foreground text-lg leading-relaxed font-light">
+                    {area.description}
+                  </p>
+
+                  {area.highlight && (
+                    <div className="bg-secondary p-6 rounded">
+                      <p className="text-foreground font-medium text-sm uppercase tracking-wide mb-2">
+                        Notable Achievement
+                      </p>
+                      <p className="text-foreground">
+                        {area.highlight}
+                      </p>
+                    </div>
+                  )}
+
+                  <Button variant="outline" className="hover:bg-primary hover:text-primary-foreground transition-smooth">
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </div>
+
+                {/* Expertise Areas */}
+                <div className="space-y-8">
+                  <h4 className="text-lg font-medium text-foreground">Key Expertise Areas</h4>
+                  <div className="space-y-3">
+                    {area.expertise.map((skill, skillIndex) => (
+                      <div 
+                        key={skillIndex} 
+                        className="text-muted-foreground font-light py-2 border-b border-border"
+                      >
+                        {skill}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
+              
+              {/* Add workspace image for every 3rd practice area */}
+              {index % 3 === 2 && (
+                <div className="relative mt-12">
+                  <img
+                    src={legalWorkspace}
+                    alt="Professional Legal Workspace"
+                    className="w-full h-48 object-cover rounded shadow-minimal"
+                  />
+                </div>
+              )}
             </div>
           ))}
         </div>

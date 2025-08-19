@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Award, BookOpen, Users, TrendingUp, ExternalLink } from "lucide-react";
 import founderPortrait from "@/assets/founder-portrait.jpg";
 import customerAppealTeamPhoto from "@/assets/customer-appeal-team-photo.jpg";
+import modernOfficeSpace from "@/assets/modern-office-space.jpg";
+import professionalHandshake from "@/assets/professional-handshake.jpg";
 
 const About = () => {
   const achievements = [
@@ -124,6 +126,15 @@ const About = () => {
               ))}
             </div>
 
+            {/* Modern Office Image */}
+            <div className="relative mb-8">
+              <img
+                src={modernOfficeSpace}
+                alt="Modern Legal Office Space"
+                className="w-full rounded shadow-minimal"
+              />
+            </div>
+            
             {/* Call to Action */}
             <div className="bg-secondary rounded p-12 text-center">
               <h4 className="text-xl font-medium text-foreground mb-4">
