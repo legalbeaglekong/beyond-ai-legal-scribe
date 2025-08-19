@@ -20,21 +20,20 @@ const Hero = () => {
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-semibold text-white mb-4 leading-none tracking-wide">
             BEYOND
           </h1>
-          <p className="text-xl md:text-2xl text-white/80 font-light tracking-wide mb-12">
+          <p className="text-xl md:text-2xl text-white/80 font-light tracking-wide mb-8">
             Horizons
           </p>
-          <div className="w-full max-w-md mx-auto mt-12">
-            <div className="relative">
-              <input 
-                type="text" 
-                placeholder="" 
-                className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-none backdrop-blur-sm text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all"
-              />
-              <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 text-white/70 hover:text-white transition-colors">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </button>
+          
+          {/* Tagline */}
+          <div className="max-w-2xl mx-auto text-center mb-8">
+            <p className="text-2xl md:text-3xl text-white font-light mb-6 tracking-wide">
+              Crafted for Visionaries
+            </p>
+            
+            {/* Firm Name */}
+            <div className="text-white/70 text-sm md:text-base font-light leading-relaxed">
+              <p className="mb-2">A specialised legal service delivered by</p>
+              <p className="text-white/90 font-medium">Bethel Chambers LLC</p>
             </div>
           </div>
         </div>
