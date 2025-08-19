@@ -24,7 +24,7 @@ const GlobalPartners = () => {
     {
       name: "Asia-Pacific",
       description: "Leading partnerships across Singapore, Hong Kong, Tokyo, and Sydney",
-      firms: ["Singapore Leading Firm", "Hong Kong Top Tier", "Tokyo Premier Firm", "Sydney Proven Practice"]
+      firms: ["Hong Kong Top Tier", "Tokyo Premier Firm", "Sydney Proven Practice"]
     },
     {
       name: "Middle East",
