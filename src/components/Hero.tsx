@@ -2,19 +2,22 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Scale, Rocket, Globe } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import heroBannerBg from "@/assets/hero-banner-bg.jpg";
+import singaporeSkyline from "@/assets/singapore-skyline.jpg";
 
 const Hero = () => {
   return (
     <section 
-      className="hero-background min-h-screen flex items-center justify-center relative"
+      className="min-h-screen flex items-center justify-center relative"
       style={{
-        backgroundImage: `url(${heroBannerBg})`,
+        backgroundImage: `url(${singaporeSkyline})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
     >
-      <div className="hero-content max-w-4xl mx-auto container-padding text-center text-white">
+      {/* Dark overlay to ensure text visibility */}
+      <div className="absolute inset-0 bg-black/50 z-10"></div>
+      <div className="max-w-4xl mx-auto container-padding text-center text-white relative z-20">
         {/* Logo/Title centered */}
         <div className="mb-16">
           <div className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold text-white leading-none tracking-wide">
