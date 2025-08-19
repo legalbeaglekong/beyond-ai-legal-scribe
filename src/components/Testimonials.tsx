@@ -143,36 +143,6 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Client Testimonials */}
-        <div className="mb-24">
-          <h3 className="text-2xl font-bold text-foreground text-center mb-12">
-            Client Excellence
-          </h3>
-
-          <div className="grid md:grid-cols-2 gap-12">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="border-border shadow-minimal hover:shadow-hover transition-smooth">
-              <CardContent className="p-8">
-                <Quote className="h-8 w-8 text-muted-foreground/30 mb-6" />
-                
-                <blockquote className="text-lg text-foreground leading-relaxed mb-8 font-light">
-                  "{testimonial.quote}"
-                </blockquote>
-                
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="font-medium text-foreground">{testimonial.author}</div>
-                    <div className="text-muted-foreground text-sm font-light">{testimonial.company}</div>
-                  </div>
-                  <span className="text-muted-foreground text-xs font-light uppercase tracking-wide">
-                    {testimonial.category}
-                  </span>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-          </div>
-        </div>
 
         {/* Key Attributes */}
         <div className="bg-secondary rounded p-12">
