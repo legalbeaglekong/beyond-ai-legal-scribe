@@ -160,7 +160,8 @@ const Contact = () => {
                 Why Choose Beyond Horizons?
               </h4>
               <div className="space-y-3 text-muted-foreground font-light">
-                <p>Chambers & Partners Band 3 Global Ranking</p>
+                <p>Chambers & Partners Band 3 Asia Pacific Ranking</p>
+                <p>Chambers & Partners Band 4 Global Ranking</p>
                 <p>$2.8B+ in Transformational Deals</p>
                 <p>Legal 500 Next Generation Partner</p>
                 <p>Dual English & Singapore Law Expertise</p>
