@@ -7,7 +7,7 @@ const Header = () => {
 
   const navigation = [
     { name: "About", href: "#about" },
-    { name: "Work", href: "#expertise" },
+    { name: "Work", href: "#practice-areas" },
     { name: "Insights", href: "https://beyondhorizons.substack.com/", external: true },
     { name: "Contact", href: "#contact" },
   ];
