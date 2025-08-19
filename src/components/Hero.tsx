@@ -17,9 +17,9 @@ const Hero = () => {
       <div className="hero-content max-w-4xl mx-auto container-padding text-center text-white">
         {/* Logo/Title centered */}
         <div className="mb-16">
-          <div className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold text-white mb-4 leading-none tracking-wide">
+          <div className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold text-white leading-none tracking-wide">
             <h1 className="mb-2">BEYOND</h1>
-            <p className="text-white/80 font-light">Horizons</p>
+            <h1 className="mb-4">HORIZONS</h1>
           </div>
           
           {/* Tagline */}
