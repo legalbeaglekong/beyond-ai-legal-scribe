@@ -27,7 +27,8 @@ const ExpertiseOverview = () => {
     { id: "ip-business-legacy", title: "Protecting Intellectual Property as Part of Your Business Legacy" },
     { id: "trusts-foundations-wealth", title: "Using Trusts and Foundations to Build Multigenerational Wealth" },
     { id: "crisis-proofing-legacy", title: "Crisis-Proofing Your Legacy: Risk Management for APAC Businesses" },
-    { id: "tech-legacy-planning", title: "Legacy Planning for APAC Tech Entrepreneurs" }
+    { id: "tech-legacy-planning", title: "Legacy Planning for APAC Tech Entrepreneurs" },
+    { id: "esg-legacy-business", title: "ESG and Legacy: Why Responsible Business Matters in APAC" }
   ];
 
   return (
