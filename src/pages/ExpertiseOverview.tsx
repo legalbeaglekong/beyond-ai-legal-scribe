@@ -21,7 +21,8 @@ const ExpertiseOverview = () => {
     { id: "financial-services", title: "Top Law Firm for Financial Services Regulation in Multiple Jurisdictions" },
     { id: "business-legacies-apac", title: "Building Business Legacies in APAC: Why Legal Structuring Matters" },
     { id: "family-business-governance", title: "Protecting Family Businesses in APAC Through Smart Governance" },
-    { id: "cross-border-wealth-planning", title: "Cross-Border Wealth Planning for APAC Entrepreneurs" }
+    { id: "cross-border-wealth-planning", title: "Cross-Border Wealth Planning for APAC Entrepreneurs" },
+    { id: "singapore-legacy-hub", title: "Why Singapore Is the Hub for Legacy Planning in APAC" }
   ];
 
   return (
