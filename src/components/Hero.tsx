@@ -37,7 +37,7 @@ const Hero = () => {
               <Button 
                 variant="ghost" 
                 className="text-white/90 font-medium text-2xl md:text-3xl hover:text-white hover:bg-white/10 transition-smooth p-2"
-                onClick={() => window.open('https://bethelchambers.com', '_blank')}
+                onClick={() => window.open('https://bethelchambers.com/', '_blank')}
               >
                 Bethel Chambers LLC
                 <ArrowRight className="w-5 h-5 ml-2" />
