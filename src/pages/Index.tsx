@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import HowWeWork from "@/components/HowWeWork";
 import HowWeWorkTogether from "@/components/HowWeWorkTogether";
+import BethelPartnership from "@/components/BethelPartnership";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import GlobalPartners from "@/components/GlobalPartners";
 import Insights from "@/components/Insights";
@@ -21,6 +22,7 @@ const Index = () => {
         <Testimonials />
         <HowWeWork />
         <HowWeWorkTogether />
+        <BethelPartnership />
         <WhyChooseUs />
         <GlobalPartners />
         <Insights />
