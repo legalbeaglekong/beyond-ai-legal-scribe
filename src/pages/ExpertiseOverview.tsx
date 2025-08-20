@@ -22,7 +22,8 @@ const ExpertiseOverview = () => {
     { id: "business-legacies-apac", title: "Building Business Legacies in APAC: Why Legal Structuring Matters" },
     { id: "family-business-governance", title: "Protecting Family Businesses in APAC Through Smart Governance" },
     { id: "cross-border-wealth-planning", title: "Cross-Border Wealth Planning for APAC Entrepreneurs" },
-    { id: "singapore-legacy-hub", title: "Why Singapore Is the Hub for Legacy Planning in APAC" }
+    { id: "singapore-legacy-hub", title: "Why Singapore Is the Hub for Legacy Planning in APAC" },
+    { id: "succession-planning-founders", title: "Succession Planning for APAC Founders" }
   ];
 
   return (
