@@ -154,7 +154,7 @@ const About = () => {
                     Schedule Consultation
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-black" asChild>
                   <a 
                     href="https://www.linkedin.com/in/hui-ling-teo-7bb8b812b/recent-activity/all/"
                     target="_blank"
