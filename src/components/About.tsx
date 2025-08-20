@@ -30,7 +30,7 @@ const About = () => {
     {
       icon: BookOpen,
       title: "Bloomberg Law Author",
-      description: "ESG Issues for Aerospace & Defense Companies",
+      description: "Strategic Business Advisory & ESG Implementation",
       highlight: "Thought Leadership",
     },
   ];

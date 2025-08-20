@@ -50,8 +50,8 @@ const Insights = () => {
             Latest Perspectives
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed mb-8">
-            Stay informed with our latest insights on transportation law, space innovation, 
-            and the evolving regulatory landscape shaping tomorrow's industries.
+            Stay informed with our latest insights on strategic legal frameworks, regulatory compliance, 
+            and innovative business solutions shaping the future of global commerce.
           </p>
           <Button variant="outline" size="lg" asChild>
             <a 
@@ -116,7 +116,7 @@ const Insights = () => {
           </h3>
           <p className="text-muted-foreground font-light mb-8 max-w-2xl mx-auto">
             Stay informed with our specialized newsletters covering legal developments, 
-            space innovation, and regulatory trends affecting your industry.
+            strategic business advisory, and regulatory trends affecting your industry.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="default" size="lg" asChild>
@@ -135,7 +135,7 @@ const Insights = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                Subscribe for Industry Updates on New Tech and Energy Transition in APAC
+                Subscribe for Strategic Business & Technology Updates
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
