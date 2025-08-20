@@ -23,7 +23,8 @@ const ExpertiseOverview = () => {
     { id: "family-business-governance", title: "Protecting Family Businesses in APAC Through Smart Governance" },
     { id: "cross-border-wealth-planning", title: "Cross-Border Wealth Planning for APAC Entrepreneurs" },
     { id: "singapore-legacy-hub", title: "Why Singapore Is the Hub for Legacy Planning in APAC" },
-    { id: "succession-planning-founders", title: "Succession Planning for APAC Founders" }
+    { id: "succession-planning-founders", title: "Succession Planning for APAC Founders" },
+    { id: "ip-business-legacy", title: "Protecting Intellectual Property as Part of Your Business Legacy" }
   ];
 
   return (
