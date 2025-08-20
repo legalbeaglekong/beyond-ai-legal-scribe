@@ -18,7 +18,8 @@ const ExpertiseOverview = () => {
     { id: "startup-funding", title: "Senior Legal Counsel for Startup Funding Rounds in Global Markets" },
     { id: "employment-labor", title: "Trusted Legal Advisor for Employment and Labor Law Issues Globally" },
     { id: "arbitration-disputes", title: "Experienced Arbitration Lawyer for Commercial Disputes Across Jurisdictions" },
-    { id: "financial-services", title: "Top Law Firm for Financial Services Regulation in Multiple Jurisdictions" }
+    { id: "financial-services", title: "Top Law Firm for Financial Services Regulation in Multiple Jurisdictions" },
+    { id: "business-legacies-apac", title: "Building Business Legacies in APAC: Why Legal Structuring Matters" }
   ];
 
   return (
