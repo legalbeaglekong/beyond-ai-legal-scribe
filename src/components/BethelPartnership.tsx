@@ -10,20 +10,21 @@ const BethelPartnership = () => {
           <h2 id="bethel-partnership-title" className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
             Comprehensive Legal Solutions
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            While Beyond Horizons focuses on corporate and business matters, together with our wider Bethel Chambers team, 
-            we cater to private clients and family offices—covering both the operational aspects of a business and the families and people behind them.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
+            Beyond Horizons is a specialized service delivered by Bethel Chambers LLC, focusing on corporate and business matters. 
+            Together, we provide comprehensive coverage for both the operational aspects of a business and the families and people behind them.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           <Card className="p-8">
             <div className="flex items-center mb-4">
               <Building className="h-8 w-8 text-primary mr-3" />
               <h3 className="text-xl font-semibold">Beyond Horizons</h3>
+              <span className="text-xs text-muted-foreground ml-2">(by Bethel Chambers LLC)</span>
             </div>
             <p className="text-muted-foreground mb-4">
-              Specialized in corporate law, cross-border transactions, and complex business matters for enterprises and institutions.
+              Specialized corporate and commercial legal services for enterprises and institutions.
             </p>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>• Corporate & Commercial Law</li>
@@ -36,16 +37,32 @@ const BethelPartnership = () => {
           <Card className="p-8">
             <div className="flex items-center mb-4">
               <Users className="h-8 w-8 text-primary mr-3" />
-              <h3 className="text-xl font-semibold">Bethel Chambers</h3>
+              <h3 className="text-xl font-semibold">Private Client & Family Office Services</h3>
             </div>
             <p className="text-muted-foreground mb-4">
-              Comprehensive legal services for private clients, family offices, and personal wealth management needs.
+              Comprehensive services spanning both corporate and personal needs for high-net-worth individuals and families.
             </p>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>• Private Client Services</li>
+              <li>• Generation Transfer</li>
               <li>• Family Office Advisory</li>
-              <li>• Wealth Management</li>
+              <li>• Wealth Structuring</li>
+            </ul>
+          </Card>
+
+          <Card className="p-8">
+            <div className="flex items-center mb-4">
+              <Users className="h-8 w-8 text-primary mr-3" />
+              <h3 className="text-xl font-semibold">Bethel Chambers LLC</h3>
+            </div>
+            <p className="text-muted-foreground mb-4">
+              Traditional legal services for personal and family matters.
+            </p>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>• Family Law</li>
               <li>• Estate Planning</li>
+              <li>• Probate</li>
+              <li>• Personal Legal Matters</li>
             </ul>
           </Card>
         </div>
