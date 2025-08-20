@@ -11,15 +11,16 @@ import {
 
 const Footer = () => {
   const practiceAreas = [
-    "Aviation & Aircraft Engines",
-    "Maritime Innovations",
-    "Restructuring & Work-outs",
-    "Low Carbon & Alternative Fuels",
-    "Space Exploration & Commercialization",
+    "Strategic Legal Consultation",
+    "Transaction Structuring",
+    "Regulatory Compliance",
+    "ESG & Sustainability Advisory",
+    "Cross-border Deal Support",
+    "Innovation Legal Framework",
   ];
 
   const resources = [
-    { name: "ESG for Aerospace & Defense", icon: BookOpen },
+    { name: "Strategic Business Advisory", icon: BookOpen },
     { name: "Industry Insights Newsletter", icon: BookOpen },
     { name: "Speaking Engagements", icon: BookOpen },
     { name: "Legal Publications", icon: BookOpen },
@@ -42,8 +43,8 @@ const Footer = () => {
               </div>
               
               <p className="text-muted-foreground leading-relaxed font-light">
-                Pioneering legal solutions for transportation and space innovation, 
-                empowering visionary clients to shape tomorrow's industries.
+                Delivering strategic legal excellence and innovative frameworks, 
+                empowering visionary clients to navigate complex business challenges and achieve transformational growth.
               </p>
 
               {/* Recognition */}
@@ -161,12 +162,12 @@ const Footer = () => {
           <div className="mt-12 pt-8 border-t border-border">
             <div className="flex flex-wrap justify-center items-center gap-8 text-xs text-muted-foreground font-light">
               <div className="flex items-center space-x-2">
-                <Plane className="h-4 w-4 text-foreground" />
-                <span>Aviation Finance Excellence</span>
+                <Rocket className="h-4 w-4 text-foreground" />
+                <span>Strategic Legal Innovation</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Rocket className="h-4 w-4 text-foreground" />
-                <span>Space Innovation Legal Pioneer</span>
+                <BookOpen className="h-4 w-4 text-foreground" />
+                <span>Global Business Advisory</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Scale className="h-4 w-4 text-foreground" />

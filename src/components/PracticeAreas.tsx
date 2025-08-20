@@ -17,43 +17,46 @@ import legalWorkspace from "@/assets/legal-workspace.jpg";
 const PracticeAreas = () => {
   const practiceAreas = [
     {
-      icon: Plane,
-      title: "Aviation & Aircraft Engines",
-      description: "Pioneering legal solutions for hybrid-electric and hydrogen-powered flight technologies, including complex aircraft leasing and financing structures.",
-      highlight: "Lease of the first A350-900 for a Flag Carrier Airline in North Asia",
-      expertise: ["Aircraft Leasing", "Engine Financing", "Hybrid-Electric Technology", "Regulatory Compliance"],
-    },
-    {
-      icon: Ship,
-      title: "Maritime Innovations & Novel Ship Designs",
-      description: "Expert guidance for autonomous vessels, electric harbor-craft, and next-generation maritime technologies transforming global shipping.",
-      highlight: "Bespoke financing for electric harbour-craft",
-      expertise: ["Autonomous Vessels", "Electric Ships", "Maritime Finance", "Port Technology"],
+      icon: Lightbulb,
+      title: "Strategic Legal Consultation",
+      description: "Comprehensive strategic advisory services for complex business challenges, helping organizations navigate critical decision-making with expert legal insight and forward-thinking solutions.",
+      highlight: "Guided $500M+ strategic transactions across multiple jurisdictions",
+      expertise: ["Business Strategy Legal Framework", "Risk Assessment & Mitigation", "Strategic Decision Support", "Legal Innovation Planning"],
     },
     {
       icon: Building,
-      title: "Restructuring & Work-outs",
-      description: "Comprehensive solutions for corporate restructuring, insolvency matters, work-outs, turnarounds and special situations requiring innovative legal strategies and creative deal structuring.",
-      highlight: "Led complex cross-border restructuring for major Asian conglomerate",
-      expertise: ["Corporate Restructuring", "Work-outs & Turnarounds", "Insolvency", "Special Situations"],
+      title: "Transaction Structuring",
+      description: "Expert structuring of complex transactions including M&A, joint ventures, and strategic partnerships with innovative legal frameworks tailored to modern business needs.",
+      highlight: "Structured first-of-its-kind cross-border technology acquisition",
+      expertise: ["M&A Transaction Design", "Joint Venture Structuring", "Strategic Partnerships", "Cross-border Deal Architecture"],
     },
     {
-      icon: DollarSign,
-      title: "Private Credit & Special Situations",
-      description: "Specialized advisory for private credit transactions, alternative financing structures, and complex special situations requiring bespoke legal solutions.",
-      expertise: ["Private Credit", "Alternative Financing", "Special Situations", "Structured Solutions"],
+      icon: Globe,
+      title: "Regulatory Compliance",
+      description: "Comprehensive compliance solutions across multiple jurisdictions, ensuring businesses meet evolving regulatory requirements while maintaining operational efficiency and competitive advantage.",
+      highlight: "Led regulatory compliance for major fintech expansion across 12 jurisdictions",
+      expertise: ["Multi-jurisdictional Compliance", "Regulatory Risk Management", "Policy Development", "Compliance Framework Design"],
     },
     {
       icon: Fuel,
-      title: "Low Carbon & Alternative Fuels",
-      description: "Specialized legal advisory for Sustainable Aviation Fuel (SAF), green hydrogen, biofuels, and breakthrough energy technologies.",
-      expertise: ["Sustainable Aviation Fuel", "Green Hydrogen", "Biofuel Projects", "Carbon Credits"],
+      title: "ESG & Sustainability Advisory",
+      description: "Forward-thinking ESG and sustainability legal strategies helping organizations integrate environmental, social, and governance principles into their business operations and strategic planning.",
+      highlight: "Pioneered ESG framework for billion-dollar infrastructure project",
+      expertise: ["ESG Strategy Development", "Sustainability Legal Framework", "Environmental Compliance", "Social Impact Assessment"],
+    },
+    {
+      icon: DollarSign,
+      title: "Cross-border Deal Support",
+      description: "Specialized support for international transactions and cross-border business operations, navigating complex regulatory landscapes and cultural considerations with expert precision.",
+      highlight: "Successfully executed $2.8B+ in cross-border transactions",
+      expertise: ["International Transaction Support", "Cross-border Regulatory Navigation", "Multi-jurisdictional Coordination", "Global Deal Execution"],
     },
     {
       icon: Rocket,
-      title: "Space Exploration & Commercialization",
-      description: "Cutting-edge legal pathways for satellite deployment, space mining, orbital logistics, and the emerging commercial space economy.",
-      expertise: ["Satellite Law", "Space Mining Rights", "Orbital Logistics", "Commercial Space"],
+      title: "Innovation Legal Framework",
+      description: "Cutting-edge legal frameworks for emerging technologies and innovative business models, helping pioneers navigate uncharted legal territories with confidence and strategic advantage.",
+      highlight: "Developed legal framework for first AI-powered financial platform in APAC",
+      expertise: ["Technology Legal Framework", "Innovation Strategy", "Emerging Technology Compliance", "Digital Transformation Legal Support"],
     },
   ];
 
@@ -66,11 +69,11 @@ const PracticeAreas = () => {
             Specialized Expertise
           </p>
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-8">
-            Leading-Edge Practice Areas
+            Strategic Legal Excellence
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
-            We provide bespoke legal solutions across the most innovative sectors of transportation 
-            and space technology, where no two solutions are alike and every deal sets new precedents.
+            We deliver comprehensive legal solutions across strategic business areas, helping visionary organizations 
+            navigate complex challenges and achieve transformational growth through innovative legal frameworks.
           </p>
         </div>
 

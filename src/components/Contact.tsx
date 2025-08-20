@@ -67,7 +67,7 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">Connect With Our Team</h3>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8 font-light">
-                As a globally recognized legal strategist specializing in transportation and space innovation, 
+                As a globally recognized legal strategist specializing in strategic business advisory and innovative legal frameworks, 
                 Hui Ling Teo brings unparalleled expertise to your most complex challenges. Our bespoke 
                 approach ensures every solution is tailored to your unique business needs.
               </p>
