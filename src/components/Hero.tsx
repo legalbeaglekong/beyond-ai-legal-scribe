@@ -34,7 +34,14 @@ const Hero = () => {
             {/* Firm Name */}
             <div className="text-white/70 text-sm md:text-base font-light leading-relaxed">
               <p className="mb-2">A specialised legal service delivered by</p>
-              <p className="text-white/90 font-medium text-2xl md:text-3xl">Bethel Chambers LLC</p>
+              <Button 
+                variant="ghost" 
+                className="text-white/90 font-medium text-2xl md:text-3xl hover:text-white hover:bg-white/10 transition-smooth p-2"
+                onClick={() => window.open('https://bethelchambers.com', '_blank')}
+              >
+                Bethel Chambers LLC
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
             </div>
           </div>
         </div>
