@@ -95,16 +95,33 @@ const WhyChooseUs = () => {
           />
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center space-y-4">
           <Button 
             onClick={() => navigate("/expertise")}
-            variant="outline"
-            size="lg"
-            className="group"
+            variant="ghost"
+            size="sm"
+            className="group text-muted-foreground"
           >
             View Our Specialized Legal Expertise
-            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-smooth" />
+            <ArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-smooth" />
           </Button>
+          
+          <div>
+            <Button 
+              onClick={() => {
+                const contactSection = document.querySelector('#contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              variant="outline"
+              size="lg"
+              className="group"
+            >
+              Contact Us Today
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-smooth" />
+            </Button>
+          </div>
         </div>
       </div>
     </section>
