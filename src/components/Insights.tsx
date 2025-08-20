@@ -1,8 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Calendar, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Insights = () => {
+  const navigate = useNavigate();
+  
   const latestPosts = [
     {
       title: "Your AI Just Threatened You. Now What?",
@@ -53,17 +56,28 @@ const Insights = () => {
             Stay informed with our latest insights on strategic legal frameworks, regulatory compliance, 
             and innovative business solutions shaping the future of global commerce.
           </p>
-          <Button variant="outline" size="lg" asChild>
-            <a 
-              href="https://beyondhorizons.substack.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              variant="default" 
+              size="lg" 
+              onClick={() => navigate("/market-insights")}
+              className="group"
             >
-              Visit Our Substack Blog
-              <ExternalLink className="ml-2 h-4 w-4" />
-            </a>
-          </Button>
+              Read our Market Insights
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-smooth" />
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a 
+                href="https://beyondhorizons.substack.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center"
+              >
+                Visit Our Substack Blog
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </div>
         </div>
 
         {/* Latest Posts Grid */}
