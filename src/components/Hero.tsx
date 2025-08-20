@@ -34,7 +34,7 @@ const Hero = () => {
             {/* Firm Name */}
             <div className="text-white/70 text-sm md:text-base font-light leading-relaxed">
               <p className="mb-2">A specialised legal service delivered by</p>
-              <p className="text-white/90 font-medium">Bethel Chambers LLC</p>
+              <p className="text-white/90 font-medium text-2xl md:text-3xl">Bethel Chambers LLC</p>
             </div>
           </div>
         </div>
