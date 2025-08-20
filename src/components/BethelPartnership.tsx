@@ -37,8 +37,9 @@ const BethelPartnership = () => {
           <Card className="p-8">
             <div className="flex items-center mb-4">
               <Users className="h-8 w-8 text-primary mr-3" />
-              <h3 className="text-xl font-semibold">Private Client & Family Office Services</h3>
+              <h3 className="text-xl font-semibold">Bethel Chambers & Beyond Horizons</h3>
             </div>
+            <h4 className="text-lg font-medium text-muted-foreground mb-3">Private Client and Family Office Services</h4>
             <p className="text-muted-foreground mb-4">
               Comprehensive services spanning both corporate and personal needs for high-net-worth individuals and families.
             </p>
