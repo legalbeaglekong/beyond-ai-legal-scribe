@@ -4,17 +4,17 @@ import { Star, Quote, ExternalLink } from "lucide-react";
 const Testimonials = () => {
 const chambersTestimonials = [
     {
-      quote: "Teo Hui Ling is a fantastic lawyer and strategist with significant industry expertise.",
+      quote: "A fantastic lawyer and strategist with significant industry expertise.",
       source: "Chambers Asia-Pacific 2025",
       location: "Asia-Pacific Region",
     },
     {
-      quote: "She offers very high-quality advice.",
+      quote: "Offers very high-quality advice.",
       source: "Chambers Asia-Pacific 2025",
       location: "Asia-Pacific Region", 
     },
     {
-      quote: "She can always find the key issues and present solutions.",
+      quote: "Can always find the key issues and present solutions.",
       source: "Chambers Global 2024",
       location: "Singapore",
     },
