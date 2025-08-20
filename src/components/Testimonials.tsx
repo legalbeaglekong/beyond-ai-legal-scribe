@@ -2,30 +2,20 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote, ExternalLink } from "lucide-react";
 
 const Testimonials = () => {
-  const chambersTestimonials = [
-    {
-      quote: "She is very passionate and dedicated, so prompt feedback and comprehensive comments can be expected.",
-      source: "Chambers Global 2024 - Aviation: Finance",
-      location: "Singapore",
-    },
-    {
-      quote: "Hui Ling's level of service is second to none. She regularly thinks about her clients and connects like-minded clients. Hui Ling is also able to deliver advice quickly that is concise, clear, easy to understand and practical, which enables us to structure our sometimes complex transactions more effectively.",
-      source: "Chambers Global 2024 - Aviation: Finance", 
-      location: "Singapore",
-    },
+const chambersTestimonials = [
     {
       quote: "Teo Hui Ling is a fantastic lawyer and strategist with significant industry expertise.",
-      source: "Chambers Asia-Pacific 2025 - Aviation: Finance",
+      source: "Chambers Asia-Pacific 2025",
       location: "Asia-Pacific Region",
     },
     {
-      quote: "She's very experienced in this sector and offers very high-quality advice.",
-      source: "Chambers Asia-Pacific 2025 - Aviation: Finance",
+      quote: "She offers very high-quality advice.",
+      source: "Chambers Asia-Pacific 2025",
       location: "Asia-Pacific Region", 
     },
     {
-      quote: "She is a great aviation lawyer and can always find the key issues and present solutions.",
-      source: "Chambers Global 2024 - Aviation: Finance",
+      quote: "She can always find the key issues and present solutions.",
+      source: "Chambers Global 2024",
       location: "Singapore",
     },
   ];
@@ -84,10 +74,10 @@ const Testimonials = () => {
             Awards & Recognition
           </p>
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-8">
-            Chambers Ranked Excellence
+            Verified Excellence
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
-            Recognized by Chambers and Partners for outstanding expertise in Aviation Finance, 
+            Recognized by Chambers and Partners for outstanding legal expertise in complex cross border matters, 
             with consistent rankings across global and Asia-Pacific markets.
           </p>
         </div>
