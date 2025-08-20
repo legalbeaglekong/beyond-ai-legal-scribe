@@ -25,7 +25,8 @@ const ExpertiseOverview = () => {
     { id: "singapore-legacy-hub", title: "Why Singapore Is the Hub for Legacy Planning in APAC" },
     { id: "succession-planning-founders", title: "Succession Planning for APAC Founders" },
     { id: "ip-business-legacy", title: "Protecting Intellectual Property as Part of Your Business Legacy" },
-    { id: "trusts-foundations-wealth", title: "Using Trusts and Foundations to Build Multigenerational Wealth" }
+    { id: "trusts-foundations-wealth", title: "Using Trusts and Foundations to Build Multigenerational Wealth" },
+    { id: "crisis-proofing-legacy", title: "Crisis-Proofing Your Legacy: Risk Management for APAC Businesses" }
   ];
 
   return (
