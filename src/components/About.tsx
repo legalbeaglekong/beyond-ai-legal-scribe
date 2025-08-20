@@ -154,9 +154,15 @@ const About = () => {
                     Schedule Consultation
                   </a>
                 </Button>
-                <Button variant="outline" size="lg">
-                  View Publications
-                  <ExternalLink className="ml-2 h-4 w-4" />
+                <Button variant="outline" size="lg" asChild>
+                  <a 
+                    href="https://www.linkedin.com/in/hui-ling-teo-7bb8b812b/recent-activity/all/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Publications
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
                 </Button>
               </div>
             </div>
