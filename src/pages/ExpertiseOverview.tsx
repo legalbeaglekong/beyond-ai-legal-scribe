@@ -24,7 +24,8 @@ const ExpertiseOverview = () => {
     { id: "cross-border-wealth-planning", title: "Cross-Border Wealth Planning for APAC Entrepreneurs" },
     { id: "singapore-legacy-hub", title: "Why Singapore Is the Hub for Legacy Planning in APAC" },
     { id: "succession-planning-founders", title: "Succession Planning for APAC Founders" },
-    { id: "ip-business-legacy", title: "Protecting Intellectual Property as Part of Your Business Legacy" }
+    { id: "ip-business-legacy", title: "Protecting Intellectual Property as Part of Your Business Legacy" },
+    { id: "trusts-foundations-wealth", title: "Using Trusts and Foundations to Build Multigenerational Wealth" }
   ];
 
   return (
