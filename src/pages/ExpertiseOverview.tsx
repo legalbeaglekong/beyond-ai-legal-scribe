@@ -53,7 +53,7 @@ const ExpertiseOverview = () => {
                 Specialized Legal Expertise
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Explore our comprehensive legal services across major global jurisdictions including US, EU, UK, China & APAC
+                Together with our global network, we provide comprehensive legal services across major global jurisdictions
               </p>
             </div>
           </div>
