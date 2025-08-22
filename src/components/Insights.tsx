@@ -8,6 +8,14 @@ const Insights = () => {
   
   const latestPosts = [
     {
+      title: "Supply Chain Resilience, Advance Air Mobility and the Singapore Lighthouse with Emerson Xu",
+      excerpt: "In-depth discussion on supply chain innovation, advanced air mobility developments, and Singapore's role as a technological lighthouse in Southeast Asia.",
+      date: "December 15, 2024",
+      readTime: "45 min listen",
+      category: "Podcast",
+      url: "#"
+    },
+    {
       title: "Your AI Just Threatened You. Now What?",
       excerpt: "When AI Refuses to Die: Legal Reflections on Blackmail, Shutdown Resistance & the Future of AI Governance",
       date: "May 29, 2024",
