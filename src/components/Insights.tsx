@@ -13,7 +13,9 @@ const Insights = () => {
       date: "December 15, 2024",
       readTime: "45 min listen",
       category: "Podcast",
-      url: "#"
+      url: "#",
+      isVideo: true,
+      embedUrl: "https://open.spotify.com/embed/episode/7kQWg81TEuuZHV5OmDk172/video?utm_source=generator"
     },
     {
       title: "Your AI Just Threatened You. Now What?",
@@ -91,7 +93,7 @@ const Insights = () => {
         {/* Latest Posts Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {latestPosts.map((post, index) => (
-            <Card key={index} className="border-border shadow-minimal hover:shadow-hover transition-smooth group">
+            <Card key={index} className={`border-border shadow-minimal hover:shadow-hover transition-smooth group ${post.isVideo ? 'md:col-span-2' : ''}`}>
               <CardContent className="p-8">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between text-sm">
@@ -110,20 +112,38 @@ const Insights = () => {
                     {post.excerpt}
                   </p>
                   
+                  {post.isVideo && post.embedUrl && (
+                    <div className="mt-6">
+                      <iframe 
+                        style={{borderRadius: '12px'}} 
+                        src={post.embedUrl}
+                        width="100%" 
+                        height="351" 
+                        frameBorder="0" 
+                        allowFullScreen 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy"
+                        className="w-full"
+                      />
+                    </div>
+                  )}
+                  
                   <div className="flex items-center justify-between pt-4">
                     <span className="text-muted-foreground text-sm font-light">
                       {post.readTime}
                     </span>
-                    <Button variant="ghost" size="sm" className="text-accent hover:text-foreground" asChild>
-                      <a 
-                        href={post.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                      >
-                        Read More
-                        <ArrowRight className="ml-1 h-3 w-3" />
-                      </a>
-                    </Button>
+                    {!post.isVideo && (
+                      <Button variant="ghost" size="sm" className="text-accent hover:text-foreground" asChild>
+                        <a 
+                          href={post.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          Read More
+                          <ArrowRight className="ml-1 h-3 w-3" />
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </div>
               </CardContent>
