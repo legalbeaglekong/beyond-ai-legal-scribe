@@ -22,9 +22,9 @@ const HowWeWork = () => {
       Icon: Wallet,
     },
     {
-      title: "AI-powered oversight",
+      title: "Digital oversight",
       text:
-        "We also use AI tools to track time and keep an eye on your contracts, so nothing slips through the cracks.",
+        "We use digital tools to track time and keep an eye on your contracts, so nothing slips through the cracks.",
       Icon: Bot,
     },
   ];
@@ -34,7 +34,7 @@ const HowWeWork = () => {
     "@type": "HowTo",
     name: "How We Work With You",
     description:
-      "Our simple, compliant onboarding and delivery process with optional automation and AI-enhanced oversight.",
+      "Our simple, compliant onboarding and delivery process with optional automation and digital oversight.",
     step: [
       {
         "@type": "HowToStep",
@@ -56,9 +56,9 @@ const HowWeWork = () => {
       },
       {
         "@type": "HowToStep",
-        name: "AI Tools for Time & Contracts",
+        name: "Digital Tools for Time & Contracts",
         text:
-          "We use AI tools to track time and monitor your contracts so nothing slips through the cracks.",
+          "We use digital tools to track time and monitor your contracts so nothing slips through the cracks.",
       },
     ],
   } as const;

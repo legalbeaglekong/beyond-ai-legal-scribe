@@ -10,10 +10,10 @@ const WhyChooseUs = () => {
   
   const reasons = [
     {
-      id: "ai-native",
+      id: "digital-first",
       icon: Bot,
-      title: "AI-Native Legal Services",
-      description: "Founded in 2024, we're built from the ground up with AI integration, delivering unprecedented efficiency and accuracy.",
+      title: "Digital-First Legal Services",
+      description: "Founded in 2024, we're built from the ground up with modern technology integration, delivering unprecedented efficiency and accuracy.",
       gradient: "from-blue-600 to-purple-600"
     },
     {

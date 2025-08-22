@@ -55,7 +55,7 @@ const PracticeAreas = () => {
       icon: Rocket,
       title: "Innovation Legal Framework",
       description: "Cutting-edge legal frameworks for emerging technologies and innovative business models, helping pioneers navigate uncharted legal territories with confidence and strategic advantage.",
-      highlight: "Developed legal framework for first AI-powered financial platform in APAC",
+      highlight: "Developed legal framework for first fintech platform in APAC",
       expertise: ["Technology Legal Framework", "Innovation Strategy", "Emerging Technology Compliance", "Digital Transformation Legal Support"],
     },
   ];

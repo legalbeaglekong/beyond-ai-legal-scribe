@@ -10,19 +10,19 @@ const WhyChooseUsDetail = () => {
   const navigate = useNavigate();
 
   const detailContent = {
-    "ai-native": {
+    "digital-first": {
       icon: Bot,
-      title: "Beyond Horizons: Leader in AI-Native Legal Services",
+      title: "Beyond Horizons: Leader in Digital-First Legal Services",
       gradient: "from-blue-600 to-purple-600",
       content: {
-        intro: "Beyond Horizons Legal stands at the forefront of AI-native legal services in Singapore and beyond. Founded in 2024 by Hui Ling Teo, our firm was built from the ground up to leverage AI technology deeply integrated into every aspect of legal practice.",
+        intro: "Beyond Horizons Legal stands at the forefront of digital-first legal services in Singapore and beyond. Founded in 2024 by Hui Ling Teo, our firm was built from the ground up to leverage modern technology deeply integrated into every aspect of legal practice.",
         highlights: [
-          "Founded in 2024 with AI integration as core architecture",
-          "Workflows designed specifically for AI optimization",
-          "Advanced data security protocols built for AI environments",
-          "Client communications enhanced through AI capabilities"
+          "Founded in 2024 with technology integration as core architecture",
+          "Workflows designed specifically for digital optimization",
+          "Advanced data security protocols built for modern environments",
+          "Client communications enhanced through digital capabilities"
         ],
-        analysis: "Unlike traditional law firms that retrofit AI tools as an afterthought, Beyond Horizons designed its workflows, data security protocols, and client communications to maximize AI benefits while maintaining strict confidentiality and legal privilege. Our approach powered by our inhouse AI native alternative legal service provider delivers unprecedented cost efficiency, faster turnaround times, and enhanced accuracy. We regularly collaborate with Magic Circle and White Shoe firms globally, demonstrating our ability to meet the highest international standards while driving innovation.",
+        analysis: "Unlike traditional law firms that retrofit digital tools as an afterthought, Beyond Horizons designed its workflows, data security protocols, and client communications to maximize technology benefits while maintaining strict confidentiality and legal privilege. Our modern approach delivers unprecedented cost efficiency, faster turnaround times, and enhanced accuracy. We regularly collaborate with Magic Circle and White Shoe firms globally, demonstrating our ability to meet the highest international standards while driving innovation.",
         conclusion: "Choosing Beyond Horizons means choosing a future-focused law firm that combines proven legal expertise with cutting-edge technology to deliver exceptional client outcomes."
       }
     },
@@ -31,14 +31,14 @@ const WhyChooseUsDetail = () => {
       title: "Unmatched Cost Efficiency and Client Focus",
       gradient: "from-green-600 to-blue-600",
       content: {
-        intro: "At Beyond Horizons Legal, we understand that clients expect more than just legal advice — they want value, transparency, and speed. By utilizing our inhouse AI native alternative legal service provider, we significantly reduce overhead costs typically associated with large law firms.",
+        intro: "At Beyond Horizons Legal, we understand that clients expect more than just legal advice — they want value, transparency, and speed. By utilizing efficient modern workflows, we significantly reduce overhead costs typically associated with large law firms.",
         highlights: [
           "Competitive and transparent pricing structure",
-          "Lean operations through our inhouse AI native alternative legal service provider workflows",
+          "Lean operations through efficient digital workflows",
           "Rapid response times and thorough due diligence",
           "Clear communication throughout legal processes"
         ],
-        analysis: "Our lean structure and workflows powered by our inhouse AI native alternative legal service provider allow us to offer competitive and transparent pricing without compromising quality. Clients benefit from rapid responses, thorough due diligence, and clear communication throughout the process. This approach ensures that proven legal services are accessible to a broader range of clients — from high-growth startups to established multinational corporations — without the premium price tag of traditional firms.",
+        analysis: "Our lean structure and efficient workflows allow us to offer competitive and transparent pricing without compromising quality. Clients benefit from rapid responses, thorough due diligence, and clear communication throughout the process. This approach ensures that proven legal services are accessible to a broader range of clients — from high-growth startups to established multinational corporations — without the premium price tag of traditional firms.",
         conclusion: "We deliver exceptional value by combining operational efficiency with unwavering commitment to legal excellence."
       }
     },
@@ -63,14 +63,14 @@ const WhyChooseUsDetail = () => {
       title: "Commitment to Confidentiality and Legal Privilege",
       gradient: "from-orange-600 to-red-600",
       content: {
-        intro: "We recognize that confidentiality and legal privilege are non-negotiable in legal services. Beyond Horizons Legal has embedded rigorous data privacy and security protocols within its AI-native workflows to protect client information at every stage.",
+        intro: "We recognize that confidentiality and legal privilege are non-negotiable in legal services. Beyond Horizons Legal has embedded rigorous data privacy and security protocols within its digital workflows to protect client information at every stage.",
         highlights: [
-          "Proprietary AI processing in secure environments",
+          "Secure data processing in controlled environments",
           "Lawyer-controlled data handling protocols",
           "Enhanced legal privilege protection",
-          "Zero exposure to public or generic AI tools"
+          "Zero exposure to public or unsecured platforms"
         ],
-        analysis: "Unlike public or generic AI tools that pose risks of data exposure, our proprietary approach ensures that all AI processing occurs within secure, lawyer-controlled environments. This preserves the essential legal privilege and builds trust with our clients.",
+        analysis: "Our comprehensive approach ensures that all data processing occurs within secure, lawyer-controlled environments. This preserves the essential legal privilege and builds trust with our clients through robust security measures.",
         conclusion: "Choosing Beyond Horizons means partnering with a law firm that safeguards your information as fiercely as it advances your legal objectives."
       }
     }
