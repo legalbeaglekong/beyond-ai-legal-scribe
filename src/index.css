@@ -185,35 +185,35 @@
     border: none;
   }
 
-  /* Elegant spacing inspired by v0-xiamen */
+  /* Generous spacing throughout the site */
   .section-padding {
-    padding: 10rem 0;
+    padding: 12rem 0;
   }
 
   .container-padding {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   @media (min-width: 640px) {
     .container-padding {
-      padding-left: 4rem;
-      padding-right: 4rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
     }
     
     .section-padding {
-      padding: 12rem 0;
+      padding: 16rem 0;
     }
   }
 
   @media (min-width: 1024px) {
     .container-padding {
-      padding-left: 6rem;
-      padding-right: 6rem;
+      padding-left: 8rem;
+      padding-right: 8rem;
     }
     
     .section-padding {
-      padding: 14rem 0;
+      padding: 20rem 0;
     }
   }
 
