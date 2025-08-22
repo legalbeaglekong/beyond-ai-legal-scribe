@@ -18,6 +18,16 @@ const Insights = () => {
       embedUrl: "https://open.spotify.com/embed/episode/7kQWg81TEuuZHV5OmDk172/video?utm_source=generator"
     },
     {
+      title: "AI Clauses and IP Protection: What You Don't Know Can Hurt You with Junus Eu",
+      excerpt: "Essential insights into AI-related contractual clauses and intellectual property protection strategies in the digital age.",
+      date: "December 10, 2024",
+      readTime: "40 min listen",
+      category: "Podcast",
+      url: "#",
+      isVideo: true,
+      embedUrl: "https://open.spotify.com/embed/episode/7C5YHD3BrMXEe9fOT0bv1V?utm_source=generator"
+    },
+    {
       title: "Your AI Just Threatened You. Now What?",
       excerpt: "When AI Refuses to Die: Legal Reflections on Blackmail, Shutdown Resistance & the Future of AI Governance",
       date: "May 29, 2024",
@@ -93,7 +103,7 @@ const Insights = () => {
         {/* Latest Posts Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {latestPosts.map((post, index) => (
-            <Card key={index} className={`border-border shadow-minimal hover:shadow-hover transition-smooth group ${post.isVideo ? 'md:col-span-2' : ''}`}>
+            <Card key={index} className="border-border shadow-minimal hover:shadow-hover transition-smooth group">
               <CardContent className="p-8">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between text-sm">
