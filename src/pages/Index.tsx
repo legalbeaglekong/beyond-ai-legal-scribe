@@ -5,6 +5,7 @@ import HowWeWork from "@/components/HowWeWork";
 import HowWeWorkTogether from "@/components/HowWeWorkTogether";
 import BethelPartnership from "@/components/BethelPartnership";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import Industries from "@/components/Industries";
 import GlobalPartners from "@/components/GlobalPartners";
 import Insights from "@/components/Insights";
 import Testimonials from "@/components/Testimonials";
@@ -24,6 +25,7 @@ const Index = () => {
         <HowWeWorkTogether />
         <BethelPartnership />
         <WhyChooseUs />
+        <Industries />
         <GlobalPartners />
         <Insights />
         <Contact />
