@@ -1,22 +1,37 @@
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Beyond Horizons - Professional Legal Services in Singapore',
-  description: 'Beyond Horizons provides expert legal services in Singapore. Trusted legal advisors for businesses and individuals.',
-  alternates: {
-    canonical: 'https://beyondhorizons.sg',
-  },
-}
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import HowWeWork from "@/components/HowWeWork";
+import HowWeWorkTogether from "@/components/HowWeWorkTogether";
+import BethelPartnership from "@/components/BethelPartnership";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import Industries from "@/components/Industries";
+import GlobalPartners from "@/components/GlobalPartners";
+import Insights from "@/components/Insights";
+import Testimonials from "@/components/Testimonials";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 
 export default function HomePage() {
   return (
-    <main>
-      <div className="container">
-        <h1>Beyond Horizons</h1>
-        <p>Professional Legal Services in Singapore</p>
-        <p>Server-side rendered website optimized for SEO.</p>
-      </div>
-    </main>
-  )
+    <div className="min-h-screen">
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Testimonials />
+        <HowWeWork />
+        <HowWeWorkTogether />
+        <BethelPartnership />
+        <WhyChooseUs />
+        <Industries />
+        <GlobalPartners />
+        <Insights />
+        <Contact />
+      </main>
+      <Footer />
+      <CookieConsent />
+    </div>
+  );
 }
-

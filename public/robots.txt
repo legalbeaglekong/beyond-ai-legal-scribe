@@ -1,13 +1,14 @@
-User-agent: *
+User-agent: Googlebot
 Allow: /
 
-# Disallow Lovable subdomain to prevent duplicate content
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
 User-agent: *
-Disallow: /lovable.app/
-
-# Sitemap location
-Sitemap: https://beyondhorizons.sg/sitemap.xml
-
-# Crawl-delay (optional, adjust as needed)
-Crawl-delay: 1
-
+Allow: /
