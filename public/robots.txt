@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Disallow Lovable subdomain to prevent duplicate content
+User-agent: *
+Disallow: /lovable.app/
+
+# Sitemap location
+Sitemap: https://beyondhorizons.sg/sitemap.xml
+
+# Crawl-delay (optional, adjust as needed)
+Crawl-delay: 1
+
