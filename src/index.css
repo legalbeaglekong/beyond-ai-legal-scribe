@@ -25,7 +25,7 @@
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 2%;
-    --muted-foreground: 0 0% 75%;
+    --muted-foreground: 0 0% 88%;
 
     /* Card and UI Elements */
     --card: 0 0% 0%;
@@ -140,16 +140,16 @@
   }
 
   .font-light {
-    font-weight: 400;
+    font-weight: 500;
   }
 
   .font-medium {
-    font-weight: 500;
+    font-weight: 600;
   }
 
   /* Boost smallest text for readability on dark backgrounds */
   .text-xs, .text-sm {
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 
