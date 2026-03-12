@@ -17,30 +17,29 @@ const Hero = () => {
     >
       {/* Dark overlay to ensure text visibility */}
       <div className="absolute inset-0 bg-black/[0.99] z-10"></div>
-      <div className="max-w-4xl mx-auto container-padding text-center text-white relative z-20">
+      <div className="max-w-4xl mx-auto container-padding text-center relative z-20" style={{ color: '#ffffff' }}>
         {/* Logo/Title centered */}
         <div className="mb-16">
-          <div className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold text-white leading-none tracking-wide">
+          <div className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold leading-none tracking-wide" style={{ color: '#ffffff', textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
             <h1 className="mb-2">BEYOND</h1>
             <h1 className="mb-4">HORIZONS</h1>
           </div>
           
           {/* Tagline */}
           <div className="max-w-2xl mx-auto text-center mb-8 mt-8">
-            <p className="text-2xl md:text-3xl text-white font-light mb-6 tracking-wide">
+            <p className="text-2xl md:text-3xl font-light mb-6 tracking-wide" style={{ color: '#ffffff', textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>
               Crafted for Visionaries
             </p>
             
             {/* Firm Name */}
-            <div className="text-white/90 text-sm md:text-base font-medium leading-relaxed">
+            <div className="text-sm md:text-base font-medium leading-relaxed" style={{ color: 'rgba(255,255,255,0.9)' }}>
               <p className="mb-2">A specialised legal service delivered by</p>
-              <p className="text-2xl md:text-3xl text-white font-light tracking-wide">
+              <p className="text-2xl md:text-3xl font-light tracking-wide" style={{ color: '#ffffff' }}>
                 Bethel Chambers LLC
               </p>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
