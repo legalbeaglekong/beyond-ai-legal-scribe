@@ -146,6 +146,11 @@
   .font-medium {
     font-weight: 500;
   }
+
+  /* Boost smallest text for readability on dark backgrounds */
+  .text-xs, .text-sm {
+    font-weight: 500;
+  }
 }
 
 @layer components {
