@@ -32,7 +32,7 @@ const Hero = () => {
             </p>
             
             {/* Firm Name */}
-            <div className="text-white/70 text-sm md:text-base font-light leading-relaxed">
+            <div className="text-white/90 text-sm md:text-base font-medium leading-relaxed">
               <p className="mb-2">A specialised legal service delivered by</p>
               <p className="text-2xl md:text-3xl text-white font-light tracking-wide">
                 Bethel Chambers LLC
