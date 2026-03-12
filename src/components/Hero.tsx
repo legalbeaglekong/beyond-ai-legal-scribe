@@ -16,7 +16,7 @@ const Hero = () => {
       }}
     >
       {/* Dark overlay to ensure text visibility */}
-      <div className="absolute inset-0 bg-black/50 z-10"></div>
+      <div className="absolute inset-0 bg-black/70 z-10"></div>
       <div className="max-w-4xl mx-auto container-padding text-center text-white relative z-20">
         {/* Logo/Title centered */}
         <div className="mb-16">
