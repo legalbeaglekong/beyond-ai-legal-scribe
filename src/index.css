@@ -140,16 +140,16 @@
   }
 
   .font-light {
-    font-weight: 400;
+    font-weight: 500;
   }
 
   .font-medium {
-    font-weight: 500;
+    font-weight: 600;
   }
 
   /* Boost smallest text for readability on dark backgrounds */
   .text-xs, .text-sm {
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 
