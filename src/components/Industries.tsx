@@ -62,7 +62,6 @@ const Industries = () => {
       highlights: ["Cybersecurity Governance & Compliance", "Data Protection & Privacy Law", "AI Regulation & Liability", "Critical Infrastructure Defence"]
     }
   ];
-  ];
 
   return (
     <section id="industries" className="section-padding bg-muted/30">
