@@ -9,6 +9,7 @@ import blockchainIndustry from "@/assets/blockchain-digital-assets-industry.jpg"
 import energyTransitionIndustry from "@/assets/energy-transition-industry.jpg";
 import tradeTariffIndustry from "@/assets/trade-tariff-industry.jpg";
 import robotLeasingIndustry from "@/assets/robot-leasing-robotics-industry.jpg";
+import cybersecurityTechIndustry from "@/assets/cybersecurity-tech-industry.jpg";
 
 const Industries = () => {
   const industries = [
