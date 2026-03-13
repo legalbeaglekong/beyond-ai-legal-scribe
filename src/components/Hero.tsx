@@ -37,6 +37,11 @@ const Hero = () => {
               <p className="text-2xl md:text-3xl font-light tracking-wide" style={{ color: '#ffffff' }}>
                 Bethel Chambers LLC
               </p>
+              <div className="mt-6 inline-flex items-center gap-2 border border-white/30 rounded-full px-5 py-2 backdrop-blur-sm bg-white/5">
+                <span className="text-xs md:text-sm font-medium tracking-widest uppercase" style={{ color: 'rgba(255,255,255,0.9)' }}>
+                  🏆 Asia Legal Business — Law Firm to Watch 2026
+                </span>
+              </div>
             </div>
           </div>
         </div>
