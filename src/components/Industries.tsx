@@ -9,6 +9,7 @@ import blockchainIndustry from "@/assets/blockchain-digital-assets-industry.jpg"
 import energyTransitionIndustry from "@/assets/energy-transition-industry.jpg";
 import tradeTariffIndustry from "@/assets/trade-tariff-industry.jpg";
 import robotLeasingIndustry from "@/assets/robot-leasing-robotics-industry.jpg";
+import cybersecurityTechIndustry from "@/assets/cybersecurity-tech-industry.jpg";
 
 const Industries = () => {
   const industries = [
@@ -53,6 +54,12 @@ const Industries = () => {
       description: "Pioneering legal frameworks for robot leasing structures, robotics-as-a-service agreements, and regulatory compliance for autonomous systems deployment.",
       image: robotLeasingIndustry,
       highlights: ["Robot Leasing Agreements", "Robotics-as-a-Service (RaaS)", "Liability & Insurance Frameworks", "Regulatory Compliance for Autonomous Systems"]
+    },
+    {
+      title: "Cybersecurity & Emerging Technology",
+      description: "Advising on data protection, cybersecurity governance, and emerging technology risks — from AI regulation and deepfake liability to critical infrastructure defence and incident response.",
+      image: cybersecurityTechIndustry,
+      highlights: ["Cybersecurity Governance & Compliance", "Data Protection & Privacy Law", "AI Regulation & Liability", "Critical Infrastructure Defence"]
     }
   ];
 
