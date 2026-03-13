@@ -7,6 +7,8 @@ import transportationIndustry from "@/assets/transportation-industry.jpg";
 import wellnessHealthIndustry from "@/assets/wellness-health-industry.jpg";
 import blockchainIndustry from "@/assets/blockchain-digital-assets-industry.jpg";
 import energyTransitionIndustry from "@/assets/energy-transition-industry.jpg";
+import tradeTariffIndustry from "@/assets/trade-tariff-industry.jpg";
+import robotLeasingIndustry from "@/assets/robot-leasing-robotics-industry.jpg";
 
 const Industries = () => {
   const industries = [
@@ -39,6 +41,18 @@ const Industries = () => {
       description: "Forward-thinking legal strategies for renewable energy projects, clean technology ventures, and sustainable infrastructure development.",
       image: energyTransitionIndustry,
       highlights: ["Renewable Energy Projects", "Clean Technology Ventures", "ESG Compliance", "Sustainable Infrastructure"]
+    },
+    {
+      title: "Trade & Tariff",
+      description: "Strategic legal counsel on international trade regulations, tariff classifications, customs compliance, and cross-border trade disputes in an evolving global landscape.",
+      image: tradeTariffIndustry,
+      highlights: ["Tariff Classification & Strategy", "Customs Compliance", "Trade Remedies & Disputes", "Sanctions & Export Controls"]
+    },
+    {
+      title: "Robot Leasing & Robotics Integration",
+      description: "Pioneering legal frameworks for robot leasing structures, robotics-as-a-service agreements, and regulatory compliance for autonomous systems deployment.",
+      image: robotLeasingIndustry,
+      highlights: ["Robot Leasing Agreements", "Robotics-as-a-Service (RaaS)", "Liability & Insurance Frameworks", "Regulatory Compliance for Autonomous Systems"]
     }
   ];
 
