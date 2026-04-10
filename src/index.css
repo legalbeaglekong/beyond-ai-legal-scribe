@@ -2,97 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Beyond Horizons — Private Bank Design System */
+/* Beyond Horizons — Pictet-Inspired Light Design System */
 
 @layer base {
   :root {
-    /* Dark Background */
-    --background: 210 15% 4%;
-    --foreground: 0 0% 96%;
+    /* Light cream background, dark text — Pictet style */
+    --background: 40 20% 97%;
+    --foreground: 0 0% 12%;
 
-    /* Teal Accent */
-    --accent: 170 45% 42%;
+    /* Burgundy/maroon accent — Pictet's signature red */
+    --accent: 0 55% 35%;
     --accent-foreground: 0 0% 98%;
-    --accent-light: 170 30% 15%;
+    --accent-light: 0 30% 92%;
 
-    /* Primary = Teal for CTAs */
-    --primary: 170 45% 42%;
+    /* Primary = Burgundy for CTAs */
+    --primary: 0 55% 35%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 170 35% 55%;
+    --primary-glow: 0 45% 45%;
 
-    /* Grey Tones */
-    --secondary: 210 10% 8%;
-    --secondary-foreground: 0 0% 96%;
+    /* Warm neutral tones */
+    --secondary: 30 15% 93%;
+    --secondary-foreground: 0 0% 12%;
 
-    --muted: 210 10% 6%;
-    --muted-foreground: 210 5% 72%;
+    --muted: 30 10% 94%;
+    --muted-foreground: 0 0% 42%;
 
-    /* Card and UI Elements */
-    --card: 210 12% 6%;
-    --card-foreground: 0 0% 96%;
+    /* Card and UI */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 12%;
 
-    --popover: 210 12% 6%;
-    --popover-foreground: 0 0% 96%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 12%;
 
-    /* Gold Accent retained */
-    --gold: 45 70% 65%;
-    --gold-foreground: 0 0% 2%;
+    /* Gold retained for special accents */
+    --gold: 38 60% 50%;
+    --gold-foreground: 0 0% 98%;
 
-    /* Status Colors */
+    /* Status */
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    /* Border and Input */
-    --border: 210 10% 16%;
-    --input: 210 10% 10%;
-    --ring: 170 45% 42%;
+    /* Border — subtle warm grey */
+    --border: 30 10% 88%;
+    --input: 30 10% 92%;
+    --ring: 0 55% 35%;
 
-    /* Shadows */
-    --shadow-minimal: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
-    --shadow-hover: 0 12px 40px 0 rgba(0, 0, 0, 0.25);
-    --shadow-teal: 0 4px 20px 0 rgba(56, 163, 148, 0.15);
+    /* Shadows — softer for light theme */
+    --shadow-minimal: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+    --shadow-hover: 0 8px 30px 0 rgba(0, 0, 0, 0.08);
+    --shadow-accent: 0 4px 16px 0 rgba(139, 26, 26, 0.08);
 
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-gentle: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
 
     /* Gradients */
-    --gradient-hero: linear-gradient(180deg, hsl(210, 15%, 3%) 0%, hsl(210, 12%, 6%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(210, 12%, 6%), hsl(210, 10%, 8%));
-    --gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+    --gradient-hero: linear-gradient(180deg, hsl(40, 20%, 97%) 0%, hsl(30, 15%, 95%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%), hsl(30, 15%, 97%));
+    --gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.35));
 
-    --radius: 0.375rem;
+    --radius: 0.25rem;
 
-    --sidebar-background: 210 12% 5%;
-    --sidebar-foreground: 210 5% 72%;
-    --sidebar-primary: 170 45% 42%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 42%;
+    --sidebar-primary: 0 55% 35%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 210 10% 10%;
-    --sidebar-accent-foreground: 0 0% 96%;
-    --sidebar-border: 210 10% 16%;
-    --sidebar-ring: 170 45% 42%;
-  }
-
-  .dark {
-    --background: 210 15% 6%;
-    --foreground: 0 0% 92%;
-    --card: 210 12% 10%;
-    --card-foreground: 0 0% 92%;
-    --popover: 210 12% 10%;
-    --popover-foreground: 0 0% 92%;
-    --primary: 170 45% 42%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 210 10% 12%;
-    --secondary-foreground: 0 0% 92%;
-    --muted: 210 10% 12%;
-    --muted-foreground: 210 5% 60%;
-    --accent: 170 35% 38%;
-    --accent-foreground: 0 0% 92%;
-    --destructive: 0 75% 50%;
-    --destructive-foreground: 0 0% 92%;
-    --border: 210 10% 18%;
-    --input: 210 10% 14%;
-    --ring: 170 45% 42%;
+    --sidebar-accent: 30 15% 93%;
+    --sidebar-accent-foreground: 0 0% 12%;
+    --sidebar-border: 30 10% 88%;
+    --sidebar-ring: 0 55% 35%;
   }
 }
 
@@ -103,19 +81,20 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', 'Lato', sans-serif;
+    font-family: 'Inter', 'Lato', system-ui, sans-serif;
     font-weight: 400;
     line-height: 1.7;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.005em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    line-height: 1.2;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 500;
+    line-height: 1.15;
     letter-spacing: -0.02em;
+    color: hsl(var(--foreground));
   }
 }
 
@@ -132,14 +111,14 @@
     transition: var(--transition-smooth);
   }
 
-  /* Section spacing */
+  /* Section spacing — generous like Pictet */
   .section-padding {
-    padding: 6rem 0;
+    padding: 5rem 0;
   }
 
   @media (min-width: 1024px) {
     .section-padding {
-      padding: 8rem 0;
+      padding: 7rem 0;
     }
   }
 
@@ -150,8 +129,8 @@
 
   @media (min-width: 640px) {
     .container-padding {
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
     }
   }
 
@@ -162,12 +141,25 @@
     }
   }
 
-  /* Accent dot */
+  /* Burgundy accent line — Pictet style */
+  .accent-line {
+    width: 40px;
+    height: 2px;
+    background: hsl(var(--accent));
+  }
+
+  /* Kept for backward compat */
+  .teal-line {
+    width: 40px;
+    height: 2px;
+    background: hsl(var(--accent));
+  }
+
   .accent-dot::after {
     content: '';
     display: inline-block;
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     background: hsl(var(--accent));
     border-radius: 50%;
     margin-left: 8px;
@@ -193,7 +185,6 @@
     background: var(--gradient-overlay);
   }
 
-  /* Hero content z-index */
   .hero-content {
     position: relative;
     z-index: 2;
@@ -202,9 +193,9 @@
   /* Fade-in animations */
   .fade-in {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1),
-                transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1),
+                transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .fade-in.visible {
@@ -235,26 +226,30 @@
     inset: 0;
     background: linear-gradient(
       180deg,
-      rgba(10, 15, 20, 0.75) 0%,
-      rgba(10, 15, 20, 0.55) 40%,
-      rgba(10, 15, 20, 0.7) 100%
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.35) 50%,
+      rgba(0, 0, 0, 0.5) 100%
     );
     z-index: 1;
   }
 
-  /* Teal accent line */
-  .teal-line {
-    width: 60px;
-    height: 3px;
-    background: hsl(var(--accent));
-  }
-
-  /* Card hover effects */
+  /* Card hover */
   .card-lift {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   .card-lift:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
+  }
+
+  /* Pictet-style underline link */
+  .link-underline {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: hsl(var(--accent));
+  }
+
+  .link-underline:hover {
+    text-decoration-color: hsl(var(--foreground));
   }
 }
