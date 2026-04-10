@@ -53,7 +53,8 @@ const Industries = () => {
       title: "Robot Leasing & Robotics Integration",
       description: "Pioneering legal frameworks for robot leasing structures, robotics-as-a-service agreements, and regulatory compliance for autonomous systems deployment.",
       image: robotLeasingIndustry,
-      highlights: ["Robot Leasing Agreements", "Robotics-as-a-Service (RaaS)", "Liability & Insurance Frameworks", "Regulatory Compliance for Autonomous Systems"]
+      highlights: ["Robot Leasing Agreements", "Robotics-as-a-Service (RaaS)", "Liability & Insurance Frameworks", "Regulatory Compliance for Autonomous Systems"],
+      link: "https://robotlaw.beyondhorizons.sg"
     },
     {
       title: "Cybersecurity & Emerging Technology",
@@ -117,10 +118,19 @@ const Industries = () => {
                   </div>
                 </div>
 
-                <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  Learn More
-                  <ArrowRight className="ml-2 h-3 w-3" />
-                </Button>
+                {industry.link ? (
+                  <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors" asChild>
+                    <a href={industry.link} target="_blank" rel="noopener noreferrer">
+                      Learn More
+                      <ArrowRight className="ml-2 h-3 w-3" />
+                    </a>
+                  </Button>
+                ) : (
+                  <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    Learn More
+                    <ArrowRight className="ml-2 h-3 w-3" />
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}
