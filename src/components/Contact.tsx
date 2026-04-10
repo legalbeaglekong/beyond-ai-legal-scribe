@@ -162,7 +162,7 @@ const Contact = () => {
               <div className="space-y-3 text-muted-foreground font-light">
                 <p>Chambers & Partners Band 3 Asia Pacific Ranking</p>
                 <p>Chambers & Partners Band 4 Global Ranking</p>
-                <p>$2.8B+ in Transformational Deals</p>
+                <p>$8B+ in Transformational Deals in 2024 & 2025</p>
                 <p>Legal 500 Next Generation Partner</p>
                 <p>Dual English & Singapore Law Expertise</p>
               </div>

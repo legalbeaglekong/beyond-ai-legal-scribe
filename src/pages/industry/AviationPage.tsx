@@ -10,7 +10,7 @@ const data: IndustryPageData = {
   hero: {
     title: "Aviation Law — Aircraft Finance, Leasing & Regulatory Counsel",
     subtitle: "Chambers-ranked aviation finance lawyers advising airlines, lessors, financiers, and MRO providers across Asia-Pacific, Europe, and the Middle East on complex cross-border transactions.",
-    badges: ["Chambers Global Band 3 — Aviation Finance", "Legal 500 Next Generation Partner", "$2.8B+ in Deals Closed"],
+    badges: ["Chambers Global Band 3 — Aviation Finance", "Legal 500 Next Generation Partner", "$8B+ in Deals Closed in 2024 & 2025"],
   },
   overview: {
     heading: "What We Do in Aviation Law",
@@ -20,7 +20,7 @@ const data: IndustryPageData = {
       { icon: Globe, title: "Cross-Border Aircraft Transactions", description: "Cape Town Convention registrations, export credit agency financing, tax-efficient structures across multiple jurisdictions." },
       { icon: Building, title: "Airport & MRO Infrastructure", description: "Project finance, PPP structures, and regulatory approvals for airport development and MRO facility investments." },
     ],
-    stats: ["150+ aircraft transactions advised", "30+ airline and lessor clients", "15+ jurisdictions covered", "$2.8B+ transaction value"],
+    stats: ["150+ aircraft transactions advised", "30+ airline and lessor clients", "15+ jurisdictions covered", "$8B+ in transaction value in 2024 & 2025"],
   },
   comparison: {
     heading: "A Different Model for Aviation Legal Work",

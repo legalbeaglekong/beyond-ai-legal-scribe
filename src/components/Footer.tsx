@@ -171,7 +171,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Scale className="h-4 w-4 text-foreground" />
-                <span>$2.8B+ Transformational Deals</span>
+                <span>$8B+ Transformational Deals in 2024 & 2025</span>
               </div>
             </div>
           </div>
