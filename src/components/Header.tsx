@@ -46,7 +46,7 @@ const Header = () => {
           <div className="hidden md:block">
             <Button variant="default" size="lg" asChild>
               <a 
-                href="https://outlook.office.com/bookwithme/user/c79273fd7b174b88a10e537f3ae6e251%40huilinglawoffice.com/meetingtype/gilpmYHK-EawFiSPKhEVhQ2?anonymous&ismsaljsauthenabled=true"
+                href="https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -87,7 +87,7 @@ const Header = () => {
               <div className="px-3 py-2">
                 <Button variant="default" size="lg" className="w-full" asChild>
                   <a 
-                    href="https://outlook.office.com/bookwithme/user/c79273fd7b174b88a10e537f3ae6e251%40huilinglawoffice.com/meetingtype/gilpmYHK-EawFiSPKhEVhQ2?anonymous&ismsaljsauthenabled=true"
+                    href="https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
