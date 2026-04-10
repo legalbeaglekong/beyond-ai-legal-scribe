@@ -39,7 +39,7 @@ const data: IndustryPageData = {
     cards: [
       { title: "Renewable Energy Targets", description: "ASEAN targeting 23% renewable energy share by 2025, with Singapore targeting net zero by 2050." },
       { title: "Green Finance Opportunity", description: "$1.5T+ green finance opportunity in Asia-Pacific, driving demand for specialist legal structuring." },
-      { title: "Greenwashing Enforcement", description: "Rising greenwashing enforcement across APAC regulators, requiring proactive compliance strategies." },
+      { title: "Anti-Greenwashing Compliance", description: "Rising greenwashing enforcement across APAC regulators, requiring proactive compliance strategies." },
     ],
     analysis: "The energy transition creates both enormous opportunity and significant legal complexity. Beyond Horizons Legal helps clients navigate this landscape with ESG-certified expertise integrated into every transaction.",
   },
