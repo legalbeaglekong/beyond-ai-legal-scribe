@@ -87,16 +87,27 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border mt-2">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 text-foreground hover:text-accent transition-smooth font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
+              {navigation.map((item) => 
+                item.external || item.href.startsWith("#") ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="block px-3 py-2 text-foreground hover:text-accent transition-smooth font-medium"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="block px-3 py-2 text-foreground hover:text-accent transition-smooth font-medium"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )
+              )}
               <div className="px-3 py-2">
                 <Button variant="default" size="lg" className="w-full" asChild>
                   <a 
