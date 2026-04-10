@@ -19,7 +19,7 @@ const Testimonials = () => {
   return (
     <section className="relative">
       {/* Video divider */}
-      <VideoBackground src={STOCK_VIDEOS.water} className="h-[35vh]">
+      <VideoBackground src={STOCK_VIDEOS.elegant} className="h-[35vh]">
         <div className="h-[35vh] flex items-center justify-center">
           <div className="text-center">
             <div className="teal-line mx-auto mb-6" />

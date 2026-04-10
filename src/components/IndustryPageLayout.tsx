@@ -47,12 +47,12 @@ const getVideoForSlug = (slug: string): string => {
     transportation: STOCK_VIDEOS.transportation,
     "energy-transition": STOCK_VIDEOS.energy,
     "cybersecurity-tech": STOCK_VIDEOS.technology,
-    "blockchain-digital-assets": STOCK_VIDEOS.technology,
-    "trade-tariff": STOCK_VIDEOS.glass,
-    "wellness-health": STOCK_VIDEOS.forest,
-    robotics: STOCK_VIDEOS.technology,
+    "blockchain-digital-assets": STOCK_VIDEOS.blockchain,
+    "trade-tariff": STOCK_VIDEOS.maritime,
+    "wellness-health": STOCK_VIDEOS.wellness,
+    robotics: STOCK_VIDEOS.robotics,
   };
-  return map[slug] || STOCK_VIDEOS.clouds;
+  return map[slug] || STOCK_VIDEOS.business;
 };
 
 const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {

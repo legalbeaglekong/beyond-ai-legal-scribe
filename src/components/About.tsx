@@ -22,7 +22,7 @@ const About = () => {
   return (
     <section id="about" className="relative">
       {/* Video divider band */}
-      <VideoBackground src={STOCK_VIDEOS.ocean} className="h-[40vh] md:h-[50vh]">
+      <VideoBackground src={STOCK_VIDEOS.business} className="h-[40vh] md:h-[50vh]">
         <div className="h-[40vh] md:h-[50vh] flex items-center justify-center">
           <div className="text-center">
             <div className="teal-line mx-auto mb-6" />

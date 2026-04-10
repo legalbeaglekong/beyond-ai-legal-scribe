@@ -15,7 +15,7 @@ const Contact = () => {
   return (
     <section id="contact" className="relative">
       {/* Video header */}
-      <VideoBackground src={STOCK_VIDEOS.sunrise} className="h-[35vh]">
+      <VideoBackground src={STOCK_VIDEOS.cityscape} className="h-[35vh]">
         <div className="h-[35vh] flex items-center justify-center">
           <div className="text-center">
             <div className="teal-line mx-auto mb-6" />
