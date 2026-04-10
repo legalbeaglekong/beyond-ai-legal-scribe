@@ -118,10 +118,19 @@ const Industries = () => {
                   </div>
                 </div>
 
-                <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  Learn More
-                  <ArrowRight className="ml-2 h-3 w-3" />
-                </Button>
+                {industry.link ? (
+                  <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors" asChild>
+                    <a href={industry.link} target="_blank" rel="noopener noreferrer">
+                      Learn More
+                      <ArrowRight className="ml-2 h-3 w-3" />
+                    </a>
+                  </Button>
+                ) : (
+                  <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    Learn More
+                    <ArrowRight className="ml-2 h-3 w-3" />
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}
