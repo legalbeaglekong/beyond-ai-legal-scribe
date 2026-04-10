@@ -9,7 +9,7 @@ const Insights = () => {
   const latestPosts = [
     {
       title: "Supply Chain Resilience, Advance Air Mobility and the Singapore Lighthouse with Emerson Xu",
-      excerpt: "In-depth discussion on supply chain innovation, advanced air mobility developments, and Singapore's role as a technological lighthouse in Southeast Asia.",
+      excerpt: "In-depth discussion on supply chain innovation, advanced air mobility developments, and Singapore's role as a technological lighthouse.",
       date: "December 15, 2024",
       readTime: "45 min listen",
       category: "Podcast",
@@ -19,7 +19,7 @@ const Insights = () => {
     },
     {
       title: "AI Clauses and IP Protection: What You Don't Know Can Hurt You with Junus Eu",
-      excerpt: "Essential insights into AI-related contractual clauses and intellectual property protection strategies in the digital age.",
+      excerpt: "Essential insights into AI-related contractual clauses and intellectual property protection strategies.",
       date: "December 10, 2024",
       readTime: "40 min listen",
       category: "Podcast",
@@ -37,23 +37,23 @@ const Insights = () => {
     },
     {
       title: "Trump's Deep-Sea Power Play: Executive Order Sparks Global Race for Ocean Minerals",
-      excerpt: "From the Clarion-Clipperton Zone to the Cook Islands, the seabed is the new frontier of critical minerals, climate politics, and maritime law.",
-      date: "May 27, 2024", 
+      excerpt: "From the Clarion-Clipperton Zone to the Cook Islands, the seabed is the new frontier of critical minerals.",
+      date: "May 27, 2024",
       readTime: "6 min read",
       category: "Maritime Law",
       url: "https://beyondhorizons.substack.com/p/trumps-deep-sea-power-play-executive"
     },
     {
       title: "VietJet Faces Scrutiny from Singapore's Advertising Authority",
-      excerpt: "A Spotlight on Greenwashing with Regulatory Penalties in Asia's Aviation Industry - In a landmark ruling, VietJet, Vietnam's prominent low-cost airline, encountered regulatory penalties from Singapore's Advertising Standards Authority.",
+      excerpt: "A Spotlight on Greenwashing with Regulatory Penalties in Asia's Aviation Industry.",
       date: "January 13, 2024",
-      readTime: "7 min read", 
+      readTime: "7 min read",
       category: "Aviation Law",
       url: "https://beyondhorizons.substack.com/p/vietjet-faces-scrutiny-from-singapores"
     },
     {
-      title: "Real World Asset Tokenization of Aircraft Assets? Who STO my (aircraft) ABS?",
-      excerpt: "RWA Tokenisation Securitised Token Offerings and decentralised finance solutions to render aircraft ABS (Asset Backed Securitisations) obsolete?",
+      title: "Real World Asset Tokenization of Aircraft Assets?",
+      excerpt: "RWA Tokenisation and decentralised finance solutions to render aircraft ABS obsolete?",
       date: "August 22, 2024",
       readTime: "9 min read",
       category: "FinTech Law",
@@ -64,131 +64,83 @@ const Insights = () => {
   return (
     <section id="insights" className="section-padding bg-background">
       <div className="max-w-6xl mx-auto container-padding">
-        {/* Section Header */}
-        <div className="text-center mb-24">
-          <p className="text-muted-foreground font-light text-sm uppercase tracking-wide mb-8">
-            Industry Insights
-          </p>
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-8">
+        <div className="text-center mb-16">
+          <div className="teal-line mx-auto mb-6" />
+          <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4 font-sans">Industry Insights</p>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">
             Latest Perspectives
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed mb-8">
+          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
             Stay informed with our latest insights on strategic legal frameworks, regulatory compliance, 
-            and innovative business solutions shaping the future of global commerce.
+            and innovative business solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              variant="default" 
-              size="lg" 
-              onClick={() => navigate("/market-insights")}
-              className="group"
-            >
-              Read our Market Insights
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-smooth" />
+            <Button variant="default" size="default" onClick={() => navigate("/market-insights")}>
+              Read Market Insights <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="outline" size="lg" asChild>
-              <a 
-                href="https://beyondhorizons.substack.com/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center"
-              >
-                Visit Our Substack Blog
-                <ExternalLink className="ml-2 h-4 w-4" />
+            <Button variant="outline" size="default" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground" asChild>
+              <a href="https://beyondhorizons.substack.com/" target="_blank" rel="noopener noreferrer">
+                Visit Substack <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
           </div>
         </div>
 
-        {/* Latest Posts Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
           {latestPosts.map((post, index) => (
-            <Card key={index} className="border-border shadow-minimal hover:shadow-hover transition-smooth group">
-              <CardContent className="p-8">
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-accent font-medium">{post.category}</span>
-                    <div className="flex items-center text-muted-foreground font-light">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {post.date}
-                    </div>
+            <Card key={index} className="border-border/30 bg-card card-lift group">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between text-xs mb-4">
+                  <span className="text-accent uppercase tracking-wider">{post.category}</span>
+                  <div className="flex items-center text-muted-foreground">
+                    <Calendar className="h-3 w-3 mr-1" />
+                    {post.date}
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-foreground leading-tight group-hover:text-accent transition-smooth">
-                    {post.title}
-                  </h3>
-                  
-                  <p className="text-muted-foreground font-light leading-relaxed">
-                    {post.excerpt}
-                  </p>
-                  
-                  {post.isVideo && post.embedUrl && (
-                    <div className="mt-6">
-                      <iframe 
-                        style={{borderRadius: '12px'}} 
-                        src={post.embedUrl}
-                        width="100%" 
-                        height="351" 
-                        frameBorder="0" 
-                        allowFullScreen 
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                        loading="lazy"
-                        className="w-full"
-                      />
-                    </div>
+                </div>
+                <h3 className="text-base font-serif font-bold text-foreground leading-snug mb-3 group-hover:text-accent transition-smooth">
+                  {post.title}
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed mb-4">{post.excerpt}</p>
+                {post.isVideo && post.embedUrl && (
+                  <iframe
+                    style={{ borderRadius: '8px' }}
+                    src={post.embedUrl}
+                    width="100%"
+                    height="200"
+                    frameBorder="0"
+                    allowFullScreen
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                  />
+                )}
+                <div className="flex items-center justify-between pt-3">
+                  <span className="text-xs text-muted-foreground">{post.readTime}</span>
+                  {!post.isVideo && (
+                    <a href={post.url} target="_blank" rel="noopener noreferrer" className="text-xs text-accent inline-flex items-center hover:underline">
+                      Read More <ArrowRight className="ml-1 h-3 w-3" />
+                    </a>
                   )}
-                  
-                  <div className="flex items-center justify-between pt-4">
-                    <span className="text-muted-foreground text-sm font-light">
-                      {post.readTime}
-                    </span>
-                    {!post.isVideo && (
-                      <Button variant="ghost" size="sm" className="text-accent hover:text-foreground" asChild>
-                        <a 
-                          href={post.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                        >
-                          Read More
-                          <ArrowRight className="ml-1 h-3 w-3" />
-                        </a>
-                      </Button>
-                    )}
-                  </div>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="bg-secondary rounded p-12 text-center">
-          <h3 className="text-2xl font-bold text-foreground mb-4">
-            Stay Updated
-          </h3>
-          <p className="text-muted-foreground font-light mb-8 max-w-2xl mx-auto">
-            Stay informed with our specialized newsletters covering legal developments, 
-            strategic business advisory, and regulatory trends affecting your industry.
+        {/* Newsletter */}
+        <div className="border border-border/30 rounded p-10 text-center">
+          <h3 className="text-xl font-serif font-bold text-foreground mb-4">Stay Updated</h3>
+          <p className="text-sm text-muted-foreground mb-6 max-w-xl mx-auto">
+            Stay informed with our specialized newsletters covering legal developments and regulatory trends.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="default" size="lg" asChild>
-              <a 
-                href="https://beyondhorizons.substack.com/s/beyond-legal" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                Subscribe for Legal Updates
-                <ExternalLink className="ml-2 h-4 w-4" />
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button variant="default" size="default" asChild>
+              <a href="https://beyondhorizons.substack.com/s/beyond-legal" target="_blank" rel="noopener noreferrer">
+                Subscribe for Legal Updates <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
-            <Button variant="outline" size="lg" asChild>
-              <a 
-                href="https://beyondhorizons.substack.com/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                Subscribe for Strategic Business & Technology Updates
-                <ExternalLink className="ml-2 h-4 w-4" />
+            <Button variant="outline" size="default" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground" asChild>
+              <a href="https://beyondhorizons.substack.com/" target="_blank" rel="noopener noreferrer">
+                Business & Tech Updates <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
           </div>

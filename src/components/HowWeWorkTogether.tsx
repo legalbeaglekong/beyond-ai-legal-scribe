@@ -1,13 +1,12 @@
 const HowWeWorkTogether = () => {
   return (
-    <section id="how-we-work-together" aria-labelledby="how-we-work-together-title" className="py-16 lg:py-24">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <header>
-          <h2 id="how-we-work-together-title" className="text-3xl md:text-4xl font-semibold tracking-tight">
-            How We Work Together — And With You
-          </h2>
-        </header>
-        <div className="mt-6 space-y-6 text-muted-foreground leading-relaxed">
+    <section id="how-we-work-together" className="section-padding bg-background">
+      <div className="max-w-3xl mx-auto container-padding text-center">
+        <div className="teal-line mx-auto mb-6" />
+        <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-8">
+          How We Work Together
+        </h2>
+        <div className="space-y-6 text-muted-foreground leading-relaxed">
           <p>
             As a digital-first team, we operate almost entirely virtually, giving us the flexibility to work whenever and wherever best serves your needs.
           </p>
