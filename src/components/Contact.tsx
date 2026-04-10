@@ -1,181 +1,105 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Calendar, 
-  ArrowRight, 
-  Globe,
-  Clock,
-  MessageCircle 
-} from "lucide-react";
+import { MapPin, Mail, Calendar, ArrowRight, Globe, Clock, MessageCircle } from "lucide-react";
+import VideoBackground from "@/components/VideoBackground";
+import { STOCK_VIDEOS } from "@/lib/stock-videos";
 
 const Contact = () => {
   const contactInfo = [
-    {
-      icon: MapPin,
-      title: "Singapore Office",
-      details: ["39B Neil Rd (Level 3)", "Singapore 088823"],
-    },
-    {
-      icon: Mail,
-      title: "Email",
-      details: ["hl@huilinglawoffice.com", "Response within 24 hours"],
-    },
-    {
-      icon: MessageCircle,
-      title: "WhatsApp",
-      details: ["Chat with us on WhatsApp", "Quick consultation inquiries"],
-    },
-    {
-      icon: Globe,
-      title: "Global Partners",
-      details: ["Cross-border expertise", "Dual English & Singapore Law"],
-    },
-  ];
-
-  const services = [
-    "Strategic Legal Consultation",
-    "Transaction Structuring",
-    "Regulatory Compliance",
-    "ESG & Sustainability Advisory",
-    "Cross-border Deal Support",
-    "Innovation Legal Framework",
+    { icon: MapPin, title: "Singapore Office", details: ["39B Neil Rd (Level 3)", "Singapore 088823"] },
+    { icon: Mail, title: "Email", details: ["hl@huilinglawoffice.com", "Response within 24 hours"] },
+    { icon: MessageCircle, title: "WhatsApp", details: ["Chat with us on WhatsApp", "Quick consultation inquiries"] },
+    { icon: Globe, title: "Global Partners", details: ["Cross-border expertise", "Dual English & Singapore Law"] },
   ];
 
   return (
-    <section id="contact" className="section-padding bg-background">
-      <div className="max-w-6xl mx-auto container-padding">
-        {/* Section Header */}
-        <div className="text-center mb-24">
-          <p className="text-muted-foreground font-light text-sm uppercase tracking-wide mb-8">
-            Get Started Today
-          </p>
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-8">
-            Schedule Your Strategic Consultation
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
-            Ready to transform your legal strategy and pioneer the future of your industry? 
-            Let's discuss how our expertise can accelerate your vision.
-          </p>
+    <section id="contact" className="relative">
+      {/* Video header */}
+      <VideoBackground src={STOCK_VIDEOS.sunrise} className="h-[35vh]">
+        <div className="h-[35vh] flex items-center justify-center">
+          <div className="text-center">
+            <div className="teal-line mx-auto mb-6" />
+            <p className="text-sm uppercase tracking-[0.3em] text-foreground/60 mb-4 font-sans">Get Started</p>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
+              Schedule Your Consultation
+            </h2>
+          </div>
         </div>
+      </VideoBackground>
 
-        <div className="grid lg:grid-cols-2 gap-20">
-          {/* Contact Information */}
-          <div className="space-y-12">
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">Connect With Our Team</h3>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-8 font-light">
-                As a globally recognized legal strategist specializing in strategic business advisory and innovative legal frameworks, 
-                Hui Ling Teo brings unparalleled expertise to your most complex challenges. Our bespoke 
-                approach ensures every solution is tailored to your unique business needs.
-              </p>
-            </div>
+      <div className="section-padding bg-background">
+        <div className="max-w-6xl mx-auto container-padding">
+          <div className="grid lg:grid-cols-2 gap-16">
+            {/* Left — Contact Info */}
+            <div className="space-y-10">
+              <div>
+                <h3 className="text-2xl font-serif font-bold text-foreground mb-4">Connect With Our Team</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  As a globally recognized legal strategist specializing in strategic business advisory, 
+                  Hui Ling Teo brings unparalleled expertise to your most complex challenges.
+                </p>
+              </div>
 
-            {/* Contact Cards */}
-            <div className="space-y-8">
-              {contactInfo.map((info, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-secondary rounded flex items-center justify-center">
-                    <info.icon className="h-6 w-6 text-foreground" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-foreground mb-2">
-                      {info.title}
-                    </h4>
-                    {info.details.map((detail, detailIndex) => (
-                      <p key={detailIndex} className="text-muted-foreground font-light">
-                        {info.title === "Email" && detailIndex === 0 ? (
-                          <a href={`mailto:${detail}`} className="hover:text-accent transition-smooth">
-                            {detail}
-                          </a>
-                        ) : info.title === "WhatsApp" && detailIndex === 0 ? (
-                          <a href="https://wa.me/6597265330" target="_blank" rel="noopener noreferrer" className="inline-flex items-center border border-border px-4 py-2 rounded-lg hover:bg-accent transition-smooth">
-                            <MessageCircle className="h-4 w-4 mr-2" />
-                            {detail}
-                          </a>
-                        ) : (
-                          detail
-                        )}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Consultation Services */}
-            <div className="bg-secondary rounded p-8">
-              <h4 className="text-lg font-medium text-foreground mb-6 flex items-center">
-                <MessageCircle className="h-5 w-5 text-foreground mr-3" />
-                Consultation Services
-              </h4>
-              <div className="space-y-3">
-                {services.map((service, index) => (
-                  <div key={index} className="text-muted-foreground font-light py-2 border-b border-border">
-                    {service}
+              <div className="space-y-6">
+                {contactInfo.map((info, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className="w-10 h-10 rounded bg-accent/10 flex items-center justify-center flex-shrink-0">
+                      <info.icon className="h-5 w-5 text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-sans font-bold text-foreground mb-1 uppercase tracking-wider">{info.title}</h4>
+                      {info.details.map((detail, di) => (
+                        <p key={di} className="text-sm text-muted-foreground">
+                          {info.title === "Email" && di === 0 ? (
+                            <a href={`mailto:${detail}`} className="hover:text-accent transition-smooth">{detail}</a>
+                          ) : info.title === "WhatsApp" && di === 0 ? (
+                            <a href="https://wa.me/6597265330" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-smooth">{detail}</a>
+                          ) : (
+                            detail
+                          )}
+                        </p>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
 
-          {/* CTA Section */}
-          <div className="space-y-12">
-            {/* Primary CTA */}
-            <Card className="border-border shadow-minimal">
-              <CardContent className="p-12 text-center">
-                <Calendar className="h-12 w-12 text-foreground mx-auto mb-6" />
-                <h3 className="text-2xl font-bold mb-6 text-foreground">
-                  Schedule Your Strategic Consultation
-                </h3>
-                <p className="text-muted-foreground mb-8 leading-relaxed font-light">
-                  Book a personalized consultation to discuss your specific needs and discover 
-                  how our innovative legal strategies can accelerate your business objectives.
-                </p>
-                <div className="space-y-6">
-                <Button variant="outline" size="lg" className="w-full text-lg" asChild>
-                  <a 
-                    href="https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Book Consultation Now
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
-                  <div className="flex items-center justify-center text-muted-foreground text-sm font-light">
-                    <Clock className="h-4 w-4 mr-2" />
+            {/* Right — CTA Card */}
+            <div className="space-y-8">
+              <Card className="border-accent/20 bg-card">
+                <CardContent className="p-10 text-center">
+                  <Calendar className="h-10 w-10 text-accent mx-auto mb-6" />
+                  <h3 className="text-xl font-serif font-bold mb-4 text-foreground">
+                    Book a Strategic Consultation
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-8 leading-relaxed">
+                    Book a personalized consultation to discuss your specific needs and discover 
+                    how our innovative legal strategies can accelerate your business.
+                  </p>
+                  <Button variant="default" size="lg" className="w-full" asChild>
+                    <a href="https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">
+                      Book Consultation Now
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                  <div className="flex items-center justify-center text-muted-foreground text-xs mt-4">
+                    <Clock className="h-3.5 w-3.5 mr-2" />
                     Typically responds within 24 hours
                   </div>
+                </CardContent>
+              </Card>
+
+              {/* Trust indicators */}
+              <div className="p-6 border border-border/30 rounded text-center">
+                <h4 className="text-sm font-sans uppercase tracking-wider text-accent mb-4">Why Choose Beyond Horizons?</h4>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <p>Chambers & Partners Band 3 Asia Pacific Ranking</p>
+                  <p>$8B+ in Transformational Deals in 2024 & 2025</p>
+                  <p>Legal 500 Next Generation Partner</p>
+                  <p>Dual English & Singapore Law Expertise</p>
                 </div>
-              </CardContent>
-            </Card>
-
-
-            {/* Trust Indicators */}
-            <div className="bg-secondary rounded p-8 text-center">
-              <h4 className="text-lg font-medium text-foreground mb-6">
-                Why Choose Beyond Horizons?
-              </h4>
-              <div className="space-y-3 text-muted-foreground font-light">
-                <p>Chambers & Partners Band 3 Asia Pacific Ranking</p>
-                <p>Chambers & Partners Band 4 Global Ranking</p>
-                <p>$8B+ in Transformational Deals in 2024 & 2025</p>
-                <p>Legal 500 Next Generation Partner</p>
-                <p>Dual English & Singapore Law Expertise</p>
               </div>
-            </div>
-
-            {/* Global Presence */}
-            <div className="text-center p-8 border border-border rounded">
-              <Globe className="h-8 w-8 text-foreground mx-auto mb-4" />
-              <h4 className="font-medium text-foreground mb-2">Global Partners</h4>
-              <p className="text-muted-foreground text-sm font-light">
-                Working with trusted global partners for over a decade on world-leading matters 
-                across Asia-Pacific, Europe, and the Americas.
-              </p>
             </div>
           </div>
         </div>
