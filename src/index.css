@@ -7,45 +7,45 @@
 @layer base {
   :root {
     /* Black Background & White Text */
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 2%;
+    --foreground: 0 0% 98%;
 
     /* Primary White */
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 2%;
     --primary-glow: 0 0% 80%;
 
     /* Subtle Grey Accent */
-    --accent: 0 0% 20%;
-    --accent-foreground: 0 0% 100%;
-    --accent-light: 0 0% 5%;
+    --accent: 0 0% 22%;
+    --accent-foreground: 0 0% 98%;
+    --accent-light: 0 0% 8%;
 
     /* Grey Tones */
-    --secondary: 0 0% 4%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 2%;
-    --muted-foreground: 0 0% 88%;
+    --muted: 0 0% 6%;
+    --muted-foreground: 0 0% 78%;
 
     /* Card and UI Elements */
-    --card: 0 0% 0%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 0%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
 
     /* Gold Accent for CTAs */
     --gold: 45 70% 65%;
-    --gold-foreground: 0 0% 0%;
+    --gold-foreground: 0 0% 2%;
 
     /* Status Colors */
     --destructive: 0 70% 50%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
 
     /* Border and Input */
-    --border: 0 0% 10%;
-    --input: 0 0% 4%;
-    --ring: 0 0% 100%;
+    --border: 0 0% 18%;
+    --input: 0 0% 8%;
+    --ring: 0 0% 98%;
 
     /* Clean Black & White Shadows */
     --shadow-minimal: 0 2px 12px 0 rgba(0, 0, 0, 0.08);
@@ -58,21 +58,21 @@
     --transition-gentle: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
 
     /* Black & White Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 5%) 50%, hsl(0, 0%, 10%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 2%), hsl(0, 0%, 4%));
+    --gradient-hero: linear-gradient(135deg, hsl(0, 0%, 2%) 0%, hsl(0, 0%, 6%) 50%, hsl(0, 0%, 10%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 5%), hsl(0, 0%, 8%));
     --gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
 
     /* Clean modern radius */
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 2%;
-    --sidebar-foreground: 0 0% 74%;
-    --sidebar-primary: 0 0% 100%;
-    --sidebar-primary-foreground: 0 0% 2%;
-    --sidebar-accent: 0 0% 5%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 12%;
-    --sidebar-ring: 0 0% 100%;
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 78%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 8%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 0 0% 98%;
   }
 
   .dark {
@@ -126,8 +126,9 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
+    font-weight: 450;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
