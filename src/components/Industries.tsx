@@ -53,7 +53,8 @@ const Industries = () => {
       title: "Robot Leasing & Robotics Integration",
       description: "Pioneering legal frameworks for robot leasing structures, robotics-as-a-service agreements, and regulatory compliance for autonomous systems deployment.",
       image: robotLeasingIndustry,
-      highlights: ["Robot Leasing Agreements", "Robotics-as-a-Service (RaaS)", "Liability & Insurance Frameworks", "Regulatory Compliance for Autonomous Systems"]
+      highlights: ["Robot Leasing Agreements", "Robotics-as-a-Service (RaaS)", "Liability & Insurance Frameworks", "Regulatory Compliance for Autonomous Systems"],
+      link: "https://robotlaw.beyondhorizons.sg"
     },
     {
       title: "Cybersecurity & Emerging Technology",
