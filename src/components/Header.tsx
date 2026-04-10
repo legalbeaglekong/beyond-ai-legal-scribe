@@ -31,17 +31,27 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  target={item.external ? "_blank" : undefined}
-                  rel={item.external ? "noopener noreferrer" : undefined}
-                  className="text-muted-foreground hover:text-foreground transition-smooth font-normal text-sm tracking-wider"
-                >
-                  {item.name}
-                </a>
-              ))}
+              {navigation.map((item) => 
+                item.external || item.href.startsWith("#") ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target={item.external ? "_blank" : undefined}
+                    rel={item.external ? "noopener noreferrer" : undefined}
+                    className="text-muted-foreground hover:text-foreground transition-smooth font-normal text-sm tracking-wider"
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-muted-foreground hover:text-foreground transition-smooth font-normal text-sm tracking-wider"
+                  >
+                    {item.name}
+                  </Link>
+                )
+              )}
             </div>
           </div>
 
