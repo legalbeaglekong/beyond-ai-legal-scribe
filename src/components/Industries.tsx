@@ -133,6 +133,13 @@ const Industries = () => {
                       <ArrowRight className="ml-2 h-3 w-3" />
                     </a>
                   </Button>
+                ) : industry.route ? (
+                  <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors" asChild>
+                    <Link to={industry.route}>
+                      Learn More
+                      <ArrowRight className="ml-2 h-3 w-3" />
+                    </Link>
+                  </Button>
                 ) : (
                   <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                     Learn More
