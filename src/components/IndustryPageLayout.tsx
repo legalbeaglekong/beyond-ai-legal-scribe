@@ -220,8 +220,8 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                   {data.comparison.rows.map((row, i) => (
                     <tr key={i} className="border-b border-border/50">
                       <td className="py-4 px-4 text-sm text-foreground font-medium">{row.feature}</td>
-                      <td className="py-4 px-4 text-sm text-muted-foreground font-light">{row.other}</td>
-                      <td className="py-4 px-4 text-sm text-foreground font-light">{row.bh}</td>
+                      <td className="py-4 px-4 text-sm text-foreground/70">{row.other}</td>
+                      <td className="py-4 px-4 text-sm text-foreground">{row.bh}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -241,10 +241,10 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {data.spotlight.cards.map((card, i) => (
-                <Card key={i} className="bg-card border-border fade-in" style={{ transitionDelay: `${i * 100}ms` }}>
+                <Card key={i} className="bg-secondary border-border/80 fade-in" style={{ transitionDelay: `${i * 100}ms` }}>
                   <CardContent className="p-6">
                     <h3 className="text-lg font-bold text-foreground mb-3">{card.title}</h3>
-                    <p className="text-sm text-muted-foreground font-light leading-relaxed mb-4">{card.description}</p>
+                    <p className="text-sm text-foreground/80 leading-relaxed mb-4">{card.description}</p>
                     {card.link && (
                       <a
                         href={card.link}
