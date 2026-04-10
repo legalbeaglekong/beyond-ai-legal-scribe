@@ -9,7 +9,7 @@ const data: IndustryPageData = {
   },
   hero: {
     title: "Aviation Law — Aircraft Finance, Leasing & Regulatory Counsel",
-    subtitle: "Chambers-ranked aviation finance lawyers advising airlines, lessors, financiers, and MRO providers across Asia-Pacific, Europe, and the Middle East on complex cross-border transactions in 2024 & 2025.",
+    subtitle: "Chambers-ranked aviation finance lawyers advising airlines, lessors, financiers, and MRO providers across Asia-Pacific, Europe, and the Middle East on complex cross-border transactions.",
     badges: ["Chambers Global Band 3 — Aviation Finance", "Legal 500 Next Generation Partner", "$8B+ in Deals Closed in 2024 & 2025"],
   },
   overview: {
