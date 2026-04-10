@@ -10,6 +10,8 @@ import WhyChooseUsDetail from "./pages/WhyChooseUsDetail";
 import ExpertiseDetail from "./pages/ExpertiseDetail";
 import ExpertiseOverview from "./pages/ExpertiseOverview";
 import MarketInsights from "./pages/MarketInsights";
+import AboutPage from "./pages/AboutPage";
+import WorkPage from "./pages/WorkPage";
 import AviationPage from "./pages/industry/AviationPage";
 import TransportationPage from "./pages/industry/TransportationPage";
 import WellnessHealthPage from "./pages/industry/WellnessHealthPage";
@@ -31,6 +33,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/en-us/" element={<Index />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/work" element={<WorkPage />} />
             <Route path="/why-choose-us/:id" element={<WhyChooseUsDetail />} />
             <Route path="/expertise" element={<ExpertiseOverview />} />
             <Route path="/expertise/:id" element={<ExpertiseDetail />} />
