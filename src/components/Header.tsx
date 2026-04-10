@@ -12,7 +12,7 @@ const Header = () => {
     { name: "About", href: isHome ? "#about" : "/about" },
     { name: "Work", href: isHome ? "#practice-areas" : "/work" },
     { name: "Insights", href: "https://beyondhorizons.substack.com/", external: true },
-    { name: "Contact", href: isHome ? "#contact" : "/contact" },
+    { name: "Contact", href: isHome ? "#contact" : "/#contact" },
   ];
 
   return (
