@@ -137,7 +137,7 @@ const Contact = () => {
                 <div className="space-y-6">
                 <Button variant="outline" size="lg" className="w-full text-lg" asChild>
                   <a 
-                    href="https://outlook.office.com/bookwithme/user/c79273fd7b174b88a10e537f3ae6e251@huilinglawoffice.com/meetingtype/gilpmYHK-EawFiSPKhEVhQ2?anonymous&ep=mlink"
+                    href="https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
