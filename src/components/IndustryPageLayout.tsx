@@ -174,7 +174,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
 
         {/* Practice Overview */}
         <section id="overview" className="section-padding bg-muted/30">
-          <div className="max-w-6xl mx-auto container-padding">
+          <div className="max-w-6xl mx-auto container-padding fade-in">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
                 {data.overview.heading}
