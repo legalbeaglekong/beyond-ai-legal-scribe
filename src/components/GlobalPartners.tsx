@@ -21,7 +21,7 @@ const GlobalPartners = () => {
 
   return (
     <section className="relative">
-      <VideoBackground src={STOCK_VIDEOS.globe} className="h-[30vh]">
+      <VideoBackground src={STOCK_VIDEOS.maritime} className="h-[30vh]">
         <div className="h-[30vh] flex items-center justify-center">
           <div className="text-center">
             <div className="teal-line mx-auto mb-6" />

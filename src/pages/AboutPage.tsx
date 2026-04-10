@@ -34,7 +34,7 @@ const AboutPage = () => {
         <Header />
 
         {/* Hero with Video */}
-        <VideoBackground src={STOCK_VIDEOS.ocean} className="min-h-[60vh] flex items-center">
+        <VideoBackground src={STOCK_VIDEOS.business} className="min-h-[60vh] flex items-center">
           <div className="min-h-[60vh] flex items-center justify-center w-full pt-20">
             <div className="max-w-4xl mx-auto container-padding text-center">
               <div className="teal-line mx-auto mb-6" />
@@ -115,7 +115,7 @@ const AboutPage = () => {
         </section>
 
         {/* CTA */}
-        <VideoBackground src={STOCK_VIDEOS.sunrise} className="py-20">
+        <VideoBackground src={STOCK_VIDEOS.cityscape} className="py-20">
           <div className="max-w-3xl mx-auto container-padding text-center py-12">
             <div className="teal-line mx-auto mb-8" />
             <h2 className="text-3xl font-serif font-bold text-foreground mb-6">Ready to Transform Your Legal Strategy?</h2>

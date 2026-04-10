@@ -60,7 +60,7 @@ const Industries = () => {
   return (
     <section id="industries" className="relative">
       {/* Video divider */}
-      <VideoBackground src={STOCK_VIDEOS.glass} className="h-[35vh]">
+      <VideoBackground src={STOCK_VIDEOS.robotics} className="h-[35vh]">
         <div className="h-[35vh] flex items-center justify-center">
           <div className="text-center">
             <div className="teal-line mx-auto mb-6" />

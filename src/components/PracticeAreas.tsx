@@ -17,7 +17,7 @@ const PracticeAreas = () => {
   return (
     <section id="practice-areas" className="relative">
       {/* Video header */}
-      <VideoBackground src={STOCK_VIDEOS.marble} className="h-[35vh]">
+      <VideoBackground src={STOCK_VIDEOS.business} className="h-[35vh]">
         <div className="h-[35vh] flex items-center justify-center">
           <div className="text-center">
             <div className="teal-line mx-auto mb-6" />
