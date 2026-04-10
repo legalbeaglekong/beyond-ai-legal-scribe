@@ -235,7 +235,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
 
         {/* Spotlight */}
         <section className="section-padding bg-muted/30">
-          <div className="max-w-6xl mx-auto container-padding">
+          <div className="max-w-6xl mx-auto container-padding fade-in">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-12 text-center">
               {data.spotlight.heading}
             </h2>
@@ -269,9 +269,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
 
         {/* FAQ */}
         <section className="section-padding">
-          <div className="max-w-3xl mx-auto container-padding">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-12 text-center">
-              {data.faqs.heading}
+          <div className="max-w-3xl mx-auto container-padding fade-in">
             </h2>
             <Accordion type="single" collapsible className="w-full">
               {data.faqs.items.map((faq, i) => (
@@ -290,7 +288,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
 
         {/* CTA */}
         <section className="section-padding bg-muted/30">
-          <div className="max-w-3xl mx-auto container-padding text-center">
+          <div className="max-w-3xl mx-auto container-padding text-center fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               {data.cta.heading}
             </h2>
