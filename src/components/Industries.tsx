@@ -51,9 +51,9 @@ const Industries = () => {
     },
     {
       title: "Trade & Tariff",
-      description: "Strategic legal counsel on international trade regulations, tariff classifications, customs compliance, and cross-border trade disputes in an evolving global landscape.",
+      description: "Strategic legal counsel helping businesses restructure relationships, renegotiate contracts, and reposition operations in response to shifting global trade policies and tariff escalations.",
       image: tradeTariffIndustry,
-      highlights: ["Tariff Classification & Strategy", "Customs Compliance", "Trade Remedies & Disputes", "Sanctions & Export Controls"],
+      highlights: ["Contractual Review & Restructuring", "Joint Venture & Shareholder Agreements", "Business Repositioning Strategy", "Risk Assessment & Mitigation"],
       route: "/industry/trade-tariff"
     },
     {
