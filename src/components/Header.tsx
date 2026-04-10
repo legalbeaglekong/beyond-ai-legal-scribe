@@ -1,15 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/" || location.pathname === "/en-us/";
 
   const navigation = [
-    { name: "About", href: "#about" },
-    { name: "Work", href: "#practice-areas" },
+    { name: "About", href: isHome ? "#about" : "/about" },
+    { name: "Work", href: isHome ? "#practice-areas" : "/work" },
     { name: "Insights", href: "https://beyondhorizons.substack.com/", external: true },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: isHome ? "#contact" : "/contact" },
   ];
 
   return (
