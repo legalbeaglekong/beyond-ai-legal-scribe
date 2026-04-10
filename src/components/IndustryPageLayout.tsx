@@ -270,6 +270,8 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         {/* FAQ */}
         <section className="section-padding">
           <div className="max-w-3xl mx-auto container-padding fade-in">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-12 text-center">
+              {data.faqs.heading}
             </h2>
             <Accordion type="single" collapsible className="w-full">
               {data.faqs.items.map((faq, i) => (
