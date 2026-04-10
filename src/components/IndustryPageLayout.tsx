@@ -145,7 +145,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               {data.hero.title}
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed mb-10">
+            <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto font-light leading-relaxed mb-10">
               {data.hero.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -164,7 +164,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
             <div className="flex flex-wrap justify-center gap-4 md:gap-8">
               {data.hero.badges.map((badge, i) => (
-                <span key={i} className="text-xs md:text-sm text-muted-foreground border border-border px-4 py-2 rounded-full">
+                <span key={i} className="text-xs md:text-sm text-foreground/80 border border-border/80 px-4 py-2 rounded-full">
                   {badge}
                 </span>
               ))}
@@ -182,19 +182,19 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
               {data.overview.services.map((service, i) => (
-                <Card key={i} className="bg-card border-border hover:shadow-lg transition-all duration-300 fade-in" style={{ transitionDelay: `${i * 100}ms` }}>
+                <Card key={i} className="bg-secondary border-border/80 hover:shadow-lg transition-all duration-300 fade-in" style={{ transitionDelay: `${i * 100}ms` }}>
                   <CardContent className="p-6">
                     <service.icon className="h-8 w-8 text-foreground mb-4" />
                     <h3 className="text-lg font-bold text-foreground mb-3">{service.title}</h3>
-                    <p className="text-sm text-muted-foreground font-light leading-relaxed">{service.description}</p>
+                    <p className="text-sm text-foreground/80 leading-relaxed">{service.description}</p>
                   </CardContent>
                 </Card>
               ))}
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {data.overview.stats.map((stat, i) => (
-                <div key={i} className="text-center p-4 border border-border rounded-lg fade-in" style={{ transitionDelay: `${i * 75}ms` }}>
-                  <p className="text-sm text-muted-foreground font-light">{stat}</p>
+                <div key={i} className="text-center p-4 border border-border/80 rounded-lg bg-secondary fade-in" style={{ transitionDelay: `${i * 75}ms` }}>
+                  <p className="text-sm text-foreground/80">{stat}</p>
                 </div>
               ))}
             </div>
@@ -220,8 +220,8 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                   {data.comparison.rows.map((row, i) => (
                     <tr key={i} className="border-b border-border/50">
                       <td className="py-4 px-4 text-sm text-foreground font-medium">{row.feature}</td>
-                      <td className="py-4 px-4 text-sm text-muted-foreground font-light">{row.other}</td>
-                      <td className="py-4 px-4 text-sm text-foreground font-light">{row.bh}</td>
+                      <td className="py-4 px-4 text-sm text-foreground/70">{row.other}</td>
+                      <td className="py-4 px-4 text-sm text-foreground">{row.bh}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -241,10 +241,10 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {data.spotlight.cards.map((card, i) => (
-                <Card key={i} className="bg-card border-border fade-in" style={{ transitionDelay: `${i * 100}ms` }}>
+                <Card key={i} className="bg-secondary border-border/80 fade-in" style={{ transitionDelay: `${i * 100}ms` }}>
                   <CardContent className="p-6">
                     <h3 className="text-lg font-bold text-foreground mb-3">{card.title}</h3>
-                    <p className="text-sm text-muted-foreground font-light leading-relaxed mb-4">{card.description}</p>
+                    <p className="text-sm text-foreground/80 leading-relaxed mb-4">{card.description}</p>
                     {card.link && (
                       <a
                         href={card.link}
@@ -260,7 +260,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               ))}
             </div>
             {data.spotlight.analysis && (
-              <p className="text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto text-center">
+              <p className="text-foreground/70 leading-relaxed max-w-3xl mx-auto text-center">
                 {data.spotlight.analysis}
               </p>
             )}
