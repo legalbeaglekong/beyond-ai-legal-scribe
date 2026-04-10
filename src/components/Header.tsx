@@ -9,8 +9,8 @@ const Header = () => {
   const isHome = location.pathname === "/" || location.pathname === "/en-us/";
 
   const navigation = [
-    { name: "About", href: isHome ? "#about" : "/about" },
-    { name: "Work", href: isHome ? "#practice-areas" : "/work" },
+    { name: "About", href: isHome ? "#about" : "/#about" },
+    { name: "Work", href: isHome ? "#practice-areas" : "/#practice-areas" },
     { name: "Insights", href: "https://beyondhorizons.substack.com/", external: true },
     { name: "Contact", href: isHome ? "#contact" : "/#contact" },
   ];
@@ -21,11 +21,13 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img 
-              src="/lovable-uploads/c29b8821-0606-4c34-9200-3a769446e390.png" 
-              alt="Beyond Horizons - Crafted for Visionaries" 
-              className="h-12 w-auto"
-            />
+            <Link to="/">
+              <img 
+                src="/lovable-uploads/c29b8821-0606-4c34-9200-3a769446e390.png" 
+                alt="Beyond Horizons - Crafted for Visionaries" 
+                className="h-12 w-auto"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
