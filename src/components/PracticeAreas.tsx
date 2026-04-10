@@ -48,7 +48,7 @@ const PracticeAreas = () => {
       icon: DollarSign,
       title: "Cross-border Deal Support",
       description: "Specialized support for international transactions and cross-border business operations, navigating complex regulatory landscapes and cultural considerations with expert precision.",
-      highlight: "Successfully executed $2.8B+ in cross-border transactions",
+      highlight: "Successfully executed $8B+ in cross-border transactions in 2024 & 2025",
       expertise: ["International Transaction Support", "Cross-border Regulatory Navigation", "Multi-jurisdictional Coordination", "Global Deal Execution"],
     },
     {
@@ -80,7 +80,7 @@ const PracticeAreas = () => {
         {/* Key Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
           <div className="text-center">
-            <div className="text-4xl font-bold text-foreground mb-2">$2.8B+</div>
+            <div className="text-4xl font-bold text-foreground mb-2">$8B+</div>
             <div className="text-muted-foreground font-light">in Transformational Deals</div>
           </div>
           <div className="text-center">

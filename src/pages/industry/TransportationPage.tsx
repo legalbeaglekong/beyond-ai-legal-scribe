@@ -10,7 +10,7 @@ const data: IndustryPageData = {
   hero: {
     title: "Transportation Law — Infrastructure, Logistics & Cross-Border Trade Counsel",
     subtitle: "Strategic legal guidance for transportation companies, logistics providers, port operators, and infrastructure developers navigating complex regulatory landscapes across Asia-Pacific and beyond.",
-    badges: ["Chambers Global Ranked", "$2.8B+ Cross-Border Deals", "10+ Jurisdictions"],
+    badges: ["Chambers Global Ranked", "$8B+ Cross-Border Deals", "10+ Jurisdictions"],
   },
   overview: {
     heading: "What We Do in Transportation Law",
@@ -20,7 +20,7 @@ const data: IndustryPageData = {
       { icon: Shield, title: "Regulatory Compliance", description: "Navigating maritime, road, and rail regulations across ASEAN, EU, and international frameworks including IMO conventions." },
       { icon: Globe, title: "Cross-Border Transportation", description: "Multi-jurisdictional freight agreements, customs facilitation, cabotage rules, and international transport conventions." },
     ],
-    stats: ["50+ transportation infrastructure matters", "20+ logistics and supply chain clients", "10+ ASEAN jurisdictions", "$2.8B+ in transaction value across transport & aviation"],
+    stats: ["50+ transportation infrastructure matters", "20+ logistics and supply chain clients", "10+ ASEAN jurisdictions", "$8B+ in transaction value in 2024 & 2025"],
   },
   comparison: {
     heading: "Why Specialist Transport Counsel Matters",

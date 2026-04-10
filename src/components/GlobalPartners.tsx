@@ -7,7 +7,7 @@ const GlobalPartners = () => {
     { icon: Building, label: "Partner Firms", value: "10+" },
     { icon: Globe, label: "Global Regions", value: "4" },
     { icon: Users, label: "Years of Partnership", value: "10+" },
-    { icon: Scale, label: "Cross-Border Deals", value: "$2.8B+" }
+    { icon: Scale, label: "Cross-Border Deals", value: "$8B+" }
   ];
 
   const regions = [
