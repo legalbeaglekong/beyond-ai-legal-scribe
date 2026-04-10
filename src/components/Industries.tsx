@@ -127,19 +127,19 @@ const Industries = () => {
                 </div>
 
                 {industry.link ? (
-                  <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors" asChild>
-                    <a href={industry.link} target="_blank" rel="noopener noreferrer">
+                  <a href={industry.link} target="_blank" rel="noopener noreferrer" className="block">
+                    <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                       Learn More
                       <ArrowRight className="ml-2 h-3 w-3" />
-                    </a>
-                  </Button>
+                    </Button>
+                  </a>
                 ) : industry.route ? (
-                  <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors" asChild>
-                    <Link to={industry.route}>
+                  <Link to={industry.route} className="block">
+                    <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                       Learn More
                       <ArrowRight className="ml-2 h-3 w-3" />
-                    </Link>
-                  </Button>
+                    </Button>
+                  </Link>
                 ) : (
                   <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                     Learn More
