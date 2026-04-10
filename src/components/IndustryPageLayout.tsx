@@ -136,12 +136,12 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background" ref={containerRef}>
         <Header />
 
         {/* Hero */}
         <section className="pt-32 pb-20 section-padding bg-gradient-hero relative">
-          <div className="max-w-5xl mx-auto container-padding text-center hero-content">
+          <div className="max-w-5xl mx-auto container-padding text-center hero-content fade-in">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               {data.hero.title}
             </h1>
