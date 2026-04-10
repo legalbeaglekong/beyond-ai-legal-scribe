@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import aviationIndustry from "@/assets/aviation-industry.jpg";
 import transportationIndustry from "@/assets/transportation-industry.jpg";
@@ -17,37 +18,43 @@ const Industries = () => {
       title: "Aviation",
       description: "Comprehensive legal solutions for airlines, aircraft manufacturers, and aviation infrastructure projects, including regulatory compliance and international aviation law.",
       image: aviationIndustry,
-      highlights: ["Aircraft Financing & Leasing", "Aviation Regulatory Compliance", "International Aviation Agreements", "Airport Development Projects"]
+      highlights: ["Aircraft Financing & Leasing", "Aviation Regulatory Compliance", "International Aviation Agreements", "Airport Development Projects"],
+      route: "/industry/aviation"
     },
     {
       title: "Transportation",
       description: "Strategic legal guidance for transportation companies, logistics providers, and infrastructure developers across all modes of transport.",
       image: transportationIndustry,
-      highlights: ["Transportation Infrastructure", "Logistics & Supply Chain", "Regulatory Compliance", "Cross-border Transportation"]
+      highlights: ["Transportation Infrastructure", "Logistics & Supply Chain", "Regulatory Compliance", "Cross-border Transportation"],
+      route: "/industry/transportation"
     },
     {
       title: "Wellness & Health",
       description: "Specialized expertise in healthcare regulations, wellness technology, and medical innovation projects within complex regulatory frameworks.",
       image: wellnessHealthIndustry,
-      highlights: ["Healthcare Compliance", "Medical Device Regulation", "Digital Health Solutions", "Wellness Technology Frameworks"]
+      highlights: ["Healthcare Compliance", "Medical Device Regulation", "Digital Health Solutions", "Wellness Technology Frameworks"],
+      route: "/industry/wellness-health"
     },
     {
       title: "Blockchain & Digital Assets",
       description: "Cutting-edge legal frameworks for blockchain technology, cryptocurrency ventures, and digital asset management in evolving regulatory landscapes.",
       image: blockchainIndustry,
-      highlights: ["Digital Asset Compliance", "Blockchain Technology Law", "Cryptocurrency Regulations", "DeFi Legal Frameworks"]
+      highlights: ["Digital Asset Compliance", "Blockchain Technology Law", "Cryptocurrency Regulations", "DeFi Legal Frameworks"],
+      route: "/industry/blockchain-digital-assets"
     },
     {
       title: "Energy Transition Infrastructure",
       description: "Forward-thinking legal strategies for renewable energy projects, clean technology ventures, and sustainable infrastructure development.",
       image: energyTransitionIndustry,
-      highlights: ["Renewable Energy Projects", "Clean Technology Ventures", "ESG Compliance", "Sustainable Infrastructure"]
+      highlights: ["Renewable Energy Projects", "Clean Technology Ventures", "ESG Compliance", "Sustainable Infrastructure"],
+      route: "/industry/energy-transition"
     },
     {
       title: "Trade & Tariff",
       description: "Strategic legal counsel on international trade regulations, tariff classifications, customs compliance, and cross-border trade disputes in an evolving global landscape.",
       image: tradeTariffIndustry,
-      highlights: ["Tariff Classification & Strategy", "Customs Compliance", "Trade Remedies & Disputes", "Sanctions & Export Controls"]
+      highlights: ["Tariff Classification & Strategy", "Customs Compliance", "Trade Remedies & Disputes", "Sanctions & Export Controls"],
+      route: "/industry/trade-tariff"
     },
     {
       title: "Robot Leasing & Robotics Integration",
@@ -60,7 +67,8 @@ const Industries = () => {
       title: "Cybersecurity & Emerging Technology",
       description: "Advising on data protection, cybersecurity governance, and emerging technology risks — from AI regulation and deepfake liability to critical infrastructure defence and incident response.",
       image: cybersecurityTechIndustry,
-      highlights: ["Cybersecurity Governance & Compliance", "Data Protection & Privacy Law", "AI Regulation & Liability", "Critical Infrastructure Defence"]
+      highlights: ["Cybersecurity Governance & Compliance", "Data Protection & Privacy Law", "AI Regulation & Liability", "Critical Infrastructure Defence"],
+      route: "/industry/cybersecurity-tech"
     }
   ];
 
@@ -124,6 +132,13 @@ const Industries = () => {
                       Learn More
                       <ArrowRight className="ml-2 h-3 w-3" />
                     </a>
+                  </Button>
+                ) : industry.route ? (
+                  <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors" asChild>
+                    <Link to={industry.route}>
+                      Learn More
+                      <ArrowRight className="ml-2 h-3 w-3" />
+                    </Link>
                   </Button>
                 ) : (
                   <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
