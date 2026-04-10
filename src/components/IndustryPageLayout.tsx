@@ -145,7 +145,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               {data.hero.title}
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed mb-10">
+            <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto font-light leading-relaxed mb-10">
               {data.hero.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -260,7 +260,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               ))}
             </div>
             {data.spotlight.analysis && (
-              <p className="text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto text-center">
+              <p className="text-foreground/70 leading-relaxed max-w-3xl mx-auto text-center">
                 {data.spotlight.analysis}
               </p>
             )}
