@@ -182,19 +182,19 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
               {data.overview.services.map((service, i) => (
-                <Card key={i} className="bg-card border-border hover:shadow-lg transition-all duration-300 fade-in" style={{ transitionDelay: `${i * 100}ms` }}>
+                <Card key={i} className="bg-secondary border-border/80 hover:shadow-lg transition-all duration-300 fade-in" style={{ transitionDelay: `${i * 100}ms` }}>
                   <CardContent className="p-6">
                     <service.icon className="h-8 w-8 text-foreground mb-4" />
                     <h3 className="text-lg font-bold text-foreground mb-3">{service.title}</h3>
-                    <p className="text-sm text-muted-foreground font-light leading-relaxed">{service.description}</p>
+                    <p className="text-sm text-foreground/80 leading-relaxed">{service.description}</p>
                   </CardContent>
                 </Card>
               ))}
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {data.overview.stats.map((stat, i) => (
-                <div key={i} className="text-center p-4 border border-border rounded-lg fade-in" style={{ transitionDelay: `${i * 75}ms` }}>
-                  <p className="text-sm text-muted-foreground font-light">{stat}</p>
+                <div key={i} className="text-center p-4 border border-border/80 rounded-lg bg-secondary fade-in" style={{ transitionDelay: `${i * 75}ms` }}>
+                  <p className="text-sm text-foreground/80">{stat}</p>
                 </div>
               ))}
             </div>
