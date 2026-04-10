@@ -204,6 +204,8 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         {/* Comparison */}
         <section className="section-padding">
           <div className="max-w-5xl mx-auto container-padding fade-in">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-12 text-center">
+              {data.comparison.heading}
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
