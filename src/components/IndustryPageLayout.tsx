@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -68,8 +68,31 @@ export interface IndustryPageData {
 }
 
 const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const elements = container.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -113,12 +136,12 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background" ref={containerRef}>
         <Header />
 
         {/* Hero */}
         <section className="pt-32 pb-20 section-padding bg-gradient-hero relative">
-          <div className="max-w-5xl mx-auto container-padding text-center hero-content">
+          <div className="max-w-5xl mx-auto container-padding text-center hero-content fade-in">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               {data.hero.title}
             </h1>
@@ -151,7 +174,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
 
         {/* Practice Overview */}
         <section id="overview" className="section-padding bg-muted/30">
-          <div className="max-w-6xl mx-auto container-padding">
+          <div className="max-w-6xl mx-auto container-padding fade-in">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
                 {data.overview.heading}
@@ -159,7 +182,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
               {data.overview.services.map((service, i) => (
-                <Card key={i} className="bg-card border-border hover:shadow-lg transition-all duration-300">
+                <Card key={i} className="bg-card border-border hover:shadow-lg transition-all duration-300 fade-in" style={{ transitionDelay: `${i * 100}ms` }}>
                   <CardContent className="p-6">
                     <service.icon className="h-8 w-8 text-foreground mb-4" />
                     <h3 className="text-lg font-bold text-foreground mb-3">{service.title}</h3>
@@ -170,7 +193,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {data.overview.stats.map((stat, i) => (
-                <div key={i} className="text-center p-4 border border-border rounded-lg">
+                <div key={i} className="text-center p-4 border border-border rounded-lg fade-in" style={{ transitionDelay: `${i * 75}ms` }}>
                   <p className="text-sm text-muted-foreground font-light">{stat}</p>
                 </div>
               ))}
@@ -180,7 +203,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
 
         {/* Comparison */}
         <section className="section-padding">
-          <div className="max-w-5xl mx-auto container-padding">
+          <div className="max-w-5xl mx-auto container-padding fade-in">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-12 text-center">
               {data.comparison.heading}
             </h2>
@@ -212,13 +235,13 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
 
         {/* Spotlight */}
         <section className="section-padding bg-muted/30">
-          <div className="max-w-6xl mx-auto container-padding">
+          <div className="max-w-6xl mx-auto container-padding fade-in">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-12 text-center">
               {data.spotlight.heading}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {data.spotlight.cards.map((card, i) => (
-                <Card key={i} className="bg-card border-border">
+                <Card key={i} className="bg-card border-border fade-in" style={{ transitionDelay: `${i * 100}ms` }}>
                   <CardContent className="p-6">
                     <h3 className="text-lg font-bold text-foreground mb-3">{card.title}</h3>
                     <p className="text-sm text-muted-foreground font-light leading-relaxed mb-4">{card.description}</p>
@@ -246,7 +269,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
 
         {/* FAQ */}
         <section className="section-padding">
-          <div className="max-w-3xl mx-auto container-padding">
+          <div className="max-w-3xl mx-auto container-padding fade-in">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-12 text-center">
               {data.faqs.heading}
             </h2>
@@ -267,7 +290,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
 
         {/* CTA */}
         <section className="section-padding bg-muted/30">
-          <div className="max-w-3xl mx-auto container-padding text-center">
+          <div className="max-w-3xl mx-auto container-padding text-center fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               {data.cta.heading}
             </h2>
