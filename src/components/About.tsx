@@ -101,7 +101,7 @@ const About = () => {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
-                  <Button variant="outline" size="default" asChild>
+                  <Button variant="outline" size="default" className="border-foreground/30 text-foreground hover:bg-foreground hover:text-background" asChild>
                     <a href="https://www.linkedin.com/in/hui-ling-teo-7bb8b812b/recent-activity/all/" target="_blank" rel="noopener noreferrer">
                       View Publications
                       <ExternalLink className="ml-2 h-4 w-4" />
