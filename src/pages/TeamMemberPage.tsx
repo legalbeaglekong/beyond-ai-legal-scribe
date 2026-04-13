@@ -75,7 +75,7 @@ const teamData: Record<string, {
     experience: "5 years of experience",
     experienceZh: "5年经验",
     qualifications: [
-      "Admission Pending (English law)",
+      "Qualified as an English solicitor",
       "LLB University of Birmingham",
       "LLM Legal Practice (Solicitors)",
     ],
