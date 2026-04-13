@@ -38,12 +38,16 @@ const Industries = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {industries.map((industry, index) => (
-              <div key={index} className="group">
-                {industry.image && (
-                  <div className="overflow-hidden rounded-sm mb-4">
+              <div key={index} className="group flex flex-col">
+                <div className="overflow-hidden rounded-sm mb-4">
+                  {industry.image ? (
                     <img src={industry.image} alt={industry.title} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-                  </div>
-                )}
+                  ) : (
+                    <div className="w-full h-48 bg-secondary/50 rounded-sm flex items-center justify-center">
+                      <span className="text-muted-foreground/40 font-serif text-lg">{industry.title}</span>
+                    </div>
+                  )}
+                </div>
                 <h3 className="text-lg font-serif font-bold text-foreground mb-2 group-hover:text-accent transition-smooth">{industry.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-3">{industry.description}</p>
                 <div className="space-y-1 mb-4">
@@ -53,15 +57,17 @@ const Industries = () => {
                     </div>
                   ))}
                 </div>
-                {industry.link ? (
-                  <a href={industry.link} target="_blank" rel="noopener noreferrer" className="text-sm text-foreground link-underline inline-flex items-center">
-                    {t("industries.learnMore")} <ArrowRight className="ml-1 h-3 w-3" />
-                  </a>
-                ) : industry.route ? (
-                  <Link to={industry.route} className="text-sm text-foreground link-underline inline-flex items-center">
-                    {t("industries.learnMore")} <ArrowRight className="ml-1 h-3 w-3" />
-                  </Link>
-                ) : null}
+                <div className="mt-auto">
+                  {industry.link ? (
+                    <a href={industry.link} target="_blank" rel="noopener noreferrer" className="text-sm text-foreground link-underline inline-flex items-center">
+                      {t("industries.learnMore")} <ArrowRight className="ml-1 h-3 w-3" />
+                    </a>
+                  ) : industry.route ? (
+                    <Link to={industry.route} className="text-sm text-foreground link-underline inline-flex items-center">
+                      {t("industries.learnMore")} <ArrowRight className="ml-1 h-3 w-3" />
+                    </Link>
+                  ) : null}
+                </div>
               </div>
             ))}
           </div>
