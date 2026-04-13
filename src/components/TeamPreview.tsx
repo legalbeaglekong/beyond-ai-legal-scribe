@@ -21,7 +21,7 @@ const TeamPreview = () => {
               <div className="aspect-[3/4] overflow-hidden rounded mb-6 bg-muted">
                 <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <p className="text-xs text-muted-foreground mb-1">{member.flag}</p>
+              
               <p className="text-sm italic text-accent font-serif mb-1">{language === "zh" ? member.roleZh : member.role}</p>
               <h3 className="text-xl font-serif font-bold text-foreground mb-3 group-hover:text-accent transition-colors">{member.name}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{language === "zh" ? member.summaryZh : member.summary}</p>
