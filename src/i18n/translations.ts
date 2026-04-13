@@ -9,7 +9,7 @@ export const translations: Record<string, any> = {
       schedule: "Schedule Consultation",
     },
     hero: {
-      tagline: "Beyond Horizons by Bethel Chambers LLC | Strategic legal counsel since Singapore",
+      tagline: "Beyond Horizons by Bethel Chambers LLC | Strategic legal counsel based in Singapore",
       headline: "Beyond Horizons. Crafted for visionaries in industrial law.",
       cta: "Find out more",
       stat1: "$8B+",
