@@ -30,10 +30,10 @@ const Industries = () => {
 
       <div className="section-padding">
         <div className="max-w-6xl mx-auto container-padding">
-          <div className="mb-16">
-            <div className="accent-line mb-6" />
+          <div className="mb-16 text-center">
+            <div className="accent-line mx-auto mb-6" />
             <h2 className="text-3xl md:text-5xl font-serif text-foreground mb-4">{t("industries.title")}</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">{t("industries.subtitle")}</p>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">{t("industries.subtitle")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
