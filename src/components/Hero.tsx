@@ -10,9 +10,9 @@ const Hero = () => {
 
   return (
     <section className="bg-background">
-      <div className="pt-28 pb-8 max-w-5xl mx-auto container-padding">
+      <div className="pt-28 pb-8 max-w-5xl mx-auto container-padding text-center">
         <p className="text-sm text-muted-foreground mb-6">{t("hero.tagline")}</p>
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-foreground leading-[1.05] mb-8 max-w-4xl">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-foreground leading-[1.05] mb-8 max-w-4xl mx-auto">
           {t("hero.headline")}
         </h1>
         <a href="#about" className="text-foreground link-underline text-base inline-flex items-center hover:text-accent transition-smooth">
