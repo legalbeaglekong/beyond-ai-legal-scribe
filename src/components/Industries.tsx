@@ -19,9 +19,9 @@ const Industries = () => {
     { title: t("industries.wellness"), description: t("industries.wellnessDesc"), highlights: ["Healthcare Compliance", "Digital Health Solutions", "Wellness Technology"], route: "/industry/wellness-health" },
     { title: t("industries.blockchain"), description: t("industries.blockchainDesc"), highlights: ["Digital Asset Compliance", "Cryptocurrency Regulations", "DeFi Legal Frameworks"], route: "/industry/blockchain-digital-assets" },
     { title: t("industries.energy"), description: t("industries.energyDesc"), highlights: ["Renewable Energy Projects", "ESG Compliance", "Sustainable Infrastructure"], route: "/industry/energy-transition", image: industryEnergy },
-    { title: t("industries.trade"), description: t("industries.tradeDesc"), highlights: ["Contractual Restructuring", "Joint Venture Agreements", "Business Repositioning"], route: "/industry/trade-tariff" },
+    { title: t("industries.trade"), description: t("industries.tradeDesc"), highlights: ["Contractual Restructuring", "Joint Venture Agreements", "Business Repositioning"], route: "/industry/trade-tariff", image: industryTrade },
     { title: t("industries.robotics"), description: t("industries.roboticsDesc"), highlights: ["Robot Leasing Agreements", "RaaS Contracts", "Liability Frameworks"], link: "https://robotlaw.beyondhorizons.sg", image: industryRobotics },
-    { title: t("industries.cyber"), description: t("industries.cyberDesc"), highlights: ["Cybersecurity Governance", "AI Regulation & Liability", "Critical Infrastructure"], route: "/industry/cybersecurity-tech" },
+    { title: t("industries.cyber"), description: t("industries.cyberDesc"), highlights: ["Cybersecurity Governance", "AI Regulation & Liability", "Critical Infrastructure"], route: "/industry/cybersecurity-tech", image: industryCybersecurity },
   ];
 
   return (
