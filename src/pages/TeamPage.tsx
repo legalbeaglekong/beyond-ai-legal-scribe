@@ -28,7 +28,7 @@ const teamMembers = [
     roleZh: "交付负责人",
     image: teamSonia,
     flag: "🇬🇧",
-    summary: "Seasoned aerospace paralegal. Admission Pending (English law). LLB University of Birmingham.",
+    summary: "Seasoned aerospace paralegal. Qualified as an English solicitor. LLB University of Birmingham.",
     summaryZh: "资深航空法律助理。英格兰法律准入待审。伯明翰大学法学学士。",
     experience: "5 years of experience",
     experienceZh: "5年经验",
