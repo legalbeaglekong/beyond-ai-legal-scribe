@@ -256,7 +256,7 @@ export const translations: Record<string, any> = {
       contactLabel: "Contact",
       chatWhatsApp: "Chat on WhatsApp",
       connectLinkedIn: "Connect on LinkedIn",
-      copyright: "© 2024 Beyond Horizons, Bethel Chambers LLC. All rights reserved.",
+      copyright: "© 2026 Beyond Horizons, Bethel Chambers LLC. All rights reserved.",
       privacyPolicy: "Privacy Policy",
       strategicInnovation: "Strategic Legal Innovation",
       globalAdvisory: "Global Business Advisory",
