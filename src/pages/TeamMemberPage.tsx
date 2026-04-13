@@ -85,7 +85,7 @@ const teamData: Record<string, {
       "法律实务硕士（律师）",
     ],
     highlights: [
-      "Seasoned aerospace paralegal",
+      "Seasoned aerospace professional",
       "Proven track record delivering high stakes transactions",
     ],
     highlightsZh: [
