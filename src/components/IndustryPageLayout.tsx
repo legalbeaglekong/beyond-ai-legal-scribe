@@ -152,7 +152,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {data.overview.services.map((service, i) => (
-                <Card key={i} className="border-border/30 bg-card card-lift fade-in" style={{ transitionDelay: `${i * 100}ms` }}>
+                <Card key={i} className="border border-border bg-card shadow-md card-lift fade-in" style={{ transitionDelay: `${i * 100}ms` }}>
                   <CardContent className="p-6">
                     <div className="w-10 h-10 rounded bg-accent/10 flex items-center justify-center mb-4">
                       <service.icon className="h-5 w-5 text-accent" />
@@ -165,8 +165,8 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {data.overview.stats.map((stat, i) => (
-                <div key={i} className="text-center p-4 border border-border/30 rounded fade-in" style={{ transitionDelay: `${i * 75}ms` }}>
-                  <p className="text-xs text-muted-foreground">{stat}</p>
+                <div key={i} className="text-center p-4 border border-border rounded shadow-sm bg-card fade-in" style={{ transitionDelay: `${i * 75}ms` }}>
+                  <p className="text-sm text-foreground font-medium">{stat}</p>
                 </div>
               ))}
             </div>
@@ -219,7 +219,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {data.spotlight.cards.map((card, i) => (
-                <Card key={i} className="border-border/30 bg-card card-lift fade-in" style={{ transitionDelay: `${i * 100}ms` }}>
+                <Card key={i} className="border border-border bg-card shadow-md card-lift fade-in" style={{ transitionDelay: `${i * 100}ms` }}>
                   <CardContent className="p-6">
                     <div className="w-1.5 h-1.5 rounded-full bg-accent mb-4" />
                     <h3 className="text-sm font-serif font-bold text-foreground mb-3">{card.title}</h3>
