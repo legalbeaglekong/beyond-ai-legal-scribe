@@ -20,6 +20,7 @@ const Header = () => {
   const navigation = [
     { name: t("nav.about"), href: isHome ? "#about" : "/#about" },
     { name: t("nav.work"), href: isHome ? "#practice-areas" : "/#practice-areas" },
+    { name: t("nav.team"), href: isHome ? "#team" : "/#team" },
     { name: t("nav.insights"), href: "https://beyondhorizons.substack.com/", external: true },
     { name: t("nav.contact"), href: isHome ? "#contact" : "/#contact" },
   ];

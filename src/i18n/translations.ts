@@ -3,6 +3,7 @@ export const translations: Record<string, any> = {
     nav: {
       about: "About",
       work: "Work",
+      team: "Team",
       insights: "Insights",
       contact: "Contact",
       schedule: "Schedule Consultation",
@@ -284,6 +285,7 @@ export const translations: Record<string, any> = {
     nav: {
       about: "关于我们",
       work: "业务领域",
+      team: "团队",
       insights: "行业洞察",
       contact: "联系我们",
       schedule: "预约咨询",
