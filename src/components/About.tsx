@@ -1,8 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Award, BookOpen, Users, TrendingUp, ExternalLink, ArrowRight } from "lucide-react";
-import VideoBackground from "@/components/VideoBackground";
-import { STOCK_VIDEOS } from "@/lib/stock-videos";
+import planeTakeoff from "@/assets/plane-takeoff.jpg";
 
 const About = () => {
   const achievements = [
@@ -21,18 +20,20 @@ const About = () => {
 
   return (
     <section id="about" className="relative">
-      {/* Video divider band */}
-      <VideoBackground src={STOCK_VIDEOS.business} className="h-[40vh] md:h-[50vh]">
-        <div className="h-[40vh] md:h-[50vh] flex items-center justify-center">
+      {/* Image banner */}
+      <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">
+        <img src={planeTakeoff} alt="Plane taking off at sunrise" className="absolute inset-0 w-full h-full object-cover" loading="lazy" width={1920} height={768} />
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
-            <div className="teal-line mx-auto mb-6" />
-            <p className="text-sm uppercase tracking-[0.3em] text-foreground/60 mb-4 font-sans">Global Authority</p>
-            <h2 className="text-4xl md:text-6xl font-serif font-bold text-foreground">
+            <div className="w-10 h-[2px] bg-white/60 mx-auto mb-6" />
+            <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-sans">Global Authority</p>
+            <h2 className="text-4xl md:text-6xl font-serif font-bold text-white drop-shadow-lg">
               Meet Your Legal Team
             </h2>
           </div>
         </div>
-      </VideoBackground>
+      </div>
 
       {/* Content */}
       <div className="section-padding bg-background">
