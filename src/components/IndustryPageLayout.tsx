@@ -132,7 +132,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               </div>
               <div className="flex flex-wrap justify-center gap-3">
                 {data.hero.badges.map((badge, i) => (
-                  <span key={i} className="text-xs text-foreground/70 border border-accent/20 px-4 py-2 rounded-full bg-accent/5">
+                  <span key={i} className="text-xs text-white font-medium border border-white/30 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm">
                     {badge}
                   </span>
                 ))}
