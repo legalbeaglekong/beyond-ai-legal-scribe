@@ -5,6 +5,8 @@ import industryAviation from "@/assets/industry-aviation.jpg";
 import industryTransportation from "@/assets/industry-transportation.jpg";
 import industryRobotics from "@/assets/industry-robotics.jpg";
 import industryEnergy from "@/assets/industry-energy.jpg";
+import industryTrade from "@/assets/industry-trade.jpg";
+import industryCybersecurity from "@/assets/industry-cybersecurity.jpg";
 import businessMeeting from "@/assets/business-meeting.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
