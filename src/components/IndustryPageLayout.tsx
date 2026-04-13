@@ -119,12 +119,12 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                 {data.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-                <Button variant="default" size="lg" asChild>
+                <Button variant="default" size="lg" className="bg-white text-black font-semibold shadow-lg hover:bg-white/90" asChild>
                   <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                     Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="border-accent/50 text-accent hover:bg-accent hover:text-accent-foreground" asChild>
+                <Button variant="outline" size="lg" className="border-2 border-white text-white font-semibold hover:bg-white hover:text-black shadow-lg" asChild>
                   <a href="#overview">
                     View Expertise <ChevronDown className="ml-2 h-4 w-4" />
                   </a>
@@ -274,12 +274,12 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               <p className="text-foreground/70 leading-relaxed mb-10 text-lg">{data.cta.description}</p>
             )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="default" size="lg" asChild>
+              <Button variant="default" size="lg" className="bg-white text-black font-semibold shadow-lg hover:bg-white/90" asChild>
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                   Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="border-accent/50 text-accent hover:bg-accent hover:text-accent-foreground" asChild>
+              <Button variant="outline" size="lg" className="border-2 border-white text-white font-semibold hover:bg-white hover:text-black shadow-lg" asChild>
                 <a href="mailto:hl@huilinglawoffice.com">
                   <Mail className="mr-2 h-4 w-4" /> Email Us
                 </a>
