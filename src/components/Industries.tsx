@@ -7,6 +7,8 @@ import industryRobotics from "@/assets/industry-robotics.jpg";
 import industryEnergy from "@/assets/industry-energy.jpg";
 import industryTrade from "@/assets/industry-trade.jpg";
 import industryCybersecurity from "@/assets/industry-cybersecurity.jpg";
+import industryWellness from "@/assets/industry-wellness.jpg";
+import industryBlockchain from "@/assets/industry-blockchain.jpg";
 import businessMeeting from "@/assets/business-meeting.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -16,8 +18,8 @@ const Industries = () => {
   const industries = [
     { title: t("industries.aviation"), description: t("industries.aviationDesc"), highlights: ["Aircraft Financing & Leasing", "Aviation Regulatory Compliance", "International Aviation Agreements"], route: "/industry/aviation", image: industryAviation },
     { title: t("industries.transportation"), description: t("industries.transportationDesc"), highlights: ["Transportation Infrastructure", "Logistics & Supply Chain", "Cross-border Transportation"], route: "/industry/transportation", image: industryTransportation },
-    { title: t("industries.wellness"), description: t("industries.wellnessDesc"), highlights: ["Healthcare Compliance", "Digital Health Solutions", "Wellness Technology"], route: "/industry/wellness-health" },
-    { title: t("industries.blockchain"), description: t("industries.blockchainDesc"), highlights: ["Digital Asset Compliance", "Cryptocurrency Regulations", "DeFi Legal Frameworks"], route: "/industry/blockchain-digital-assets" },
+    { title: t("industries.wellness"), description: t("industries.wellnessDesc"), highlights: ["Healthcare Compliance", "Digital Health Solutions", "Wellness Technology"], route: "/industry/wellness-health", image: industryWellness },
+    { title: t("industries.blockchain"), description: t("industries.blockchainDesc"), highlights: ["Digital Asset Compliance", "Cryptocurrency Regulations", "DeFi Legal Frameworks"], route: "/industry/blockchain-digital-assets", image: industryBlockchain },
     { title: t("industries.energy"), description: t("industries.energyDesc"), highlights: ["Renewable Energy Projects", "ESG Compliance", "Sustainable Infrastructure"], route: "/industry/energy-transition", image: industryEnergy },
     { title: t("industries.trade"), description: t("industries.tradeDesc"), highlights: ["Contractual Restructuring", "Joint Venture Agreements", "Business Repositioning"], route: "/industry/trade-tariff", image: industryTrade },
     { title: t("industries.robotics"), description: t("industries.roboticsDesc"), highlights: ["Robot Leasing Agreements", "RaaS Contracts", "Liability Frameworks"], link: "https://robotlaw.beyondhorizons.sg", image: industryRobotics },
