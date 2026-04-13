@@ -33,7 +33,7 @@ const VideoBackground = ({ src, poster, className = "", overlayClassName, childr
         <source src={src} type="video/mp4" />
       </video>
       <div className={overlayClassName || "video-overlay"} />
-      <div className="relative z-10">
+      <div className="relative z-10 w-full flex items-center justify-center">
         {children}
       </div>
     </div>
