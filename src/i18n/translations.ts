@@ -10,7 +10,7 @@ export const translations: Record<string, any> = {
     },
     hero: {
       tagline: "Beyond Horizons by Bethel Chambers LLC | Strategic legal counsel based in Singapore",
-      headline: "Beyond Horizons. Crafted for visionaries in law.",
+      headline: "Beyond Horizons. Crafted for visionaries.",
       cta: "Find out more",
       stat1: "$8B+",
       stat1Label: "Deal value in 2024 & 2025",
