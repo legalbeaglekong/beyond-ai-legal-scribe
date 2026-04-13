@@ -24,11 +24,12 @@ const GlobalPartners = () => {
 
   return (
     <section className="relative">
-      <VideoBackground src={STOCK_VIDEOS.maritime} className="h-[30vh]">
-        <div className="h-[30vh] flex items-center justify-center">
-          <div className="text-center">
+      <VideoBackground src={STOCK_VIDEOS.maritime} className="h-[35vh]" overlayClassName="absolute inset-0 bg-black/60">
+        <div className="h-[35vh] flex items-center justify-center">
+          <div className="text-center px-4">
             <div className="teal-line mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">{t("globalPartners.title")}</h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-white drop-shadow-lg">{t("globalPartners.title")}</h2>
+            <p className="text-base md:text-lg text-white/80 mt-4 max-w-2xl mx-auto leading-relaxed drop-shadow">Together with our global network of leading law firms</p>
           </div>
         </div>
       </VideoBackground>
