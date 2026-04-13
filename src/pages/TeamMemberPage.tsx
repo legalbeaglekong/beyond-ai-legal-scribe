@@ -106,9 +106,9 @@ const TeamMemberPage = () => {
       </div>
 
       <div className="container-padding max-w-6xl mx-auto pb-24">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-[280px_1fr] gap-12 items-start">
           {/* Photo */}
-          <div className="aspect-[3/4] overflow-hidden rounded bg-muted">
+          <div className="w-full max-w-[280px] aspect-[3/4] overflow-hidden rounded bg-muted">
             <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
           </div>
 
