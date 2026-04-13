@@ -537,7 +537,7 @@ export const translations: Record<string, any> = {
       contactLabel: "联系方式",
       chatWhatsApp: "WhatsApp联系",
       connectLinkedIn: "LinkedIn关注",
-      copyright: "© 2024 Beyond Horizons, Bethel Chambers LLC. 版权所有。",
+      copyright: "© 2026 Beyond Horizons, Bethel Chambers LLC. 版权所有。",
       privacyPolicy: "隐私政策",
       strategicInnovation: "战略法律创新",
       globalAdvisory: "全球商业咨询",
