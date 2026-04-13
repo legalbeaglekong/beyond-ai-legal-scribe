@@ -1,70 +1,66 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Quote, ExternalLink } from "lucide-react";
+import { Quote, ExternalLink } from "lucide-react";
 import VideoBackground from "@/components/VideoBackground";
 import { STOCK_VIDEOS } from "@/lib/stock-videos";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Testimonials = () => {
+  const { t } = useLanguage();
+
   const chambersTestimonials = [
-    { quote: "A fantastic lawyer and strategist with significant industry expertise.", source: "Chambers Asia-Pacific 2025", location: "Asia-Pacific Region" },
-    { quote: "Offers very high-quality advice.", source: "Chambers Asia-Pacific 2025", location: "Asia-Pacific Region" },
-    { quote: "Can always find the key issues and present solutions.", source: "Chambers Global 2024", location: "Singapore" },
+    { quote: t("testimonials.quote1"), source: t("testimonials.source1"), location: t("testimonials.location1") },
+    { quote: t("testimonials.quote2"), source: t("testimonials.source2"), location: t("testimonials.location2") },
+    { quote: t("testimonials.quote3"), source: t("testimonials.source3"), location: t("testimonials.location3") },
   ];
 
   const recognition = [
-    { title: "Chambers Global 2024", description: "Ranked in Aviation: Finance", years: "Global" },
-    { title: "Chambers Asia-Pacific 2025", description: "Ranked in Aviation: Finance", years: "Asia-Pacific Region" },
-    { title: "Legal 500 Asia Pacific", description: "Next Generation Partner", years: "2023" },
+    { title: t("testimonials.rec1Title"), description: t("testimonials.rec1Desc"), years: t("testimonials.rec1Years") },
+    { title: t("testimonials.rec2Title"), description: t("testimonials.rec2Desc"), years: t("testimonials.rec2Years") },
+    { title: t("testimonials.rec3Title"), description: t("testimonials.rec3Desc"), years: t("testimonials.rec3Years") },
+  ];
+
+  const attributes = [
+    { title: t("testimonials.attr1Title"), desc: t("testimonials.attr1Desc") },
+    { title: t("testimonials.attr2Title"), desc: t("testimonials.attr2Desc") },
+    { title: t("testimonials.attr3Title"), desc: t("testimonials.attr3Desc") },
+    { title: t("testimonials.attr4Title"), desc: t("testimonials.attr4Desc") },
   ];
 
   return (
     <section className="relative">
-      {/* Video divider */}
       <VideoBackground src={STOCK_VIDEOS.elegant} className="h-[35vh]">
         <div className="h-[35vh] flex items-center justify-center">
           <div className="text-center">
             <div className="teal-line mx-auto mb-6" />
-            <p className="text-sm uppercase tracking-[0.3em] text-foreground/60 mb-4 font-sans">Awards & Recognition</p>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
-              Verified Excellence
-            </h2>
+            <p className="text-sm uppercase tracking-[0.3em] text-foreground/60 mb-4 font-sans">{t("testimonials.sectionLabel")}</p>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">{t("testimonials.sectionTitle")}</h2>
           </div>
         </div>
       </VideoBackground>
 
       <div className="section-padding bg-background">
         <div className="max-w-6xl mx-auto container-padding">
-          {/* Chambers badge */}
           <div className="text-center mb-16">
-            <a
-              href="https://chambers.com/lawyer/hui-ling-teo-global-2:25705527"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-accent/30 bg-accent/5 px-6 py-3 rounded-full text-accent text-sm hover:bg-accent/10 transition-smooth"
-            >
-              Chambers and Partners Approved
-              <ExternalLink className="h-3.5 w-3.5" />
+            <a href="https://chambers.com/lawyer/hui-ling-teo-global-2:25705527" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-accent/30 bg-accent/5 px-6 py-3 rounded-full text-accent text-sm hover:bg-accent/10 transition-smooth">
+              {t("testimonials.chambersApproved")} <ExternalLink className="h-3.5 w-3.5" />
             </a>
           </div>
 
-          {/* Testimonial cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-16">
-            {chambersTestimonials.map((t, i) => (
+            {chambersTestimonials.map((te, i) => (
               <Card key={i} className="border-border/50 bg-card card-lift">
                 <CardContent className="p-8">
                   <Quote className="h-6 w-6 text-accent/40 mb-4" />
-                  <blockquote className="text-foreground text-lg leading-relaxed mb-6 font-serif italic">
-                    "{t.quote}"
-                  </blockquote>
+                  <blockquote className="text-foreground text-lg leading-relaxed mb-6 font-serif italic">"{te.quote}"</blockquote>
                   <div className="text-right">
-                    <div className="text-xs text-accent font-sans uppercase tracking-wider">{t.source}</div>
-                    <div className="text-xs text-muted-foreground mt-1">{t.location}</div>
+                    <div className="text-xs text-accent font-sans uppercase tracking-wider">{te.source}</div>
+                    <div className="text-xs text-muted-foreground mt-1">{te.location}</div>
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          {/* Rankings */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {recognition.map((item, i) => (
               <div key={i} className="text-center p-6 border border-border/30 rounded">
@@ -75,14 +71,8 @@ const Testimonials = () => {
             ))}
           </div>
 
-          {/* Attributes */}
           <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { title: "Strategic Thinking", desc: "Business perspective beyond legal" },
-              { title: "Creative Solutions", desc: "Innovative approaches to complex challenges" },
-              { title: "Global Expertise", desc: "Cross-border transaction mastery" },
-              { title: "Commercial Mindset", desc: "Excellent understanding of business needs" },
-            ].map((attr, i) => (
+            {attributes.map((attr, i) => (
               <div key={i} className="text-center">
                 <div className="w-2 h-2 bg-accent rounded-full mx-auto mb-4" />
                 <h4 className="font-serif font-bold text-foreground mb-2 text-sm">{attr.title}</h4>
