@@ -20,6 +20,8 @@ import EnergyTransitionPage from "./pages/industry/EnergyTransitionPage";
 import TradeTariffPage from "./pages/industry/TradeTariffPage";
 import RoboticsPage from "./pages/industry/RoboticsPage";
 import CybersecurityPage from "./pages/industry/CybersecurityPage";
+import TeamPage from "./pages/TeamPage";
+import TeamMemberPage from "./pages/TeamMemberPage";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +49,8 @@ const App = () => (
             <Route path="/industry/trade-tariff" element={<TradeTariffPage />} />
             <Route path="/industry/robotics" element={<RoboticsPage />} />
             <Route path="/industry/cybersecurity-tech" element={<CybersecurityPage />} />
+            <Route path="/team" element={<TeamPage />} />
+            <Route path="/team/:slug" element={<TeamMemberPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

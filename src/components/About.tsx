@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Award, BookOpen, Users, TrendingUp, ExternalLink, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import planeTakeoff from "@/assets/plane-takeoff.jpg";
 
 const About = () => {
@@ -20,20 +21,23 @@ const About = () => {
 
   return (
     <section id="about" className="relative">
-      {/* Image banner */}
-      <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">
-        <img src={planeTakeoff} alt="Plane taking off at sunrise" className="absolute inset-0 w-full h-full object-cover" loading="lazy" width={1920} height={768} />
-        <div className="absolute inset-0 bg-black/60" />
+      {/* Image banner — clickable */}
+      <Link to="/team" className="block relative h-[40vh] md:h-[50vh] overflow-hidden group cursor-pointer">
+        <img src={planeTakeoff} alt="Plane taking off at sunrise" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" width={1920} height={768} />
+        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors" />
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
             <div className="w-10 h-[2px] bg-white/60 mx-auto mb-6" />
-            <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-sans">Global Authority</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-sans">Our People</p>
             <h2 className="text-4xl md:text-6xl font-serif font-bold text-white drop-shadow-lg">
               Meet Your Legal Team
             </h2>
+            <span className="inline-flex items-center text-white/70 text-sm mt-4 group-hover:text-white transition-colors">
+              View the team <ArrowRight className="h-4 w-4 ml-2" />
+            </span>
           </div>
         </div>
-      </div>
+      </Link>
 
       {/* Content */}
       <div className="section-padding bg-background">
