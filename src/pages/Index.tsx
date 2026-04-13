@@ -29,6 +29,7 @@ const Index = () => {
         <Industries />
         <GlobalPartners />
         <Insights />
+        <TeamPreview />
         <Contact />
       </main>
       <Footer />
