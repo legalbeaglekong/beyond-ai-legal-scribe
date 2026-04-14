@@ -49,10 +49,10 @@ const Testimonials = () => {
           <div className="grid md:grid-cols-3 gap-6 mb-16 items-stretch">
             {chambersTestimonials.map((te, i) => (
               <Card key={i} className="border-border/50 bg-card card-lift flex flex-col">
-                <CardContent className="p-8 flex flex-col flex-1">
-                  <Quote className="h-6 w-6 text-accent/40 mb-4 flex-shrink-0" />
-                  <blockquote className="text-foreground text-lg leading-relaxed mb-6 font-serif italic text-justify flex-1">"{te.quote}"</blockquote>
-                  <div className="text-right flex-shrink-0">
+                <CardContent className="p-6 flex flex-col flex-1">
+                  <Quote className="h-5 w-5 text-accent/40 mb-3 flex-shrink-0" />
+                  <blockquote className="text-foreground text-base leading-relaxed mb-4 font-serif italic text-justify flex-1">"{te.quote}"</blockquote>
+                  <div className="text-right flex-shrink-0 mt-auto">
                     <div className="text-xs text-accent font-sans uppercase tracking-wider">{te.source}</div>
                     <div className="text-xs text-muted-foreground mt-1">{te.location}</div>
                   </div>
