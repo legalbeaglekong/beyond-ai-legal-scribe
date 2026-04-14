@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import spaceVideo from "@/assets/space-hero-bg.mp4.asset.json";
+import spaceCtaVideo from "@/assets/space-cta-bg.mp4.asset.json";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -55,6 +56,14 @@ const getVideoForSlug = (slug: string): string => {
     space: spaceVideo.url,
   };
   return map[slug] || STOCK_VIDEOS.business;
+};
+
+// Separate CTA video per slug (falls back to hero video)
+const getCtaVideoForSlug = (slug: string): string => {
+  const ctaMap: Record<string, string> = {
+    space: spaceCtaVideo.url,
+  };
+  return ctaMap[slug] || getVideoForSlug(slug);
 };
 
 const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
@@ -273,7 +282,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         </section>
 
         {/* CTA */}
-        <VideoBackground src={getVideoForSlug(data.slug)} className="py-24">
+        <VideoBackground src={getCtaVideoForSlug(data.slug)} className="py-24">
           <div className="max-w-3xl mx-auto container-padding text-center fade-in py-16">
             <div className="teal-line mx-auto mb-8" />
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
