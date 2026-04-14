@@ -22,6 +22,8 @@ import TradeTariffPage from "./pages/industry/TradeTariffPage";
 import RoboticsPage from "./pages/industry/RoboticsPage";
 import CybersecurityPage from "./pages/industry/CybersecurityPage";
 import SpacePage from "./pages/industry/SpacePage";
+import FractionalGCPage from "./pages/industry/FractionalGCPage";
+import AICodeCounselPage from "./pages/industry/AICodeCounselPage";
 import TeamPage from "./pages/TeamPage";
 import TeamMemberPage from "./pages/TeamMemberPage";
 
@@ -53,6 +55,8 @@ const App = () => (
               <Route path="/industry/robotics" element={<RoboticsPage />} />
               <Route path="/industry/cybersecurity-tech" element={<CybersecurityPage />} />
               <Route path="/industry/space" element={<SpacePage />} />
+              <Route path="/industry/fractional-gc" element={<FractionalGCPage />} />
+              <Route path="/industry/ai-code-counsel" element={<AICodeCounselPage />} />
               <Route path="/team" element={<TeamPage />} />
               <Route path="/team/:slug" element={<TeamMemberPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
