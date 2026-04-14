@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import spaceVideo from "@/assets/space-hero-bg.mp4.asset.json";
 import spaceCtaVideo from "@/assets/space-cta-bg.mp4.asset.json";
+import fracGcHeroVideo from "@/assets/fractional-gc-hero-bg.mp4.asset.json";
+import fracGcCtaVideo from "@/assets/fractional-gc-cta-bg.mp4.asset.json";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
