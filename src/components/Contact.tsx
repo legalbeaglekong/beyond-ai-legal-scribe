@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Mail, Calendar, ArrowRight, Globe, Clock, MessageCircle } from "lucide-react";
 import VideoBackground from "@/components/VideoBackground";
-import { STOCK_VIDEOS } from "@/lib/stock-videos";
 import { useLanguage } from "@/i18n/LanguageContext";
 import contactBanner from "@/assets/contact-banner.jpg";
+import contactVideo from "@/assets/contact-abstract-bg.mp4.asset.json";
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -18,7 +18,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="relative">
-      <VideoBackground src={STOCK_VIDEOS.cityscape} poster={contactBanner} className="h-[35vh]">
+      <VideoBackground src={contactVideo.url} poster={contactBanner} className="h-[35vh]">
         <div className="h-[35vh] flex items-center justify-center">
           <div className="text-center">
             <div className="teal-line mx-auto mb-6" />
