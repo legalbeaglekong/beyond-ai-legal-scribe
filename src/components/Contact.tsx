@@ -18,11 +18,11 @@ const Contact = () => {
 
   return (
     <section id="contact" className="relative">
-      <VideoBackground src={contactVideo.url} poster={contactBanner} className="h-[35vh]">
+      <VideoBackground src={contactVideo.url} poster={contactBanner} className="h-[35vh]" overlayClassName="absolute inset-0 z-[1] bg-background/60 backdrop-blur-[1px]">
         <div className="h-[35vh] flex items-center justify-center">
-          <div className="text-center">
+          <div className="text-center drop-shadow-md">
             <div className="teal-line mx-auto mb-6" />
-            <p className="text-sm uppercase tracking-[0.3em] text-foreground/60 mb-4 font-sans">{t("contact.sectionLabel")}</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-foreground/80 mb-4 font-sans">{t("contact.sectionLabel")}</p>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">{t("contact.sectionTitle")}</h2>
           </div>
         </div>
