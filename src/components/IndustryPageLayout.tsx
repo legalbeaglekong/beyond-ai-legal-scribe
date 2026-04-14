@@ -282,7 +282,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         </section>
 
         {/* CTA */}
-        <VideoBackground src={getVideoForSlug(data.slug)} className="py-24">
+        <VideoBackground src={getCtaVideoForSlug(data.slug)} className="py-24">
           <div className="max-w-3xl mx-auto container-padding text-center fade-in py-16">
             <div className="teal-line mx-auto mb-8" />
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
