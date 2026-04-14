@@ -59,6 +59,7 @@ const getVideoForSlug = (slug: string): string => {
     robotics: STOCK_VIDEOS.robotics,
     space: spaceVideo.url,
     "fractional-gc": fracGcHeroVideo.url,
+    "ai-code-counsel": aiCodeHeroVideo.url,
   };
   return map[slug] || STOCK_VIDEOS.business;
 };
@@ -68,6 +69,7 @@ const getCtaVideoForSlug = (slug: string): string => {
   const ctaMap: Record<string, string> = {
     space: spaceCtaVideo.url,
     "fractional-gc": fracGcCtaVideo.url,
+    "ai-code-counsel": aiCodeCtaVideo.url,
   };
   return ctaMap[slug] || getVideoForSlug(slug);
 };
