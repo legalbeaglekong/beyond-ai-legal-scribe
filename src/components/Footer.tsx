@@ -57,7 +57,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="h-4 w-4 text-accent" />
-                  <a href="mailto:hl@huilinglawoffice.com" className="text-xs text-muted-foreground hover:text-accent transition-smooth">hl@huilinglawoffice.com</a>
+                  <a href="mailto:HL@beyondhorizons.sg" className="text-xs text-muted-foreground hover:text-accent transition-smooth">HL@beyondhorizons.sg</a>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MessageCircle className="h-4 w-4 text-accent" />
