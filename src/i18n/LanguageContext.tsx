@@ -1,6 +1,20 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState } from "react";
 
-export type Language = "en" | "zh";
+export type Language = "en" | "zh" | "ja" | "ko" | "ms" | "fr" | "es" | "pt" | "ar" | "hi" | "th";
+
+export const LANGUAGE_OPTIONS: { code: Language; label: string; nativeLabel: string }[] = [
+  { code: "en", label: "English", nativeLabel: "English" },
+  { code: "zh", label: "Chinese", nativeLabel: "中文" },
+  { code: "ja", label: "Japanese", nativeLabel: "日本語" },
+  { code: "ko", label: "Korean", nativeLabel: "한국어" },
+  { code: "ms", label: "Malay", nativeLabel: "Bahasa Melayu" },
+  { code: "fr", label: "French", nativeLabel: "Français" },
+  { code: "es", label: "Spanish", nativeLabel: "Español" },
+  { code: "pt", label: "Portuguese", nativeLabel: "Português" },
+  { code: "ar", label: "Arabic", nativeLabel: "العربية" },
+  { code: "hi", label: "Hindi", nativeLabel: "हिन्दी" },
+  { code: "th", label: "Thai", nativeLabel: "ไทย" },
+];
 
 interface LanguageContextType {
   language: Language;
@@ -16,7 +30,6 @@ export const useLanguage = () => {
   return context;
 };
 
-// Lazy-load translations
 import { translations } from "./translations";
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
