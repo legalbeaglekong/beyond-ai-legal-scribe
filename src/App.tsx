@@ -22,6 +22,8 @@ import TradeTariffPage from "./pages/industry/TradeTariffPage";
 import RoboticsPage from "./pages/industry/RoboticsPage";
 import CybersecurityPage from "./pages/industry/CybersecurityPage";
 import SpacePage from "./pages/industry/SpacePage";
+import FractionalGCPage from "./pages/industry/FractionalGCPage";
+import AICodeCounselPage from "./pages/industry/AICodeCounselPage";
 import TeamPage from "./pages/TeamPage";
 import TeamMemberPage from "./pages/TeamMemberPage";
 
