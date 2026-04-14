@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Quote, ExternalLink } from "lucide-react";
+import { Quote, ExternalLink, Brain, Lightbulb, Globe, TrendingUp } from "lucide-react";
 import VideoBackground from "@/components/VideoBackground";
 import { STOCK_VIDEOS } from "@/lib/stock-videos";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -20,10 +20,10 @@ const Testimonials = () => {
   ];
 
   const attributes = [
-    { title: t("testimonials.attr1Title"), desc: t("testimonials.attr1Desc") },
-    { title: t("testimonials.attr2Title"), desc: t("testimonials.attr2Desc") },
-    { title: t("testimonials.attr3Title"), desc: t("testimonials.attr3Desc") },
-    { title: t("testimonials.attr4Title"), desc: t("testimonials.attr4Desc") },
+    { title: t("testimonials.attr1Title"), desc: t("testimonials.attr1Desc"), icon: Brain },
+    { title: t("testimonials.attr2Title"), desc: t("testimonials.attr2Desc"), icon: Lightbulb },
+    { title: t("testimonials.attr3Title"), desc: t("testimonials.attr3Desc"), icon: Globe },
+    { title: t("testimonials.attr4Title"), desc: t("testimonials.attr4Desc"), icon: TrendingUp },
   ];
 
   return (
@@ -74,7 +74,9 @@ const Testimonials = () => {
           <div className="grid md:grid-cols-4 gap-8">
             {attributes.map((attr, i) => (
               <div key={i} className="text-center">
-                <div className="w-2 h-2 bg-accent rounded-full mx-auto mb-4" />
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center">
+                  <attr.icon className="w-5 h-5 text-accent" />
+                </div>
                 <h4 className="font-serif font-bold text-foreground mb-2 text-sm">{attr.title}</h4>
                 <p className="text-xs text-muted-foreground">{attr.desc}</p>
               </div>
