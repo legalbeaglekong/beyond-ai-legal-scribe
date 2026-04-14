@@ -55,15 +55,15 @@ const WorkPage = () => {
         <Header />
 
         {/* Hero */}
-        <VideoBackground src={STOCK_VIDEOS.maritime} className="min-h-[60vh] flex items-center">
+        <VideoBackground src={STOCK_VIDEOS.maritime} className="min-h-[60vh] flex items-center" overlayClassName="absolute inset-0 bg-black/60">
           <div className="min-h-[60vh] flex items-center justify-center w-full pt-20">
             <div className="max-w-4xl mx-auto container-padding text-center">
               <div className="teal-line mx-auto mb-6" />
-              <p className="text-sm uppercase tracking-[0.3em] text-foreground/60 mb-4 font-sans">Our Work</p>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6">
+              <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-sans drop-shadow">Our Work</p>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 drop-shadow-lg">
                 Platforms & Industry Expertise
               </h1>
-              <p className="text-base md:text-lg text-foreground/70 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base md:text-lg text-white/80 max-w-3xl mx-auto leading-relaxed drop-shadow">
                 Specialist platforms and deep industry expertise — combining global reach with focused legal innovation.
               </p>
             </div>
@@ -139,11 +139,11 @@ const WorkPage = () => {
         </section>
 
         {/* CTA */}
-        <VideoBackground src={STOCK_VIDEOS.cityscape} className="py-20">
+        <VideoBackground src={STOCK_VIDEOS.cityscape} className="py-20" overlayClassName="absolute inset-0 bg-black/60">
           <div className="max-w-3xl mx-auto container-padding text-center py-12">
             <div className="teal-line mx-auto mb-8" />
-            <h2 className="text-3xl font-serif font-bold text-foreground mb-6">Let's discuss how we can help</h2>
-            <Button variant="default" size="lg" asChild>
+            <h2 className="text-3xl font-serif font-bold text-white mb-6 drop-shadow-lg">Let's discuss how we can help</h2>
+            <Button variant="default" size="lg" className="bg-white text-black font-semibold shadow-lg hover:bg-white/90" asChild>
               <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                 Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
               </a>
