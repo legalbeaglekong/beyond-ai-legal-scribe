@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote, ExternalLink, Brain, Lightbulb, Globe, TrendingUp } from "lucide-react";
 import VideoBackground from "@/components/VideoBackground";
-import { STOCK_VIDEOS } from "@/lib/stock-videos";
 import { useLanguage } from "@/i18n/LanguageContext";
+import testimonialsVideo from "@/assets/testimonials-neutral-bg.mp4.asset.json";
 
 const Testimonials = () => {
   const { t } = useLanguage();
