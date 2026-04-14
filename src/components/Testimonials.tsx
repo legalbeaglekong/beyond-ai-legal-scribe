@@ -20,10 +20,10 @@ const Testimonials = () => {
   ];
 
   const attributes = [
-    { title: t("testimonials.attr1Title"), desc: t("testimonials.attr1Desc") },
-    { title: t("testimonials.attr2Title"), desc: t("testimonials.attr2Desc") },
-    { title: t("testimonials.attr3Title"), desc: t("testimonials.attr3Desc") },
-    { title: t("testimonials.attr4Title"), desc: t("testimonials.attr4Desc") },
+    { title: t("testimonials.attr1Title"), desc: t("testimonials.attr1Desc"), icon: Brain },
+    { title: t("testimonials.attr2Title"), desc: t("testimonials.attr2Desc"), icon: Lightbulb },
+    { title: t("testimonials.attr3Title"), desc: t("testimonials.attr3Desc"), icon: Globe },
+    { title: t("testimonials.attr4Title"), desc: t("testimonials.attr4Desc"), icon: TrendingUp },
   ];
 
   return (
