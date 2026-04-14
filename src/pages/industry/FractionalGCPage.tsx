@@ -48,7 +48,7 @@ const data: IndustryPageData = {
     cards: [
       { title: "Series B Scale-Up — Full Legal Function Build", description: "Served as Fractional GC for a Singapore-based fintech through its Series B, building the legal function from scratch — policies, vendor contracts, employment framework, and board governance — saving over $400K annually versus a full-time hire." },
       { title: "Cross-Border M&A Integration", description: "Acted as interim GC during a $150M cross-border acquisition, coordinating 6 external counsel teams across APAC and Europe, managing due diligence, and leading post-merger legal integration." },
-      { title: "AI Governance Framework Implementation", description: "Embedded as Fractional GC for a financial institution to design and implement an AI governance framework aligned with MAS guidelines, including risk taxonomy, model validation policies, and board reporting structures." },
+      { title: "AI Governance Framework Implementation", description: "Embedded as Fractional GC for a financial institution to design and implement an AI governance framework aligned with Singapore regulatory guidelines, including risk taxonomy, model validation policies, and board reporting structures." },
     ],
   },
   faqs: {
