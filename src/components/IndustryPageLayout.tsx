@@ -29,7 +29,7 @@ export interface IndustryPageData {
   };
   spotlight: {
     heading: string;
-    cards: { title: string; description: string; link?: string; linkText?: string }[];
+    cards: { title: string; description: string; link?: string; linkText?: string; icon?: LucideIcon }[];
     analysis?: string;
   };
   faqs: {
@@ -223,7 +223,13 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               {data.spotlight.cards.map((card, i) => (
                 <Card key={i} className="border border-border bg-card shadow-md card-lift fade-in" style={{ transitionDelay: `${i * 100}ms` }}>
                   <CardContent className="p-6">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent mb-4" />
+                    {card.icon ? (
+                      <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
+                        <card.icon className="w-5 h-5 text-accent" />
+                      </div>
+                    ) : (
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent mb-4" />
+                    )}
                     <h3 className="text-sm font-serif font-bold text-foreground mb-3">{card.title}</h3>
                     <p className="text-xs text-muted-foreground leading-relaxed mb-4">{card.description}</p>
                     {card.link && (

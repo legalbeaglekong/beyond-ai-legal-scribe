@@ -1,5 +1,5 @@
 import IndustryPageLayout, { type IndustryPageData } from "@/components/IndustryPageLayout";
-import { Rocket, Satellite, Globe, Shield } from "lucide-react";
+import { Rocket, Satellite, Globe, Shield, DollarSign, FileText, Handshake } from "lucide-react";
 
 const data: IndustryPageData = {
   slug: "space",
@@ -37,9 +37,9 @@ const data: IndustryPageData = {
   spotlight: {
     heading: "Representative Space Matters",
     cards: [
-      { title: "Satellite Constellation Financing", description: "Advised a regional satellite operator on a $200M+ constellation deployment financing, including orbital slot rights, ground segment procurement, and launch insurance structuring." },
-      { title: "Commercial Launch Agreement", description: "Negotiated launch service agreements for multiple payload missions, addressing liability caps, schedule risk allocation, and post-separation insurance handover." },
-      { title: "Space Venture Joint Venture", description: "Structured a cross-border JV between an APAC sovereign wealth fund and a European space technology company for in-orbit servicing capabilities." },
+      { icon: DollarSign, title: "Satellite Constellation Financing", description: "Advised a regional satellite operator on a $200M+ constellation deployment financing, including orbital slot rights, ground segment procurement, and launch insurance structuring." },
+      { icon: FileText, title: "Commercial Launch Agreement", description: "Negotiated launch service agreements for multiple payload missions, addressing liability caps, schedule risk allocation, and post-separation insurance handover." },
+      { icon: Handshake, title: "Space Venture Joint Venture", description: "Structured a cross-border JV between an APAC sovereign wealth fund and a European space technology company for in-orbit servicing capabilities." },
     ],
   },
   faqs: {
