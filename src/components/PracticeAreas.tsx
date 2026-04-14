@@ -3,17 +3,23 @@ import { Plane, Fuel, Building, Rocket, ArrowRight, DollarSign, Globe, Lightbulb
 import VideoBackground from "@/components/VideoBackground";
 import { STOCK_VIDEOS } from "@/lib/stock-videos";
 import { useLanguage } from "@/i18n/LanguageContext";
+import practiceStrategy from "@/assets/practice-strategy.jpg";
+import practiceTransactions from "@/assets/practice-transactions.jpg";
+import practiceRegulatory from "@/assets/practice-regulatory.jpg";
+import practiceEsg from "@/assets/practice-esg.jpg";
+import practiceCrossborder from "@/assets/practice-crossborder.jpg";
+import practiceInnovation from "@/assets/practice-innovation.jpg";
 
 const PracticeAreas = () => {
   const { t } = useLanguage();
 
   const practiceAreas = [
-    { icon: Lightbulb, title: t("practiceAreas.area1Title"), description: t("practiceAreas.area1Desc"), highlight: t("practiceAreas.area1Highlight"), expertise: ["Business Strategy Legal Framework", "Risk Assessment & Mitigation", "Strategic Decision Support", "Legal Innovation Planning"] },
-    { icon: Building, title: t("practiceAreas.area2Title"), description: t("practiceAreas.area2Desc"), highlight: t("practiceAreas.area2Highlight"), expertise: ["M&A Transaction Design", "Joint Venture Structuring", "Strategic Partnerships", "Cross-border Deal Architecture"] },
-    { icon: Globe, title: t("practiceAreas.area3Title"), description: t("practiceAreas.area3Desc"), highlight: t("practiceAreas.area3Highlight"), expertise: ["Multi-jurisdictional Compliance", "Regulatory Risk Management", "Policy Development", "Compliance Framework Design"] },
-    { icon: Fuel, title: t("practiceAreas.area4Title"), description: t("practiceAreas.area4Desc"), highlight: t("practiceAreas.area4Highlight"), expertise: ["ESG Strategy Development", "Sustainability Legal Framework", "Environmental Compliance", "Social Impact Assessment"] },
-    { icon: DollarSign, title: t("practiceAreas.area5Title"), description: t("practiceAreas.area5Desc"), highlight: t("practiceAreas.area5Highlight"), expertise: ["International Transaction Support", "Cross-border Regulatory Navigation", "Multi-jurisdictional Coordination", "Global Deal Execution"] },
-    { icon: Rocket, title: t("practiceAreas.area6Title"), description: t("practiceAreas.area6Desc"), highlight: t("practiceAreas.area6Highlight"), expertise: ["Technology Legal Framework", "Innovation Strategy", "Emerging Technology Compliance", "Digital Transformation Legal Support"] },
+    { icon: Lightbulb, image: practiceStrategy, title: t("practiceAreas.area1Title"), description: t("practiceAreas.area1Desc"), highlight: t("practiceAreas.area1Highlight"), expertise: ["Business Strategy Legal Framework", "Risk Assessment & Mitigation", "Strategic Decision Support", "Legal Innovation Planning"] },
+    { icon: Building, image: practiceTransactions, title: t("practiceAreas.area2Title"), description: t("practiceAreas.area2Desc"), highlight: t("practiceAreas.area2Highlight"), expertise: ["M&A Transaction Design", "Joint Venture Structuring", "Strategic Partnerships", "Cross-border Deal Architecture"] },
+    { icon: Globe, image: practiceRegulatory, title: t("practiceAreas.area3Title"), description: t("practiceAreas.area3Desc"), highlight: t("practiceAreas.area3Highlight"), expertise: ["Multi-jurisdictional Compliance", "Regulatory Risk Management", "Policy Development", "Compliance Framework Design"] },
+    { icon: Fuel, image: practiceEsg, title: t("practiceAreas.area4Title"), description: t("practiceAreas.area4Desc"), highlight: t("practiceAreas.area4Highlight"), expertise: ["ESG Strategy Development", "Sustainability Legal Framework", "Environmental Compliance", "Social Impact Assessment"] },
+    { icon: DollarSign, image: practiceCrossborder, title: t("practiceAreas.area5Title"), description: t("practiceAreas.area5Desc"), highlight: t("practiceAreas.area5Highlight"), expertise: ["International Transaction Support", "Cross-border Regulatory Navigation", "Multi-jurisdictional Coordination", "Global Deal Execution"] },
+    { icon: Rocket, image: practiceInnovation, title: t("practiceAreas.area6Title"), description: t("practiceAreas.area6Desc"), highlight: t("practiceAreas.area6Highlight"), expertise: ["Technology Legal Framework", "Innovation Strategy", "Emerging Technology Compliance", "Digital Transformation Legal Support"] },
   ];
 
   return (
@@ -45,8 +51,8 @@ const PracticeAreas = () => {
 
           <div className="space-y-12">
             {practiceAreas.map((area, index) => (
-              <div key={index} className="grid lg:grid-cols-2 gap-12 items-start">
-                <div className="space-y-6">
+              <div key={index} className={`grid lg:grid-cols-2 gap-12 items-start ${index % 2 === 1 ? 'lg:direction-rtl' : ''}`}>
+                <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 rounded bg-accent/10 flex items-center justify-center">
                       <area.icon className="h-5 w-5 text-accent" />
@@ -60,15 +66,27 @@ const PracticeAreas = () => {
                       <p className="text-sm text-foreground">{area.highlight}</p>
                     </div>
                   )}
+                  <div>
+                    <h4 className="text-xs uppercase tracking-wider text-accent mb-4 font-sans">{t("practiceAreas.keyExpertise")}</h4>
+                    <div className="space-y-2">
+                      {area.expertise.map((skill, i) => (
+                        <div key={i} className="text-sm text-muted-foreground py-2 border-b border-border/30 flex items-center">
+                          <span className="w-1 h-1 rounded-full bg-accent/40 mr-3" />{skill}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-xs uppercase tracking-wider text-accent mb-4 font-sans">{t("practiceAreas.keyExpertise")}</h4>
-                  <div className="space-y-2">
-                    {area.expertise.map((skill, i) => (
-                      <div key={i} className="text-sm text-muted-foreground py-2 border-b border-border/30 flex items-center">
-                        <span className="w-1 h-1 rounded-full bg-accent/40 mr-3" />{skill}
-                      </div>
-                    ))}
+                <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                  <div className="rounded-lg overflow-hidden">
+                    <img 
+                      src={area.image} 
+                      alt={area.title} 
+                      loading="lazy" 
+                      width={768} 
+                      height={512} 
+                      className="w-full h-auto object-cover rounded-lg"
+                    />
                   </div>
                 </div>
               </div>
