@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote, ExternalLink, Brain, Lightbulb, Globe, TrendingUp } from "lucide-react";
 import VideoBackground from "@/components/VideoBackground";
-import { STOCK_VIDEOS } from "@/lib/stock-videos";
 import { useLanguage } from "@/i18n/LanguageContext";
+import testimonialsVideo from "@/assets/testimonials-neutral-bg.mp4.asset.json";
 
 const Testimonials = () => {
   const { t } = useLanguage();
@@ -28,11 +28,11 @@ const Testimonials = () => {
 
   return (
     <section className="relative">
-      <VideoBackground src={STOCK_VIDEOS.elegant} className="h-[35vh]">
+      <VideoBackground src={testimonialsVideo.url} className="h-[35vh]" overlayClassName="absolute inset-0 z-[1] bg-background/60 backdrop-blur-[1px]">
         <div className="h-[35vh] flex items-center justify-center">
-          <div className="text-center">
+          <div className="text-center drop-shadow-md">
             <div className="teal-line mx-auto mb-6" />
-            <p className="text-sm uppercase tracking-[0.3em] text-foreground/60 mb-4 font-sans">{t("testimonials.sectionLabel")}</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-foreground/80 mb-4 font-sans">{t("testimonials.sectionLabel")}</p>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">{t("testimonials.sectionTitle")}</h2>
           </div>
         </div>
