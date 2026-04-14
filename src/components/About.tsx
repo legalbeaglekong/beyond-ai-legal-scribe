@@ -67,7 +67,7 @@ const About = () => {
                           <h4 className="text-base font-serif font-bold text-foreground">{achievement.title}</h4>
                           <span className="text-xs text-accent uppercase tracking-wider">{achievement.highlight}</span>
                         </div>
-                        <p className="text-sm text-muted-foreground">{achievement.description}</p>
+                        <p className="text-sm text-muted-foreground text-justify">{achievement.description}</p>
                       </div>
                     </div>
                   </CardContent>

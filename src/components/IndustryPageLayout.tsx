@@ -178,7 +178,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                       <service.icon className="h-5 w-5 text-accent" />
                     </div>
                     <h3 className="text-sm font-serif font-bold text-foreground mb-2">{service.title}</h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{service.description}</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed text-justify">{service.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -249,7 +249,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                       <div className="w-1.5 h-1.5 rounded-full bg-accent mb-4" />
                     )}
                     <h3 className="text-sm font-serif font-bold text-foreground mb-3">{card.title}</h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed mb-4">{card.description}</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed mb-4 text-justify">{card.description}</p>
                     {card.link && (
                       <a href={card.link} target="_blank" rel="noopener noreferrer" className="text-xs text-accent inline-flex items-center hover:underline">
                         {card.linkText || "Read More"} <ArrowRight className="ml-1 h-3 w-3" />

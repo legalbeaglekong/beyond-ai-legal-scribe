@@ -24,7 +24,7 @@ const TeamPreview = () => {
               
               <p className="text-sm italic text-accent font-serif mb-1">{language === "zh" ? member.roleZh : member.role}</p>
               <h3 className="text-xl font-serif font-bold text-foreground mb-3 group-hover:text-accent transition-colors">{member.name}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{language === "zh" ? member.summaryZh : member.summary}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed text-justify">{language === "zh" ? member.summaryZh : member.summary}</p>
             </Link>
           ))}
         </div>

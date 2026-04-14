@@ -59,7 +59,7 @@ const PracticeAreas = () => {
                     </div>
                     <h3 className="text-xl font-serif font-bold text-foreground">{area.title}</h3>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed">{area.description}</p>
+                  <p className="text-muted-foreground leading-relaxed text-justify">{area.description}</p>
                   {area.highlight && (
                     <div className="border-l-2 border-accent/30 pl-4">
                       <p className="text-xs text-accent uppercase tracking-wider mb-1">{t("practiceAreas.notableAchievement")}</p>

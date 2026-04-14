@@ -51,7 +51,7 @@ const GlobalPartners = () => {
               <Card key={region.name} className="border-border/30 bg-card card-lift hover:border-accent/30">
                 <CardContent className="p-6">
                   <h3 className="text-base font-serif font-bold text-foreground mb-3">{region.name}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{region.description}</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed text-justify">{region.description}</p>
                 </CardContent>
               </Card>
             ))}

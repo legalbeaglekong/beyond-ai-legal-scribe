@@ -48,7 +48,7 @@ const Insights = () => {
                   </div>
                 </div>
                 <h3 className="text-base font-serif font-bold text-foreground leading-snug mb-3 group-hover:text-accent transition-smooth">{post.title}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed mb-4">{post.excerpt}</p>
+                <p className="text-xs text-muted-foreground leading-relaxed mb-4 text-justify">{post.excerpt}</p>
                 {post.isVideo && post.embedUrl && (
                   <iframe style={{ borderRadius: '8px' }} src={post.embedUrl} width="100%" height="200" frameBorder="0" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" />
                 )}

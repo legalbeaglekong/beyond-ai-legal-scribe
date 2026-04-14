@@ -32,7 +32,7 @@ const HowWeWork = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-xs text-muted-foreground leading-relaxed">{text}</p>
+                <p className="text-xs text-muted-foreground leading-relaxed text-justify">{text}</p>
               </CardContent>
             </Card>
           ))}
