@@ -11,7 +11,7 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: MapPin, title: t("contact.singaporeOffice"), details: ["39B Neil Rd (Level 3)", "Singapore 088823"] },
-    { icon: Mail, title: t("contact.email"), details: ["hl@huilinglawoffice.com", t("contact.emailResponse")] },
+    { icon: Mail, title: t("contact.email"), details: ["HL@beyondhorizons.sg", t("contact.emailResponse")] },
     { icon: MessageCircle, title: t("contact.whatsapp"), details: [t("contact.whatsappChat"), t("contact.whatsappDesc")] },
     { icon: Globe, title: t("contact.globalPartnersLabel"), details: [t("contact.globalPartnersDesc1"), t("contact.globalPartnersDesc2")] },
   ];

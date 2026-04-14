@@ -280,7 +280,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="border-2 border-white text-white font-semibold hover:bg-white hover:text-black shadow-lg" asChild>
-                <a href="mailto:hl@huilinglawoffice.com">
+                <a href="mailto:HL@beyondhorizons.sg">
                   <Mail className="mr-2 h-4 w-4" /> Email Us
                 </a>
               </Button>
