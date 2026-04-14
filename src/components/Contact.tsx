@@ -4,7 +4,7 @@ import { MapPin, Mail, Calendar, ArrowRight, Globe, Clock, MessageCircle } from 
 import VideoBackground from "@/components/VideoBackground";
 import { useLanguage } from "@/i18n/LanguageContext";
 import contactBanner from "@/assets/contact-banner.jpg";
-import contactVideo from "@/assets/contact-marble-bg.mp4.asset.json";
+import contactVideo from "@/assets/contact-neutral-bg.mp4.asset.json";
 
 const Contact = () => {
   const { t } = useLanguage();
