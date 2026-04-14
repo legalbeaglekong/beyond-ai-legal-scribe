@@ -51,6 +51,7 @@ const getVideoForSlug = (slug: string): string => {
     "trade-tariff": STOCK_VIDEOS.maritime,
     "wellness-health": STOCK_VIDEOS.wellness,
     robotics: STOCK_VIDEOS.robotics,
+    space: STOCK_VIDEOS.space,
   };
   return map[slug] || STOCK_VIDEOS.business;
 };

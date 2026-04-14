@@ -26,4 +26,6 @@ export const STOCK_VIDEOS = {
   cityscape: "https://videos.pexels.com/video-files/1437396/1437396-uhd_2560_1440_30fps.mp4",
   // Calm/elegant for testimonials
   elegant: "https://videos.pexels.com/video-files/857251/857251-hd_1920_1080_25fps.mp4",
+  // Space — dark elegant abstract / orbital
+  space: "https://videos.pexels.com/video-files/857195/857195-hd_1920_1080_25fps.mp4",
 } as const;
