@@ -58,6 +58,14 @@ const getVideoForSlug = (slug: string): string => {
   return map[slug] || STOCK_VIDEOS.business;
 };
 
+// Separate CTA video per slug (falls back to hero video)
+const getCtaVideoForSlug = (slug: string): string => {
+  const ctaMap: Record<string, string> = {
+    space: spaceCtaVideo.url,
+  };
+  return ctaMap[slug] || getVideoForSlug(slug);
+};
+
 const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
