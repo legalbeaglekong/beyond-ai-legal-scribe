@@ -1,5 +1,5 @@
 import IndustryPageLayout, { type IndustryPageData } from "@/components/IndustryPageLayout";
-import { Users, Clock, Shield, Globe } from "lucide-react";
+import { Users, Clock, Shield, Globe, FileText, Handshake, Brain, Search, AlertTriangle, GraduationCap, Bot, Briefcase } from "lucide-react";
 
 const data: IndustryPageData = {
   slug: "fractional-gc",
@@ -19,6 +19,14 @@ const data: IndustryPageData = {
       { icon: Shield, title: "Regulatory & Compliance Oversight", description: "Ongoing compliance management across jurisdictions, regulatory horizon scanning, and policy development — including AI governance, data privacy, and ESG frameworks." },
       { icon: Clock, title: "Commercial Operations Support", description: "Contract lifecycle management, vendor negotiations, employment matters, IP protection, and dispute avoidance — keeping your commercial engine running smoothly." },
       { icon: Globe, title: "Cross-Border Legal Coordination", description: "Managing external counsel across jurisdictions, coordinating multi-market transactions, and ensuring consistent legal standards across your global operations." },
+      { icon: FileText, title: "Non-Disclosure Agreements", description: "Drafting, reviewing, and negotiating NDAs tailored to your industry — protecting trade secrets, proprietary data, and confidential business relationships across all stages of deal-making." },
+      { icon: Handshake, title: "Joint Venture Agreements", description: "Structuring and negotiating JV agreements that align partner interests, define governance frameworks, allocate risk and reward, and establish clear exit mechanisms for cross-border collaborations." },
+      { icon: Brain, title: "Negotiation Strategies", description: "Providing senior-level negotiation support and strategy for high-stakes commercial deals, M&A transactions, and partnership agreements — ensuring your interests are protected at every turn." },
+      { icon: AlertTriangle, title: "Risk Profiling & Assessment", description: "Conducting comprehensive legal risk assessments across your operations — identifying exposure areas, quantifying potential impact, and building mitigation strategies aligned with your risk appetite." },
+      { icon: GraduationCap, title: "Legal Training & Awareness", description: "Delivering tailored legal training programmes for your leadership and teams — covering contract essentials, regulatory obligations, compliance best practices, and emerging legal risks in your sector." },
+      { icon: Search, title: "Regulatory Scanner", description: "Proactive regulatory monitoring and horizon scanning across your operating jurisdictions — tracking legislative changes, enforcement trends, and policy developments so you stay ahead of compliance obligations." },
+      { icon: Bot, title: "AI-Powered Legal Assistance", description: "Deploying AI chatbot tools for first-line legal queries, contract review triage, and compliance checklists — augmenting your legal function with 24/7 intelligent support backed by senior counsel oversight." },
+      { icon: Briefcase, title: "Employment & HR Matters", description: "End-to-end employment law support including hiring contracts, termination protocols, workplace policies, equity incentive plans, and cross-border employment compliance for distributed teams." },
     ],
     stats: ["50+ companies supported as Fractional GC", "15+ jurisdictions coordinated", "70% cost savings vs full-time GC", "24/7 availability for critical matters"],
   },
