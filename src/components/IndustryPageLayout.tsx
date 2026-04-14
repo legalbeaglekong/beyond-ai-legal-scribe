@@ -110,13 +110,14 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
 
         {/* Hero with Video */}
         <VideoBackground src={getVideoForSlug(data.slug)} className="min-h-[70vh] flex items-center">
-          <div className="min-h-[70vh] flex items-center justify-center w-full pt-20">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+          <div className="min-h-[70vh] flex items-center justify-center w-full pt-20 relative z-10">
             <div className="max-w-4xl mx-auto container-padding text-center fade-in">
-              <div className="teal-line mx-auto mb-8" />
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 leading-tight">
+              <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto mb-8" />
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-lg tracking-tight">
                 {data.hero.title}
               </h1>
-              <p className="text-base md:text-lg text-foreground/80 max-w-3xl mx-auto leading-relaxed mb-10">
+              <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto leading-relaxed mb-10 drop-shadow-md">
                 {data.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
@@ -125,7 +126,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                     Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="border-2 border-white text-white font-semibold hover:bg-white hover:text-black shadow-lg" asChild>
+                <Button variant="outline" size="lg" className="border border-white/40 text-white font-semibold hover:bg-white/10 shadow-lg backdrop-blur-sm" asChild>
                   <a href="#overview">
                     View Expertise <ChevronDown className="ml-2 h-4 w-4" />
                   </a>
@@ -133,7 +134,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               </div>
               <div className="flex flex-wrap justify-center gap-3">
                 {data.hero.badges.map((badge, i) => (
-                  <span key={i} className="text-xs text-white font-medium border border-white/30 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm">
+                  <span key={i} className="text-xs text-white/90 font-medium border border-white/20 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md tracking-wide uppercase">
                     {badge}
                   </span>
                 ))}
