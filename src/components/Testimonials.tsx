@@ -51,7 +51,7 @@ const Testimonials = () => {
               <Card key={i} className="border-border/50 bg-card card-lift">
                 <CardContent className="p-8">
                   <Quote className="h-6 w-6 text-accent/40 mb-4" />
-                  <blockquote className="text-foreground text-lg leading-relaxed mb-6 font-serif italic">"{te.quote}"</blockquote>
+                  <blockquote className="text-foreground text-lg leading-relaxed mb-6 font-serif italic text-justify">"{te.quote}"</blockquote>
                   <div className="text-right">
                     <div className="text-xs text-accent font-sans uppercase tracking-wider">{te.source}</div>
                     <div className="text-xs text-muted-foreground mt-1">{te.location}</div>
