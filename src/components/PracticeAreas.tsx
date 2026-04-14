@@ -51,8 +51,8 @@ const PracticeAreas = () => {
 
           <div className="space-y-12">
             {practiceAreas.map((area, index) => (
-              <div key={index} className="grid lg:grid-cols-2 gap-12 items-start">
-                <div className="space-y-6">
+              <div key={index} className={`grid lg:grid-cols-2 gap-12 items-start ${index % 2 === 1 ? 'lg:direction-rtl' : ''}`}>
+                <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 rounded bg-accent/10 flex items-center justify-center">
                       <area.icon className="h-5 w-5 text-accent" />
@@ -66,15 +66,27 @@ const PracticeAreas = () => {
                       <p className="text-sm text-foreground">{area.highlight}</p>
                     </div>
                   )}
+                  <div>
+                    <h4 className="text-xs uppercase tracking-wider text-accent mb-4 font-sans">{t("practiceAreas.keyExpertise")}</h4>
+                    <div className="space-y-2">
+                      {area.expertise.map((skill, i) => (
+                        <div key={i} className="text-sm text-muted-foreground py-2 border-b border-border/30 flex items-center">
+                          <span className="w-1 h-1 rounded-full bg-accent/40 mr-3" />{skill}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-xs uppercase tracking-wider text-accent mb-4 font-sans">{t("practiceAreas.keyExpertise")}</h4>
-                  <div className="space-y-2">
-                    {area.expertise.map((skill, i) => (
-                      <div key={i} className="text-sm text-muted-foreground py-2 border-b border-border/30 flex items-center">
-                        <span className="w-1 h-1 rounded-full bg-accent/40 mr-3" />{skill}
-                      </div>
-                    ))}
+                <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                  <div className="rounded-lg overflow-hidden">
+                    <img 
+                      src={area.image} 
+                      alt={area.title} 
+                      loading="lazy" 
+                      width={768} 
+                      height={512} 
+                      className="w-full h-auto object-cover rounded-lg"
+                    />
                   </div>
                 </div>
               </div>
