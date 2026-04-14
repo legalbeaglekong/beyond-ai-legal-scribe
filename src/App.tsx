@@ -55,6 +55,8 @@ const App = () => (
               <Route path="/industry/robotics" element={<RoboticsPage />} />
               <Route path="/industry/cybersecurity-tech" element={<CybersecurityPage />} />
               <Route path="/industry/space" element={<SpacePage />} />
+              <Route path="/industry/fractional-gc" element={<FractionalGCPage />} />
+              <Route path="/industry/ai-code-counsel" element={<AICodeCounselPage />} />
               <Route path="/team" element={<TeamPage />} />
               <Route path="/team/:slug" element={<TeamMemberPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
