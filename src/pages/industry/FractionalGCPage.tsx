@@ -1,5 +1,5 @@
 import IndustryPageLayout, { type IndustryPageData } from "@/components/IndustryPageLayout";
-import { Users, Clock, Shield, Globe, FileText, Handshake, Brain, Search, AlertTriangle, GraduationCap, Bot, Briefcase } from "lucide-react";
+import { Users, Clock, Shield, Globe, FileText, Handshake, Brain, Search, AlertTriangle, GraduationCap, Bot, Briefcase, Lock } from "lucide-react";
 
 const data: IndustryPageData = {
   slug: "fractional-gc",
@@ -27,6 +27,7 @@ const data: IndustryPageData = {
       { icon: Search, title: "Regulatory Scanner", description: "Proactive regulatory monitoring and horizon scanning across your operating jurisdictions — tracking legislative changes, enforcement trends, and policy developments so you stay ahead of compliance obligations." },
       { icon: Bot, title: "AI-Powered Legal Assistance", description: "Deploying AI chatbot tools for first-line legal queries, contract review triage, and compliance checklists — augmenting your legal function with 24/7 intelligent support backed by senior counsel oversight." },
       { icon: Briefcase, title: "Employment & HR Matters", description: "End-to-end employment law support including hiring contracts, termination protocols, workplace policies, equity incentive plans, and cross-border employment compliance for distributed teams." },
+      { icon: Lock, title: "Data Protection Compliance", description: "Comprehensive data privacy advisory covering PDPA, GDPR, and cross-border data transfer frameworks — including privacy impact assessments, data processing agreements, breach response protocols, and ongoing compliance programme management." },
     ],
     stats: ["50+ companies supported as Fractional GC", "15+ jurisdictions coordinated", "70% cost savings vs full-time GC", "24/7 availability for critical matters"],
   },
