@@ -9,6 +9,7 @@ import industryTrade from "@/assets/industry-trade.jpg";
 import industryCybersecurity from "@/assets/industry-cybersecurity.jpg";
 import industryWellness from "@/assets/industry-wellness.jpg";
 import industryBlockchain from "@/assets/industry-blockchain.jpg";
+import industrySpace from "@/assets/industry-space.jpg";
 import businessMeeting from "@/assets/business-meeting.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -24,6 +25,7 @@ const Industries = () => {
     { title: t("industries.trade"), description: t("industries.tradeDesc"), highlights: ["Contractual Restructuring", "Joint Venture Agreements", "Business Repositioning"], route: "/industry/trade-tariff", image: industryTrade },
     { title: t("industries.robotics"), description: t("industries.roboticsDesc"), highlights: ["Robot Leasing Agreements", "RaaS Contracts", "Liability Frameworks"], link: "https://robotlaw.beyondhorizons.sg", image: industryRobotics },
     { title: t("industries.cyber"), description: t("industries.cyberDesc"), highlights: ["Cybersecurity Governance", "AI Regulation & Liability", "Critical Infrastructure"], route: "/industry/cybersecurity-tech", image: industryCybersecurity },
+    { title: t("industries.space"), description: t("industries.spaceDesc"), highlights: ["Satellite Transactions & Licensing", "Launch Agreements & Liability", "Space Regulatory Compliance"], route: "/industry/space", image: industrySpace },
   ];
 
   return (
