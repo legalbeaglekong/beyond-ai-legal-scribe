@@ -24,12 +24,12 @@ const PracticeAreas = () => {
 
   return (
     <section id="practice-areas" className="relative">
-      <VideoBackground src={STOCK_VIDEOS.business} className="h-[35vh]">
+      <VideoBackground src={STOCK_VIDEOS.business} className="h-[35vh]" overlayClassName="absolute inset-0 bg-black/60">
         <div className="h-[35vh] flex items-center justify-center">
           <div className="text-center">
             <div className="teal-line mx-auto mb-6" />
-            <p className="text-sm uppercase tracking-[0.3em] text-foreground/60 mb-4 font-sans">{t("practiceAreas.sectionLabel")}</p>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">{t("practiceAreas.sectionTitle")}</h2>
+            <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-sans drop-shadow">{t("practiceAreas.sectionLabel")}</p>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white drop-shadow-lg">{t("practiceAreas.sectionTitle")}</h2>
           </div>
         </div>
       </VideoBackground>

@@ -34,18 +34,18 @@ const AboutPage = () => {
         <Header />
 
         {/* Hero with Video */}
-        <VideoBackground src={STOCK_VIDEOS.business} className="min-h-[60vh] flex items-center">
+        <VideoBackground src={STOCK_VIDEOS.business} className="min-h-[60vh] flex items-center" overlayClassName="absolute inset-0 bg-black/60">
           <div className="min-h-[60vh] flex items-center justify-center w-full pt-20">
             <div className="max-w-4xl mx-auto container-padding text-center">
               <div className="teal-line mx-auto mb-6" />
-              <p className="text-sm uppercase tracking-[0.3em] text-foreground/60 mb-4 font-sans">Global Authority</p>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6">
+              <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-sans drop-shadow">Global Authority</p>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 drop-shadow-lg">
                 Meet Your Legal Team
               </h1>
-              <p className="text-base md:text-lg text-foreground/70 max-w-3xl mx-auto leading-relaxed mb-8">
+              <p className="text-base md:text-lg text-white/80 max-w-3xl mx-auto leading-relaxed mb-8 drop-shadow">
                 Our experienced legal team combines unparalleled expertise with visionary business acumen.
               </p>
-              <Button variant="default" size="lg" asChild>
+              <Button variant="default" size="lg" className="bg-white text-black font-semibold shadow-lg hover:bg-white/90" asChild>
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                   Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -115,17 +115,17 @@ const AboutPage = () => {
         </section>
 
         {/* CTA */}
-        <VideoBackground src={STOCK_VIDEOS.cityscape} className="py-20">
+        <VideoBackground src={STOCK_VIDEOS.cityscape} className="py-20" overlayClassName="absolute inset-0 bg-black/60">
           <div className="max-w-3xl mx-auto container-padding text-center py-12">
             <div className="teal-line mx-auto mb-8" />
-            <h2 className="text-3xl font-serif font-bold text-foreground mb-6">Ready to Transform Your Legal Strategy?</h2>
+            <h2 className="text-3xl font-serif font-bold text-white mb-6 drop-shadow-lg">Ready to Transform Your Legal Strategy?</h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="default" size="lg" asChild>
+              <Button variant="default" size="lg" className="bg-white text-black font-semibold shadow-lg hover:bg-white/90" asChild>
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                   Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="border-accent/50 text-accent hover:bg-accent hover:text-accent-foreground" asChild>
+              <Button variant="outline" size="lg" className="border-2 border-white text-white font-semibold hover:bg-white hover:text-black shadow-lg" asChild>
                 <a href="https://www.linkedin.com/in/hui-ling-teo-7bb8b812b/recent-activity/all/" target="_blank" rel="noopener noreferrer">
                   View Publications <ExternalLink className="ml-2 h-4 w-4" />
                 </a>
