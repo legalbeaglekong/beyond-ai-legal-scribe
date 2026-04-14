@@ -3,17 +3,23 @@ import { Plane, Fuel, Building, Rocket, ArrowRight, DollarSign, Globe, Lightbulb
 import VideoBackground from "@/components/VideoBackground";
 import { STOCK_VIDEOS } from "@/lib/stock-videos";
 import { useLanguage } from "@/i18n/LanguageContext";
+import practiceStrategy from "@/assets/practice-strategy.jpg";
+import practiceTransactions from "@/assets/practice-transactions.jpg";
+import practiceRegulatory from "@/assets/practice-regulatory.jpg";
+import practiceEsg from "@/assets/practice-esg.jpg";
+import practiceCrossborder from "@/assets/practice-crossborder.jpg";
+import practiceInnovation from "@/assets/practice-innovation.jpg";
 
 const PracticeAreas = () => {
   const { t } = useLanguage();
 
   const practiceAreas = [
-    { icon: Lightbulb, title: t("practiceAreas.area1Title"), description: t("practiceAreas.area1Desc"), highlight: t("practiceAreas.area1Highlight"), expertise: ["Business Strategy Legal Framework", "Risk Assessment & Mitigation", "Strategic Decision Support", "Legal Innovation Planning"] },
-    { icon: Building, title: t("practiceAreas.area2Title"), description: t("practiceAreas.area2Desc"), highlight: t("practiceAreas.area2Highlight"), expertise: ["M&A Transaction Design", "Joint Venture Structuring", "Strategic Partnerships", "Cross-border Deal Architecture"] },
-    { icon: Globe, title: t("practiceAreas.area3Title"), description: t("practiceAreas.area3Desc"), highlight: t("practiceAreas.area3Highlight"), expertise: ["Multi-jurisdictional Compliance", "Regulatory Risk Management", "Policy Development", "Compliance Framework Design"] },
-    { icon: Fuel, title: t("practiceAreas.area4Title"), description: t("practiceAreas.area4Desc"), highlight: t("practiceAreas.area4Highlight"), expertise: ["ESG Strategy Development", "Sustainability Legal Framework", "Environmental Compliance", "Social Impact Assessment"] },
-    { icon: DollarSign, title: t("practiceAreas.area5Title"), description: t("practiceAreas.area5Desc"), highlight: t("practiceAreas.area5Highlight"), expertise: ["International Transaction Support", "Cross-border Regulatory Navigation", "Multi-jurisdictional Coordination", "Global Deal Execution"] },
-    { icon: Rocket, title: t("practiceAreas.area6Title"), description: t("practiceAreas.area6Desc"), highlight: t("practiceAreas.area6Highlight"), expertise: ["Technology Legal Framework", "Innovation Strategy", "Emerging Technology Compliance", "Digital Transformation Legal Support"] },
+    { icon: Lightbulb, image: practiceStrategy, title: t("practiceAreas.area1Title"), description: t("practiceAreas.area1Desc"), highlight: t("practiceAreas.area1Highlight"), expertise: ["Business Strategy Legal Framework", "Risk Assessment & Mitigation", "Strategic Decision Support", "Legal Innovation Planning"] },
+    { icon: Building, image: practiceTransactions, title: t("practiceAreas.area2Title"), description: t("practiceAreas.area2Desc"), highlight: t("practiceAreas.area2Highlight"), expertise: ["M&A Transaction Design", "Joint Venture Structuring", "Strategic Partnerships", "Cross-border Deal Architecture"] },
+    { icon: Globe, image: practiceRegulatory, title: t("practiceAreas.area3Title"), description: t("practiceAreas.area3Desc"), highlight: t("practiceAreas.area3Highlight"), expertise: ["Multi-jurisdictional Compliance", "Regulatory Risk Management", "Policy Development", "Compliance Framework Design"] },
+    { icon: Fuel, image: practiceEsg, title: t("practiceAreas.area4Title"), description: t("practiceAreas.area4Desc"), highlight: t("practiceAreas.area4Highlight"), expertise: ["ESG Strategy Development", "Sustainability Legal Framework", "Environmental Compliance", "Social Impact Assessment"] },
+    { icon: DollarSign, image: practiceCrossborder, title: t("practiceAreas.area5Title"), description: t("practiceAreas.area5Desc"), highlight: t("practiceAreas.area5Highlight"), expertise: ["International Transaction Support", "Cross-border Regulatory Navigation", "Multi-jurisdictional Coordination", "Global Deal Execution"] },
+    { icon: Rocket, image: practiceInnovation, title: t("practiceAreas.area6Title"), description: t("practiceAreas.area6Desc"), highlight: t("practiceAreas.area6Highlight"), expertise: ["Technology Legal Framework", "Innovation Strategy", "Emerging Technology Compliance", "Digital Transformation Legal Support"] },
   ];
 
   return (
