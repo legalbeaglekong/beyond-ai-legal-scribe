@@ -24,7 +24,7 @@ const platforms = [
     title: "Robot Law",
     subtitle: "Robotics & Autonomous Systems Legal",
     description: "Pioneering platform dedicated to the legal frameworks governing robotics, autonomous systems, and AI-powered machines. Sophisticated aircraft leasing structures adapted to robot leasing.",
-    highlights: ["Robot leasing & financing frameworks", "Robotics-as-a-Service (RaaS) contracts", "Autonomous systems liability & insurance", "Regulatory compliance for cobots & drones"],
+    highlights: ["Robot leasing & financing frameworks", "Robotics-as-a-Service (SaaS) contracts", "Autonomous systems liability & insurance", "Regulatory compliance for cobots & drones"],
     url: "https://robotlaw.beyondhorizons.sg",
     icon: Bot,
   },
