@@ -111,14 +111,14 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
 
         {/* Hero with Video */}
         <VideoBackground src={getVideoForSlug(data.slug)} className="min-h-[70vh] flex items-center">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/65 to-black/85" />
           <div className="min-h-[70vh] flex items-center justify-center w-full pt-20 relative z-10">
             <div className="max-w-4xl mx-auto container-padding text-center fade-in">
               <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto mb-8" />
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-lg tracking-tight">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight tracking-tight" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.9)' }}>
                 {data.hero.title}
               </h1>
-              <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto leading-relaxed mb-10 drop-shadow-md">
+              <p className="text-base md:text-lg text-white max-w-3xl mx-auto leading-relaxed mb-10" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.7), 0 1px 2px rgba(0,0,0,0.8)' }}>
                 {data.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
