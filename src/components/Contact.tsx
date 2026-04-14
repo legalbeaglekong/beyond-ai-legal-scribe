@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Mail, Calendar, ArrowRight, Globe, Clock, MessageCircle } from "lucide-react";
-import VideoBackground from "@/components/VideoBackground";
-import { STOCK_VIDEOS } from "@/lib/stock-videos";
 import { useLanguage } from "@/i18n/LanguageContext";
+import contactBanner from "@/assets/contact-banner.jpg";
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -17,15 +16,22 @@ const Contact = () => {
 
   return (
     <section id="contact" className="relative">
-      <VideoBackground src={STOCK_VIDEOS.cityscape} className="h-[35vh]">
-        <div className="h-[35vh] flex items-center justify-center">
+      <div className="relative h-[35vh] overflow-hidden">
+        <img
+          src={contactBanner}
+          alt="Singapore skyline"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-background/70 backdrop-blur-[2px]" />
+        <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
             <div className="teal-line mx-auto mb-6" />
             <p className="text-sm uppercase tracking-[0.3em] text-foreground/60 mb-4 font-sans">{t("contact.sectionLabel")}</p>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">{t("contact.sectionTitle")}</h2>
           </div>
         </div>
-      </VideoBackground>
+      </div>
 
       <div className="section-padding bg-background">
         <div className="max-w-6xl mx-auto container-padding">
