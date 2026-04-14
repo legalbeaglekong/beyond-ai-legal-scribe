@@ -51,7 +51,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/c29b8821-0606-4c34-9200-3a769446e390.png" 
               alt="Beyond Horizons - Crafted for Visionaries" 
-              className="h-10 w-auto"
+              className="h-14 w-auto"
             />
           </Link>
 
