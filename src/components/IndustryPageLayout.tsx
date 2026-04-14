@@ -290,14 +290,14 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         </section>
 
         {/* CTA */}
-        <VideoBackground src={getCtaVideoForSlug(data.slug)} className="py-24">
+        <VideoBackground src={getCtaVideoForSlug(data.slug)} className="py-24" overlayClassName="absolute inset-0 bg-black/60">
           <div className="max-w-3xl mx-auto container-padding text-center fade-in py-16">
             <div className="teal-line mx-auto mb-8" />
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 drop-shadow-lg">
               {data.cta.heading}
             </h2>
             {data.cta.description && (
-              <p className="text-foreground/70 leading-relaxed mb-10 text-lg">{data.cta.description}</p>
+              <p className="text-white/85 leading-relaxed mb-10 text-lg drop-shadow-md">{data.cta.description}</p>
             )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="default" size="lg" className="bg-white text-black font-semibold shadow-lg hover:bg-white/90" asChild>
