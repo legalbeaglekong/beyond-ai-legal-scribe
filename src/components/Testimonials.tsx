@@ -74,7 +74,9 @@ const Testimonials = () => {
           <div className="grid md:grid-cols-4 gap-8">
             {attributes.map((attr, i) => (
               <div key={i} className="text-center">
-                <div className="w-2 h-2 bg-accent rounded-full mx-auto mb-4" />
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center">
+                  <attr.icon className="w-5 h-5 text-accent" />
+                </div>
                 <h4 className="font-serif font-bold text-foreground mb-2 text-sm">{attr.title}</h4>
                 <p className="text-xs text-muted-foreground">{attr.desc}</p>
               </div>
