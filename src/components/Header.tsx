@@ -9,7 +9,7 @@ const workSubLinks = [
   { name: "AI Tools", href: "/ai-tools" },
   { name: "Why Specialist Counsel", href: "/why-specialist-counsel" },
   { name: "Join Us", href: "/join-us" },
-  { name: "CSR", href: "/work/csr" },
+  { name: "Society & Impact", href: "/work/csr" },
 ];
 
 const Header = () => {
