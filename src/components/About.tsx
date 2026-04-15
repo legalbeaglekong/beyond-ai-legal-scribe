@@ -42,6 +42,13 @@ const About = () => {
               <p className="text-muted-foreground leading-relaxed">{t("about.genesis1")}</p>
               <p className="text-muted-foreground leading-relaxed">{t("about.genesis2")}</p>
               <p className="text-muted-foreground leading-relaxed">{t("about.genesis3")}</p>
+              <p className="text-muted-foreground leading-relaxed">
+                Beyond Horizons is a specialist practice group within{" "}
+                <a href="https://www.bethelchambers.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline font-medium">
+                  Bethel Chambers LLC
+                </a>
+                , a full-service Singapore law firm. We share seamless collaboration across practice areas and provide strategic support to clients navigating complex, cross-border matters.
+              </p>
               <div className="mt-12">
                 <h4 className="text-sm uppercase tracking-[0.2em] text-accent mb-6 font-sans">{t("about.certTitle")}</h4>
                 <div className="space-y-3">
