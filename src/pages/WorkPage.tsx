@@ -71,7 +71,7 @@ const WorkPage = () => {
         </VideoBackground>
 
         {/* Platforms */}
-        <section className="section-padding bg-secondary/20">
+        <section id="platforms" className="section-padding bg-secondary/20">
           <div className="max-w-6xl mx-auto container-padding">
             <div className="text-center mb-12">
               <div className="teal-line mx-auto mb-6" />
@@ -112,7 +112,7 @@ const WorkPage = () => {
         </section>
 
         {/* Industries */}
-        <section className="section-padding bg-background">
+        <section id="industries" className="section-padding bg-background">
           <div className="max-w-6xl mx-auto container-padding">
             <div className="text-center mb-12">
               <div className="teal-line mx-auto mb-6" />
