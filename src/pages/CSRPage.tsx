@@ -44,9 +44,9 @@ const CSRPage = () => {
         <section className="pt-32 pb-20 bg-secondary/20">
           <div className="max-w-4xl mx-auto container-padding text-center fade-in">
             <div className="teal-line mx-auto mb-8" />
-            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4 font-sans">Corporate Social Responsibility</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4 font-sans">Our Work in Society</p>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 leading-tight tracking-tight">
-              Purpose Beyond Practice
+              Society &amp; Impact
             </h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               We believe that a legal practice has responsibilities that extend beyond its clients. From advancing sustainable aviation to supporting vulnerable communities in Singapore, our work reflects a commitment to making a meaningful difference.
