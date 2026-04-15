@@ -74,8 +74,11 @@ const CSRPage = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   ASAFA works to accelerate aviation decarbonisation in Asia by promoting SAF adoption, advancing robust policies and market integration, and ensuring a diverse SAF supply chain. The association brings together airlines, fuel producers, airports, regulators, and industry stakeholders to drive collective action on one of aviation's most critical sustainability challenges.
                 </p>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  While Hui Ling has since stepped down from her role in ASAFA, our practice group continues to collaborate with the association on thought leadership and industry engagement — contributing legal insight to the evolving SAF landscape across Asia.
+                </p>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                  While ASAFA is a personal initiative, it is deeply informed by our practice at Bethel Chambers — and our practice, in turn, allows us to contribute more fully to the causes and communities that matter. We believe that meaningful legal work and social impact are not separate pursuits, but natural extensions of each other.
+                  We believe that meaningful legal work and social impact are not separate pursuits, but natural extensions of each other.
                 </p>
                 <a
                   href="https://www.asiasaf.org"
