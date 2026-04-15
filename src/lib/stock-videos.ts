@@ -20,8 +20,8 @@ export const STOCK_VIDEOS = {
   blockchain: "https://videos.pexels.com/video-files/6963744/6963744-hd_1920_1080_25fps.mp4",
   // Wellness / health — medical / laboratory
   wellness: "https://videos.pexels.com/video-files/3571264/3571264-hd_1920_1080_30fps.mp4",
-  // Global/maritime — port with container ships
-  maritime: "https://videos.pexels.com/video-files/2795397/2795397-hd_1920_1080_25fps.mp4",
+  // Global/maritime — aerial shipping port
+  maritime: "https://videos.pexels.com/video-files/2611510/2611510-hd_1920_1080_30fps.mp4",
   // Cityscape for contact/about sections
   cityscape: "https://videos.pexels.com/video-files/1437396/1437396-hd_1920_1080_30fps.mp4",
   // Calm/elegant for testimonials
