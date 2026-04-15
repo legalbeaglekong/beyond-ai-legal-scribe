@@ -86,7 +86,10 @@ const WorkPage = () => {
             </div>
             <div className="grid lg:grid-cols-2 gap-6">
               {platforms.map((p, i) => (
-                <Card key={i} className="border-border/30 bg-card card-lift">
+                <Card key={i} className="border-border/30 bg-card card-lift overflow-hidden">
+                  <div className="h-48 overflow-hidden">
+                    <img src={p.image} alt={p.imageAlt} className="w-full h-full object-cover" loading="lazy" width={1280} height={720} />
+                  </div>
                   <CardContent className="p-8">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-10 h-10 rounded bg-accent/10 flex items-center justify-center">
