@@ -4,15 +4,24 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage, LANGUAGE_OPTIONS } from "@/i18n/LanguageContext";
 
+const workSubLinks = [
+  { name: "Our Work", href: "/work" },
+  { name: "Why Specialist Counsel", href: "/why-specialist-counsel" },
+  { name: "CSR", href: "/work/csr" },
+];
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMobileLangOpen, setIsMobileLangOpen] = useState(false);
+  const [isWorkOpen, setIsWorkOpen] = useState(false);
+  const [isMobileWorkOpen, setIsMobileWorkOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/" || location.pathname === "/en-us/";
   const { language, setLanguage, t } = useLanguage();
   const langRef = useRef<HTMLDivElement>(null);
+  const workRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -24,6 +33,9 @@ const Header = () => {
     const handleClickOutside = (e: MouseEvent) => {
       if (langRef.current && !langRef.current.contains(e.target as Node)) {
         setIsLangOpen(false);
+      }
+      if (workRef.current && !workRef.current.contains(e.target as Node)) {
+        setIsWorkOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -40,13 +52,15 @@ const Header = () => {
 
   const navigation = [
     { name: t("nav.about"), href: isHome ? "#about" : "/#about", hash: "#about" },
-    { name: t("nav.work"), href: isHome ? "#practice-areas" : "/#practice-areas", hash: "#practice-areas" },
+    { name: t("nav.work"), href: isHome ? "#practice-areas" : "/#practice-areas", hash: "#practice-areas", hasDropdown: true },
     { name: t("nav.team"), href: isHome ? "#team" : "/#team", hash: "#team" },
     { name: t("nav.insights"), href: "https://beyondhorizons.substack.com/", external: true },
     { name: t("nav.contact"), href: isHome ? "#contact" : "/#contact", hash: "#contact" },
   ];
 
   const currentLang = LANGUAGE_OPTIONS.find(l => l.code === language);
+
+  const navLinkClass = "text-foreground/70 hover:text-accent transition-smooth font-sans text-xs tracking-widest uppercase whitespace-nowrap";
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -65,36 +79,84 @@ const Header = () => {
 
           {/* Desktop Navigation + Actions */}
           <div className="hidden lg:flex items-center gap-7">
-            {navigation.map((item) => 
-              item.external ? (
+            {navigation.map((item) => {
+              // Work dropdown
+              if (item.hasDropdown) {
+                return (
+                  <div key={item.name} ref={workRef} className="relative">
+                    <button
+                      onClick={() => setIsWorkOpen(!isWorkOpen)}
+                      className={`${navLinkClass} flex items-center gap-1`}
+                    >
+                      {item.name}
+                      <ChevronDown className={`h-3 w-3 transition-transform ${isWorkOpen ? "rotate-180" : ""}`} />
+                    </button>
+                    {isWorkOpen && (
+                      <div className="absolute left-0 mt-2 w-56 bg-background border border-border/50 rounded-md shadow-lg py-1 z-50">
+                        {/* Hash link to practice areas on homepage */}
+                        <a
+                          href={item.href}
+                          onClick={(e) => {
+                            if (item.hash && isHome) handleHashNavigation(e, item.hash);
+                            setIsWorkOpen(false);
+                          }}
+                          className="block px-4 py-2.5 text-sm text-foreground/70 hover:bg-accent/10 hover:text-accent transition-smooth"
+                        >
+                          Practice Areas
+                        </a>
+                        {workSubLinks.map((sub) => (
+                          <Link
+                            key={sub.href}
+                            to={sub.href}
+                            onClick={() => setIsWorkOpen(false)}
+                            className="block px-4 py-2.5 text-sm text-foreground/70 hover:bg-accent/10 hover:text-accent transition-smooth"
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              if (item.external) {
+                return (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={navLinkClass}
+                  >
+                    {item.name}
+                  </a>
+                );
+              }
+
+              if (item.hash && isHome) {
+                return (
+                  <a
+                    key={item.name}
+                    href={item.hash}
+                    onClick={(e) => handleHashNavigation(e, item.hash!)}
+                    className={navLinkClass}
+                  >
+                    {item.name}
+                  </a>
+                );
+              }
+
+              return (
                 <a
                   key={item.name}
                   href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground/70 hover:text-accent transition-smooth font-sans text-xs tracking-widest uppercase whitespace-nowrap"
+                  className={navLinkClass}
                 >
                   {item.name}
                 </a>
-              ) : item.hash && isHome ? (
-                <a
-                  key={item.name}
-                  href={item.hash}
-                  onClick={(e) => handleHashNavigation(e, item.hash!)}
-                  className="text-foreground/70 hover:text-accent transition-smooth font-sans text-xs tracking-widest uppercase whitespace-nowrap"
-                >
-                  {item.name}
-                </a>
-              ) : (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-foreground/70 hover:text-accent transition-smooth font-sans text-xs tracking-widest uppercase whitespace-nowrap"
-                >
-                  {item.name}
-                </a>
-              )
-            )}
+              );
+            })}
 
             {/* Separator */}
             <div className="w-px h-5 bg-border/60" />
@@ -152,19 +214,62 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden bg-background/95 backdrop-blur-sm border-t border-border/50">
             <div className="px-4 py-6 space-y-4">
-              {navigation.map((item) => 
-                item.external ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block text-foreground/70 hover:text-accent transition-smooth text-sm uppercase tracking-wider py-2"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </a>
-                ) : (
+              {navigation.map((item) => {
+                // Work with sub-links on mobile
+                if (item.hasDropdown) {
+                  return (
+                    <div key={item.name}>
+                      <button
+                        onClick={() => setIsMobileWorkOpen(!isMobileWorkOpen)}
+                        className="flex items-center gap-1.5 text-foreground/70 hover:text-accent transition-smooth text-sm uppercase tracking-wider py-2 w-full"
+                      >
+                        {item.name}
+                        <ChevronDown className={`h-3 w-3 transition-transform ${isMobileWorkOpen ? "rotate-180" : ""}`} />
+                      </button>
+                      {isMobileWorkOpen && (
+                        <div className="ml-4 space-y-1 mt-1 border-l border-border/30 pl-4">
+                          <a
+                            href={item.href}
+                            onClick={(e) => {
+                              if (item.hash && isHome) handleHashNavigation(e, item.hash);
+                              setIsMenuOpen(false);
+                            }}
+                            className="block text-foreground/60 hover:text-accent transition-smooth text-sm py-1.5"
+                          >
+                            Practice Areas
+                          </a>
+                          {workSubLinks.map((sub) => (
+                            <Link
+                              key={sub.href}
+                              to={sub.href}
+                              onClick={() => setIsMenuOpen(false)}
+                              className="block text-foreground/60 hover:text-accent transition-smooth text-sm py-1.5"
+                            >
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+
+                if (item.external) {
+                  return (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-foreground/70 hover:text-accent transition-smooth text-sm uppercase tracking-wider py-2"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </a>
+                  );
+                }
+
+                return (
                   <a
                     key={item.name}
                     href={item.href}
@@ -176,8 +281,9 @@ const Header = () => {
                   >
                     {item.name}
                   </a>
-                )
-              )}
+                );
+              })}
+
               {/* Mobile language selector */}
               <div className="border-t border-border/30 pt-4">
                 <button
