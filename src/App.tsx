@@ -8,6 +8,7 @@ import { LanguageProvider } from "@/i18n/LanguageContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import WhyChooseUsDetail from "./pages/WhyChooseUsDetail";
+import WhySpecialistCounselPage from "./pages/WhySpecialistCounselPage";
 import ExpertiseDetail from "./pages/ExpertiseDetail";
 import ExpertiseOverview from "./pages/ExpertiseOverview";
 import MarketInsights from "./pages/MarketInsights";
@@ -57,6 +58,7 @@ const App = () => (
               <Route path="/industry/space" element={<SpacePage />} />
               <Route path="/industry/fractional-gc" element={<FractionalGCPage />} />
               <Route path="/industry/ai-code-counsel" element={<AICodeCounselPage />} />
+              <Route path="/why-specialist-counsel" element={<WhySpecialistCounselPage />} />
               <Route path="/team" element={<TeamPage />} />
               <Route path="/team/:slug" element={<TeamMemberPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
