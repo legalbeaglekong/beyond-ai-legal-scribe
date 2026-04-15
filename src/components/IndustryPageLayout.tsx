@@ -15,6 +15,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Link } from "react-router-dom";
 import type { LucideIcon } from "lucide-react";
 import VideoBackground from "@/components/VideoBackground";
+import AccoladeBanner from "@/components/AccoladeBanner";
 import { STOCK_VIDEOS } from "@/lib/stock-videos";
 
 const BOOKING_URL = "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
@@ -222,9 +223,10 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-muted-foreground mt-6 text-center">
-              Comparison reflects general industry models. Every engagement is unique.
-            </p>
+             <p className="text-xs text-muted-foreground mt-6 text-center">
+               Comparison reflects general industry models. Every engagement is unique.
+             </p>
+             <AccoladeBanner variant="compact" className="mt-8" />
           </div>
         </section>
 

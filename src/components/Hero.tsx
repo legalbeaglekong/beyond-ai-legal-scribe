@@ -4,6 +4,7 @@ import industryRobotics from "@/assets/industry-robotics.jpg";
 import industryTransportation from "@/assets/industry-transportation.jpg";
 import industryEnergy from "@/assets/industry-energy.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
+import AccoladeBanner from "@/components/AccoladeBanner";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -18,6 +19,7 @@ const Hero = () => {
         <a href="#about" className="text-foreground link-underline text-base inline-flex items-center hover:text-accent transition-smooth">
           {t("hero.cta")}
         </a>
+        <AccoladeBanner variant="featured" className="mt-10 max-w-2xl mx-auto" />
       </div>
 
       <div className="px-4 md:px-8 pb-16">

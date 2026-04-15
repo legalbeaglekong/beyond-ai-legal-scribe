@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Award, BookOpen, Users, TrendingUp, ExternalLink, ArrowRight } from "lucide-react";
+import AccoladeBanner from "@/components/AccoladeBanner";
 import { Link } from "react-router-dom";
 import planeTakeoff from "@/assets/plane-takeoff.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -95,6 +96,7 @@ const About = () => {
                     </a>
                   </Button>
                 </div>
+                <AccoladeBanner variant="inline" className="mt-8" />
               </div>
             </div>
           </div>
