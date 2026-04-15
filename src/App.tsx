@@ -11,6 +11,7 @@ import WhyChooseUsDetail from "./pages/WhyChooseUsDetail";
 import WhySpecialistCounselPage from "./pages/WhySpecialistCounselPage";
 import AIToolsPage from "./pages/AIToolsPage";
 import JoinUsPage from "./pages/JoinUsPage";
+import CSRPage from "./pages/CSRPage";
 import ExpertiseDetail from "./pages/ExpertiseDetail";
 import ExpertiseOverview from "./pages/ExpertiseOverview";
 import MarketInsights from "./pages/MarketInsights";
@@ -63,6 +64,7 @@ const App = () => (
               <Route path="/why-specialist-counsel" element={<WhySpecialistCounselPage />} />
               <Route path="/ai-tools" element={<AIToolsPage />} />
               <Route path="/join-us" element={<JoinUsPage />} />
+              <Route path="/work/csr" element={<CSRPage />} />
               <Route path="/team" element={<TeamPage />} />
               <Route path="/team/:slug" element={<TeamMemberPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
