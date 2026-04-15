@@ -1,13 +1,47 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Mail, Calendar, ArrowRight, Globe, Clock, MessageCircle } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { MapPin, Mail, Calendar, ArrowRight, Globe, Clock, MessageCircle, Send, CheckCircle, Loader2 } from "lucide-react";
 import VideoBackground from "@/components/VideoBackground";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 import contactBanner from "@/assets/contact-banner.jpg";
 import contactVideo from "@/assets/contact-neutral-bg.mp4.asset.json";
 
 const Contact = () => {
   const { t } = useLanguage();
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({ name: "", email: "", company: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) return;
+    
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-inquiry", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          message: formData.message,
+        },
+      });
+      if (error) throw error;
+      setIsSubmitted(true);
+      setFormData({ name: "", email: "", company: "", message: "" });
+      toast({ title: "Message sent", description: "We'll get back to you within 24 hours." });
+    } catch (err) {
+      toast({ title: "Something went wrong", description: "Please try again or email us directly.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const contactInfo = [
     { icon: MapPin, title: t("contact.singaporeOffice"), details: ["39B Neil Rd (Level 3)", "Singapore 088823"] },
