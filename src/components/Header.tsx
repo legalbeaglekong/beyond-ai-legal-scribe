@@ -63,8 +63,8 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-10">
+          {/* Desktop Navigation + Actions */}
+          <div className="hidden lg:flex items-center gap-7">
             {navigation.map((item) => 
               item.external ? (
                 <a
@@ -72,7 +72,7 @@ const Header = () => {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground/70 hover:text-accent transition-smooth font-sans text-sm tracking-wider uppercase"
+                  className="text-foreground/70 hover:text-accent transition-smooth font-sans text-xs tracking-widest uppercase whitespace-nowrap"
                 >
                   {item.name}
                 </a>
@@ -81,7 +81,7 @@ const Header = () => {
                   key={item.name}
                   href={item.hash}
                   onClick={(e) => handleHashNavigation(e, item.hash!)}
-                  className="text-foreground/70 hover:text-accent transition-smooth font-sans text-sm tracking-wider uppercase"
+                  className="text-foreground/70 hover:text-accent transition-smooth font-sans text-xs tracking-widest uppercase whitespace-nowrap"
                 >
                   {item.name}
                 </a>
@@ -89,22 +89,23 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground/70 hover:text-accent transition-smooth font-sans text-sm tracking-wider uppercase"
+                  className="text-foreground/70 hover:text-accent transition-smooth font-sans text-xs tracking-widest uppercase whitespace-nowrap"
                 >
                   {item.name}
                 </a>
               )
             )}
-          </div>
 
-          {/* CTA + Language Dropdown */}
-          <div className="hidden md:flex items-center space-x-4">
+            {/* Separator */}
+            <div className="w-px h-5 bg-border/60" />
+
+            {/* Language Dropdown */}
             <div ref={langRef} className="relative">
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
-                className="flex items-center gap-1.5 text-foreground/70 hover:text-accent transition-smooth text-xs uppercase tracking-wider font-sans"
+                className="flex items-center gap-1 text-foreground/60 hover:text-accent transition-smooth text-xs uppercase tracking-wider font-sans whitespace-nowrap"
               >
-                <Globe className="h-4 w-4" />
+                <Globe className="h-3.5 w-3.5" />
                 {currentLang?.nativeLabel}
                 <ChevronDown className={`h-3 w-3 transition-transform ${isLangOpen ? "rotate-180" : ""}`} />
               </button>
@@ -125,7 +126,9 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <Button variant="outline" size="default" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground tracking-wider text-xs uppercase" asChild>
+
+            {/* CTA */}
+            <Button variant="outline" size="sm" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground tracking-wider text-xs uppercase whitespace-nowrap" asChild>
               <a 
                 href="https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled"
                 target="_blank"
