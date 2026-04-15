@@ -8,6 +8,8 @@ import { ArrowRight, ExternalLink, Globe, Bot, Scale, Briefcase, Plane } from "l
 import { Link } from "react-router-dom";
 import VideoBackground from "@/components/VideoBackground";
 import { STOCK_VIDEOS } from "@/lib/stock-videos";
+import ascendingAsiaImg from "@/assets/ascending-asia-evtol.jpg";
+import robotLawImg from "@/assets/robot-law-humanoid.jpg";
 
 const BOOKING_URL = "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
 
@@ -19,6 +21,8 @@ const platforms = [
     highlights: ["Market entry strategy & corporate structuring", "Cross-border regulatory navigation", "Strategic partnership facilitation across ASEAN", "Investment and joint venture advisory"],
     url: "https://ascendingasia.beyondhorizons.sg",
     icon: Globe,
+    image: ascendingAsiaImg,
+    imageAlt: "eVTOL air taxis and drones over Asian city skyline",
   },
   {
     title: "Robot Law",
@@ -27,6 +31,8 @@ const platforms = [
     highlights: ["Robot leasing & financing frameworks", "Robotics-as-a-Service (SaaS) contracts", "Autonomous systems liability & insurance", "Regulatory compliance for cobots & drones"],
     url: "https://robotlaw.beyondhorizons.sg",
     icon: Bot,
+    image: robotLawImg,
+    imageAlt: "Humanoid robot in industrial factory setting",
   },
 ];
 
