@@ -30,12 +30,20 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const handleHashNavigation = (e: React.MouseEvent, hash: string) => {
+    if (isHome) {
+      e.preventDefault();
+      const el = document.querySelector(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const navigation = [
-    { name: t("nav.about"), href: isHome ? "#about" : "/#about" },
-    { name: t("nav.work"), href: isHome ? "#practice-areas" : "/#practice-areas" },
-    { name: t("nav.team"), href: isHome ? "#team" : "/#team" },
+    { name: t("nav.about"), href: isHome ? "#about" : "/#about", hash: "#about" },
+    { name: t("nav.work"), href: isHome ? "#practice-areas" : "/#practice-areas", hash: "#practice-areas" },
+    { name: t("nav.team"), href: isHome ? "#team" : "/#team", hash: "#team" },
     { name: t("nav.insights"), href: "https://beyondhorizons.substack.com/", external: true },
-    { name: t("nav.contact"), href: isHome ? "#contact" : "/#contact" },
+    { name: t("nav.contact"), href: isHome ? "#contact" : "/#contact", hash: "#contact" },
   ];
 
   const currentLang = LANGUAGE_OPTIONS.find(l => l.code === language);
@@ -58,24 +66,33 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-10">
             {navigation.map((item) => 
-              item.external || item.href.startsWith("#") ? (
+              item.external ? (
                 <a
                   key={item.name}
                   href={item.href}
-                  target={item.external ? "_blank" : undefined}
-                  rel={item.external ? "noopener noreferrer" : undefined}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground/70 hover:text-accent transition-smooth font-sans text-sm tracking-wider uppercase"
+                >
+                  {item.name}
+                </a>
+              ) : item.hash && isHome ? (
+                <a
+                  key={item.name}
+                  href={item.hash}
+                  onClick={(e) => handleHashNavigation(e, item.hash!)}
                   className="text-foreground/70 hover:text-accent transition-smooth font-sans text-sm tracking-wider uppercase"
                 >
                   {item.name}
                 </a>
               ) : (
-                <Link
+                <a
                   key={item.name}
-                  to={item.href}
+                  href={item.href}
                   className="text-foreground/70 hover:text-accent transition-smooth font-sans text-sm tracking-wider uppercase"
                 >
                   {item.name}
-                </Link>
+                </a>
               )
             )}
           </div>
@@ -133,24 +150,29 @@ const Header = () => {
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t border-border/50">
             <div className="px-4 py-6 space-y-4">
               {navigation.map((item) => 
-                item.external || item.href.startsWith("#") ? (
+                item.external ? (
                   <a
                     key={item.name}
                     href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block text-foreground/70 hover:text-accent transition-smooth text-sm uppercase tracking-wider py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </a>
                 ) : (
-                  <Link
+                  <a
                     key={item.name}
-                    to={item.href}
+                    href={item.href}
                     className="block text-foreground/70 hover:text-accent transition-smooth text-sm uppercase tracking-wider py-2"
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={(e) => {
+                      if (item.hash && isHome) handleHashNavigation(e, item.hash);
+                      setIsMenuOpen(false);
+                    }}
                   >
                     {item.name}
-                  </Link>
+                  </a>
                 )
               )}
               {/* Mobile language selector */}
