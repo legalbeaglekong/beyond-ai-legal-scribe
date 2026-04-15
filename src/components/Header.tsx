@@ -150,7 +150,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t border-border/50">
+          <div className="lg:hidden bg-background/95 backdrop-blur-sm border-t border-border/50">
             <div className="px-4 py-6 space-y-4">
               {navigation.map((item) => 
                 item.external ? (
