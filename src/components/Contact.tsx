@@ -1,13 +1,47 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Mail, Calendar, ArrowRight, Globe, Clock, MessageCircle } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { MapPin, Mail, Calendar, ArrowRight, Globe, Clock, MessageCircle, Send, CheckCircle, Loader2 } from "lucide-react";
 import VideoBackground from "@/components/VideoBackground";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 import contactBanner from "@/assets/contact-banner.jpg";
 import contactVideo from "@/assets/contact-neutral-bg.mp4.asset.json";
 
 const Contact = () => {
   const { t } = useLanguage();
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({ name: "", email: "", company: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) return;
+    
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-inquiry", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          message: formData.message,
+        },
+      });
+      if (error) throw error;
+      setIsSubmitted(true);
+      setFormData({ name: "", email: "", company: "", message: "" });
+      toast({ title: "Message sent", description: "We'll get back to you within 24 hours." });
+    } catch (err) {
+      toast({ title: "Something went wrong", description: "Please try again or email us directly.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const contactInfo = [
     { icon: MapPin, title: t("contact.singaporeOffice"), details: ["39B Neil Rd (Level 3)", "Singapore 088823"] },
@@ -73,6 +107,72 @@ const Contact = () => {
                   <div className="flex items-center justify-center text-muted-foreground text-xs mt-4">
                     <Clock className="h-3.5 w-3.5 mr-2" />{t("contact.responseTime")}
                   </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-accent/20 bg-card">
+                <CardContent className="p-8">
+                  <Send className="h-8 w-8 text-accent mx-auto mb-4" />
+                  <h3 className="text-xl font-serif font-bold mb-2 text-foreground text-center">Leave Your Details</h3>
+                  <p className="text-sm text-muted-foreground mb-6 text-center">We'll reach out to you within 24 hours.</p>
+                  
+                  {isSubmitted ? (
+                    <div className="text-center py-6">
+                      <CheckCircle className="h-12 w-12 text-accent mx-auto mb-4" />
+                      <h4 className="text-lg font-serif font-bold text-foreground mb-2">Thank You</h4>
+                      <p className="text-sm text-muted-foreground">Your message has been received. We'll be in touch shortly.</p>
+                      <Button variant="outline" size="sm" className="mt-4" onClick={() => setIsSubmitted(false)}>
+                        Send Another Message
+                      </Button>
+                    </div>
+                  ) : (
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                      <div>
+                        <Input
+                          placeholder="Your Name *"
+                          value={formData.name}
+                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          required
+                          className="bg-background border-border/50"
+                        />
+                      </div>
+                      <div>
+                        <Input
+                          type="email"
+                          placeholder="Email Address *"
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          required
+                          className="bg-background border-border/50"
+                        />
+                      </div>
+                      <div>
+                        <Input
+                          placeholder="Company (Optional)"
+                          value={formData.company}
+                          onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                          className="bg-background border-border/50"
+                        />
+                      </div>
+                      <div>
+                        <Textarea
+                          placeholder="How can we help you? *"
+                          value={formData.message}
+                          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                          required
+                          rows={4}
+                          className="bg-background border-border/50 resize-none"
+                        />
+                      </div>
+                      <Button type="submit" variant="default" size="lg" className="w-full" disabled={isSubmitting}>
+                        {isSubmitting ? (
+                          <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sending...</>
+                        ) : (
+                          <>Send Message <ArrowRight className="ml-2 h-4 w-4" /></>
+                        )}
+                      </Button>
+                    </form>
+                  )}
                 </CardContent>
               </Card>
 
