@@ -30,9 +30,9 @@ const CSRPage = () => {
   return (
     <>
       <Helmet>
-        <title>Corporate Social Responsibility — Beyond Horizons Legal | Bethel Chambers LLC Singapore</title>
+        <title>Our Work in Society & Impact — Beyond Horizons Legal | Bethel Chambers LLC Singapore</title>
         <meta name="description" content="Beyond Horizons Legal's commitment to sustainability, community, and social impact. Founding the Asia Sustainable Aviation Fuel Association (ASAFA) and supporting Yong-en Care Centre." />
-        <meta property="og:title" content="CSR — Beyond Horizons Legal Singapore" />
+        <meta property="og:title" content="Our Work in Society & Impact — Beyond Horizons Legal Singapore" />
         <meta property="og:url" content="https://beyondhorizons.sg/work/csr" />
         <link rel="canonical" href="https://beyondhorizons.sg/work/csr" />
       </Helmet>
