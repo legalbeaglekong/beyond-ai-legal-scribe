@@ -30,12 +30,20 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const handleHashNavigation = (e: React.MouseEvent, hash: string) => {
+    if (isHome) {
+      e.preventDefault();
+      const el = document.querySelector(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const navigation = [
-    { name: t("nav.about"), href: isHome ? "#about" : "/#about" },
-    { name: t("nav.work"), href: isHome ? "#practice-areas" : "/#practice-areas" },
-    { name: t("nav.team"), href: isHome ? "#team" : "/#team" },
+    { name: t("nav.about"), href: isHome ? "#about" : "/#about", hash: "#about" },
+    { name: t("nav.work"), href: isHome ? "#practice-areas" : "/#practice-areas", hash: "#practice-areas" },
+    { name: t("nav.team"), href: isHome ? "#team" : "/#team", hash: "#team" },
     { name: t("nav.insights"), href: "https://beyondhorizons.substack.com/", external: true },
-    { name: t("nav.contact"), href: isHome ? "#contact" : "/#contact" },
+    { name: t("nav.contact"), href: isHome ? "#contact" : "/#contact", hash: "#contact" },
   ];
 
   const currentLang = LANGUAGE_OPTIONS.find(l => l.code === language);

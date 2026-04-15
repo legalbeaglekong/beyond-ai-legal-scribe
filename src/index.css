@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Beyond Horizons — Pictet-Inspired Light Design System */
 
 @layer base {
