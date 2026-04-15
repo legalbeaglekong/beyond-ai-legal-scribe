@@ -150,24 +150,29 @@ const Header = () => {
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t border-border/50">
             <div className="px-4 py-6 space-y-4">
               {navigation.map((item) => 
-                item.external || item.href.startsWith("#") ? (
+                item.external ? (
                   <a
                     key={item.name}
                     href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block text-foreground/70 hover:text-accent transition-smooth text-sm uppercase tracking-wider py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </a>
                 ) : (
-                  <Link
+                  <a
                     key={item.name}
-                    to={item.href}
+                    href={item.href}
                     className="block text-foreground/70 hover:text-accent transition-smooth text-sm uppercase tracking-wider py-2"
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={(e) => {
+                      if (item.hash && isHome) handleHashNavigation(e, item.hash);
+                      setIsMenuOpen(false);
+                    }}
                   >
                     {item.name}
-                  </Link>
+                  </a>
                 )
               )}
               {/* Mobile language selector */}
