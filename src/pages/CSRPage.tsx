@@ -169,7 +169,7 @@ const CSRPage = () => {
           <div className="max-w-3xl mx-auto container-padding text-center fade-in">
             <div className="teal-line mx-auto mb-6" />
             <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-6">
-              Our Commitment
+              Our Values in Action
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
               Our values are not a line item — they are woven into how we practise. Whether through founding industry associations that drive systemic change, supporting community organisations that care for the vulnerable, or providing pro bono legal advice to those who need it most, we aim to use our skills and platform for good.
