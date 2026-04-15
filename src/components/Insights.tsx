@@ -15,6 +15,7 @@ const Insights = () => {
     { title: "Trump's Deep-Sea Power Play: Executive Order Sparks Global Race for Ocean Minerals", excerpt: "From the Clarion-Clipperton Zone to the Cook Islands, the seabed is the new frontier of critical minerals.", date: "May 27, 2024", readTime: "6 min read", category: "Maritime Law", url: "https://beyondhorizons.substack.com/p/trumps-deep-sea-power-play-executive" },
     { title: "VietJet Faces Scrutiny from Singapore's Advertising Authority", excerpt: "A Spotlight on Greenwashing with Regulatory Penalties in Asia's Aviation Industry.", date: "January 13, 2024", readTime: "7 min read", category: "Aviation Law", url: "https://beyondhorizons.substack.com/p/vietjet-faces-scrutiny-from-singapores" },
     { title: "Real World Asset Tokenization of Aircraft Assets?", excerpt: "RWA Tokenisation and decentralised finance solutions to render aircraft ABS obsolete?", date: "August 22, 2024", readTime: "9 min read", category: "FinTech Law", url: "https://beyondhorizons.substack.com/p/who-sto-my-aircraft-abs-securitised" },
+    { title: "Aviation Finance 101", excerpt: "A comprehensive course covering the fundamentals of aviation finance — from aircraft leasing structures to asset-backed securitisation and regulatory frameworks.", date: "2024", readTime: "Course", category: "Aviation Finance", url: "https://hui-ling-s-site-be86.thinkific.com", isVideo: false },
   ];
 
   return (
