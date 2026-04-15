@@ -143,13 +143,13 @@ const CSRPage = () => {
                   Supporting Yong-en Care Centre
                 </h2>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  Beyond Horizons proudly supports <strong>Yong-en Care Centre</strong>, a non-profit organisation providing elder care, family support, and community services in Singapore's Chinatown district and beyond.
+                  Hui Ling Teo personally supports <strong>Yong-en Care Centre</strong>, a non-profit organisation providing elder care, family support, and community services in Singapore's Chinatown district and beyond.
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   Founded in 1996, Yong-en has grown from small acts of community kindness into a professionally-run care organisation serving some of Singapore's most vulnerable residents — including seniors living alone, low-income families, and at-risk youth.
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                  Our support reflects a simple conviction: that those who have been given much have a responsibility to give back. We are honoured to contribute to Yong-en's mission of compassionate, community-centred care.
+                  Like ASAFA, this is a personal commitment — informed by the values that guide our practice, but undertaken in a personal capacity. We believe that those who have been given much have a responsibility to give back.
                 </p>
                 <a
                   href="https://www.yong-en.org.sg"
