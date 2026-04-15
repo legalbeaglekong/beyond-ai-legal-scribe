@@ -30,9 +30,9 @@ const CSRPage = () => {
   return (
     <>
       <Helmet>
-        <title>Corporate Social Responsibility — Beyond Horizons Legal | Bethel Chambers LLC Singapore</title>
+        <title>Our Work in Society & Impact — Beyond Horizons Legal | Bethel Chambers LLC Singapore</title>
         <meta name="description" content="Beyond Horizons Legal's commitment to sustainability, community, and social impact. Founding the Asia Sustainable Aviation Fuel Association (ASAFA) and supporting Yong-en Care Centre." />
-        <meta property="og:title" content="CSR — Beyond Horizons Legal Singapore" />
+        <meta property="og:title" content="Our Work in Society & Impact — Beyond Horizons Legal Singapore" />
         <meta property="og:url" content="https://beyondhorizons.sg/work/csr" />
         <link rel="canonical" href="https://beyondhorizons.sg/work/csr" />
       </Helmet>
@@ -44,9 +44,9 @@ const CSRPage = () => {
         <section className="pt-32 pb-20 bg-secondary/20">
           <div className="max-w-4xl mx-auto container-padding text-center fade-in">
             <div className="teal-line mx-auto mb-8" />
-            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4 font-sans">Corporate Social Responsibility</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4 font-sans">Our Work in Society</p>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 leading-tight tracking-tight">
-              Purpose Beyond Practice
+              Society &amp; Impact
             </h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               We believe that a legal practice has responsibilities that extend beyond its clients. From advancing sustainable aviation to supporting vulnerable communities in Singapore, our work reflects a commitment to making a meaningful difference.
