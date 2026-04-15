@@ -5,7 +5,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useLanguage, LANGUAGE_OPTIONS } from "@/i18n/LanguageContext";
 
 const workSubLinks = [
-  { name: "Our Work", href: "/work" },
+  { name: "Specialist Platforms", href: "/work#platforms" },
+  { name: "Industry Expertise", href: "/work#industries" },
   { name: "AI Tools", href: "/ai-tools" },
   { name: "Why Specialist Counsel", href: "/why-specialist-counsel" },
   { name: "Join Us", href: "/join-us" },
