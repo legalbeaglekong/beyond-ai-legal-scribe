@@ -7,6 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ArrowRight, Mail, Scale, Clock, Globe, Shield, Users, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
+import AccoladeBanner from "@/components/AccoladeBanner";
 
 const BOOKING_URL = "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
 
@@ -123,9 +124,10 @@ const WhySpecialistCounselPage = () => {
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
               Not every legal matter requires a specialist. But when it does — when the stakes involve complex regulation, emerging technology, or cross-border structures — the difference between generalist and specialist counsel can be material.
             </p>
-            <p className="text-sm text-muted-foreground/80 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm text-muted-foreground/80 max-w-2xl mx-auto leading-relaxed mb-8">
               This page offers an honest comparison of different legal service models to help you make an informed decision about the right counsel for your needs.
             </p>
+            <AccoladeBanner variant="inline" />
           </div>
         </section>
 
