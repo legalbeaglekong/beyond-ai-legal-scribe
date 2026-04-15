@@ -66,24 +66,33 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-10">
             {navigation.map((item) => 
-              item.external || item.href.startsWith("#") ? (
+              item.external ? (
                 <a
                   key={item.name}
                   href={item.href}
-                  target={item.external ? "_blank" : undefined}
-                  rel={item.external ? "noopener noreferrer" : undefined}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground/70 hover:text-accent transition-smooth font-sans text-sm tracking-wider uppercase"
+                >
+                  {item.name}
+                </a>
+              ) : item.hash && isHome ? (
+                <a
+                  key={item.name}
+                  href={item.hash}
+                  onClick={(e) => handleHashNavigation(e, item.hash!)}
                   className="text-foreground/70 hover:text-accent transition-smooth font-sans text-sm tracking-wider uppercase"
                 >
                   {item.name}
                 </a>
               ) : (
-                <Link
+                <a
                   key={item.name}
-                  to={item.href}
+                  href={item.href}
                   className="text-foreground/70 hover:text-accent transition-smooth font-sans text-sm tracking-wider uppercase"
                 >
                   {item.name}
-                </Link>
+                </a>
               )
             )}
           </div>
