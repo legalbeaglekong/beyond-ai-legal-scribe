@@ -172,7 +172,7 @@ const CSRPage = () => {
               Our Commitment
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              Corporate social responsibility is not a line item for us — it is woven into how we practise. Whether through founding industry associations that drive systemic change, supporting community organisations that care for the vulnerable, or providing pro bono legal advice to those who need it most, we aim to use our skills and platform for good.
+              Our values are not a line item — they are woven into how we practise. Whether through founding industry associations that drive systemic change, supporting community organisations that care for the vulnerable, or providing pro bono legal advice to those who need it most, we aim to use our skills and platform for good.
             </p>
             <p className="text-sm text-muted-foreground/70 leading-relaxed">
               We welcome conversations with organisations working on sustainability, access to justice, and community development. If you believe we can help, please reach out.
@@ -192,7 +192,7 @@ const CSRPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="default" size="lg" className="bg-accent text-accent-foreground font-semibold shadow-lg hover:bg-accent/90" asChild>
-                <a href="mailto:HL@beyondhorizons.sg?subject=CSR Partnership Enquiry">
+                <a href="mailto:HL@beyondhorizons.sg?subject=Society & Impact Partnership Enquiry">
                   Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
