@@ -135,6 +135,12 @@ const WorkPage = () => {
                 </Link>
               ))}
             </div>
+            {/* Why Specialist Counsel link */}
+            <div className="mt-10 text-center">
+              <Link to="/why-specialist-counsel" className="inline-flex items-center text-sm text-accent hover:underline transition-smooth">
+                Why choose specialist counsel? Compare service models <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
           </div>
         </section>
 
