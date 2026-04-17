@@ -5,6 +5,8 @@ import fracGcHeroVideo from "@/assets/fractional-gc-hero-bg.mp4.asset.json";
 import fracGcCtaVideo from "@/assets/fractional-gc-cta-bg.mp4.asset.json";
 import aiCodeHeroVideo from "@/assets/ai-code-hero-bg.mp4.asset.json";
 import aiCodeCtaVideo from "@/assets/ai-code-cta-bg.mp4.asset.json";
+import roboticsHeroVideo from "@/assets/robotics-hero-bg.mp4.asset.json";
+import roboticsCtaVideo from "@/assets/robotics-cta-bg.mp4.asset.json";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -57,7 +59,7 @@ const getVideoForSlug = (slug: string): string => {
     "blockchain-digital-assets": STOCK_VIDEOS.blockchain,
     "trade-tariff": STOCK_VIDEOS.maritime,
     "wellness-health": STOCK_VIDEOS.wellness,
-    robotics: STOCK_VIDEOS.robotics,
+    robotics: roboticsHeroVideo.url,
     space: spaceVideo.url,
     "fractional-gc": fracGcHeroVideo.url,
     "ai-code-counsel": aiCodeHeroVideo.url,
@@ -71,6 +73,7 @@ const getCtaVideoForSlug = (slug: string): string => {
     space: spaceCtaVideo.url,
     "fractional-gc": fracGcCtaVideo.url,
     "ai-code-counsel": aiCodeCtaVideo.url,
+    robotics: roboticsCtaVideo.url,
   };
   return ctaMap[slug] || getVideoForSlug(slug);
 };
