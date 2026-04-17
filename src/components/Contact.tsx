@@ -1,13 +1,8 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Mail, Calendar, ArrowRight, Globe, Clock, MessageCircle, Send, CheckCircle, Loader2 } from "lucide-react";
+import { MapPin, Mail, Calendar, ArrowRight, Globe, Clock, MessageCircle } from "lucide-react";
 import VideoBackground from "@/components/VideoBackground";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { supabase } from "@/integrations/supabase/client";
-import { useToast } from "@/hooks/use-toast";
 import contactBanner from "@/assets/contact-banner.jpg";
 import contactVideo from "@/assets/contact-neutral-bg.mp4.asset.json";
 
