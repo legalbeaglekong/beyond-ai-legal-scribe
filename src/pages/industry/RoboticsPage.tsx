@@ -18,7 +18,7 @@ const data: IndustryPageData = {
       { icon: Bot, title: "Robot Leasing Agreements", description: "Structuring operating leases, finance leases, and sale-and-leaseback arrangements for industrial robots, surgical robots, and service robots — adapting proven aircraft leasing frameworks." },
       { icon: Settings, title: "Robotics-as-a-Service (SaaS)", description: "SaaS contract structures, SLA frameworks, performance-based pricing models, data ownership provisions, and end-of-service transition clauses." },
       { icon: Shield, title: "Liability & Insurance Frameworks", description: "Product liability allocation, autonomous decision-making liability, employer's liability for robot workers, insurance programme structuring, and indemnity chains." },
-      { icon: FileCheck, title: "Regulatory Compliance", description: "Workplace safety regulations for cobots, autonomous vehicle frameworks, drone operation licensing, and cross-border robotics deployment compliance." },
+      { icon: FileCheck, title: "Regulatory Compliance", description: "Workplace safety regulations for robots, autonomous vehicle frameworks, drone operation licensing, and cross-border robotics deployment compliance." },
     ],
     stats: ["Pioneer in robot leasing legal frameworks", "Aircraft leasing expertise applied to robotics", "SaaS contract structuring", "Autonomous systems liability advisory"],
   },
