@@ -65,11 +65,7 @@ const AccoladeBanner = ({ variant = "inline", className = "" }: AccoladeBannerPr
         {accolades.map((a, i) => (
           <span
             key={i}
-            className={`inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border ${
-              a.featured
-                ? "border-accent/40 bg-accent/5 text-accent font-medium"
-                : "border-border/30 text-muted-foreground"
-            }`}
+            className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border border-accent/40 bg-accent/5 text-accent font-medium"
           >
             <Award className="h-3 w-3" />
             {a.title}
