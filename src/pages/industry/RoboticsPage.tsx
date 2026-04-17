@@ -1,5 +1,5 @@
 import IndustryPageLayout, { type IndustryPageData } from "@/components/IndustryPageLayout";
-import { Bot, Settings, Shield, FileCheck } from "lucide-react";
+import { Bot, Settings, Shield, FileCheck, TrendingUp, MapPin, AlertTriangle } from "lucide-react";
 
 const data: IndustryPageData = {
   slug: "robotics",
@@ -37,9 +37,9 @@ const data: IndustryPageData = {
   spotlight: {
     heading: "The Rise of Robot Leasing & SaaS",
     cards: [
-      { title: "Market Growth", description: "Global robotics market projected at $200B+ by 2030, with the SaaS model growing 25%+ annually." },
-      { title: "Singapore Investment", description: "Singapore investing heavily in robotics adoption through the National Robotics Programme, driving demand for legal frameworks." },
-      { title: "Liability Gap", description: "Liability and insurance frameworks lagging behind deployment, creating urgent need for specialist legal structuring." },
+      { icon: TrendingUp, title: "Market Growth", description: "Global robotics market projected at $200B+ by 2030, with the SaaS model growing 25%+ annually." },
+      { icon: MapPin, title: "Singapore Investment", description: "Singapore investing heavily in robotics adoption through the National Robotics Programme, driving demand for legal frameworks." },
+      { icon: AlertTriangle, title: "Liability Gap", description: "Liability and insurance frameworks lagging behind deployment, creating urgent need for specialist legal structuring." },
     ],
     analysis: "The robotics legal landscape is evolving rapidly. Early legal structuring — drawing on proven asset finance frameworks — gives companies a competitive advantage in deploying and financing robotics at scale.",
   },
