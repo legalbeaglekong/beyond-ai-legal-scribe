@@ -83,11 +83,7 @@ const AccoladeBanner = ({ variant = "inline", className = "" }: AccoladeBannerPr
           href={a.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={`inline-flex items-center gap-1.5 border px-4 py-2 rounded-full text-xs transition-smooth ${
-            a.featured
-              ? "border-accent/40 bg-accent/5 text-accent font-medium hover:bg-accent/10"
-              : "border-border/40 bg-card text-muted-foreground hover:text-accent hover:border-accent/30"
-          }`}
+          className="inline-flex items-center gap-1.5 border border-accent/40 bg-accent/5 text-accent font-medium px-4 py-2 rounded-full text-xs transition-smooth hover:bg-accent/10"
         >
           <Award className="h-3 w-3" />
           {a.title}
