@@ -154,10 +154,17 @@ const WorkPage = () => {
         </section>
 
         {/* CTA */}
-        <VideoBackground src={STOCK_VIDEOS.cityscape} className="py-20" overlayClassName="absolute inset-0 bg-black/60">
-          <div className="max-w-3xl mx-auto container-padding text-center py-12">
+        <VideoBackground
+          src={workCtaVideo.url}
+          className="py-20"
+          overlayClassName="absolute inset-0 bg-gradient-to-b from-black/75 via-black/65 to-black/80"
+        >
+          <div className="max-w-3xl mx-auto container-padding text-center py-12 relative z-10">
             <div className="teal-line mx-auto mb-8" />
-            <h2 className="text-3xl font-serif font-bold text-white mb-6 drop-shadow-lg">Let's discuss how we can help</h2>
+            <p className="text-xs uppercase tracking-[0.35em] text-white/70 mb-5 font-sans drop-shadow">Private Counsel</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+              Let's discuss how we can help
+            </h2>
             <Button variant="default" size="lg" className="bg-white text-black font-semibold shadow-lg hover:bg-white/90" asChild>
               <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                 Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
