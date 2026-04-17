@@ -143,12 +143,12 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                 {data.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-                <Button variant="default" size="lg" className="bg-white text-black font-semibold shadow-lg hover:bg-white/90" asChild>
+                <Button variant="default" size="lg" className="bg-accent text-accent-foreground border-2 border-accent font-semibold shadow-xl hover:bg-accent/90" asChild>
                   <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                     Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="border border-white/40 text-white font-semibold hover:bg-white/10 shadow-lg backdrop-blur-sm" asChild>
+                <Button variant="outline" size="lg" className="border-2 border-white text-white font-semibold hover:bg-white hover:text-black shadow-lg backdrop-blur-sm bg-white/5" asChild>
                   <a href="#overview">
                     View Expertise <ChevronDown className="ml-2 h-4 w-4" />
                   </a>
