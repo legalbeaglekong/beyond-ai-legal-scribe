@@ -5,7 +5,6 @@ import { ArrowRight } from "lucide-react";
 import planeTakeoff from "@/assets/plane-takeoff.jpg";
 import teamHuiling from "@/assets/team-huiling.png";
 import teamSonia from "@/assets/team-sonia.png";
-import teamAmanda from "@/assets/team-amanda.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const teamMembers = [
@@ -32,18 +31,6 @@ const teamMembers = [
     summaryZh: "资深航空专业人士。英格兰注册律师。伯明翰大学法学学士。",
     experience: "5 years of experience",
     experienceZh: "5年经验",
-  },
-  {
-    slug: "amanda-lee",
-    name: "Amanda Lee",
-    role: "Legal Executive",
-    roleZh: "法律主管",
-    image: teamAmanda,
-    flag: "🇦🇺",
-    summary: "Admitted as a solicitor in Victoria, Australia. LLB University of Tasmania.",
-    summaryZh: "澳大利亚维多利亚州注册律师。塔斯马尼亚大学法学学士。",
-    experience: "Entry level",
-    experienceZh: "初级",
   },
 ];
 

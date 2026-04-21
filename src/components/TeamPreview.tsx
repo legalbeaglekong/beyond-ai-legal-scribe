@@ -15,7 +15,7 @@ const TeamPreview = () => {
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground">{t("team.meetTeam")}</h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto">
           {teamMembers.map((member) => (
             <Link key={member.slug} to={`/team/${member.slug}`} className="group text-left">
               <div className="aspect-[3/4] overflow-hidden rounded mb-6 bg-muted">
