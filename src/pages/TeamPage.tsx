@@ -59,7 +59,7 @@ const TeamPage = () => {
         <div className="max-w-5xl mx-auto container-padding">
           <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-16 leading-relaxed">{t("team.teamDesc")}</p>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto">
             {teamMembers.map((member) => (
               <Link key={member.slug} to={`/team/${member.slug}`} className="group text-left">
                 <div className="aspect-[3/4] overflow-hidden rounded mb-6 bg-muted">
