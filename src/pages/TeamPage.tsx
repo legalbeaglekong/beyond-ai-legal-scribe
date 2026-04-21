@@ -5,7 +5,6 @@ import { ArrowRight } from "lucide-react";
 import planeTakeoff from "@/assets/plane-takeoff.jpg";
 import teamHuiling from "@/assets/team-huiling.png";
 import teamSonia from "@/assets/team-sonia.png";
-import teamAmanda from "@/assets/team-amanda.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const teamMembers = [
@@ -32,18 +31,6 @@ const teamMembers = [
     summaryZh: "资深航空专业人士。英格兰注册律师。伯明翰大学法学学士。",
     experience: "5 years of experience",
     experienceZh: "5年经验",
-  },
-  {
-    slug: "amanda-lee",
-    name: "Amanda Lee",
-    role: "Legal Executive",
-    roleZh: "法律主管",
-    image: teamAmanda,
-    flag: "🇦🇺",
-    summary: "Admitted as a solicitor in Victoria, Australia. LLB University of Tasmania.",
-    summaryZh: "澳大利亚维多利亚州注册律师。塔斯马尼亚大学法学学士。",
-    experience: "Entry level",
-    experienceZh: "初级",
   },
 ];
 
@@ -72,7 +59,7 @@ const TeamPage = () => {
         <div className="max-w-5xl mx-auto container-padding">
           <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-16 leading-relaxed">{t("team.teamDesc")}</p>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto">
             {teamMembers.map((member) => (
               <Link key={member.slug} to={`/team/${member.slug}`} className="group text-left">
                 <div className="aspect-[3/4] overflow-hidden rounded mb-6 bg-muted">
