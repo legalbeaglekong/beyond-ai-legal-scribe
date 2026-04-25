@@ -1,4 +1,5 @@
 import singaporePanorama from "@/assets/singapore-panorama.jpg";
+import heroVideoAsset from "@/assets/home-hero-singapore.mp4.asset.json";
 import industryAviation from "@/assets/industry-aviation.jpg";
 import industryRobotics from "@/assets/industry-robotics.jpg";
 import industryTransportation from "@/assets/industry-transportation.jpg";
