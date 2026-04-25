@@ -1,5 +1,5 @@
-import singaporePanorama from "@/assets/singapore-panorama.jpg";
-import heroVideoAsset from "@/assets/home-hero-singapore.mp4.asset.json";
+import heroVideoSrc from "@/assets/home-hero-singapore.mp4";
+import heroPoster from "@/assets/home-hero-singapore-poster.jpg";
 import industryAviation from "@/assets/industry-aviation.jpg";
 import industryRobotics from "@/assets/industry-robotics.jpg";
 import industryTransportation from "@/assets/industry-transportation.jpg";
@@ -31,11 +31,11 @@ const Hero = () => {
             loop
             playsInline
             preload="metadata"
-            poster={singaporePanorama}
+            poster={heroPoster}
             className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-            aria-label="Singapore skyline at golden hour"
+            aria-label="Singapore Marina Bay skyline at night"
           >
-            <source src={heroVideoAsset.url} type="video/mp4" />
+            <source src={heroVideoSrc} type="video/mp4" />
           </video>
         </div>
       </div>
