@@ -1,5 +1,4 @@
-import heroVideoSrc from "@/assets/home-hero-singapore.mp4";
-import heroPoster from "@/assets/home-hero-singapore-poster.jpg";
+import singaporePanorama from "@/assets/singapore-panorama.jpg";
 import industryAviation from "@/assets/industry-aviation.jpg";
 import industryRobotics from "@/assets/industry-robotics.jpg";
 import industryTransportation from "@/assets/industry-transportation.jpg";
@@ -24,20 +23,7 @@ const Hero = () => {
       </div>
 
       <div className="px-4 md:px-8 pb-16">
-        <div className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden rounded-sm bg-secondary">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            poster={heroPoster}
-            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-            aria-label="Singapore Marina Bay skyline at night"
-          >
-            <source src={heroVideoSrc} type="video/mp4" />
-          </video>
-        </div>
+        <img src={singaporePanorama} alt="Singapore skyline at dusk" className="w-full h-[50vh] md:h-[60vh] object-cover rounded-sm" />
       </div>
 
       <div className="border-t border-border">
