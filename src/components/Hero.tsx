@@ -24,7 +24,20 @@ const Hero = () => {
       </div>
 
       <div className="px-4 md:px-8 pb-16">
-        <img src={singaporePanorama} alt="Singapore skyline at dusk" className="w-full h-[50vh] md:h-[60vh] object-cover rounded-sm" />
+        <div className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden rounded-sm bg-secondary">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster={singaporePanorama}
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            aria-label="Singapore skyline at golden hour"
+          >
+            <source src={heroVideoAsset.url} type="video/mp4" />
+          </video>
+        </div>
       </div>
 
       <div className="border-t border-border">
