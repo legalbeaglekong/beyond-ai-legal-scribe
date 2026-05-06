@@ -1,16 +1,31 @@
 import { useEffect, useRef } from "react";
-import spaceVideo from "@/assets/space-hero-bg.mp4.asset.json";
+// Cinematic hero videos (compressed local MP4s ~500KB each, with poster JPGs)
+import spaceVideo from "@/assets/space-hero.mp4";
+import spacePoster from "@/assets/space-hero.jpg";
 import spaceCtaVideo from "@/assets/space-cta-bg.mp4.asset.json";
-import fracGcHeroVideo from "@/assets/fractional-gc-hero-bg.mp4.asset.json";
+import fracGcHeroVideo from "@/assets/fractional-gc-hero.mp4";
+import fracGcPoster from "@/assets/fractional-gc-hero.jpg";
 import fracGcCtaVideo from "@/assets/fractional-gc-cta-bg.mp4.asset.json";
-import aiCodeHeroVideo from "@/assets/ai-code-hero-bg.mp4.asset.json";
+import aiCodeHeroVideo from "@/assets/ai-code-hero.mp4";
+import aiCodePoster from "@/assets/ai-code-hero.jpg";
 import aiCodeCtaVideo from "@/assets/ai-code-cta-bg.mp4.asset.json";
-import roboticsHeroVideo from "@/assets/robotics-hero-bg.mp4.asset.json";
+import roboticsHeroVideo from "@/assets/robotics-hero.mp4";
+import roboticsPoster from "@/assets/robotics-hero.jpg";
 import roboticsCtaVideo from "@/assets/robotics-cta-bg.mp4.asset.json";
-import aviationHeroVideo from "@/assets/aviation-hero-bg.mp4.asset.json";
-import aviationCtaVideo from "@/assets/aviation-cta-bg.mp4.asset.json";
-import transportationHeroVideo from "@/assets/transportation-hero-bg.mp4.asset.json";
-import transportationCtaVideo from "@/assets/transportation-cta-bg.mp4.asset.json";
+import aviationHeroVideo from "@/assets/aviation-hero.mp4";
+import aviationPoster from "@/assets/aviation-hero.jpg";
+import transportationHeroVideo from "@/assets/transportation-hero.mp4";
+import transportationPoster from "@/assets/transportation-hero.jpg";
+import energyHeroVideo from "@/assets/energy-hero.mp4";
+import energyPoster from "@/assets/energy-hero.jpg";
+import cyberHeroVideo from "@/assets/cyber-hero.mp4";
+import cyberPoster from "@/assets/cyber-hero.jpg";
+import blockchainHeroVideo from "@/assets/blockchain-hero.mp4";
+import blockchainPoster from "@/assets/blockchain-hero.jpg";
+import tradeHeroVideo from "@/assets/trade-hero.mp4";
+import tradePoster from "@/assets/trade-hero.jpg";
+import wellnessHeroVideo from "@/assets/wellness-hero.mp4";
+import wellnessPoster from "@/assets/wellness-hero.jpg";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -53,22 +68,22 @@ export interface IndustryPageData {
   relatedPages: { title: string; slug: string }[];
 }
 
-// Pick a video based on slug
-const getVideoForSlug = (slug: string): string => {
-  const map: Record<string, string> = {
-    aviation: aviationHeroVideo.url,
-    transportation: transportationHeroVideo.url,
-    "energy-transition": STOCK_VIDEOS.energy,
-    "cybersecurity-tech": STOCK_VIDEOS.technology,
-    "blockchain-digital-assets": STOCK_VIDEOS.blockchain,
-    "trade-tariff": STOCK_VIDEOS.maritime,
-    "wellness-health": STOCK_VIDEOS.wellness,
-    robotics: roboticsHeroVideo.url,
-    space: spaceVideo.url,
-    "fractional-gc": fracGcHeroVideo.url,
-    "ai-code-counsel": aiCodeHeroVideo.url,
+// Pick a hero video + matching poster based on slug
+const getHeroForSlug = (slug: string): { src: string; poster?: string } => {
+  const map: Record<string, { src: string; poster?: string }> = {
+    aviation: { src: aviationHeroVideo, poster: aviationPoster },
+    transportation: { src: transportationHeroVideo, poster: transportationPoster },
+    "energy-transition": { src: energyHeroVideo, poster: energyPoster },
+    "cybersecurity-tech": { src: cyberHeroVideo, poster: cyberPoster },
+    "blockchain-digital-assets": { src: blockchainHeroVideo, poster: blockchainPoster },
+    "trade-tariff": { src: tradeHeroVideo, poster: tradePoster },
+    "wellness-health": { src: wellnessHeroVideo, poster: wellnessPoster },
+    robotics: { src: roboticsHeroVideo, poster: roboticsPoster },
+    space: { src: spaceVideo, poster: spacePoster },
+    "fractional-gc": { src: fracGcHeroVideo, poster: fracGcPoster },
+    "ai-code-counsel": { src: aiCodeHeroVideo, poster: aiCodePoster },
   };
-  return map[slug] || STOCK_VIDEOS.business;
+  return map[slug] || { src: STOCK_VIDEOS.business };
 };
 
 // Separate CTA video per slug (falls back to hero video)
@@ -78,10 +93,8 @@ const getCtaVideoForSlug = (slug: string): string => {
     "fractional-gc": fracGcCtaVideo.url,
     "ai-code-counsel": aiCodeCtaVideo.url,
     robotics: roboticsCtaVideo.url,
-    aviation: aviationCtaVideo.url,
-    transportation: transportationCtaVideo.url,
   };
-  return ctaMap[slug] || getVideoForSlug(slug);
+  return ctaMap[slug] || getHeroForSlug(slug).src;
 };
 
 const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
@@ -137,7 +150,8 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         <Header />
 
         {/* Hero with Video */}
-        <VideoBackground src={getVideoForSlug(data.slug)} className="min-h-[85vh] flex items-center">
+        {(() => { const hero = getHeroForSlug(data.slug); return (
+        <VideoBackground src={hero.src} poster={hero.poster} className="min-h-[85vh] flex items-center">
           <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/60" />
           <div className="min-h-[85vh] flex items-center justify-center w-full pt-20 relative z-10">
             <div className="max-w-4xl mx-auto container-padding text-center fade-in">
@@ -170,6 +184,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
           </div>
         </VideoBackground>
+        ); })()}
 
         {/* Overview */}
         <section id="overview" className="section-padding bg-secondary/20">
