@@ -1,4 +1,6 @@
 import singaporePanorama from "@/assets/singapore-panorama.jpg";
+import heroVideo from "@/assets/landing-hero-singapore.mp4.asset.json";
+import VideoBackground from "@/components/VideoBackground";
 import industryAviation from "@/assets/industry-aviation.jpg";
 import industryRobotics from "@/assets/industry-robotics.jpg";
 import industryTransportation from "@/assets/industry-transportation.jpg";
@@ -23,7 +25,16 @@ const Hero = () => {
       </div>
 
       <div className="px-4 md:px-8 pb-16">
-        <img src={singaporePanorama} alt="Singapore skyline at dusk" className="w-full h-[50vh] md:h-[60vh] object-cover rounded-sm" />
+        <div className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden rounded-sm">
+          <VideoBackground
+            src={heroVideo.url}
+            poster={singaporePanorama}
+            className="absolute inset-0 w-full h-full"
+            overlayClassName="absolute inset-0 bg-black/10"
+          >
+            <span className="sr-only">Singapore skyline cinematic backdrop</span>
+          </VideoBackground>
+        </div>
       </div>
 
       <div className="border-t border-border">
