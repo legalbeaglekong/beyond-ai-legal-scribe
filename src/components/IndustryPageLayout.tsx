@@ -70,22 +70,22 @@ export interface IndustryPageData {
   relatedPages: { title: string; slug: string }[];
 }
 
-// Pick a video based on slug
-const getVideoForSlug = (slug: string): string => {
-  const map: Record<string, string> = {
-    aviation: aviationHeroVideo.url,
-    transportation: transportationHeroVideo.url,
-    "energy-transition": STOCK_VIDEOS.energy,
-    "cybersecurity-tech": STOCK_VIDEOS.technology,
-    "blockchain-digital-assets": STOCK_VIDEOS.blockchain,
-    "trade-tariff": STOCK_VIDEOS.maritime,
-    "wellness-health": STOCK_VIDEOS.wellness,
-    robotics: roboticsHeroVideo.url,
-    space: spaceVideo.url,
-    "fractional-gc": fracGcHeroVideo.url,
-    "ai-code-counsel": aiCodeHeroVideo.url,
+// Pick a hero video + matching poster based on slug
+const getHeroForSlug = (slug: string): { src: string; poster?: string } => {
+  const map: Record<string, { src: string; poster?: string }> = {
+    aviation: { src: aviationHeroVideo, poster: aviationPoster },
+    transportation: { src: transportationHeroVideo, poster: transportationPoster },
+    "energy-transition": { src: energyHeroVideo, poster: energyPoster },
+    "cybersecurity-tech": { src: cyberHeroVideo, poster: cyberPoster },
+    "blockchain-digital-assets": { src: blockchainHeroVideo, poster: blockchainPoster },
+    "trade-tariff": { src: tradeHeroVideo, poster: tradePoster },
+    "wellness-health": { src: wellnessHeroVideo, poster: wellnessPoster },
+    robotics: { src: roboticsHeroVideo, poster: roboticsPoster },
+    space: { src: spaceVideo, poster: spacePoster },
+    "fractional-gc": { src: fracGcHeroVideo, poster: fracGcPoster },
+    "ai-code-counsel": { src: aiCodeHeroVideo, poster: aiCodePoster },
   };
-  return map[slug] || STOCK_VIDEOS.business;
+  return map[slug] || { src: STOCK_VIDEOS.business };
 };
 
 // Separate CTA video per slug (falls back to hero video)
@@ -98,7 +98,7 @@ const getCtaVideoForSlug = (slug: string): string => {
     aviation: aviationCtaVideo.url,
     transportation: transportationCtaVideo.url,
   };
-  return ctaMap[slug] || getVideoForSlug(slug);
+  return ctaMap[slug] || getHeroForSlug(slug).src;
 };
 
 const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
