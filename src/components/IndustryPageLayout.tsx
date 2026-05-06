@@ -93,8 +93,6 @@ const getCtaVideoForSlug = (slug: string): string => {
     "fractional-gc": fracGcCtaVideo.url,
     "ai-code-counsel": aiCodeCtaVideo.url,
     robotics: roboticsCtaVideo.url,
-    aviation: aviationCtaVideo.url,
-    transportation: transportationCtaVideo.url,
   };
   return ctaMap[slug] || getHeroForSlug(slug).src;
 };
