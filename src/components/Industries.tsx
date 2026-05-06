@@ -13,7 +13,7 @@ import industrySpace from "@/assets/industry-space.jpg";
 import industryFractionalGC from "@/assets/industry-fractional-gc.jpg";
 import industryAICounsel from "@/assets/industry-ai-counsel.jpg";
 import businessMeeting from "@/assets/business-meeting.jpg";
-import industriesVideo from "@/assets/landing-industries-ai.mp4.asset.json";
+import industriesVideo from "@/assets/landing-industries-dashboard.mp4.asset.json";
 import VideoBackground from "@/components/VideoBackground";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -44,7 +44,7 @@ const Industries = () => {
             className="absolute inset-0 w-full h-full"
             overlayClassName="absolute inset-0 bg-black/20"
           >
-            <span className="sr-only">AI data center cinematic backdrop</span>
+            <span className="sr-only">Mission-control dashboard with blinking lights cinematic backdrop</span>
           </VideoBackground>
         </div>
       </div>
