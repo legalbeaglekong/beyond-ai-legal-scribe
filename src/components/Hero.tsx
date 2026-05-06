@@ -1,5 +1,5 @@
-import singaporePanorama from "@/assets/singapore-panorama.jpg";
-import heroVideo from "@/assets/landing-hero-singapore.mp4.asset.json";
+import singaporePanorama from "@/assets/landing-hero-singapore.jpg";
+import heroVideo from "@/assets/landing-hero-singapore.mp4";
 import VideoBackground from "@/components/VideoBackground";
 import industryAviation from "@/assets/industry-aviation.jpg";
 import industryRobotics from "@/assets/industry-robotics.jpg";
@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="px-4 md:px-8 pb-16">
         <div className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden rounded-sm">
           <VideoBackground
-            src={heroVideo.url}
+            src={heroVideo}
             poster={singaporePanorama}
             className="absolute inset-0 w-full h-full"
             overlayClassName="absolute inset-0 bg-black/10"
