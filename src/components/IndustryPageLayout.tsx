@@ -9,6 +9,8 @@ import roboticsHeroVideo from "@/assets/robotics-hero-bg.mp4.asset.json";
 import roboticsCtaVideo from "@/assets/robotics-cta-bg.mp4.asset.json";
 import aviationHeroVideo from "@/assets/aviation-hero-bg.mp4.asset.json";
 import aviationCtaVideo from "@/assets/aviation-cta-bg.mp4.asset.json";
+import transportationHeroVideo from "@/assets/transportation-hero-bg.mp4.asset.json";
+import transportationCtaVideo from "@/assets/transportation-cta-bg.mp4.asset.json";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -55,7 +57,7 @@ export interface IndustryPageData {
 const getVideoForSlug = (slug: string): string => {
   const map: Record<string, string> = {
     aviation: aviationHeroVideo.url,
-    transportation: STOCK_VIDEOS.transportation,
+    transportation: transportationHeroVideo.url,
     "energy-transition": STOCK_VIDEOS.energy,
     "cybersecurity-tech": STOCK_VIDEOS.technology,
     "blockchain-digital-assets": STOCK_VIDEOS.blockchain,
@@ -77,6 +79,7 @@ const getCtaVideoForSlug = (slug: string): string => {
     "ai-code-counsel": aiCodeCtaVideo.url,
     robotics: roboticsCtaVideo.url,
     aviation: aviationCtaVideo.url,
+    transportation: transportationCtaVideo.url,
   };
   return ctaMap[slug] || getVideoForSlug(slug);
 };
