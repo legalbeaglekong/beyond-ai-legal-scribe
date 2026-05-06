@@ -59,7 +59,7 @@ const VideoBackground = ({ src, poster, className = "", overlayClassName, childr
     const b = videoBRef.current;
     if (!a || !b) return;
 
-    const FADE_LEAD = 0.6; // seconds before end to start crossfade
+    const FADE_LEAD = 1.2; // seconds before end to start crossfade (must exceed CSS transition)
 
     const onTimeUpdate = (current: HTMLVideoElement, other: HTMLVideoElement, nextActive: "A" | "B") => () => {
       if (!current.duration || isNaN(current.duration)) return;
@@ -102,7 +102,7 @@ const VideoBackground = ({ src, poster, className = "", overlayClassName, childr
             poster={poster}
             preload="auto"
             className="pointer-events-none"
-            style={{ opacity: activeBuffer === "A" ? 1 : 0 }}
+            style={{ opacity: activeBuffer === "A" ? 1 : 0, transition: "opacity 1000ms ease-in-out" }}
           >
             <source src={src} type="video/mp4" />
           </video>
@@ -112,7 +112,7 @@ const VideoBackground = ({ src, poster, className = "", overlayClassName, childr
             playsInline
             preload="auto"
             className="pointer-events-none"
-            style={{ opacity: activeBuffer === "B" ? 1 : 0 }}
+            style={{ opacity: activeBuffer === "B" ? 1 : 0, transition: "opacity 1000ms ease-in-out" }}
           >
             <source src={src} type="video/mp4" />
           </video>
