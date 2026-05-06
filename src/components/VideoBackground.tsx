@@ -9,18 +9,17 @@ interface VideoBackgroundProps {
 }
 
 /**
- * Seamless cinematic looping background video.
+ * Truly seamless cinemagraph-style background video.
  *
- * Uses two stacked <video> elements that crossfade ~600ms before the end of
- * the clip, eliminating the visible "skip" you get with a single looping
- * video element. Both buffers preload the full file at high resolution.
+ * Uses a "ping-pong" (boomerang) loop: the clip plays forward to the end,
+ * then reverses back to the start, then forward again — endlessly. Because
+ * the reversal pivot IS the last/first frame, there is mathematically no
+ * seam, jump, or cut. Works with any source clip.
  */
 const VideoBackground = ({ src, poster, className = "", overlayClassName, children }: VideoBackgroundProps) => {
-  const videoARef = useRef<HTMLVideoElement>(null);
-  const videoBRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [activeBuffer, setActiveBuffer] = useState<"A" | "B">("A");
 
   // Lazy-load when near viewport
   useEffect(() => {
@@ -39,84 +38,80 @@ const VideoBackground = ({ src, poster, className = "", overlayClassName, childr
     return () => observer.disconnect();
   }, []);
 
-  // Start the active buffer playing as soon as the video is visible
+  // Drive a ping-pong (boomerang) loop with rAF — forward to end, reverse to
+  // start, forward again. Guarantees first frame === last frame at every
+  // pivot, so the loop is truly seamless.
   useEffect(() => {
     if (!isVisible) return;
-    const a = videoARef.current;
-    const b = videoBRef.current;
-    if (a) a.play().catch(() => {});
-    if (b) {
-      b.pause();
-      b.currentTime = 0;
-    }
-  }, [isVisible]);
+    const video = videoRef.current;
+    if (!video) return;
 
-  // Crossfade handoff: when the active video is ~600ms from ending, start the
-  // inactive one and swap opacity. Eliminates seams, gaps and skips.
-  useEffect(() => {
-    if (!isVisible) return;
-    const a = videoARef.current;
-    const b = videoBRef.current;
-    if (!a || !b) return;
+    let direction: 1 | -1 = 1;
+    let rafId: number;
+    let lastTs = performance.now();
+    const PLAYBACK_RATE = 0.85; // slow & cinematic
 
-    const FADE_LEAD = 2.5; // seconds before end to start crossfade (must exceed CSS transition)
-
-    const onTimeUpdate = (current: HTMLVideoElement, other: HTMLVideoElement, nextActive: "A" | "B") => () => {
-      if (!current.duration || isNaN(current.duration)) return;
-      const remaining = current.duration - current.currentTime;
-      if (remaining <= FADE_LEAD && other.paused) {
-        other.currentTime = 0;
-        other.play().catch(() => {});
-        setActiveBuffer(nextActive);
+    const start = async () => {
+      try {
+        video.muted = true;
+        video.playbackRate = PLAYBACK_RATE;
+        await video.play();
+        // After we've started, keep manual control so we can reverse.
+        // (We let it play forward natively; only take over on direction flip.)
+      } catch {
+        /* autoplay blocked — poster will remain */
       }
     };
 
-    const handlerA = onTimeUpdate(a, b, "B");
-    const handlerB = onTimeUpdate(b, a, "A");
-    a.addEventListener("timeupdate", handlerA);
-    b.addEventListener("timeupdate", handlerB);
+    const tick = (ts: number) => {
+      const dt = (ts - lastTs) / 1000;
+      lastTs = ts;
+      const dur = video.duration;
+      if (dur && !isNaN(dur)) {
+        if (direction === 1) {
+          // Forward — let native playback run; flip near the end.
+          if (video.currentTime >= dur - 0.05) {
+            direction = -1;
+            video.pause();
+          }
+        } else {
+          // Reverse — manually step backward.
+          const next = video.currentTime - PLAYBACK_RATE * dt;
+          if (next <= 0.05) {
+            video.currentTime = 0;
+            direction = 1;
+            video.play().catch(() => {});
+          } else {
+            video.currentTime = next;
+          }
+        }
+      }
+      rafId = requestAnimationFrame(tick);
+    };
 
-    // After the crossfade, reset the just-finished video so it's ready to take
-    // over again on the next handoff.
-    const resetA = () => { a.pause(); a.currentTime = 0; };
-    const resetB = () => { b.pause(); b.currentTime = 0; };
-    a.addEventListener("ended", resetA);
-    b.addEventListener("ended", resetB);
+    start();
+    rafId = requestAnimationFrame(tick);
 
     return () => {
-      a.removeEventListener("timeupdate", handlerA);
-      b.removeEventListener("timeupdate", handlerB);
-      a.removeEventListener("ended", resetA);
-      b.removeEventListener("ended", resetB);
+      cancelAnimationFrame(rafId);
+      video.pause();
     };
   }, [isVisible]);
 
   return (
     <div ref={containerRef} className={`video-bg-container ${className}`}>
       {isVisible && (
-        <>
-          <video
-            ref={videoARef}
-            muted
-            playsInline
-            poster={poster}
-            preload="auto"
-            className="pointer-events-none"
-            style={{ opacity: activeBuffer === "A" ? 1 : 0, transition: "opacity 2200ms ease-in-out" }}
-          >
-            <source src={src} type="video/mp4" />
-          </video>
-          <video
-            ref={videoBRef}
-            muted
-            playsInline
-            preload="auto"
-            className="pointer-events-none"
-            style={{ opacity: activeBuffer === "B" ? 1 : 0, transition: "opacity 2200ms ease-in-out" }}
-          >
-            <source src={src} type="video/mp4" />
-          </video>
-        </>
+        <video
+          ref={videoRef}
+          muted
+          playsInline
+          poster={poster}
+          preload="auto"
+          className="pointer-events-none"
+          style={{ opacity: 1 }}
+        >
+          <source src={src} type="video/mp4" />
+        </video>
       )}
       <div className={overlayClassName || "video-overlay"} />
       <div className="relative z-10 w-full flex items-center justify-center">
