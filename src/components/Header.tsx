@@ -63,7 +63,7 @@ const Header = () => {
 
   const currentLang = LANGUAGE_OPTIONS.find(l => l.code === language);
 
-  const navLinkClass = "text-foreground/70 hover:text-accent transition-smooth font-sans text-xs tracking-widest uppercase whitespace-nowrap";
+  const navLinkClass = `${scrolled ? "text-foreground/70" : "text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]"} hover:text-accent transition-smooth font-sans text-xs tracking-widest uppercase whitespace-nowrap`;
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
