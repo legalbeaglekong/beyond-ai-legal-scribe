@@ -13,7 +13,7 @@ import industrySpace from "@/assets/industry-space.jpg";
 import industryFractionalGC from "@/assets/industry-fractional-gc.jpg";
 import industryAICounsel from "@/assets/industry-ai-counsel.jpg";
 import businessMeeting from "@/assets/business-meeting.jpg";
-import industriesVideo from "@/assets/landing-industries-dashboard-blinking.mp4.asset.json";
+import industriesVideo from "@/assets/landing-industries-dashboard-intense.mp4.asset.json";
 import VideoBackground from "@/components/VideoBackground";
 import { useLanguage } from "@/i18n/LanguageContext";
 
