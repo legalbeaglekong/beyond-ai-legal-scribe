@@ -154,7 +154,8 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         <Header />
 
         {/* Hero with Video */}
-        <VideoBackground src={getVideoForSlug(data.slug)} className="min-h-[85vh] flex items-center">
+        {(() => { const hero = getHeroForSlug(data.slug); return (
+        <VideoBackground src={hero.src} poster={hero.poster} className="min-h-[85vh] flex items-center">
           <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/60" />
           <div className="min-h-[85vh] flex items-center justify-center w-full pt-20 relative z-10">
             <div className="max-w-4xl mx-auto container-padding text-center fade-in">
