@@ -4,6 +4,8 @@ import { Award, BookOpen, Users, TrendingUp, ExternalLink, ArrowRight } from "lu
 import AccoladeBanner from "@/components/AccoladeBanner";
 import { Link } from "react-router-dom";
 import planeTakeoff from "@/assets/plane-takeoff.jpg";
+import aboutVideo from "@/assets/landing-about-plane.mp4.asset.json";
+import VideoBackground from "@/components/VideoBackground";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const About = () => {
@@ -21,9 +23,15 @@ const About = () => {
   return (
     <section id="about" className="relative">
       <Link to="/team" className="block relative h-[40vh] md:h-[50vh] overflow-hidden group cursor-pointer">
-        <img src={planeTakeoff} alt="Plane taking off at sunrise" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" width={1920} height={768} />
-        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors" />
-        <div className="relative z-10 h-full flex items-center justify-center">
+        <VideoBackground
+          src={aboutVideo.url}
+          poster={planeTakeoff}
+          className="absolute inset-0 w-full h-full"
+          overlayClassName="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors z-[1]"
+        >
+          <span className="sr-only">Aircraft taking off cinematic backdrop</span>
+        </VideoBackground>
+        <div className="relative z-10 h-full flex items-center justify-center pointer-events-none">
           <div className="text-center">
             <div className="w-10 h-[2px] bg-white/60 mx-auto mb-6" />
             <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-sans">{t("about.ourPeople")}</p>

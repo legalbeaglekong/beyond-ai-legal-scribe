@@ -13,6 +13,8 @@ import industrySpace from "@/assets/industry-space.jpg";
 import industryFractionalGC from "@/assets/industry-fractional-gc.jpg";
 import industryAICounsel from "@/assets/industry-ai-counsel.jpg";
 import businessMeeting from "@/assets/business-meeting.jpg";
+import industriesVideo from "@/assets/landing-industries-boardroom.mp4.asset.json";
+import VideoBackground from "@/components/VideoBackground";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const Industries = () => {
@@ -35,7 +37,16 @@ const Industries = () => {
   return (
     <section id="industries" className="bg-background">
       <div className="px-4 md:px-8">
-        <img src={businessMeeting} alt="Corporate boardroom meeting" className="w-full h-[35vh] object-cover rounded-sm" loading="lazy" />
+        <div className="relative w-full h-[35vh] overflow-hidden rounded-sm">
+          <VideoBackground
+            src={industriesVideo.url}
+            poster={businessMeeting}
+            className="absolute inset-0 w-full h-full"
+            overlayClassName="absolute inset-0 bg-black/20"
+          >
+            <span className="sr-only">Corporate boardroom cinematic backdrop</span>
+          </VideoBackground>
+        </div>
       </div>
 
       <div className="section-padding">
