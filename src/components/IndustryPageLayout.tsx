@@ -188,6 +188,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
           </div>
         </VideoBackground>
+        ); })()}
 
         {/* Overview */}
         <section id="overview" className="section-padding bg-secondary/20">
