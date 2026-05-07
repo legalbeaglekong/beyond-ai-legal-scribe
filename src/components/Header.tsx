@@ -7,6 +7,7 @@ import { useLanguage, LANGUAGE_OPTIONS } from "@/i18n/LanguageContext";
 const workSubLinks = [
   { name: "Specialist Platforms", href: "/work#platforms" },
   { name: "Industry Expertise", href: "/work#industries" },
+  { name: "Our Clients", href: "/our-clients" },
   { name: "AI Tools", href: "/ai-tools" },
   { name: "Why Specialist Counsel", href: "/why-specialist-counsel" },
   { name: "Join Us", href: "/join-us" },
