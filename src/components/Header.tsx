@@ -194,7 +194,7 @@ const Header = () => {
             </div>
 
             {/* CTA */}
-            <Button variant="outline" size="sm" className={`tracking-wider text-xs uppercase whitespace-nowrap shadow-md ${scrolled ? "border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent" : "bg-accent text-accent-foreground border-2 border-accent hover:bg-accent/90"}`} asChild>
+            <Button variant="outline" size="sm" className="tracking-wider text-xs uppercase whitespace-nowrap shadow-md border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent" asChild>
               <a 
                 href="https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled"
                 target="_blank"
