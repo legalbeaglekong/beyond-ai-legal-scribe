@@ -62,7 +62,7 @@ const Industries = () => {
               <div key={index} className="group flex flex-col">
                 <div className="overflow-hidden rounded-sm mb-4">
                   {industry.image ? (
-                    <img src={industry.image} alt={industry.title} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                    <img src={industry.image} alt={industry.title} className="w-full h-48 object-cover" loading="lazy" />
                   ) : (
                     <div className="w-full h-48 bg-secondary/50 rounded-sm flex items-center justify-center">
                       <span className="text-muted-foreground/40 font-serif text-lg">{industry.title}</span>
