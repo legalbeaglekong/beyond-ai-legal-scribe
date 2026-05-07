@@ -66,7 +66,7 @@ const Hero = () => {
             ].map((item) => (
               <a key={item.href} href={item.href} className="group block">
                 <div className="overflow-hidden rounded-sm mb-2">
-                  <img src={item.img} alt={item.label} className="w-full h-40 md:h-48 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  <img src={item.img} alt={item.label} className="w-full h-40 md:h-48 object-cover" loading="lazy" />
                 </div>
                 <span className="text-sm text-foreground group-hover:text-accent transition-smooth font-medium">{item.label}</span>
               </a>
