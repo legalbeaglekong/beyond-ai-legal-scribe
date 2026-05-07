@@ -64,11 +64,11 @@ const Header = () => {
 
   const currentLang = LANGUAGE_OPTIONS.find(l => l.code === language);
 
-  const navLinkClass = `${scrolled ? "text-foreground/70" : "text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]"} hover:text-accent transition-smooth font-sans text-xs tracking-widest uppercase whitespace-nowrap`;
+  const navLinkClass = `text-foreground/70 hover:text-accent transition-smooth font-sans text-xs tracking-widest uppercase whitespace-nowrap`;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? "bg-background/95 backdrop-blur-sm border-b border-border/50" : "bg-transparent"
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-sm ${
+      scrolled ? "border-b border-border/50" : "border-b border-transparent"
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
