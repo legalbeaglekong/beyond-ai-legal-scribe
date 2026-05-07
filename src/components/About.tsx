@@ -93,7 +93,7 @@ const About = () => {
                 <h4 className="text-lg font-serif font-bold text-foreground mb-4">{t("about.ctaTitle")}</h4>
                 <p className="text-sm text-muted-foreground mb-6 leading-relaxed">{t("about.ctaDesc")}</p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                  <Button variant="default" size="default" asChild>
+                  <Button variant="default" size="default" asChild className="animate-blink-glow">
                     <a href="https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">
                       {t("about.scheduleConsultation")} <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
