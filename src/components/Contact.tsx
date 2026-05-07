@@ -65,7 +65,7 @@ const Contact = () => {
                   <Calendar className="h-10 w-10 text-accent mx-auto mb-6" />
                   <h3 className="text-xl font-serif font-bold mb-4 text-foreground">{t("contact.bookTitle")}</h3>
                   <p className="text-sm text-muted-foreground mb-8 leading-relaxed text-justify">{t("contact.bookDesc")}</p>
-                  <Button variant="default" size="lg" className="w-full" asChild>
+                  <Button variant="default" size="lg" className="w-full animate-blink-glow" asChild>
                     <a href="https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">
                       {t("contact.bookButton")} <ArrowRight className="ml-2 h-4 w-4" />
                     </a>

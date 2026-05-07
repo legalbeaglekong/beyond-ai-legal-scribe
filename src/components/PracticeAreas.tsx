@@ -97,7 +97,7 @@ const PracticeAreas = () => {
             <div className="teal-line mx-auto mb-8" />
             <h3 className="text-2xl font-serif font-bold text-foreground mb-4">{t("practiceAreas.ctaTitle")}</h3>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{t("practiceAreas.ctaDesc")}</p>
-            <Button variant="default" size="lg" asChild>
+            <Button variant="default" size="lg" asChild className="animate-blink-glow">
               <a href="https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">
                 {t("practiceAreas.ctaButton")} <ArrowRight className="ml-2 h-4 w-4" />
               </a>

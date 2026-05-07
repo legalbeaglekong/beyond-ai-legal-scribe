@@ -62,7 +62,7 @@ const Industries = () => {
               <div key={index} className="group flex flex-col">
                 <div className="overflow-hidden rounded-sm mb-4">
                   {industry.image ? (
-                    <img src={industry.image} alt={industry.title} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                    <img src={industry.image} alt={industry.title} className="w-full h-48 object-cover" loading="lazy" />
                   ) : (
                     <div className="w-full h-48 bg-secondary/50 rounded-sm flex items-center justify-center">
                       <span className="text-muted-foreground/40 font-serif text-lg">{industry.title}</span>
@@ -96,7 +96,7 @@ const Industries = () => {
           <div className="border-t border-border pt-12 text-center">
             <h3 className="text-2xl font-serif text-foreground mb-4">{t("industries.ctaTitle")}</h3>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{t("industries.ctaDesc")}</p>
-            <Button variant="default" size="lg" asChild>
+            <Button variant="default" size="lg" asChild className="animate-blink-glow">
               <a href="https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">
                 {t("industries.ctaButton")} <ArrowRight className="ml-2 h-4 w-4" />
               </a>
