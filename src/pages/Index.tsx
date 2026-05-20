@@ -10,6 +10,7 @@ import GlobalPartners from "@/components/GlobalPartners";
 import Insights from "@/components/Insights";
 import Testimonials from "@/components/Testimonials";
 import TeamPreview from "@/components/TeamPreview";
+import ClientRibbon from "@/components/ClientRibbon";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
