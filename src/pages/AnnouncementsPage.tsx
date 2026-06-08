@@ -95,6 +95,18 @@ const announcements = [
             Beyond Horizons is a Singapore-based boutique law firm specialising in aviation, maritime, space, advanced air mobility, and robot law. Named in the ALB Singapore Firms to Watch 2026 ranking, the firm provides tailored cross-border legal solutions under English and Singapore law.
           </p>
         </div>
+
+        <div className="pt-6 border-t border-border">
+          <a
+            href="https://lovable.dev/projects/f45a3043-364c-40d2-95fd-82e9e84053f3"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white text-sm font-sans uppercase tracking-wider rounded-sm hover:bg-accent/90 transition-smooth"
+          >
+            Find out if you are eligible
+            <ExternalLink className="h-4 w-4" />
+          </a>
+        </div>
       </div>
     ),
   },
