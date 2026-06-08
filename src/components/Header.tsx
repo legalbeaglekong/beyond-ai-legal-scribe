@@ -9,7 +9,7 @@ const workSubLinks = [
   { name: "Industry Expertise", href: "/work#industries" },
   { name: "Our Clients", href: "/our-clients" },
   { name: "AI Tools", href: "/ai-tools" },
-  { name: "Announcements", href: "/announcements" },
+  
   { name: "Why Specialist Counsel", href: "/why-specialist-counsel" },
   { name: "Join Us", href: "/join-us" },
   { name: "Society & Impact", href: "/work/csr" },
@@ -60,6 +60,7 @@ const Header = () => {
     { name: t("nav.work"), href: isHome ? "#practice-areas" : "/#practice-areas", hash: "#practice-areas", hasDropdown: true },
     { name: t("nav.team"), href: isHome ? "#team" : "/#team", hash: "#team" },
     { name: t("nav.insights"), href: "https://beyondhorizons.substack.com/", external: true },
+    { name: "Announcements", href: "/announcements", internal: true },
     { name: t("nav.contact"), href: isHome ? "#contact" : "/#contact", hash: "#contact" },
   ];
 
@@ -149,6 +150,14 @@ const Header = () => {
                   >
                     {item.name}
                   </a>
+                );
+              }
+
+              if ((item as any).internal) {
+                return (
+                  <Link key={item.name} to={item.href} className={navLinkClass}>
+                    {item.name}
+                  </Link>
                 );
               }
 
