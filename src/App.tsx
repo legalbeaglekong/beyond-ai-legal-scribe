@@ -17,6 +17,7 @@ import ExpertiseOverview from "./pages/ExpertiseOverview";
 import MarketInsights from "./pages/MarketInsights";
 import AboutPage from "./pages/AboutPage";
 import WorkPage from "./pages/WorkPage";
+import OurClientsPage from "./pages/OurClientsPage";
 import AnnouncementsPage from "./pages/AnnouncementsPage";
 import AviationPage from "./pages/industry/AviationPage";
 import TransportationPage from "./pages/industry/TransportationPage";
