@@ -17,7 +17,7 @@ import ExpertiseOverview from "./pages/ExpertiseOverview";
 import MarketInsights from "./pages/MarketInsights";
 import AboutPage from "./pages/AboutPage";
 import WorkPage from "./pages/WorkPage";
-import OurClientsPage from "./pages/OurClientsPage";
+import AnnouncementsPage from "./pages/AnnouncementsPage";
 import AviationPage from "./pages/industry/AviationPage";
 import TransportationPage from "./pages/industry/TransportationPage";
 import WellnessHealthPage from "./pages/industry/WellnessHealthPage";
@@ -68,6 +68,7 @@ const App = () => (
               <Route path="/work/csr" element={<CSRPage />} />
               <Route path="/team" element={<TeamPage />} />
               <Route path="/our-clients" element={<OurClientsPage />} />
+              <Route path="/announcements" element={<AnnouncementsPage />} />
               <Route path="/team/:slug" element={<TeamMemberPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

@@ -9,6 +9,7 @@ const workSubLinks = [
   { name: "Industry Expertise", href: "/work#industries" },
   { name: "Our Clients", href: "/our-clients" },
   { name: "AI Tools", href: "/ai-tools" },
+  { name: "Announcements", href: "/announcements" },
   { name: "Why Specialist Counsel", href: "/why-specialist-counsel" },
   { name: "Join Us", href: "/join-us" },
   { name: "Society & Impact", href: "/work/csr" },
