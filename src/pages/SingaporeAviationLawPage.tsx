@@ -4,9 +4,9 @@ import { Plane, FileText, Scale, Briefcase, Shield, Calendar } from "lucide-reac
 const SingaporeAviationLawPage = () => (
   <PillarPage
     slug="singapore-aviation-law"
-    eyebrow="Singapore · Aviation & Aerospace"
-    h1="Singapore Aviation Law — Aircraft, Leasing and Regulatory Counsel"
-    intro="Singapore is one of Asia's leading aircraft leasing, MRO and aerospace hubs. We advise airlines, lessors, financiers, MROs and aerospace innovators on CAAS regulation, Cape Town, leasing structures, sustainable aviation fuel (SAF) and advanced air mobility."
+    eyebrow="Singapore-anchored · Cross-border Aviation"
+    h1="Aviation Law — Singapore-anchored, Cross-border Counsel"
+    intro="Singapore is one of Asia's leading aircraft leasing, MRO and aerospace hubs. We advise airlines, lessors, financiers, MROs and aerospace innovators on CAAS regulation, Cape Town, leasing structures, sustainable aviation fuel (SAF) and advanced air mobility — partnered with leading aviation counsel in Ireland, the US, UK, China, Japan and the Middle East."
     badges={["CAAS Regulatory", "Cape Town & Leasing", "SAF & Advanced Air Mobility"]}
     metaTitle="Singapore Aviation Lawyer — CAAS, Leasing, SAF | Beyond Horizons"
     metaDescription="Singapore aviation counsel: CAAS regulation, aircraft leasing (Cape Town), aircraft finance, SAF, advanced air mobility, MRO and aerospace M&A."

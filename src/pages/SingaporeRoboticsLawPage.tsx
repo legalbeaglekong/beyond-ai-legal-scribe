@@ -4,9 +4,9 @@ import { Bot, FileText, Scale, Briefcase, Shield, Calendar } from "lucide-react"
 const SingaporeRoboticsLawPage = () => (
   <PillarPage
     slug="singapore-robotics-law"
-    eyebrow="Singapore · Robotics & Autonomous Systems"
-    h1="Singapore Robotics Law — Autonomous Systems, AGVs and Service Robots"
-    intro="Singapore is one of the world's most robot-dense economies. We advise robotics OEMs, integrators, deployers and investors on safety regulation, product liability, autonomous vehicle frameworks, AI risk overlay, IP, and commercial structuring."
+    eyebrow="Singapore-anchored · Cross-border Robotics"
+    h1="Robotics & Autonomous Systems — Singapore-anchored, Cross-border Counsel"
+    intro="Singapore is one of the world's most robot-dense economies. We advise robotics OEMs, integrators, deployers and investors on safety regulation, product liability, autonomous vehicle frameworks, AI risk overlay, IP, and commercial structuring — coordinated across Singapore and the OEM and deployment jurisdictions."
     badges={["Autonomous Vehicles", "Service & Industrial Robotics", "AI + Product Liability"]}
     metaTitle="Singapore Robotics Lawyer — AV, Service Robots, AI | Beyond Horizons"
     metaDescription="Singapore robotics legal counsel: autonomous vehicles (LTA), service & industrial robots, drone and AGV deployment, product liability, AI risk overlay, IP and M&A."
