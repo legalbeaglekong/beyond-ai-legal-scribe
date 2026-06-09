@@ -145,13 +145,27 @@ const ExpertiseDetail = () => {
     );
   }
 
+  const seoTitleMap: Record<string, string> = {
+    "ma-cross-border": "Cross-Border M&A Counsel | Beyond Horizons",
+    "tech-general-counsel": "General Counsel for Tech | Beyond Horizons",
+    "commercial-contracts": "Commercial Contracts Counsel | Beyond Horizons",
+    "corporate-transactions": "Cross-Border Corporate Counsel | Beyond Horizons",
+    "regulatory-compliance": "Regulatory Compliance Counsel | Beyond Horizons",
+    "ip-data-privacy": "IP & Data Privacy Counsel | Beyond Horizons",
+    "startup-funding": "Startup Funding Counsel | Beyond Horizons",
+    "employment-labor": "Global Employment Counsel | Beyond Horizons",
+    "arbitration-disputes": "International Arbitration | Beyond Horizons",
+    "financial-services": "Financial Services Regulation | Beyond Horizons",
+  };
+  const seoTitle = (id && seoTitleMap[id]) || `${currentContent.title.slice(0, 50)} | Beyond Horizons`;
+
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>{currentContent.title}</title>
+        <title>{seoTitle}</title>
         <meta name="description" content={currentContent.content.substring(0, 160)} />
         <link rel="canonical" href={`https://beyondhorizons.sg/expertise/${id}`} />
-        <meta property="og:title" content={currentContent.title} />
+        <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={currentContent.content.substring(0, 160)} />
         <meta property="og:url" content={`https://beyondhorizons.sg/expertise/${id}`} />
         <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />

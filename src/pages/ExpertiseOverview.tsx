@@ -70,13 +70,14 @@ const ExpertiseOverview = () => {
                   onClick={() => navigate(`/expertise/${article.id}`)}
                 >
                   <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold mb-4 text-foreground group-hover:text-primary transition-smooth leading-tight">
+                    <h2 className="text-lg font-semibold mb-4 text-foreground group-hover:text-primary transition-smooth leading-tight">
                       {article.title}
-                    </h3>
+                    </h2>
                     
                     <Button 
                       variant="ghost" 
                       className="group-hover:bg-primary/10 group-hover:text-primary transition-smooth w-full"
+                      aria-label={`Read article on ${article.title}`}
                     >
                       Read More
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-smooth" />
