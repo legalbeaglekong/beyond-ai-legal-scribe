@@ -62,7 +62,7 @@ const Industries = () => {
               <div key={index} className="group flex flex-col">
                 <div className="overflow-hidden rounded-sm mb-4">
                   {industry.image ? (
-                    <img src={industry.image} alt={industry.title} className="w-full h-48 object-cover" loading="lazy" />
+                    <img src={industry.image} alt={`${industry.title} industry legal services`} className="w-full h-48 object-cover" loading="lazy" />
                   ) : (
                     <div className="w-full h-48 bg-secondary/50 rounded-sm flex items-center justify-center">
                       <span className="text-muted-foreground font-serif text-lg">{industry.title}</span>
@@ -80,11 +80,11 @@ const Industries = () => {
                 </div>
                 <div className="mt-auto">
                   {industry.link ? (
-                    <a href={industry.link} target="_blank" rel="noopener noreferrer" className="text-sm text-foreground link-underline inline-flex items-center">
+                    <a href={industry.link} target="_blank" rel="noopener noreferrer" className="text-sm text-foreground link-underline inline-flex items-center" aria-label={`Learn more about ${industry.title} services`}>
                       {t("industries.learnMore")} <ArrowRight className="ml-1 h-3 w-3" />
                     </a>
                   ) : industry.route ? (
-                    <Link to={industry.route} className="text-sm text-foreground link-underline inline-flex items-center">
+                    <Link to={industry.route} className="text-sm text-foreground link-underline inline-flex items-center" aria-label={`Learn more about ${industry.title} services`}>
                       {t("industries.learnMore")} <ArrowRight className="ml-1 h-3 w-3" />
                     </Link>
                   ) : null}

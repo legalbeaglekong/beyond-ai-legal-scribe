@@ -142,7 +142,7 @@ const WorkPage = () => {
                       </div>
                       <h3 className="text-sm font-serif font-bold text-foreground mb-2 group-hover:text-accent transition-smooth">{page.title}</h3>
                       <p className="text-xs text-muted-foreground leading-relaxed mb-3">{page.description}</p>
-                      <span className="text-xs text-accent inline-flex items-center">Learn More <ArrowRight className="ml-1 h-3 w-3" /></span>
+                      <span className="text-xs text-accent inline-flex items-center">Explore {page.title} <ArrowRight className="ml-1 h-3 w-3" /></span>
                     </CardContent>
                   </Card>
                 </Link>
