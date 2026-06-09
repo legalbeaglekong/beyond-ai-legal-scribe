@@ -68,7 +68,21 @@ const Index = () => {
             },
             description: "Chambers Global ranked legal counsel for visionaries in Singapore and across Asia Pacific.",
             areaServed: "Asia-Pacific",
-            url: "https://beyondhorizons.sg"
+            url: "https://beyondhorizons.sg",
+            email: "HL@beyondhorizons.sg",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "39B Neil Rd (Level 3)",
+              addressLocality: "Singapore",
+              postalCode: "088823",
+              addressCountry: "SG"
+            },
+            openingHoursSpecification: [{
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+              opens: "09:00",
+              closes: "18:00"
+            }]
           })}
         </script>
       </Helmet>

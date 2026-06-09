@@ -25,12 +25,37 @@ const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <title>About Beyond Horizons Legal — Bethel Chambers LLC | Singapore</title>
+        <title>About Beyond Horizons Legal | Bethel Chambers LLC</title>
         <meta name="description" content="Chambers-ranked legal team delivering innovative, cost-effective legal solutions. Dual-qualified in English & Singapore law." />
         <link rel="canonical" href="https://beyondhorizons.sg/about" />
+        <meta property="og:title" content="About Beyond Horizons Legal | Bethel Chambers LLC" />
+        <meta property="og:description" content="Chambers-ranked legal team delivering innovative, cost-effective legal solutions. Dual-qualified in English & Singapore law." />
+        <meta property="og:url" content="https://beyondhorizons.sg/about" />
         <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            name: "About Beyond Horizons Legal",
+            url: "https://beyondhorizons.sg/about",
+            description: "Chambers-ranked legal team delivering innovative, cost-effective legal solutions. Dual-qualified in English & Singapore law.",
+            mainEntity: {
+              "@type": "Organization",
+              name: "Beyond Horizons by Bethel Chambers LLC",
+              url: "https://beyondhorizons.sg",
+              email: "HL@beyondhorizons.sg",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "39B Neil Rd (Level 3)",
+                addressLocality: "Singapore",
+                postalCode: "088823",
+                addressCountry: "SG"
+              }
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-background">

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
@@ -41,6 +42,38 @@ const TeamPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Our Team | Beyond Horizons Legal Singapore</title>
+        <meta name="description" content="Meet the Chambers-ranked legal team behind Beyond Horizons by Bethel Chambers LLC — dual-qualified counsel in Singapore and English law." />
+        <link rel="canonical" href="https://beyondhorizons.sg/team" />
+        <meta property="og:title" content="Our Team | Beyond Horizons Legal Singapore" />
+        <meta property="og:description" content="Meet the Chambers-ranked legal team behind Beyond Horizons by Bethel Chambers LLC." />
+        <meta property="og:url" content="https://beyondhorizons.sg/team" />
+        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Our Team — Beyond Horizons Legal",
+            url: "https://beyondhorizons.sg/team",
+            about: {
+              "@type": "Organization",
+              name: "Beyond Horizons by Bethel Chambers LLC",
+              url: "https://beyondhorizons.sg"
+            },
+            hasPart: teamMembers.map((m) => ({
+              "@type": "Person",
+              name: m.name,
+              jobTitle: m.role,
+              description: m.summary,
+              url: `https://beyondhorizons.sg/team/${m.slug}`,
+              worksFor: { "@type": "Organization", name: "Bethel Chambers LLC" }
+            }))
+          })}
+        </script>
+      </Helmet>
       <Header />
 
       <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">

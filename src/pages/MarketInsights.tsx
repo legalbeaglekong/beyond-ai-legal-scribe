@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, TrendingUp, Calendar, BarChart, Globe } from "lucide-react";
@@ -61,6 +62,17 @@ const MarketInsights = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Market Insights | Beyond Horizons Legal</title>
+        <meta name="description" content="APAC legal market trends, cross-border M&A, ESG compliance and Singapore jurisdiction analysis from Beyond Horizons Legal." />
+        <link rel="canonical" href="https://beyondhorizons.sg/market-insights" />
+        <meta property="og:title" content="Market Insights | Beyond Horizons Legal" />
+        <meta property="og:description" content="APAC legal market trends, cross-border M&A, ESG compliance and Singapore jurisdiction analysis." />
+        <meta property="og:url" content="https://beyondhorizons.sg/market-insights" />
+        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
+      </Helmet>
       <Header />
       
       <main>
