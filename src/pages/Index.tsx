@@ -99,6 +99,7 @@ const Index = () => {
         <WhyChooseUs />
         <Industries />
         <GlobalPartners />
+        <LatestInsightsFeed />
         <Insights />
         <TeamPreview />
         <Contact />
