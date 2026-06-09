@@ -1,13 +1,12 @@
 import { corsHeaders } from "npm:@supabase/supabase-js@2/cors";
 
 const FEED_CANDIDATES = [
+  "https://www.insights.beyondhorizons.sg/feed",
   "https://insights.beyondhorizons.sg/feed",
-  "https://insights.beyondhorizons.sg/feed.xml",
-  "https://insights.beyondhorizons.sg/rss",
-  "https://insights.beyondhorizons.sg/rss.xml",
-  "https://insights.beyondhorizons.sg/atom.xml",
-  "https://insights.beyondhorizons.sg/index.xml",
-  "https://insights.beyondhorizons.sg/feed/",
+  "https://beyondhorizons.substack.com/feed",
+  "https://www.insights.beyondhorizons.sg/feed.xml",
+  "https://www.insights.beyondhorizons.sg/rss",
+  "https://www.insights.beyondhorizons.sg/atom.xml",
 ];
 
 interface FeedItem {
