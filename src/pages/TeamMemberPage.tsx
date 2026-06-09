@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import teamHuiling from "@/assets/team-huiling.png";
 import teamSonia from "@/assets/team-sonia.png";
-import teamAmanda from "@/assets/team-amanda.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const teamData: Record<string, {
@@ -92,35 +91,6 @@ const teamData: Record<string, {
     highlightsZh: [
       "资深航空法律助理",
       "在高风险交易交付方面拥有良好记录",
-    ],
-  },
-  "amanda-lee": {
-    name: "Amanda Lee",
-    role: "Legal Executive",
-    roleZh: "法律主管",
-    image: teamAmanda,
-    flag: "🇦🇺",
-    experience: "Entry level",
-    experienceZh: "初级",
-    qualifications: [
-      "Admitted as a solicitor in Victoria, Australia",
-      "LLB University of Tasmania",
-      "Legal Practice at Leo Cussen Centre for Law (Australia)",
-      "Diploma in Aerospace Technology with Business (Singapore)",
-    ],
-    qualificationsZh: [
-      "澳大利亚维多利亚州注册律师",
-      "塔斯马尼亚大学法学学士",
-      "Leo Cussen法律中心法律实务（澳大利亚）",
-      "航空技术与商业文凭（新加坡）",
-    ],
-    highlights: [
-      "Assisting with legal matters",
-      "Contributing to business development and marketing initiatives",
-    ],
-    highlightsZh: [
-      "协助处理法律事务",
-      "为业务发展和市场推广做出贡献",
     ],
   },
 };
