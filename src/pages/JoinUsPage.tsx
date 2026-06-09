@@ -50,6 +50,9 @@ const JoinUsPage = () => {
         <meta property="og:title" content="Join Us — Beyond Horizons Legal Singapore" />
         <meta property="og:url" content="https://beyondhorizons.sg/join-us" />
         <link rel="canonical" href="https://beyondhorizons.sg/join-us" />
+        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
       </Helmet>
 
       <div className="min-h-screen bg-background" ref={containerRef}>

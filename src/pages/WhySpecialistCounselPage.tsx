@@ -90,6 +90,9 @@ const WhySpecialistCounselPage = () => {
         <meta property="og:description" content="Compare specialist legal counsel vs full-service firms, Big Four advisory, and in-house teams for complex, cross-border matters." />
         <meta property="og:url" content="https://beyondhorizons.sg/why-specialist-counsel" />
         <link rel="canonical" href="https://beyondhorizons.sg/why-specialist-counsel" />
+        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org", "@type": "FAQPage",
