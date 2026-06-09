@@ -31,6 +31,11 @@ const updates = [
 const SingaporeAIGovernancePage = () => {
   const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
   const serviceJsonLd = { "@context": "https://schema.org", "@type": "LegalService", name: "Singapore AI Governance — Beyond Horizons by Bethel Chambers LLC", areaServed: "Singapore", serviceType: "AI Governance & Regulation", url: CANONICAL, description: "Singapore AI governance counsel — IMDA Model AI Governance Framework, AI Verify, MAS FEAT/Veritas, AI risk mitigation and EU AI Act readiness for Singapore businesses." };
+  const breadcrumbJsonLd = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://beyondhorizonslegal.lovable.app/" },
+    { "@type": "ListItem", position: 2, name: "Topics", item: "https://beyondhorizonslegal.lovable.app/topics" },
+    { "@type": "ListItem", position: 3, name: "Singapore AI Governance", item: CANONICAL },
+  ] };
 
   return (
     <div className="min-h-screen bg-background">
@@ -44,9 +49,11 @@ const SingaporeAIGovernancePage = () => {
         <meta property="og:type" content="article" />
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 
       <Header />
+
 
       <main>
         <section className="relative pt-32 pb-20 bg-gradient-to-b from-secondary/40 to-background">

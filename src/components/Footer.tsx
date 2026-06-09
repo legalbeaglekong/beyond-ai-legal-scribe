@@ -1,12 +1,21 @@
 import { MapPin, Mail, Linkedin, BookOpen, Scale, Rocket, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
+
+const singaporePillars: { label: string; to: string }[] = [
+  { label: "Singapore Space Law", to: "/singapore-space-law" },
+  { label: "Singapore AI Governance", to: "/singapore-ai-governance" },
+  { label: "Singapore Employment Law", to: "/singapore-employment-law" },
+  { label: "Restructuring & Insolvency", to: "/singapore-restructuring-insolvency" },
+  { label: "Aviation Law", to: "/singapore-aviation-law" },
+  { label: "Robotics Law", to: "/singapore-robotics-law" },
+  { label: "Alternative Energy", to: "/singapore-alternative-energy-law" },
+  { label: "Nuclear & SMR Advisory", to: "/singapore-nuclear-law" },
+  { label: "All Topics", to: "/topics" },
+];
 
 const Footer = () => {
   const { t, language } = useLanguage();
-
-  const practiceAreas = language === "zh"
-    ? ["战略法律咨询", "交易架构设计", "监管合规", "ESG与可持续发展咨询", "跨境交易支持", "创新法律框架"]
-    : ["Strategic Legal Consultation", "Transaction Structuring", "Regulatory Compliance", "ESG & Sustainability Advisory", "Cross-border Deal Support", "Innovation Legal Framework"];
 
   const resources = language === "zh"
     ? ["战略商业咨询", "行业洞察通讯", "演讲活动", "法律出版物"]
@@ -31,10 +40,14 @@ const Footer = () => {
             </div>
 
             <div className="space-y-6">
-              <h4 className="text-sm font-sans uppercase tracking-wider text-accent">{t("footer.practiceAreas")}</h4>
+              <h4 className="text-sm font-sans uppercase tracking-wider text-accent">Singapore Practice Areas</h4>
               <ul className="space-y-2">
-                {practiceAreas.map((area, i) => (
-                  <li key={i}><a href="#practice-areas" className="text-xs text-muted-foreground hover:text-accent transition-smooth">{area}</a></li>
+                {singaporePillars.map((p) => (
+                  <li key={p.to}>
+                    <Link to={p.to} className="text-xs text-muted-foreground hover:text-accent transition-smooth">
+                      {p.label}
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -47,6 +60,7 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
+
 
             <div className="space-y-6">
               <h4 className="text-sm font-sans uppercase tracking-wider text-accent">{t("footer.contactLabel")}</h4>

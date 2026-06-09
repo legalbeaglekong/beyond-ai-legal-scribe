@@ -31,6 +31,11 @@ const updates = [
 const SingaporeEmploymentLawPage = () => {
   const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
   const serviceJsonLd = { "@context": "https://schema.org", "@type": "LegalService", name: "Singapore Employment Law — Beyond Horizons by Bethel Chambers LLC", areaServed: "Singapore", serviceType: "Employment Law", url: CANONICAL, description: "Singapore employment law counsel for employers and senior executives — MOM compliance, work passes, terminations, retrenchments, executive compensation, and workplace investigations." };
+  const breadcrumbJsonLd = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://beyondhorizonslegal.lovable.app/" },
+    { "@type": "ListItem", position: 2, name: "Topics", item: "https://beyondhorizonslegal.lovable.app/topics" },
+    { "@type": "ListItem", position: 3, name: "Singapore Employment Law", item: CANONICAL },
+  ] };
 
   return (
     <div className="min-h-screen bg-background">
@@ -44,9 +49,11 @@ const SingaporeEmploymentLawPage = () => {
         <meta property="og:type" content="article" />
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 
       <Header />
+
 
       <main>
         <section className="relative pt-32 pb-20 bg-gradient-to-b from-secondary/40 to-background">

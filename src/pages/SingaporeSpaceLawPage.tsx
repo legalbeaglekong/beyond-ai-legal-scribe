@@ -100,6 +100,17 @@ const SingaporeSpaceLawPage = () => {
       "Singapore space law counsel for satellite operators, launch providers, and commercial space ventures — OSTIn coordination, IMDA spectrum, launch agreements, and cross-border space transactions.",
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://beyondhorizonslegal.lovable.app/" },
+      { "@type": "ListItem", position: 2, name: "Topics", item: "https://beyondhorizonslegal.lovable.app/topics" },
+      { "@type": "ListItem", position: 3, name: "Singapore Space Law", item: CANONICAL },
+    ],
+  };
+
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -118,7 +129,9 @@ const SingaporeSpaceLawPage = () => {
         <meta property="og:type" content="article" />
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
+
 
       <Header />
 

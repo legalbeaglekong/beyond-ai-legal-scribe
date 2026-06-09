@@ -31,6 +31,12 @@ import SpacePage from "./pages/industry/SpacePage";
 import SingaporeSpaceLawPage from "./pages/SingaporeSpaceLawPage";
 import SingaporeEmploymentLawPage from "./pages/SingaporeEmploymentLawPage";
 import SingaporeAIGovernancePage from "./pages/SingaporeAIGovernancePage";
+import SingaporeRestructuringPage from "./pages/SingaporeRestructuringPage";
+import SingaporeNuclearLawPage from "./pages/SingaporeNuclearLawPage";
+import SingaporeAviationLawPage from "./pages/SingaporeAviationLawPage";
+import SingaporeRoboticsLawPage from "./pages/SingaporeRoboticsLawPage";
+import SingaporeAlternativeEnergyPage from "./pages/SingaporeAlternativeEnergyPage";
+import TopicsPage from "./pages/TopicsPage";
 import FractionalGCPage from "./pages/industry/FractionalGCPage";
 import AICodeCounselPage from "./pages/industry/AICodeCounselPage";
 import TeamPage from "./pages/TeamPage";
@@ -67,6 +73,12 @@ const App = () => (
               <Route path="/singapore-space-law" element={<SingaporeSpaceLawPage />} />
               <Route path="/singapore-employment-law" element={<SingaporeEmploymentLawPage />} />
               <Route path="/singapore-ai-governance" element={<SingaporeAIGovernancePage />} />
+              <Route path="/singapore-restructuring-insolvency" element={<SingaporeRestructuringPage />} />
+              <Route path="/singapore-nuclear-law" element={<SingaporeNuclearLawPage />} />
+              <Route path="/singapore-aviation-law" element={<SingaporeAviationLawPage />} />
+              <Route path="/singapore-robotics-law" element={<SingaporeRoboticsLawPage />} />
+              <Route path="/singapore-alternative-energy-law" element={<SingaporeAlternativeEnergyPage />} />
+              <Route path="/topics" element={<TopicsPage />} />
               <Route path="/industry/fractional-gc" element={<FractionalGCPage />} />
               <Route path="/industry/ai-code-counsel" element={<AICodeCounselPage />} />
               <Route path="/why-specialist-counsel" element={<WhySpecialistCounselPage />} />
