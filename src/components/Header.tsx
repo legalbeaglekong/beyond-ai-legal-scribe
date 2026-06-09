@@ -296,6 +296,17 @@ const Header = () => {
                               {sub.name}
                             </Link>
                           ))}
+                          <p className="text-[10px] uppercase tracking-widest text-muted-foreground pt-3 pb-1">SG-anchored · Cross-border</p>
+                          {practiceLinks.map((p) => (
+                            <Link
+                              key={p.href}
+                              to={p.href}
+                              onClick={() => setIsMenuOpen(false)}
+                              className="block text-foreground/60 hover:text-accent transition-smooth text-sm py-1.5"
+                            >
+                              {p.name}
+                            </Link>
+                          ))}
                         </div>
                       )}
                     </div>
