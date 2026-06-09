@@ -28,6 +28,7 @@ import TradeTariffPage from "./pages/industry/TradeTariffPage";
 import RoboticsPage from "./pages/industry/RoboticsPage";
 import CybersecurityPage from "./pages/industry/CybersecurityPage";
 import SpacePage from "./pages/industry/SpacePage";
+import SingaporeSpaceLawPage from "./pages/SingaporeSpaceLawPage";
 import FractionalGCPage from "./pages/industry/FractionalGCPage";
 import AICodeCounselPage from "./pages/industry/AICodeCounselPage";
 import TeamPage from "./pages/TeamPage";
@@ -61,6 +62,7 @@ const App = () => (
               <Route path="/industry/robotics" element={<RoboticsPage />} />
               <Route path="/industry/cybersecurity-tech" element={<CybersecurityPage />} />
               <Route path="/industry/space" element={<SpacePage />} />
+              <Route path="/singapore-space-law" element={<SingaporeSpaceLawPage />} />
               <Route path="/industry/fractional-gc" element={<FractionalGCPage />} />
               <Route path="/industry/ai-code-counsel" element={<AICodeCounselPage />} />
               <Route path="/why-specialist-counsel" element={<WhySpecialistCounselPage />} />
