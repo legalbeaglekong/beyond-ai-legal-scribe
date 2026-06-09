@@ -24,9 +24,10 @@ const SingaporeRestructuringPage = () => (
       { icon: Calendar, title: "Creditor Strategy & Enforcement", desc: "Senior, mezzanine and bond-holder representation in workouts, intercreditor disputes, security enforcement and contentious insolvency." },
     ]}
     updates={[
-      { title: "Singapore as Asia's restructuring hub", desc: "" } as never,
-    ].length === 0 ? [] : []}
-    /* updates intentionally below */
+      { title: "Singapore as Asia's restructuring hub", summary: "Singapore continues to attract complex regional restructurings — including airline, real-estate, energy and commodities mandates — anchored by IRDA's Chapter-11-inspired toolkit." },
+      { title: "Super-priority financing maturing", summary: "Section 67 IRDA super-priority rescue financing is now a routine feature of large schemes, with creditor and court practice rapidly aligning to global DIP norms." },
+      { title: "Cross-border recognition active", summary: "Model Law recognition orders out of Singapore are being used in coordinated parallel proceedings with the US, UK, Hong Kong and offshore jurisdictions." },
+    ]}
     faqs={[
       { q: "What is a scheme of arrangement in Singapore?", a: "A scheme is a court-supervised compromise between a company and its creditors (or members), governed by Sections 71–73 IRDA. It binds dissenting creditors within a class once approved by a majority in number representing 75% in value and sanctioned by the court. Singapore's regime offers world-class features including automatic moratorium, super-priority rescue financing and cross-class cram-down." },
       { q: "How does judicial management work?", a: "JM is a court-driven rescue process under IRDA Part 7. A judicial manager (an independent insolvency practitioner) takes over management to rehabilitate the company or achieve a better realisation than winding-up. Interim JM is available for urgent protection." },
