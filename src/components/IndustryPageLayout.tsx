@@ -135,7 +135,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             name: "Beyond Horizons Legal",
             provider: { "@type": "Organization", name: "Bethel Chambers LLC", url: "https://beyondhorizons.sg" },
             description: data.seo.description, areaServed: "Asia-Pacific",
-            url: `https://beyondhorizons.sg/${data.slug}`,
+            url: `https://beyondhorizons.sg/industry/${data.slug}`,
           })}
         </script>
         <script type="application/ld+json">
