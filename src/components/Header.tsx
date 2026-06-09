@@ -9,10 +9,22 @@ const workSubLinks = [
   { name: "Industry Expertise", href: "/work#industries" },
   { name: "Our Clients", href: "/our-clients" },
   { name: "AI Tools", href: "/ai-tools" },
-  
+
   { name: "Why Specialist Counsel", href: "/why-specialist-counsel" },
   { name: "Join Us", href: "/join-us" },
   { name: "Society & Impact", href: "/work/csr" },
+];
+
+const practiceLinks = [
+  { name: "All Topics", href: "/topics" },
+  { name: "Space Law", href: "/singapore-space-law" },
+  { name: "AI Governance", href: "/singapore-ai-governance" },
+  { name: "Employment", href: "/singapore-employment-law" },
+  { name: "Restructuring & Insolvency", href: "/singapore-restructuring-insolvency" },
+  { name: "Aviation", href: "/singapore-aviation-law" },
+  { name: "Robotics", href: "/singapore-robotics-law" },
+  { name: "Alternative Energy", href: "/singapore-alternative-energy-law" },
+  { name: "Nuclear & SMR", href: "/singapore-nuclear-law" },
 ];
 
 const Header = () => {
@@ -102,28 +114,43 @@ const Header = () => {
                       <ChevronDown className={`h-3 w-3 transition-transform ${isWorkOpen ? "rotate-180" : ""}`} />
                     </button>
                     {isWorkOpen && (
-                      <div className="absolute left-0 mt-2 w-56 bg-background border border-border/50 rounded-md shadow-lg py-1 z-50">
-                        {/* Hash link to practice areas on homepage */}
-                        <a
-                          href={item.href}
-                          onClick={(e) => {
-                            if (item.hash && isHome) handleHashNavigation(e, item.hash);
-                            setIsWorkOpen(false);
-                          }}
-                          className="block px-4 py-2.5 text-sm text-foreground/70 hover:bg-accent/10 hover:text-accent transition-smooth"
-                        >
-                          Practice Areas
-                        </a>
-                        {workSubLinks.map((sub) => (
-                          <Link
-                            key={sub.href}
-                            to={sub.href}
-                            onClick={() => setIsWorkOpen(false)}
-                            className="block px-4 py-2.5 text-sm text-foreground/70 hover:bg-accent/10 hover:text-accent transition-smooth"
+                      <div className="absolute left-0 mt-2 w-[28rem] bg-background border border-border/50 rounded-md shadow-lg z-50 grid grid-cols-2 gap-0">
+                        <div className="py-2 border-r border-border/40">
+                          <p className="px-4 py-1.5 text-[10px] uppercase tracking-widest text-muted-foreground">Firm</p>
+                          <a
+                            href={item.href}
+                            onClick={(e) => {
+                              if (item.hash && isHome) handleHashNavigation(e, item.hash);
+                              setIsWorkOpen(false);
+                            }}
+                            className="block px-4 py-2 text-sm text-foreground/70 hover:bg-accent/10 hover:text-accent transition-smooth"
                           >
-                            {sub.name}
-                          </Link>
-                        ))}
+                            Practice Areas
+                          </a>
+                          {workSubLinks.map((sub) => (
+                            <Link
+                              key={sub.href}
+                              to={sub.href}
+                              onClick={() => setIsWorkOpen(false)}
+                              className="block px-4 py-2 text-sm text-foreground/70 hover:bg-accent/10 hover:text-accent transition-smooth"
+                            >
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </div>
+                        <div className="py-2">
+                          <p className="px-4 py-1.5 text-[10px] uppercase tracking-widest text-muted-foreground">SG-anchored · Cross-border</p>
+                          {practiceLinks.map((p) => (
+                            <Link
+                              key={p.href}
+                              to={p.href}
+                              onClick={() => setIsWorkOpen(false)}
+                              className="block px-4 py-2 text-sm text-foreground/70 hover:bg-accent/10 hover:text-accent transition-smooth"
+                            >
+                              {p.name}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
