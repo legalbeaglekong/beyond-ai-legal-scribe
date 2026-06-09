@@ -4,9 +4,9 @@ import { FileText, Scale, Shield, Briefcase, Users, Calendar } from "lucide-reac
 const SingaporeRestructuringPage = () => (
   <PillarPage
     slug="singapore-restructuring-insolvency"
-    eyebrow="Singapore · Restructuring & Insolvency"
-    h1="Singapore Restructuring & Insolvency Counsel"
-    intro="Schemes of arrangement, judicial management, cross-border recognition under the UNCITRAL Model Law, and pre-insolvency planning — Singapore is Asia's pre-eminent restructuring hub, and we help boards, sponsors and creditors navigate it."
+    eyebrow="Singapore-anchored · Cross-border Restructuring"
+    h1="Restructuring & Insolvency — Singapore-anchored, Cross-border Counsel"
+    intro="Schemes of arrangement, judicial management, cross-border recognition under the UNCITRAL Model Law, and pre-insolvency planning. Singapore is Asia's pre-eminent restructuring hub — we anchor matters here and coordinate cross-border with US, UK, Hong Kong and offshore counsel for boards, sponsors and creditors."
     badges={["Scheme of Arrangement", "Judicial Management", "Cross-border (Model Law)"]}
     metaTitle="Singapore Restructuring & Insolvency Lawyer | Beyond Horizons"
     metaDescription="Singapore restructuring & insolvency counsel: schemes of arrangement, judicial management, IRDA, cross-border recognition, distressed M&A and director duties."

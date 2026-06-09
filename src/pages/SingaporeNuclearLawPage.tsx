@@ -4,9 +4,9 @@ import { Shield, FileText, Scale, Briefcase, Users, Calendar } from "lucide-reac
 const SingaporeNuclearLawPage = () => (
   <PillarPage
     slug="singapore-nuclear-law"
-    eyebrow="Singapore · Nuclear & SMR Advisory"
-    h1="Singapore Nuclear Law — Cross-border and SMR Advisory"
-    intro="Singapore does not (yet) operate civil nuclear power, but as ASEAN evaluates small modular reactors (SMRs), advanced reactors, nuclear-adjacent financing and Article 6 carbon-credit pathways, Singapore-based investors, financiers and offtakers need sophisticated nuclear counsel."
+    eyebrow="Singapore-anchored · Cross-border Nuclear & SMR"
+    h1="Nuclear & SMR Advisory — Singapore-anchored, Cross-border Counsel"
+    intro="Singapore does not (yet) operate civil nuclear power, but as ASEAN evaluates small modular reactors (SMRs), advanced reactors, nuclear-adjacent financing and Article 6 carbon-credit pathways, we provide Singapore-anchored counsel coordinated with leading nuclear specialists in the US, UK, Canada, France, Japan, Korea and the host jurisdictions."
     badges={["SMR & Advanced Reactors", "Nuclear Financing", "Article 6 / Carbon"]}
     metaTitle="Singapore Nuclear Law & SMR Advisory | Beyond Horizons"
     metaDescription="Singapore-based nuclear & SMR legal advisory: cross-border project structuring, financing, liability conventions, ASEAN deployment, fuel cycle, Article 6 pathways."
