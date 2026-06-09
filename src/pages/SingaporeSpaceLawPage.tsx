@@ -9,7 +9,7 @@ import { Rocket, Satellite, Globe, Shield, Calendar, Newspaper, Building2, Arrow
 import RelatedInsights from "@/components/RelatedInsights";
 
 const BOOKING_URL = "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
-const CANONICAL = "https://beyondhorizonslegal.lovable.app/singapore-space-law";
+const CANONICAL = "https://beyondhorizons.sg/singapore-space-law";
 
 const faqs = [
   {
@@ -104,8 +104,8 @@ const SingaporeSpaceLawPage = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://beyondhorizonslegal.lovable.app/" },
-      { "@type": "ListItem", position: 2, name: "Topics", item: "https://beyondhorizonslegal.lovable.app/topics" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://beyondhorizons.sg/" },
+      { "@type": "ListItem", position: 2, name: "Topics", item: "https://beyondhorizons.sg/topics" },
       { "@type": "ListItem", position: 3, name: "Singapore Space Law", item: CANONICAL },
     ],
   };

@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import LatestInsightsFeed from "@/components/LatestInsightsFeed";
 
-const SITE = "https://beyondhorizonslegal.lovable.app";
+const SITE = "https://beyondhorizons.sg";
 const CANONICAL = `${SITE}/topics`;
 
 const clusters = [
