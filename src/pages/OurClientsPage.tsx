@@ -17,11 +17,18 @@ const OurClientsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Our Clients | Beyond Horizons</title>
+        <title>Our Clients | Beyond Horizons Legal</title>
         <meta
           name="description"
           content="A select group of visionary organisations partnering with Beyond Horizons by Bethel Chambers LLC."
         />
+        <link rel="canonical" href="https://beyondhorizons.sg/our-clients" />
+        <meta property="og:title" content="Our Clients | Beyond Horizons Legal" />
+        <meta property="og:description" content="A select group of visionary organisations partnering with Beyond Horizons by Bethel Chambers LLC." />
+        <meta property="og:url" content="https://beyondhorizons.sg/our-clients" />
+        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
       </Helmet>
       <Header />
       <main className="pt-32 pb-24">

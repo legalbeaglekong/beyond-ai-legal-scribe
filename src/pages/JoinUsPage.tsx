@@ -45,9 +45,9 @@ const JoinUsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Join Us — Careers at Beyond Horizons Legal | Bethel Chambers LLC Singapore</title>
-        <meta name="description" content="Join Beyond Horizons Legal — a specialist practice group within Bethel Chambers LLC. We seek excellence, growth mindset, and strength of character. Selection is not guaranteed." />
-        <meta property="og:title" content="Join Us — Beyond Horizons Legal Singapore" />
+        <title>Careers | Beyond Horizons Legal Singapore</title>
+        <meta name="description" content="Careers at Beyond Horizons Legal — a specialist practice within Bethel Chambers LLC seeking excellence, growth mindset and character." />
+        <meta property="og:title" content="Careers | Beyond Horizons Legal Singapore" />
         <meta property="og:url" content="https://beyondhorizons.sg/join-us" />
         <link rel="canonical" href="https://beyondhorizons.sg/join-us" />
         <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />

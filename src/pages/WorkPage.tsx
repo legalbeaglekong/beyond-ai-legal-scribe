@@ -53,12 +53,28 @@ const WorkPage = () => {
   return (
     <>
       <Helmet>
-        <title>Our Work — Platforms & Industry Expertise | Beyond Horizons Legal</title>
-        <meta name="description" content="Explore Beyond Horizons Legal's specialist platforms and deep industry expertise across 8 sectors." />
+        <title>Our Work | Beyond Horizons Legal Singapore</title>
+        <meta name="description" content="Specialist platforms and deep industry expertise across aviation, transportation, blockchain, energy, cyber and more." />
         <link rel="canonical" href="https://beyondhorizons.sg/work" />
+        <meta property="og:title" content="Our Work | Beyond Horizons Legal Singapore" />
+        <meta property="og:description" content="Specialist platforms and deep industry expertise across aviation, transportation, blockchain, energy, cyber and more." />
+        <meta property="og:url" content="https://beyondhorizons.sg/work" />
         <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Our Work — Platforms & Industry Expertise",
+            url: "https://beyondhorizons.sg/work",
+            description: "Specialist platforms and industry expertise from Beyond Horizons Legal.",
+            hasPart: [
+              ...platforms.map((p) => ({ "@type": "WebSite", name: p.title, url: p.url, description: p.description })),
+              ...industryPages.map((p) => ({ "@type": "WebPage", name: p.title, url: `https://beyondhorizons.sg/industry/${p.slug}`, description: p.description })),
+            ],
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-background">
