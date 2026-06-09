@@ -94,13 +94,12 @@ const TopicsPage = () => {
       <main>
         <section className="pt-32 pb-12 bg-gradient-to-b from-secondary/40 to-background">
           <div className="container mx-auto px-6 max-w-5xl text-center">
-            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">All Topics</p>
+            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Singapore-anchored · Cross-border</p>
             <h1 className="font-serif text-4xl md:text-6xl text-foreground mb-6 leading-tight">
-              Singapore Legal Topics &amp; Practice Areas
+              Practice Areas &amp; Topics
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              A single index of every Beyond Horizons pillar — purpose-built for boards, founders and senior executives
-              navigating Singapore and cross-border matters.
+              A single index of every Beyond Horizons pillar — Singapore-anchored, built for boards, founders and senior executives navigating cross-border matters across APAC, EU, UK and the Americas.
             </p>
           </div>
         </section>

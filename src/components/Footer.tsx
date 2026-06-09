@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
 
             <div className="space-y-6">
-              <h4 className="text-sm font-sans uppercase tracking-wider text-accent">Singapore Practice Areas</h4>
+              <h4 className="text-sm font-sans uppercase tracking-wider text-accent">Practice Areas</h4>
               <ul className="space-y-2">
                 {singaporePillars.map((p) => (
                   <li key={p.to}>

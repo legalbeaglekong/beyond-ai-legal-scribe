@@ -139,15 +139,15 @@ const SingaporeSpaceLawPage = () => {
         {/* Hero */}
         <section className="relative pt-32 pb-20 bg-gradient-to-b from-secondary/40 to-background">
           <div className="container mx-auto px-6 max-w-5xl text-center">
-            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Singapore · Space Law</p>
+            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Singapore-anchored · Cross-border Space Law</p>
             <h1 className="font-serif text-4xl md:text-6xl text-foreground mb-6 leading-tight">
-              Singapore Space Law — Counsel for the New Space Economy
+              Space Law — Singapore-anchored, Cross-border Counsel for the New Space Economy
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Singapore-focused space law advisory for satellite operators, launch providers, and commercial space ventures — covering OSTIn coordination, IMDA spectrum filings, launch agreements, and cross-border APAC space transactions.
+              Singapore-anchored space law advisory for satellite operators, launch providers and commercial space ventures — OSTIn coordination and IMDA spectrum in Singapore, partnered with leading space counsel for US, UK, EU, Japan, India and Australia cross-border matters.
             </p>
             <div className="flex flex-wrap gap-3 justify-center mb-8">
-              {["OSTIn-aligned advisory", "IMDA spectrum & ITU filings", "Satellite & launch transactions"].map((b) => (
+              {["OSTIn-aligned advisory", "IMDA spectrum & ITU filings", "Cross-border launch & satellite deals"].map((b) => (
                 <span key={b} className="px-4 py-2 rounded-full bg-background/60 border border-border text-sm text-foreground">
                   {b}
                 </span>
