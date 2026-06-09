@@ -65,7 +65,7 @@ const Industries = () => {
                     <img src={industry.image} alt={industry.title} className="w-full h-48 object-cover" loading="lazy" />
                   ) : (
                     <div className="w-full h-48 bg-secondary/50 rounded-sm flex items-center justify-center">
-                      <span className="text-muted-foreground/40 font-serif text-lg">{industry.title}</span>
+                      <span className="text-muted-foreground font-serif text-lg">{industry.title}</span>
                     </div>
                   )}
                 </div>

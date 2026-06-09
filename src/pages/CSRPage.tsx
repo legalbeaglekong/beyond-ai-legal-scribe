@@ -177,7 +177,7 @@ const CSRPage = () => {
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
               Our values are not a line item — they are woven into how we practise. Whether through founding industry associations that drive systemic change, supporting community organisations that care for the vulnerable, or providing pro bono legal advice to those who need it most, we aim to use our skills and platform for good.
             </p>
-            <p className="text-sm text-muted-foreground/70 leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               We welcome conversations with organisations working on sustainability, access to justice, and community development. If you believe we can help, please reach out.
             </p>
           </div>

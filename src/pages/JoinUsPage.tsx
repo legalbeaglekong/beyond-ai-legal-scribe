@@ -66,7 +66,7 @@ const JoinUsPage = () => {
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
               We are building a practice for the long term — one that demands the best of the people who are part of it. If you are drawn to complex, meaningful work and hold yourself to a high standard, we would like to hear from you.
             </p>
-            <p className="text-sm text-muted-foreground/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Selection is not guaranteed. We are deliberately small and intentionally selective — because the quality of our team is the foundation of everything we do.
             </p>
           </div>

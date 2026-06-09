@@ -138,7 +138,7 @@ const AIToolsPage = () => {
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
               We don't just advise on technology — we build it. Our team designs and deploys purpose-built AI tools that solve specific legal, regulatory, and commercial challenges for our clients.
             </p>
-            <p className="text-sm text-muted-foreground/80 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Each tool is developed in-house, grounded in practitioner expertise, and tailored to the regulatory and commercial context of the sector it serves.
             </p>
           </div>
@@ -221,7 +221,7 @@ const AIToolsPage = () => {
         {/* Disclaimer */}
         <section className="py-12 bg-background">
           <div className="max-w-3xl mx-auto container-padding text-center fade-in">
-            <p className="text-xs text-muted-foreground/70 leading-relaxed">
+            <p className="text-xs text-muted-foreground leading-relaxed">
               These tools are developed to augment — not replace — qualified legal advice. AI-generated outputs are reviewed by qualified lawyers before client delivery. Tool availability and features may vary. Some tools shown are in active development and may not yet be generally available.
             </p>
           </div>
