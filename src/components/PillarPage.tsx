@@ -20,7 +20,7 @@ import RelatedInsights from "@/components/RelatedInsights";
 
 const BOOKING_URL =
   "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
-const SITE = "https://beyondhorizonslegal.lovable.app";
+const SITE = "https://beyondhorizons.sg";
 
 export interface PillarService {
   icon: LucideIcon;

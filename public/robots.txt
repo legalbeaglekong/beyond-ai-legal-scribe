@@ -13,5 +13,5 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://beyondhorizonslegal.lovable.app/sitemap.xml
+Sitemap: https://beyondhorizons.sg/sitemap.xml
 
