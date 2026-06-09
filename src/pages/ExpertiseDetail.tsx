@@ -147,6 +147,33 @@ const ExpertiseDetail = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>{currentContent.title}</title>
+        <meta name="description" content={currentContent.content.substring(0, 160)} />
+        <link rel="canonical" href={`https://beyondhorizons.sg/expertise/${id}`} />
+        <meta property="og:title" content={currentContent.title} />
+        <meta property="og:description" content={currentContent.content.substring(0, 160)} />
+        <meta property="og:url" content={`https://beyondhorizons.sg/expertise/${id}`} />
+        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: currentContent.title,
+            provider: {
+              "@type": "Organization",
+              name: "Bethel Chambers LLC",
+              url: "https://beyondhorizons.sg"
+            },
+            description: currentContent.content,
+            areaServed: "Asia-Pacific",
+            url: `https://beyondhorizons.sg/expertise/${id}`,
+            serviceType: "Legal Service"
+          })}
+        </script>
+      </Helmet>
       <Header />
       
       <main>
