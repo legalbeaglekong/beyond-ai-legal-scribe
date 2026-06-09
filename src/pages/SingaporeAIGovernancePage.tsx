@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Brain, Shield, FileCheck, ScrollText, Building2, Globe, Newspaper, ArrowRight, Mail } from "lucide-react";
+import RelatedInsights from "@/components/RelatedInsights";
 
 const BOOKING_URL = "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
 const CANONICAL = "https://beyondhorizonslegal.lovable.app/singapore-ai-governance";
@@ -115,6 +116,8 @@ const SingaporeAIGovernancePage = () => {
             </Accordion>
           </div>
         </section>
+
+        <RelatedInsights keywords={["ai", "artificial intelligence", "imda", "mas", "feat", "veritas", "model ai", "ai governance", "generative", "llm"]} heading="Related Insights — AI Governance & Risk" />
 
         <section className="py-20 bg-primary text-primary-foreground">
           <div className="container mx-auto px-6 max-w-3xl text-center">
