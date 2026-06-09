@@ -9,6 +9,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Industries from "@/components/Industries";
 import GlobalPartners from "@/components/GlobalPartners";
 import Insights from "@/components/Insights";
+import LatestInsightsFeed from "@/components/LatestInsightsFeed";
 import Testimonials from "@/components/Testimonials";
 import TeamPreview from "@/components/TeamPreview";
 import ClientRibbon from "@/components/ClientRibbon";
