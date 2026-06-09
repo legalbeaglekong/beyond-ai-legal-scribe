@@ -37,10 +37,20 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     return (localStorage.getItem("site-language") as Language) || "en";
   });
 
+  // Keep <html lang> and dir in sync with the active language so crawlers
+  // and assistive tech read the correct language signal for the rendered DOM.
+  React.useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = language;
+      document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+    }
+  }, [language]);
+
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
     localStorage.setItem("site-language", lang);
   };
+
 
   const t = (key: string): string => {
     const keys = key.split(".");
