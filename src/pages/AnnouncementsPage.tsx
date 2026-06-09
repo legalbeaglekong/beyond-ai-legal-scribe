@@ -98,7 +98,7 @@ const announcements = [
 
         <div className="pt-6 border-t border-border">
           <a
-            href="https://lovable.dev/projects/f45a3043-364c-40d2-95fd-82e9e84053f3"
+            href="https://bizadapt.beyondhorizons.sg"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white text-sm font-sans uppercase tracking-wider rounded-sm hover:bg-accent/90 transition-smooth"
