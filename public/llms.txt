@@ -1,0 +1,76 @@
+# Beyond Horizons by Bethel Chambers LLC
+
+> A specialist legal and strategic advisory firm crafted for visionaries, delivering digital-first counsel across APAC and global markets.
+
+Beyond Horizons by Bethel Chambers LLC provides outsourced general counsel, cross-border transaction advisory, legacy wealth planning, and regulatory compliance services. The firm serves entrepreneurs, family offices, and technology-driven enterprises across aviation, robotics, space, blockchain, cybersecurity, and other specialized sectors. Operating through a global network of partnerships, the firm combines deep sector expertise with a digital-native delivery model.
+
+## Pages
+
+- [Home](/): Overview of services, firm positioning, and recent highlights.
+- [About](/about): Firm history, mission, values, and accolades.
+- [Work](/work): Practice areas and client engagement philosophy.
+- [Expertise](/expertise): Core legal and advisory capabilities.
+- [Market Insights](/market-insights): Industry commentary, podcasts, and perspectives.
+- [Why Specialist Counsel](/why-specialist-counsel): The case for outsourced senior legal support.
+- [AI Tools](/ai-tools): AI-powered legal technology and MAS MindForge regulatory guidance.
+- [Join Us](/join-us): Career opportunities and culture.
+- [CSR](/work/csr): Corporate social responsibility initiatives.
+- [Team](/team): Leadership profiles and advisor network.
+- [Our Clients](/our-clients): Client ecosystem and testimonials.
+- [Announcements](/announcements): Firm news and updates.
+
+## Industries
+
+- [Aviation](/industry/aviation): Aerospace, airlines, and aviation finance.
+- [Robotics](/industry/robotics): Automation, robotics ventures, and IP strategy.
+- [Space](/industry/space): Satellite, launch, and space commerce ventures.
+- [Blockchain & Digital Assets](/industry/blockchain-digital-assets): Crypto, DeFi, and tokenization advisory.
+- [Cybersecurity & Technology](/industry/cybersecurity-tech): Data protection, incident response, and tech transactions.
+- [Energy Transition](/industry/energy-transition): Renewable energy, carbon markets, and ESG compliance.
+- [Transportation](/industry/transportation): Maritime, logistics, and mobility infrastructure.
+- [Wellness & Health](/industry/wellness-health): Healthcare ventures, biotech, and regulatory pathways.
+- [Trade & Tariff](/industry/trade-tariff): Cross-border trade, sanctions, and customs advisory.
+- [Fractional GC Services](/industry/fractional-gc): Outsourced general counsel and in-house legal support.
+- [AI Code Counsel](/industry/ai-code-counsel): MAS MindForge compliance and AI risk governance.
+
+## Expertise
+
+- [M&A and Cross-Border](/expertise/ma-cross-border): Mergers, acquisitions, and international transactions.
+- [Tech General Counsel](/expertise/tech-general-counsel): In-house legal strategy for technology companies.
+- [Commercial Contracts](/expertise/commercial-contracts): Negotiation, drafting, and contract lifecycle management.
+- [Corporate Transactions](/expertise/corporate-transactions): Equity, debt, and corporate restructuring.
+- [Regulatory Compliance](/expertise/regulatory-compliance): Licensing, filings, and regulator engagement.
+- [IP & Data Privacy](/expertise/ip-data-privacy): Patent, trademark, and privacy law.
+- [Startup Funding](/expertise/startup-funding): Seed, venture, and growth capital advisory.
+- [Employment & Labor](/expertise/employment-labor): Workforce structuring and executive agreements.
+- [Arbitration & Disputes](/expertise/arbitration-disputes): Commercial arbitration and litigation strategy.
+- [Financial Services](/expertise/financial-services): Fintech, payments, and capital markets.
+
+## Legacy Building
+
+- [Business Legacies in APAC](/expertise/business-legacies-apac): Intergenerational wealth transfer in Asia-Pacific.
+- [Family Business Governance](/expertise/family-business-governance): Succession frameworks and family constitutions.
+- [Cross-Border Wealth Planning](/expertise/cross-border-wealth-planning): Multi-jurisdictional trust and estate structures.
+- [Singapore Legacy Hub](/expertise/singapore-legacy-hub): Singapore as a wealth management and legacy center.
+- [Succession Planning for Founders](/expertise/succession-planning-founders): Founder transition and next-gen preparation.
+- [IP & Business Legacy](/expertise/ip-business-legacy): Protecting intellectual capital across generations.
+- [Trusts, Foundations & Wealth](/expertise/trusts-foundations-wealth): Structuring vehicles for wealth preservation.
+- [Crisis-Proofing Legacy](/expertise/crisis-proofing-legacy): Risk mitigation and continuity planning.
+- [Tech Legacy Planning](/expertise/tech-legacy-planning): Digital assets and technology succession.
+- [ESG & Legacy Business](/expertise/esg-legacy-business): Sustainability and responsible stewardship.
+
+## Why Choose Us
+
+- [Digital-First](/why-choose-us/digital-first): Technology-enabled, remote-capable legal delivery.
+- [Cost Efficiency](/why-choose-us/cost-efficiency): Transparent pricing and value-based fee structures.
+- [Global Expertise](/why-choose-us/global-expertise): Cross-border capabilities through a partner network.
+- [Confidentiality](/why-choose-us/confidentiality): Discretion, privilege, and data security.
+
+## Team
+
+- [Hui Ling Teo](/team/hui-ling-teo): Founder and Managing Director.
+- [Sonia Motwani](/team/sonia-motwani): Senior Advisor and sector specialist.
+
+## Optional
+
+- [English (US)](/en-us/): US English localized content.
