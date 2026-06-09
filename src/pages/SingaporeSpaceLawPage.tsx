@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Rocket, Satellite, Globe, Shield, Calendar, Newspaper, Building2, ArrowRight, Mail } from "lucide-react";
+import RelatedInsights from "@/components/RelatedInsights";
 
 const BOOKING_URL = "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
 const CANONICAL = "https://beyondhorizonslegal.lovable.app/singapore-space-law";
@@ -247,6 +248,8 @@ const SingaporeSpaceLawPage = () => {
             </Accordion>
           </div>
         </section>
+
+        <RelatedInsights keywords={["space", "satellite", "ostin", "launch", "aerospace", "aviation"]} heading="Related Insights — Space & Satellite" />
 
         {/* CTA */}
         <section className="py-20 bg-primary text-primary-foreground">

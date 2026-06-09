@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Users, FileText, Scale, Briefcase, Shield, Calendar, Newspaper, ArrowRight, Mail } from "lucide-react";
+import RelatedInsights from "@/components/RelatedInsights";
 
 const BOOKING_URL = "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
 const CANONICAL = "https://beyondhorizonslegal.lovable.app/singapore-employment-law";
@@ -115,6 +116,8 @@ const SingaporeEmploymentLawPage = () => {
             </Accordion>
           </div>
         </section>
+
+        <RelatedInsights keywords={["employment", "mom", "workforce", "retrenchment", "work pass", "workplace", "labour", "labor", "hr"]} heading="Related Insights — Employment & Workforce" />
 
         <section className="py-20 bg-primary text-primary-foreground">
           <div className="container mx-auto px-6 max-w-3xl text-center">
