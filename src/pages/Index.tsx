@@ -29,6 +29,48 @@ const Index = () => {
         <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Beyond Horizons by Bethel Chambers LLC",
+            url: "https://beyondhorizons.sg",
+            logo: "https://beyondhorizons.sg/og-image.jpg",
+            description: "Chambers Global ranked legal counsel for visionaries in Singapore and across Asia Pacific.",
+            areaServed: "Asia-Pacific",
+            sameAs: [
+              "https://www.linkedin.com/company/beyond-horizons-by-bethel-chambers-llc"
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Beyond Horizons",
+            url: "https://beyondhorizons.sg",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://beyondhorizons.sg/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LegalService",
+            name: "Beyond Horizons Legal Services",
+            provider: {
+              "@type": "Organization",
+              name: "Bethel Chambers LLC",
+              url: "https://beyondhorizons.sg"
+            },
+            description: "Chambers Global ranked legal counsel for visionaries in Singapore and across Asia Pacific.",
+            areaServed: "Asia-Pacific",
+            url: "https://beyondhorizons.sg"
+          })}
+        </script>
       </Helmet>
       <Header />
       <main>

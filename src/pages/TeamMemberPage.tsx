@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -147,6 +148,34 @@ const TeamMemberPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{member.name} — {language === "zh" ? member.roleZh : member.role} | Beyond Horizons</title>
+        <meta name="description" content={`${member.name} — ${language === "zh" ? member.roleZh : member.role} at Beyond Horizons by Bethel Chambers LLC. ${highlights[0]}`} />
+        <link rel="canonical" href={`https://beyondhorizons.sg/team/${slug}`} />
+        <meta property="og:title" content={`${member.name} — ${language === "zh" ? member.roleZh : member.role} | Beyond Horizons`} />
+        <meta property="og:description" content={`${member.name} — ${language === "zh" ? member.roleZh : member.role} at Beyond Horizons by Bethel Chambers LLC.`} />
+        <meta property="og:url" content={`https://beyondhorizons.sg/team/${slug}`} />
+        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: member.name,
+            jobTitle: language === "zh" ? member.roleZh : member.role,
+            description: highlights.join(" "),
+            worksFor: {
+              "@type": "Organization",
+              name: "Bethel Chambers LLC",
+              url: "https://beyondhorizons.sg"
+            },
+            image: member.image,
+            url: `https://beyondhorizons.sg/team/${slug}`,
+            sameAs: member.linkedin ? [member.linkedin] : undefined
+          })}
+        </script>
+      </Helmet>
       <Header />
 
       <div className="pt-24 pb-8 container-padding max-w-6xl mx-auto">
