@@ -56,6 +56,9 @@ const WorkPage = () => {
         <title>Our Work — Platforms & Industry Expertise | Beyond Horizons Legal</title>
         <meta name="description" content="Explore Beyond Horizons Legal's specialist platforms and deep industry expertise across 8 sectors." />
         <link rel="canonical" href="https://beyondhorizons.sg/work" />
+        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

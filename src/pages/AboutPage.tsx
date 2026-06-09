@@ -28,6 +28,9 @@ const AboutPage = () => {
         <title>About Beyond Horizons Legal — Bethel Chambers LLC | Singapore</title>
         <meta name="description" content="Chambers-ranked legal team delivering innovative, cost-effective legal solutions. Dual-qualified in English & Singapore law." />
         <link rel="canonical" href="https://beyondhorizons.sg/about" />
+        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

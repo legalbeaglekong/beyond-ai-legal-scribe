@@ -35,6 +35,9 @@ const CSRPage = () => {
         <meta property="og:title" content="Our Work in Society & Impact — Beyond Horizons Legal Singapore" />
         <meta property="og:url" content="https://beyondhorizons.sg/work/csr" />
         <link rel="canonical" href="https://beyondhorizons.sg/work/csr" />
+        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
       </Helmet>
 
       <div className="min-h-screen bg-background" ref={containerRef}>
