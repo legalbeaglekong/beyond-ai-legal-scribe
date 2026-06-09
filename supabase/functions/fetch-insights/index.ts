@@ -100,13 +100,17 @@ async function tryFeed(url: string): Promise<FeedItem[] | null> {
       },
       redirect: "follow",
     });
+    console.log(`[fetch-insights] ${url} -> ${res.status} ${res.headers.get("content-type")}`);
     if (!res.ok) return null;
     const ct = res.headers.get("content-type") ?? "";
     const text = await res.text();
+    console.log(`[fetch-insights] ${url} body length=${text.length} startsWith=${text.slice(0, 60)}`);
     if (!/xml|rss|atom/i.test(ct) && !/<(rss|feed)\b/i.test(text)) return null;
     const items = parseFeed(text);
+    console.log(`[fetch-insights] ${url} parsed items=${items.length}`);
     return items.length ? items : null;
-  } catch {
+  } catch (err) {
+    console.log(`[fetch-insights] ${url} threw: ${(err as Error).message}`);
     return null;
   }
 }
