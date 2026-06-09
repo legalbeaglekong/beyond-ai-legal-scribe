@@ -94,9 +94,9 @@ async function tryFeed(url: string): Promise<FeedItem[] | null> {
     const res = await fetch(url, {
       headers: {
         "User-Agent":
-          "Mozilla/5.0 (compatible; BeyondHorizonsBot/1.0; +https://beyondhorizons.sg)",
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
         Accept:
-          "application/rss+xml, application/atom+xml, application/xml, text/xml, */*",
+          "application/rss+xml, application/atom+xml, application/xml;q=0.9, text/xml;q=0.9, */*;q=0.8",
       },
       redirect: "follow",
     });
