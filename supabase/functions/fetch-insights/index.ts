@@ -120,15 +120,39 @@ Deno.serve(async (req) => {
     return new Response("ok", { headers: corsHeaders });
   }
 
+  const debug: Array<Record<string, unknown>> = [];
   try {
     let items: FeedItem[] | null = null;
     let source: string | null = null;
     for (const url of FEED_CANDIDATES) {
-      const result = await tryFeed(url);
-      if (result) {
-        items = result;
-        source = url;
-        break;
+      const t0 = Date.now();
+      try {
+        const res = await fetch(url, {
+          headers: {
+            "User-Agent":
+              "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+            Accept:
+              "application/rss+xml, application/atom+xml, application/xml;q=0.9, text/xml;q=0.9, */*;q=0.8",
+          },
+          redirect: "follow",
+        });
+        const text = res.ok ? await res.text() : "";
+        const parsed = text ? parseFeed(text) : [];
+        debug.push({
+          url,
+          status: res.status,
+          ct: res.headers.get("content-type"),
+          len: text.length,
+          parsed: parsed.length,
+          ms: Date.now() - t0,
+        });
+        if (parsed.length) {
+          items = parsed;
+          source = url;
+          break;
+        }
+      } catch (e) {
+        debug.push({ url, err: (e as Error).message, ms: Date.now() - t0 });
       }
     }
 
@@ -137,6 +161,7 @@ Deno.serve(async (req) => {
       source,
       fetchedAt: new Date().toISOString(),
       items: (items ?? []).slice(0, 12),
+      debug,
     };
 
     return new Response(JSON.stringify(body), {
@@ -144,9 +169,8 @@ Deno.serve(async (req) => {
       headers: {
         ...corsHeaders,
         "Content-Type": "application/json",
-        // Edge-cache for 10 min; allow stale-while-revalidate for snappy loads
         "Cache-Control":
-          "public, max-age=600, s-maxage=600, stale-while-revalidate=86400",
+          items ? "public, max-age=600, s-maxage=600, stale-while-revalidate=86400" : "no-store",
       },
     });
   } catch (err) {
