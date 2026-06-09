@@ -22,10 +22,13 @@ const Index = () => {
       <Helmet>
         <title>Beyond Horizons | Crafted for Visionaries</title>
         <meta name="description" content="Beyond Horizons by Bethel Chambers LLC — Chambers Global ranked legal counsel for visionaries in Singapore and across Asia Pacific." />
-        <link rel="canonical" href="https://beyond-ai-legal-scribe.lovable.app/" />
+        <link rel="canonical" href="https://beyondhorizons.sg/" />
         <meta property="og:title" content="Beyond Horizons | Crafted for Visionaries" />
         <meta property="og:description" content="Chambers Global ranked legal counsel for visionaries in Singapore and across Asia Pacific." />
-        <meta property="og:url" content="https://beyond-ai-legal-scribe.lovable.app/" />
+        <meta property="og:url" content="https://beyondhorizons.sg/" />
+        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
       </Helmet>
       <Header />
       <main>
