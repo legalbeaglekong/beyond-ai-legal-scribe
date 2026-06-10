@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet-async";
 import { Megaphone, Calendar, ExternalLink, ArrowRight, X } from "lucide-react";
+import bizadaptBanner from "@/assets/bizadapt-banner.png.asset.json";
 
 const announcements = [
   {
@@ -14,6 +15,12 @@ const announcements = [
       "Beyond Horizons by Bethel Chambers LLC has been appointed as a pre-approved vendor for the Legal and Contractual Advisory activity under Enterprise Singapore's Business Adaptation Grant (BizAdapt).",
     content: (
       <div className="prose prose-sm md:prose-base max-w-none text-muted-foreground leading-relaxed space-y-6">
+        <img
+          src={bizadaptBanner.url}
+          alt="Beyond Horizons by Bethel Chambers LLC: Whitelisted BizAdapt Approved Vendor"
+          className="w-full h-auto rounded-sm border border-border my-2"
+          loading="lazy"
+        />
         <p>
           Beyond Horizons by Bethel Chambers LLC has been appointed as a pre-approved vendor for the Legal and Contractual Advisory activity under Enterprise Singapore's Business Adaptation Grant (BizAdapt).
         </p>
