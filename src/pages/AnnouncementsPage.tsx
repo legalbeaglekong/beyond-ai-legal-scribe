@@ -10,6 +10,56 @@ import snefTalk from "@/assets/snef-hr-forward-talk.jpg.asset.json";
 
 const announcements = [
   {
+    id: 2,
+    title: "Beyond Horizons Speaks at SNEF HR Forward Series: Navigating AI in HR — Hire, Manage, Comply",
+    date: "9 June 2026",
+    tag: "Speaking Engagement",
+    excerpt:
+      "Founder Hui Ling Teo joined the Singapore National Employers Federation (SNEF) HR Forward Series to address 50+ HR leaders on the legal and governance dimensions of deploying AI across the employee lifecycle.",
+    content: (
+      <div className="prose prose-sm md:prose-base max-w-none text-muted-foreground leading-relaxed space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <img src={snefSpeaker.url} alt="Hui Ling Teo speaking at the SNEF HR Forward Series on Navigating AI in HR" className="w-full h-auto rounded-sm border border-border" loading="lazy" />
+          <img src={snefTalk.url} alt="Hui Ling Teo presenting AI governance frameworks to HR professionals at SNEF" className="w-full h-auto rounded-sm border border-border" loading="lazy" />
+          <img src={snefAudience.url} alt="HR leaders attending the SNEF HR Forward Series session" className="w-full h-auto rounded-sm border border-border md:col-span-2" loading="lazy" />
+        </div>
+
+        <p>
+          Beyond Horizons by Bethel Chambers LLC was honoured to participate in the Singapore National Employers Federation (SNEF) HR Forward Series, with founder Hui Ling Teo invited to speak on <em>Navigating AI in HR: Hire, Manage, Comply</em> alongside Derrick Yuen.
+        </p>
+
+        <p>
+          The session brought together more than fifty senior HR practitioners to examine the practical, ethical and legal questions arising as organisations integrate artificial intelligence into hiring, performance management and workforce planning.
+        </p>
+
+        <div>
+          <p className="text-foreground font-medium mb-2">Key themes addressed included:</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Workforce displacement and "colleague-skill" systems</strong> — the legal and fairness implications of AI tools that distil a co-worker's knowledge, communications and outputs to the point of substitution.</li>
+            <li><strong>Equitable access to AI tooling</strong> — emerging "token justice" questions where compensation, productivity and headcount value depend on differential access to compute, tokens or proprietary models, and the workplace fairness exposure that follows.</li>
+            <li><strong>IMDA's governance framework and legal-responsibility paper on AI agents</strong> — practical implications for employers deploying agentic systems, including accountability allocation, audit trails and human-in-the-loop design.</li>
+            <li><strong>Compliance under Singapore's evolving workplace fairness regime</strong> — aligning AI-assisted hiring, evaluation and termination decisions with the Workplace Fairness Act, Tripartite Guidelines and MOM expectations.</li>
+          </ul>
+        </div>
+
+        <p>
+          The discussion underscored a recurring theme in our advisory work: AI adoption in the employment context is no longer a future-state concern. Boards, HR leaders and general counsel must address governance, documentation and contractual safeguards now — both to manage regulatory risk and to preserve workforce trust.
+        </p>
+
+        <p>
+          We are grateful to SNEF for convening this important conversation and to the HR community for the candid engagement throughout the session.
+        </p>
+
+        <div className="pt-6 border-t border-border">
+          <h4 className="text-base font-serif text-foreground font-medium mb-2">About Beyond Horizons by Bethel Chambers LLC</h4>
+          <p className="text-sm">
+            Beyond Horizons is a Singapore-based boutique law firm specialising in aviation, maritime, space, advanced air mobility, robotics and AI governance. Named in the ALB Singapore Firms to Watch 2026 ranking, the firm provides tailored cross-border legal solutions under English and Singapore law.
+          </p>
+        </div>
+      </div>
+    ),
+  },
+  {
     id: 1,
     title: "Beyond Horizons Appointed as a Pre-Approved Vendor for Enterprise Singapore's Business Adaptation Grant",
     date: "1 June 2026",
