@@ -4,6 +4,9 @@ import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet-async";
 import { Megaphone, Calendar, ExternalLink, ArrowRight, X } from "lucide-react";
 import bizadaptBanner from "@/assets/bizadapt-banner.png.asset.json";
+import snefSpeaker from "@/assets/snef-hr-forward-speaker.jpg.asset.json";
+import snefAudience from "@/assets/snef-hr-forward-audience.jpg.asset.json";
+import snefTalk from "@/assets/snef-hr-forward-talk.jpg.asset.json";
 
 const announcements = [
   {
