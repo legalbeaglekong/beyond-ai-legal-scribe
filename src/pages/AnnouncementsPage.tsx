@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet-async";
 import { Megaphone, Calendar, ExternalLink, ArrowRight, X } from "lucide-react";
+import bizadaptBanner from "@/assets/bizadapt-banner.png.asset.json";
 
 const announcements = [
   {
