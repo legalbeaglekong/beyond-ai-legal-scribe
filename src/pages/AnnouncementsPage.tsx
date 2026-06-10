@@ -12,7 +12,7 @@ const announcements = [
   {
     id: 2,
     title: "Beyond Horizons Speaks at SNEF HR Forward Series: Navigating AI in HR — Hire, Manage, Comply",
-    date: "9 June 2026",
+    date: "28 May 2026",
     tag: "Speaking Engagement",
     excerpt:
       "Founder Hui Ling Teo joined the Singapore National Employers Federation (SNEF) HR Forward Series to address 50+ HR leaders on the legal and governance dimensions of deploying AI across the employee lifecycle.",
