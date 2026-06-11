@@ -7,7 +7,7 @@ const SingaporeEmploymentLawPage = () => (
     eyebrow="Singapore-anchored · Cross-border Employment"
     h1="Singapore & Cross-border Employment Law — Counsel for Employers and Executives"
     intro="From MOM compliance and work-pass strategy to multi-jurisdiction restructurings, executive separations and workplace investigations — Singapore-anchored employment counsel for ambitious employers and senior leaders operating across borders."
-    badges={["MOM & Tripartite-aligned", "Work-pass & COMPASS strategy", "Cross-border executive counsel"]}
+    badges={["MOM Compliance", "AI Use Policy in HR decision making", "Executive Separations & Investigations"]}
     metaTitle="Singapore & Cross-border Employment Lawyer | Beyond Horizons"
     metaDescription="Singapore-anchored, cross-border employment counsel: Employment Act, MOM, work passes (EP/COMPASS), retrenchments, restrictive covenants, workplace fairness and executive disputes."
     ogTitle="Employment Law — Singapore-anchored, Cross-border Counsel"
