@@ -31,6 +31,7 @@ const Industries = () => {
     { title: t("industries.robotics"), description: t("industries.roboticsDesc"), highlights: ["Robot Leasing Agreements", "SaaS Contracts", "Liability Frameworks"], link: "https://robotlaw.beyondhorizons.sg", image: industryRobotics },
     { title: t("industries.cyber"), description: t("industries.cyberDesc"), highlights: ["Cybersecurity Governance", "AI Regulation & Liability", "Critical Infrastructure"], route: "/industry/cybersecurity-tech", image: industryCybersecurity },
     { title: t("industries.space"), description: t("industries.spaceDesc"), highlights: ["Satellite Transactions & Licensing", "Launch Agreements & Liability", "Space Regulatory Compliance"], route: "/industry/space", image: industrySpace },
+    { title: t("industries.employment"), description: t("industries.employmentDesc"), highlights: ["MOM & Tripartite Compliance", "Work Pass Strategy (EP/COMPASS)", "Executive Separations & Investigations"], route: "/singapore-employment-law", image: industryEmployment },
     { title: t("industries.fractionalGC"), description: t("industries.fractionalGCDesc"), highlights: ["Strategic Legal Leadership", "Regulatory & Compliance Oversight", "Cross-Border Coordination"], route: "/industry/fractional-gc", image: industryFractionalGC },
     { title: t("industries.aiCounsel"), description: t("industries.aiCounselDesc"), highlights: ["AI Governance Frameworks", "MAS MindForge Alignment", "EU AI Act Readiness"], route: "/industry/ai-code-counsel", image: industryAICounsel },
   ];
