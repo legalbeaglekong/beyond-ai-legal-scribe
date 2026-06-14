@@ -6,6 +6,8 @@ interface VideoBackgroundProps {
   className?: string;
   overlayClassName?: string;
   children: React.ReactNode;
+  playbackRate?: number;
+  videoClassName?: string;
 }
 
 /**
@@ -15,7 +17,7 @@ interface VideoBackgroundProps {
  * the first frame (cyclic motion), so we use the browser's native HTML5
  * `loop` attribute — the cleanest, lowest-overhead seamless playback.
  */
-const VideoBackground = ({ src, poster, className = "", overlayClassName, children }: VideoBackgroundProps) => {
+const VideoBackground = ({ src, poster, className = "", overlayClassName, children, playbackRate = 0.9, videoClassName }: VideoBackgroundProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -41,9 +43,9 @@ const VideoBackground = ({ src, poster, className = "", overlayClassName, childr
     const video = videoRef.current;
     if (!video) return;
     video.muted = true;
-    video.playbackRate = 0.9;
+    video.playbackRate = playbackRate;
     video.play().catch(() => {});
-  }, [isVisible]);
+  }, [isVisible, playbackRate]);
 
   return (
     <div ref={containerRef} className={`video-bg-container ${className}`}>
@@ -56,7 +58,7 @@ const VideoBackground = ({ src, poster, className = "", overlayClassName, childr
           autoPlay
           poster={poster}
           preload="auto"
-          className="pointer-events-none"
+          className={`pointer-events-none ${videoClassName ?? ""}`}
         >
           <source src={src} type="video/mp4" />
         </video>

@@ -30,7 +30,9 @@ const Hero = () => {
             src={heroVideo}
             poster={singaporePanorama}
             className="absolute inset-0 w-full h-full"
-            overlayClassName="absolute inset-0 bg-black/10"
+            overlayClassName="absolute inset-0 bg-background/30"
+            playbackRate={0.5}
+            videoClassName="[filter:saturate(0.6)_brightness(0.92)_contrast(0.95)]"
           >
             <span className="sr-only">Singapore skyline cinematic backdrop</span>
           </VideoBackground>
