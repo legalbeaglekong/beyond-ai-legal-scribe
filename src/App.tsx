@@ -41,6 +41,7 @@ import FractionalGCPage from "./pages/industry/FractionalGCPage";
 import AICodeCounselPage from "./pages/industry/AICodeCounselPage";
 import TeamPage from "./pages/TeamPage";
 import TeamMemberPage from "./pages/TeamMemberPage";
+import WhatsAppFab from "./components/WhatsAppFab";
 
 const queryClient = new QueryClient();
 
@@ -92,6 +93,7 @@ const App = () => (
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
+            <WhatsAppFab />
           </BrowserRouter>
         </LanguageProvider>
       </TooltipProvider>
