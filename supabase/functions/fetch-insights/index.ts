@@ -80,7 +80,7 @@ function parseFeed(xml: string): FeedItem[] {
     items.push({
       title,
       link: link.trim(),
-      description: stripHtml(descRaw).slice(0, 260),
+      description: stripHtml(descRaw).slice(0, 600),
       pubDate: decode(pubDate),
       image,
       category: category ? decode(category) : undefined,
