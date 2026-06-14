@@ -115,6 +115,45 @@ async function tryFeed(url: string): Promise<FeedItem[] | null> {
   }
 }
 
+const FIRECRAWL_API_KEY = Deno.env.get("FIRECRAWL_API_KEY");
+
+async function firecrawlSummary(url: string): Promise<string | null> {
+  if (!FIRECRAWL_API_KEY) return null;
+  try {
+    const ac = new AbortController();
+    const timer = setTimeout(() => ac.abort(), 20000);
+    const res = await fetch("https://api.firecrawl.dev/v2/scrape", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${FIRECRAWL_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        url,
+        formats: ["summary"],
+        onlyMainContent: true,
+      }),
+      signal: ac.signal,
+    });
+    clearTimeout(timer);
+    if (!res.ok) {
+      console.log(`[firecrawl] ${url} -> ${res.status}`);
+      return null;
+    }
+    const json = await res.json();
+    const summary =
+      json?.summary ??
+      json?.data?.summary ??
+      null;
+    return typeof summary === "string" && summary.trim().length > 0
+      ? summary.trim()
+      : null;
+  } catch (err) {
+    console.log(`[firecrawl] ${url} threw: ${(err as Error).message}`);
+    return null;
+  }
+}
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
@@ -156,11 +195,22 @@ Deno.serve(async (req) => {
       }
     }
 
+    // Enrich top items with Firecrawl AI summaries (parallel, capped to 6).
+    const top = (items ?? []).slice(0, 6);
+    if (top.length && FIRECRAWL_API_KEY) {
+      const summaries = await Promise.all(
+        top.map((it) => (it.link ? firecrawlSummary(it.link) : Promise.resolve(null))),
+      );
+      summaries.forEach((s, i) => {
+        if (s) top[i].description = s;
+      });
+    }
+
     const body = {
       ok: !!items,
       source,
       fetchedAt: new Date().toISOString(),
-      items: (items ?? []).slice(0, 12),
+      items: top.concat((items ?? []).slice(6, 12)),
       debug,
     };
 
@@ -183,3 +233,4 @@ Deno.serve(async (req) => {
     );
   }
 });
+
