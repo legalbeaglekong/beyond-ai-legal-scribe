@@ -117,11 +117,19 @@ async function tryFeed(url: string): Promise<FeedItem[] | null> {
 
 const FIRECRAWL_API_KEY = Deno.env.get("FIRECRAWL_API_KEY");
 
+// Module-scope cache survives across warm invocations of the same isolate.
+const summaryCache = new Map<string, { summary: string; ts: number }>();
+const SUMMARY_TTL_MS = 1000 * 60 * 60 * 24 * 7; // 7 days
+
 async function firecrawlSummary(url: string): Promise<string | null> {
   if (!FIRECRAWL_API_KEY) return null;
+  const cached = summaryCache.get(url);
+  if (cached && Date.now() - cached.ts < SUMMARY_TTL_MS) {
+    return cached.summary;
+  }
   try {
     const ac = new AbortController();
-    const timer = setTimeout(() => ac.abort(), 20000);
+    const timer = setTimeout(() => ac.abort(), 55000);
     const res = await fetch("https://api.firecrawl.dev/v2/scrape", {
       method: "POST",
       headers: {
@@ -145,9 +153,12 @@ async function firecrawlSummary(url: string): Promise<string | null> {
       json?.summary ??
       json?.data?.summary ??
       null;
-    return typeof summary === "string" && summary.trim().length > 0
-      ? summary.trim()
-      : null;
+    if (typeof summary === "string" && summary.trim().length > 0) {
+      const clean = summary.trim();
+      summaryCache.set(url, { summary: clean, ts: Date.now() });
+      return clean;
+    }
+    return null;
   } catch (err) {
     console.log(`[firecrawl] ${url} threw: ${(err as Error).message}`);
     return null;
