@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, Bot, DollarSign, Globe, Shield, CheckCircle } from "lucide-react";
@@ -96,6 +97,15 @@ const WhyChooseUsDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{`${currentContent.title} | Beyond Horizons`}</title>
+        <meta name="description" content={currentContent.content.intro.slice(0, 158)} />
+        <link rel="canonical" href={`https://beyondhorizons.sg/why-choose-us/${id}`} />
+        <meta property="og:title" content={`${currentContent.title} | Beyond Horizons`} />
+        <meta property="og:description" content={currentContent.content.intro.slice(0, 158)} />
+        <meta property="og:url" content={`https://beyondhorizons.sg/why-choose-us/${id}`} />
+        <meta property="og:type" content="article" />
+      </Helmet>
       <Header />
       
       <main className="pt-24 pb-16">
