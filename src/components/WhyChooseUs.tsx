@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
                 </div>
                 <h3 className="text-sm font-serif font-bold mb-3 text-foreground group-hover:text-accent transition-smooth">{reason.title}</h3>
                 <p className="text-xs text-muted-foreground leading-relaxed mb-4">{reason.description}</p>
-                <span className="text-xs text-accent inline-flex items-center">{t("whyChooseUs.learnMore")} <ArrowRight className="w-3 h-3 ml-1" /></span>
+                <span className="text-xs text-accent inline-flex items-center">{`Explore ${reason.title}`} <ArrowRight className="w-3 h-3 ml-1" /></span>
               </CardContent>
             </Card>
           ))}
