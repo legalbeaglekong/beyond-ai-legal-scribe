@@ -82,12 +82,12 @@ const Industries = () => {
                 </div>
                 <div className="mt-auto">
                   {industry.link ? (
-                    <a href={industry.link} target="_blank" rel="noopener noreferrer" className="text-sm text-foreground link-underline inline-flex items-center" aria-label={`Learn more about ${industry.title} services`}>
-                      {t("industries.learnMore")} <ArrowRight className="ml-1 h-3 w-3" />
+                    <a href={industry.link} target="_blank" rel="noopener noreferrer" className="text-sm text-foreground link-underline inline-flex items-center" aria-label={`Explore ${industry.title} services`}>
+                      {`Explore ${industry.title}`} <ArrowRight className="ml-1 h-3 w-3" />
                     </a>
                   ) : industry.route ? (
-                    <Link to={industry.route} className="text-sm text-foreground link-underline inline-flex items-center" aria-label={`Learn more about ${industry.title} services`}>
-                      {t("industries.learnMore")} <ArrowRight className="ml-1 h-3 w-3" />
+                    <Link to={industry.route} className="text-sm text-foreground link-underline inline-flex items-center" aria-label={`Explore ${industry.title} services`}>
+                      {`Explore ${industry.title}`} <ArrowRight className="ml-1 h-3 w-3" />
                     </Link>
                   ) : null}
                 </div>

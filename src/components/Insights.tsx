@@ -56,8 +56,8 @@ const Insights = () => {
                 <div className="flex items-center justify-between pt-3">
                   <span className="text-xs text-muted-foreground">{post.readTime}</span>
                   {!post.isVideo && (
-                    <a href={post.url} target="_blank" rel="noopener noreferrer" aria-label={`Read article: ${post.title}`} className="text-xs text-accent inline-flex items-center hover:underline">
-                      {t("insights.readMore")} <ArrowRight className="ml-1 h-3 w-3" />
+                    <a href={post.url} target="_blank" rel="noopener noreferrer" aria-label={`Read full article: ${post.title}`} className="text-xs text-accent inline-flex items-center hover:underline">
+                      Read full article <ArrowRight className="ml-1 h-3 w-3" />
                     </a>
                   )}
                 </div>
