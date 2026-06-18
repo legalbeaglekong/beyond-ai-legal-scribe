@@ -38,6 +38,20 @@ export interface PillarFaq {
   a: string;
 }
 
+export interface PillarGuideStep {
+  title: string;
+  body: string;
+}
+
+export interface PillarGuide {
+  id: string;                   // anchor id, e.g. "ai-verify-guide"
+  eyebrow?: string;
+  heading: string;
+  intro: string;
+  steps: PillarGuideStep[];
+  closing?: string;
+}
+
 export interface PillarPageProps {
   slug: string;                 // e.g. "singapore-restructuring-insolvency"
   eyebrow: string;              // e.g. "Singapore · Restructuring & Insolvency"
@@ -54,6 +68,7 @@ export interface PillarPageProps {
   services: PillarService[];
   updates: PillarUpdate[];
   faqs: PillarFaq[];
+  guide?: PillarGuide;
   relatedKeywords: string[];
   relatedHeading: string;
   ctaHeading: string;
@@ -62,6 +77,7 @@ export interface PillarPageProps {
   lastUpdatedISO: string;       // e.g. "2026-06-09"
   lastUpdatedLabel: string;     // e.g. "June 2026"
 }
+
 
 const PillarPage = ({
   slug,
