@@ -210,7 +210,7 @@ const Header = () => {
             <div ref={langRef} className="relative">
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
-                className="flex items-center gap-1 text-foreground/60 hover:text-accent transition-smooth text-xs uppercase tracking-wider font-sans whitespace-nowrap"
+                className="flex items-center gap-1 text-foreground/80 hover:text-accent transition-smooth text-xs uppercase tracking-wider font-sans whitespace-nowrap"
               >
                 <Globe className="h-3.5 w-3.5" />
                 {currentLang?.nativeLabel}
@@ -282,7 +282,7 @@ const Header = () => {
                               if (item.hash && isHome) handleHashNavigation(e, item.hash);
                               setIsMenuOpen(false);
                             }}
-                            className="block text-foreground/60 hover:text-accent transition-smooth text-sm py-1.5"
+                            className="block text-foreground/80 hover:text-accent transition-smooth text-sm py-1.5"
                           >
                             Practice Areas
                           </a>
@@ -291,7 +291,7 @@ const Header = () => {
                               key={sub.href}
                               to={sub.href}
                               onClick={() => setIsMenuOpen(false)}
-                              className="block text-foreground/60 hover:text-accent transition-smooth text-sm py-1.5"
+                              className="block text-foreground/80 hover:text-accent transition-smooth text-sm py-1.5"
                             >
                               {sub.name}
                             </Link>
@@ -302,7 +302,7 @@ const Header = () => {
                               key={p.href}
                               to={p.href}
                               onClick={() => setIsMenuOpen(false)}
-                              className="block text-foreground/60 hover:text-accent transition-smooth text-sm py-1.5"
+                              className="block text-foreground/80 hover:text-accent transition-smooth text-sm py-1.5"
                             >
                               {p.name}
                             </Link>
@@ -360,7 +360,7 @@ const Header = () => {
                         key={lang.code}
                         onClick={() => { setLanguage(lang.code); setIsMobileLangOpen(false); setIsMenuOpen(false); }}
                         className={`block w-full text-left py-1.5 text-sm transition-smooth ${
-                          language === lang.code ? "text-accent font-medium" : "text-foreground/60 hover:text-accent"
+                          language === lang.code ? "text-accent font-medium" : "text-foreground/80 hover:text-accent"
                         }`}
                       >
                         {lang.nativeLabel} <span className="text-xs text-muted-foreground">({lang.label})</span>
