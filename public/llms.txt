@@ -18,6 +18,7 @@ Beyond Horizons by Bethel Chambers LLC provides outsourced general counsel, cros
 - [Team](/team): Leadership profiles and advisor network.
 - [Our Clients](/our-clients): Client ecosystem and testimonials.
 - [Announcements](/announcements): Firm news and updates.
+- [Topics](/topics): Curated guides across Singapore law and industry specialisms.
 
 ## Industries
 
@@ -32,6 +33,17 @@ Beyond Horizons by Bethel Chambers LLC provides outsourced general counsel, cros
 - [Trade & Tariff](/industry/trade-tariff): Cross-border trade, sanctions, and customs advisory.
 - [Fractional GC Services](/industry/fractional-gc): Outsourced general counsel and in-house legal support.
 - [AI Code Counsel](/industry/ai-code-counsel): MAS MindForge compliance and AI risk governance.
+
+## Singapore Law Guides
+
+- [Singapore Space Law](/singapore-space-law): OSTIn licensing, satellite operations, launch and downstream services.
+- [Singapore Aviation Law](/singapore-aviation-law): CAAS regulation, aircraft leasing (Cape Town), SAF and advanced air mobility.
+- [Singapore AI Governance](/singapore-ai-governance): IMDA Model AI Framework, AI Verify, MAS FEAT, EU AI Act readiness.
+- [Singapore Robotics Law](/singapore-robotics-law): Autonomous vehicles, service & industrial robots, AI risk overlay.
+- [Singapore Employment Law](/singapore-employment-law): MOM compliance, work passes (COMPASS), retrenchments and executive separations.
+- [Singapore Restructuring & Insolvency](/singapore-restructuring-insolvency): Schemes, JM, IRDA, cross-border recognition and distressed M&A.
+- [Singapore Nuclear Law](/singapore-nuclear-law): SMRs, financing, liability conventions and ASEAN deployment.
+- [Singapore Alternative Energy Law](/singapore-alternative-energy-law): Renewable energy, hydrogen, BESS and green project finance.
 
 ## Expertise
 
