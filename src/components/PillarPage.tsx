@@ -95,6 +95,7 @@ const PillarPage = ({
   services,
   updates,
   faqs,
+  guide,
   relatedKeywords,
   relatedHeading,
   ctaHeading,
