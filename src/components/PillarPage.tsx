@@ -154,6 +154,21 @@ const PillarPage = ({
     mainEntityOfPage: canonical,
   };
 
+  const howToJsonLd = guide
+    ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: guide.heading,
+        description: guide.intro,
+        step: guide.steps.map((s, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: s.title,
+          text: s.body,
+        })),
+      }
+    : null;
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -168,7 +183,11 @@ const PillarPage = ({
         <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(articleJsonLd)}</script>
+        {howToJsonLd && (
+          <script type="application/ld+json">{JSON.stringify(howToJsonLd)}</script>
+        )}
       </Helmet>
+
 
       <Header />
 
