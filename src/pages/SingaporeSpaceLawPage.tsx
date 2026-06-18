@@ -114,7 +114,7 @@ const SingaporeSpaceLawPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Singapore Space Law — OSTIn & Launch Counsel | Beyond Horizons</title>
+        <title>Singapore Space Law & Launch Counsel | Beyond Horizons</title>
         <meta
           name="description"
           content="Singapore space law counsel: OSTIn coordination, IMDA spectrum, satellite & launch agreements, GSTC, and the APAC commercial space ecosystem."
