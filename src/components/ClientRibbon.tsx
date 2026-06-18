@@ -1,10 +1,12 @@
 import techxLogo from "@/assets/clients/techx-ventures-full.png";
 import enertransLogo from "@/assets/clients/enertrans-global.png";
 import blockAeroLogo from "@/assets/clients/block-aero.png";
+import nexAvianAsset from "@/assets/clients/nex-avian.png.asset.json";
 
 const clients = [
   { name: "TechX Ventures", logo: techxLogo, href: "https://www.techxventures.sg" },
   { name: "Enertrans Global", logo: enertransLogo, href: "#" },
+  { name: "Nex Avian", logo: nexAvianAsset.url, href: "#" },
   { name: "Block.Aero", logo: blockAeroLogo, href: "#" },
 ];
 
