@@ -280,8 +280,8 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                     <h3 className="text-sm font-serif font-bold text-foreground mb-3">{card.title}</h3>
                     <p className="text-xs text-muted-foreground leading-relaxed mb-4 text-justify">{card.description}</p>
                     {card.link && (
-                      <a href={card.link} target="_blank" rel="noopener noreferrer" className="text-xs text-accent inline-flex items-center hover:underline">
-                        {card.linkText || "Read More"} <ArrowRight className="ml-1 h-3 w-3" />
+                      <a href={card.link} target="_blank" rel="noopener noreferrer" className="text-xs text-accent inline-flex items-center hover:underline" aria-label={`Read more about ${card.title}`}>
+                        {card.linkText || `Read about ${card.title}`} <ArrowRight className="ml-1 h-3 w-3" />
                       </a>
                     )}
                   </CardContent>
