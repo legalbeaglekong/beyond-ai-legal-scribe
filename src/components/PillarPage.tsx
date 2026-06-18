@@ -257,6 +257,36 @@ const PillarPage = ({
           </section>
         )}
 
+        {guide && (
+          <section id={guide.id} className="py-20 scroll-mt-24">
+            <div className="container mx-auto px-6 max-w-4xl">
+              {guide.eyebrow && (
+                <p className="text-sm uppercase tracking-[0.2em] text-primary mb-3 text-center">{guide.eyebrow}</p>
+              )}
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6 text-center">{guide.heading}</h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-12 text-center max-w-3xl mx-auto">{guide.intro}</p>
+              <ol className="space-y-8">
+                {guide.steps.map((s, i) => (
+                  <li key={s.title} className="flex gap-5">
+                    <span className="flex-none flex items-center justify-center h-10 w-10 rounded-full bg-primary text-primary-foreground font-serif text-lg">
+                      {i + 1}
+                    </span>
+                    <div>
+                      <h3 className="font-serif text-xl text-foreground mb-2">{s.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{s.body}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              {guide.closing && (
+                <p className="text-muted-foreground leading-relaxed mt-12 text-center max-w-3xl mx-auto">{guide.closing}</p>
+              )}
+            </div>
+          </section>
+        )}
+
+
+
         <section className="py-20">
           <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-10 text-center">Frequently Asked Questions</h2>
