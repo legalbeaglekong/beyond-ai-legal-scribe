@@ -1,34 +1,49 @@
 import techxLogo from "@/assets/clients/techx-ventures-full.png";
+import enertransLogo from "@/assets/clients/enertrans-global.png";
+import blockAeroLogo from "@/assets/clients/block-aero.png";
+import nexAvianLogo from "@/assets/clients/nex-avian.png";
 
 const clients = [
-  {
-    name: "TechX Ventures",
-    logo: techxLogo,
-    href: "https://www.techxventures.sg",
-  },
+  { name: "TechX Ventures", logo: techxLogo, href: "https://www.techxventures.sg" },
+  { name: "Enertrans Global", logo: enertransLogo, href: "#" },
+  { name: "Nex Avian", logo: nexAvianLogo, href: "#" },
+  { name: "Block.Aero", logo: blockAeroLogo, href: "#" },
 ];
 
 const ClientRibbon = () => {
+  // Duplicate the list so the marquee loops seamlessly
+  const loop = [...clients, ...clients];
+
   return (
-    <section className="bg-background border-y border-border/40 py-12">
+    <section className="bg-background border-y border-border/40 py-12 overflow-hidden">
       <div className="max-w-6xl mx-auto container-padding">
         <p className="text-center text-xs uppercase tracking-[0.3em] text-muted-foreground mb-8 font-sans">
           In Trusted Partnership With
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16">
-          {clients.map((client) => (
+      </div>
+      <div
+        className="relative w-full overflow-hidden"
+        style={{
+          maskImage:
+            "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+        }}
+      >
+        <div className="flex w-max animate-marquee gap-16 md:gap-24 pr-16 md:pr-24">
+          {loop.map((client, i) => (
             <a
-              key={client.name}
+              key={`${client.name}-${i}`}
               href={client.href}
-              target="_blank"
+              target={client.href.startsWith("http") ? "_blank" : undefined}
               rel="noopener noreferrer"
-              className="group block transition-smooth"
+              className="group flex shrink-0 items-center transition-smooth"
               aria-label={client.name}
             >
               <img
                 src={client.logo}
                 alt={`${client.name} logo`}
-                className="h-16 md:h-20 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                className="h-14 md:h-16 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                 loading="lazy"
               />
             </a>
