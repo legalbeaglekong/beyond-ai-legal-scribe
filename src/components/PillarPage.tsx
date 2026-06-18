@@ -38,6 +38,20 @@ export interface PillarFaq {
   a: string;
 }
 
+export interface PillarGuideStep {
+  title: string;
+  body: string;
+}
+
+export interface PillarGuide {
+  id: string;                   // anchor id, e.g. "ai-verify-guide"
+  eyebrow?: string;
+  heading: string;
+  intro: string;
+  steps: PillarGuideStep[];
+  closing?: string;
+}
+
 export interface PillarPageProps {
   slug: string;                 // e.g. "singapore-restructuring-insolvency"
   eyebrow: string;              // e.g. "Singapore · Restructuring & Insolvency"
@@ -54,6 +68,7 @@ export interface PillarPageProps {
   services: PillarService[];
   updates: PillarUpdate[];
   faqs: PillarFaq[];
+  guide?: PillarGuide;
   relatedKeywords: string[];
   relatedHeading: string;
   ctaHeading: string;
@@ -62,6 +77,7 @@ export interface PillarPageProps {
   lastUpdatedISO: string;       // e.g. "2026-06-09"
   lastUpdatedLabel: string;     // e.g. "June 2026"
 }
+
 
 const PillarPage = ({
   slug,
@@ -79,6 +95,7 @@ const PillarPage = ({
   services,
   updates,
   faqs,
+  guide,
   relatedKeywords,
   relatedHeading,
   ctaHeading,
@@ -137,6 +154,21 @@ const PillarPage = ({
     mainEntityOfPage: canonical,
   };
 
+  const howToJsonLd = guide
+    ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: guide.heading,
+        description: guide.intro,
+        step: guide.steps.map((s, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: s.title,
+          text: s.body,
+        })),
+      }
+    : null;
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -151,7 +183,11 @@ const PillarPage = ({
         <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(articleJsonLd)}</script>
+        {howToJsonLd && (
+          <script type="application/ld+json">{JSON.stringify(howToJsonLd)}</script>
+        )}
       </Helmet>
+
 
       <Header />
 
@@ -220,6 +256,36 @@ const PillarPage = ({
             </div>
           </section>
         )}
+
+        {guide && (
+          <section id={guide.id} className="py-20 scroll-mt-24">
+            <div className="container mx-auto px-6 max-w-4xl">
+              {guide.eyebrow && (
+                <p className="text-sm uppercase tracking-[0.2em] text-primary mb-3 text-center">{guide.eyebrow}</p>
+              )}
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6 text-center">{guide.heading}</h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-12 text-center max-w-3xl mx-auto">{guide.intro}</p>
+              <ol className="space-y-8">
+                {guide.steps.map((s, i) => (
+                  <li key={s.title} className="flex gap-5">
+                    <span className="flex-none flex items-center justify-center h-10 w-10 rounded-full bg-primary text-primary-foreground font-serif text-lg">
+                      {i + 1}
+                    </span>
+                    <div>
+                      <h3 className="font-serif text-xl text-foreground mb-2">{s.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{s.body}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              {guide.closing && (
+                <p className="text-muted-foreground leading-relaxed mt-12 text-center max-w-3xl mx-auto">{guide.closing}</p>
+              )}
+            </div>
+          </section>
+        )}
+
+
 
         <section className="py-20">
           <div className="container mx-auto px-6 max-w-4xl">
