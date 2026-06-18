@@ -89,7 +89,7 @@ const ExpertiseOverview = () => {
                       className="group-hover:bg-primary/10 group-hover:text-primary transition-smooth w-full"
                       aria-label={`Read article on ${article.title}`}
                     >
-                      Read More
+                      Read about {article.title}
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-smooth" />
                     </Button>
                   </CardContent>
