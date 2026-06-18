@@ -43,7 +43,11 @@ const ClientRibbon = () => {
               <img
                 src={client.logo}
                 alt={`${client.name} logo`}
-                className="h-14 md:h-16 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                className={`w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity ${
+                  client.name === "Block.Aero"
+                    ? "h-8 md:h-10"
+                    : "h-14 md:h-16"
+                }`}
                 loading="lazy"
               />
             </a>
