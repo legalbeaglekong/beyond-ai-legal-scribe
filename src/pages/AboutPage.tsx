@@ -48,7 +48,7 @@ const AboutPage = () => {
               email: "HL@beyondhorizons.sg",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "39B Neil Rd (Level 3)",
+                streetAddress: "39B Neil Road, #03-01",
                 addressLocality: "Singapore",
                 postalCode: "088823",
                 addressCountry: "SG"
