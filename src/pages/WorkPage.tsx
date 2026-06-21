@@ -12,7 +12,7 @@ import ascendingAsiaImg from "@/assets/ascending-asia-evtol.jpg";
 import robotLawImg from "@/assets/robot-law-humanoid.jpg";
 import workCtaVideo from "@/assets/work-cta-marble-bg.mp4.asset.json";
 
-const BOOKING_URL = "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
+const BOOKING_URL = "https://wa.me/6597265330";
 
 const platforms = [
   {

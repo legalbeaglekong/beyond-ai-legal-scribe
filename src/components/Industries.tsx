@@ -99,7 +99,7 @@ const Industries = () => {
             <h3 className="text-2xl font-serif text-foreground mb-4">{t("industries.ctaTitle")}</h3>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{t("industries.ctaDesc")}</p>
             <Button variant="default" size="lg" asChild className="animate-blink-glow">
-              <a href="https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/6597265330" target="_blank" rel="noopener noreferrer">
                 {t("industries.ctaButton")} <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>

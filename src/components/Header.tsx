@@ -237,7 +237,7 @@ const Header = () => {
             {/* CTA */}
             <Button variant="outline" size="sm" className="tracking-wider text-xs uppercase whitespace-nowrap shadow-md border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent" asChild>
               <a 
-                href="https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled"
+                href="https://wa.me/6597265330"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -371,7 +371,7 @@ const Header = () => {
               </div>
               <Button variant="outline" size="lg" className="w-full mt-4 border-accent text-accent hover:bg-accent hover:text-accent-foreground" asChild>
                 <a 
-                  href="https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled"
+                  href="https://wa.me/6597265330"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

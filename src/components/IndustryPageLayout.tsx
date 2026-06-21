@@ -39,7 +39,7 @@ import VideoBackground from "@/components/VideoBackground";
 import AccoladeBanner from "@/components/AccoladeBanner";
 import { STOCK_VIDEOS } from "@/lib/stock-videos";
 
-const BOOKING_URL = "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
+const BOOKING_URL = "https://wa.me/6597265330";
 
 export interface IndustryPageData {
   slug: string;

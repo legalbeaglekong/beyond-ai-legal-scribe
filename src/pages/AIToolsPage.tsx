@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Mail, Plane, Shield, FileText, BarChart3, Leaf, Brain, Scale, Globe, Bot, Search, ExternalLink } from "lucide-react";
 
-const BOOKING_URL = "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
+const BOOKING_URL = "https://wa.me/6597265330";
 
 const tools = [
   {

@@ -8,7 +8,7 @@ import { Award, BookOpen, Users, TrendingUp, ExternalLink, ArrowRight } from "lu
 import VideoBackground from "@/components/VideoBackground";
 import { STOCK_VIDEOS } from "@/lib/stock-videos";
 
-const BOOKING_URL = "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
+const BOOKING_URL = "https://wa.me/6597265330";
 
 const AboutPage = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);

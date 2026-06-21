@@ -8,7 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Rocket, Satellite, Globe, Shield, Calendar, Newspaper, Building2, ArrowRight, Mail } from "lucide-react";
 import RelatedInsights from "@/components/RelatedInsights";
 
-const BOOKING_URL = "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
+const BOOKING_URL = "https://wa.me/6597265330";
 const CANONICAL = "https://beyondhorizons.sg/singapore-space-law";
 
 const faqs = [

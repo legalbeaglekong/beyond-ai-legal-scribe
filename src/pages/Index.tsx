@@ -40,7 +40,7 @@ const Index = () => {
             description: "Chambers Global ranked legal counsel for visionaries in Singapore and across Asia Pacific.",
             areaServed: "Asia-Pacific",
             sameAs: [
-              "https://www.linkedin.com/company/beyond-horizons-by-bethel-chambers-llc"
+              "https://www.linkedin.com/company/beyondhorizonslegal"
             ]
           })}
         </script>

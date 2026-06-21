@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import AccoladeBanner from "@/components/AccoladeBanner";
 
-const BOOKING_URL = "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
+const BOOKING_URL = "https://wa.me/6597265330";
 
 const comparisonSections = [
   {
