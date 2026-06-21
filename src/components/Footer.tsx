@@ -67,7 +67,7 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-start space-x-2">
                   <MapPin className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
-                  <div className="text-xs text-muted-foreground"><div>39B Neil Rd (Level 3)</div><div>Singapore 088823</div></div>
+                  <div className="text-xs text-muted-foreground">39B Neil Road, #03-01, Singapore 088823</div>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="h-4 w-4 text-accent" />
@@ -89,9 +89,15 @@ const Footer = () => {
         <hr className="border-border/30" />
 
         <div className="py-8">
+          <p className="text-xs text-muted-foreground text-center md:text-left mb-4">
+            Beyond Horizons is a service of Bethel Chambers LLC, a law practice registered in Singapore. UEN: 202007868D.
+          </p>
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-xs text-muted-foreground">{t("footer.copyright")}</div>
-            <a href="https://bethelchambers.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-accent transition-smooth">{t("footer.privacyPolicy")}</a>
+            <div className="flex items-center gap-6">
+              <a href="https://bethelchambers.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-accent transition-smooth">{t("footer.privacyPolicy")}</a>
+              <Link to="/terms" className="text-xs text-muted-foreground hover:text-accent transition-smooth">Terms of Use</Link>
+            </div>
           </div>
           <div className="mt-6 flex flex-wrap justify-center gap-6 text-xs text-muted-foreground">
             <div className="flex items-center space-x-1.5"><Rocket className="h-3 w-3 text-accent" /><span>{t("footer.strategicInnovation")}</span></div>

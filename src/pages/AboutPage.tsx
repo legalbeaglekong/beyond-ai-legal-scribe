@@ -8,7 +8,7 @@ import { Award, BookOpen, Users, TrendingUp, ExternalLink, ArrowRight } from "lu
 import VideoBackground from "@/components/VideoBackground";
 import { STOCK_VIDEOS } from "@/lib/stock-videos";
 
-const BOOKING_URL = "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
+const BOOKING_URL = "https://wa.me/6597265330";
 
 const AboutPage = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -48,7 +48,7 @@ const AboutPage = () => {
               email: "HL@beyondhorizons.sg",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "39B Neil Rd (Level 3)",
+                streetAddress: "39B Neil Road, #03-01",
                 addressLocality: "Singapore",
                 postalCode: "088823",
                 addressCountry: "SG"

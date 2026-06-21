@@ -59,7 +59,7 @@ const GlobalPartners = () => {
 
           <div className="text-center">
             <Button size="lg" className="mr-4 animate-blink-glow" asChild>
-              <a href="https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/6597265330" target="_blank" rel="noopener noreferrer">
                 {t("globalPartners.scheduleConsultation")}
               </a>
             </Button>

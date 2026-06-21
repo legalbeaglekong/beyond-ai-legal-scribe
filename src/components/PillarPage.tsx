@@ -19,7 +19,7 @@ import {
 import RelatedInsights from "@/components/RelatedInsights";
 
 const BOOKING_URL =
-  "https://outlook.office.com/book/BeyondHorizonsbyBethelChambersLLC@huilinglawoffice.com/?ismsaljsauthenabled";
+  "https://wa.me/6597265330";
 const SITE = "https://beyondhorizons.sg";
 
 export interface PillarService {
