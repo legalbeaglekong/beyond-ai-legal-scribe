@@ -31,27 +31,39 @@ const ClientRibbon = () => {
         }}
       >
         <div className="flex w-max animate-marquee gap-16 md:gap-24 pr-16 md:pr-24">
-          {loop.map((client, i) => (
-            <a
-              key={`${client.name}-${i}`}
-              href={client.href}
-              target={client.href.startsWith("http") ? "_blank" : undefined}
-              rel="noopener noreferrer"
-              className="group flex shrink-0 items-center transition-smooth"
-              aria-label={client.name}
-            >
+          {loop.map((client, i) => {
+            const imgEl = (
               <img
                 src={client.logo}
                 alt={`${client.name} logo`}
-                className={`w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity ${
-                  client.name === "Block.Aero"
-                    ? "h-8 md:h-10"
-                    : "h-14 md:h-16"
+                className={`w-auto object-contain opacity-80 hover:opacity-100 transition-opacity ${
+                  client.name === "Block.Aero" ? "h-8 md:h-10" : "h-14 md:h-16"
                 }`}
                 loading="lazy"
               />
-            </a>
-          ))}
+            );
+            const isLinked = client.href.startsWith("http");
+            return isLinked ? (
+              <a
+                key={`${client.name}-${i}`}
+                href={client.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex shrink-0 items-center transition-smooth"
+                aria-label={client.name}
+              >
+                {imgEl}
+              </a>
+            ) : (
+              <div
+                key={`${client.name}-${i}`}
+                className="flex shrink-0 items-center"
+                aria-label={client.name}
+              >
+                {imgEl}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
