@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Award, BookOpen, Users, TrendingUp, ExternalLink, ArrowRight } from "lucide-react";
 import VideoBackground from "@/components/VideoBackground";
 import { STOCK_VIDEOS } from "@/lib/stock-videos";
+import { ADDRESS_PARTS } from "@/config/business";
 
 const BOOKING_URL = "https://wa.me/6597265330";
 
@@ -48,10 +49,12 @@ const AboutPage = () => {
               email: "HL@beyondhorizons.sg",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "39B Neil Road, #03-01",
-                addressLocality: "Singapore",
-                postalCode: "088823",
-                addressCountry: "SG"
+                ...ADDRESS_PARTS
+              },
+              parentOrganization: {
+                "@type": "Organization",
+                name: "Bethel Chambers LLC",
+                identifier: "UEN 202007868D"
               }
             }
           })}
