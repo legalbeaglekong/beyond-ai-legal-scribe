@@ -5,12 +5,13 @@ import VideoBackground from "@/components/VideoBackground";
 import { useLanguage } from "@/i18n/LanguageContext";
 import contactBanner from "@/assets/contact-banner.jpg";
 import contactVideo from "@/assets/contact-neutral-bg.mp4.asset.json";
+import { ADDRESS_PARTS } from "@/config/business";
 
 const Contact = () => {
   const { t } = useLanguage();
 
   const contactInfo = [
-    { icon: MapPin, title: t("contact.singaporeOffice"), details: ["39B Neil Road, #03-01", "Singapore 088823"] },
+    { icon: MapPin, title: t("contact.singaporeOffice"), details: [ADDRESS_PARTS.streetAddress, `${ADDRESS_PARTS.addressLocality} ${ADDRESS_PARTS.postalCode}`] },
     { icon: Mail, title: t("contact.email"), details: ["HL@beyondhorizons.sg", t("contact.emailResponse")] },
     { icon: MessageCircle, title: t("contact.whatsapp"), details: [t("contact.whatsappChat"), t("contact.whatsappDesc")] },
     { icon: Globe, title: t("contact.globalPartnersLabel"), details: [t("contact.globalPartnersDesc1"), t("contact.globalPartnersDesc2")] },

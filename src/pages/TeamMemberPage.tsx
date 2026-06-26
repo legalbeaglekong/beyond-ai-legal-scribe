@@ -137,12 +137,27 @@ const TeamMemberPage = () => {
             description: highlights.join(" "),
             worksFor: {
               "@type": "Organization",
-              name: "Bethel Chambers LLC",
-              url: "https://beyondhorizons.sg"
+              name: "Beyond Horizons by Bethel Chambers LLC",
+              url: "https://beyondhorizons.sg",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "39B Neil Road, #03-01",
+                addressLocality: "Singapore",
+                postalCode: "088823",
+                addressCountry: "SG"
+              }
             },
             image: member.image,
             url: `https://beyondhorizons.sg/team/${slug}`,
-            sameAs: member.linkedin ? [member.linkedin] : undefined
+            sameAs: member.linkedin ? [member.linkedin] : undefined,
+            award: member.name === "Hui Ling Teo" ? [
+              "Chambers Asia-Pacific — Asset Finance (Band 3), ranked since 2019",
+              "Legal 500 Next Generation Partner 2023"
+            ] : undefined,
+            alumniOf: member.name === "Sonia Motwani" ? {
+              "@type": "EducationalOrganization",
+              name: "University of Birmingham"
+            } : undefined
           })}
         </script>
       </Helmet>

@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote, ExternalLink, Brain, Lightbulb, Globe, TrendingUp } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import VideoBackground from "@/components/VideoBackground";
 import { useLanguage } from "@/i18n/LanguageContext";
 import testimonialsVideo from "@/assets/testimonials-vessel-bg.mp4.asset.json";
@@ -26,8 +27,32 @@ const Testimonials = () => {
     { title: t("testimonials.attr4Title"), desc: t("testimonials.attr4Desc"), icon: TrendingUp },
   ];
 
+  // Review JSON-LD — marks up the third-party quotes already visible on this page.
+  // Authors are real publications; no ratings invented.
+  const reviewJsonLd = chambersTestimonials.map((te) => {
+    const yearMatch = te.source.match(/(20\d{2})/);
+    return {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      reviewBody: te.quote,
+      author: { "@type": "Organization", name: "Chambers and Partners" },
+      publisher: { "@type": "Organization", name: te.source },
+      datePublished: yearMatch ? yearMatch[1] : undefined,
+      itemReviewed: {
+        "@type": "LegalService",
+        "@id": "https://beyondhorizons.sg/#organization",
+        name: "Beyond Horizons by Bethel Chambers LLC",
+      },
+    };
+  });
+
   return (
     <section className="relative">
+      <Helmet>
+        {reviewJsonLd.map((r, i) => (
+          <script key={i} type="application/ld+json">{JSON.stringify(r)}</script>
+        ))}
+      </Helmet>
       <VideoBackground src={testimonialsVideo.url} className="h-[35vh]" overlayClassName="absolute inset-0 bg-black/60">
         <div className="h-[35vh] flex items-center justify-center">
           <div className="text-center">

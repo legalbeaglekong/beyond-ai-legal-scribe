@@ -41,7 +41,7 @@ import FractionalGCPage from "./pages/industry/FractionalGCPage";
 import AICodeCounselPage from "./pages/industry/AICodeCounselPage";
 import TeamPage from "./pages/TeamPage";
 import TeamMemberPage from "./pages/TeamMemberPage";
-import TermsPage from "./pages/TermsPage";
+
 import WhatsAppFab from "./components/WhatsAppFab";
 
 const queryClient = new QueryClient();
@@ -91,7 +91,7 @@ const App = () => (
               <Route path="/our-clients" element={<OurClientsPage />} />
               <Route path="/announcements" element={<AnnouncementsPage />} />
               <Route path="/team/:slug" element={<TeamMemberPage />} />
-              <Route path="/terms" element={<TermsPage />} />
+              
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
