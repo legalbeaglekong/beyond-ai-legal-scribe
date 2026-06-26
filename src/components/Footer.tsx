@@ -1,6 +1,18 @@
 import { MapPin, Mail, Linkedin, BookOpen, Scale, Rocket, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
+import {
+  CANONICAL_ADDRESS,
+  EMAIL,
+  WHATSAPP_URL,
+  LINKEDIN_URL,
+  PARENT_PRIVACY_URL,
+  PARENT_TERMS_URL,
+  UEN,
+  REGULATORY_BLURB,
+  LEGAL_DISCLAIMER,
+  LEGAL_ENTITY,
+} from "@/config/business";
 
 const singaporePillars: { label: string; to: string }[] = [
   { label: "Singapore Space Law", to: "/singapore-space-law" },
@@ -16,6 +28,7 @@ const singaporePillars: { label: string; to: string }[] = [
 
 const Footer = () => {
   const { t, language } = useLanguage();
+  const year = new Date().getFullYear();
 
   const resources = language === "zh"
     ? ["战略商业咨询", "行业洞察通讯", "演讲活动", "法律出版物"]
@@ -29,7 +42,7 @@ const Footer = () => {
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-serif font-bold text-foreground mb-1">Beyond Horizons</h3>
-                <p className="text-xs text-muted-foreground">Bethel Chambers LLC</p>
+                <p className="text-xs text-muted-foreground">{LEGAL_ENTITY}</p>
                 <div className="teal-line mt-3" />
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">{t("footer.tagline")}</p>
@@ -67,19 +80,19 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-start space-x-2">
                   <MapPin className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
-                  <div className="text-xs text-muted-foreground">39B Neil Road, #03-01, Singapore 088823</div>
+                  <div className="text-xs text-muted-foreground">{CANONICAL_ADDRESS}</div>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="h-4 w-4 text-accent" />
-                  <a href="mailto:HL@beyondhorizons.sg" className="text-xs text-muted-foreground hover:text-accent transition-smooth">HL@beyondhorizons.sg</a>
+                  <a href={`mailto:${EMAIL}`} className="text-xs text-muted-foreground hover:text-accent transition-smooth">{EMAIL}</a>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MessageCircle className="h-4 w-4 text-accent" />
-                  <a href="https://wa.me/6597265330" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-accent transition-smooth">{t("footer.chatWhatsApp")}</a>
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-accent transition-smooth">{t("footer.chatWhatsApp")}</a>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Linkedin className="h-4 w-4 text-accent" />
-                  <a href="https://www.linkedin.com/company/beyondhorizonslegal" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-accent transition-smooth">{t("footer.connectLinkedIn")}</a>
+                  <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-accent transition-smooth">{t("footer.connectLinkedIn")}</a>
                 </div>
               </div>
             </div>
@@ -88,18 +101,28 @@ const Footer = () => {
 
         <hr className="border-border/30" />
 
-        <div className="py-8">
-          <p className="text-xs text-muted-foreground text-center md:text-left mb-4">
-            Beyond Horizons is a service of Bethel Chambers LLC, a law practice registered in Singapore. UEN: 202007868D.
+        {/* Regulatory / compliance block */}
+        <div className="py-8 space-y-4">
+          <p className="text-xs text-muted-foreground leading-relaxed text-center md:text-left">
+            {REGULATORY_BLURB} UEN: {UEN}. Registered office: {CANONICAL_ADDRESS}.
           </p>
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-xs text-muted-foreground">{t("footer.copyright")}</div>
+          <p className="text-xs text-muted-foreground/80 leading-relaxed italic text-center md:text-left">
+            {LEGAL_DISCLAIMER}
+          </p>
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 pt-2">
+            <div className="text-xs text-muted-foreground">
+              © {year} {LEGAL_ENTITY}. All rights reserved.
+            </div>
             <div className="flex items-center gap-6">
-              <a href="https://bethelchambers.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-accent transition-smooth">{t("footer.privacyPolicy")}</a>
-              <Link to="/terms" className="text-xs text-muted-foreground hover:text-accent transition-smooth">Terms of Use</Link>
+              <a href={PARENT_PRIVACY_URL} target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-accent transition-smooth">
+                {t("footer.privacyPolicy")}
+              </a>
+              <a href={PARENT_TERMS_URL} target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-accent transition-smooth">
+                Terms of Service
+              </a>
             </div>
           </div>
-          <div className="mt-6 flex flex-wrap justify-center gap-6 text-xs text-muted-foreground">
+          <div className="mt-2 flex flex-wrap justify-center gap-6 text-xs text-muted-foreground">
             <div className="flex items-center space-x-1.5"><Rocket className="h-3 w-3 text-accent" /><span>{t("footer.strategicInnovation")}</span></div>
             <div className="flex items-center space-x-1.5"><BookOpen className="h-3 w-3 text-accent" /><span>{t("footer.globalAdvisory")}</span></div>
             <div className="flex items-center space-x-1.5"><Scale className="h-3 w-3 text-accent" /><span>{t("footer.dealValue")}</span></div>
