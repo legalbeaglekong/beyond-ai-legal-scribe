@@ -3,7 +3,7 @@ import heroVideo from "@/assets/landing-hero-singapore-calm.mp4.asset.json";
 import VideoBackground from "@/components/VideoBackground";
 import industryAviation from "@/assets/industry-aviation.jpg";
 import industryRobotics from "@/assets/industry-robotics.jpg";
-import industryTransportation from "@/assets/industry-transportation.jpg";
+import industryTransportation from "@/assets/industry-transportation.webp.asset.json";
 import industryEnergy from "@/assets/industry-energy.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 import AccoladeBanner from "@/components/AccoladeBanner";
@@ -62,7 +62,7 @@ const Hero = () => {
             {[
               { img: industryAviation, label: t("hero.aviation"), href: "/industry/aviation" },
               { img: industryRobotics, label: t("hero.robotics"), href: "/industry/robotics" },
-              { img: industryTransportation, label: t("hero.transportation"), href: "/industry/transportation" },
+              { img: industryTransportation.url, label: t("hero.transportation"), href: "/industry/transportation" },
               { img: industryEnergy, label: t("hero.energyTransition"), href: "/industry/energy-transition" },
             ].map((item) => (
               <a key={item.href} href={item.href} className="group block">
