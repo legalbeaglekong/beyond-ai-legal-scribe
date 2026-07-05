@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import planeTakeoff from "@/assets/plane-takeoff.jpg";
 import teamHuiling from "@/assets/team-huiling.png";
-import teamSonia from "@/assets/team-sonia.png";
+import teamSonia from "@/assets/team-sonia.webp.asset.json";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const teamMembers = [
