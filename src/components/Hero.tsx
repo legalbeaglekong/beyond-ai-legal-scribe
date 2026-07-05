@@ -62,7 +62,7 @@ const Hero = () => {
             {[
               { img: industryAviation, label: t("hero.aviation"), href: "/industry/aviation" },
               { img: industryRobotics, label: t("hero.robotics"), href: "/industry/robotics" },
-              { img: industryTransportation, label: t("hero.transportation"), href: "/industry/transportation" },
+              { img: industryTransportation.url, label: t("hero.transportation"), href: "/industry/transportation" },
               { img: industryEnergy, label: t("hero.energyTransition"), href: "/industry/energy-transition" },
             ].map((item) => (
               <a key={item.href} href={item.href} className="group block">
