@@ -70,7 +70,7 @@ const teamData: Record<string, {
     name: "Sonia Motwani",
     role: "Delivery Lead",
     roleZh: "交付负责人",
-    image: teamSonia,
+    image: teamSonia.url,
     flag: "🇬🇧",
     experience: "5 years of experience",
     experienceZh: "5年经验",
