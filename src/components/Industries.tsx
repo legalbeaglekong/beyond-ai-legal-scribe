@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import industryAviation from "@/assets/industry-aviation.jpg";
-import industryTransportation from "@/assets/industry-transportation.jpg";
+import industryTransportation from "@/assets/industry-transportation.webp.asset.json";
 import industryRobotics from "@/assets/industry-robotics.jpg";
 import industryEnergy from "@/assets/industry-energy.jpg";
 import industryTrade from "@/assets/industry-trade.jpg";

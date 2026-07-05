@@ -3,7 +3,7 @@ import heroVideo from "@/assets/landing-hero-singapore-calm.mp4.asset.json";
 import VideoBackground from "@/components/VideoBackground";
 import industryAviation from "@/assets/industry-aviation.jpg";
 import industryRobotics from "@/assets/industry-robotics.jpg";
-import industryTransportation from "@/assets/industry-transportation.jpg";
+import industryTransportation from "@/assets/industry-transportation.webp.asset.json";
 import industryEnergy from "@/assets/industry-energy.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 import AccoladeBanner from "@/components/AccoladeBanner";
