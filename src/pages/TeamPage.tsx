@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import planeTakeoff from "@/assets/plane-takeoff.jpg";
 import teamHuiling from "@/assets/team-huiling.png";
-import teamSonia from "@/assets/team-sonia.png";
+import teamSonia from "@/assets/team-sonia.webp.asset.json";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const teamMembers = [
@@ -26,7 +26,7 @@ const teamMembers = [
     name: "Sonia Motwani",
     role: "Delivery Lead",
     roleZh: "交付负责人",
-    image: teamSonia,
+    image: teamSonia.url,
     flag: "🇬🇧",
     summary: "Seasoned aerospace professional. Qualified as an English solicitor. LLB University of Birmingham.",
     summaryZh: "资深航空专业人士。英格兰注册律师。伯明翰大学法学学士。",

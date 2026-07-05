@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import teamHuiling from "@/assets/team-huiling.png";
-import teamSonia from "@/assets/team-sonia.png";
+import teamSonia from "@/assets/team-sonia.webp.asset.json";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const teamData: Record<string, {
@@ -70,7 +70,7 @@ const teamData: Record<string, {
     name: "Sonia Motwani",
     role: "Delivery Lead",
     roleZh: "交付负责人",
-    image: teamSonia,
+    image: teamSonia.url,
     flag: "🇬🇧",
     experience: "5 years of experience",
     experienceZh: "5年经验",
