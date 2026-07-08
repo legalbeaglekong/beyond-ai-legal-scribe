@@ -6,6 +6,7 @@ export const translations: Record<string, any> = {
       team: "Team",
       insights: "Insights",
       contact: "Contact",
+      courses: "Courses",
       schedule: "Schedule Consultation",
     },
     hero: {
