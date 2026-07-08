@@ -228,6 +228,7 @@ export const translations: Record<string, any> = {
       stayUpdatedDesc: "Stay informed with our specialized newsletters covering legal developments and regulatory trends.",
       subscribeLegal: "Subscribe for Legal Updates",
       businessTech: "Business & Tech Updates",
+      browseCourses: "Browse Courses & Training",
     },
     courses: {
       heroLabel: "Learning",
