@@ -73,8 +73,19 @@ const Footer = () => {
               <h4 className="text-sm font-sans uppercase tracking-wider text-accent">{t("footer.resources")}</h4>
               <ul className="space-y-2">
                 {resources.map((r, i) => (
-                  <li key={i}><a href="#" className="text-xs text-muted-foreground hover:text-accent transition-smooth flex items-center"><BookOpen className="h-3 w-3 mr-2" />{r}</a></li>
+                  <li key={i}>
+                    {r.href.startsWith("/") ? (
+                      <Link to={r.href} className="text-xs text-muted-foreground hover:text-accent transition-smooth flex items-center">
+                        <BookOpen className="h-3 w-3 mr-2" />{r.label}
+                      </Link>
+                    ) : (
+                      <a href={r.href} className="text-xs text-muted-foreground hover:text-accent transition-smooth flex items-center">
+                        <BookOpen className="h-3 w-3 mr-2" />{r.label}
+                      </a>
+                    )}
+                  </li>
                 ))}
+
               </ul>
             </div>
 
