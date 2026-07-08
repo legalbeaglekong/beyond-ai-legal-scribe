@@ -30,9 +30,13 @@ const Footer = () => {
   const { t, language } = useLanguage();
   const year = new Date().getFullYear();
 
-  const resources = language === "zh"
-    ? ["战略商业咨询", "行业洞察通讯", "演讲活动", "法律出版物"]
-    : ["Strategic Business Advisory", "Industry Insights Newsletter", "Speaking Engagements", "Legal Publications"];
+  const resources = [
+    { label: language === "zh" ? "课程与培训" : "Courses & Training", href: "/courses" },
+    { label: language === "zh" ? "战略商业咨询" : "Strategic Business Advisory", href: "#" },
+    { label: language === "zh" ? "行业洞察通讯" : "Industry Insights Newsletter", href: "#" },
+    { label: language === "zh" ? "演讲活动" : "Speaking Engagements", href: "#" },
+    { label: language === "zh" ? "法律出版物" : "Legal Publications", href: "#" },
+  ];
 
   return (
     <footer className="bg-secondary/30 border-t border-border/30">
@@ -69,8 +73,19 @@ const Footer = () => {
               <h4 className="text-sm font-sans uppercase tracking-wider text-accent">{t("footer.resources")}</h4>
               <ul className="space-y-2">
                 {resources.map((r, i) => (
-                  <li key={i}><a href="#" className="text-xs text-muted-foreground hover:text-accent transition-smooth flex items-center"><BookOpen className="h-3 w-3 mr-2" />{r}</a></li>
+                  <li key={i}>
+                    {r.href.startsWith("/") ? (
+                      <Link to={r.href} className="text-xs text-muted-foreground hover:text-accent transition-smooth flex items-center">
+                        <BookOpen className="h-3 w-3 mr-2" />{r.label}
+                      </Link>
+                    ) : (
+                      <a href={r.href} className="text-xs text-muted-foreground hover:text-accent transition-smooth flex items-center">
+                        <BookOpen className="h-3 w-3 mr-2" />{r.label}
+                      </a>
+                    )}
+                  </li>
                 ))}
+
               </ul>
             </div>
 

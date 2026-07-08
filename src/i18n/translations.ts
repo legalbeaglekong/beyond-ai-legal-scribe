@@ -6,6 +6,7 @@ export const translations: Record<string, any> = {
       team: "Team",
       insights: "Insights",
       contact: "Contact",
+      courses: "Courses",
       schedule: "Schedule Consultation",
     },
     hero: {
@@ -227,6 +228,18 @@ export const translations: Record<string, any> = {
       stayUpdatedDesc: "Stay informed with our specialized newsletters covering legal developments and regulatory trends.",
       subscribeLegal: "Subscribe for Legal Updates",
       businessTech: "Business & Tech Updates",
+      browseCourses: "Browse Courses & Training",
+    },
+    courses: {
+      heroLabel: "Learning",
+      heroTitle: "Free Legal & Business Primers",
+      heroDesc: "Self-paced courses built from our Singapore-anchored, cross-border work. Each primer is designed for busy executives and founders who need actionable frameworks, not theory.",
+      free: "Free",
+      startCourse: "Start course",
+      allCourses: "View all on Thinkific",
+      ctaTitle: "Need tailored training for your team?",
+      ctaDesc: "We design bespoke workshops and board briefings on the same topics.",
+      ctaButton: "Arrange a workshop",
     },
     contact: {
       sectionLabel: "Get Started",

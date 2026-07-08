@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Calendar, ArrowRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const Insights = () => {
@@ -15,7 +15,7 @@ const Insights = () => {
     { title: "Trump's Deep-Sea Power Play: Executive Order Sparks Global Race for Ocean Minerals", excerpt: "From the Clarion-Clipperton Zone to the Cook Islands, the seabed is the new frontier of critical minerals.", date: "May 27, 2024", readTime: "6 min read", category: "Maritime Law", url: "https://beyondhorizons.substack.com/p/trumps-deep-sea-power-play-executive" },
     { title: "VietJet Faces Scrutiny from Singapore's Advertising Authority", excerpt: "A Spotlight on Greenwashing with Regulatory Penalties in Asia's Aviation Industry.", date: "January 13, 2024", readTime: "7 min read", category: "Aviation Law", url: "https://beyondhorizons.substack.com/p/vietjet-faces-scrutiny-from-singapores" },
     { title: "Real World Asset Tokenization of Aircraft Assets?", excerpt: "RWA Tokenisation and decentralised finance solutions to render aircraft ABS obsolete?", date: "August 22, 2024", readTime: "9 min read", category: "FinTech Law", url: "https://beyondhorizons.substack.com/p/who-sto-my-aircraft-abs-securitised" },
-    { title: "Aviation Finance 101", excerpt: "A comprehensive course covering the fundamentals of aviation finance — from aircraft leasing structures to asset-backed securitisation and regulatory frameworks.", date: "2024", readTime: "Course", category: "Aviation Finance", url: "https://hui-ling-s-site-be86.thinkific.com", isVideo: false },
+    { title: "Courses & Training", excerpt: "Free self-paced primers from Beyond Horizons: cap tables, business jets, AI & work contracts, aircraft repossession, robot law, and tariff contract amendments.", date: "Updated 2024", readTime: "6 courses", category: "Learning", url: "/courses", isInternal: true },
   ];
 
   return (
@@ -56,9 +56,15 @@ const Insights = () => {
                 <div className="flex items-center justify-between pt-3">
                   <span className="text-xs text-muted-foreground">{post.readTime}</span>
                   {!post.isVideo && (
-                    <a href={post.url} target="_blank" rel="noopener noreferrer" aria-label={`Read full article: ${post.title}`} className="text-xs text-accent inline-flex items-center hover:underline">
-                      Read full article <ArrowRight className="ml-1 h-3 w-3" />
-                    </a>
+                    post.isInternal ? (
+                      <Link to={post.url} aria-label={`Browse ${post.title}`} className="text-xs text-accent inline-flex items-center hover:underline">
+                        {t("insights.browseCourses")} <ArrowRight className="ml-1 h-3 w-3" />
+                      </Link>
+                    ) : (
+                      <a href={post.url} target="_blank" rel="noopener noreferrer" aria-label={`Read full article: ${post.title}`} className="text-xs text-accent inline-flex items-center hover:underline">
+                        Read full article <ArrowRight className="ml-1 h-3 w-3" />
+                      </a>
+                    )
                   )}
                 </div>
               </CardContent>
