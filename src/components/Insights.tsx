@@ -58,7 +58,7 @@ const Insights = () => {
                   {!post.isVideo && (
                     post.isInternal ? (
                       <Link to={post.url} aria-label={`Browse ${post.title}`} className="text-xs text-accent inline-flex items-center hover:underline">
-                        Browse {post.title} <ArrowRight className="ml-1 h-3 w-3" />
+                        {t("insights.browseCourses")} <ArrowRight className="ml-1 h-3 w-3" />
                       </Link>
                     ) : (
                       <a href={post.url} target="_blank" rel="noopener noreferrer" aria-label={`Read full article: ${post.title}`} className="text-xs text-accent inline-flex items-center hover:underline">
