@@ -93,8 +93,10 @@ const App = () => (
               <Route path="/our-clients" element={<OurClientsPage />} />
               <Route path="/announcements" element={<AnnouncementsPage />} />
               <Route path="/team/:slug" element={<TeamMemberPage />} />
+              <Route path="/courses" element={<CoursesPage />} />
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+
               <Route path="*" element={<NotFound />} />
             </Routes>
             <WhatsAppFab />
