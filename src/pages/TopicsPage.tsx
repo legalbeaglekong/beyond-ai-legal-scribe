@@ -79,7 +79,7 @@ const TopicsPage = () => {
         <title>Singapore Legal Topics & Practice Areas | Beyond Horizons</title>
         <meta
           name="description"
-          content="Browse every Singapore legal topic and industry practice at Beyond Horizons — space, AI, employment, restructuring, energy, nuclear, aviation, robotics and more."
+          content="Browse every Singapore legal topic and industry practice at Beyond Horizons — space, AI, employment, restructuring, energy, aviation, robotics and more."
         />
         <link rel="canonical" href={CANONICAL} />
         <meta property="og:title" content="Singapore Legal Topics — Beyond Horizons" />
