@@ -41,11 +41,11 @@ const clusters = [
     ],
   },
   {
-    heading: "Energy Transition, Nuclear & Climate",
+    heading: "Energy Transition & Climate",
     items: [
       { to: "/singapore-alternative-energy-law", title: "Singapore Alternative Energy Law", desc: "Electricity imports, hydrogen, BESS, Article 6 carbon." },
-      { to: "/singapore-nuclear-law", title: "Singapore Nuclear Law", desc: "SMRs, nuclear financing, liability conventions, ASEAN deployment." },
       { to: "/industry/energy-transition", title: "Energy Transition Practice", desc: "Renewables, grids and decarbonisation." },
+
     ],
   },
   {
