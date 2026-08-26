@@ -25,7 +25,6 @@ const practiceLinks = [
   { name: "Aviation", href: "/singapore-aviation-law" },
   { name: "Robotics", href: "/singapore-robotics-law" },
   { name: "Alternative Energy", href: "/singapore-alternative-energy-law" },
-  { name: "Nuclear & SMR", href: "/singapore-nuclear-law" },
 ];
 
 const Header = () => {

@@ -22,7 +22,6 @@ const singaporePillars: { label: string; to: string }[] = [
   { label: "Aviation Law", to: "/singapore-aviation-law" },
   { label: "Robotics Law", to: "/singapore-robotics-law" },
   { label: "Alternative Energy", to: "/singapore-alternative-energy-law" },
-  { label: "Nuclear & SMR Advisory", to: "/singapore-nuclear-law" },
   { label: "All Topics", to: "/topics" },
 ];
 

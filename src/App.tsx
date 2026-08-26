@@ -32,7 +32,6 @@ import SingaporeSpaceLawPage from "./pages/SingaporeSpaceLawPage";
 import SingaporeEmploymentLawPage from "./pages/SingaporeEmploymentLawPage";
 import SingaporeAIGovernancePage from "./pages/SingaporeAIGovernancePage";
 import SingaporeRestructuringPage from "./pages/SingaporeRestructuringPage";
-import SingaporeNuclearLawPage from "./pages/SingaporeNuclearLawPage";
 import SingaporeAviationLawPage from "./pages/SingaporeAviationLawPage";
 import SingaporeRoboticsLawPage from "./pages/SingaporeRoboticsLawPage";
 import SingaporeAlternativeEnergyPage from "./pages/SingaporeAlternativeEnergyPage";
@@ -78,7 +77,6 @@ const App = () => (
               <Route path="/singapore-employment-law" element={<SingaporeEmploymentLawPage />} />
               <Route path="/singapore-ai-governance" element={<SingaporeAIGovernancePage />} />
               <Route path="/singapore-restructuring-insolvency" element={<SingaporeRestructuringPage />} />
-              <Route path="/singapore-nuclear-law" element={<SingaporeNuclearLawPage />} />
               <Route path="/singapore-aviation-law" element={<SingaporeAviationLawPage />} />
               <Route path="/singapore-robotics-law" element={<SingaporeRoboticsLawPage />} />
               <Route path="/singapore-alternative-energy-law" element={<SingaporeAlternativeEnergyPage />} />

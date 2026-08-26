@@ -41,11 +41,11 @@ const clusters = [
     ],
   },
   {
-    heading: "Energy Transition, Nuclear & Climate",
+    heading: "Energy Transition & Climate",
     items: [
       { to: "/singapore-alternative-energy-law", title: "Singapore Alternative Energy Law", desc: "Electricity imports, hydrogen, BESS, Article 6 carbon." },
-      { to: "/singapore-nuclear-law", title: "Singapore Nuclear Law", desc: "SMRs, nuclear financing, liability conventions, ASEAN deployment." },
       { to: "/industry/energy-transition", title: "Energy Transition Practice", desc: "Renewables, grids and decarbonisation." },
+
     ],
   },
   {
@@ -79,7 +79,7 @@ const TopicsPage = () => {
         <title>Singapore Legal Topics & Practice Areas | Beyond Horizons</title>
         <meta
           name="description"
-          content="Browse every Singapore legal topic and industry practice at Beyond Horizons — space, AI, employment, restructuring, energy, nuclear, aviation, robotics and more."
+          content="Browse every Singapore legal topic and industry practice at Beyond Horizons — space, AI, employment, restructuring, energy, aviation, robotics and more."
         />
         <link rel="canonical" href={CANONICAL} />
         <meta property="og:title" content="Singapore Legal Topics — Beyond Horizons" />
