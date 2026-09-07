@@ -61,7 +61,7 @@ export interface IndustryPageData {
     /** Generic n-column table (first column is the row label). */
     columns?: string[];
     matrix?: string[][];
-    note?: string;
+    notes?: string[];
     hideDefaultCaption?: boolean;
     hideAccolades?: boolean;
   };
