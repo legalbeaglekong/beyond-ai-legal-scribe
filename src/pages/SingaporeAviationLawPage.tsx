@@ -7,7 +7,7 @@ const SingaporeAviationLawPage = () => (
     eyebrow="English-law documents · APAC time-zone coverage"
     h1="Aviation Law — English-law Documents, Singapore-law Coordination"
     intro="Most aviation finance and leasing matters we see are governed by English law. We advise on those documents with English and Singapore law qualification on the team, and coordinate the Singapore-law pieces — CAAS regulatory interfaces, security, filings and opinions — when the deal needs them. Documents can be stress-tested with our disputes and arbitration team before they have to survive a default, redelivery fight or enforcement path. We are a law practice: we do not underwrite securities, lend, broker aircraft, or act as a CAMO/MRO."
-    badges={["English-law Leases & Financings", "Cape Town, IDERA & Filings", "CAAS Regulatory Coordination"]}
+    badges={["English-law Leases & Financings", "Cape Town, IDERA & Filings", "CAAS Regulatory Coordination", "$8B+ deal value (2024 & 2025)"]}
     metaTitle="Singapore Aviation Lawyer — English-law Leasing & Finance | Beyond Horizons"
     metaDescription="Aviation counsel for English-law leases, engines, portfolios and financings, with Singapore-law coordination: CAAS, Cape Town, IDERA, security and opinions."
     ogTitle="Aviation Law — English-law Documents, APAC Time-zone Coverage"
