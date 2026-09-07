@@ -270,6 +270,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         </section>
 
         {/* Comparison */}
+        {data.comparison && (
         <section className="section-padding bg-background">
           <div className="max-w-5xl mx-auto container-padding fade-in">
             <div className="text-center mb-12">
@@ -279,33 +280,65 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               </h2>
             </div>
             <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="border-b border-border/50">
-                    <th className="py-4 px-4 text-xs text-muted-foreground font-sans uppercase tracking-wider w-1/4">Feature</th>
-                    <th className="py-4 px-4 text-xs text-muted-foreground font-sans uppercase tracking-wider w-[37.5%]">{data.comparison.otherLabel}</th>
-                    <th className="py-4 px-4 text-xs text-accent font-sans uppercase tracking-wider w-[37.5%]">Beyond Horizons</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {data.comparison.rows.map((row, i) => (
-                    <tr key={i} className="border-b border-border/20">
-                      <td className="py-4 px-4 text-sm text-foreground font-sans">{row.feature}</td>
-                      <td className="py-4 px-4 text-xs text-muted-foreground">{row.other}</td>
-                      <td className="py-4 px-4 text-xs text-foreground">{row.bh}</td>
+              {data.comparison.columns && data.comparison.matrix ? (
+                <table className="w-full text-left border-collapse min-w-[720px]">
+                  <thead>
+                    <tr className="border-b border-border/50">
+                      {data.comparison.columns.map((col, i) => (
+                        <th key={i} className={`py-4 px-4 text-xs font-sans uppercase tracking-wider ${i === 1 ? "text-accent" : "text-muted-foreground"}`}>
+                          {col}
+                        </th>
+                      ))}
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {data.comparison.matrix.map((row, i) => (
+                      <tr key={i} className="border-b border-border/20 align-top">
+                        {row.map((cell, ci) => (
+                          <td key={ci} className={ci === 0 ? "py-4 px-4 text-sm text-foreground font-sans" : `py-4 px-4 text-xs ${ci === 1 ? "text-foreground" : "text-muted-foreground"}`}>
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              ) : (
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b border-border/50">
+                      <th className="py-4 px-4 text-xs text-muted-foreground font-sans uppercase tracking-wider w-1/4">Feature</th>
+                      <th className="py-4 px-4 text-xs text-muted-foreground font-sans uppercase tracking-wider w-[37.5%]">{data.comparison.otherLabel}</th>
+                      <th className="py-4 px-4 text-xs text-accent font-sans uppercase tracking-wider w-[37.5%]">Beyond Horizons</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {(data.comparison.rows ?? []).map((row, i) => (
+                      <tr key={i} className="border-b border-border/20">
+                        <td className="py-4 px-4 text-sm text-foreground font-sans">{row.feature}</td>
+                        <td className="py-4 px-4 text-xs text-muted-foreground">{row.other}</td>
+                        <td className="py-4 px-4 text-xs text-foreground">{row.bh}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              )}
             </div>
-             <p className="text-xs text-muted-foreground mt-6 text-center">
-               Comparison reflects general industry models. Every engagement is unique.
-             </p>
-             <AccoladeBanner variant="compact" className="mt-8" />
+            {data.comparison.note && (
+              <p className="text-xs text-muted-foreground mt-6 leading-relaxed">{data.comparison.note}</p>
+            )}
+            {!data.comparison.hideDefaultCaption && (
+              <p className="text-xs text-muted-foreground mt-6 text-center">
+                Comparison reflects general industry models. Every engagement is unique.
+              </p>
+            )}
+            {!data.comparison.hideAccolades && <AccoladeBanner variant="compact" className="mt-8" />}
           </div>
         </section>
+        )}
 
         {/* Spotlight */}
+        {data.spotlight && (
         <section className="section-padding bg-secondary/20">
           <div className="max-w-6xl mx-auto container-padding fade-in">
             <div className="text-center mb-12">
@@ -326,7 +359,19 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                       <div className="w-1.5 h-1.5 rounded-full bg-accent mb-4" />
                     )}
                     <h3 className="text-sm font-serif font-bold text-foreground mb-3">{card.title}</h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed mb-4 text-justify">{card.description}</p>
+                    {card.description && (
+                      <p className="text-xs text-muted-foreground leading-relaxed mb-4 text-justify">{card.description}</p>
+                    )}
+                    {card.bullets && (
+                      <ul className="space-y-1.5 mb-4">
+                        {card.bullets.map((b, bi) => (
+                          <li key={bi} className="text-xs text-muted-foreground leading-relaxed flex gap-2">
+                            <span className="mt-1.5 w-1 h-1 rounded-full bg-accent shrink-0" />
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                     {card.link && (
                       <a href={card.link} target="_blank" rel="noopener noreferrer" className="text-xs text-accent inline-flex items-center hover:underline" aria-label={`Read more about ${card.title}`}>
                         {card.linkText || `Read about ${card.title}`} <ArrowRight className="ml-1 h-3 w-3" />
@@ -341,6 +386,23 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             )}
           </div>
         </section>
+        )}
+
+        {/* Closing prose */}
+        {data.closing && (
+          <section className="section-padding bg-background">
+            <div className="max-w-3xl mx-auto container-padding fade-in">
+              {data.closing.heading && (
+                <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-6">{data.closing.heading}</h2>
+              )}
+              <div className="space-y-4">
+                {data.closing.paragraphs.map((p, i) => (
+                  <p key={i} className="text-sm text-muted-foreground leading-relaxed">{p}</p>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* FAQ */}
         <section className="section-padding bg-background">
