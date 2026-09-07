@@ -45,27 +45,41 @@ export interface IndustryPageData {
   slug: string;
   seo: { title: string; description: string };
   hero: { title: string; subtitle: string; badges: string[] };
+  /** Optional lead-in prose rendered directly under the hero. */
+  intro?: { paragraphs: string[]; note?: string };
   overview: {
     heading: string;
-    services: { icon: LucideIcon; title: string; description: string }[];
-    stats: string[];
+    intro?: string;
+    services: { icon: LucideIcon; title: string; description?: string; bullets?: string[] }[];
+    stats?: string[];
+    note?: string;
   };
-  comparison: {
+  comparison?: {
     heading: string;
-    otherLabel: string;
-    rows: { feature: string; other: string; bh: string }[];
+    otherLabel?: string;
+    rows?: { feature: string; other: string; bh: string }[];
+    /** Generic n-column table (first column is the row label). */
+    columns?: string[];
+    matrix?: string[][];
+    notes?: string[];
+    hideDefaultCaption?: boolean;
+    hideAccolades?: boolean;
   };
-  spotlight: {
+  spotlight?: {
     heading: string;
-    cards: { title: string; description: string; link?: string; linkText?: string; icon?: LucideIcon }[];
+    cards: { title: string; description?: string; bullets?: string[]; link?: string; linkText?: string; icon?: LucideIcon }[];
     analysis?: string;
   };
+  /** Optional closing prose section before the FAQ. */
+  closing?: { heading?: string; paragraphs: string[] };
   faqs: {
     heading: string;
     items: { question: string; answer: string }[];
   };
-  cta: { heading: string; description?: string };
+  cta: { heading: string; description?: string; note?: string };
+  /** slug may be an absolute path starting with "/" */
   relatedPages: { title: string; slug: string }[];
+  relatedExternal?: { label: string; href: string }[];
 }
 
 // Pick a hero video + matching poster based on slug
@@ -189,6 +203,20 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         </VideoBackground>
         ); })()}
 
+        {/* Intro prose */}
+        {data.intro && (
+          <section className="section-padding bg-background">
+            <div className="max-w-3xl mx-auto container-padding fade-in space-y-4">
+              {data.intro.paragraphs.map((p, i) => (
+                <p key={i} className="text-sm md:text-base text-muted-foreground leading-relaxed">{p}</p>
+              ))}
+              {data.intro.note && (
+                <p className="text-xs text-muted-foreground/90 leading-relaxed border-l-2 border-accent/40 pl-4">{data.intro.note}</p>
+              )}
+            </div>
+          </section>
+        )}
+
         {/* Overview */}
         <section id="overview" className="section-padding bg-secondary/20">
           <div className="max-w-6xl mx-auto container-padding fade-in">
@@ -197,6 +225,9 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
                 {data.overview.heading}
               </h2>
+              {data.overview.intro && (
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-6">{data.overview.intro}</p>
+              )}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {data.overview.services.map((service, i) => (
@@ -206,22 +237,40 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                       <service.icon className="h-5 w-5 text-accent" />
                     </div>
                     <h3 className="text-sm font-serif font-bold text-foreground mb-2">{service.title}</h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed text-justify">{service.description}</p>
+                    {service.description && (
+                      <p className="text-xs text-muted-foreground leading-relaxed text-justify">{service.description}</p>
+                    )}
+                    {service.bullets && (
+                      <ul className="mt-3 space-y-1.5">
+                        {service.bullets.map((b, bi) => (
+                          <li key={bi} className="text-xs text-muted-foreground leading-relaxed flex gap-2">
+                            <span className="mt-1.5 w-1 h-1 rounded-full bg-accent shrink-0" />
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </CardContent>
                 </Card>
               ))}
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {data.overview.stats.map((stat, i) => (
-                <div key={i} className="text-center p-4 border border-border rounded shadow-sm bg-card fade-in" style={{ transitionDelay: `${i * 75}ms` }}>
-                  <p className="text-sm text-foreground font-medium">{stat}</p>
-                </div>
-              ))}
-            </div>
+            {data.overview.stats && data.overview.stats.length > 0 && (
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {data.overview.stats.map((stat, i) => (
+                  <div key={i} className="text-center p-4 border border-border rounded shadow-sm bg-card fade-in" style={{ transitionDelay: `${i * 75}ms` }}>
+                    <p className="text-sm text-foreground font-medium">{stat}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            {data.overview.note && (
+              <p className="text-xs text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-8 text-center">{data.overview.note}</p>
+            )}
           </div>
         </section>
 
         {/* Comparison */}
+        {data.comparison && (
         <section className="section-padding bg-background">
           <div className="max-w-5xl mx-auto container-padding fade-in">
             <div className="text-center mb-12">
@@ -231,33 +280,69 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               </h2>
             </div>
             <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="border-b border-border/50">
-                    <th className="py-4 px-4 text-xs text-muted-foreground font-sans uppercase tracking-wider w-1/4">Feature</th>
-                    <th className="py-4 px-4 text-xs text-muted-foreground font-sans uppercase tracking-wider w-[37.5%]">{data.comparison.otherLabel}</th>
-                    <th className="py-4 px-4 text-xs text-accent font-sans uppercase tracking-wider w-[37.5%]">Beyond Horizons</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {data.comparison.rows.map((row, i) => (
-                    <tr key={i} className="border-b border-border/20">
-                      <td className="py-4 px-4 text-sm text-foreground font-sans">{row.feature}</td>
-                      <td className="py-4 px-4 text-xs text-muted-foreground">{row.other}</td>
-                      <td className="py-4 px-4 text-xs text-foreground">{row.bh}</td>
+              {data.comparison.columns && data.comparison.matrix ? (
+                <table className="w-full text-left border-collapse min-w-[720px]">
+                  <thead>
+                    <tr className="border-b border-border/50">
+                      {data.comparison.columns.map((col, i) => (
+                        <th key={i} className={`py-4 px-4 text-xs font-sans uppercase tracking-wider ${i === 1 ? "text-accent" : "text-muted-foreground"}`}>
+                          {col}
+                        </th>
+                      ))}
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {data.comparison.matrix.map((row, i) => (
+                      <tr key={i} className="border-b border-border/20 align-top">
+                        {row.map((cell, ci) => (
+                          <td key={ci} className={ci === 0 ? "py-4 px-4 text-sm text-foreground font-sans" : `py-4 px-4 text-xs ${ci === 1 ? "text-foreground" : "text-muted-foreground"}`}>
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              ) : (
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b border-border/50">
+                      <th className="py-4 px-4 text-xs text-muted-foreground font-sans uppercase tracking-wider w-1/4">Feature</th>
+                      <th className="py-4 px-4 text-xs text-muted-foreground font-sans uppercase tracking-wider w-[37.5%]">{data.comparison.otherLabel}</th>
+                      <th className="py-4 px-4 text-xs text-accent font-sans uppercase tracking-wider w-[37.5%]">Beyond Horizons</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {(data.comparison.rows ?? []).map((row, i) => (
+                      <tr key={i} className="border-b border-border/20">
+                        <td className="py-4 px-4 text-sm text-foreground font-sans">{row.feature}</td>
+                        <td className="py-4 px-4 text-xs text-muted-foreground">{row.other}</td>
+                        <td className="py-4 px-4 text-xs text-foreground">{row.bh}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              )}
             </div>
-             <p className="text-xs text-muted-foreground mt-6 text-center">
-               Comparison reflects general industry models. Every engagement is unique.
-             </p>
-             <AccoladeBanner variant="compact" className="mt-8" />
+            {data.comparison.notes && (
+              <div className="mt-6 space-y-3">
+                {data.comparison.notes.map((n, i) => (
+                  <p key={i} className="text-xs text-muted-foreground leading-relaxed">{n}</p>
+                ))}
+              </div>
+            )}
+            {!data.comparison.hideDefaultCaption && (
+              <p className="text-xs text-muted-foreground mt-6 text-center">
+                Comparison reflects general industry models. Every engagement is unique.
+              </p>
+            )}
+            {!data.comparison.hideAccolades && <AccoladeBanner variant="compact" className="mt-8" />}
           </div>
         </section>
+        )}
 
         {/* Spotlight */}
+        {data.spotlight && (
         <section className="section-padding bg-secondary/20">
           <div className="max-w-6xl mx-auto container-padding fade-in">
             <div className="text-center mb-12">
@@ -278,7 +363,19 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                       <div className="w-1.5 h-1.5 rounded-full bg-accent mb-4" />
                     )}
                     <h3 className="text-sm font-serif font-bold text-foreground mb-3">{card.title}</h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed mb-4 text-justify">{card.description}</p>
+                    {card.description && (
+                      <p className="text-xs text-muted-foreground leading-relaxed mb-4 text-justify">{card.description}</p>
+                    )}
+                    {card.bullets && (
+                      <ul className="space-y-1.5 mb-4">
+                        {card.bullets.map((b, bi) => (
+                          <li key={bi} className="text-xs text-muted-foreground leading-relaxed flex gap-2">
+                            <span className="mt-1.5 w-1 h-1 rounded-full bg-accent shrink-0" />
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                     {card.link && (
                       <a href={card.link} target="_blank" rel="noopener noreferrer" className="text-xs text-accent inline-flex items-center hover:underline" aria-label={`Read more about ${card.title}`}>
                         {card.linkText || `Read about ${card.title}`} <ArrowRight className="ml-1 h-3 w-3" />
@@ -293,6 +390,23 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             )}
           </div>
         </section>
+        )}
+
+        {/* Closing prose */}
+        {data.closing && (
+          <section className="section-padding bg-background">
+            <div className="max-w-3xl mx-auto container-padding fade-in">
+              {data.closing.heading && (
+                <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-6">{data.closing.heading}</h2>
+              )}
+              <div className="space-y-4">
+                {data.closing.paragraphs.map((p, i) => (
+                  <p key={i} className="text-sm text-muted-foreground leading-relaxed">{p}</p>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* FAQ */}
         <section className="section-padding bg-background">
@@ -340,19 +454,27 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                 </a>
               </Button>
             </div>
+            {data.cta.note && (
+              <p className="text-xs text-white/75 leading-relaxed mt-8 max-w-2xl mx-auto">{data.cta.note}</p>
+            )}
           </div>
         </VideoBackground>
 
         {/* Related */}
-        {data.relatedPages.length > 0 && (
+        {(data.relatedPages.length > 0 || (data.relatedExternal?.length ?? 0) > 0) && (
           <section className="py-16 bg-background">
             <div className="max-w-4xl mx-auto container-padding text-center">
               <h3 className="text-lg font-serif font-bold text-foreground mb-6">Related Practice Areas</h3>
               <div className="flex flex-wrap justify-center gap-3">
                 {data.relatedPages.map((page, i) => (
-                  <Link key={i} to={`/industry/${page.slug}`} className="text-xs text-muted-foreground border border-border/30 px-4 py-2 rounded-full hover:text-accent hover:border-accent/30 transition-smooth">
+                  <Link key={i} to={page.slug.startsWith("/") ? page.slug : `/industry/${page.slug}`} className="text-xs text-muted-foreground border border-border/30 px-4 py-2 rounded-full hover:text-accent hover:border-accent/30 transition-smooth">
                     {page.title}
                   </Link>
+                ))}
+                {data.relatedExternal?.map((ext, i) => (
+                  <a key={`ext-${i}`} href={ext.href} target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground border border-border/30 px-4 py-2 rounded-full hover:text-accent hover:border-accent/30 transition-smooth">
+                    {ext.label}
+                  </a>
                 ))}
               </div>
             </div>
