@@ -450,19 +450,27 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                 </a>
               </Button>
             </div>
+            {data.cta.note && (
+              <p className="text-xs text-white/75 leading-relaxed mt-8 max-w-2xl mx-auto">{data.cta.note}</p>
+            )}
           </div>
         </VideoBackground>
 
         {/* Related */}
-        {data.relatedPages.length > 0 && (
+        {(data.relatedPages.length > 0 || (data.relatedExternal?.length ?? 0) > 0) && (
           <section className="py-16 bg-background">
             <div className="max-w-4xl mx-auto container-padding text-center">
               <h3 className="text-lg font-serif font-bold text-foreground mb-6">Related Practice Areas</h3>
               <div className="flex flex-wrap justify-center gap-3">
                 {data.relatedPages.map((page, i) => (
-                  <Link key={i} to={`/industry/${page.slug}`} className="text-xs text-muted-foreground border border-border/30 px-4 py-2 rounded-full hover:text-accent hover:border-accent/30 transition-smooth">
+                  <Link key={i} to={page.slug.startsWith("/") ? page.slug : `/industry/${page.slug}`} className="text-xs text-muted-foreground border border-border/30 px-4 py-2 rounded-full hover:text-accent hover:border-accent/30 transition-smooth">
                     {page.title}
                   </Link>
+                ))}
+                {data.relatedExternal?.map((ext, i) => (
+                  <a key={`ext-${i}`} href={ext.href} target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground border border-border/30 px-4 py-2 rounded-full hover:text-accent hover:border-accent/30 transition-smooth">
+                    {ext.label}
+                  </a>
                 ))}
               </div>
             </div>
