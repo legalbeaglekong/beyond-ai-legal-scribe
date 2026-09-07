@@ -45,27 +45,41 @@ export interface IndustryPageData {
   slug: string;
   seo: { title: string; description: string };
   hero: { title: string; subtitle: string; badges: string[] };
+  /** Optional lead-in prose rendered directly under the hero. */
+  intro?: { paragraphs: string[]; note?: string };
   overview: {
     heading: string;
-    services: { icon: LucideIcon; title: string; description: string }[];
-    stats: string[];
+    intro?: string;
+    services: { icon: LucideIcon; title: string; description?: string; bullets?: string[] }[];
+    stats?: string[];
+    note?: string;
   };
-  comparison: {
+  comparison?: {
     heading: string;
-    otherLabel: string;
-    rows: { feature: string; other: string; bh: string }[];
+    otherLabel?: string;
+    rows?: { feature: string; other: string; bh: string }[];
+    /** Generic n-column table (first column is the row label). */
+    columns?: string[];
+    matrix?: string[][];
+    note?: string;
+    hideDefaultCaption?: boolean;
+    hideAccolades?: boolean;
   };
-  spotlight: {
+  spotlight?: {
     heading: string;
-    cards: { title: string; description: string; link?: string; linkText?: string; icon?: LucideIcon }[];
+    cards: { title: string; description?: string; bullets?: string[]; link?: string; linkText?: string; icon?: LucideIcon }[];
     analysis?: string;
   };
+  /** Optional closing prose section before the FAQ. */
+  closing?: { heading?: string; paragraphs: string[] };
   faqs: {
     heading: string;
     items: { question: string; answer: string }[];
   };
-  cta: { heading: string; description?: string };
+  cta: { heading: string; description?: string; note?: string };
+  /** slug may be an absolute path starting with "/" */
   relatedPages: { title: string; slug: string }[];
+  relatedExternal?: { label: string; href: string }[];
 }
 
 // Pick a hero video + matching poster based on slug
