@@ -324,8 +324,12 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                 </table>
               )}
             </div>
-            {data.comparison.note && (
-              <p className="text-xs text-muted-foreground mt-6 leading-relaxed">{data.comparison.note}</p>
+            {data.comparison.notes && (
+              <div className="mt-6 space-y-3">
+                {data.comparison.notes.map((n, i) => (
+                  <p key={i} className="text-xs text-muted-foreground leading-relaxed">{n}</p>
+                ))}
+              </div>
             )}
             {!data.comparison.hideDefaultCaption && (
               <p className="text-xs text-muted-foreground mt-6 text-center">
