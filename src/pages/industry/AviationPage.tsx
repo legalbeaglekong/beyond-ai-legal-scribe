@@ -16,6 +16,7 @@ const data: IndustryPageData = {
       "Chambers Global Band 3 — Aviation Finance",
       "Legal 500 Next Generation Partner",
       "ALB Law Firm to Watch 2026",
+      "$8B+ deal value (2024 & 2025)",
     ],
   },
   intro: {
