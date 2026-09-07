@@ -203,6 +203,20 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         </VideoBackground>
         ); })()}
 
+        {/* Intro prose */}
+        {data.intro && (
+          <section className="section-padding bg-background">
+            <div className="max-w-3xl mx-auto container-padding fade-in space-y-4">
+              {data.intro.paragraphs.map((p, i) => (
+                <p key={i} className="text-sm md:text-base text-muted-foreground leading-relaxed">{p}</p>
+              ))}
+              {data.intro.note && (
+                <p className="text-xs text-muted-foreground/90 leading-relaxed border-l-2 border-accent/40 pl-4">{data.intro.note}</p>
+              )}
+            </div>
+          </section>
+        )}
+
         {/* Overview */}
         <section id="overview" className="section-padding bg-secondary/20">
           <div className="max-w-6xl mx-auto container-padding fade-in">
@@ -211,6 +225,9 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
                 {data.overview.heading}
               </h2>
+              {data.overview.intro && (
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-6">{data.overview.intro}</p>
+              )}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {data.overview.services.map((service, i) => (
@@ -220,18 +237,35 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                       <service.icon className="h-5 w-5 text-accent" />
                     </div>
                     <h3 className="text-sm font-serif font-bold text-foreground mb-2">{service.title}</h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed text-justify">{service.description}</p>
+                    {service.description && (
+                      <p className="text-xs text-muted-foreground leading-relaxed text-justify">{service.description}</p>
+                    )}
+                    {service.bullets && (
+                      <ul className="mt-3 space-y-1.5">
+                        {service.bullets.map((b, bi) => (
+                          <li key={bi} className="text-xs text-muted-foreground leading-relaxed flex gap-2">
+                            <span className="mt-1.5 w-1 h-1 rounded-full bg-accent shrink-0" />
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </CardContent>
                 </Card>
               ))}
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {data.overview.stats.map((stat, i) => (
-                <div key={i} className="text-center p-4 border border-border rounded shadow-sm bg-card fade-in" style={{ transitionDelay: `${i * 75}ms` }}>
-                  <p className="text-sm text-foreground font-medium">{stat}</p>
-                </div>
-              ))}
-            </div>
+            {data.overview.stats && data.overview.stats.length > 0 && (
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {data.overview.stats.map((stat, i) => (
+                  <div key={i} className="text-center p-4 border border-border rounded shadow-sm bg-card fade-in" style={{ transitionDelay: `${i * 75}ms` }}>
+                    <p className="text-sm text-foreground font-medium">{stat}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            {data.overview.note && (
+              <p className="text-xs text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-8 text-center">{data.overview.note}</p>
+            )}
           </div>
         </section>
 
