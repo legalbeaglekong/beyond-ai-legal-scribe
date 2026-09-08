@@ -44,6 +44,7 @@ import CoursesPage from "./pages/CoursesPage";
 
 
 import WhatsAppFab from "./components/WhatsAppFab";
+import AnalyticsTracker from "./components/AnalyticsTracker";
 
 const queryClient = new QueryClient();
 
