@@ -171,6 +171,56 @@ const data: IndustryPageData = {
         question: "How are matters priced?",
         answer: "Scoped proposals — fixed or capped fees where the work allows. Contact us for a proposal.",
       },
+      {
+        question: "What stages does a pre-owned business jet sale usually follow?",
+        answer:
+          "In educational terms, a pre-owned business-jet purchase often moves from a letter of intent, through deposit and pre-purchase inspection / technical acceptance, into the sale and purchase agreement, then title and escrow closing, and finally the third-party manager transition and registry / tax delivery steps. The exact sequence depends on the parties and the aircraft. This is a general framework from our Business Jet SPA 101 primer — not legal advice on your deal. If an LOI or SPA is live, Schedule consultation or talk to us on this page.",
+      },
+      {
+        question: "What should I watch in a business jet letter of intent?",
+        answer:
+          "Educationally, an LOI is often described as largely non-binding — except for the pieces the parties intentionally make binding (commonly exclusivity, confidentiality, deposit handling, or governing-law stubs). Those “except where it counts” lines are where negotiation discipline matters early. Our Jet SPA 101 course walks through that map in plain English. For a live LOI, soft path: Schedule consultation — we do not treat a course as a substitute for counsel on your document.",
+      },
+      {
+        question: "When does a jet purchase deposit typically “go hard”?",
+        answer:
+          "In many SPA structures taught in our educational primer, the deposit starts refundable (or held on stated conditions) and later becomes non-refundable — “goes hard” — once defined milestones are met (for example after technical acceptance or at a stated date). The trigger is whatever the signed paper says; there is no single universal rule. This page and the free course are educational only. If your deposit clause is under negotiation, Talk to us / Schedule consultation.",
+      },
+      {
+        question: "Why does “as-is / where-is” delivery matter on a business jet SPA?",
+        answer:
+          "Educational framing: as-is / where-is language shifts condition risk toward the buyer after the agreed inspection window, often with an English-law overlay on how representations, warranties and remedies interact with that shift. Engine and APU programmes, back-to-birth records and technical acceptance sit beside that clause in a typical diligence pack. None of this is advice on your aircraft. For a live PPI or delivery schedule, Schedule consultation with Beyond Horizons (Bethel Chambers LLC).",
+      },
+      {
+        question: "What is the third-party manager transition in a jet purchase?",
+        answer:
+          "Business jets are often run under a management agreement. On sale, the educational playbook distinguishes novating the existing manager arrangement versus terminating and putting a new manager in place — with knock-on effects for insurance, ops manuals, and who holds the keys at closing. Jet SPA 101 covers that transition as a learning module. If your purchase needs a manager novation or termination package, soft CTA: Schedule consultation on this aviation page.",
+      },
+      {
+        question: "How is aircraft leasing different from an aircraft loan?",
+        answer:
+          "At a high level (from our Aviation Finance 101 educational series): a lease is a right to use the aircraft for rent under a lease contract; a loan is debt secured against the aircraft or related cashflows. Risk, residual value, default remedies and documentation packs differ. The course uses simple analogies before moving into leasing and loan lessons — educational only, not legal or credit advice. We do not lend. For English-law lease or facility documents, Talk to us on this page.",
+      },
+      {
+        question: "What are portfolio trading, warehouse financing and PDP financing in aviation?",
+        answer:
+          "Educational labels only: portfolio trading is buying or selling a pool of aircraft and/or leases rather than a single asset; warehouse financing is short-term funding while assets are aggregated before a take-out; PDP (pre-delivery payment) financing supports manufacturer progress payments before delivery. Aviation Finance 101 introduces these themes for orientation. Structuring a live portfolio, warehouse or PDP deal is counsel work — Schedule consultation; we document and negotiate, we do not provide the capital.",
+      },
+      {
+        question: "What problem does the Cape Town Convention solve for aircraft financiers?",
+        answer:
+          "In plain educational terms, Cape Town creates a clearer international framework for interests in aircraft objects, registration of those interests, priority, and a menu of default remedies — so financiers and lessors are not left only to uneven national repossession rules. Our Cape Town & Aircraft Repossession 101 primer expands on international interests, the International Registry and priority. This answer is not legal advice on filings for your asset. Soft path: Schedule consultation when Cape Town / IR steps sit on your closing checklist.",
+      },
+      {
+        question: "What is an IDERA under the Cape Town Convention?",
+        answer:
+          "An IDERA (Irrevocable De-Registration and Export Request Authorisation) is an educational shorthand for an authorisation that can support deregistration and export of an aircraft as part of enforcement or remedy planning under the Cape Town framework, where the state declarations and facts allow it. Detail and edge cases belong in a matter-specific engagement — not in a website FAQ. Free course for orientation; for a live repossession, deregistration or export path, Talk to us / Schedule consultation.",
+      },
+      {
+        question: "Still deciding between a course and counsel?",
+        answer:
+          "Free educational primers are on /courses. For a live lease, SPA, financing or Cape Town step: Schedule consultation · HL@beyondhorizons.sg",
+      },
     ],
   },
   cta: {
