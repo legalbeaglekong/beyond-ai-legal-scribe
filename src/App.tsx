@@ -44,6 +44,7 @@ import CoursesPage from "./pages/CoursesPage";
 
 
 import WhatsAppFab from "./components/WhatsAppFab";
+import AnalyticsTracker from "./components/AnalyticsTracker";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +56,7 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <AnalyticsTracker />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/en-us/" element={<Index />} />
