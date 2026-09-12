@@ -33,9 +33,15 @@ export const useLanguage = () => {
 import { translations } from "./translations";
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>(() => {
-    return (localStorage.getItem("site-language") as Language) || "en";
-  });
+  // SSR renders English; the stored preference is applied after hydration
+  // (localStorage does not exist on the server, and reading it in the
+  // initializer would cause a hydration mismatch for returning visitors).
+  const [language, setLanguageState] = useState<Language>("en");
+
+  React.useEffect(() => {
+    const stored = localStorage.getItem("site-language") as Language | null;
+    if (stored && stored !== "en") setLanguageState(stored);
+  }, []);
 
   // Keep <html lang> and dir in sync with the active language so crawlers
   // and assistive tech read the correct language signal for the rendered DOM.
