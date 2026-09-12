@@ -190,14 +190,6 @@ const ExpertiseDetail = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>{seoTitle}</title>
-        <meta name="description" content={seoDescription} />
-        <meta property="og:title" content={seoTitle} />
-        <meta property="og:description" content={seoDescription} />
-        <meta property="og:url" content={`https://beyondhorizons.sg/expertise/${id}`} />
-        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

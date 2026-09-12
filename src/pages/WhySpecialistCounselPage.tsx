@@ -84,14 +84,6 @@ const WhySpecialistCounselPage = () => {
   return (
     <>
       <Helmet>
-        <title>Why Specialist Counsel — Choosing the Right Legal Partner | Beyond Horizons Legal Singapore</title>
-        <meta name="description" content="Compare specialist legal counsel vs full-service firms, Big Four advisory, and in-house teams. Understand when specialist expertise delivers better outcomes for complex, cross-border, and regulated matters." />
-        <meta property="og:title" content="Why Specialist Counsel — Beyond Horizons Legal Singapore" />
-        <meta property="og:description" content="Compare specialist legal counsel vs full-service firms, Big Four advisory, and in-house teams for complex, cross-border matters." />
-        <meta property="og:url" content="https://beyondhorizons.sg/why-specialist-counsel" />
-        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org", "@type": "FAQPage",

@@ -182,17 +182,6 @@ const AnnouncementsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Announcements | Beyond Horizons Legal</title>
-        <meta
-          name="description"
-          content="Latest news, firm updates and event announcements from Beyond Horizons by Bethel Chambers LLC."
-        />
-        <meta property="og:title" content="Announcements | Beyond Horizons Legal" />
-        <meta property="og:description" content="Latest news, firm updates and event announcements from Beyond Horizons by Bethel Chambers LLC." />
-        <meta property="og:url" content="https://beyondhorizons.sg/announcements" />
-        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

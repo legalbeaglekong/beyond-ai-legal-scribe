@@ -106,14 +106,6 @@ const AIToolsPage = () => {
   return (
     <>
       <Helmet>
-        <title>AI Legal Tools | Beyond Horizons Legal Singapore</title>
-        <meta name="description" content="Purpose-built AI legal tools by Beyond Horizons Legal — regulatory scanners, NDA review, financial modelling and compliance tracking." />
-        <meta property="og:title" content="AI Legal Tools — Beyond Horizons Legal Singapore" />
-        <meta property="og:description" content="Purpose-built AI legal tools for regulatory compliance, contract review, and financial modelling." />
-        <meta property="og:url" content="https://beyondhorizons.sg/ai-tools" />
-        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org", "@type": "LegalService",

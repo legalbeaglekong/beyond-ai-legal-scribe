@@ -30,13 +30,6 @@ const CSRPage = () => {
   return (
     <>
       <Helmet>
-        <title>Society & Impact | Beyond Horizons Legal</title>
-        <meta name="description" content="Beyond Horizons Legal's commitment to sustainability and community — founding ASAFA and supporting Yong-en Care Centre." />
-        <meta property="og:title" content="Society & Impact | Beyond Horizons Legal" />
-        <meta property="og:url" content="https://beyondhorizons.sg/work/csr" />
-        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
       </Helmet>
 
       <div className="min-h-screen bg-background" ref={containerRef}>
