@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import beyondHorizonsLogo from "@/assets/beyond-horizons-logo.png";
 
 const CoverPage = () => {
@@ -31,11 +30,9 @@ const CoverPage = () => {
       </div>
 
       {/* Typography Layer */}
-      <motion.div 
+      <div 
         className="relative z-10 text-left"
-        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
       >
 
         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[0.9] mb-6 text-white italic drop-shadow-2xl">
@@ -54,7 +51,7 @@ const CoverPage = () => {
           <span>CONFIDENTIAL</span>
           <span>© AUTHORS</span>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

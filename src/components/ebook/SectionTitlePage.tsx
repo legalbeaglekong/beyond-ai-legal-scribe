@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 
 interface SectionTitlePageProps {
   sectionNumber: string;
@@ -8,11 +7,7 @@ interface SectionTitlePageProps {
 const SectionTitlePage = ({ sectionNumber, title }: SectionTitlePageProps) => {
   return (
     <div data-pdf-page className="ebook-page section-title-page flex flex-col justify-center items-center text-center p-10 md:p-16 box-border overflow-hidden bg-foreground">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
+      <div
       >
         <div className="text-sage font-sans tracking-[2px] uppercase text-xs mb-3">
           {sectionNumber}
@@ -20,7 +15,7 @@ const SectionTitlePage = ({ sectionNumber, title }: SectionTitlePageProps) => {
         <h2 className="font-display text-3xl md:text-4xl leading-tight text-white">
           {title}
         </h2>
-      </motion.div>
+      </div>
     </div>
   );
 };

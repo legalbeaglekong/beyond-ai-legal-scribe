@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Globe, Mail, Phone, ExternalLink } from "lucide-react";
 import beyondHorizonsLogo from "@/assets/beyond-horizons-logo.png";
 
@@ -15,12 +14,8 @@ const BackCover = () => {
       </div>
 
       {/* Firm Profile */}
-      <motion.div 
+      <div 
         className="bg-white p-8 border-t-4 border-berry shadow-sm m-6 mb-0"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
       >
         <h3 className="font-display text-lg mb-4 text-foreground">About the Practice</h3>
         <p className="text-sm text-gray-700 mb-4 leading-relaxed">
@@ -43,7 +38,7 @@ const BackCover = () => {
           <ExternalLink className="w-4 h-4" />
           <span className="font-medium">insights.beyondhorizons.sg</span>
         </div>
-      </motion.div>
+      </div>
 
       {/* Contact Section */}
       <div className="bg-foreground text-white p-8 mt-auto">
