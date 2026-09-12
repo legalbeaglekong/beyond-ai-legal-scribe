@@ -9,20 +9,6 @@ const AscendingAsiaPage = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Ascending Asia | Advanced Air Mobility Legal Guide 2026</title>
-        <meta
-          name="description"
-          content="Ascending Asia: legal strategies for Advanced Air Mobility market entry across Asia-Pacific in 2026. Read the full advisory booklet or download it as a PDF."
-        />
-        <link rel="canonical" href={`${SITE_URL}/ascending-asia`} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`${SITE_URL}/ascending-asia`} />
-        <meta property="og:title" content="Ascending Asia | Advanced Air Mobility Legal Guide 2026" />
-        <meta
-          property="og:description"
-          content="Legal strategies for Advanced Air Mobility market entry across Asia-Pacific in 2026."
-        />
-        <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

@@ -114,19 +114,6 @@ const SingaporeSpaceLawPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Singapore Space Law & Launch Counsel | Beyond Horizons</title>
-        <meta
-          name="description"
-          content="Singapore space law counsel: OSTIn coordination, IMDA spectrum, satellite & launch agreements, GSTC, and the APAC commercial space ecosystem."
-        />
-        <link rel="canonical" href={CANONICAL} />
-        <meta property="og:title" content="Singapore Space Law — Satellite & Launch Counsel" />
-        <meta
-          property="og:description"
-          content="Singapore space law counsel for satellite operators, launch providers, and commercial space ventures across APAC."
-        />
-        <meta property="og:url" content={CANONICAL} />
-        <meta property="og:type" content="article" />
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>

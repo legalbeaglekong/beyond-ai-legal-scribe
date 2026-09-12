@@ -76,16 +76,6 @@ const TopicsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Singapore Legal Topics & Practice Areas | Beyond Horizons</title>
-        <meta
-          name="description"
-          content="Browse every Singapore legal topic and industry practice at Beyond Horizons — space, AI, employment, restructuring, energy, aviation, robotics and more."
-        />
-        <link rel="canonical" href={CANONICAL} />
-        <meta property="og:title" content="Singapore Legal Topics — Beyond Horizons" />
-        <meta property="og:description" content="A single index of every Beyond Horizons practice and industry topic." />
-        <meta property="og:url" content={CANONICAL} />
-        <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(itemListJsonLd)}</script>
       </Helmet>
 

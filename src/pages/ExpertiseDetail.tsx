@@ -7,7 +7,7 @@ import { ArrowLeft, Phone, Mail } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const maFaqs = [
+export const maFaqs = [
   {
     question: "Are you a Singapore tax lawyer firm?",
     answer: "Beyond Horizons (Bethel Chambers LLC) is a corporate and commercial practice group. We often advise on cross-border tax and structuring issues inside transactions (M&A, investments, group reorganisations). We do not hold out as a full-service tax controversies boutique focused only on IRAS litigation. If your matter is primarily a tax dispute, personal tax filing, or transfer-pricing controversy, we may refer or work alongside specialist tax counsel or advisers.",
@@ -190,15 +190,6 @@ const ExpertiseDetail = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>{seoTitle}</title>
-        <meta name="description" content={seoDescription} />
-        <link rel="canonical" href={`https://beyondhorizons.sg/expertise/${id}`} />
-        <meta property="og:title" content={seoTitle} />
-        <meta property="og:description" content={seoDescription} />
-        <meta property="og:url" content={`https://beyondhorizons.sg/expertise/${id}`} />
-        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

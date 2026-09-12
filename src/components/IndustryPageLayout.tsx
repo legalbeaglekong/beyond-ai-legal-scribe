@@ -133,16 +133,6 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
   return (
     <>
       <Helmet>
-        <title>{data.seo.title}</title>
-        <meta name="description" content={data.seo.description} />
-        <meta property="og:title" content={data.seo.title} />
-        <meta property="og:description" content={data.seo.description} />
-        <meta property="og:url" content={`https://beyondhorizons.sg/industry/${data.slug}`} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />
-        <link rel="canonical" href={`https://beyondhorizons.sg/industry/${data.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org", "@type": "LegalService",

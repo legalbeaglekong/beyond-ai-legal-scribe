@@ -141,20 +141,6 @@ const CoursesPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Free Legal & Business Courses | Jet SPA & Aviation Finance</title>
-        <meta
-          name="description"
-          content="Free educational primers from Beyond Horizons (Bethel Chambers LLC): business jet SPAs, aviation finance, Cape Town, AI & work contracts, and more. Not legal advice."
-        />
-        <link rel="canonical" href={CANONICAL} />
-        <meta property="og:title" content="Free Legal & Business Courses | Beyond Horizons" />
-        <meta
-          property="og:description"
-          content="Free educational primers: business jet SPAs, aviation finance, Cape Town, AI & work contracts, cap tables, robot law and tariff amendments."
-        />
-        <meta property="og:url" content={CANONICAL} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(itemListJsonLd)}</script>
       </Helmet>
 

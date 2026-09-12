@@ -1,7 +1,7 @@
 import IndustryPageLayout, { type IndustryPageData } from "@/components/IndustryPageLayout";
 import { Brain, Shield, Scale, FileCheck } from "lucide-react";
 
-const data: IndustryPageData = {
+export const data: IndustryPageData = {
   slug: "ai-code-counsel",
   seo: {
     title: "AI Code Counsel Singapore | AI Governance, PDPC GenAI & EU AI Act | Beyond Horizons",
