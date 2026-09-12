@@ -18,15 +18,16 @@ import { useMemo, useCallback, forwardRef, type ComponentProps, type ReactNode }
 // ---------- shared URL parsing ----------
 
 function parseTo(to: string): { pathname: string; search?: Record<string, string>; hash?: string } {
-  const [beforeHash, hashStr] = (to ?? "").split("#");
+  const [beforeHash = "", hashStr] = (to ?? "").split("#");
   const [pathname, searchStr] = beforeHash.split("?");
-  return {
-    // react-router keeps the current path for search-only ("?a=1") and
-    // hash-only ("#section") targets; TanStack's "." means current route.
+  // react-router keeps the current path for search-only ("?a=1") and
+  // hash-only ("#section") targets; TanStack's "." means current route.
+  const result: { pathname: string; search?: Record<string, string>; hash?: string } = {
     pathname: pathname || ".",
-    search: searchStr ? Object.fromEntries(new URLSearchParams(searchStr)) : undefined,
-    hash: hashStr || undefined,
   };
+  if (searchStr) result.search = Object.fromEntries(new URLSearchParams(searchStr));
+  if (hashStr) result.hash = hashStr;
+  return result;
 }
 
 // ---------- useNavigate ----------
@@ -47,13 +48,12 @@ export function useNavigate(): NavigateFn {
       return;
     }
     const { pathname, search, hash } = parseTo(to);
-    tsNav({
-      to: pathname,
-      search: search as never,
-      hash,
-      state: options?.state as never,
-      replace: options?.replace,
-    });
+    const navOpts: Record<string, unknown> = { to: pathname };
+    if (search) navOpts["search"] = search;
+    if (hash) navOpts["hash"] = hash;
+    if (options?.state !== undefined) navOpts["state"] = options.state;
+    if (options?.replace !== undefined) navOpts["replace"] = options.replace;
+    tsNav(navOpts as never);
   }, [tsNav, router]) as NavigateFn;
 }
 
