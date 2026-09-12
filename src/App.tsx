@@ -41,6 +41,7 @@ import AICodeCounselPage from "./pages/industry/AICodeCounselPage";
 import TeamPage from "./pages/TeamPage";
 import TeamMemberPage from "./pages/TeamMemberPage";
 import CoursesPage from "./pages/CoursesPage";
+import AscendingAsiaPage from "./pages/AscendingAsiaPage";
 
 
 import WhatsAppFab from "./components/WhatsAppFab";
