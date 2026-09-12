@@ -71,7 +71,7 @@ const compactCourses: CompactCourse[] = [
   {
     title: "AI & Work Contracts 101",
     description:
-      "Educational update path for Singapore employment, service, consultancy and platform-worker agreements touching AI — classification, Workplace Fairness Act themes, automated hiring, shadow-sm AI, IP and social media. Educational only — not legal advice.",
+      "Educational update path for Singapore employment, service, consultancy and platform-worker agreements touching AI — classification, Workplace Fairness Act themes, automated hiring, shadow AI, IP and social media. Educational only — not legal advice.",
     slug: "ai-work-contracts-101",
     talkTo: "/industry/fractional-gc",
     image:

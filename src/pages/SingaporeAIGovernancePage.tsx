@@ -37,7 +37,7 @@ const SingaporeAIGovernancePage = () => (
       steps: [
         {
           title: "1. Build an AI inventory and tier each use case by risk",
-          body: "Catalogue every model in production and procurement — including third-party APIs, embedded vendor features and shadow-sm GenAI tools. For each, capture purpose, data inputs, decision impact, human-oversight model and target users. Tier use cases (low / medium / high / unacceptable) using the IMDA Model AI Governance Framework's risk-impact matrix, factoring severity, probability and reversibility. High-tier and customer-facing models drive your AI Verify and MAS FEAT testing scope.",
+          body: "Catalogue every model in production and procurement — including third-party APIs, embedded vendor features and shadow GenAI tools. For each, capture purpose, data inputs, decision impact, human-oversight model and target users. Tier use cases (low / medium / high / unacceptable) using the IMDA Model AI Governance Framework's risk-impact matrix, factoring severity, probability and reversibility. High-tier and customer-facing models drive your AI Verify and MAS FEAT testing scope.",
         },
         {
           title: "2. Stand up board-level governance aligned to the IMDA Model Framework",
