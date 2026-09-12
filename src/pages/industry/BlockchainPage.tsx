@@ -5,7 +5,7 @@ const data: IndustryPageData = {
   slug: "blockchain-digital-assets",
   seo: {
     title: "Blockchain & Digital Assets Law Singapore — Crypto Regulation, DeFi & Token Counsel | Beyond Horizons Legal",
-    description: "Blockchain-certified digital assets lawyers in Singapore. MAS licensing, token offerings, DeFi, RWA tokenisation. Beyond Horizons Legal by Bethel Chambers LLC.",
+    description: "Digital assets counsel in Singapore — MAS Payment Services Act licensing, token offerings, DeFi and RWA tokenisation. Beyond Horizons Legal by Bethel Chambers LLC.",
   },
   hero: {
     title: "Blockchain & Digital Assets Law — Token Regulation, DeFi & Web3 Counsel",

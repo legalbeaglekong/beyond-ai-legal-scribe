@@ -5,7 +5,7 @@ const data: IndustryPageData = {
   slug: "energy-transition",
   seo: {
     title: "Energy Transition Law Singapore — Renewable Energy, ESG & Green Finance Counsel | Beyond Horizons Legal",
-    description: "ESG-certified energy transition lawyers in Singapore. Renewable energy projects, green bonds, sustainability-linked loans, ESG compliance. Beyond Horizons Legal by Bethel Chambers LLC.",
+    description: "Energy transition counsel in Singapore — renewable energy projects, green bonds, sustainability-linked loans and ESG disclosure. Beyond Horizons Legal by Bethel Chambers LLC.",
   },
   hero: {
     title: "Energy Transition Law — Renewable Energy, Clean Tech & ESG Infrastructure Counsel",

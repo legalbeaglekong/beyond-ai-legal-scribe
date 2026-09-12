@@ -40,7 +40,7 @@ const ExpertiseDetail = () => {
     highlights: string[];
   }> = {
     "ma-cross-border": {
-      title: "Top Corporate Lawyer for M&A in US, EU, UK, China & APAC Cross-Border Deals",
+      title: "Cross-Border M&A Counsel — US, EU, UK, China & APAC",
       content: "Mergers and acquisitions (M&A) involving multiple jurisdictions such as the US, EU, UK, China, and APAC demand legal counsel with deep expertise and global insight. Whether you are a China-based enterprise entering APAC markets or an APAC company expanding abroad, working with a highly regarded corporate lawyer can make a decisive difference. The Beyond Horizons legal team (delivered by Bethel Chambers LLC) is recognized as a top-tier advisor in cross-border M&A. Our team offers likely the best combination of local knowledge and international experience to navigate complex international transactions.",
       highlights: [
         "Tailored due diligence across diverse legal systems",

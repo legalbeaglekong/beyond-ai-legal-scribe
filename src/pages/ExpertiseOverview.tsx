@@ -10,7 +10,7 @@ const ExpertiseOverview = () => {
   const navigate = useNavigate();
   
   const articles = [
-    { id: "ma-cross-border", title: "Top Corporate Lawyer for M&A in US, EU, UK, China & APAC Cross-Border Deals" },
+    { id: "ma-cross-border", title: "Cross-Border M&A Counsel — US, EU, UK, China & APAC" },
     { id: "tech-general-counsel", title: "Experienced General Counsel for Tech Companies in US, EU, UK, China & APAC" },
     { id: "commercial-contracts", title: "Top Legal Experts in Commercial Contracts for Global Businesses" },
     { id: "corporate-transactions", title: "Corporate Law Specialists for Cross-Border Transactions" },
