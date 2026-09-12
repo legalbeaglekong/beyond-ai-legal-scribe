@@ -1,0 +1,25 @@
+{
+  "customizations": [
+    { "token": "--background/--foreground cream palette", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--accent/--accent-light burgundy palette", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--primary/--primary-glow", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--secondary/--muted warm neutrals", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--gold/--gold-foreground", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--card/--popover/--border/--input/--ring", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--shadow-minimal/--shadow-hover/--shadow-accent", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--transition-smooth/--transition-gentle", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--gradient-hero/--gradient-card/--gradient-overlay", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--radius 0.25rem", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--sidebar-* palette", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--sage/--berry/--cream ebook tokens", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "html 18px base font-size + smooth scroll", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "body Inter/Lato + Playfair Display headings base layer", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "component classes (.section-padding, .container-padding, .accent-line, .teal-line, .accent-dot, .minimal-divider, .bg-gradient-*, .hero-content, .fade-in, .video-bg-container, .video-overlay, .card-lift, .link-underline, .shadow-minimal, .shadow-hover, .transition-smooth)", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "ebook classes (.ebook-page, .cover-page, .section-title-page, .content-page, .ebook-h1/h2/h3, .ebook-body, .ebook-list, .back-cover, .font-display, print rules)", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "font-sans Lato / font-serif Playfair Display", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "colors sage/berry/cream/gold/accent-light/primary-glow/sidebar mappings", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "borderRadius scale from --radius", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "keyframes/animations accordion-down, accordion-up, blink-glow, marquee", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "container centered, 2rem padding, 2xl 1400px", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" }
+  ]
+}
