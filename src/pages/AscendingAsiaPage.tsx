@@ -38,7 +38,7 @@ const AscendingAsiaPage = () => {
         </script>
       </Helmet>
       <Header />
-      <main>
+      <main className="pt-[72px] md:pt-[88px]">
         <h1 className="sr-only">
           Ascending Asia — Legal Strategies for Advanced Air Mobility Market Entry 2026
         </h1>
