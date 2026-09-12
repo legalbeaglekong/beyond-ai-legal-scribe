@@ -1,7 +1,7 @@
 import IndustryPageLayout, { type IndustryPageData } from "@/components/IndustryPageLayout";
 import { Scale, Clock, Laptop, Gavel } from "lucide-react";
 
-const data: IndustryPageData = {
+export const data: IndustryPageData = {
   slug: "aviation",
   seo: {
     title: "Aircraft Leasing & Aviation Finance Counsel | English Law · APAC Time Zone — Beyond Horizons",

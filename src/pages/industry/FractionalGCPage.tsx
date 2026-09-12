@@ -1,7 +1,7 @@
 import IndustryPageLayout, { type IndustryPageData } from "@/components/IndustryPageLayout";
 import { Building2, ShieldCheck, Scale, CalendarClock, Bot } from "lucide-react";
 
-const data: IndustryPageData = {
+export const data: IndustryPageData = {
   slug: "fractional-gc",
   seo: {
     title: "Fractional General Counsel Singapore | Legal Support Options — Beyond Horizons",

@@ -1,7 +1,7 @@
 import IndustryPageLayout, { type IndustryPageData } from "@/components/IndustryPageLayout";
 import { FileText, Shield, Scale, AlertTriangle } from "lucide-react";
 
-const data: IndustryPageData = {
+export const data: IndustryPageData = {
   slug: "trade-tariff",
   seo: {
     title: "Trade & Tariff Counsel Singapore | Contract Restructuring & UAS 232 | Beyond Horizons",
