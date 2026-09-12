@@ -235,6 +235,10 @@ const data: IndustryPageData = {
     { title: "Why specialist counsel", slug: "/why-specialist-counsel" },
   ],
   relatedExternal: [{ label: "insights.beyondhorizons.sg", href: "https://insights.beyondhorizons.sg" }],
+  relatedExternal: [
+    { label: "insights.beyondhorizons.sg", href: "https://insights.beyondhorizons.sg" },
+    { label: "Section 232 UAS — Ascending Asia", href: "https://ascendingasia.beyondhorizons.sg/" },
+  ],
 };
 
 const AviationPage = () => <IndustryPageLayout data={data} />;
