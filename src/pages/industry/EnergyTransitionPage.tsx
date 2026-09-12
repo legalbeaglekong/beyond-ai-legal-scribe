@@ -10,7 +10,7 @@ const data: IndustryPageData = {
   hero: {
     title: "Energy Transition Law — Renewable Energy, Clean Tech & ESG Infrastructure Counsel",
     subtitle: "Forward-thinking legal strategies for renewable energy developers, clean technology ventures, green finance institutions, and sustainability-focused infrastructure projects across Asia-Pacific.",
-    badges: ["ESG Investing Certified", "Green & Sustainable Finance Certified", "Cross-Border Project Finance"],
+    badges: ["Sustainability-Aware Counsel", "Green & Sustainable Finance Focus", "Cross-Border Project Finance"],
   },
   overview: {
     heading: "What We Do in Energy Transition Law",
@@ -20,13 +20,13 @@ const data: IndustryPageData = {
       { icon: BarChart3, title: "ESG Compliance & Reporting", description: "Sustainability-linked loan covenants, ESG disclosure advisory (SGX, ISSB, EU CSRD), greenwashing risk management, and carbon credit frameworks." },
       { icon: Building, title: "Sustainable Infrastructure Finance", description: "Green bonds, sustainability-linked loans, blended finance structures, and multilateral development bank co-financing for infrastructure." },
     ],
-    stats: ["ESG Investing + Green Finance dual certification", "Sustainability-linked loan structuring", "ASEAN renewable energy project experience", "Published thought leader on aviation ESG & greenwashing"],
+    stats: ["ESG and green finance work across both areas", "Sustainability-linked loan structuring", "ASEAN renewable energy project experience", "Published commentary on aviation ESG & greenwashing"],
   },
   comparison: {
     heading: "Integrated ESG Legal Counsel vs. Bolt-On Advisory",
     otherLabel: "Traditional Firms with ESG Add-On",
     rows: [
-      { feature: "ESG Integration", other: "Separate ESG team, brought in late in deals", bh: "ESG embedded from deal inception — certified expertise in ESG Investing and Green Finance" },
+      { feature: "ESG Integration", other: "Separate ESG team, brought in late in deals", bh: "ESG considered from deal inception — sustainability-aware counsel on ESG and green finance points" },
       { feature: "Greenwashing Risk", other: "Generic compliance review", bh: "Proactive greenwashing risk management — published analysis on APAC aviation greenwashing enforcement" },
       { feature: "Green Finance Structuring", other: "Outsource to specialist advisors", bh: "In-house green bond, SLL, and sustainability-linked facility structuring" },
       { feature: "Regulatory Navigation", other: "Reactive to new ESG regulations", bh: "Proactive — tracking SGX sustainability reporting, ISSB standards, EU CSRD cross-border impact" },
@@ -41,7 +41,7 @@ const data: IndustryPageData = {
       { title: "Green Finance Opportunity", description: "$1.5T+ green finance opportunity in Asia-Pacific, driving demand for specialist legal structuring." },
       { title: "Anti-Greenwashing Compliance", description: "Rising greenwashing enforcement across APAC regulators, requiring proactive compliance strategies." },
     ],
-    analysis: "The energy transition creates both enormous opportunity and significant legal complexity. Beyond Horizons Legal helps clients navigate this landscape with ESG-certified expertise integrated into every transaction.",
+    analysis: "The energy transition creates both significant opportunity and legal complexity. Beyond Horizons Legal can help clients navigate this landscape, with sustainability and green finance considerations built into transaction documents rather than added afterwards. Educational overview only — not legal advice.",
   },
   faqs: {
     heading: "Frequently Asked Questions — Energy Transition Law",
@@ -56,7 +56,7 @@ const data: IndustryPageData = {
   },
   cta: {
     heading: "Powering the transition with legal clarity",
-    description: "From renewable energy projects to green finance structuring, our ESG-certified team is ready to help. Book a free strategic consultation.",
+    description: "From renewable energy projects to green finance structuring, our team can help. If it would be useful, you are welcome to start a conversation.",
   },
   relatedPages: [
     { title: "Aviation", slug: "aviation" },
