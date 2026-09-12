@@ -8,8 +8,8 @@ const SingaporeEmploymentLawPage = () => (
     h1="Singapore & Cross-border Employment Law — Counsel for Employers and Executives"
     intro="From MOM compliance and work-pass strategy to multi-jurisdiction restructurings, executive separations and workplace investigations — Singapore-anchored employment counsel for ambitious employers and senior leaders operating across borders."
     badges={["MOM Compliance", "AI Use Policy in HR decision making", "Executive Separations & Investigations"]}
-    metaTitle="Singapore & Cross-border Employment Lawyer | Beyond Horizons"
-    metaDescription="Singapore-anchored, cross-border employment counsel: Employment Act, MOM, work passes (EP/COMPASS), retrenchments, restrictive covenants, workplace fairness and executive disputes."
+    metaTitle="Singapore Employment Law Counsel | Work Passes, ONE Pass & MOM | Beyond Horizons"
+    metaDescription="Singapore-anchored employment counsel for employers — MOM compliance, EP/COMPASS, ONE Pass (AI and Tech) transition from Tech.Pass, Workplace Fairness, and cross-border exits. Schedule a consultation."
     ogTitle="Employment Law — Singapore-anchored, Cross-border Counsel"
     ogDescription="MOM compliance, work passes, terminations, retrenchments, restrictive covenants, and cross-border workforce strategy from Singapore."
     breadcrumbName="Singapore Employment Law"
@@ -17,7 +17,7 @@ const SingaporeEmploymentLawPage = () => (
     serviceDescription="Singapore-anchored cross-border employment counsel — MOM compliance, work passes, terminations, retrenchments, executive compensation, and workplace investigations."
     services={[
       { icon: FileText, title: "Employment Contracts & Policies", desc: "Bespoke employment agreements, executive service contracts, handbooks, IP and confidentiality, restrictive covenants aligned with the 2024 Tripartite Guidelines — designed for multi-jurisdiction roll-out." },
-      { icon: Users, title: "Work Passes & Global Mobility", desc: "EP, S Pass, Tech.Pass, ONE Pass and EntrePass strategy — including COMPASS optimisation, dependant arrangements and senior-leader relocation across the region." },
+      { icon: Users, title: "Work Passes & Global Mobility", desc: "EP, S Pass, ONE Pass and EntrePass strategy — including COMPASS optimisation, dependant arrangements and senior-leader relocation. From 2027, plan for the ONE Pass (AI and Tech) track that replaces Tech.Pass for eligible AI and tech talent (see FAQs)." },
       { icon: Briefcase, title: "Terminations & Retrenchments", desc: "Performance exits, summary dismissals, mutual separations, mass retrenchments and MOM notifications under the Tripartite Advisory on Managing Excess Manpower — coordinated with overseas employment counsel." },
       { icon: Scale, title: "Disputes & Investigations", desc: "Wrongful dismissal, TADM mediation, Employment Claims Tribunal, workplace harassment investigations, and confidential cross-border probes for boards and audit committees." },
       { icon: Shield, title: "Workplace Fairness & Harassment", desc: "Workplace Fairness Act readiness, POHA-compliant grievance handling, anti-discrimination policy design and training for managers across regional offices." },
@@ -27,6 +27,7 @@ const SingaporeEmploymentLawPage = () => (
       { title: "Workplace Fairness Legislation", summary: "Singapore's new Workplace Fairness Act introduces statutory protections against discrimination across protected characteristics, plus mandatory grievance handling and tribunal access." },
       { title: "Platform Workers Act in force", summary: "Platform Workers Act extends CPF, work injury compensation and representation rights to ride-hail and delivery platform workers — reshaping the contractor / employee boundary." },
       { title: "COMPASS & EP framework refresh", summary: "MOM continues refining the Complementarity Assessment Framework, salary thresholds and Shortage Occupation List — material for any Singapore hiring plan." },
+      { title: "ONE Pass (AI and Tech) replaces Tech.Pass", summary: "From January 2027, MOM’s ONE Pass (AI and Tech) track is intended to replace Tech.Pass for eligible AI and tech talent. EDB has stated it will stop accepting new and renewal Tech.Pass applications from 28 January 2027; existing Tech.Pass holders can usually remain until expiry. Employers should plan pass strategy early — criteria can be updated on MOM/EDB sites." },
     ]}
     faqs={[
       { q: "What laws govern employment in Singapore?", a: "The Employment Act is the core statute, supplemented by the Employment of Foreign Manpower Act, Workplace Safety and Health Act, Industrial Relations Act, Retirement and Re-employment Act, and the Tripartite Guidelines issued by MOM, NTUC and SNEF." },
@@ -37,14 +38,18 @@ const SingaporeEmploymentLawPage = () => (
       { q: "Are non-compete clauses enforceable in Singapore?", a: "Restraint of trade clauses are presumptively unenforceable unless the employer can show a legitimate proprietary interest and that the restraint is reasonable in scope, duration and geography. The 2024 Tripartite Guidelines on Restrictive Covenants further tighten employer practice." },
       { q: "How is workplace harassment and discrimination handled?", a: "The Protection from Harassment Act (POHA) provides civil and criminal remedies. The Workplace Fairness Legislation (passed 2024 / 2025) prohibits discrimination based on age, nationality, sex, marital status, pregnancy, race, religion, language, disability and mental health." },
       { q: "How does Beyond Horizons support cross-border employment matters?", a: "We advise on Singapore employment contracts and disputes, plus cross-border issues — TUPE-style transfers, multi-jurisdiction restructurings, executive separations, investigations, work-pass strategy and people-side M&A — partnering with leading employment counsel in the relevant jurisdictions." },
+      { q: "What is ONE Pass (AI and Tech), and how does it relate to Tech.Pass?", a: "ONE Pass (AI and Tech) is a track under Singapore’s Overseas Networks & Expertise (ONE) Pass framework aimed at senior AI and tech talent. Under current MOM announcements, it is intended to replace Tech.Pass from January 2027, with more detail published on MOM’s channels as the launch approaches. Tech.Pass has been administered via EDB; EDB has said it will no longer accept new or renewal Tech.Pass applications from 28 January 2027. Existing Tech.Pass holders can typically stay on their pass until it expires, then consider ONE Pass (AI and Tech) or another suitable work pass. Always confirm dates and criteria on the official MOM and EDB pages before you file." },
+      { q: "Can vested ESOP or ESOW count toward the ONE Pass (AI and Tech) salary criterion?", a: "Under MOM’s March 2026 foreign-workforce factsheet framing, applicants on the ONE Pass (AI and Tech) track may meet the salary criterion through a combination of fixed cash salary and vested non-cash components such as ESOP/ESOW, subject to assessment — often described as a high overall monthly threshold with a minimum fixed cash component. Exact figures, valuation, and renewal rules can change; treat published MOM criteria as the source of truth and get counsel (and often mobility/tax input) before you rely on equity to qualify." },
+      { q: "What should Singapore employers do before Tech.Pass sunsets?", a: "Map who is on Tech.Pass or who you planned to hire on Tech.Pass. Diarise the January 2027 / late-January 2027 transition points. Compare ONE Pass (AI and Tech), Employment Pass (including COMPASS), and other options against role, salary mix, and family needs. Align offer letters and equity paperwork early if you expect non-cash components to matter. Employment counsel helps on contracts, pass strategy, and risk; pass filing is often handled with a MOM-licensed agency — the two roles are different." },
+      { q: "When should we use employment counsel versus a MOM-licensed employment agency?", a: "Agencies typically lead pass preparation and filing. Counsel is usually the better fit when you need privileged advice on structuring offers, equity and confidentiality, COMPASS or pass strategy trade-offs, Workplace Fairness and investigations, executive exits, or multi-country employment risk. Many growth companies use both: agency for filing mechanics, counsel for the legal framework around the hire." },
     ]}
     relatedKeywords={["employment", "mom", "workforce", "retrenchment", "work pass", "workplace", "labour", "labor", "hr"]}
     relatedHeading="Related Insights — Employment & Workforce"
     ctaHeading="Schedule an Employment Law Consultation"
     ctaBody="Whether you are restructuring a regional workforce, exiting a senior executive, or building a defensible employment framework, our team is ready to help. Book a complimentary strategic consultation."
     exploreLink={{ label: "Explore our Employment Practice", to: "/expertise/employment-labor" }}
-    lastUpdatedISO="2026-06-09"
-    lastUpdatedLabel="June 2026"
+    lastUpdatedISO="2026-09-12"
+    lastUpdatedLabel="September 2026"
   />
 );
 
