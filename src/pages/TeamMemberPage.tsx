@@ -121,7 +121,6 @@ const TeamMemberPage = () => {
       <Helmet>
         <title>{member.name} — {language === "zh" ? member.roleZh : member.role} | Beyond Horizons</title>
         <meta name="description" content={`${member.name} — ${language === "zh" ? member.roleZh : member.role} at Beyond Horizons by Bethel Chambers LLC. ${highlights[0]}`} />
-        <link rel="canonical" href={`https://beyondhorizons.sg/team/${slug}`} />
         <meta property="og:title" content={`${member.name} — ${language === "zh" ? member.roleZh : member.role} | Beyond Horizons`} />
         <meta property="og:description" content={`${member.name} — ${language === "zh" ? member.roleZh : member.role} at Beyond Horizons by Bethel Chambers LLC.`} />
         <meta property="og:url" content={`https://beyondhorizons.sg/team/${slug}`} />

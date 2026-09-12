@@ -45,7 +45,6 @@ const TeamPage = () => {
       <Helmet>
         <title>Our Team | Beyond Horizons Legal Singapore</title>
         <meta name="description" content="Meet the Chambers-ranked legal team behind Beyond Horizons by Bethel Chambers LLC — dual-qualified counsel in Singapore and English law." />
-        <link rel="canonical" href="https://beyondhorizons.sg/team" />
         <meta property="og:title" content="Our Team | Beyond Horizons Legal Singapore" />
         <meta property="og:description" content="Meet the Chambers-ranked legal team behind Beyond Horizons by Bethel Chambers LLC." />
         <meta property="og:url" content="https://beyondhorizons.sg/team" />

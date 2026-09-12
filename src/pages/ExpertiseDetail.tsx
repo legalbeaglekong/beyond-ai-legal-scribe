@@ -192,7 +192,6 @@ const ExpertiseDetail = () => {
       <Helmet>
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
-        <link rel="canonical" href={`https://beyondhorizons.sg/expertise/${id}`} />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:url" content={`https://beyondhorizons.sg/expertise/${id}`} />

@@ -119,7 +119,6 @@ const SingaporeSpaceLawPage = () => {
           name="description"
           content="Singapore space law counsel: OSTIn coordination, IMDA spectrum, satellite & launch agreements, GSTC, and the APAC commercial space ecosystem."
         />
-        <link rel="canonical" href={CANONICAL} />
         <meta property="og:title" content="Singapore Space Law — Satellite & Launch Counsel" />
         <meta
           property="og:description"

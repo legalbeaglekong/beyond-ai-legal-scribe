@@ -187,7 +187,6 @@ const AnnouncementsPage = () => {
           name="description"
           content="Latest news, firm updates and event announcements from Beyond Horizons by Bethel Chambers LLC."
         />
-        <link rel="canonical" href="https://beyondhorizons.sg/announcements" />
         <meta property="og:title" content="Announcements | Beyond Horizons Legal" />
         <meta property="og:description" content="Latest news, firm updates and event announcements from Beyond Horizons by Bethel Chambers LLC." />
         <meta property="og:url" content="https://beyondhorizons.sg/announcements" />

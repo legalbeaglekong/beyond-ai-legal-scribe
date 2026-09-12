@@ -22,7 +22,6 @@ const OurClientsPage = () => {
           name="description"
           content="A select group of visionary organisations partnering with Beyond Horizons by Bethel Chambers LLC."
         />
-        <link rel="canonical" href="https://beyondhorizons.sg/our-clients" />
         <meta property="og:title" content="Our Clients | Beyond Horizons Legal" />
         <meta property="og:description" content="A select group of visionary organisations partnering with Beyond Horizons by Bethel Chambers LLC." />
         <meta property="og:url" content="https://beyondhorizons.sg/our-clients" />

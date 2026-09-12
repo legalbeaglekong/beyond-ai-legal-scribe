@@ -37,7 +37,6 @@ const ExpertiseOverview = () => {
       <Helmet>
         <title>Specialized Legal Expertise | Beyond Horizons</title>
         <meta name="description" content="Explore Beyond Horizons' specialized legal expertise across cross-border M&A, regulatory compliance, IP, employment, arbitration and APAC legacy planning." />
-        <link rel="canonical" href="https://beyondhorizons.sg/expertise" />
         <meta property="og:title" content="Specialized Legal Expertise | Beyond Horizons" />
         <meta property="og:description" content="Chambers Global ranked counsel across cross-border M&A, regulatory, IP, employment, arbitration and APAC legacy planning." />
         <meta property="og:url" content="https://beyondhorizons.sg/expertise" />

@@ -111,7 +111,6 @@ const AIToolsPage = () => {
         <meta property="og:title" content="AI Legal Tools — Beyond Horizons Legal Singapore" />
         <meta property="og:description" content="Purpose-built AI legal tools for regulatory compliance, contract review, and financial modelling." />
         <meta property="og:url" content="https://beyondhorizons.sg/ai-tools" />
-        <link rel="canonical" href="https://beyondhorizons.sg/ai-tools" />
         <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />

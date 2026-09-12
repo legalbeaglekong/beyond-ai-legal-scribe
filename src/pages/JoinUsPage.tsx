@@ -49,7 +49,6 @@ const JoinUsPage = () => {
         <meta name="description" content="Careers at Beyond Horizons Legal — a specialist practice within Bethel Chambers LLC seeking excellence, growth mindset and character." />
         <meta property="og:title" content="Careers | Beyond Horizons Legal Singapore" />
         <meta property="og:url" content="https://beyondhorizons.sg/join-us" />
-        <link rel="canonical" href="https://beyondhorizons.sg/join-us" />
         <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="https://beyondhorizons.sg/og-image.jpg" />

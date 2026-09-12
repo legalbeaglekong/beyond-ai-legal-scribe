@@ -28,7 +28,6 @@ const AboutPage = () => {
       <Helmet>
         <title>About Beyond Horizons Legal | Bethel Chambers LLC</title>
         <meta name="description" content="Chambers-ranked legal team delivering innovative, cost-effective legal solutions. Dual-qualified in English & Singapore law." />
-        <link rel="canonical" href="https://beyondhorizons.sg/about" />
         <meta property="og:title" content="About Beyond Horizons Legal | Bethel Chambers LLC" />
         <meta property="og:description" content="Chambers-ranked legal team delivering innovative, cost-effective legal solutions. Dual-qualified in English & Singapore law." />
         <meta property="og:url" content="https://beyondhorizons.sg/about" />

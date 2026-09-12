@@ -100,7 +100,6 @@ const WhyChooseUsDetail = () => {
       <Helmet>
         <title>{`${currentContent.title} | Beyond Horizons`}</title>
         <meta name="description" content={currentContent.content.intro.slice(0, 158)} />
-        <link rel="canonical" href={`https://beyondhorizons.sg/why-choose-us/${id}`} />
         <meta property="og:title" content={`${currentContent.title} | Beyond Horizons`} />
         <meta property="og:description" content={currentContent.content.intro.slice(0, 158)} />
         <meta property="og:url" content={`https://beyondhorizons.sg/why-choose-us/${id}`} />

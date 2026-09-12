@@ -146,7 +146,6 @@ const CoursesPage = () => {
           name="description"
           content="Free educational primers from Beyond Horizons (Bethel Chambers LLC): business jet SPAs, aviation finance, Cape Town, AI & work contracts, and more. Not legal advice."
         />
-        <link rel="canonical" href={CANONICAL} />
         <meta property="og:title" content="Free Legal & Business Courses | Beyond Horizons" />
         <meta
           property="og:description"

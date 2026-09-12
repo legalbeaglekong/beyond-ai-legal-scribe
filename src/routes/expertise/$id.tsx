@@ -1,13 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import ExpertiseDetail, { maFaqs } from "@/pages/ExpertiseDetail";
-import { createExpertiseHead, createFaqScript } from "@/lib/seo";
+import ExpertiseDetail from "@/pages/ExpertiseDetail";
+import { createExpertiseHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/expertise/$id")({
-  head: ({ params }) => {
-    const head = createExpertiseHead(params.id);
-    return params.id === "ma-cross-border"
-      ? { ...head, scripts: [createFaqScript(maFaqs)] }
-      : head;
-  },
+  head: ({ params }) => createExpertiseHead(params.id),
   component: ExpertiseDetail,
 });
