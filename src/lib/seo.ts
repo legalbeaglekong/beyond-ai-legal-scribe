@@ -102,6 +102,16 @@ const EXPERTISE_SEO: Record<string, readonly [string, string]> = {
   "employment-labor": ["Cross-Border Employment Counsel | Beyond Horizons", "Employment counsel for contracts, workforce changes, investigations and cross-border people matters."],
   "arbitration-disputes": ["International Arbitration Counsel | Beyond Horizons", "Counsel for cross-border commercial disputes, arbitration agreements and proceedings under major institutional rules."],
   "financial-services": ["Financial Services Regulation | Beyond Horizons", "Legal guidance for financial services businesses on licensing, governance, transactions and regulatory compliance."],
+  "business-legacies-apac": ["Building Business Legacies in APAC | Beyond Horizons", "Legal structuring considerations for founders and family businesses building durable enterprises across Asia-Pacific."],
+  "family-business-governance": ["Family Business Governance in APAC | Beyond Horizons", "Governance frameworks for APAC family businesses, including ownership, decision-making and succession considerations."],
+  "cross-border-wealth-planning": ["Cross-Border Wealth Planning in APAC | Beyond Horizons", "Legal considerations for APAC entrepreneurs coordinating business ownership, succession and cross-border wealth planning."],
+  "singapore-legacy-hub": ["Singapore as an APAC Legacy Hub | Beyond Horizons", "Why Singapore is used for regional holding, governance and succession structures across Asia-Pacific."],
+  "succession-planning-founders": ["Succession Planning for APAC Founders | Beyond Horizons", "Legal planning for founder succession, leadership transition and continuity across APAC businesses."],
+  "ip-business-legacy": ["IP Protection for Business Legacies | Beyond Horizons", "Legal considerations for protecting and transferring intellectual property as part of a long-term business legacy."],
+  "trusts-foundations-wealth": ["Trusts, Foundations & Multigenerational Wealth", "An educational overview of trusts and foundations in cross-border succession and multigenerational wealth planning."],
+  "crisis-proofing-legacy": ["Business Legacy Risk Management in APAC", "Legal risk-management considerations for continuity, governance and succession planning in APAC businesses."],
+  "tech-legacy-planning": ["Legacy Planning for APAC Tech Founders", "Legal planning for technology founders covering ownership, intellectual property, governance and succession across APAC."],
+  "esg-legacy-business": ["Responsible Business & Legacy Planning in APAC", "How sustainability and responsible-business considerations can inform governance and long-term legacy planning in APAC."],
 };
 
 export function createExpertiseHead(id: string) {
