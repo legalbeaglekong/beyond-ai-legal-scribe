@@ -32,9 +32,10 @@ const CoverPage = () => {
       {/* Typography Layer */}
       <div className="relative z-10 text-left">
 
-        <h1 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[0.9] mb-6 text-white italic drop-shadow-2xl">
-          Ascending<br />Asia
-        </h1>
+        <p className="font-display text-4xl md:text-5xl lg:text-6xl leading-[0.9] mb-6 text-white italic drop-shadow-2xl">
+          <span className="block">Ascending</span>
+          <span className="block">Asia</span>
+        </p>
 
         {/* Removed backdrop-blur-sm for PDF compatibility */}
         <div className="text-sm text-gray-400 font-light mb-10 border-l border-sage/50 pl-4 leading-relaxed">
