@@ -4,8 +4,8 @@ import { Bot, Settings, Shield, FileCheck, TrendingUp, MapPin, AlertTriangle } f
 const data: IndustryPageData = {
   slug: "robotics",
   seo: {
-    title: "Robot Leasing & Robotics Law Singapore — SaaS, Autonomous Systems & Liability | Beyond Horizons Legal",
-    description: "Pioneer robotics lawyers in Singapore. Robot leasing, SaaS contracts, autonomous systems liability, regulatory compliance. Beyond Horizons Legal by Bethel Chambers LLC.",
+    title: "Robot Leasing & RaaS Counsel Singapore — Robotics Law & Liability | Beyond Horizons Legal",
+    description: "Robot leasing and RaaS counsel in Singapore — leasing structures, SaaS contracts, autonomous systems liability and regulatory compliance. Beyond Horizons Legal by Bethel Chambers LLC.",
   },
   hero: {
     title: "Robot Leasing & Robotics Law — SaaS, Autonomous Systems & Liability Counsel",
