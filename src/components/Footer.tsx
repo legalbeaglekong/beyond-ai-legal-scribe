@@ -31,6 +31,7 @@ const Footer = () => {
 
   const resources = [
     { label: language === "zh" ? "课程与培训" : "Courses & Training", href: "/courses" },
+    { label: language === "zh" ? "《高飞亚洲》电子书" : "Ascending Asia (AAM Guide)", href: "/ascending-asia" },
     { label: language === "zh" ? "战略商业咨询" : "Strategic Business Advisory", href: "#" },
     { label: language === "zh" ? "行业洞察通讯" : "Industry Insights Newsletter", href: "#" },
     { label: language === "zh" ? "演讲活动" : "Speaking Engagements", href: "#" },

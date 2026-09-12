@@ -23,6 +23,9 @@ export default {
 				'serif': ['Playfair Display', 'serif'],
 			},
 			colors: {
+				sage: 'hsl(var(--sage))',
+				berry: 'hsl(var(--berry))',
+				cream: 'hsl(var(--cream))',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
