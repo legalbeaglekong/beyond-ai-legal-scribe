@@ -2,9 +2,33 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowLeft, Phone, Mail } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+const maFaqs = [
+  {
+    question: "Are you a Singapore tax lawyer firm?",
+    answer: "Beyond Horizons (Bethel Chambers LLC) is a corporate and commercial practice group. We often advise on cross-border tax and structuring issues inside transactions (M&A, investments, group reorganisations). We do not hold out as a full-service tax controversies boutique focused only on IRAS litigation. If your matter is primarily a tax dispute, personal tax filing, or transfer-pricing controversy, we may refer or work alongside specialist tax counsel or advisers.",
+  },
+  {
+    question: "What tax-related help do you give on cross-border M&A?",
+    answer: "Typically: flagging structuring and jurisdictional issues in diligence, coordinating with tax advisers on the deal timeline, reflecting tax allocation and covenant points in transaction documents, and aligning Singapore / English-law workstreams with overseas counsel. Exact scope depends on the deal — we do not quote a fixed tax “package” on this page.",
+  },
+  {
+    question: "When should I hire a specialist tax lawyer or Big Four tax team instead?",
+    answer: "Often when you need IRAS investigations or appeals, complex transfer pricing controversies, tax opinion letters as the main deliverable, or compliance filings and returns. Dedicated tax partners at large firms and Big Four tax practices are built for that lane. We remain useful when the buying moment is the deal and you want counsel who can run the transaction while plugging into tax specialists.",
+  },
+  {
+    question: "Can Beyond Horizons help if my issue is a company deal or restructuring?",
+    answer: "Yes — many “tax lawyer” searches are really about how to structure an investment, exit, holding company, or cross-border acquisition efficiently and lawfully. Tell us whether the need is personal tax, corporate deal structuring, or a dispute. A short consultation helps route you correctly (including referrals when we are not the right fit).",
+  },
+  {
+    question: "How do I start?",
+    answer: "Schedule a consultation or contact us via the site (including WhatsApp). Bring a one-paragraph summary: jurisdictions, timeline, and whether you already have a tax adviser. General website information is not legal advice and does not create a solicitor-client relationship.",
+  },
+];
 
 const ExpertiseDetail = () => {
   const { id } = useParams();
@@ -146,7 +170,7 @@ const ExpertiseDetail = () => {
   }
 
   const seoTitleMap: Record<string, string> = {
-    "ma-cross-border": "Cross-Border M&A Counsel | Beyond Horizons",
+    "ma-cross-border": "Cross-Border M&A Counsel Singapore | Deal Structuring & Tax Issues | Beyond Horizons",
     "tech-general-counsel": "General Counsel for Tech | Beyond Horizons",
     "commercial-contracts": "Commercial Contracts Counsel | Beyond Horizons",
     "corporate-transactions": "Cross-Border Corporate Counsel | Beyond Horizons",
@@ -158,15 +182,19 @@ const ExpertiseDetail = () => {
     "financial-services": "Financial Services Regulation | Beyond Horizons",
   };
   const seoTitle = (id && seoTitleMap[id]) || `${currentContent.title.slice(0, 50)} | Beyond Horizons`;
+  const seoDescription = id === "ma-cross-border"
+    ? "Cross-border M&A counsel for US, EU, UK, China and APAC deals — due diligence, transaction documents, regulatory clearances, and cross-border tax structuring advice. Schedule a consultation."
+    : currentContent.content.substring(0, 160);
+  const showMaFaqs = id === "ma-cross-border";
 
   return (
     <div className="min-h-screen">
       <Helmet>
         <title>{seoTitle}</title>
-        <meta name="description" content={currentContent.content.substring(0, 160)} />
+        <meta name="description" content={seoDescription} />
         <link rel="canonical" href={`https://beyondhorizons.sg/expertise/${id}`} />
         <meta property="og:title" content={seoTitle} />
-        <meta property="og:description" content={currentContent.content.substring(0, 160)} />
+        <meta property="og:description" content={seoDescription} />
         <meta property="og:url" content={`https://beyondhorizons.sg/expertise/${id}`} />
         <meta property="og:image" content="https://beyondhorizons.sg/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -187,6 +215,19 @@ const ExpertiseDetail = () => {
             serviceType: "Legal Service"
           })}
         </script>
+        {showMaFaqs && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: maFaqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+              })),
+            })}
+          </script>
+        )}
       </Helmet>
       <Header />
       
@@ -234,6 +275,12 @@ const ExpertiseDetail = () => {
                         </li>
                       ))}
                     </ul>
+
+                    {showMaFaqs && (
+                      <p className="mt-8 text-muted-foreground leading-relaxed">
+                        On tax, we advise as <strong className="text-foreground">corporate / transactional counsel</strong> on how deals and structures interact with tax issues across borders. We are not a substitute for a dedicated tax disputes practice or Big Four return preparation — and we will say so when you need that specialist lane.
+                      </p>
+                    )}
                     
                     <div className="mt-12 p-6 bg-gradient-to-r from-primary/10 to-primary-glow/10 rounded-lg">
                       <p className="text-foreground font-medium text-center">
@@ -246,6 +293,26 @@ const ExpertiseDetail = () => {
             </div>
           </div>
         </section>
+
+        {showMaFaqs && (
+          <section className="py-16 bg-background">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+                  Frequently Asked Questions
+                </h2>
+                <Accordion type="single" collapsible className="w-full">
+                  {maFaqs.map((faq, index) => (
+                    <AccordionItem key={faq.question} value={`ma-faq-${index}`}>
+                      <AccordionTrigger className="text-left text-lg">{faq.question}</AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground leading-relaxed">{faq.answer}</AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-br from-primary/5 to-primary-glow/5">

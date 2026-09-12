@@ -8,8 +8,8 @@ const SingaporeAIGovernancePage = () => (
     h1="AI Governance & Risk — Singapore-anchored, Cross-border Counsel"
     intro="Practical AI governance and AI risk counsel — aligned to the IMDA Model AI Governance Framework, AI Verify, MAS FEAT/Veritas, and bridging to the EU AI Act, US NIST AI RMF and ISO/IEC 42001 for cross-border operators."
     badges={["IMDA Model Framework-aligned", "AI Verify-ready", "MAS FEAT & EU AI Act bridging"]}
-    metaTitle="AI Governance Lawyer — Singapore, EU AI Act, MAS | Beyond Horizons"
-    metaDescription="Singapore-anchored AI governance counsel: IMDA Model AI Framework, AI Verify, MAS FEAT/Veritas, Generative AI guidance, EU AI Act and ISO/IEC 42001 cross-border."
+    metaTitle="Singapore AI Governance Counsel | AI Verify, FEAT & PDPC GenAI | Beyond Horizons"
+    metaDescription="Singapore-anchored AI governance counsel — IMDA Model Framework, AI Verify, MAS FEAT, PDPC generative AI notifications, and cross-border EU AI Act bridging. Book a consultation."
     ogTitle="AI Governance — Singapore-anchored, Cross-border Counsel"
     ogDescription="IMDA Model AI Framework, AI Verify, MAS FEAT, EU AI Act and ISO/IEC 42001 — operationalised for cross-border businesses."
     breadcrumbName="Singapore AI Governance"
@@ -20,13 +20,14 @@ const SingaporeAIGovernancePage = () => (
       { icon: FileCheck, title: "AI Impact Assessments", desc: "Pre-deployment AI impact assessments covering data, bias, explainability, human oversight, security and downstream user harm — mapped to Singapore, EU and US frameworks." },
       { icon: Shield, title: "AI Risk Mitigation", desc: "Operational controls, model documentation, red-teaming protocols, incident response playbooks, and AI risk dashboards for senior management and audit committees." },
       { icon: Building2, title: "MAS FEAT & Veritas", desc: "Implementation of FEAT principles and Veritas methodologies for AI use cases in banking, asset management, insurance and payments — coordinated with home-jurisdiction regulators." },
-      { icon: Brain, title: "Generative AI & Foundation Models", desc: "Acceptable use policies, model and vendor due diligence, training-data lawfulness, output IP and confidentiality, and deepfake response plans." },
+      { icon: Brain, title: "Generative AI & Foundation Models", desc: "Acceptable use policies, model and vendor due diligence, training-data lawfulness and AI-Specific Notifications / consent design under PDPC guidance, output IP and confidentiality, and deepfake response plans." },
       { icon: Globe, title: "EU AI Act & Global Bridging", desc: "Mapping Singapore programmes onto EU AI Act obligations, US NIST AI RMF and emerging Asia-Pacific frameworks — risk classification, conformity assessments, transparency and post-market monitoring." },
     ]}
     updates={[
       { title: "Generative AI Model Governance Framework", summary: "IMDA and the AI Verify Foundation's framework for generative AI sets out nine dimensions — from accountability and data to incident reporting — that Singapore deployers and developers are expected to operationalise." },
       { title: "MAS Veritas updates", summary: "MAS continues to refine Veritas methodologies for fairness, ethics, accountability and transparency in financial services AI, with expanding industry consortium participation." },
       { title: "AI Verify Foundation expansion", summary: "AI Verify continues to add testing modules and international interoperability (including alignment with NIST AI RMF and ISO/IEC 42001), strengthening Singapore's position as a global AI assurance hub." },
+      { title: "PDPC GenAI Advisory Guidelines (July 2026)", summary: "PDPC’s Advisory Guidelines on Use of Personal Data in Generative AI clarify when organisations should use AI-Specific Notifications if personal data will train or fine-tune GenAI models. General “product improvement” notices are often not enough where consent is required for model development." },
     ]}
     guide={{
       id: "ai-verify-guide",
@@ -79,14 +80,16 @@ const SingaporeAIGovernancePage = () => (
       { q: "Does the EU AI Act apply to Singapore companies?", a: "The EU AI Act has extraterritorial reach: it applies to providers placing AI systems on the EU market and to deployers whose AI output is used in the EU. Many Singapore SaaS, fintech and platform companies fall in scope and need a parallel readiness track to their Singapore obligations." },
       { q: "What about generative AI, copyright and confidentiality?", a: "Singapore's Copyright Act 2021 introduced a computational data analysis exception. Generative AI use raises issues on training data lawfulness, output IP ownership, deepfakes, and confidentiality — typically addressed through acceptable use policies, vendor terms, and DLP controls." },
       { q: "How does Beyond Horizons support cross-border AI governance?", a: "We design AI governance programmes aligned to the IMDA Model Framework and AI Verify, advise on MAS FEAT and Veritas, draft AI vendor and deployment contracts, run AI impact assessments, and bridge Singapore obligations with EU AI Act, NIST AI RMF and ISO/IEC 42001 readiness." },
+      { q: "Do Singapore organisations need AI-Specific Notifications when training GenAI on personal data?", a: "Often yes when consent is the basis for using personal data to train or fine-tune a generative AI model — per PDPC’s July 2026 GenAI advisory guidelines. Broad product-improvement wording is frequently treated as insufficient for that purpose. Exceptions and deemed consent can change the analysis. See also our AI Code Counsel FAQs for more detail, or schedule a consultation." },
+      { q: "Where should AI-Specific Notifications appear?", a: "PDPC does not mandate one format. Meaningful notice can sit in privacy policies, terms, in-app copy, or layered pages — as long as people can understand AI/GenAI model development uses and how to decline or withdraw consent where consent applies. We help clients design practical wording; we do not rubber-stamp engineering choices without a use-case review." },
     ]}
     relatedKeywords={["ai", "artificial intelligence", "imda", "mas", "feat", "veritas", "model ai", "ai governance", "generative", "llm"]}
     relatedHeading="Related Insights — AI Governance & Risk"
     ctaHeading="Schedule an AI Governance Consultation"
     ctaBody="From IMDA Model Framework adoption to MAS FEAT and EU AI Act readiness, our team helps you operationalise responsible AI across borders. Book a complimentary strategic consultation."
     exploreLink={{ label: "Explore AI Code Counsel", to: "/industry/ai-code-counsel" }}
-    lastUpdatedISO="2026-06-09"
-    lastUpdatedLabel="June 2026"
+    lastUpdatedISO="2026-09-12"
+    lastUpdatedLabel="September 2026"
   />
 );
 
