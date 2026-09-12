@@ -1,0 +1,2 @@
+CREATE POLICY "No public read of ebook leads" ON public.ebook_leads FOR SELECT TO anon, authenticated USING (false);
+CREATE POLICY "No public writes of ebook leads" ON public.ebook_leads FOR INSERT TO anon, authenticated WITH CHECK (false);
