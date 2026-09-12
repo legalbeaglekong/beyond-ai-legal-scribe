@@ -60,7 +60,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
     if (typeof value === "string") return value;
     // Fallback to English
-    let fallback: any = translations.en;
+    let fallback: any = translations["en"];
     for (const k of keys) {
       fallback = fallback?.[k];
     }

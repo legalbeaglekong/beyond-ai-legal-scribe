@@ -1,11 +1,11 @@
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState, type ElementType } from "react";
 import { useTranslation } from "@/contexts/TranslationContext";
 
 interface TranslatedTextProps {
   children: string;
   textKey: string;
-  as?: keyof JSX.IntrinsicElements;
-  className?: string;
+  as?: ElementType;
+  className?: string | undefined;
 }
 
 const TranslatedText = ({ children, textKey, as: Component = "span", className }: TranslatedTextProps) => {

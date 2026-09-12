@@ -216,12 +216,12 @@ const TeamMemberPage = () => {
             <div className="flex justify-between pt-8 border-t border-border/50">
               {prevSlug ? (
                 <Link to={`/team/${prevSlug}`} className="text-sm text-muted-foreground hover:text-accent transition-colors flex items-center">
-                  <ArrowLeft className="h-4 w-4 mr-2" /> {teamData[prevSlug].name}
+                  <ArrowLeft className="h-4 w-4 mr-2" /> {teamData[prevSlug]?.name}
                 </Link>
               ) : <div />}
               {nextSlug ? (
                 <Link to={`/team/${nextSlug}`} className="text-sm text-muted-foreground hover:text-accent transition-colors flex items-center">
-                  {teamData[nextSlug].name} <ArrowRight className="h-4 w-4 ml-2" />
+                  {teamData[nextSlug]?.name} <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
               ) : <div />}
             </div>

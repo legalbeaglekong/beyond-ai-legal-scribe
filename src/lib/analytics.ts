@@ -1,7 +1,7 @@
 // Google Analytics 4 (gtag.js) wiring.
 // Measurement ID comes from the linked Google Analytics connector.
 
-const MEASUREMENT_ID = import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_ANALYTICS_API_KEY as
+const MEASUREMENT_ID = import.meta.env["VITE_LOVABLE_CONNECTOR_GOOGLE_ANALYTICS_API_KEY"] as
   | string
   | undefined;
 
