@@ -30,10 +30,7 @@ const CoverPage = () => {
       </div>
 
       {/* Typography Layer */}
-      <div 
-        className="relative z-10 text-left"
-        animate={{ opacity: 1, y: 0 }}
-      >
+      <div className="relative z-10 text-left">
 
         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[0.9] mb-6 text-white italic drop-shadow-2xl">
           Ascending<br />Asia
