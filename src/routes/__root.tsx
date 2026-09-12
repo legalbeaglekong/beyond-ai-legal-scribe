@@ -197,7 +197,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Beyond Horizons" },
-      { property: "og:url", content: "https://beyondhorizons.sg/" },
+      
       {
         property: "og:title",
         content: "Beyond Horizons | Singapore Cross-border Legal Counsel",
@@ -233,7 +233,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "image/png",
         href: "/lovable-uploads/3e884989-0557-4f58-9a41-44950479350e.png",
       },
-      { rel: "canonical", href: "https://beyondhorizons.sg/" },
+      
     ],
     scripts: [
       { type: "application/ld+json", children: ORGANIZATION_JSONLD },
