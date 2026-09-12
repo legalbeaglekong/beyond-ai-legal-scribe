@@ -183,7 +183,7 @@ const EbookViewer = () => {
   return (
     <div className="min-h-screen bg-muted">
       {/* Sticky Header */}
-      <div className="sticky top-0 z-50 bg-foreground text-white py-3 px-4 md:px-6 flex items-center justify-between shadow-lg no-print">
+      <div className="sticky top-[72px] md:top-[88px] z-40 bg-foreground text-white py-3 px-4 md:px-6 flex items-center justify-between shadow-lg no-print">
         <div className="flex items-center gap-3">
           <BookOpen className="w-5 h-5 text-sage" />
           <span className="font-display text-sm md:text-base italic">Ascending Asia</span>
