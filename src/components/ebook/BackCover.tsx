@@ -15,7 +15,7 @@ const BackCover = () => {
 
       {/* Firm Profile */}
       <div 
-        className="bg-white p-8 border-t-4 border-berry shadow-sm m-6 mb-0"
+        className="bg-white p-8 border-t-4 border-berry shadow-xs m-6 mb-0"
       >
         <h3 className="font-display text-lg mb-4 text-foreground">About the Practice</h3>
         <p className="text-sm text-gray-700 mb-4 leading-relaxed">

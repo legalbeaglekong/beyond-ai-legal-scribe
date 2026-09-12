@@ -134,7 +134,7 @@ const MarketInsights = () => {
                 {marketReports.map((report, index) => (
                   <Card 
                     key={index}
-                    className="group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-elegant border-0 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm"
+                    className="group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-elegant border-0 bg-gradient-to-br from-card to-card/80 backdrop-blur-xs"
                   >
                     <CardContent className="p-6">
                       <div className="space-y-4">

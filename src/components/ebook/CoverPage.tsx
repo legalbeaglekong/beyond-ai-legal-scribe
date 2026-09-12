@@ -37,7 +37,7 @@ const CoverPage = () => {
           <span className="block">Asia</span>
         </p>
 
-        {/* Removed backdrop-blur-sm for PDF compatibility */}
+        {/* Removed backdrop-blur-xs for PDF compatibility */}
         <div className="text-sm text-gray-400 font-light mb-10 border-l border-sage/50 pl-4 leading-relaxed">
           Legal Strategies for<br />
           Advanced Air Mobility<br />
