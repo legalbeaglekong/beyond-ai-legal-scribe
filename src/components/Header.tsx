@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "@/lib/router-compat";
 import { useLanguage, LANGUAGE_OPTIONS } from "@/i18n/LanguageContext";
 
 const workSubLinks = [

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import industryAviation from "@/assets/industry-aviation.jpg";
 import industryTransportation from "@/assets/industry-transportation.webp.asset.json";
 import industryRobotics from "@/assets/industry-robotics.jpg";

@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Bot, DollarSign, Globe, Shield } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/lib/router-compat";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const WhyChooseUs = () => {

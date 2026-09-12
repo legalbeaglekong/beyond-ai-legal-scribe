@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { ArrowRight } from "lucide-react";
 import { teamMembers } from "@/pages/TeamPage";
 import { useLanguage } from "@/i18n/LanguageContext";

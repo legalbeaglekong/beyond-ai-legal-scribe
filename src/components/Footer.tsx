@@ -1,5 +1,5 @@
 import { MapPin, Mail, Linkedin, BookOpen, Scale, Rocket, MessageCircle } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { useLanguage } from "@/i18n/LanguageContext";
 import {
   CANONICAL_ADDRESS,
