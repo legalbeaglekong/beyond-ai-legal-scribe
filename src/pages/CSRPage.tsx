@@ -98,7 +98,7 @@ const CSRPage = () => {
                   { icon: Globe, title: "Market Development", desc: "Connecting SAF producers with airlines and airports to build viable supply chains and off-take agreements across Asia-Pacific." },
                   { icon: Users, title: "Industry Collaboration", desc: "Convening airlines, fuel producers, financiers, and regulators to align on standards, certification, and investment frameworks for SAF." },
                 ].map((item, i) => (
-                  <Card key={i} className="border border-border bg-card shadow-sm fade-in" style={{ transitionDelay: `${i * 80}ms` }}>
+                  <Card key={i} className="border border-border bg-card shadow-xs fade-in" style={{ transitionDelay: `${i * 80}ms` }}>
                     <CardContent className="p-4 flex items-start gap-4">
                       <div className="w-8 h-8 rounded bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <item.icon className="h-4 w-4 text-accent" />
@@ -125,7 +125,7 @@ const CSRPage = () => {
                   { icon: Users, title: "Family Support", desc: "Holistic support for families in need — including children and youth programmes, financial assistance, and community outreach services." },
                   { icon: Globe, title: "Community Impact", desc: "Since 1996, Yong-en has served the Chinatown community with professional, compassionate care — a pillar of strength for vulnerable residents." },
                 ].map((item, i) => (
-                  <Card key={i} className="border border-border bg-card shadow-sm fade-in" style={{ transitionDelay: `${i * 80}ms` }}>
+                  <Card key={i} className="border border-border bg-card shadow-xs fade-in" style={{ transitionDelay: `${i * 80}ms` }}>
                     <CardContent className="p-4 flex items-start gap-4">
                       <div className="w-8 h-8 rounded bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <item.icon className="h-4 w-4 text-accent" />

@@ -33,7 +33,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Mail, ChevronDown } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import type { LucideIcon } from "lucide-react";
 import VideoBackground from "@/components/VideoBackground";
 import AccoladeBanner from "@/components/AccoladeBanner";
@@ -185,7 +185,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                     Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="border-2 border-white text-white font-semibold hover:bg-white hover:text-black shadow-lg backdrop-blur-sm bg-white/5" asChild>
+                <Button variant="outline" size="lg" className="border-2 border-white text-white font-semibold hover:bg-white hover:text-black shadow-lg backdrop-blur-xs bg-white/5" asChild>
                   <a href="#overview">
                     View Expertise <ChevronDown className="ml-2 h-4 w-4" />
                   </a>
@@ -257,7 +257,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             {data.overview.stats && data.overview.stats.length > 0 && (
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {data.overview.stats.map((stat, i) => (
-                  <div key={i} className="text-center p-4 border border-border rounded shadow-sm bg-card fade-in" style={{ transitionDelay: `${i * 75}ms` }}>
+                  <div key={i} className="text-center p-4 border border-border rounded shadow-xs bg-card fade-in" style={{ transitionDelay: `${i * 75}ms` }}>
                     <p className="text-sm text-foreground font-medium">{stat}</p>
                   </div>
                 ))}

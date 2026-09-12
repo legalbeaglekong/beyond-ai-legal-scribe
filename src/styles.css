@@ -1,0 +1,475 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Beyond Horizons — Pictet-Inspired Light Design System (ported to Tailwind v4).
+ *
+ * Color variables keep the HSL-triplet format ("H S% L%") so both Tailwind
+ * utilities (via @theme inline hsl(var(--x)) mappings) and raw CSS
+ * hsl(var(--x)) references keep working unchanged.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-sans: "Lato", sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-glow: hsl(var(--primary-glow));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-light: hsl(var(--accent-light));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-ring-offset-background: hsl(var(--background));
+  --color-gold: hsl(var(--gold));
+  --color-gold-foreground: hsl(var(--gold-foreground));
+  --color-sage: hsl(var(--sage));
+  --color-berry: hsl(var(--berry));
+  --color-cream: hsl(var(--cream));
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-blink-glow: blink-glow 1.8s ease-in-out infinite;
+  --animate-marquee: marquee 30s linear infinite;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+  @keyframes blink-glow {
+    0%,
+    100% {
+      box-shadow:
+        0 0 0 0 hsl(var(--accent) / 0.55),
+        0 0 12px 2px hsl(var(--accent) / 0.35);
+    }
+    50% {
+      box-shadow:
+        0 0 0 10px hsl(var(--accent) / 0),
+        0 0 24px 6px hsl(var(--accent) / 0.55);
+    }
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* v3 container config port: centered, 2rem padding, 2xl capped at 1400px */
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+:root {
+  /* Light cream background, dark text — Pictet style */
+  --background: 40 20% 97%;
+  --foreground: 0 0% 12%;
+
+  /* Burgundy/maroon accent — Pictet's signature red */
+  --accent: 0 55% 35%;
+  --accent-foreground: 0 0% 98%;
+  --accent-light: 0 30% 92%;
+
+  /* Primary = Burgundy for CTAs */
+  --primary: 0 55% 35%;
+  --primary-foreground: 0 0% 98%;
+  --primary-glow: 0 45% 45%;
+
+  /* Warm neutral tones */
+  --secondary: 30 15% 93%;
+  --secondary-foreground: 0 0% 12%;
+
+  --muted: 30 10% 94%;
+  --muted-foreground: 0 0% 42%;
+
+  /* Card and UI */
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 12%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 12%;
+
+  /* Gold retained for special accents */
+  --gold: 38 60% 50%;
+  --gold-foreground: 0 0% 98%;
+
+  /* Status */
+  --destructive: 0 70% 50%;
+  --destructive-foreground: 0 0% 98%;
+
+  /* Border — subtle warm grey */
+  --border: 30 10% 88%;
+  --input: 30 10% 92%;
+  --ring: 0 55% 35%;
+
+  /* Shadows — softer for light theme */
+  --shadow-minimal: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 8px 30px 0 rgba(0, 0, 0, 0.08);
+  --shadow-accent: 0 4px 16px 0 rgba(139, 26, 26, 0.08);
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-gentle: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(180deg, hsl(40, 20%, 97%) 0%, hsl(30, 15%, 95%) 100%);
+  --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%), hsl(30, 15%, 97%));
+  --gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.35));
+
+  --radius: 0.25rem;
+
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 0 0% 42%;
+  --sidebar-primary: 0 55% 35%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 30 15% 93%;
+  --sidebar-accent-foreground: 0 0% 12%;
+  --sidebar-border: 30 10% 88%;
+  --sidebar-ring: 0 55% 35%;
+
+  /* Ascending Asia ebook (scoped tokens used only by /ascending-asia) */
+  --sage: 90 35% 79%;
+  --berry: 338 62% 40%;
+  --cream: 40 23% 95%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  html {
+    font-size: 18px;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: "Inter", "Lato", system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.005em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", "Georgia", serif;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  .shadow-minimal {
+    box-shadow: var(--shadow-minimal);
+  }
+
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  /* Section spacing — generous like Pictet */
+  .section-padding {
+    padding: 5rem 0;
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding: 7rem 0;
+    }
+  }
+
+  .container-padding {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-padding {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-padding {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+
+  /* Burgundy accent line — Pictet style */
+  .accent-line {
+    width: 40px;
+    height: 2px;
+    background: hsl(var(--accent));
+  }
+
+  /* Kept for backward compat */
+  .teal-line {
+    width: 40px;
+    height: 2px;
+    background: hsl(var(--accent));
+  }
+
+  .accent-dot::after {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: hsl(var(--accent));
+    border-radius: 50%;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  .minimal-divider {
+    height: 1px;
+    background: hsl(var(--border));
+    border: none;
+  }
+
+  /* Gradients */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .bg-gradient-overlay {
+    background: var(--gradient-overlay);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Fade-in animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1),
+      transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Video background container */
+  .video-bg-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .video-bg-container video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    will-change: opacity;
+    transition: opacity 600ms linear;
+  }
+
+  .video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.35) 50%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    z-index: 1;
+  }
+
+  /* Card hover */
+  .card-lift {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+  .card-lift:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  /* Pictet-style underline link */
+  .link-underline {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: hsl(var(--accent));
+  }
+
+  .link-underline:hover {
+    text-decoration-color: hsl(var(--foreground));
+  }
+}
+
+/* ============================================================
+   Ascending Asia ebook (merged from the standalone subdomain)
+   Scoped page classes used only by /ascending-asia
+   ============================================================ */
+@layer components {
+  .ebook-page {
+    @apply min-h-[210mm] w-full max-w-[148mm] mx-auto;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .cover-page,
+  .section-title-page {
+    @apply text-white;
+    background-color: #0a0a0a;
+    height: 210mm;
+    max-height: 210mm;
+  }
+
+  .content-page {
+    @apply bg-white;
+  }
+
+  .ebook-page,
+  .ebook-page * {
+    color-scheme: light;
+  }
+
+  .ebook-page {
+    font-family: "Lato", "Public Sans", sans-serif;
+    line-height: 1.6;
+    letter-spacing: normal;
+  }
+
+  .ebook-h1 {
+    @apply font-serif border-b-2 border-sage pb-2 mb-4 text-xl md:text-2xl leading-tight;
+    color: #0a0a0a;
+  }
+
+  .ebook-h2 {
+    @apply mt-6 mb-3 text-base md:text-lg border-l-4 border-sage pl-3 uppercase tracking-wide font-bold;
+    color: #0a0a0a;
+  }
+
+  .ebook-h3 {
+    @apply text-sm font-bold tracking-wide mt-4 mb-2;
+    color: #0a0a0a;
+  }
+
+  .ebook-body {
+    @apply text-sm leading-relaxed text-justify mb-3;
+  }
+
+  .ebook-list {
+    @apply pl-5 mt-1 space-y-2;
+  }
+
+  .ebook-list li {
+    @apply text-sm leading-relaxed list-disc;
+  }
+
+  .back-cover {
+    @apply bg-cream;
+  }
+
+  .font-display {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+
+  @media print {
+    @page {
+      size: A5;
+      margin: 0;
+    }
+    .page-break {
+      page-break-after: always;
+      break-after: page;
+    }
+    .no-print {
+      display: none !important;
+    }
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    .ebook-page {
+      page-break-inside: avoid;
+    }
+  }
+}

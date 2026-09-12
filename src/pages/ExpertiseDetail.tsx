@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "@/lib/router-compat";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -256,7 +256,7 @@ const ExpertiseDetail = () => {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Card className="bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-0 shadow-elegant">
+              <Card className="bg-gradient-to-br from-card to-card/80 backdrop-blur-xs border-0 shadow-elegant">
                 <CardContent className="p-8 md:p-12">
                   <div className="prose prose-lg max-w-none">
                     <p className="text-lg leading-relaxed text-muted-foreground mb-8">

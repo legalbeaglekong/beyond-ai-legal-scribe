@@ -23,7 +23,7 @@ const CookieConsent = () => {
 
   return (
     <div className={`fixed bottom-0 left-0 right-0 z-50 transform transition-all duration-300 ease-in-out ${isAnimating ? "translate-y-full opacity-0" : "translate-y-0 opacity-100"}`}>
-      <div className="bg-background/95 backdrop-blur-sm border-t border-border shadow-hover">
+      <div className="bg-background/95 backdrop-blur-xs border-t border-border shadow-hover">
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
             <div className="flex items-start gap-4 flex-1">

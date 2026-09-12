@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Award, BookOpen, Users, TrendingUp, ExternalLink, ArrowRight } from "lucide-react";
 import AccoladeBanner from "@/components/AccoladeBanner";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import planeTakeoff from "@/assets/plane-takeoff.jpg";
 import aboutVideo from "@/assets/landing-about-plane.mp4.asset.json";
 import VideoBackground from "@/components/VideoBackground";

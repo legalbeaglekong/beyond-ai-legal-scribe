@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 
 interface VideoBackgroundProps {
   src: string;
-  poster?: string;
+  poster?: string | undefined;
   className?: string;
   overlayClassName?: string;
   children: React.ReactNode;
@@ -26,8 +26,8 @@ const VideoBackground = ({ src, poster, className = "", overlayClassName, childr
     const container = containerRef.current;
     if (!container) return;
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
           setIsVisible(true);
           observer.disconnect();
         }

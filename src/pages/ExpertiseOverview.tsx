@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/lib/router-compat";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -76,7 +76,7 @@ const ExpertiseOverview = () => {
               {articles.map((article) => (
                 <Card 
                   key={article.id}
-                  className="group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-elegant border-0 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm"
+                  className="group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-elegant border-0 bg-gradient-to-br from-card to-card/80 backdrop-blur-xs"
                   onClick={() => navigate(`/expertise/${article.id}`)}
                 >
                   <CardContent className="p-6">

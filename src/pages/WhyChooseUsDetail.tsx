@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "@/lib/router-compat";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -133,7 +133,7 @@ const WhyChooseUsDetail = () => {
 
           {/* Content */}
           <div className="max-w-4xl mx-auto">
-            <Card className="mb-12 border-0 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm shadow-elegant">
+            <Card className="mb-12 border-0 bg-gradient-to-br from-card to-card/80 backdrop-blur-xs shadow-elegant">
               <CardContent className="p-12">
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                   {currentContent.content.intro}
@@ -169,7 +169,7 @@ const WhyChooseUsDetail = () => {
 
             {/* CTA Section */}
             <div className="text-center">
-              <Card className="inline-block border-0 bg-gradient-to-br from-primary/5 to-primary/10 backdrop-blur-sm">
+              <Card className="inline-block border-0 bg-gradient-to-br from-primary/5 to-primary/10 backdrop-blur-xs">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-4 text-foreground">Ready to Experience the Difference?</h3>
                   <p className="text-muted-foreground mb-6">Schedule a consultation to discuss how Beyond Horizons Legal can serve your needs.</p>

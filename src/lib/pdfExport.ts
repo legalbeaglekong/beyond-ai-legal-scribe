@@ -129,6 +129,7 @@ export async function generatePaginatedPDF(
 
   for (let i = 0; i < pages.length; i++) {
     const page = pages[i];
+    if (!page) continue;
     
     // Report progress
     onProgress?.(i + 1, pages.length);

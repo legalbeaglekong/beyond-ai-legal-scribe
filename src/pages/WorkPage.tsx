@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, ExternalLink, Globe, Bot, Scale, Briefcase, Plane } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import VideoBackground from "@/components/VideoBackground";
 import { STOCK_VIDEOS } from "@/lib/stock-videos";
 import ascendingAsiaImg from "@/assets/ascending-asia-evtol.jpg";

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "@/lib/router-compat";
 import { useLanguage, LANGUAGE_OPTIONS } from "@/i18n/LanguageContext";
 
 const workSubLinks = [
@@ -82,7 +82,7 @@ const Header = () => {
   const navLinkClass = `text-foreground/70 hover:text-accent transition-smooth font-sans text-xs tracking-widest uppercase whitespace-nowrap`;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-sm ${
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-xs ${
       scrolled ? "border-b border-border/50" : "border-b border-transparent"
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -261,7 +261,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-background/95 backdrop-blur-sm border-t border-border/50">
+          <div className="lg:hidden bg-background/95 backdrop-blur-xs border-t border-border/50">
             <div className="px-4 py-6 space-y-4">
               {navigation.map((item) => {
                 // Work with sub-links on mobile

@@ -120,7 +120,7 @@ const EbookViewer = () => {
 
     const restoreEnglish = () => {
       for (const el of elements) {
-        const original = el.dataset.originalText;
+        const original = el.dataset["originalText"];
         if (typeof original === "string") {
           el.textContent = original;
         }
@@ -130,8 +130,8 @@ const EbookViewer = () => {
     const run = async () => {
       // Always snapshot original text once.
       for (const el of elements) {
-        if (el.dataset.originalText == null) {
-          el.dataset.originalText = el.textContent || "";
+        if (el.dataset["originalText"] == null) {
+          el.dataset["originalText"] = el.textContent || "";
         }
       }
 
@@ -153,7 +153,8 @@ const EbookViewer = () => {
         while (!cancelled && i < elements.length) {
           const idx = i++;
           const el = elements[idx];
-          const original = (el.dataset.originalText ?? el.textContent ?? "").trim();
+          if (!el) continue;
+          const original = (el.dataset["originalText"] ?? el.textContent ?? "").trim();
           if (!original) continue;
 
           // Key is stable across runs for caching

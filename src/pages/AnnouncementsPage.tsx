@@ -233,9 +233,9 @@ const AnnouncementsPage = () => {
                     July: 6, August: 7, September: 8, October: 9, November: 10, December: 11,
                   };
                   const parts = d.split(" ");
-                  const day = parseInt(parts[0], 10);
-                  const month = months[parts[1]] ?? 0;
-                  const year = parseInt(parts[2], 10);
+                  const day = parseInt(parts[0] ?? "1", 10);
+                  const month = months[parts[1] ?? ""] ?? 0;
+                  const year = parseInt(parts[2] ?? "1970", 10);
                   return new Date(year, month, day).getTime();
                 };
                 return parseDate(b.date) - parseDate(a.date);

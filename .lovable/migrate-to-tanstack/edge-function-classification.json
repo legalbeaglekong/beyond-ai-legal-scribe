@@ -1,0 +1,5 @@
+{"functions": [
+  {"name": "fetch-insights", "classification": "internal-only", "signal": "called from 2 src/ files; depends on FIRECRAWL_API_KEY secret and 55s scrape window in the Supabase functions environment", "outcome": "left"},
+  {"name": "send-contact-inquiry", "classification": "unknown", "signal": "no internal call sites found; uses RESEND_API_KEY secret; URL treated as load-bearing", "outcome": "left"},
+  {"name": "translate", "classification": "internal-only", "signal": "called from src/contexts/TranslationContext.tsx; uses SUPABASE_SERVICE_ROLE_KEY, AI gateway secret and translation_cache table in the Supabase environment", "outcome": "left"}
+]}
