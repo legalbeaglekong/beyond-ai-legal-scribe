@@ -4,24 +4,32 @@ import { Brain, Shield, Scale, FileCheck } from "lucide-react";
 export const data: IndustryPageData = {
   slug: "ai-code-counsel",
   seo: {
-    title: "AI Code Counsel Singapore | AI Governance, PDPC GenAI & EU AI Act | Beyond Horizons",
-    description: "AI governance and risk counsel for Singapore operators — PDPC generative AI notifications, IMDA/FEAT alignment, EU AI Act readiness, and practical AI policies. Schedule a consultation.",
+    title: "AI Code Counsel Singapore | PDPC GenAI, AI Verify & EU AI Act — Beyond Horizons",
+    description: "AI governance counsel for Singapore operators — PDPC GenAI notifications, IMDA/FEAT programmes, EU AI Act readiness, and AI×IP issues. Book a consultation.",
   },
   hero: {
-    title: "AI Code Counsel — Governance, Risk & Responsible AI Legal Advisory",
-    subtitle: "Navigating the rapidly evolving landscape of AI regulation and governance. We help organisations design, implement, and operationalise AI risk management frameworks aligned with global standards — from Singapore's regulatory expectations to the EU AI Act.",
+    title: "AI Code Counsel Singapore — Governance, PDPC GenAI & EU AI Act Readiness",
+    subtitle: "AI Code Counsel turns regulatory expectations into operational frameworks for GC, DPO, product, CTO and board teams — policies, inventories, notifications, contracts, controls and reporting rather than abstract memos. Schedule a consultation when you need privileged support to put the programme into practice.",
     badges: ["AI Governance Frameworks", "Singapore Regulatory Aligned", "EU AI Act Readiness"],
+  },
+  intro: {
+    paragraphs: ["Appoint counsel when GenAI or other AI systems touch personal data, customer decisions, regulated products, or EU users — and you need privileged help to design policies, AI-Specific Notifications, inventories, and board reporting, not only a vendor checklist. Beyond Horizons’ AI Code Counsel work typically sits with GC, DPO, and product teams to operationalise Singapore expectations and bridge to frameworks such as the EU AI Act."],
   },
   overview: {
     heading: "What We Do in AI Governance & Risk",
     services: [
-      { icon: Brain, title: "AI Governance Framework Design", description: "Designing and operationalising enterprise AI governance structures — defining board oversight responsibilities, AI risk committees, and three-lines-of-defence models aligned with regulatory expectations and global best practices." },
-      { icon: Shield, title: "AI Risk Management & Taxonomy", description: "Building comprehensive AI risk taxonomies covering model risk, data quality, bias and fairness, explainability, cybersecurity, third-party AI risks, and concentration risk — with materiality assessment methodologies and control libraries." },
-      { icon: Scale, title: "Regulatory Compliance & AI Policy", description: "Drafting AI-specific policies, acceptable use standards, and compliance frameworks aligned with Singapore guidelines, the EU AI Act, FEAT principles, and sector-specific regulations across financial services, healthcare, and technology. This includes PDPC GenAI notification and consent design in plain English." },
-      { icon: FileCheck, title: "AI Lifecycle Legal Oversight", description: "Legal advisory across the full AI lifecycle — from use case design and data acquisition through model validation, deployment, and ongoing monitoring — including AI inventory management, disclosure requirements, and change management protocols." },
+      { icon: Brain, title: "AI Governance Framework Design", description: "Appoint us to design and operationalise enterprise AI governance structures — board oversight, AI risk committees, inventories and three-lines-of-defence models aligned with current regulatory expectations." },
+      { icon: Shield, title: "AI Risk Management & Taxonomy", description: "Appoint us to build AI risk taxonomies covering model risk, data quality, bias, explainability, cybersecurity, third-party risk and concentration risk — with materiality methods and control libraries." },
+      { icon: Scale, title: "Regulatory Compliance & AI Policy", description: "Appoint us to draft AI policies, acceptable-use standards and governance programmes aligned with Singapore guidance, the EU AI Act, FEAT principles and sector expectations. This includes PDPC GenAI AI-Specific Notification and consent redesign in plain English." },
+      { icon: FileCheck, title: "AI Lifecycle Legal Oversight", description: "Appoint us for legal oversight from use-case design and data acquisition through validation, deployment and monitoring — including inventories, disclosure requirements, vendor terms and change management." },
     ],
-    stats: ["30+ AI governance engagements", "Aligned with Singapore regulatory frameworks", "Cross-sector: FinServ, HealthTech, Enterprise", "EU AI Act readiness assessments"],
+    stats: ["Singapore governance frameworks", "GC, DPO & product alignment", "Cross-sector operational programmes", "EU AI Act readiness assessments"],
   },
+  contentSections: [
+    { heading: "PDPC GenAI AI-Specific Notifications", paragraphs: ["Where consent supports the use of personal data for GenAI training or fine-tuning, organisations may need to redesign notices and related vendor contracts around PDPC’s AI-Specific Notification guidance. The existing FAQs below explain the current advisory framing; confirm the current PDPC text before implementation."] },
+    { heading: "MinLaw / IPOS AI × IP consultation", paragraphs: ["MinLaw and IPOS are consulting on AI and intellectual property through 22 October 2026, including the computational data analysis exception for training, lawful-access and contractual limits, AI-assisted inventorship, and AI-generated prior art. Law and practice may change after feedback; do not assume the consultation’s outcome. Counsel can help scale-ups map training-data and inventorship risk now against current statutes and published consultation papers."] },
+    { heading: "EU AI Act / IMDA / FEAT bridge", paragraphs: ["A readiness programme can map use cases once, then bridge controls and evidence across Singapore’s IMDA Model Framework, AI Verify, MAS FEAT where relevant, and the EU AI Act. Applicability is fact-specific and rules evolve; confirm current official guidance before relying on a classification."], links: [{ label: "Read the Singapore AI Governance playbook", to: "/singapore-ai-governance" }] },
+  ],
   comparison: {
     heading: "A Different Approach to AI Legal Advisory",
     otherLabel: "Traditional Tech Law Firms",
@@ -55,16 +63,25 @@ export const data: IndustryPageData = {
       { question: "When must we use an AI-Specific Notification?", answer: "Typically when you rely on consent to use personal data for large-scale GenAI training or fine-tuning. If a PDPA exception or deemed consent properly applies, a separate AI-Specific Notification is often not required for that pathway — but you still need a sound legal basis analysis. Downstream product use may still benefit from clearer AI notices for transparency even when not strictly required. This is fact-specific; do not assume one template fits every stack." },
       { question: "What should an AI-Specific Notification usually cover?", answer: "PDPC encourages clarity on the GenAI model’s functions, the types of personal data involved, how data will be used to develop or fine-tune the model, and how individuals can decline or withdraw consent where consent is the basis. There is no single mandatory template — privacy policy language, in-product notices, or layered pages can work if the consent is meaningful. Anonymised data and some call-centre or narrowly scoped uses may be treated differently under the guidelines; check the official examples." },
       { question: "How does Beyond Horizons help with GenAI and PDPC expectations?", answer: "As AI Code Counsel we help organisations map GenAI use cases, review notification and consent wording against PDPA / PDPC guidance, align policies with Singapore AI governance expectations, and bridge to frameworks such as the EU AI Act where relevant. We do not replace your privacy programme ownership or product engineering — we work with GC, DPO, and product teams on the legal design. Soft next step: schedule a consultation." },
+      { question: "When should a Singapore organisation appoint AI governance counsel?", answer: "Appoint counsel when GenAI or other AI systems touch personal data, customer decisions, regulated products, or EU users — and you need privileged help to design policies, AI-Specific Notifications, inventories, and board reporting, not only a vendor checklist. Soft next step: schedule a consultation with Beyond Horizons’ AI Code Counsel team." },
+      { question: "Does the EU AI Act apply to Singapore companies?", answer: "It can, depending on how your systems are placed on the EU market or affect people in the EU — even if you are incorporated in Singapore. Many operators need a bridging programme: map use cases, classify risk under the Act’s framing, and align contracts and documentation with Singapore expectations (IMDA Model Framework, AI Verify, MAS FEAT where relevant). This is fact-specific; confirm current EU and Singapore guidance and get counsel before you treat “Singapore-only” as enough." },
+      { question: "What is AI Verify, and do we need counsel to operationalise it with IMDA / MAS FEAT?", answer: "AI Verify is Singapore’s testing toolkit/framework ecosystem for evaluating AI systems against governance principles. Counsel is useful when you need privileged help to turn framework outputs into policies, board reporting, vendor clauses, and regulated-sector alignment (for example MAS FEAT for FinServ) — not only a checklist download. We work alongside your risk and product teams; we do not replace engineering ownership." },
+      { question: "What is Singapore’s computational data analysis (CDA) exception for AI training?", answer: "Singapore’s copyright framework includes a computational data analysis exception that can support some AI training uses of lawfully accessible materials. Lawful-access limits and contracts may still block reliance on the exception even when the statutory gateway looks relevant. The MinLaw/IPOS public consultation on AI and intellectual property (open through 22 October 2026) may refine how these issues are understood — treat published consultation papers and current statutes as the source of truth, and get counsel before locking training-data strategy. Do not assume the consultation’s outcome." },
+      { question: "Can only a natural person be named as inventor of an AI-assisted invention in Singapore?", answer: "Under current Singapore framing, inventorship of AI-assisted inventions is generally discussed around natural persons. AI-generated prior art and documentation of human contribution also matter for filing strategy. MinLaw/IPOS is consulting on AI × IP issues through 22 October 2026 — do not predict the outcome. Confirm current Patents Act practice and get counsel before you file or publish." },
     ],
   },
   cta: {
-    heading: "Ready to build your AI governance framework?",
-    description: "From Singapore regulatory alignment to EU AI Act readiness, our team helps you operationalise AI governance. Book a free strategic consultation.",
+    heading: "Ready to operationalise AI governance?",
+    description: "From Singapore regulatory alignment to EU AI Act readiness, we help GC, DPO and product teams operationalise AI governance. Schedule a consultation or email HL@beyondhorizons.sg.",
   },
   relatedPages: [
     { title: "Fractional GC", slug: "fractional-gc" },
     { title: "Cybersecurity & Tech", slug: "cybersecurity-tech" },
     { title: "Blockchain & Digital Assets", slug: "blockchain-digital-assets" },
+    { title: "Singapore AI Governance", slug: "/singapore-ai-governance" },
+    { title: "Singapore Employment Law", slug: "/singapore-employment-law" },
+    { title: "Robotics", slug: "robotics" },
+    { title: "Why Specialist Counsel", slug: "/why-specialist-counsel" },
   ],
 };
 
