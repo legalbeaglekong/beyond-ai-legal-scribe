@@ -20,6 +20,7 @@ const EbookViewer = () => {
   const { targetLanguage, translateText } = useTranslation();
   const [isBulkTranslating, setIsBulkTranslating] = useState(false);
   const [bulkProgress, setBulkProgress] = useState<{ done: number; total: number }>({ done: 0, total: 0 });
+  const originalTextRef = useRef<Map<Text, string>>(new Map());
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     setShowScrollTop(e.currentTarget.scrollTop > 500);
@@ -81,87 +82,71 @@ const EbookViewer = () => {
     const container = ebookRef.current;
     if (!container) return;
 
-    const TRANSLATABLE_SELECTOR = [
-      "h1",
-      "h2",
-      "h3",
-      "p",
-      "li",
-      "th",
-      "td",
-      // common inline wrappers used in this ebook
-      "span",
-    ].join(",");
-
-    const elements = Array.from(container.querySelectorAll<HTMLElement>(TRANSLATABLE_SELECTOR)).filter(
-      (el) => {
-        // Skip elements explicitly marked as no-translate
-        if (el.closest("[data-no-translate='true']")) return false;
-
-        // Skip empty/whitespace
-        const text = (el.textContent || "").trim();
-        if (!text) return false;
-
+    // Walk text nodes so inline markup (e.g. <strong>) survives translation.
+    const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, {
+      acceptNode: (node) => {
+        const text = (node.nodeValue || "").trim();
+        if (!text) return NodeFilter.FILTER_REJECT;
         // Skip pure numbers/symbols (page numbers etc.)
-        if (/^[\d\s.,;:()\-–—/%+]+$/.test(text)) return false;
+        if (/^[\d\s.,;:()\-–—/%+]+$/.test(text)) return NodeFilter.FILTER_REJECT;
 
-        // Don't translate script/style
-        const tag = el.tagName.toLowerCase();
-        if (tag === "script" || tag === "style") return false;
+        const parent = node.parentElement;
+        if (!parent) return NodeFilter.FILTER_REJECT;
+        const tag = parent.tagName.toLowerCase();
+        if (tag === "script" || tag === "style") return NodeFilter.FILTER_REJECT;
+        if (parent.closest("[data-no-translate='true']")) return NodeFilter.FILTER_REJECT;
 
-        return true;
-      }
-    );
+        return NodeFilter.FILTER_ACCEPT;
+      },
+    });
+
+    const nodes: Text[] = [];
+    let current = walker.nextNode();
+    while (current) {
+      nodes.push(current as Text);
+      current = walker.nextNode();
+    }
+
+    // Snapshot the English source once per node.
+    const originals = originalTextRef.current;
+    nodes.forEach((node, idx) => {
+      if (!originals.has(node)) originals.set(node, node.nodeValue || "");
+      void idx;
+    });
 
     let cancelled = false;
 
-    // Reset progress each time we re-run.
-    setBulkProgress({ done: 0, total: elements.length });
-
-    const restoreEnglish = () => {
-      for (const el of elements) {
-        const original = el.dataset["originalText"];
-        if (typeof original === "string") {
-          el.textContent = original;
-        }
+    if (!targetLanguage) {
+      setIsBulkTranslating(false);
+      setBulkProgress({ done: 0, total: 0 });
+      for (const node of nodes) {
+        const original = originals.get(node);
+        if (typeof original === "string") node.nodeValue = original;
       }
-    };
+      return;
+    }
+
+    setBulkProgress({ done: 0, total: nodes.length });
+    setIsBulkTranslating(true);
 
     const run = async () => {
-      // Always snapshot original text once.
-      for (const el of elements) {
-        if (el.dataset["originalText"] == null) {
-          el.dataset["originalText"] = el.textContent || "";
-        }
-      }
-
-      if (!targetLanguage) {
-        setIsBulkTranslating(false);
-        setBulkProgress({ done: 0, total: elements.length });
-        restoreEnglish();
-        return;
-      }
-
-      setIsBulkTranslating(true);
-
       // Simple concurrency limiting to avoid rate limits.
       const CONCURRENCY = 3;
       let i = 0;
       let done = 0;
 
       const worker = async () => {
-        while (!cancelled && i < elements.length) {
+        while (!cancelled && i < nodes.length) {
           const idx = i++;
-          const el = elements[idx];
-          if (!el) continue;
-          const original = (el.dataset["originalText"] ?? el.textContent ?? "").trim();
+          const node = nodes[idx];
+          if (!node) continue;
+          const original = (originals.get(node) ?? node.nodeValue ?? "").trim();
           if (!original) continue;
 
           // Key is stable across runs for caching
-          const key = `ebook:${idx}`;
-          const translated = await translateText(key, original);
+          const translated = await translateText(`ebook:${idx}`, original);
           if (cancelled) return;
-          el.textContent = translated;
+          node.nodeValue = translated;
 
           done += 1;
           setBulkProgress((prev) => ({ ...prev, done }));
