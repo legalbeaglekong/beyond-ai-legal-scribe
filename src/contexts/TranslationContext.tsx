@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode, useCallback } from "react";
+import { createContext, useContext, useState, ReactNode, useCallback, useRef } from "react";
 import { supabase } from "@/integrations/supabase/client";
 
 interface TranslationContextType {
@@ -33,6 +33,10 @@ export const TranslationProvider = ({ children }: { children: ReactNode }) => {
   const [targetLanguage, setTargetLanguage] = useState<string | null>(null);
   const [isTranslating, setIsTranslating] = useState(false);
   const [translatedContent, setTranslatedContent] = useState<Record<string, string>>({});
+  // Ref mirror of the cache so translateText keeps a stable identity across updates.
+  const cacheRef = useRef<Record<string, string>>({});
+  const targetLanguageRef = useRef<string | null>(null);
+  targetLanguageRef.current = targetLanguage;
 
   const setTargetLanguageWithLog = useCallback((lang: string | null) => {
     console.log("[translation] setTargetLanguage:", lang);
