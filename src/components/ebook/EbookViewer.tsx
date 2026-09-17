@@ -20,6 +20,7 @@ const EbookViewer = () => {
   const { targetLanguage, translateText } = useTranslation();
   const [isBulkTranslating, setIsBulkTranslating] = useState(false);
   const [bulkProgress, setBulkProgress] = useState<{ done: number; total: number }>({ done: 0, total: 0 });
+  const originalTextRef = useRef<Map<Text, string>>(new Map());
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     setShowScrollTop(e.currentTarget.scrollTop > 500);
