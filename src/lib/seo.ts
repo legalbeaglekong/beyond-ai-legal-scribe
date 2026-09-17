@@ -58,6 +58,7 @@ export const STATIC_PAGE_SEO = {
   "/ascending-asia": ["Ascending Asia | Advanced Air Mobility Legal Guide", "Read Ascending Asia, a practical legal guide to Advanced Air Mobility market entry across Asia-Pacific."],
   "/courses": ["Free Legal Courses | Aviation Finance & Jet SPAs", "Free legal and business courses on jet sale agreements, aviation finance, Cape Town, AI contracts and cross-border transactions."],
   "/expertise": ["Legal Expertise | Beyond Horizons Singapore", "Explore cross-border corporate, finance, regulatory, employment, technology and dispute-resolution legal expertise."],
+  "/privacy": ["Data Protection Notice | Bethel Chambers LLC", "How Bethel Chambers LLC collects, uses, discloses and protects personal data under Singapore's Personal Data Protection Act 2012."],
   "/industry/ai-code-counsel": ["AI Code Counsel Singapore | Beyond Horizons", "AI governance counsel for PDPC GenAI notifications, IMDA and FEAT alignment, EU AI Act readiness and practical AI policies."],
   "/industry/aviation": ["Aviation Finance Counsel Singapore | Beyond Horizons", "Aviation finance counsel for English-law leases, engines, portfolios and financings, with APAC time-zone coverage."],
   "/industry/blockchain-digital-assets": ["Blockchain & Digital Assets Counsel | Beyond Horizons", "Singapore-anchored counsel for digital assets, token projects, blockchain contracts and evolving regulatory requirements."],
