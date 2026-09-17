@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Refresh the five approved employment, AI, and robotics pages and validate metadata, FAQ schema, claims, and links.
+- [x] Refresh the five approved employment, AI, and robotics pages and validate metadata, FAQ schema, claims, and links.
 
 - [x] Add unique server-rendered titles, descriptions, and canonicals to all public marketing routes.
 - [x] Verify FAQ structured data remains server-rendered on the required pages.
