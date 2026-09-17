@@ -90,7 +90,7 @@ const SingaporeAIGovernancePage = () => (
     relatedKeywords={["ai", "artificial intelligence", "imda", "mas", "feat", "veritas", "model ai", "ai governance", "generative", "llm"]}
     relatedHeading="Related Insights — AI Governance & Risk"
     ctaHeading="Schedule an AI Governance Consultation"
-    ctaBody="From IMDA Model Framework adoption to MAS FEAT and EU AI Act readiness, our team helps you operationalise responsible AI across borders. Book a complimentary strategic consultation."
+    ctaBody="From IMDA Model Framework adoption to MAS FEAT and EU AI Act readiness, we help you operationalise responsible AI across borders. Schedule a consultation or email HL@beyondhorizons.sg."
     exploreLink={{ label: "Explore AI Code Counsel", to: "/industry/ai-code-counsel" }}
     relatedPages={[{ label: "AI Code Counsel", to: "/industry/ai-code-counsel" }]}
     lastUpdatedISO="2026-09-12"

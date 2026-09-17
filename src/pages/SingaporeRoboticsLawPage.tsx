@@ -39,7 +39,7 @@ const SingaporeRoboticsLawPage = () => (
     relatedKeywords={["robot", "robotics", "autonomous", "av", "drone", "uas", "automation", "agv"]}
     relatedHeading="Related Insights — Robotics & Autonomous Systems"
     ctaHeading="Schedule a Singapore Robotics Consultation"
-    ctaBody="Whether you are launching an AV pilot, deploying a service robot fleet, or structuring a RaaS contract, we can help. Book a complimentary strategic consultation."
+    ctaBody="Whether you are launching an AV pilot, deploying a service robot fleet, or structuring a RaaS contract, we can help. Schedule a consultation or email HL@beyondhorizons.sg."
     exploreLink={{ label: "Explore our Robotics Practice", to: "/industry/robotics" }}
     lastUpdatedISO="2026-09-17"
     lastUpdatedLabel="September 2026"

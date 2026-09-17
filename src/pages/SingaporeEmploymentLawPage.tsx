@@ -58,7 +58,7 @@ const SingaporeEmploymentLawPage = () => (
     relatedKeywords={["employment", "mom", "workforce", "retrenchment", "work pass", "workplace", "labour", "labor", "hr"]}
     relatedHeading="Related Insights — Employment & Workforce"
     ctaHeading="Schedule an Employment Law Consultation"
-    ctaBody="Whether you are restructuring a regional workforce, exiting a senior executive, or building a defensible employment framework, our team is ready to help. Book a complimentary strategic consultation."
+    ctaBody="Whether you are restructuring a regional workforce, exiting a senior executive, or building a defensible employment framework, our team can help. Schedule a consultation or email HL@beyondhorizons.sg."
     exploreLink={{ label: "Explore our Employment Practice", to: "/expertise/employment-labor" }}
     relatedPages={[{ label: "Fractional GC for scale-ups", to: "/industry/fractional-gc" }, { label: "AI Code Counsel", to: "/industry/ai-code-counsel" }, { label: "Singapore AI Governance", to: "/singapore-ai-governance" }, { label: "Why Specialist Counsel", to: "/why-specialist-counsel" }]}
     lastUpdatedISO="2026-09-12"
