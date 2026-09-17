@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Refresh the five approved employment, AI, and robotics pages and validate metadata, FAQ schema, claims, and links.
+
 - [x] Add unique server-rendered titles, descriptions, and canonicals to all public marketing routes.
 - [x] Verify FAQ structured data remains server-rendered on the required pages.
 - [x] Verify /en-us, energy-transition wording, pack 08, and trade-tariff Section 232 invariants.

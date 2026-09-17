@@ -4,8 +4,8 @@ import { createPageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/singapore-employment-law")({
   head: () => createPageHead({
-    title: "Singapore Employment & ONE Pass Counsel | Beyond Horizons",
-    description: "Employment counsel for MOM compliance, EP and COMPASS, ONE Pass transition, workplace fairness and cross-border exits.",
+    title: "Singapore Employment Law Counsel | Workplace Fairness & Exits — Beyond Horizons",
+    description: "Employer-side employment counsel in Singapore — Workplace Fairness, contracts/policies, investigations, and exits. Book a consultation.",
     path: "/singapore-employment-law",
   }),
   component: SingaporeEmploymentLawPage,

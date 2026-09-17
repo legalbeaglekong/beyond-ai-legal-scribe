@@ -47,6 +47,7 @@ export interface IndustryPageData {
   hero: { title: string; subtitle: string; badges: string[] };
   /** Optional lead-in prose rendered directly under the hero. */
   intro?: { paragraphs: string[]; note?: string };
+  contentSections?: { heading: string; paragraphs: string[]; links?: { label: string; to: string }[] }[];
   overview: {
     heading: string;
     intro?: string;
@@ -258,6 +259,22 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             )}
           </div>
         </section>
+
+        {data.contentSections && data.contentSections.length > 0 && (
+          <section className="section-padding bg-background">
+            <div className="max-w-4xl mx-auto container-padding fade-in space-y-12">
+              {data.contentSections.map((section) => (
+                <article key={section.heading}>
+                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4">{section.heading}</h2>
+                  <div className="space-y-4">
+                    {section.paragraphs.map((paragraph) => <p key={paragraph} className="text-sm md:text-base text-muted-foreground leading-relaxed">{paragraph}</p>)}
+                  </div>
+                  {section.links && <div className="flex flex-wrap gap-4 mt-5">{section.links.map((link) => <Link key={link.to} to={link.to} className="text-sm text-accent hover:underline">{link.label}</Link>)}</div>}
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Comparison */}
         {data.comparison && (
