@@ -44,27 +44,29 @@ export const TranslationProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const clearTranslations = useCallback(() => {
+    cacheRef.current = {};
     setTranslatedContent({});
     setTargetLanguage(null);
   }, []);
 
   const translateText = useCallback(async (key: string, text: string): Promise<string> => {
-    if (!targetLanguage) return text;
-    
-    const cacheKey = `${targetLanguage}:${key}`;
-    if (translatedContent[cacheKey]) {
-      return translatedContent[cacheKey];
-    }
+    const lang = targetLanguageRef.current;
+    if (!lang) return text;
+
+    const cacheKey = `${lang}:${key}`;
+    const cached = cacheRef.current[cacheKey];
+    if (cached) return cached;
 
     setIsTranslating(true);
     try {
       const { data, error } = await supabase.functions.invoke("translate", {
-        body: { text, targetLanguage },
+        body: { text, targetLanguage: lang },
       });
 
       if (error) throw error;
-      
+
       const translated = data?.translatedText || text;
+      cacheRef.current[cacheKey] = translated;
       setTranslatedContent(prev => ({ ...prev, [cacheKey]: translated }));
       return translated;
     } catch (error) {
@@ -73,7 +75,7 @@ export const TranslationProvider = ({ children }: { children: ReactNode }) => {
     } finally {
       setIsTranslating(false);
     }
-  }, [targetLanguage, translatedContent]);
+  }, []);
 
   return (
     <TranslationContext.Provider value={{ 
