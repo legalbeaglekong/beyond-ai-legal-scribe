@@ -30,7 +30,7 @@ export const data: IndustryPageData = {
       { feature: "Contractual Expertise", other: "Standard contract review", bh: "Deep restructuring of commercial agreements to address tariff impacts, force majeure, and pricing mechanisms" },
       { feature: "JV & Partnerships", other: "Generic joint venture templates", bh: "Bespoke JV and shareholder agreements designed for shifting trade landscapes and cross-border partnerships" },
       { feature: "Business Strategy Integration", other: "Legal advice disconnected from commercial reality", bh: "Combined legal, commercial, and strategic advisory — holistic repositioning solutions" },
-      { feature: "Pricing", other: "Hourly billing for complex restructuring", bh: "Transparent pricing — fixed-fee contractual reviews and restructuring packages" },
+      { feature: "Scoping", other: "Unclear workstreams before review begins", bh: "Scoped engagement terms agreed around documents, counterparties, and filing responsibilities" },
       { feature: "Speed of Response", other: "Lengthy turnaround on restructuring advice", bh: "Rapid-response advisory for urgent trade disruption scenarios" },
     ],
   },
@@ -55,7 +55,7 @@ export const data: IndustryPageData = {
       { question: "How quickly can contractual restructuring be completed?", answer: "Timelines depend on complexity, but we offer rapid-response advisory for urgent trade disruption scenarios. Simple contract amendments can be turned around in days; comprehensive restructuring programmes are scoped on a project basis." },
       { question: "Do you advise on Section 232 UAS tariffs?", answer: "We advise APAC clients on the contractual and supply-chain documentation side of selling UAS / components into US programmes under the current Section 232 UAS measures — including who owns origin certification risk. We are not a substitute for a US customs broker or HTS specialist of record. Longer plain-English sketch: Ascending Asia AAM page." },
       { question: "Should I use the Trade & Tariff page or Ascending Asia?", answer: "Use Ascending Asia for AAM / UAS market-entry context plus the Section 232 UAS sketch. Use this Trade & Tariff page for broader contractual restructuring and tariff-shock commercial work. Some matters need both pages." },
-      { question: "How do I start?", answer: "Schedule a consultation or contact us via the site (including WhatsApp). Bring a short note on product type (UAS vs component), buyer geography, and whether you already have US customs counsel. General website information is not legal advice." },
+      { question: "How do I start?", answer: "Schedule a consultation or contact us via the site. Bring a short note on product type (UAS vs component), buyer geography, and whether you already have US customs counsel. General website information is not legal advice." },
     ],
   },
   closing: {
@@ -67,7 +67,7 @@ export const data: IndustryPageData = {
   },
   cta: {
     heading: "Reposition with confidence — get strategic counsel",
-    description: "From contractual restructuring to JV realignment, our specialist trade team is ready to help. Book a free strategic consultation.",
+    description: "From contractual restructuring to JV realignment, our specialist trade team can help you scope the file. Schedule a consultation.",
   },
   relatedPages: [
     { title: "Transportation", slug: "transportation" },
