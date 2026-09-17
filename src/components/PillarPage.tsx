@@ -52,6 +52,12 @@ export interface PillarGuide {
   closing?: string;
 }
 
+export interface PillarContentSection {
+  heading: string;
+  paragraphs: string[];
+  links?: { label: string; to: string }[];
+}
+
 export interface PillarPageProps {
   slug: string;                 // e.g. "singapore-restructuring-insolvency"
   eyebrow: string;              // e.g. "Singapore · Restructuring & Insolvency"
@@ -69,6 +75,9 @@ export interface PillarPageProps {
   updates: PillarUpdate[];
   faqs: PillarFaq[];
   guide?: PillarGuide;
+  callout?: { heading?: string; body: string; link?: { label: string; to: string } };
+  contentSections?: PillarContentSection[];
+  relatedPages?: { label: string; to: string }[];
   relatedKeywords: string[];
   relatedHeading: string;
   ctaHeading: string;
@@ -96,6 +105,9 @@ const PillarPage = ({
   updates,
   faqs,
   guide,
+  callout,
+  contentSections,
+  relatedPages,
   relatedKeywords,
   relatedHeading,
   ctaHeading,
@@ -213,6 +225,16 @@ const PillarPage = ({
           </div>
         </section>
 
+        {callout && (
+          <section className="py-10 bg-secondary/30">
+            <div className="container mx-auto px-6 max-w-4xl border-l-2 border-primary pl-6">
+              {callout.heading && <h2 className="font-serif text-2xl text-foreground mb-3">{callout.heading}</h2>}
+              <p className="text-muted-foreground leading-relaxed">{callout.body}</p>
+              {callout.link && <Link to={callout.link.to} className="inline-flex items-center mt-4 text-sm text-primary hover:underline">{callout.link.label}<ArrowRight className="ml-2 h-4 w-4" /></Link>}
+            </div>
+          </section>
+        )}
+
         <section className="py-20">
           <div className="container mx-auto px-6 max-w-5xl">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-10 text-center">How We Advise</h2>
@@ -229,6 +251,22 @@ const PillarPage = ({
             </div>
           </div>
         </section>
+
+        {contentSections && contentSections.length > 0 && (
+          <section className="py-20 bg-secondary/20">
+            <div className="container mx-auto px-6 max-w-4xl space-y-12">
+              {contentSections.map((section) => (
+                <article key={section.heading}>
+                  <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">{section.heading}</h2>
+                  <div className="space-y-4">
+                    {section.paragraphs.map((paragraph) => <p key={paragraph} className="text-muted-foreground leading-relaxed">{paragraph}</p>)}
+                  </div>
+                  {section.links && <div className="flex flex-wrap gap-4 mt-5">{section.links.map((link) => <Link key={link.to} to={link.to} className="text-sm text-primary hover:underline">{link.label}</Link>)}</div>}
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
 
         {updates.length > 0 && (
           <section className="py-20 bg-secondary/30">
@@ -295,6 +333,17 @@ const PillarPage = ({
         </section>
 
         <RelatedInsights keywords={relatedKeywords} heading={relatedHeading} />
+
+        {relatedPages && relatedPages.length > 0 && (
+          <section className="py-12 bg-background">
+            <div className="container mx-auto px-6 max-w-4xl text-center">
+              <h2 className="font-serif text-2xl text-foreground mb-6">Related Legal Services</h2>
+              <div className="flex flex-wrap justify-center gap-3">
+                {relatedPages.map((page) => <Link key={page.to} to={page.to} className="text-sm text-muted-foreground border border-border px-4 py-2 rounded-full hover:text-primary hover:border-primary/40">{page.label}</Link>)}
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className="py-20 bg-primary text-primary-foreground">
           <div className="container mx-auto px-6 max-w-3xl text-center">

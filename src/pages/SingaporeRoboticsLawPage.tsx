@@ -6,20 +6,20 @@ const SingaporeRoboticsLawPage = () => (
     slug="singapore-robotics-law"
     eyebrow="Singapore-anchored · Cross-border Robotics"
     h1="Robotics & Autonomous Systems — Singapore-anchored, Cross-border Counsel"
-    intro="Singapore is one of the world's most robot-dense economies. We advise robotics OEMs, integrators, deployers and investors on safety regulation, product liability, autonomous vehicle frameworks, AI risk overlay, IP, and commercial structuring — coordinated across Singapore and the OEM and deployment jurisdictions."
+    intro="We advise robotics OEMs, integrators, deployers and investors on safety regulation, product liability, autonomous vehicle frameworks, AI risk overlay, IP, and commercial structuring — coordinated across Singapore and the OEM and deployment jurisdictions."
     badges={["Autonomous Vehicles", "Service & Industrial Robotics", "AI + Product Liability"]}
-    metaTitle="Singapore Robotics Lawyer — AV, Service Robots, AI | Beyond Horizons"
-    metaDescription="Singapore robotics legal counsel: autonomous vehicles (LTA), service & industrial robots, drone and AGV deployment, product liability, AI risk overlay, IP and M&A."
+    metaTitle="Singapore Robotics Law Counsel | AV, RaaS, Liability & RLSS — Beyond Horizons"
+    metaDescription="Singapore robotics and autonomous-systems counsel — path and road AV sandboxes, robot leasing / RaaS, product liability, and RLSS co-funding checks. Book a consultation."
     ogTitle="Singapore Robotics Law — Autonomous Systems, Liability & Commercial"
     ogDescription="Specialist Singapore robotics counsel for OEMs, integrators, deployers and investors across AVs, service robots and industrial automation."
     breadcrumbName="Singapore Robotics Law"
     serviceType="Robotics and Autonomous Systems Law"
     serviceDescription="Singapore robotics and autonomous systems legal counsel — AV regulation, service and industrial robotics, product liability, AI risk overlay, IP and commercial structuring."
     services={[
-      { icon: Bot, title: "Autonomous Vehicles", desc: "LTA's AV testing and deployment frameworks (Road Traffic (AV) Rules), trial authorisation, public-road deployment, data-sharing protocols and AV insurance." },
-      { icon: FileText, title: "Service & Industrial Robotics", desc: "Deployment in healthcare, F&B, logistics, construction and manufacturing — including BCA, MOM Workplace Safety, and IMDA approvals where applicable." },
+      { icon: Bot, title: "Autonomous Vehicles", desc: "Path-AV testing under Active Mobility Act sandbox framing and road-AV trials and commercialisation under Road Traffic Act / LTA authorisation tracks — including evolving trial zones, data-sharing, operator contracts, fares, insurance and liability. Confirm current MOT/LTA guidance before deployment." },
+      { icon: FileText, title: "Service & Industrial Robotics", desc: "Deployment in healthcare, F&B, logistics, construction and manufacturing — including BCA RLSS co-funding conditions where relevant, MOM workplace safety, and IMDA approvals. Confirm current BCA scheme materials before relying on funding." },
       { icon: Scale, title: "Product Liability & Safety", desc: "Product safety standards (ISO 10218, ISO 13482), CE/UL adjacency for ASEAN, recall strategy, and tort/contract liability allocation up the supply chain." },
-      { icon: Briefcase, title: "Commercial & RaaS Structuring", desc: "Robotics-as-a-Service contracting, uptime SLAs, integration agreements, OEM/integrator/deployer risk allocation and channel partner agreements." },
+      { icon: Briefcase, title: "Commercial & RaaS Structuring", desc: "Robot leasing and Robotics-as-a-Service contracting, uptime SLAs, integration agreements, data rights, and OEM/integrator/deployer risk allocation. For built-environment deployments, lease terms may also need RLSS eligibility, audit, use and early-termination provisions." },
       { icon: Shield, title: "AI Risk & Governance Overlay", desc: "Where robotics meets ML — IMDA Model AI Governance Framework alignment, AI Verify, bias and explainability, and the EU AI Act for ASEAN-EU exports." },
       { icon: Calendar, title: "IP, M&A and Strategic Investment", desc: "Patent and trade-secret strategy, open-source / ROS licensing audits, robotics M&A, fundraising and IP-backed financing." },
     ]}
@@ -32,14 +32,17 @@ const SingaporeRoboticsLawPage = () => (
       { q: "Can I deploy delivery drones in Singapore?", a: "Drones for commercial use require CAAS UAS operator and pilot permits, plus activity permits for specific operations. BVLOS and over-population operations face additional restrictions. Maritime drones (USVs) fall under MPA frameworks." },
       { q: "How does AI regulation affect robotics?", a: "Where the robot embeds machine-learning components, the IMDA Model AI Governance Framework, AI Verify, and (for ASEAN-EU export) the EU AI Act overlay apply. High-risk classifications can trigger conformity assessments, documentation and human-oversight requirements." },
       { q: "How does Beyond Horizons support robotics clients?", a: "We advise robotics OEMs, integrators, deployers and investors on regulatory strategy, safety and liability allocation, RaaS commercial structuring, AI overlay, IP and M&A — and we coordinate with Singapore's robotics innovation ecosystem (A*STAR, NTU, SUTD, IMDA)." },
+      { q: "How do path-AV and road-AV sandboxes differ in Singapore?", a: "Path AVs on public paths are generally discussed under Active Mobility Act sandbox framing; road AVs follow Road Traffic Act / LTA authorisation. Different geographies and use cases mean different approval packs, insurance expectations, and operator contracts. Confirm live LTA/MOT guidance before deployment." },
+      { q: "What should parties check in an RLSS co-funded robot lease?", a: "Eligibility, permitted use, reporting/audit rights, maintenance responsibilities, and early-termination consequences if co-funding conditions are missed. Confirm BCA scheme materials; get counsel on the lease — not only the funding application." },
+      { q: "What approvals matter before charging commercial fares on autonomous road rides?", a: "Expanding beyond a trial zone or introducing commercial on-demand fares usually needs fresh MOT/LTA authorisations plus clear fleet, liability, insurance, and workforce arrangements. Use public market developments only as context; get counsel on your specific operator model." },
     ]}
     relatedKeywords={["robot", "robotics", "autonomous", "av", "drone", "uas", "automation", "agv"]}
     relatedHeading="Related Insights — Robotics & Autonomous Systems"
     ctaHeading="Schedule a Singapore Robotics Consultation"
-    ctaBody="Whether you are launching an AV pilot, deploying a service robot fleet, or structuring a RaaS contract, we can help. Book a complimentary strategic consultation."
+    ctaBody="Whether you are launching an AV pilot, deploying a service robot fleet, or structuring a RaaS contract, we can help. Schedule a consultation or email HL@beyondhorizons.sg."
     exploreLink={{ label: "Explore our Robotics Practice", to: "/industry/robotics" }}
-    lastUpdatedISO="2026-06-09"
-    lastUpdatedLabel="June 2026"
+    lastUpdatedISO="2026-09-17"
+    lastUpdatedLabel="September 2026"
   />
 );
 
