@@ -4,7 +4,7 @@ import { createPageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/industry/trade-tariff")({
   head: () => createPageHead({
-    title: "Trade & Tariff Counsel | UAS Section 232",
+    title: data.seo.title,
     description: data.seo.description,
     path: "/industry/trade-tariff",
   }),

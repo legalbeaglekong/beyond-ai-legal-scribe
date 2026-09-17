@@ -5,6 +5,8 @@ type PageHeadOptions = {
   description: string;
   path: string;
   type?: "website" | "article";
+  canonicalUrl?: string;
+  ogUrl?: string;
   scripts?: Array<{ type: string; children: string }>;
 };
 
@@ -13,9 +15,13 @@ export function createPageHead({
   description,
   path,
   type = "website",
+  canonicalUrl,
+  ogUrl,
   scripts,
 }: PageHeadOptions) {
   const url = `${SITE_URL}${path === "/" ? "/" : path}`;
+  const resolvedCanonical = canonicalUrl ?? url;
+  const resolvedOgUrl = ogUrl ?? resolvedCanonical;
 
   return {
     meta: [
@@ -24,19 +30,19 @@ export function createPageHead({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: type },
-      { property: "og:url", content: url },
+      { property: "og:url", content: resolvedOgUrl },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
     ],
-    links: [{ rel: "canonical", href: url }],
+    links: [{ rel: "canonical", href: resolvedCanonical }],
     ...(scripts ? { scripts } : {}),
   };
 }
 
 type FaqItem = { question: string; answer: string };
 
-export function createFaqScript(items: FaqItem[]) {
+export function createFaqScript(items: readonly FaqItem[]) {
   return {
     type: "application/ld+json",
     children: JSON.stringify({
@@ -55,7 +61,7 @@ export const STATIC_PAGE_SEO = {
   "/about": ["About Beyond Horizons | Bethel Chambers LLC", "Meet the Singapore-based, cross-border legal team at Beyond Horizons, a specialist practice group of Bethel Chambers LLC."],
   "/ai-tools": ["AI Legal Tools | Beyond Horizons Singapore", "Explore purpose-built legal tools for regulatory monitoring, contract review, financial modelling and legal operations."],
   "/announcements": ["Announcements | Beyond Horizons Legal", "News, events and practice updates from Beyond Horizons by Bethel Chambers LLC in Singapore."],
-  "/ascending-asia": ["Ascending Asia | Advanced Air Mobility Legal Guide", "Read Ascending Asia, a practical legal guide to Advanced Air Mobility market entry across Asia-Pacific."],
+  "/ascending-asia": ["Ascending Asia | AAM Market Entry & Section 232 UAS Counsel | Beyond Horizons", "Advanced Air Mobility market-entry guide for APAC — plus Section 232 UAS tariff and content-origin certification issues for suppliers into US programmes. Register for the playbook or schedule a consultation."],
   "/courses": ["Free Legal Courses | Aviation Finance & Jet SPAs", "Free legal and business courses on jet sale agreements, aviation finance, Cape Town, AI contracts and cross-border transactions."],
   "/expertise": ["Legal Expertise | Beyond Horizons Singapore", "Explore cross-border corporate, finance, regulatory, employment, technology and dispute-resolution legal expertise."],
   "/privacy": ["Data Protection Notice | Bethel Chambers LLC", "How Bethel Chambers LLC collects, uses, discloses and protects personal data under Singapore's Personal Data Protection Act 2012."],
@@ -67,7 +73,7 @@ export const STATIC_PAGE_SEO = {
   "/industry/fractional-gc": ["Fractional General Counsel Singapore | Beyond Horizons", "Compare ongoing legal support options and learn how a retained Singapore law practice can support contracts, boards and compliance."],
   "/industry/robotics": ["Robot Leasing & RaaS Counsel Singapore | Liability & Autonomous Systems — Beyond Horizons", "Robot leasing and Robotics-as-a-Service counsel in Singapore — RaaS contracts, liability, RLSS co-funding checks, and path/road AV hooks. Book a consultation."],
   "/industry/space": ["Space Law Counsel Singapore | Beyond Horizons", "Singapore-anchored legal counsel for space businesses, satellite projects, commercial contracts and cross-border regulatory matters."],
-  "/industry/trade-tariff": ["Trade & Tariff Counsel | UAS Section 232", "Trade and tariff counsel for APAC businesses, including contract restructuring, supply-chain risk and Section 232 UAS documentation."],
+  "/industry/trade-tariff": ["Trade & Tariff Counsel Singapore | Contract Restructuring & UAS 232 | Beyond Horizons", "Trade and tariff counsel for APAC businesses — contractual restructuring, JV repositioning, and Section 232 UAS content-origin issues for suppliers into US programmes. Schedule a consultation."],
   "/industry/transportation": ["Transportation Counsel Singapore | Beyond Horizons", "Cross-border legal counsel for transportation businesses, commercial agreements, financing, regulation and operational risk."],
   "/industry/wellness-health": ["Wellness & Health Counsel Singapore | Beyond Horizons", "Legal guidance for wellness and health businesses on commercial contracts, regulation, data, employment and expansion."],
   "/join-us": ["Careers at Beyond Horizons Legal | Singapore", "Explore career opportunities with Beyond Horizons, a digital-first Singapore legal practice serving cross-border clients."],
