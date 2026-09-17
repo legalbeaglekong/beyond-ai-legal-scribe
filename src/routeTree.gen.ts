@@ -18,6 +18,7 @@ import { Route as CoursesRouteImport } from './routes/courses'
 import { Route as JoinUsRouteImport } from './routes/join-us'
 import { Route as MarketInsightsRouteImport } from './routes/market-insights'
 import { Route as OurClientsRouteImport } from './routes/our-clients'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SingaporeAiGovernanceRouteImport } from './routes/singapore-ai-governance'
 import { Route as SingaporeAlternativeEnergyLawRouteImport } from './routes/singapore-alternative-energy-law'
 import { Route as SingaporeAviationLawRouteImport } from './routes/singapore-aviation-law'
@@ -90,6 +91,11 @@ const MarketInsightsRoute = MarketInsightsRouteImport.update({
 const OurClientsRoute = OurClientsRouteImport.update({
   id: '/our-clients',
   path: '/our-clients',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SingaporeAiGovernanceRoute = SingaporeAiGovernanceRouteImport.update({
@@ -248,6 +254,7 @@ export interface FileRoutesByFullPath {
   '/join-us': typeof JoinUsRoute
   '/market-insights': typeof MarketInsightsRoute
   '/our-clients': typeof OurClientsRoute
+  '/privacy': typeof PrivacyRoute
   '/singapore-ai-governance': typeof SingaporeAiGovernanceRoute
   '/singapore-alternative-energy-law': typeof SingaporeAlternativeEnergyLawRoute
   '/singapore-aviation-law': typeof SingaporeAviationLawRoute
@@ -287,6 +294,7 @@ export interface FileRoutesByTo {
   '/join-us': typeof JoinUsRoute
   '/market-insights': typeof MarketInsightsRoute
   '/our-clients': typeof OurClientsRoute
+  '/privacy': typeof PrivacyRoute
   '/singapore-ai-governance': typeof SingaporeAiGovernanceRoute
   '/singapore-alternative-energy-law': typeof SingaporeAlternativeEnergyLawRoute
   '/singapore-aviation-law': typeof SingaporeAviationLawRoute
@@ -327,6 +335,7 @@ export interface FileRoutesById {
   '/join-us': typeof JoinUsRoute
   '/market-insights': typeof MarketInsightsRoute
   '/our-clients': typeof OurClientsRoute
+  '/privacy': typeof PrivacyRoute
   '/singapore-ai-governance': typeof SingaporeAiGovernanceRoute
   '/singapore-alternative-energy-law': typeof SingaporeAlternativeEnergyLawRoute
   '/singapore-aviation-law': typeof SingaporeAviationLawRoute
@@ -368,6 +377,7 @@ export interface FileRouteTypes {
     | '/join-us'
     | '/market-insights'
     | '/our-clients'
+    | '/privacy'
     | '/singapore-ai-governance'
     | '/singapore-alternative-energy-law'
     | '/singapore-aviation-law'
@@ -407,6 +417,7 @@ export interface FileRouteTypes {
     | '/join-us'
     | '/market-insights'
     | '/our-clients'
+    | '/privacy'
     | '/singapore-ai-governance'
     | '/singapore-alternative-energy-law'
     | '/singapore-aviation-law'
@@ -446,6 +457,7 @@ export interface FileRouteTypes {
     | '/join-us'
     | '/market-insights'
     | '/our-clients'
+    | '/privacy'
     | '/singapore-ai-governance'
     | '/singapore-alternative-energy-law'
     | '/singapore-aviation-law'
@@ -486,6 +498,7 @@ export interface RootRouteChildren {
   JoinUsRoute: typeof JoinUsRoute
   MarketInsightsRoute: typeof MarketInsightsRoute
   OurClientsRoute: typeof OurClientsRoute
+  PrivacyRoute: typeof PrivacyRoute
   SingaporeAiGovernanceRoute: typeof SingaporeAiGovernanceRoute
   SingaporeAlternativeEnergyLawRoute: typeof SingaporeAlternativeEnergyLawRoute
   SingaporeAviationLawRoute: typeof SingaporeAviationLawRoute
@@ -579,6 +592,13 @@ declare module '@tanstack/react-router' {
       path: '/our-clients'
       fullPath: '/our-clients'
       preLoaderRoute: typeof OurClientsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/singapore-ai-governance': {
@@ -790,6 +810,7 @@ const rootRouteChildren: RootRouteChildren = {
   JoinUsRoute: JoinUsRoute,
   MarketInsightsRoute: MarketInsightsRoute,
   OurClientsRoute: OurClientsRoute,
+  PrivacyRoute: PrivacyRoute,
   SingaporeAiGovernanceRoute: SingaporeAiGovernanceRoute,
   SingaporeAlternativeEnergyLawRoute: SingaporeAlternativeEnergyLawRoute,
   SingaporeAviationLawRoute: SingaporeAviationLawRoute,

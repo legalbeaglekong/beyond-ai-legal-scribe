@@ -129,9 +129,9 @@ const Footer = () => {
               © {year} {LEGAL_ENTITY}. All rights reserved.
             </div>
             <div className="flex items-center gap-6">
-              <a href={PARENT_PRIVACY_URL} target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-accent transition-smooth">
+              <Link to="/privacy" className="text-xs text-muted-foreground hover:text-accent transition-smooth">
                 {t("footer.privacyPolicy")}
-              </a>
+              </Link>
               <a href={PARENT_TERMS_URL} target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-accent transition-smooth">
                 Terms of Service
               </a>
