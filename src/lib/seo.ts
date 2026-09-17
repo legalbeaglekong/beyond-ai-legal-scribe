@@ -42,7 +42,7 @@ export function createPageHead({
 
 type FaqItem = { question: string; answer: string };
 
-export function createFaqScript(items: FaqItem[]) {
+export function createFaqScript(items: readonly FaqItem[]) {
   return {
     type: "application/ld+json",
     children: JSON.stringify({
