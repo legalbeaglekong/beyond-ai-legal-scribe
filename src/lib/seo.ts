@@ -65,6 +65,7 @@ export const STATIC_PAGE_SEO = {
   "/courses": ["Free Legal Courses | Aviation Finance & Jet SPAs", "Free legal and business courses on jet sale agreements, aviation finance, Cape Town, AI contracts and cross-border transactions."],
   "/expertise": ["Legal Expertise | Beyond Horizons Singapore", "Explore cross-border corporate, finance, regulatory, employment, technology and dispute-resolution legal expertise."],
   "/privacy": ["Data Protection Notice | Bethel Chambers LLC", "How Bethel Chambers LLC collects, uses, discloses and protects personal data under Singapore's Personal Data Protection Act 2012."],
+  "/beyond-precedent": ["Beyond Precedent | Beyond Horizons", "Beyond Precedent explores how law students draft with free AI tools and how Beyond Horizons designs legal services and talent development for a post-AI age — not a job guarantee."],
   "/industry/ai-code-counsel": ["AI Code Counsel Singapore | PDPC GenAI, AI Verify & EU AI Act — Beyond Horizons", "AI governance counsel for Singapore operators — PDPC GenAI notifications, IMDA/FEAT programmes, EU AI Act readiness, and AI×IP issues. Book a consultation."],
   "/industry/aviation": ["Aviation Finance Counsel Singapore | Beyond Horizons", "Aviation finance counsel for English-law leases, engines, portfolios and financings, with APAC time-zone coverage."],
   "/industry/blockchain-digital-assets": ["Blockchain & Digital Assets Counsel | Beyond Horizons", "Singapore-anchored counsel for digital assets, token projects, blockchain contracts and evolving regulatory requirements."],

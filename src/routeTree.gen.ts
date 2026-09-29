@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as AiToolsRouteImport } from './routes/ai-tools'
 import { Route as AnnouncementsRouteImport } from './routes/announcements'
 import { Route as AscendingAsiaRouteImport } from './routes/ascending-asia'
+import { Route as BeyondPrecedentRouteImport } from './routes/beyond-precedent'
 import { Route as CoursesRouteImport } from './routes/courses'
 import { Route as JoinUsRouteImport } from './routes/join-us'
 import { Route as MarketInsightsRouteImport } from './routes/market-insights'
@@ -71,6 +72,11 @@ const AnnouncementsRoute = AnnouncementsRouteImport.update({
 const AscendingAsiaRoute = AscendingAsiaRouteImport.update({
   id: '/ascending-asia',
   path: '/ascending-asia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BeyondPrecedentRoute = BeyondPrecedentRouteImport.update({
+  id: '/beyond-precedent',
+  path: '/beyond-precedent',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CoursesRoute = CoursesRouteImport.update({
@@ -250,6 +256,7 @@ export interface FileRoutesByFullPath {
   '/ai-tools': typeof AiToolsRoute
   '/announcements': typeof AnnouncementsRoute
   '/ascending-asia': typeof AscendingAsiaRoute
+  '/beyond-precedent': typeof BeyondPrecedentRoute
   '/courses': typeof CoursesRoute
   '/join-us': typeof JoinUsRoute
   '/market-insights': typeof MarketInsightsRoute
@@ -290,6 +297,7 @@ export interface FileRoutesByTo {
   '/ai-tools': typeof AiToolsRoute
   '/announcements': typeof AnnouncementsRoute
   '/ascending-asia': typeof AscendingAsiaRoute
+  '/beyond-precedent': typeof BeyondPrecedentRoute
   '/courses': typeof CoursesRoute
   '/join-us': typeof JoinUsRoute
   '/market-insights': typeof MarketInsightsRoute
@@ -331,6 +339,7 @@ export interface FileRoutesById {
   '/ai-tools': typeof AiToolsRoute
   '/announcements': typeof AnnouncementsRoute
   '/ascending-asia': typeof AscendingAsiaRoute
+  '/beyond-precedent': typeof BeyondPrecedentRoute
   '/courses': typeof CoursesRoute
   '/join-us': typeof JoinUsRoute
   '/market-insights': typeof MarketInsightsRoute
@@ -373,6 +382,7 @@ export interface FileRouteTypes {
     | '/ai-tools'
     | '/announcements'
     | '/ascending-asia'
+    | '/beyond-precedent'
     | '/courses'
     | '/join-us'
     | '/market-insights'
@@ -413,6 +423,7 @@ export interface FileRouteTypes {
     | '/ai-tools'
     | '/announcements'
     | '/ascending-asia'
+    | '/beyond-precedent'
     | '/courses'
     | '/join-us'
     | '/market-insights'
@@ -453,6 +464,7 @@ export interface FileRouteTypes {
     | '/ai-tools'
     | '/announcements'
     | '/ascending-asia'
+    | '/beyond-precedent'
     | '/courses'
     | '/join-us'
     | '/market-insights'
@@ -494,6 +506,7 @@ export interface RootRouteChildren {
   AiToolsRoute: typeof AiToolsRoute
   AnnouncementsRoute: typeof AnnouncementsRoute
   AscendingAsiaRoute: typeof AscendingAsiaRoute
+  BeyondPrecedentRoute: typeof BeyondPrecedentRoute
   CoursesRoute: typeof CoursesRoute
   JoinUsRoute: typeof JoinUsRoute
   MarketInsightsRoute: typeof MarketInsightsRoute
@@ -564,6 +577,13 @@ declare module '@tanstack/react-router' {
       path: '/ascending-asia'
       fullPath: '/ascending-asia'
       preLoaderRoute: typeof AscendingAsiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/beyond-precedent': {
+      id: '/beyond-precedent'
+      path: '/beyond-precedent'
+      fullPath: '/beyond-precedent'
+      preLoaderRoute: typeof BeyondPrecedentRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/courses': {
@@ -806,6 +826,7 @@ const rootRouteChildren: RootRouteChildren = {
   AiToolsRoute: AiToolsRoute,
   AnnouncementsRoute: AnnouncementsRoute,
   AscendingAsiaRoute: AscendingAsiaRoute,
+  BeyondPrecedentRoute: BeyondPrecedentRoute,
   CoursesRoute: CoursesRoute,
   JoinUsRoute: JoinUsRoute,
   MarketInsightsRoute: MarketInsightsRoute,
