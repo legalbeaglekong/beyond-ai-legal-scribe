@@ -197,7 +197,7 @@ const TeamMemberPage = () => {
               </div>
             </div>
 
-            {member.slug === "hui-ling-teo" && (
+            {member.name === "Hui Ling Teo" && (
               <p className="text-sm text-muted-foreground">
                 See our <Link to="/industry/aviation" className="text-accent underline underline-offset-4">aviation finance counsel</Link> practice.
               </p>
