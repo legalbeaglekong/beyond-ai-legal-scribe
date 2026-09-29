@@ -177,7 +177,7 @@ const AscendingAsiaPage = () => {
                       ["Who owns the docs", "In the contract, who owns HTS classification support, origin certs, and the CBP file if treatment is challenged?"],
                     ].map(([title, body], index) => (
                       <li key={title} className="rounded border border-border bg-card p-5 shadow-minimal">
-                        <span className="text-xs font-semibold text-accent">0{index + 1}</span>
+                        <span className="text-xs font-semibold text-accent">{`0${index + 1}`}</span>
                         <h4 className="mt-2 text-base font-serif font-bold text-foreground">{title}</h4>
                         <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{body}</p>
                       </li>
@@ -295,7 +295,7 @@ const AscendingAsiaPage = () => {
                     <AccordionTrigger className="text-left text-base font-serif text-foreground hover:no-underline">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
+                    <AccordionContent forceMount className="data-[state=closed]:hidden text-sm text-muted-foreground leading-relaxed">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>

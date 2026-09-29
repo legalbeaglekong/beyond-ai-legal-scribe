@@ -10,8 +10,7 @@ import BackCover from "./BackCover";
 import TranslationDisclaimer from "./TranslationDisclaimer";
 import LanguageSelector from "./LanguageSelector";
 import { useTranslation } from "@/contexts/TranslationContext";
-import lexLexhyArt from "@/assets/lex-lexhy-art.jpg";
-import lexLexhyLogo from "@/assets/lex-lexhy-logo.png";
+import { WHATSAPP_URL } from "@/config/business";
 
 const EbookViewer = () => {
   const ebookRef = useRef<HTMLDivElement>(null);
@@ -879,57 +878,22 @@ const EbookViewer = () => {
             </AdvisoryBox>
           </ContentPage>
 
-          {/* LEX.LEXHY INTRODUCTION - Page 29 */}
+          {/* CLOSING - Page 29 */}
           <ContentPage pageNumber={29}>
-            <div className="flex flex-col items-center mb-6">
-              <img 
-                src={lexLexhyLogo} 
-                alt="LEX.LEXHY Logo" 
-                className="w-20 h-20 mb-4"
-              />
-              <h1 className="font-sans text-2xl md:text-3xl text-foreground font-black tracking-tight mb-2">
-                Introducing <span className="tracking-wide">LEX.LEXHY</span>
-              </h1>
-              <p className="text-berry font-display text-lg italic">
-                "Defining the Art of the Possible"
-              </p>
-            </div>
-
-            <div className="mb-6">
-              <img 
-                src={lexLexhyArt} 
-                alt="The Art of the Possible" 
-                className="w-full h-40 object-cover rounded-lg shadow-md"
-              />
-            </div>
-
+            <h1 className="ebook-h2">Thank you for reading</h1>
             <p className="ebook-body">
-              <strong className="font-sans font-bold">LEX.LEXHY</strong> is our AI-powered legal assistant with a human lawyer in the loop, 
-              designed to deliver bespoke AI legal solutions for the modern enterprise.
+              Thank you for reading Ascending Asia. We hope this playbook offers a useful starting point as you
+              consider Advanced Air Mobility market entry in Asia-Pacific.
             </p>
-
-            <h2 className="ebook-h2">Capabilities</h2>
-            <ul className="ebook-list">
-              <li><strong>Interactive Dashboards:</strong> Real-time visibility into your legal portfolio and regulatory exposure.</li>
-              <li><strong>Risk Tracking:</strong> Automated monitoring of compliance deadlines, ownership thresholds, and regulatory changes.</li>
-              <li><strong>Compliance Roadmaps:</strong> AI-generated action plans tailored to your market entry strategy.</li>
-            </ul>
-
+            <p className="ebook-body">
+              If you would like to discuss how these themes may apply to your structure or programme, you are
+              welcome to schedule a consultation with Beyond Horizons or chat with us on{" "}
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-berry underline hover:text-berry/80">WhatsApp</a>.
+            </p>
             <AdvisoryBox variant="feature">
               <p className="text-sm">
-                <strong>Experience the base version:</strong><br />
-                <a 
-                  href="https://lex.lexhygroup.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-berry underline hover:text-berry/80"
-                >
-                  lex.lexhygroup.com
-                </a>
-              </p>
-              <p className="text-sm mt-3">
-                <strong>Contact us</strong> to learn how LEX.LEXHY can be customized 
-                for your organization's specific legal and compliance needs.
+                This playbook is general information only and is not legal advice. Outcomes turn on specific facts,
+                documents and the latest regulatory guidance.
               </p>
             </AdvisoryBox>
           </ContentPage>
