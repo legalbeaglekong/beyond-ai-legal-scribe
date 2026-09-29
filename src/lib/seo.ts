@@ -67,7 +67,7 @@ export const STATIC_PAGE_SEO = {
   "/privacy": ["Data Protection Notice | Bethel Chambers LLC", "How Bethel Chambers LLC collects, uses, discloses and protects personal data under Singapore's Personal Data Protection Act 2012."],
   "/beyond-precedent": ["Beyond Precedent | Beyond Horizons", "Beyond Precedent explores how law students draft with free AI tools and how Beyond Horizons designs legal services and talent development for a post-AI age — not a job guarantee."],
   "/industry/ai-code-counsel": ["AI Code Counsel Singapore | PDPC GenAI, AI Verify & EU AI Act — Beyond Horizons", "AI governance counsel for Singapore operators — PDPC GenAI notifications, IMDA/FEAT programmes, EU AI Act readiness, and AI×IP issues. Book a consultation."],
-  "/industry/aviation": ["Aviation Finance Counsel Singapore | Beyond Horizons", "Aviation finance counsel for English-law leases, engines, portfolios and financings, with APAC time-zone coverage."],
+  "/industry/aviation": ["Aviation Lawyer & Finance Counsel Singapore | Beyond Horizons", "Aviation lawyer and finance counsel in Singapore — Beyond Horizons by Bethel Chambers LLC. Chambers Asia-Pacific Band 3 Aviation: Finance. English-law leases, APAC hours. Schedule a consultation."],
   "/industry/blockchain-digital-assets": ["Blockchain & Digital Assets Counsel | Beyond Horizons", "Singapore-anchored counsel for digital assets, token projects, blockchain contracts and evolving regulatory requirements."],
   "/industry/cybersecurity-tech": ["Cybersecurity & Technology Counsel | Beyond Horizons", "Legal guidance on cybersecurity, data governance, technology contracts, incident readiness and cross-border compliance."],
   "/industry/energy-transition": ["Energy Transition Counsel Singapore | Beyond Horizons", "Sustainability-aware counsel for renewable energy, green finance, project contracts and energy-transition matters across APAC."],
@@ -135,7 +135,7 @@ export function createExpertiseHead(id: string) {
 }
 
 const TEAM_SEO: Record<string, readonly [string, string]> = {
-  "hui-ling-teo": ["Hui Ling Teo | Beyond Horizons", "Hui Ling Teo is the founder of Beyond Horizons and an English and Singapore-qualified lawyer advising on cross-border corporate and finance matters."],
+  "hui-ling-teo": ["Hui Ling Teo | Beyond Horizons by Bethel Chambers LLC", "Hui Ling Teo leads Beyond Horizons by Bethel Chambers LLC — dual-qualified Singapore and English law counsel for aviation finance and cross-border corporate matters. Chambers Asia-Pacific Band 3, Aviation: Finance — Singapore."],
   "sonia-motwani": ["Sonia Motwani | Beyond Horizons", "Sonia Motwani is Delivery Lead at Beyond Horizons and a solicitor qualified in England and Wales."],
 };
 

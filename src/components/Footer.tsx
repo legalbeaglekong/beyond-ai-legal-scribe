@@ -46,8 +46,7 @@ const Footer = () => {
           <div className="grid lg:grid-cols-4 gap-12">
             <div className="space-y-6">
               <div>
-                <h3 className="text-lg font-serif font-bold text-foreground mb-1">Beyond Horizons</h3>
-                <p className="text-xs text-muted-foreground">{LEGAL_ENTITY}</p>
+                <h3 className="text-lg font-serif font-bold text-foreground mb-1">Beyond Horizons by Bethel Chambers LLC</h3>
                 <div className="teal-line mt-3" />
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">{t("footer.tagline")}</p>

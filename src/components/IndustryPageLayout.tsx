@@ -44,7 +44,19 @@ const BOOKING_URL = "https://wa.me/6597265330";
 export interface IndustryPageData {
   slug: string;
   seo: { title: string; description: string };
-  hero: { title: string; subtitle: string; badges: string[] };
+  hero: {
+    title: string;
+    subtitle: string;
+    badges: string[];
+    /** Optional entity strip shown above the H1. */
+    entity?: string;
+    /** Optional secondary email CTA (replaces "View Expertise"). */
+    emailCta?: string;
+    /** Optional soft line under the CTAs. */
+    ctaLine?: string;
+    /** Optional jump chips to an in-page anchor. */
+    jumpLinks?: { label: string; href: string }[];
+  };
   /** Optional lead-in prose rendered directly under the hero. */
   intro?: { paragraphs: string[]; note?: string };
   contentSections?: { heading: string; paragraphs: string[]; links?: { label: string; to: string }[] }[];
@@ -68,6 +80,7 @@ export interface IndustryPageData {
   };
   spotlight?: {
     heading: string;
+    id?: string;
     cards: { title: string; description?: string; bullets?: string[]; link?: string; linkText?: string; icon?: LucideIcon }[];
     analysis?: string;
   };
@@ -164,6 +177,9 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
           <div className="min-h-[85vh] flex items-center justify-center w-full pt-20 relative z-10">
             <div className="max-w-4xl mx-auto container-padding text-center fade-in">
               <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto mb-8" />
+              {data.hero.entity && (
+                <p className="text-xs md:text-sm uppercase tracking-[0.25em] text-white/90 font-sans mb-4" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.8)' }}>{data.hero.entity}</p>
+              )}
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight tracking-tight" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.9)' }}>
                 {data.hero.title}
               </h1>
@@ -177,11 +193,29 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" className="border-2 border-white text-white font-semibold hover:bg-white hover:text-black shadow-lg backdrop-blur-xs bg-white/5" asChild>
-                  <a href="#overview">
-                    View Expertise <ChevronDown className="ml-2 h-4 w-4" />
-                  </a>
+                  {data.hero.emailCta ? (
+                    <a href={`mailto:${data.hero.emailCta}`}>
+                      Email Us <Mail className="ml-2 h-4 w-4" />
+                    </a>
+                  ) : (
+                    <a href="#overview">
+                      View Expertise <ChevronDown className="ml-2 h-4 w-4" />
+                    </a>
+                  )}
                 </Button>
               </div>
+              {data.hero.ctaLine && (
+                <p className="text-sm text-white/90 mb-6" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.8)' }}>{data.hero.ctaLine}</p>
+              )}
+              {data.hero.jumpLinks && data.hero.jumpLinks.length > 0 && (
+                <nav aria-label="Jump to section" className="flex flex-wrap justify-center gap-2 mb-8">
+                  {data.hero.jumpLinks.map((j) => (
+                    <a key={j.label} href={j.href} className="text-xs text-white border border-white/40 px-3 py-1.5 rounded-full hover:bg-white/15 transition-smooth">
+                      {j.label}
+                    </a>
+                  ))}
+                </nav>
+              )}
               <div className="flex flex-wrap justify-center gap-3">
                 {data.hero.badges.map((badge, i) => (
                   <span key={i} className="text-xs text-white/90 font-medium border border-white/20 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md tracking-wide uppercase">
@@ -350,7 +384,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
 
         {/* Spotlight */}
         {data.spotlight && (
-        <section className="section-padding bg-secondary/20">
+        <section id={data.spotlight.id} className="section-padding bg-secondary/20 scroll-mt-24">
           <div className="max-w-6xl mx-auto container-padding fade-in">
             <div className="text-center mb-12">
               <div className="teal-line mx-auto mb-6" />
