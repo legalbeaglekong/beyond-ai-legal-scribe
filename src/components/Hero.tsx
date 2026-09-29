@@ -14,6 +14,7 @@ const Hero = () => {
   return (
     <section className="bg-background">
       <div className="pt-28 pb-8 max-w-5xl mx-auto container-padding text-center">
+        <p className="text-xs uppercase tracking-[0.25em] text-accent mb-3 font-sans">Beyond Horizons by Bethel Chambers LLC</p>
         <p className="text-sm text-muted-foreground mb-6">{t("hero.tagline")}</p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-foreground leading-[1.05] mb-8 max-w-4xl mx-auto">
           {t("hero.headline")}

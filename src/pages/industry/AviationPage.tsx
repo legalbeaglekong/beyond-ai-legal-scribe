@@ -4,16 +4,28 @@ import { Scale, Clock, Laptop, Gavel } from "lucide-react";
 export const data: IndustryPageData = {
   slug: "aviation",
   seo: {
-    title: "Aircraft Leasing & Aviation Finance Counsel | English Law · APAC Time Zone — Beyond Horizons",
+    title: "Aviation Lawyer & Finance Counsel Singapore | Beyond Horizons",
     description:
-      "Chambers-ranked aviation finance counsel for English-law governed leases, engines, portfolios and financings — APAC time-zone coverage, tech-enabled drafting, documents stress-tested with our disputes and arbitration team.",
+      "Aviation lawyer and finance counsel in Singapore — Beyond Horizons by Bethel Chambers LLC. Chambers Asia-Pacific Band 3 Aviation: Finance. English-law leases, APAC hours. Schedule a consultation.",
   },
   hero: {
-    title: "Aviation finance counsel — English-law documents, APAC time-zone coverage",
+    entity: "Beyond Horizons by Bethel Chambers LLC",
+    title: "Aviation lawyer & finance counsel Singapore — English-law documents, APAC time-zone coverage",
+    emailCta: "HL@beyondhorizons.sg",
+    ctaLine: "Instruct aviation finance counsel — schedule a consultation.",
+    jumpLinks: [
+      { label: "View work menu", href: "#work-menu" },
+      { label: "Leasing", href: "#work-menu" },
+      { label: "Engines", href: "#work-menu" },
+      { label: "Portfolios", href: "#work-menu" },
+      { label: "Financings", href: "#work-menu" },
+    ],
     subtitle:
-      "Most aviation finance and leasing matters we see are governed by English law. Beyond Horizons (Bethel Chambers LLC) is built for that reality: dual English and Singapore law qualification on the team, Chambers-ranked aviation finance expertise, and confident coverage across APAC working hours so counterparties in Asia are not waiting on a London close-of-play for every turn of the mark-up.",
+      "Most aviation finance and leasing matters we see are governed by English law. Beyond Horizons by Bethel Chambers LLC is built for that reality: dual English and Singapore law qualification on the team, Chambers-ranked aviation finance expertise, and confident coverage across APAC working hours so counterparties in Asia are not waiting on a London close-of-play for every turn of the mark-up.",
     badges: [
-      "Chambers Global Band 3 — Aviation Finance",
+      "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
+      "Chambers Asia-Pacific — Band 4, Aviation: Finance — Asia-Pacific Region",
+      "Chambers Global Market Leaders — Band 3, Asset Finance",
       "Legal 500 Next Generation Partner",
       "ALB Law Firm to Watch 2026",
       "$8B+ deal value (2024 & 2025)",
@@ -58,6 +70,7 @@ export const data: IndustryPageData = {
   },
   spotlight: {
     heading: "Work menu",
+    id: "work-menu",
     cards: [
       {
         title: "1. Leasing (aircraft operating leases and finance leases)",
@@ -189,7 +202,7 @@ export const data: IndustryPageData = {
       {
         question: "Why does “as-is / where-is” delivery matter on a business jet SPA?",
         answer:
-          "Educational framing: as-is / where-is language shifts condition risk toward the buyer after the agreed inspection window, often with an English-law overlay on how representations, warranties and remedies interact with that shift. Engine and APU programmes, back-to-birth records and technical acceptance sit beside that clause in a typical diligence pack. None of this is advice on your aircraft. For a live PPI or delivery schedule, Schedule consultation with Beyond Horizons (Bethel Chambers LLC).",
+          "Educational framing: as-is / where-is language shifts condition risk toward the buyer after the agreed inspection window, often with an English-law overlay on how representations, warranties and remedies interact with that shift. Engine and APU programmes, back-to-birth records and technical acceptance sit beside that clause in a typical diligence pack. None of this is advice on your aircraft. For a live PPI or delivery schedule, Schedule consultation with Beyond Horizons by Bethel Chambers LLC.",
       },
       {
         question: "What is the third-party manager transition in a jet purchase?",
@@ -233,9 +246,12 @@ export const data: IndustryPageData = {
   relatedPages: [
     { title: "Fractional GC", slug: "fractional-gc" },
     { title: "Why specialist counsel", slug: "/why-specialist-counsel" },
+    { title: "Ascending Asia", slug: "/ascending-asia" },
+    { title: "Hui Ling Teo", slug: "/team/hui-ling-teo" },
+    { title: "Singapore aviation law counsel", slug: "/singapore-aviation-law" },
   ],
   relatedExternal: [
-    { label: "insights.beyondhorizons.sg", href: "https://insights.beyondhorizons.sg" },
+    { label: "Insights", href: "https://www.insights.beyondhorizons.sg/" },
     { label: "Section 232 UAS — Ascending Asia", href: "https://ascendingasia.beyondhorizons.sg/" },
   ],
 };

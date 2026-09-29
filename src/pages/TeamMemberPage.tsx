@@ -171,6 +171,7 @@ const TeamMemberPage = () => {
               <p className="text-xs text-muted-foreground mb-2">{member.flag}</p>
               <p className="text-sm italic text-accent font-serif mb-1">{language === "zh" ? member.roleZh : member.role}</p>
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-2">{member.name}</h1>
+              <p className="text-sm font-serif text-foreground mb-2">Beyond Horizons by Bethel Chambers LLC</p>
               <p className="text-sm text-muted-foreground">{language === "zh" ? member.experienceZh : member.experience}</p>
             </div>
 
@@ -195,6 +196,12 @@ const TeamMemberPage = () => {
                 ))}
               </div>
             </div>
+
+            {member.name === "Hui Ling Teo" && (
+              <p className="text-sm text-muted-foreground">
+                See our <Link to="/industry/aviation" className="text-accent underline underline-offset-4">aviation finance counsel</Link> practice.
+              </p>
+            )}
 
             {member.linkedin && (
               <Button variant="outline" asChild>
