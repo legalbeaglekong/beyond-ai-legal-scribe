@@ -295,7 +295,7 @@ const AscendingAsiaPage = () => {
                     <AccordionTrigger className="text-left text-base font-serif text-foreground hover:no-underline">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent forceMount className="data-[state=closed]:hidden text-sm text-muted-foreground leading-relaxed">
+                    <AccordionContent forceMount className="text-sm text-muted-foreground leading-relaxed">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
