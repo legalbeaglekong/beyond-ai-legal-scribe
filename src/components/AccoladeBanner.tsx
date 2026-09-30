@@ -13,7 +13,7 @@ const accolades = [
     featured: true,
   },
   {
-    title: "Chambers Global 2025",
+    title: "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
     org: "Chambers & Partners",
     url: "https://chambers.com/lawyer/hui-ling-teo-global-2:25705527",
   },

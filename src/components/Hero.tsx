@@ -7,6 +7,16 @@ import industryTransportation from "@/assets/industry-transportation.webp.asset.
 import industryEnergy from "@/assets/industry-energy.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 import AccoladeBanner from "@/components/AccoladeBanner";
+import { Link } from "@/lib/router-compat";
+
+const PRACTICE_CHIPS = [
+  { label: "Aviation finance", to: "/industry/aviation" },
+  { label: "Fractional GC", to: "/industry/fractional-gc" },
+  { label: "Employment", to: "/singapore-employment-law" },
+  { label: "AI Code Counsel", to: "/industry/ai-code-counsel" },
+  { label: "Robotics & RaaS", to: "/industry/robotics" },
+  { label: "Meet Hui Ling Teo", to: "/team/hui-ling-teo" },
+];
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -14,7 +24,7 @@ const Hero = () => {
   return (
     <section className="bg-background">
       <div className="pt-28 pb-8 max-w-5xl mx-auto container-padding text-center">
-        <p className="text-xs uppercase tracking-[0.25em] text-accent mb-3 font-sans">Beyond Horizons by Bethel Chambers LLC</p>
+        <p className="text-xs uppercase tracking-[0.25em] text-accent mb-3 font-sans">Beyond Horizons by Bethel Chambers LLC — Singapore-anchored cross-border counsel.</p>
         <p className="text-sm text-muted-foreground mb-6">{t("hero.tagline")}</p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-foreground leading-[1.05] mb-8 max-w-4xl mx-auto">
           {t("hero.headline")}
@@ -22,6 +32,13 @@ const Hero = () => {
         <a href="#about" className="text-foreground link-underline text-base inline-flex items-center hover:text-accent transition-smooth">
           {t("hero.cta")}
         </a>
+        <nav aria-label="Practice areas" className="mt-8 flex flex-wrap justify-center gap-2">
+          {PRACTICE_CHIPS.map((c) => (
+            <Link key={c.to} to={c.to} className="text-xs px-3 py-1.5 rounded-full border border-border bg-card text-foreground hover:text-accent hover:border-accent/40 transition-smooth">
+              {c.label}
+            </Link>
+          ))}
+        </nav>
         <AccoladeBanner variant="inline" className="mt-10 max-w-2xl mx-auto" />
       </div>
 

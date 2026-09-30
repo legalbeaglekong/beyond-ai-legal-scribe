@@ -58,12 +58,14 @@ const ORGANIZATION_JSONLD = `{
     "worksFor": "Beyond Horizons by Bethel Chambers LLC",
     "email": "HL@beyondhorizons.sg",
     "award": [
-      "Chambers Asia-Pacific — Asset Finance (Band 3), ranked 6 years",
+      "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
+      "Chambers Asia-Pacific — Band 4, Aviation: Finance — Asia-Pacific Region",
+      "Chambers Global Market Leaders — Band 3, Asset Finance",
       "Legal 500 Next Generation Partner 2023"
     ],
     "sameAs": [
       "https://chambers.com/lawyer/hui-ling-teo-global-2:25705527",
-      "https://sg.linkedin.com/in/huilingt"
+      "https://www.linkedin.com/in/huilingt"
     ]
   },
   "areaServed": [
@@ -116,18 +118,20 @@ const FOUNDER_JSONLD = `{
   "@type": "Person",
   "name": "Hui Ling Teo",
   "jobTitle": "Founder",
-  "description": "Dual-qualified lawyer — English solicitor and Singapore advocate & solicitor. Founder of Beyond Horizons (a specialist practice group of Bethel Chambers LLC).",
+  "description": "Dual-qualified lawyer — English solicitor and Singapore advocate & solicitor. Founder of Beyond Horizons by Bethel Chambers LLC.",
   "worksFor": {
     "@id": "https://beyondhorizons.sg/#organization"
   },
   "email": "HL@beyondhorizons.sg",
   "award": [
-    "Chambers Asia-Pacific — Asset Finance (Band 3), ranked 6 years",
+    "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
+      "Chambers Asia-Pacific — Band 4, Aviation: Finance — Asia-Pacific Region",
+      "Chambers Global Market Leaders — Band 3, Asset Finance",
     "Legal 500 Next Generation Partner 2023"
   ],
   "sameAs": [
     "https://chambers.com/lawyer/hui-ling-teo-global-2:25705527",
-    "https://sg.linkedin.com/in/huilingt"
+    "https://www.linkedin.com/in/huilingt"
   ]
 }`;
 

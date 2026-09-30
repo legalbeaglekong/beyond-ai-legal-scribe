@@ -49,20 +49,14 @@ const teamData: Record<string, {
       "Successfully handled large merger and acquisitions transactions",
       "Well-versed in commercial negotiations",
       "Expertise in corporate and finance areas such as debt restructuring, blended finance, sale, purchase, leasing and trading of machinery",
-      "Chambers ranked since 2019",
       "Honoured as Legal 500's \"Next Generation Partner\" in 2023",
-      "Top 20 asset finance lawyers globally",
-      "Top 10 most influential lawyers shaping aviation finance",
     ],
     highlightsZh: [
       "资深法律专业人士，拥有超过14年的公司和金融工作经验",
       "成功处理大型并购交易",
       "精通商业谈判",
       "在债务重组、混合融资、机械买卖、租赁和贸易等公司和金融领域的专业知识",
-      "自2019年起获钱伯斯排名",
       "2023年荣获Legal 500「新一代合伙人」",
-      "全球前20名资产融资律师",
-      "塑造航空融资的十大最具影响力律师",
     ],
     linkedin: "https://www.linkedin.com/in/hui-ling-teo-7bb8b812b/",
   },
@@ -96,6 +90,20 @@ const teamData: Record<string, {
 };
 
 const slugs = Object.keys(teamData);
+
+const CHAMBERS_LABELS = [
+  "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
+  "Chambers Asia-Pacific — Band 4, Aviation: Finance — Asia-Pacific Region",
+  "Chambers Global Market Leaders — Band 3, Asset Finance",
+];
+
+const INSTRUCT_PATHS = [
+  { label: "aviation finance counsel", to: "/industry/aviation" },
+  { label: "fractional GC Singapore", to: "/industry/fractional-gc" },
+  { label: "employment counsel", to: "/singapore-employment-law" },
+  { label: "AI Code Counsel", to: "/industry/ai-code-counsel" },
+  { label: "robotics / RaaS counsel", to: "/industry/robotics" },
+];
 
 const TeamMemberPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -140,9 +148,9 @@ const TeamMemberPage = () => {
             },
             image: member.image,
             url: `https://beyondhorizons.sg/team/${slug}`,
-            sameAs: member.linkedin ? [member.linkedin] : undefined,
+            sameAs: member.name === "Hui Ling Teo" ? ["https://chambers.com/lawyer/hui-ling-teo-global-2:25705527", "https://www.linkedin.com/in/huilingt"] : member.linkedin ? [member.linkedin] : undefined,
             award: member.name === "Hui Ling Teo" ? [
-              "Chambers Asia-Pacific — Asset Finance (Band 3), ranked since 2019",
+              ...CHAMBERS_LABELS,
               "Legal 500 Next Generation Partner 2023"
             ] : undefined,
             alumniOf: member.name === "Sonia Motwani" ? {
@@ -171,7 +179,14 @@ const TeamMemberPage = () => {
               <p className="text-xs text-muted-foreground mb-2">{member.flag}</p>
               <p className="text-sm italic text-accent font-serif mb-1">{language === "zh" ? member.roleZh : member.role}</p>
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-2">{member.name}</h1>
-              <p className="text-sm font-serif text-foreground mb-2">Beyond Horizons by Bethel Chambers LLC</p>
+              {member.name === "Hui Ling Teo" ? (
+                <>
+                  <p className="text-sm font-serif text-foreground">Founder, Beyond Horizons by Bethel Chambers LLC</p>
+                  <p className="text-sm text-foreground mb-2">Dual-qualified — Singapore and English law</p>
+                </>
+              ) : (
+                <p className="text-sm font-serif text-foreground mb-2">Beyond Horizons by Bethel Chambers LLC</p>
+              )}
               <p className="text-sm text-muted-foreground">{language === "zh" ? member.experienceZh : member.experience}</p>
             </div>
 
@@ -198,9 +213,33 @@ const TeamMemberPage = () => {
             </div>
 
             {member.name === "Hui Ling Teo" && (
-              <p className="text-sm text-muted-foreground">
-                See our <Link to="/industry/aviation" className="text-accent underline underline-offset-4">aviation finance counsel</Link> practice.
-              </p>
+              <>
+                <div>
+                  <h2 className="text-sm uppercase tracking-[0.2em] text-accent mb-4 font-sans">Chambers recognition</h2>
+                  <ul className="flex flex-wrap gap-2">
+                    {CHAMBERS_LABELS.map((label) => (
+                      <li key={label} className="text-xs px-3 py-1.5 rounded-full border border-accent/40 bg-accent/5 text-accent font-medium">{label}</li>
+                    ))}
+                  </ul>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Instruct:{" "}
+                  {INSTRUCT_PATHS.map((p, i) => (
+                    <span key={p.to}>
+                      {i > 0 && " · "}
+                      <Link to={p.to} className="text-accent underline underline-offset-4">{p.label}</Link>
+                    </span>
+                  ))}
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <Button asChild>
+                    <a href="https://wa.me/6597265330" target="_blank" rel="noopener noreferrer">Schedule Consultation</a>
+                  </Button>
+                  <Button variant="outline" asChild>
+                    <a href="mailto:HL@beyondhorizons.sg">HL@beyondhorizons.sg</a>
+                  </Button>
+                </div>
+              </>
             )}
 
             {member.linkedin && (
