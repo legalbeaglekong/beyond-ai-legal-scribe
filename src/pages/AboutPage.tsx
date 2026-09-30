@@ -15,9 +15,9 @@ const AboutPage = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   const achievements = [
-    { icon: Award, title: "Chambers Global 2025", description: "Band 3 Asset Finance - Global Market Leader", highlight: "6 Years Ranked" },
+    { icon: Award, title: "Chambers Asia-Pacific 2026", description: "Band 3, Aviation: Finance — Singapore", highlight: "Chambers & Partners" },
     { icon: TrendingUp, title: "Legal 500 Recognition", description: "Next Generation Partner 2023", highlight: "Industry Leader" },
-    { icon: Users, title: "Early Career Excellence", description: "Top 10 Most Influential Lawyers", highlight: "Proven Track Record" },
+    { icon: Users, title: "Chambers Global Market Leaders", description: "Band 3, Asset Finance", highlight: "Chambers & Partners" },
     { icon: BookOpen, title: "Bloomberg Law Author", description: "Strategic Business Advisory & ESG Implementation", highlight: "Thought Leadership" },
   ];
 
