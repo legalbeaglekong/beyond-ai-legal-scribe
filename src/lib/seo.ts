@@ -135,7 +135,7 @@ export function createExpertiseHead(id: string) {
 }
 
 const TEAM_SEO: Record<string, readonly [string, string]> = {
-  "hui-ling-teo": ["Hui Ling Teo | Beyond Horizons by Bethel Chambers LLC", "Hui Ling Teo leads Beyond Horizons by Bethel Chambers LLC — dual-qualified Singapore and English law counsel for aviation finance, fractional GC, and cross-border corporate matters. Chambers Asia-Pacific Band 3, Aviation: Finance — Singapore."],
+  "hui-ling-teo": ["Hui Ling Teo | Beyond Horizons by Bethel Chambers LLC", "Hui Ling Teo leads Beyond Horizons by Bethel Chambers LLC — dual-qualified Singapore and English law counsel for aviation finance and cross-border corporate matters. Chambers Asia-Pacific Band 3, Aviation: Finance — Singapore."],
   "sonia-motwani": ["Sonia Motwani | Beyond Horizons", "Sonia Motwani is Delivery Lead at Beyond Horizons and a solicitor qualified in England and Wales."],
 };
 
