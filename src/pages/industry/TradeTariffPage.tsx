@@ -61,7 +61,7 @@ export const data: IndustryPageData = {
   closing: {
     heading: "Sources and scope",
     paragraphs: [
-      "Beyond Horizons (Bethel Chambers LLC) is an EnterpriseSG BizAdapt pre-approved vendor for Legal & Contractual Matters. This is not an EnterpriseSG endorsement or government partnership.",
+      "Beyond Horizons by Bethel Chambers LLC is an EnterpriseSG BizAdapt pre-approved vendor for Legal & Contractual Matters. This is not an EnterpriseSG endorsement or government partnership.",
       "General information only — not legal advice and not tariff advice. It is not a prediction of CBP treatment. Outcomes turn on documents and facts; check the Federal Register for the latest text and coordinate with US customs counsel where needed.",
     ],
   },

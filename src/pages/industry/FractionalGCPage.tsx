@@ -6,7 +6,7 @@ export const data: IndustryPageData = {
   seo: {
     title: "Fractional General Counsel Singapore | Legal Support Options — Beyond Horizons",
     description:
-      "Need ongoing legal support? Compare employing counsel, an agency placement, or retaining Beyond Horizons (Bethel Chambers LLC). Schedule a consultation.",
+      "Need ongoing legal support? Compare employing counsel, an agency placement, or retaining Beyond Horizons by Bethel Chambers LLC. Schedule a consultation.",
   },
   hero: {
     title: "Fractional General Counsel Singapore — legal support options",
@@ -23,7 +23,7 @@ export const data: IndustryPageData = {
     heading: "If you need legal support: three options",
     columns: [
       "",
-      "Retain Beyond Horizons (Bethel Chambers LLC)",
+      "Retain Beyond Horizons by Bethel Chambers LLC",
       "Employ in-house counsel",
       "Lawyer placed by an agency",
     ],
@@ -158,7 +158,7 @@ export const data: IndustryPageData = {
       {
         question: "What is Fractional GC here?",
         answer:
-          "A scoped retainer with Beyond Horizons / Bethel Chambers LLC for ongoing legal judgment — named lead and deputy — not a full-time employment contract and not an agency placement of hands.",
+          "A scoped retainer with Beyond Horizons by Bethel Chambers LLC for ongoing legal judgment — named lead and deputy — not a full-time employment contract and not an agency placement of hands.",
       },
       {
         question: "When should we employ someone?",
@@ -181,6 +181,9 @@ export const data: IndustryPageData = {
         question: "Do you guarantee outcomes?",
         answer: "No. We commit to named counsel, a deputy, and a stated response time.",
       },
+      { question: "When does fractional GC fit better than hiring in-house counsel in Singapore?", answer: "Hire in-house when you need daily physical presence or legal volume that truly fills a full-time seat. Choose a fractional GC when a Singapore scale-up needs senior legal judgment and continuity without a permanent headcount — commercial contracts, employment coordination, and vendor/AI policies as scoped. Beyond Horizons by Bethel Chambers LLC scopes ongoing support in a proposal-based engagement letter. Soft next step: schedule a consultation." },
+      { question: "How does fractional GC differ from a full-service law firm retainer for day-to-day work?", answer: "Fractional GC emphasises named senior continuity for day-to-day legal judgment. Full-service firms remain appropriate when a large bench is required for specialised or multi-office matters. Beyond Horizons by Bethel Chambers LLC collaborates rather than claiming superiority or publishing fee comparisons. Soft next step: schedule a consultation to see which model fits your matter mix." },
+      { question: "What does a scoped fractional GC engagement with Beyond Horizons typically cover?", answer: "Typically ongoing legal judgment with a named lead (and deputy where scoped): commercial contracts, employment coordination, vendor and AI policy support, and matter triage — not a full-time employment contract and not an agency placement of hands. Coverage is proposal-based; we do not publish a public price list or guarantee outcomes. Beyond Horizons by Bethel Chambers LLC. Soft next step: schedule a consultation." },
     ],
   },
   cta: {

@@ -12,9 +12,9 @@ const About = () => {
   const { t } = useLanguage();
 
   const achievements = [
-    { icon: Award, title: t("about.achievement1Title"), description: t("about.achievement1Desc"), highlight: t("about.achievement1Highlight") },
+    { icon: Award, title: "Chambers Asia-Pacific 2026", description: "Band 3, Aviation: Finance — Singapore", highlight: "Chambers & Partners" },
     { icon: TrendingUp, title: t("about.achievement2Title"), description: t("about.achievement2Desc"), highlight: t("about.achievement2Highlight") },
-    { icon: Users, title: t("about.achievement3Title"), description: t("about.achievement3Desc"), highlight: t("about.achievement3Highlight") },
+    { icon: Users, title: "Chambers Global Market Leaders", description: "Band 3, Asset Finance", highlight: "Chambers & Partners" },
     { icon: BookOpen, title: t("about.achievement4Title"), description: t("about.achievement4Desc"), highlight: t("about.achievement4Highlight") },
   ];
 
