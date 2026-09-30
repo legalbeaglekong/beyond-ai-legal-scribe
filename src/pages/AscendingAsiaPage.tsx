@@ -50,7 +50,7 @@ export const section232Faqs = [
   {
     question: "How does Ascending Asia / Beyond Horizons help?",
     answer:
-      "Ascending Asia is Beyond Horizons’ AAM market-entry playbook for APAC structuring and regulatory anchoring (Singapore-focused). On Section 232 UAS, we can help APAC clients pressure-test contract and origin-paper allocation for US-programme supply — often alongside US customs specialists. Soft next step: register for the guide and/or schedule a consultation. Beyond Horizons / Bethel Chambers LLC is an EnterpriseSG BizAdapt pre-approved vendor for Legal & Contractual Matters; that is not a government endorsement.",
+      "Ascending Asia is Beyond Horizons’ AAM market-entry playbook for APAC structuring and regulatory anchoring (Singapore-focused). On Section 232 UAS, we can help APAC clients pressure-test contract and origin-paper allocation for US-programme supply — often alongside US customs specialists. Soft next step: register for the guide and/or schedule a consultation. Beyond Horizons by Bethel Chambers LLC is an EnterpriseSG BizAdapt pre-approved vendor for Legal & Contractual Matters; that is not a government endorsement.",
   },
 ] as const;
 
@@ -200,7 +200,7 @@ const AscendingAsiaPage = () => {
 
                 <div className="text-xs text-muted-foreground leading-relaxed space-y-2 border-t border-border pt-5">
                   <p>
-                    Beyond Horizons (Bethel Chambers LLC) is an EnterpriseSG <a href={BIZADAPT_URL} target="_blank" rel="noopener noreferrer" className="link-underline text-foreground">BizAdapt pre-approved vendor</a> for Legal & Contractual Matters.
+                    Beyond Horizons by Bethel Chambers LLC is an EnterpriseSG <a href={BIZADAPT_URL} target="_blank" rel="noopener noreferrer" className="link-underline text-foreground">BizAdapt pre-approved vendor</a> for Legal & Contractual Matters.
                   </p>
                   <p className="italic">
                     General information only — not legal advice and not tariff advice. Not a prediction of CBP treatment. Confirm the Federal Register text. Grant eligibility is EnterpriseSG’s determination.
