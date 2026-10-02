@@ -1,3 +1,4 @@
+import { AVIATION_RANKINGS, AVIATION_RANKINGS_NOTES } from "@/config/business";
 import PillarPage from "@/components/PillarPage";
 import { Plane, FileText, Scale, Briefcase, Shield, Calendar } from "lucide-react";
 
@@ -5,25 +6,32 @@ const SingaporeAviationLawPage = () => (
   <PillarPage
     slug="singapore-aviation-law"
     eyebrow="English-law documents · APAC time-zone coverage"
-    h1="Aviation Law — English-law Documents, Singapore-law Coordination"
-    intro="Most aviation finance and leasing matters we see are governed by English law. Beyond Horizons by Bethel Chambers LLC advises on those documents with English and Singapore law qualification on the team, and coordinate the Singapore-law pieces — CAAS regulatory interfaces, security, filings and opinions — when the deal needs them. Documents can be stress-tested with our disputes and arbitration team before they have to survive a default, redelivery fight or enforcement path. We are a law practice: we do not underwrite securities, lend, broker aircraft, or act as a CAMO/MRO."
-    badges={["English-law Leases & Financings", "Cape Town, IDERA & Filings", "CAAS Regulatory Coordination", "$8B+ deal value (2024 & 2025)"]}
-    metaTitle="Singapore Aviation Lawyer — English-law Leasing & Finance | Beyond Horizons"
-    metaDescription="Aviation counsel for English-law leases, engines, portfolios and financings, with Singapore-law coordination: CAAS, Cape Town, IDERA, security and opinions."
-    ogTitle="Aviation Law — English-law Documents, APAC Time-zone Coverage"
-    ogDescription="Aviation finance and leasing counsel for English-law documents, with Singapore-law coordination and a disputes and arbitration stress-test."
+    h1="Aviation counsel from Singapore — CAAS coordination, Cape Town interfaces, recoveries & incomplete docs"
+    intro="Most aviation finance and leasing matters we see are governed by English law. Beyond Horizons by Bethel Chambers LLC advises on those documents with English and Singapore law qualification on the team. We are cross-border lawyers with a physical presence in Singapore, available across time zones, comfortable across global matters, with specific expertise in developing markets. From our Singapore hub we coordinate CAAS regulatory interfaces, security, filings and opinions when the deal needs Singapore pieces — and we run the same desk across APAC and global working hours on multi-jurisdictional files, including developing markets. Where files turn distressed, we work the cross-border documentary path around aircraft recoveries / asset recovery, Cape Town Convention priority and IDERA strategy (with local counsel as needed), and insolvency-adjacent coordination. Documents can be stress-tested with our disputes and arbitration team before they have to survive a default, redelivery fight or enforcement path. We are a law practice: we do not underwrite securities, lend, broker aircraft, or act as a CAMO/MRO."
+    badges={["Beyond Horizons by Bethel Chambers LLC", "English-law Leases & Financings", "Cape Town / IDERA Coordination", "CAAS Regulatory Coordination", "Aircraft Recoveries & Incomplete Docs", "$8B+ deal value (2024 & 2025)"]}
+    metaTitle="Aviation Law Counsel Singapore Hub — CAAS Coordination, Cape Town & Recoveries | Beyond Horizons"
+    metaDescription="Cross-border aviation finance counsel with a Singapore physical presence — English-law leases, Cape Town/IDERA coordination, aircraft recoveries, incomplete aircraft/engine docs, MRO and vertiports. Available across time zones; developing-markets expertise."
+    ogTitle="Aviation Law Counsel Singapore Hub — CAAS Coordination, Cape Town & Recoveries | Beyond Horizons"
+    ogDescription="Cross-border aviation finance counsel with a Singapore physical presence — English-law leases, Cape Town/IDERA coordination, aircraft recoveries, incomplete aircraft/engine docs, MRO and vertiports. Available across time zones; developing-markets expertise."
     breadcrumbName="Singapore Aviation Law"
     serviceType="Aviation and Aerospace Law"
-    serviceDescription="Singapore aviation and aerospace legal counsel — CAAS regulation, aircraft leasing under Cape Town, aircraft finance, SAF, advanced air mobility and aerospace M&A."
+    serviceDescription="Cross-border aviation finance and aerospace counsel with a Singapore physical presence — English-law leasing and finance, CAAS coordination, Cape Town / IDERA coordination with local counsel, aircraft recoveries, incomplete documentary packages, MRO, SAF and advanced air mobility."
     services={[
-      { icon: Plane, title: "Aircraft Leasing & Finance", desc: "Operating and finance leases, sale-and-leaseback, JOLCO, ABS, pre-delivery payment financing, novations and Cape Town registrations through Singapore." },
+      { icon: Plane, title: "Aircraft Leasing & Finance", desc: "Operating and finance leases, sale-and-leaseback, JOLCO, ABS, pre-delivery payment financing, novations and Cape Town / IDERA coordination with local registration counsel." },
       { icon: FileText, title: "CAAS Regulation & Approvals", desc: "Air Operator Certification, foreign operator permits, aircraft registration, airworthiness, drone (UAS) operator permits and OB-1 unmanned aircraft frameworks." },
-      { icon: Scale, title: "Cape Town Convention", desc: "International registry filings, IDERA, priority strategy and enforcement of international interests in aircraft objects via Singapore's Cape Town implementation." },
-      { icon: Briefcase, title: "MRO, Aerospace M&A & JVs", desc: "Aerospace manufacturing JVs, MRO acquisitions and disposals, technology licensing, and Seletar Aerospace Park structuring." },
-      { icon: Shield, title: "Sustainable Aviation Fuel (SAF)", desc: "SAF offtake and supply, Singapore's SAF levy framework (from 2026), CORSIA, book-and-claim systems, and green financing for sustainable aviation." },
-      { icon: Calendar, title: "Advanced Air Mobility & eVTOL", desc: "Vertiport development, eVTOL operator licensing, drone delivery commercialisation, airspace integration and product-liability allocation." },
+      { icon: Scale, title: "Cape Town Convention — cross-border recoveries & IDERA", desc: "Educational framing: international interests, International Registry filings, priority, IDERA and the Alternative A insolvency regime as an international convention map for recoveries, coordinated with local registration counsel. Singapore's accession (effective 1 September 2009) is a factual hub advantage where Singapore-registered objects are in play. Outcomes depend on the facts and local process — no outcome guarantees." },
+      { icon: Briefcase, title: "MRO, Hangar Construction, Aerospace M&A & JVs", desc: "Aerospace manufacturing JVs, MRO acquisitions and disposals, hangar construction and leasehold packages, technology licensing, and Seletar Aerospace Park structuring. Counsel only — not the CAMO/MRO operator." },
+      { icon: Shield, title: "Sustainable Aviation Fuel (SAF)", desc: "SAF offtake and supply, Singapore's SAF levy framework (from 2026), CORSIA, book-and-claim systems, and green financing for sustainable aviation. Hui Ling Teo was previously Founder & Director of Governance, Asia Sustainable Aviation Fuel Association (ASAFA), Aug 2024–Apr 2025." },
+      { icon: Calendar, title: "Advanced Air Mobility, eVTOL & Vertiports", desc: "Vertiport development, eVTOL operator licensing, drone delivery commercialisation, airspace integration and product-liability allocation. Deeper AAM/UAS content is on Ascending Asia." },
     ]}
     updates={[]}
+    contentSections={[
+      { heading: "Aircraft recoveries / repossession-adjacent counsel & aviation insolvency", paragraphs: ["Through a cross-border Cape Town / IDERA lens, we advise on the documentary and coordination path around default, termination, possession and recovery, with Singapore hub coordination where Singapore registration or CAAS pieces matter. Local enforcement steps sit with instructed local counsel and depend on the facts. We do not guarantee possession outcomes."] },
+      { heading: "Incomplete aircraft, engines & documentary packages", paragraphs: ["Issue lists on missing or incomplete technical and title records, conditions precedent and escrow mechanics, and risk allocation in SPAs and leases — including Singapore registration and CP interfaces where the deal needs them."] },
+      { heading: "Landing gear & equipment finance", paragraphs: ["Equipment and landing-gear lease / SPA documentation, security and priority language, and interaction with airframe and engine packages."] },
+      { heading: "Business jet & helicopter S&P; co-ownership", paragraphs: ["Pre-owned business-jet and helicopter sale-and-purchase documentation, and co-ownership / fractional ownership document sets. English-law SPA depth sits on our aviation finance page."], links: [{ label: "Aviation finance counsel — English-law SPA depth", to: "/industry/aviation" }] },
+      { heading: "SAF & future fuels", paragraphs: ["We advise on SAF offtake/supply and green-financing documents when they sit next to leasing and finance files. International Future Fuels Week (IFFW) is at iffw.sg. Separately, Hui Ling Teo was Founder & Director of Governance, Asia Sustainable Aviation Fuel Association (ASAFA), Aug 2024–Apr 2025 (past role)."], links: [{ label: "International Future Fuels Week (IFFW)", to: "https://iffw.sg" }, { label: "IFFW on LinkedIn", to: "https://www.linkedin.com/company/iffwsg" }, { label: "Jet fuel hedges & lease residual risk (LinkedIn video)", to: "https://www.linkedin.com/feed/update/urn:li:activity:7508041694978760704/" }, { label: "Insights", to: "https://www.insights.beyondhorizons.sg/" }, { label: "Ascending Asia (AAM & UAS)", to: "/ascending-asia" }] },
+    ]}
     faqs={[
       { q: "Who regulates aviation in Singapore?", a: "The Civil Aviation Authority of Singapore (CAAS) is the primary regulator, covering aerodromes (Changi, Seletar), airspace, airworthiness, operator certification, drones (UAS) and SAF. The Ministry of Transport sets policy and Singapore is a contracting state to ICAO." },
       { q: "Has Singapore ratified the Cape Town Convention?", a: "Yes. Singapore acceded to the Cape Town Convention and Aircraft Protocol with effect from 1 September 2009. Singapore-registered aircraft objects benefit from international interest priority, IDERA and the Alternative A insolvency regime — making it a leading jurisdiction for aircraft leasing and finance in Asia." },
@@ -32,14 +40,18 @@ const SingaporeAviationLawPage = () => (
       { q: "Is Singapore a good base for aircraft leasing?", a: "Yes. Singapore offers a Cape Town-compliant regime, the Aircraft Leasing Scheme (concessionary 8% tax rate, GST/withholding tax exemptions), a deep aviation finance ecosystem and English-language common-law contracting." },
       { q: "What licensing applies to eVTOLs and advanced air mobility?", a: "CAAS has been engaged on type certification reciprocity and operator frameworks for eVTOL platforms. Vertiport development implicates urban planning, BCA, USS, and airspace coordination. Singapore is positioning to be an early commercial AAM market." },
       { q: "How does Beyond Horizons support aviation clients?", a: "We advise airlines, lessors, financiers, MROs and aerospace innovators on regulatory strategy, leasing and finance, M&A and JV formation, SAF commercial frameworks, and advanced air mobility commercialisation in Singapore and across ASEAN." },
+      { q: "How does Cape Town / IDERA help on repossession / recovery?", a: "In educational terms, the Cape Town Convention gives a cross-border map: international interests registered on the International Registry, priority rules, IDERA (Irrevocable De-Registration and Export Request Authorisation) and, where a state has declared it, the Alternative A insolvency regime. Our Singapore hub can coordinate where Singapore registration or CAAS pieces matter. Outcomes depend on the facts and on local counsel and process. To map your file, schedule a consultation." },
+      { q: "Incomplete aircraft or engine documents for a Singapore deal?", a: "We work through conditions precedent, escrow mechanics and risk allocation in the paper, and coordinate CAAS and registration steps where Singapore pieces are involved. Schedule a consultation to scope the file." },
+      { q: "Specialist counsel vs Big Law for a regional / developing-markets aviation file?", a: "A cross-border specialist desk can offer continuity, multi-timezone coverage and a physical presence in Singapore on regional and developing-markets files. Where a matter needs a larger bench, we collaborate with full-service firms. We do not compare ourselves with or comment on any named firm." },
     ]}
+    rankings={{ items: AVIATION_RANKINGS, notes: AVIATION_RANKINGS_NOTES }}
     relatedKeywords={["aviation", "aircraft", "lessor", "caas", "saf", "cape town", "evtol", "drone", "uas", "aerospace"]}
     relatedHeading="Related Insights — Aviation & Aerospace"
     ctaHeading="Schedule a Singapore Aviation Consultation"
-    ctaBody="Whether you are placing a Singapore lease, building a SAF offtake, or launching an advanced air mobility venture, we can help you structure and execute. Book a complimentary strategic consultation."
+    ctaBody="Whether you are placing a cross-border lease (Singapore hub or elsewhere), working a recovery or incomplete-docs file in a developing or other market, building a SAF offtake, or advancing an airport/vertiport / AAM venture — tell us what you need. Book a Consultation."
     exploreLink={{ label: "Looking to instruct counsel? Aviation finance counsel in Singapore", to: "/industry/aviation" }}
-    lastUpdatedISO="2026-06-09"
-    lastUpdatedLabel="June 2026"
+    lastUpdatedISO="2026-10-02"
+    lastUpdatedLabel="October 2026"
   />
 );
 
