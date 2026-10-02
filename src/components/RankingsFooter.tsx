@@ -3,7 +3,7 @@ import { CHAMBERS_PROFILE_URL } from "@/config/business";
 
 interface RankingsFooterProps {
   items: string[];
-  notes?: string[];
+  notes?: string[] | undefined;
 }
 
 /** Compact rankings footer — repeats the full verified awards set so nothing is dropped on mobile. */
