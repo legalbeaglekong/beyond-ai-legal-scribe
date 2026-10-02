@@ -29,7 +29,7 @@ export const data: IndustryPageData = {
       "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
       "Chambers Asia-Pacific — Band 4, Aviation: Finance — Asia-Pacific Region",
       "Chambers Global Market Leaders — Band 3, Asset Finance",
-      "Global Top 20 Asset Finance Lawyer (Chambers)",
+      "Global Market Leader Asset Finance Lawyer (Chambers)",
       "Legal 500 Next Generation Partner",
       "ALB Law Firm to Watch 2026",
       "$8B+ deal value (2024 & 2025)",
