@@ -262,7 +262,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-background/95 backdrop-blur-xs border-t border-border/50">
+          <div id="mobile-navigation" className="lg:hidden bg-background border-t border-border/50 max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain">
             <div className="px-4 py-6 space-y-4">
               {navigation.map((item) => {
                 // Work with sub-links on mobile
