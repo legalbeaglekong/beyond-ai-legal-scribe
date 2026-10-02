@@ -61,6 +61,25 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Lock the page behind the mobile menu so touch scrolling moves the menu, not the page.
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const html = document.documentElement;
+    const prevBody = document.body.style.overflow;
+    const prevHtml = html.style.overflow;
+    document.body.style.overflow = "hidden";
+    html.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prevBody;
+      html.style.overflow = prevHtml;
+    };
+  }, [isMenuOpen]);
+
+  // Close the mobile menu after navigating.
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
+
   const handleHashNavigation = (e: React.MouseEvent, hash: string) => {
     if (isHome) {
       e.preventDefault();
@@ -83,7 +102,7 @@ const Header = () => {
   const navLinkClass = `text-foreground/70 hover:text-accent transition-smooth font-sans text-xs tracking-widest uppercase whitespace-nowrap`;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-xs ${
+    <header className={`fixed top-0 left-0 right-0 ${isMenuOpen ? "z-[70]" : "z-50"} transition-all duration-300 bg-background/95 backdrop-blur-xs ${
       scrolled ? "border-b border-border/50" : "border-b border-transparent"
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -262,7 +281,11 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div id="mobile-navigation" className="lg:hidden bg-background border-t border-border/50 max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain">
+          <div
+            id="mobile-navigation"
+            className="lg:hidden bg-background border-t border-border/50 max-h-[calc(100vh-5rem)] supports-[height:100dvh]:max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain touch-pan-y"
+            style={{ WebkitOverflowScrolling: "touch" }}
+          >
             <div className="px-4 py-6 space-y-4">
               {navigation.map((item) => {
                 // Work with sub-links on mobile
