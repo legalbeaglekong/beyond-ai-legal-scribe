@@ -1,31 +1,35 @@
 import IndustryPageLayout, { type IndustryPageData } from "@/components/IndustryPageLayout";
+import { AVIATION_RANKINGS, AVIATION_RANKINGS_NOTES, IFFW_URL, FUEL_VIDEO_URL } from "@/config/business";
 import { Scale, Clock, Laptop, Gavel } from "lucide-react";
 
 export const data: IndustryPageData = {
   slug: "aviation",
   seo: {
-    title: "Aviation Lawyer & Finance Counsel Singapore | Beyond Horizons",
+    title: "Aviation Lawyer & Finance Counsel Singapore | Repossession, Leasing & Docs — Beyond Horizons",
     description:
-      "Aviation lawyer and finance counsel in Singapore — Beyond Horizons by Bethel Chambers LLC. Chambers Asia-Pacific Band 3 Aviation: Finance. English-law leases, APAC hours. Schedule a consultation.",
+      "Aviation finance lawyer Singapore — English-law leases, aircraft recoveries, insolvency coordination, incomplete aircraft/engine docs, MRO, business jet & helicopter S&P. Beyond Horizons by Bethel Chambers LLC. Soft path to talk.",
   },
   hero: {
     entity: "Beyond Horizons by Bethel Chambers LLC",
-    title: "Aviation lawyer & finance counsel Singapore — English-law documents, APAC time-zone coverage",
+    title: "Aviation lawyer & finance counsel Singapore — leasing, recoveries, incomplete docs, APAC hours",
     emailCta: "HL@beyondhorizons.sg",
     ctaLine: "Instruct aviation finance counsel — schedule a consultation.",
     jumpLinks: [
       { label: "View work menu", href: "#work-menu" },
       { label: "Leasing", href: "#work-menu" },
+      { label: "Recoveries", href: "#work-menu" },
+      { label: "Docs", href: "#work-menu" },
       { label: "Engines", href: "#work-menu" },
-      { label: "Portfolios", href: "#work-menu" },
       { label: "Financings", href: "#work-menu" },
+      { label: "Bizjet", href: "#work-menu" },
     ],
     subtitle:
-      "Most aviation finance and leasing matters we see are governed by English law. Beyond Horizons by Bethel Chambers LLC is built for that reality: dual English and Singapore law qualification on the team, Chambers-ranked aviation finance expertise, and confident coverage across APAC working hours so counterparties in Asia are not waiting on a London close-of-play for every turn of the mark-up.",
+      "Most aviation finance and leasing matters we see are governed by English law. Beyond Horizons by Bethel Chambers LLC is a cross-border aviation finance desk with a physical presence in Singapore, dual English and Singapore law qualification on the team, Chambers-ranked aviation finance expertise, and coverage across time zones so counterparties are not waiting on a single close-of-play for every turn of the mark-up. We are comfortable across global matters, with specific expertise in developing markets. The same desk sits with lessors, airlines, financiers and private capital when files turn hard — distressed scenarios, aircraft recoveries / asset recovery, incomplete aircraft, engine or documentary packages, and insolvency-adjacent coordination — experience spanning aviation finance, leasing, restructuring and asset recovery.",
     badges: [
       "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
       "Chambers Asia-Pacific — Band 4, Aviation: Finance — Asia-Pacific Region",
       "Chambers Global Market Leaders — Band 3, Asset Finance",
+      "Global Top 20 Asset Finance Lawyer (Chambers)",
       "Legal 500 Next Generation Partner",
       "ALB Law Firm to Watch 2026",
       "$8B+ deal value (2024 & 2025)",
@@ -151,6 +155,80 @@ export const data: IndustryPageData = {
           "Limits: we do not underwrite, place or sell securities; we do not act as listing sponsor, arranger or trustee.",
         ],
       },
+      {
+        title: "8. Aircraft recoveries, repossession-adjacent counsel & aviation insolvency",
+        description: "Parties: lessor, financier/security trustee, airline/operator in distress, insolvency office-holder (as applicable).",
+        bullets: [
+          "Documentary and coordination counsel around default, termination, possession and recovery pathways",
+          "Cape Town / IDERA interface with local registration counsel",
+          "Notices and condition/redelivery disputes",
+          "Workout amendments, deferrals and substitution; insolvency-adjacent structuring of claims and security",
+          "Complex financings and distressed scenarios, including aircraft recoveries — developing markets and other challenging cross-border markets as relevant to the facts",
+          "Limits: we do not guarantee possession outcomes; enforcement steps and local court/registry process sit with instructed local counsel and the facts of the case.",
+        ],
+      },
+      {
+        title: "9. Incomplete aircraft, engines & documentary packages",
+        description: "Parties: buyer/seller, lessor/lessee, MRO/CAMO counterparties (as commercial parties — we are not the MRO), financiers.",
+        bullets: [
+          "Issue lists on missing/incomplete technical and title documents",
+          "Conditions precedent and escrow mechanics",
+          "Ferry / delivery risk allocation",
+          "Life-limited-part and records risk in SPAs and leases",
+          "Coordination when records, export CofA, or engine traceability are incomplete",
+        ],
+      },
+      {
+        title: "10. MRO, hangar construction & aerospace infrastructure",
+        description: "Parties: MRO buyers/sellers, aerospace JV partners, landlords/developers, financiers.",
+        bullets: [
+          "MRO acquisition / disposal documentation",
+          "Aerospace manufacturing JV / technology licensing interfaces",
+          "Hangar construction and leasehold packages",
+          "Airport-adjacent / Seletar-style structuring coordinated with Singapore regulatory pieces as needed",
+          "Limits: counsel only — not the CAMO/MRO operator.",
+        ],
+      },
+      {
+        title: "11. Landing gear / equipment finance & leasing",
+        description: "Parties: lessors/traders, airlines, equipment financiers.",
+        bullets: [
+          "Equipment and landing-gear lease / SPA documentation",
+          "Security and priority language",
+          "Interaction with airframe/engine packages",
+          "Cross-border documentary conditions",
+        ],
+      },
+      {
+        title: "12. Airports, vertiports & advanced air mobility interfaces",
+        description: "Parties: developers, operators, investors.",
+        bullets: [
+          "Documentary and commercial interfaces for airport/vertiport development and AAM commercialisation",
+          "Deeper AAM/UAS content sits on Ascending Asia — the core of this page remains finance, leasing and recoveries",
+        ],
+        link: "/ascending-asia",
+        linkText: "Ascending Asia",
+      },
+      {
+        title: "13. Business jet & helicopter sale-and-purchase; co-ownership",
+        description: "Parties: buyers, sellers, managers, co-owners, financiers.",
+        bullets: [
+          "Pre-owned business-jet SPA path (LOI → deposit → as-is/where-is delivery → manager transition — see the FAQ)",
+          "Helicopter S&P documentation",
+          "Co-ownership / fractional ownership document sets and exit mechanics",
+        ],
+      },
+      {
+        title: "14. Compliance structuring; SAF & future fuels",
+        description: "Cross-border party and sanctions-screening interfaces in documents; Singapore regulatory coordination when the deal needs it.",
+        bullets: [
+          "SAF / future fuels: we advise on SAF offtake/supply and green-financing documents when they sit next to leasing and finance files",
+          "International Future Fuels Week (IFFW) — iffw.sg",
+          "Past role: Hui Ling Teo was Founder & Director of Governance, Asia Sustainable Aviation Fuel Association (ASAFA), Aug 2024–Apr 2025",
+        ],
+        link: "https://iffw.sg",
+        linkText: "International Future Fuels Week (IFFW)",
+      },
     ],
   },
   faqs: {
@@ -230,6 +308,22 @@ export const data: IndustryPageData = {
           "An IDERA (Irrevocable De-Registration and Export Request Authorisation) is an educational shorthand for an authorisation that can support deregistration and export of an aircraft as part of enforcement or remedy planning under the Cape Town framework, where the state declarations and facts allow it. Detail and edge cases belong in a matter-specific engagement — not in a website FAQ. Free course for orientation; for a live repossession, deregistration or export path, Talk to us / Schedule consultation.",
       },
       {
+        question: "When do I need specialist aviation finance counsel instead of Big Law?",
+        answer: "When the matter is document-heavy English-law leasing/finance, needs multi-timezone / regional turns, involves developing markets, or is heading into recovery / incomplete-docs / insolvency coordination — and you want continuity from a cross-border specialist aviation finance desk with a Singapore hub. Full-service or Magic Circle collaboration remains available when the bench is needed. We do not claim superiority over any named firm and we do not compare fees.",
+      },
+      {
+        question: "Do you handle aircraft repossession?",
+        answer: "We advise on the documentary, Cape Town/IDERA and coordination path around aircraft recoveries / asset recovery and distressed scenarios. Local enforcement steps depend on jurisdiction and facts; we coordinate rather than promise possession.",
+      },
+      {
+        question: "Can you help if aircraft, engine or records packages are incomplete?",
+        answer: "Yes — issue lists, CP/escrow mechanics and risk allocation in the paper. Scope starts with a short conversation.",
+      },
+      {
+        question: "Business jet and helicopter deals?",
+        answer: "Yes — business-jet S&P path is covered in the FAQ and work menu; helicopter S&P and co-ownership documentation are in the work menu. Schedule a consultation to scope.",
+      },
+      {
         question: "Still deciding between a course and counsel?",
         answer:
           "Free educational primers are on /courses. For a live lease, SPA, financing or Cape Town step: Schedule consultation · HL@beyondhorizons.sg",
@@ -239,7 +333,7 @@ export const data: IndustryPageData = {
   cta: {
     heading: "Next step",
     description:
-      "Tell us which line items you need (for example: English-law operating lease + engine SPA + Cape Town filings + disputes stress-test on default clauses).",
+      "Tell us which line items you need (for example: English-law operating lease + engine SPA + Cape Town filings + disputes stress-test on default clauses + recovery pathway review).",
     note:
       "Beyond Horizons is a specialist practice group of Bethel Chambers LLC, a Singapore law corporation. This page is general information only. It is not legal advice and does not create a solicitor–client relationship.",
   },
@@ -253,7 +347,10 @@ export const data: IndustryPageData = {
   relatedExternal: [
     { label: "Insights", href: "https://www.insights.beyondhorizons.sg/" },
     { label: "Section 232 UAS — Ascending Asia", href: "https://ascendingasia.beyondhorizons.sg/" },
+    { label: "International Future Fuels Week (IFFW)", href: IFFW_URL },
+    { label: "Jet fuel hedges & lease residual risk (LinkedIn video)", href: FUEL_VIDEO_URL },
   ],
+  rankings: { items: AVIATION_RANKINGS, notes: AVIATION_RANKINGS_NOTES },
 };
 
 const AviationPage = () => <IndustryPageLayout data={data} />;
