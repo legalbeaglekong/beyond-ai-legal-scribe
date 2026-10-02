@@ -1,3 +1,4 @@
+import RankingsFooter from "@/components/RankingsFooter";
 import { useEffect, useRef } from "react";
 // Cinematic hero videos (compressed local MP4s ~500KB each, with poster JPGs)
 import spaceVideo from "@/assets/space-hero.mp4";
@@ -94,6 +95,7 @@ export interface IndustryPageData {
   /** slug may be an absolute path starting with "/" */
   relatedPages: { title: string; slug: string }[];
   relatedExternal?: { label: string; href: string }[];
+  rankings?: { items: string[]; notes?: string[] };
 }
 
 // Pick a hero video + matching poster based on slug
@@ -303,7 +305,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                   <div className="space-y-4">
                     {section.paragraphs.map((paragraph) => <p key={paragraph} className="text-sm md:text-base text-muted-foreground leading-relaxed">{paragraph}</p>)}
                   </div>
-                  {section.links && <div className="flex flex-wrap gap-4 mt-5">{section.links.map((link) => <Link key={link.to} to={link.to} className="text-sm text-accent hover:underline">{link.label}</Link>)}</div>}
+                  {section.links && <div className="flex flex-wrap gap-4 mt-5">{section.links.map((link) => link.to.startsWith("http") ? <a key={link.to} href={link.to} target="_blank" rel="noopener noreferrer" className="text-sm text-accent hover:underline">{link.label}</a> : <Link key={link.to} to={link.to} className="text-sm text-accent hover:underline">{link.label}</Link>)}</div>}
                 </article>
               ))}
             </div>
@@ -500,6 +502,8 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             )}
           </div>
         </VideoBackground>
+
+        {data.rankings && <RankingsFooter items={data.rankings.items} notes={data.rankings.notes} />}
 
         {/* Related */}
         {(data.relatedPages.length > 0 || (data.relatedExternal?.length ?? 0) > 0) && (

@@ -16,6 +16,7 @@ import {
   Newspaper,
   type LucideIcon,
 } from "lucide-react";
+import RankingsFooter from "@/components/RankingsFooter";
 import RelatedInsights from "@/components/RelatedInsights";
 
 const BOOKING_URL =
@@ -83,6 +84,7 @@ export interface PillarPageProps {
   ctaHeading: string;
   ctaBody: string;
   exploreLink?: { label: string; to: string };
+  rankings?: { items: string[]; notes?: string[] };
   lastUpdatedISO: string;       // e.g. "2026-06-09"
   lastUpdatedLabel: string;     // e.g. "June 2026"
 }
@@ -113,6 +115,7 @@ const PillarPage = ({
   ctaHeading,
   ctaBody,
   exploreLink,
+  rankings,
   lastUpdatedISO,
   lastUpdatedLabel,
 }: PillarPageProps) => {
@@ -261,7 +264,7 @@ const PillarPage = ({
                   <div className="space-y-4">
                     {section.paragraphs.map((paragraph) => <p key={paragraph} className="text-muted-foreground leading-relaxed">{paragraph}</p>)}
                   </div>
-                  {section.links && <div className="flex flex-wrap gap-4 mt-5">{section.links.map((link) => <Link key={link.to} to={link.to} className="text-sm text-primary hover:underline">{link.label}</Link>)}</div>}
+                  {section.links && <div className="flex flex-wrap gap-4 mt-5">{section.links.map((link) => link.to.startsWith("http") ? <a key={link.to} href={link.to} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">{link.label}</a> : <Link key={link.to} to={link.to} className="text-sm text-primary hover:underline">{link.label}</Link>)}</div>}
                 </article>
               ))}
             </div>
@@ -333,6 +336,8 @@ const PillarPage = ({
         </section>
 
         <RelatedInsights keywords={relatedKeywords} heading={relatedHeading} />
+
+        {rankings && <RankingsFooter items={rankings.items} notes={rankings.notes} />}
 
         {relatedPages && relatedPages.length > 0 && (
           <section className="py-12 bg-background">
