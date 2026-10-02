@@ -30,3 +30,23 @@ export const REGULATORY_BLURB =
 
 export const LEGAL_DISCLAIMER =
   "Content on this site is general information only and does not constitute legal advice. Use of this site does not create a solicitor-client relationship.";
+
+export const CHAMBERS_PROFILE_URL = "https://chambers.com/lawyer/hui-ling-teo-global-2:25705527";
+export const IFFW_URL = "https://iffw.sg";
+export const IFFW_LINKEDIN_URL = "https://www.linkedin.com/company/iffwsg";
+export const FUEL_VIDEO_URL = "https://www.linkedin.com/feed/update/urn:li:activity:7508041694978760704/";
+export const INSIGHTS_URL = "https://www.insights.beyondhorizons.sg/";
+
+// Verified aviation rankings set — exact wording; do not add variants.
+export const AVIATION_RANKINGS = [
+  "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
+  "Chambers Asia-Pacific — Band 4, Aviation: Finance — Asia-Pacific Region",
+  "Chambers Global Market Leaders — Band 3, Asset Finance",
+  "Global Top 20 Asset Finance Lawyer (Chambers)",
+  "Legal 500 Next Generation Partner",
+  "ALB Law Firm to Watch 2026",
+];
+export const AVIATION_RANKINGS_NOTES = [
+  "Top 20 globally for Transportation: Aviation Finance (Chambers).",
+  "Contributor to Chambers’ Space Law publications.",
+];
