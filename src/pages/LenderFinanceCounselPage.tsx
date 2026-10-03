@@ -3,7 +3,7 @@ import { Link } from "@/lib/router-compat";
 import { EMAIL } from "@/config/business";
 
 export const LENDER_TITLE = "English Law & Singapore Lender Finance Counsel | Facilities, Security & Recovery — Beyond Horizons";
-export const LENDER_DESCRIPTION = "English law and Singapore law counsel for banks, private banks and credit funds as lenders — English-law facilities with Singapore obligors, security, demands and recovery. Hui Ling Teo is qualified in England and Wales. Beyond Horizons by Bethel Chambers LLC. HL@beyondhorizons.sg.";
+export const LENDER_DESCRIPTION = "English law and Singapore law counsel for banks, private banks and credit funds as lenders — financing governed by Singapore law or English law with cross-border relevance: facilities, security, demands and recovery. Hui Ling Teo is qualified in England and Wales. Beyond Horizons by Bethel Chambers LLC. HL@beyondhorizons.sg.";
 
 export const lenderFaqs = [
   { question: "When does a lender still need Singapore counsel if the facility is governed by English law?", answer: "Often. An English law facility agreement sets the commercial terms, but it does not replace Singapore rules on taking and registering security over Singapore assets, serving notices on a Singapore obligor, or enforcing in Singapore. Where the borrower, a guarantor, a share charge, or the collateral sits in Singapore, the Singapore law position needs its own check. Beyond Horizons by Bethel Chambers LLC advises on both Singapore law and English law. English law advice is given by Hui Ling Teo, who is qualified in England and Wales. We do not advise on the law of any other country. Email HL@beyondhorizons.sg." },
@@ -21,7 +21,7 @@ export const lenderLegalService = {
   "@type": "LegalService",
   name: "Beyond Horizons by Bethel Chambers LLC — English law and Singapore lender finance counsel",
   url: "https://beyondhorizons.sg/singapore-lender-finance-counsel",
-  description: "English law and Singapore law counsel for banks, private banks and credit funds as lenders: English-law facilities, Singapore security, demands and recovery. Beyond Horizons by Bethel Chambers LLC. HL@beyondhorizons.sg.",
+  description: "English law and Singapore law counsel for banks, private banks and credit funds as lenders: Singapore law or English law governed financing with cross-border relevance — facilities, security, demands and recovery. Beyond Horizons by Bethel Chambers LLC. HL@beyondhorizons.sg.",
   email: "HL@beyondhorizons.sg",
   knowsAbout: ["English law facility agreements", "Singapore law security and enforcement", "lender finance counsel", "England and Wales"],
   areaServed: "Singapore",
@@ -34,8 +34,8 @@ const BORROWER = "Singapore borrower finance counsel for sponsors and individual
 const LenderFinanceCounselPage = () => (
   <FinanceCounselLayout
     h1="English law and Singapore lender finance counsel — facilities, security, demands and recovery"
-    lead={<>{ENTITY_FULL} acts for <strong>banks, private banks, credit funds, and other lenders</strong> — including lenders advancing to sponsors — on facility documents, security, demands, and recovery. We advise on <strong>Singapore law and English law</strong>, on <strong>local and cross-border</strong> facilities. English law advice is given by Hui Ling Teo, who is qualified in England and Wales.</>}
-    second="Many facilities booked or managed out of Singapore are documented under English law but rely on a Singapore obligor, Singapore security, or Singapore enforcement. We focus on that join: making sure the English law commercial terms and the Singapore law steps work together, from signing through to recovery. We do not advise on the law of any other country; where a document, asset, or proceeding is governed by some other law, we coordinate with foreign counsel."
+    lead={<>{ENTITY_FULL} acts for <strong>banks, private banks, credit funds, and other lenders</strong> — including lenders advancing to sponsors — on facility documents, security, demands, and recovery. We advise on <strong>financing governed by Singapore law or English law</strong> that has <strong>cross-border relevance</strong> — Singapore-law facilities that reach foreign parties or assets, and English-law facilities that rely on Singapore obligors or security. English law advice is given by Hui Ling Teo, who is qualified in England and Wales.</>}
+    second="The common thread is that the financing is governed by Singapore law or English law, and it crosses a border in some way — the parties, the collateral, the notices, or the enforcement sit in more than one jurisdiction. Many facilities booked or managed out of Singapore are documented under English law but rely on a Singapore obligor, Singapore security, or Singapore enforcement. We focus on that join: making sure the English law commercial terms and the Singapore law steps work together, from signing through to recovery. We do not advise on the law of any other country; where a document, asset, or proceeding is governed by some other law, we coordinate with foreign counsel."
     heroNote="This page is general information, not advice on your documents or a prediction of any recovery."
     faqs={lenderFaqs}
     related={[
@@ -51,6 +51,7 @@ const LenderFinanceCounselPage = () => (
     <section className="space-y-4">
       <H2>English-law facilities from a Singapore seat</H2>
       <P>If your facility agreement is governed by <strong>English law</strong>, and the borrower, a guarantor, or the collateral sits in Singapore, you still need counsel who can read both sides of that join. Beyond Horizons advises on <strong>English law facility documents</strong> and on the <strong>Singapore law</strong> steps that sit beside them — security over Singapore assets, service on Singapore obligors, and enforcement in Singapore. English law advice is given by Hui Ling Teo, who is qualified in England and Wales. We are not an English law firm; we do not advise on the law of any other country.</P>
+      <P>The same applies in the mirror image: a <strong>Singapore-law facility</strong> with a foreign party, foreign asset, or foreign enforcement step. We scope the Singapore side of that file and coordinate with foreign counsel where the other law needs its own voice.</P>
       <P>Email {EMAIL} with a short outline (parties, governing-law clause, what has happened). Conversations are confidential. Sending an email does not create a solicitor–client relationship until terms are agreed.</P>
     </section>
 
