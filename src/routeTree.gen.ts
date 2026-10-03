@@ -23,7 +23,9 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SingaporeAiGovernanceRouteImport } from './routes/singapore-ai-governance'
 import { Route as SingaporeAlternativeEnergyLawRouteImport } from './routes/singapore-alternative-energy-law'
 import { Route as SingaporeAviationLawRouteImport } from './routes/singapore-aviation-law'
+import { Route as SingaporeBorrowerFinanceCounselRouteImport } from './routes/singapore-borrower-finance-counsel'
 import { Route as SingaporeEmploymentLawRouteImport } from './routes/singapore-employment-law'
+import { Route as SingaporeLenderFinanceCounselRouteImport } from './routes/singapore-lender-finance-counsel'
 import { Route as SingaporeRestructuringInsolvencyRouteImport } from './routes/singapore-restructuring-insolvency'
 import { Route as SingaporeRoboticsLawRouteImport } from './routes/singapore-robotics-law'
 import { Route as SingaporeSpaceLawRouteImport } from './routes/singapore-space-law'
@@ -120,11 +122,23 @@ const SingaporeAviationLawRoute = SingaporeAviationLawRouteImport.update({
   path: '/singapore-aviation-law',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SingaporeBorrowerFinanceCounselRoute =
+  SingaporeBorrowerFinanceCounselRouteImport.update({
+    id: '/singapore-borrower-finance-counsel',
+    path: '/singapore-borrower-finance-counsel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const SingaporeEmploymentLawRoute = SingaporeEmploymentLawRouteImport.update({
   id: '/singapore-employment-law',
   path: '/singapore-employment-law',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SingaporeLenderFinanceCounselRoute =
+  SingaporeLenderFinanceCounselRouteImport.update({
+    id: '/singapore-lender-finance-counsel',
+    path: '/singapore-lender-finance-counsel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const SingaporeRestructuringInsolvencyRoute =
   SingaporeRestructuringInsolvencyRouteImport.update({
     id: '/singapore-restructuring-insolvency',
@@ -265,7 +279,9 @@ export interface FileRoutesByFullPath {
   '/singapore-ai-governance': typeof SingaporeAiGovernanceRoute
   '/singapore-alternative-energy-law': typeof SingaporeAlternativeEnergyLawRoute
   '/singapore-aviation-law': typeof SingaporeAviationLawRoute
+  '/singapore-borrower-finance-counsel': typeof SingaporeBorrowerFinanceCounselRoute
   '/singapore-employment-law': typeof SingaporeEmploymentLawRoute
+  '/singapore-lender-finance-counsel': typeof SingaporeLenderFinanceCounselRoute
   '/singapore-restructuring-insolvency': typeof SingaporeRestructuringInsolvencyRoute
   '/singapore-robotics-law': typeof SingaporeRoboticsLawRoute
   '/singapore-space-law': typeof SingaporeSpaceLawRoute
@@ -306,7 +322,9 @@ export interface FileRoutesByTo {
   '/singapore-ai-governance': typeof SingaporeAiGovernanceRoute
   '/singapore-alternative-energy-law': typeof SingaporeAlternativeEnergyLawRoute
   '/singapore-aviation-law': typeof SingaporeAviationLawRoute
+  '/singapore-borrower-finance-counsel': typeof SingaporeBorrowerFinanceCounselRoute
   '/singapore-employment-law': typeof SingaporeEmploymentLawRoute
+  '/singapore-lender-finance-counsel': typeof SingaporeLenderFinanceCounselRoute
   '/singapore-restructuring-insolvency': typeof SingaporeRestructuringInsolvencyRoute
   '/singapore-robotics-law': typeof SingaporeRoboticsLawRoute
   '/singapore-space-law': typeof SingaporeSpaceLawRoute
@@ -348,7 +366,9 @@ export interface FileRoutesById {
   '/singapore-ai-governance': typeof SingaporeAiGovernanceRoute
   '/singapore-alternative-energy-law': typeof SingaporeAlternativeEnergyLawRoute
   '/singapore-aviation-law': typeof SingaporeAviationLawRoute
+  '/singapore-borrower-finance-counsel': typeof SingaporeBorrowerFinanceCounselRoute
   '/singapore-employment-law': typeof SingaporeEmploymentLawRoute
+  '/singapore-lender-finance-counsel': typeof SingaporeLenderFinanceCounselRoute
   '/singapore-restructuring-insolvency': typeof SingaporeRestructuringInsolvencyRoute
   '/singapore-robotics-law': typeof SingaporeRoboticsLawRoute
   '/singapore-space-law': typeof SingaporeSpaceLawRoute
@@ -391,7 +411,9 @@ export interface FileRouteTypes {
     | '/singapore-ai-governance'
     | '/singapore-alternative-energy-law'
     | '/singapore-aviation-law'
+    | '/singapore-borrower-finance-counsel'
     | '/singapore-employment-law'
+    | '/singapore-lender-finance-counsel'
     | '/singapore-restructuring-insolvency'
     | '/singapore-robotics-law'
     | '/singapore-space-law'
@@ -432,7 +454,9 @@ export interface FileRouteTypes {
     | '/singapore-ai-governance'
     | '/singapore-alternative-energy-law'
     | '/singapore-aviation-law'
+    | '/singapore-borrower-finance-counsel'
     | '/singapore-employment-law'
+    | '/singapore-lender-finance-counsel'
     | '/singapore-restructuring-insolvency'
     | '/singapore-robotics-law'
     | '/singapore-space-law'
@@ -473,7 +497,9 @@ export interface FileRouteTypes {
     | '/singapore-ai-governance'
     | '/singapore-alternative-energy-law'
     | '/singapore-aviation-law'
+    | '/singapore-borrower-finance-counsel'
     | '/singapore-employment-law'
+    | '/singapore-lender-finance-counsel'
     | '/singapore-restructuring-insolvency'
     | '/singapore-robotics-law'
     | '/singapore-space-law'
@@ -515,7 +541,9 @@ export interface RootRouteChildren {
   SingaporeAiGovernanceRoute: typeof SingaporeAiGovernanceRoute
   SingaporeAlternativeEnergyLawRoute: typeof SingaporeAlternativeEnergyLawRoute
   SingaporeAviationLawRoute: typeof SingaporeAviationLawRoute
+  SingaporeBorrowerFinanceCounselRoute: typeof SingaporeBorrowerFinanceCounselRoute
   SingaporeEmploymentLawRoute: typeof SingaporeEmploymentLawRoute
+  SingaporeLenderFinanceCounselRoute: typeof SingaporeLenderFinanceCounselRoute
   SingaporeRestructuringInsolvencyRoute: typeof SingaporeRestructuringInsolvencyRoute
   SingaporeRoboticsLawRoute: typeof SingaporeRoboticsLawRoute
   SingaporeSpaceLawRoute: typeof SingaporeSpaceLawRoute
@@ -642,11 +670,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SingaporeAviationLawRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/singapore-borrower-finance-counsel': {
+      id: '/singapore-borrower-finance-counsel'
+      path: '/singapore-borrower-finance-counsel'
+      fullPath: '/singapore-borrower-finance-counsel'
+      preLoaderRoute: typeof SingaporeBorrowerFinanceCounselRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/singapore-employment-law': {
       id: '/singapore-employment-law'
       path: '/singapore-employment-law'
       fullPath: '/singapore-employment-law'
       preLoaderRoute: typeof SingaporeEmploymentLawRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/singapore-lender-finance-counsel': {
+      id: '/singapore-lender-finance-counsel'
+      path: '/singapore-lender-finance-counsel'
+      fullPath: '/singapore-lender-finance-counsel'
+      preLoaderRoute: typeof SingaporeLenderFinanceCounselRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/singapore-restructuring-insolvency': {
@@ -835,7 +877,9 @@ const rootRouteChildren: RootRouteChildren = {
   SingaporeAiGovernanceRoute: SingaporeAiGovernanceRoute,
   SingaporeAlternativeEnergyLawRoute: SingaporeAlternativeEnergyLawRoute,
   SingaporeAviationLawRoute: SingaporeAviationLawRoute,
+  SingaporeBorrowerFinanceCounselRoute: SingaporeBorrowerFinanceCounselRoute,
   SingaporeEmploymentLawRoute: SingaporeEmploymentLawRoute,
+  SingaporeLenderFinanceCounselRoute: SingaporeLenderFinanceCounselRoute,
   SingaporeRestructuringInsolvencyRoute: SingaporeRestructuringInsolvencyRoute,
   SingaporeRoboticsLawRoute: SingaporeRoboticsLawRoute,
   SingaporeSpaceLawRoute: SingaporeSpaceLawRoute,
