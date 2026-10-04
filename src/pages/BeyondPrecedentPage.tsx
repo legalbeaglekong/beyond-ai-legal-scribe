@@ -52,6 +52,21 @@ const related = [
   { label: "Fractional GC", to: "/industry/fractional-gc" },
 ];
 
+const participants = [
+  {
+    id: "zheng-work-product",
+    name: "Zheng Bo Yuan",
+    detail: "National University of Singapore · Rising second-year law student",
+    document: zhengDocument,
+  },
+  {
+    id: "harish-work-product",
+    name: "Harish",
+    detail: "National University of Singapore · First-year law student",
+    document: harishDocument,
+  },
+];
+
 const BeyondPrecedentPage = () => (
   <div className="min-h-screen bg-background">
     <Header />
@@ -115,14 +130,16 @@ const BeyondPrecedentPage = () => (
           </p>
           <p className="text-sm text-muted-foreground italic border-l-2 border-accent pl-4">{RESEARCH_DISCLAIMER}</p>
         </section>
+      </div>
 
-        <section className="space-y-4">
-          <H2>Session archive</H2>
-          <p className="text-muted-foreground leading-relaxed">
+      <section className="px-6 pb-16 md:pb-24" aria-labelledby="session-archive">
+        <div className="mx-auto max-w-6xl space-y-4">
+          <h2 id="session-archive" className="font-display text-2xl md:text-3xl text-foreground">Session archive</h2>
+          <p className="max-w-3xl text-muted-foreground leading-relaxed">
             A post-editing work product is what a student produces after the AI-assisted first pass: a revised draft plus a short edit log recording what the model got wrong, invented, or needed rewriting. Archive items, when cleared, are illustrative only — not legal advice and not client deliverables.
           </p>
           <article className="space-y-8 border-t border-border pt-6" aria-labelledby="episode-one">
-            <div className="space-y-4">
+            <div className="max-w-3xl space-y-4">
               <p className="text-xs uppercase tracking-widest text-accent">Episode 1 · Student work products</p>
               <h3 id="episode-one" className="font-display text-2xl text-foreground">Sponsorship agreements</h3>
               <dl className="grid gap-4 text-sm sm:grid-cols-2">
@@ -131,19 +148,20 @@ const BeyondPrecedentPage = () => (
               </dl>
               <p className="border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted-foreground">Each participant drafted their document in only 15 minutes, using free AI tools under limits on font size and page count. The uploaded work products include redlines and comments. Read them in that context: educational content only, not legal advice, and not for use with real counterparties.</p>
             </div>
-            <section className="space-y-3" aria-labelledby="zheng-work-product">
-              <h4 id="zheng-work-product" className="font-display text-xl text-foreground">Zheng Bo Yuan</h4>
-              <p className="text-sm text-muted-foreground">National University of Singapore · Rising second-year law student</p>
-              <WordDocumentPreview url={zhengDocument.url} name="Zheng Bo Yuan" />
-            </section>
-            <section className="space-y-3" aria-labelledby="harish-work-product">
-              <h4 id="harish-work-product" className="font-display text-xl text-foreground">Harish</h4>
-              <p className="text-sm text-muted-foreground">National University of Singapore · First-year law student</p>
-              <WordDocumentPreview url={harishDocument.url} name="Harish" />
-            </section>
+            <div className="grid items-start gap-6 lg:grid-cols-2 lg:gap-8">
+              {participants.map((p) => (
+                <section key={p.id} className="min-w-0 space-y-3" aria-labelledby={p.id}>
+                  <h4 id={p.id} className="font-display text-xl text-foreground">{p.name}</h4>
+                  <p className="text-sm text-muted-foreground">{p.detail}</p>
+                  <WordDocumentPreview url={p.document.url} name={p.name} />
+                </section>
+              ))}
+            </div>
           </article>
-        </section>
+        </div>
+      </section>
 
+      <div className="max-w-3xl mx-auto px-6 pb-16 md:pb-24 space-y-16">
         <section className="space-y-4">
           <H2>Why a law firm runs this</H2>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground leading-relaxed">
