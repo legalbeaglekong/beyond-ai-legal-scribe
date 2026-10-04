@@ -7,6 +7,11 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  vite: {
+    // Discover the client-only reader before a visitor opens the session archive.
+    // Otherwise its first dynamic import re-optimizes dependencies and reloads the preview.
+    optimizeDeps: { include: ["docx-preview"] },
+  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
