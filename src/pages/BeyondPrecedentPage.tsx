@@ -2,9 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "@/lib/router-compat";
 import { EMAIL, WHATSAPP_URL } from "@/config/business";
-import WordDocumentPreview from "@/components/WordDocumentPreview";
-import zhengDocument from "@/assets/beyond-precedent-episode-1-zheng-bo-yuan.docx.asset.json";
-import harishDocument from "@/assets/beyond-precedent-episode-1-harish.docx.asset.json";
+import { FileText } from "lucide-react";
 
 const INSIGHTS_URL = "https://www.insights.beyondhorizons.sg/";
 const REUTERS_URL = "https://www.reuters.com/legal/transactional/these-law-students-got-use-ai-final-exams-howd-they-do-2023-08-29/";
@@ -57,15 +55,32 @@ const participants = [
     id: "zheng-work-product",
     name: "Zheng Bo Yuan",
     detail: "National University of Singapore · Rising second-year law student",
-    document: zhengDocument,
   },
   {
     id: "harish-work-product",
     name: "Harish",
     detail: "National University of Singapore · First-year law student",
-    document: harishDocument,
   },
 ];
+
+const DocumentPlaceholder = ({ name }: { name: string }) => (
+  <div className="overflow-hidden rounded-md border border-border">
+    <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border bg-muted px-4 py-3">
+      <span className="text-sm text-foreground">Sponsorship agreement · Word document</span>
+      <span className="text-xs uppercase tracking-widest text-muted-foreground">Awaiting confirmation</span>
+    </div>
+    <div
+      className="flex h-[260px] flex-col items-center justify-center gap-3 bg-card px-6 text-center"
+      role="note"
+      aria-label={`${name}'s document is awaiting confirmation before it can be shown`}
+    >
+      <FileText className="size-6 shrink-0 text-muted-foreground" aria-hidden="true" />
+      <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
+        {name}’s draft will appear here once they confirm it may be shared publicly.
+      </p>
+    </div>
+  </div>
+);
 
 const BeyondPrecedentPage = () => (
   <div className="min-h-screen bg-background">
@@ -146,14 +161,14 @@ const BeyondPrecedentPage = () => (
                 <div><dt className="font-semibold text-foreground">Guest judges</dt><dd className="text-muted-foreground">Shen Yang, Hanyi Zeng and Hui Ling Teo</dd></div>
                 <div><dt className="font-semibold text-foreground">Hosted by</dt><dd className="text-muted-foreground">Sonia Motwani</dd></div>
               </dl>
-              <p className="border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted-foreground">Each participant drafted their document in only 15 minutes, using free AI tools under limits on font size and page count. The uploaded work products include redlines and comments. Read them in that context: educational content only, not legal advice, and not for use with real counterparties.</p>
+              <p className="border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted-foreground">Each participant drafted their document in only 15 minutes, using free AI tools under limits on font size and page count. The work products include redlines and comments, and are held back until each participant confirms they may be shown. Read them in that context: educational content only, not legal advice, and not for use with real counterparties.</p>
             </div>
             <div className="grid items-start gap-6 lg:grid-cols-2 lg:gap-8">
               {participants.map((p) => (
                 <section key={p.id} className="min-w-0 space-y-3" aria-labelledby={p.id}>
                   <h4 id={p.id} className="font-display text-xl text-foreground">{p.name}</h4>
                   <p className="text-sm text-muted-foreground">{p.detail}</p>
-                  <WordDocumentPreview url={p.document.url} name={p.name} />
+                  <DocumentPlaceholder name={p.name} />
                 </section>
               ))}
             </div>
