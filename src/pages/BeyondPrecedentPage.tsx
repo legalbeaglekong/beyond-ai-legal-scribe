@@ -156,7 +156,7 @@ const BeyondPrecedentPage = () => (
           <article className="space-y-8 border-t border-border pt-6" aria-labelledby="episode-one">
             <div className="max-w-3xl space-y-4">
               <p className="text-xs uppercase tracking-widest text-accent">Episode 1 · Student work products</p>
-              <h3 id="episode-one" className="font-display text-2xl text-foreground">Sponsorship agreements</h3>
+              <h3 id="episode-one" className="font-display text-2xl text-foreground">The Energy Drink Influencer</h3>
               <dl className="grid gap-4 text-sm sm:grid-cols-2">
                 <div><dt className="font-semibold text-foreground">Guest judges</dt><dd className="text-muted-foreground">Shen Yang, Hanyi Zeng and Hui Ling Teo</dd></div>
                 <div><dt className="font-semibold text-foreground">Hosted by</dt><dd className="text-muted-foreground">Sonia Motwani</dd></div>
