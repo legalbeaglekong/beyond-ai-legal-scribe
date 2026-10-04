@@ -56,7 +56,7 @@ export default function WordDocumentPreview({ url, name }: { url: string; name: 
           <a href={url} download target="_blank" rel="noopener noreferrer" aria-label={`Download ${name}'s Word document`}><Download />Download Word</a>
         </Button>
       </div>
-      <div className="h-[600px] max-h-[75dvh] overflow-auto bg-card" tabIndex={0} role="region" aria-label={`${name} — Word document preview`} aria-busy={status === "loading"}>
+      <div className="h-[380px] max-h-[50dvh] overflow-auto bg-card" tabIndex={0} role="region" aria-label={`${name} — Word document preview`} aria-busy={status === "loading"}>
         {status === "loading" && <p role="status" className="flex items-center justify-center gap-2 p-8 text-muted-foreground"><Loader2 className="size-4 animate-spin motion-reduce:animate-none" />Loading document…</p>}
         {status === "error" && <p role="alert" className="p-8 text-muted-foreground">The preview could not load. You can still download the original Word document above.</p>}
         <div ref={host} />
