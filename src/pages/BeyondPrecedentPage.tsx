@@ -41,9 +41,6 @@ const steps = [
   "Invite two law students (any nation) into a supervised session.",
   "Issue a fixed set of ten drafting prompts (fictional / teaching fact patterns only).",
   "Each student drafts with any free public AI tool and names the tool (and model if known).",
-  "Each submission includes a clean supervisor-ready draft plus a short edit log (what the AI got wrong, invented, or the student rewrote).",
-  "A small panel — firm counsel and a guest in-house counsel — scores for structure, hallucination control, clause fitness, jurisdiction humility, and process honesty.",
-  "Selected artefacts may enter the public archive only after consent and anonymisation rules are cleared — never as client work.",
 ];
 
 const related = [
