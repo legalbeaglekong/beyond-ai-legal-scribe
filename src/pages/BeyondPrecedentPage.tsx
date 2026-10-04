@@ -2,6 +2,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "@/lib/router-compat";
 import { EMAIL, WHATSAPP_URL } from "@/config/business";
+import WordDocumentPreview from "@/components/WordDocumentPreview";
+import zhengDocument from "@/assets/beyond-precedent-episode-1-zheng-bo-yuan.docx.asset.json";
+import harishDocument from "@/assets/beyond-precedent-episode-1-harish.docx.asset.json";
 
 const INSIGHTS_URL = "https://www.insights.beyondhorizons.sg/";
 const REUTERS_URL = "https://www.reuters.com/legal/transactional/these-law-students-got-use-ai-final-exams-howd-they-do-2023-08-29/";
@@ -121,9 +124,27 @@ const BeyondPrecedentPage = () => (
           <p className="text-muted-foreground leading-relaxed">
             A post-editing work product is what a student produces after the AI-assisted first pass: a revised draft plus a short edit log recording what the model got wrong, invented, or needed rewriting. Archive items, when cleared, are illustrative only — not legal advice and not client deliverables.
           </p>
-          <div className="rounded-lg border border-dashed border-border bg-muted/40 p-8 text-center text-foreground">
-            Session archive opens when artefacts are cleared for public view.
-          </div>
+          <article className="space-y-8 border-t border-border pt-6" aria-labelledby="episode-one">
+            <div className="space-y-4">
+              <p className="text-xs uppercase tracking-widest text-accent">Episode 1 · Student work products</p>
+              <h3 id="episode-one" className="font-display text-2xl text-foreground">Sponsorship agreements</h3>
+              <dl className="grid gap-4 text-sm sm:grid-cols-2">
+                <div><dt className="font-semibold text-foreground">Guest judges</dt><dd className="text-muted-foreground">Shen Yang, Hanyi Zeng and Hui Ling Teo</dd></div>
+                <div><dt className="font-semibold text-foreground">Hosted by</dt><dd className="text-muted-foreground">Sonia Motwani</dd></div>
+              </dl>
+              <p className="border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted-foreground">Each participant drafted their document in only 15 minutes, using free AI tools under limits on font size and page count. The uploaded work products include redlines and comments. Read them in that context: educational content only, not legal advice, and not for use with real counterparties.</p>
+            </div>
+            <section className="space-y-3" aria-labelledby="zheng-work-product">
+              <h4 id="zheng-work-product" className="font-display text-xl text-foreground">Zheng Bo Yuan</h4>
+              <p className="text-sm text-muted-foreground">National University of Singapore · Rising second-year law student</p>
+              <WordDocumentPreview url={zhengDocument.url} name="Zheng Bo Yuan" />
+            </section>
+            <section className="space-y-3" aria-labelledby="harish-work-product">
+              <h4 id="harish-work-product" className="font-display text-xl text-foreground">Harish</h4>
+              <p className="text-sm text-muted-foreground">National University of Singapore · First-year law student</p>
+              <WordDocumentPreview url={harishDocument.url} name="Harish" />
+            </section>
+          </article>
         </section>
 
         <section className="space-y-4">
