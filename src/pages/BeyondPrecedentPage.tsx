@@ -133,7 +133,7 @@ const BeyondPrecedentPage = () => (
       </div>
 
       <section className="px-6 pb-16 md:pb-24" aria-labelledby="session-archive">
-        <div className="mx-auto max-w-6xl space-y-4">
+        <div className="mx-auto max-w-4xl space-y-4">
           <h2 id="session-archive" className="font-display text-2xl md:text-3xl text-foreground">Session archive</h2>
           <p className="max-w-3xl text-muted-foreground leading-relaxed">
             A post-editing work product is what a student produces after the AI-assisted first pass: a revised draft plus a short edit log recording what the model got wrong, invented, or needed rewriting. Archive items, when cleared, are illustrative only — not legal advice and not client deliverables.
