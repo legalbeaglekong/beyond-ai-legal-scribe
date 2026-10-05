@@ -338,9 +338,9 @@ const PillarPage = ({
             <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-10 text-center">Frequently Asked Questions</h2>
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((f, i) => (
-                <AccordionItem key={i} value={`item-${i}`}>
+                <AccordionItem key={i} value={`item-${i}`} className={editorial ? "group" : undefined}>
                   <AccordionTrigger className="text-left font-serif text-lg">{f.q}</AccordionTrigger>
-                  <AccordionContent forceMount={editorial ? true : undefined} className={editorial ? "text-muted-foreground leading-relaxed data-[state=closed]:hidden" : "text-muted-foreground leading-relaxed"}>{f.a}</AccordionContent>
+                  <AccordionContent forceMount={editorial ? true : undefined} className={editorial ? "text-muted-foreground leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground leading-relaxed"}>{f.a}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
