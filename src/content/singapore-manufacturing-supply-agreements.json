@@ -1,0 +1,98 @@
+{
+  "title": "Singapore Manufacturing & Supply Agreement Counsel | English Law & Sale of Goods — Beyond Horizons",
+  "description": "Singapore and English law counsel on manufacturing and supply agreements: specs, quality and acceptance, title and risk, liability caps, tooling IP, CISG.",
+  "h1": "Singapore manufacturing and supply agreement counsel — Singapore law and English law",
+  "entity": "Beyond Horizons by Bethel Chambers LLC (a specialist practice group of Bethel Chambers LLC)",
+  "path": "/singapore-manufacturing-supply-agreements",
+  "faqSchema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a manufacturing and supply agreement, and how is it different from a purchase order?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A manufacturing and supply agreement is a contract under which one party makes goods to agreed specifications and supplies them to the other, usually over a period and against forecasts and orders. A purchase order on standard terms usually covers a single purchase of goods that already exist. Because the goods are being made for you, a manufacturing and supply agreement also has to deal with specifications and changes to them, quality control and acceptance testing, tooling, intellectual property, capacity and exit. Beyond Horizons by Bethel Chambers LLC drafts and negotiates these agreements under Singapore law and English law. Email HL@beyondhorizons.sg."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which clauses matter most in a manufacturing and supply agreement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most disputes start in a small set of clauses: specifications and how they can be changed; forecasts, orders and minimum quantities; price, payment and price adjustment; delivery, title and risk; inspection, acceptance and remedies for non-conforming goods, including recalls; warranties; limitation of liability and indemnities; ownership of tooling, moulds and designs; confidentiality; insurance; force majeure; and termination, including what happens to stock and tooling at the end. Governing law and dispute resolution should be chosen deliberately, not copied from a template."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the Sale of Goods Act 1979 apply to goods that have not been made yet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It can. Singapore's Sale of Goods Act 1979 recognises future goods, meaning goods to be manufactured or acquired by the seller after the contract is made, and treats a purported present sale of future goods as an agreement to sell. Where a seller sells in the course of a business, the Act implies terms about satisfactory quality and, in some cases, fitness for a particular purpose, subject to the contract and other legislation. A written agreement should set out specifications, acceptance and remedies clearly rather than rely only on implied terms. This is general information, not advice on your contract."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When does the CISG apply to a supply contract with a Singapore party?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Singapore gives effect to the UN Convention on Contracts for the International Sale of Goods (CISG) through the Sale of Goods (United Nations Convention) Act 1995, with a reservation. As a result, in Singapore the CISG applies to sales of goods only between parties whose places of business are in different Contracting States. Contracts to supply goods to be manufactured count as sales, unless the buyer supplies a substantial part of the materials, and the Convention does not apply where the main part of the supplier's obligations is labour or other services. Parties can exclude the CISG in their contract. Whether it applies, and whether to exclude it, should be decided at drafting stage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a supplier limit its liability under a Singapore-law supply agreement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Often, but not without limits. Singapore's Unfair Contract Terms Act 1977 restricts some exclusion and limitation clauses and applies a reasonableness test to others. The Act also has specific rules for international supply contracts and for contracts that choose Singapore law only by the parties' choice, so whether and how it applies depends on the parties, where the goods move, and the governing-law clause. Liability caps, exclusions of indirect loss and indemnities should be drafted with that in mind. We do not predict how a court or tribunal will treat a particular clause."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who owns the tooling, moulds and designs used to make our products?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Whoever the contract says owns them, which is why the agreement should say so clearly. Address who pays for tooling and moulds, who owns them and any improvements, where they are kept and insured, whether they can be used for anyone else, and how they are returned at the end. Do the same for drawings, specifications and know-how, and for any intellectual property created during the relationship. For wider patent, trade mark or data questions, see our IP and data privacy page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you advise on a supply agreement governed by English law?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Beyond Horizons advises on Singapore law and English law, on local and cross-border supply arrangements. English law advice is given by Hui Ling Teo, who is qualified in England and Wales. Many supply agreements are governed by English law while manufacturing, delivery or payment happens in Singapore, so both sides of that join need checking. We do not advise on the law of any other country. Where another law applies, we coordinate with foreign counsel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for a first review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A short outline is enough to start: who the parties are and where they are based, what is being made and supplied, the draft or current agreement and any standard terms, the governing-law and dispute clauses, and the points that worry you most or the issue that has arisen. Tell us the other party's name early so we can complete a conflict check. Conversations are confidential. Sending an email or booking a consultation does not create a solicitor-client relationship until terms are agreed. Email HL@beyondhorizons.sg."
+        }
+      }
+    ]
+  },
+  "serviceSchema": {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Beyond Horizons by Bethel Chambers LLC — Singapore manufacturing and supply agreement counsel",
+    "url": "https://beyondhorizons.sg/singapore-manufacturing-supply-agreements",
+    "description": "Singapore law and English law counsel on manufacturing and supply agreements for manufacturers, buyers and distributors: specifications, quality and acceptance, title and risk, liability, tooling and IP, and CISG checks. Beyond Horizons by Bethel Chambers LLC. HL@beyondhorizons.sg.",
+    "email": "HL@beyondhorizons.sg",
+    "knowsAbout": [
+      "manufacturing and supply agreements",
+      "Sale of Goods Act 1979 (Singapore)",
+      "Unfair Contract Terms Act 1977 (Singapore)",
+      "CISG",
+      "English law supply agreements",
+      "England and Wales"
+    ],
+    "areaServed": "Singapore",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Bethel Chambers LLC"
+    }
+  }
+}
