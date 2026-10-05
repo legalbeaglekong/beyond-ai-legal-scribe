@@ -1,0 +1,97 @@
+{
+  "title": "Singapore Pet Law Counsel | AVS Licensing, Bite Notices & Pet Business Contracts — Beyond Horizons",
+  "description": "Singapore pet law counsel: AVS licensing, dog and cat bite notices, groomer and trainer codes, and pet business contracts under Singapore or English law.",
+  "h1": "Singapore pet law counsel — AVS licensing, bite notices and pet business contracts",
+  "entity": "Beyond Horizons by Bethel Chambers LLC (a specialist practice group of Bethel Chambers LLC)",
+  "path": "/singapore-pet-law",
+  "faqSchema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What can AVS require after a dog or cat bite is reported in Singapore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under the Animals and Birds (Licensing and Control of Cats and Dogs) Rules 2024, the Director-General, Animal Health and Welfare may ask the person who reports a bite for a medical or veterinary report. The Director-General or an authorised officer may also, by written notice, direct the owner of a cat or dog reasonably believed to have bitten someone, or another animal, to deliver the animal and related articles to an authorised examiner. Depending on the circumstances and the severity of the injury, the owner may be directed to secure the premises, keep the animal under physical control, and, for a dog, meet further requirements set out in the Rules. A direction must be complied with. We can help you understand a notice and respond in an orderly way. We cannot predict or promise the outcome of an investigation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which pet businesses need an AVS licence?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under the Animals and Birds (Licensing of Premises for Pet Shop and Other Purposes) Rules, premises used as a pet shop, to exhibit or distribute pet animals or birds, or to breed, board or rear them for reward need a licence from the Director-General, subject to limited exceptions with conditions. Grooming and dog training are not on that list, but a groomer or trainer that also boards animals for reward should check whether that boarding needs a licence. Every business that handles animals remains subject to the Animals and Birds Act 1965 and the Code of Animal Welfare. This is general information. We do not file applications or guarantee that a licence will be granted."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What changed for pet groomers and dog trainers in October 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On 3 October 2026, AVS updated the pet groomers annex of the Code of Animal Welfare (for the pet industry) and introduced a new annex for dog trainers. Public reporting highlights closer supervision of animals during grooming and a least intrusive, minimally aversive approach to training. Missing a Code minimum standard is not itself framed as a separate offence under the Code; AVS states that failure to meet the Code's minimum standards may be taken into account in animal welfare investigations. Grooming and training businesses may want to review their client terms, records and staff policies against the updated Code. Email HL@beyondhorizons.sg."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you review a boarding, grooming or training agreement with pet owners?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A useful client agreement covers the services and their limits, what the owner must disclose about the animal's health and temperament, authority and cost for emergency veterinary care, records, collection and late pick-up, payment, and how complaints are handled. Singapore law limits how far a business can exclude or restrict its liability, especially when dealing with consumers, so a term that looks protective may not be enforceable as written. We review and draft these agreements for pet businesses. We do not promise that any term will protect you in every situation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if there is a dispute after buying a pet from a breeder or pet shop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A sale of an animal by a business may, depending on the facts, be treated as a sale of goods under Singapore's Sale of Goods Act 1979 (which defines goods to include personal chattels other than things in action and money), so the written terms, what was said about the animal, and the terms implied by that Act may all be relevant, alongside any applicable consumer protection rules. Whether a claim is worth pursuing depends on the documents, the health records and the amount at stake. We can assess the contract position and the practical options. We do not promise recovery, a refund or the return of an animal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help with a dispute about veterinary fees or services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We can look at the contract side: the estimate, consent forms, invoices and service terms, and what was agreed. Whether clinical care met the expected standard is a separate question that usually needs independent veterinary evidence. If the matter is mainly a professional negligence claim, we will tell you early whether it is something we should take on, and coordinate or suggest that you instruct other counsel where appropriate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you advise on an English-law contract involving pets or pet products?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, where the contract is governed by English law. Examples include a cross-border pet product supply or distribution agreement, a franchise or brand licence for a pet services business, or a sale or transport arrangement with a party in England. English law advice is given by Hui Ling Teo, who is qualified in England and Wales. Singapore rules on licensing, import and animal welfare still apply to anything done in Singapore. We do not advise on the law of any other country; where another law applies, we coordinate with foreign counsel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Beyond Horizons a dog-bite injury or criminal defence firm?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Beyond Horizons by Bethel Chambers LLC advises pet owners and pet businesses on regulatory and commercial matters: licensing, AVS notices and directions, and the contracts and disputes around them. We are not a personal injury or criminal defence practice. If your matter is mainly a personal injury claim or a criminal charge, we will say so early, and coordinate with or suggest that you instruct appropriate counsel. Email HL@beyondhorizons.sg."
+        }
+      }
+    ]
+  },
+  "serviceSchema": {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Beyond Horizons by Bethel Chambers LLC — Singapore pet law counsel",
+    "url": "https://beyondhorizons.sg/singapore-pet-law",
+    "description": "Singapore pet law counsel for pet owners and pet businesses: AVS licensing, bite notices and directions, Code of Animal Welfare updates for groomers and trainers, and pet business contracts, with English law advice on English-law governed contracts. Beyond Horizons by Bethel Chambers LLC. HL@beyondhorizons.sg.",
+    "email": "HL@beyondhorizons.sg",
+    "knowsAbout": [
+      "Animals and Birds Act 1965",
+      "Animals and Birds (Licensing and Control of Cats and Dogs) Rules 2024",
+      "pet business licensing",
+      "pet business contracts",
+      "English law contracts"
+    ],
+    "areaServed": "Singapore",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Bethel Chambers LLC"
+    }
+  }
+}

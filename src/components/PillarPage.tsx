@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import RankingsFooter from "@/components/RankingsFooter";
 import RelatedInsights from "@/components/RelatedInsights";
+import type { ReactNode } from "react";
 
 const BOOKING_URL =
   "https://wa.me/6597265330";
@@ -87,6 +88,12 @@ export interface PillarPageProps {
   rankings?: { items: string[]; notes?: string[] };
   lastUpdatedISO: string;       // e.g. "2026-06-09"
   lastUpdatedLabel: string;     // e.g. "June 2026"
+  editorial?: {
+    entity: string;
+    intro: ReactNode;
+    sections: ReactNode;
+    note: string;
+  };
 }
 
 
@@ -118,6 +125,7 @@ const PillarPage = ({
   rankings,
   lastUpdatedISO,
   lastUpdatedLabel,
+  editorial,
 }: PillarPageProps) => {
   const canonical = `${SITE}/${slug}`;
 
@@ -186,7 +194,7 @@ const PillarPage = ({
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
+      {!editorial && <Helmet>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
@@ -194,7 +202,7 @@ const PillarPage = ({
         {howToJsonLd && (
           <script type="application/ld+json">{JSON.stringify(howToJsonLd)}</script>
         )}
-      </Helmet>
+      </Helmet>}
 
 
       <Header />
@@ -209,9 +217,10 @@ const PillarPage = ({
               <span className="mx-2">/</span>
               <span className="text-foreground">{breadcrumbName}</span>
             </nav>
+            {editorial && <p className="text-xs text-muted-foreground mb-4">{editorial.entity}</p>}
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">{eyebrow}</p>
             <h1 className="font-serif text-4xl md:text-6xl text-foreground mb-6 leading-tight">{h1}</h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">{intro}</p>
+            {editorial ? <div className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 space-y-5 text-left leading-relaxed">{editorial.intro}</div> : <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">{intro}</p>}
             <div className="flex flex-wrap gap-3 justify-center mb-6">
               {badges.map((b) => (
                 <span key={b} className="px-4 py-2 rounded-full bg-background/60 border border-border text-sm text-foreground">{b}</span>
@@ -222,9 +231,10 @@ const PillarPage = ({
             </p>
             <Button asChild size="lg" className="bg-primary text-primary-foreground">
               <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                Schedule a Consultation <ArrowRight className="ml-2 h-4 w-4" />
+                {editorial ? "Schedule a consultation" : "Schedule a Consultation"} <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
+            {editorial && <a href="mailto:HL@beyondhorizons.sg" className="block mt-5 text-sm text-primary hover:underline">Email HL@beyondhorizons.sg</a>}
           </div>
         </section>
 
@@ -238,7 +248,7 @@ const PillarPage = ({
           </section>
         )}
 
-        <section className="py-20">
+        {services.length > 0 && <section className="py-20">
           <div className="container mx-auto px-6 max-w-5xl">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-10 text-center">How We Advise</h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -253,7 +263,9 @@ const PillarPage = ({
               ))}
             </div>
           </div>
-        </section>
+        </section>}
+
+        {editorial?.sections}
 
         {contentSections && contentSections.length > 0 && (
           <section className="py-20 bg-secondary/20">
@@ -326,16 +338,16 @@ const PillarPage = ({
             <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-10 text-center">Frequently Asked Questions</h2>
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((f, i) => (
-                <AccordionItem key={i} value={`item-${i}`}>
+                <AccordionItem key={i} value={`item-${i}`} className={editorial ? "group" : undefined}>
                   <AccordionTrigger className="text-left font-serif text-lg">{f.q}</AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">{f.a}</AccordionContent>
+                  <AccordionContent {...(editorial ? { forceMount: true as const } : {})} className={editorial ? "text-muted-foreground leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground leading-relaxed"}>{f.a}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
           </div>
         </section>
 
-        <RelatedInsights keywords={relatedKeywords} heading={relatedHeading} />
+        {!editorial && <RelatedInsights keywords={relatedKeywords} heading={relatedHeading} />}
 
         {rankings && <RankingsFooter items={rankings.items} notes={rankings.notes} />}
 
@@ -357,9 +369,10 @@ const PillarPage = ({
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                  Book a Consultation <ArrowRight className="ml-2 h-4 w-4" />
+                  {editorial ? "Schedule a consultation" : "Book a Consultation"} <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
+              {editorial && <Button asChild size="lg" variant="secondary"><a href="mailto:HL@beyondhorizons.sg"><Mail className="mr-2 h-4 w-4" />Email HL@beyondhorizons.sg</a></Button>}
               {exploreLink && (
                 <Button asChild size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10">
                   <Link to={exploreLink.to}>
@@ -368,6 +381,7 @@ const PillarPage = ({
                 </Button>
               )}
             </div>
+            {editorial && <p className="text-sm text-primary-foreground/85 mt-8 leading-relaxed">{editorial.note}</p>}
           </div>
         </section>
       </main>

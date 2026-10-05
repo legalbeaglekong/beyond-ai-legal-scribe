@@ -26,6 +26,8 @@ import { Route as SingaporeAviationLawRouteImport } from './routes/singapore-avi
 import { Route as SingaporeBorrowerFinanceCounselRouteImport } from './routes/singapore-borrower-finance-counsel'
 import { Route as SingaporeEmploymentLawRouteImport } from './routes/singapore-employment-law'
 import { Route as SingaporeLenderFinanceCounselRouteImport } from './routes/singapore-lender-finance-counsel'
+import { Route as SingaporeManufacturingSupplyAgreementsRouteImport } from './routes/singapore-manufacturing-supply-agreements'
+import { Route as SingaporePetLawRouteImport } from './routes/singapore-pet-law'
 import { Route as SingaporeRestructuringInsolvencyRouteImport } from './routes/singapore-restructuring-insolvency'
 import { Route as SingaporeRoboticsLawRouteImport } from './routes/singapore-robotics-law'
 import { Route as SingaporeSpaceLawRouteImport } from './routes/singapore-space-law'
@@ -139,6 +141,17 @@ const SingaporeLenderFinanceCounselRoute =
     path: '/singapore-lender-finance-counsel',
     getParentRoute: () => rootRouteImport,
   } as any)
+const SingaporeManufacturingSupplyAgreementsRoute =
+  SingaporeManufacturingSupplyAgreementsRouteImport.update({
+    id: '/singapore-manufacturing-supply-agreements',
+    path: '/singapore-manufacturing-supply-agreements',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SingaporePetLawRoute = SingaporePetLawRouteImport.update({
+  id: '/singapore-pet-law',
+  path: '/singapore-pet-law',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SingaporeRestructuringInsolvencyRoute =
   SingaporeRestructuringInsolvencyRouteImport.update({
     id: '/singapore-restructuring-insolvency',
@@ -282,6 +295,8 @@ export interface FileRoutesByFullPath {
   '/singapore-borrower-finance-counsel': typeof SingaporeBorrowerFinanceCounselRoute
   '/singapore-employment-law': typeof SingaporeEmploymentLawRoute
   '/singapore-lender-finance-counsel': typeof SingaporeLenderFinanceCounselRoute
+  '/singapore-manufacturing-supply-agreements': typeof SingaporeManufacturingSupplyAgreementsRoute
+  '/singapore-pet-law': typeof SingaporePetLawRoute
   '/singapore-restructuring-insolvency': typeof SingaporeRestructuringInsolvencyRoute
   '/singapore-robotics-law': typeof SingaporeRoboticsLawRoute
   '/singapore-space-law': typeof SingaporeSpaceLawRoute
@@ -325,6 +340,8 @@ export interface FileRoutesByTo {
   '/singapore-borrower-finance-counsel': typeof SingaporeBorrowerFinanceCounselRoute
   '/singapore-employment-law': typeof SingaporeEmploymentLawRoute
   '/singapore-lender-finance-counsel': typeof SingaporeLenderFinanceCounselRoute
+  '/singapore-manufacturing-supply-agreements': typeof SingaporeManufacturingSupplyAgreementsRoute
+  '/singapore-pet-law': typeof SingaporePetLawRoute
   '/singapore-restructuring-insolvency': typeof SingaporeRestructuringInsolvencyRoute
   '/singapore-robotics-law': typeof SingaporeRoboticsLawRoute
   '/singapore-space-law': typeof SingaporeSpaceLawRoute
@@ -369,6 +386,8 @@ export interface FileRoutesById {
   '/singapore-borrower-finance-counsel': typeof SingaporeBorrowerFinanceCounselRoute
   '/singapore-employment-law': typeof SingaporeEmploymentLawRoute
   '/singapore-lender-finance-counsel': typeof SingaporeLenderFinanceCounselRoute
+  '/singapore-manufacturing-supply-agreements': typeof SingaporeManufacturingSupplyAgreementsRoute
+  '/singapore-pet-law': typeof SingaporePetLawRoute
   '/singapore-restructuring-insolvency': typeof SingaporeRestructuringInsolvencyRoute
   '/singapore-robotics-law': typeof SingaporeRoboticsLawRoute
   '/singapore-space-law': typeof SingaporeSpaceLawRoute
@@ -414,6 +433,8 @@ export interface FileRouteTypes {
     | '/singapore-borrower-finance-counsel'
     | '/singapore-employment-law'
     | '/singapore-lender-finance-counsel'
+    | '/singapore-manufacturing-supply-agreements'
+    | '/singapore-pet-law'
     | '/singapore-restructuring-insolvency'
     | '/singapore-robotics-law'
     | '/singapore-space-law'
@@ -457,6 +478,8 @@ export interface FileRouteTypes {
     | '/singapore-borrower-finance-counsel'
     | '/singapore-employment-law'
     | '/singapore-lender-finance-counsel'
+    | '/singapore-manufacturing-supply-agreements'
+    | '/singapore-pet-law'
     | '/singapore-restructuring-insolvency'
     | '/singapore-robotics-law'
     | '/singapore-space-law'
@@ -500,6 +523,8 @@ export interface FileRouteTypes {
     | '/singapore-borrower-finance-counsel'
     | '/singapore-employment-law'
     | '/singapore-lender-finance-counsel'
+    | '/singapore-manufacturing-supply-agreements'
+    | '/singapore-pet-law'
     | '/singapore-restructuring-insolvency'
     | '/singapore-robotics-law'
     | '/singapore-space-law'
@@ -544,6 +569,8 @@ export interface RootRouteChildren {
   SingaporeBorrowerFinanceCounselRoute: typeof SingaporeBorrowerFinanceCounselRoute
   SingaporeEmploymentLawRoute: typeof SingaporeEmploymentLawRoute
   SingaporeLenderFinanceCounselRoute: typeof SingaporeLenderFinanceCounselRoute
+  SingaporeManufacturingSupplyAgreementsRoute: typeof SingaporeManufacturingSupplyAgreementsRoute
+  SingaporePetLawRoute: typeof SingaporePetLawRoute
   SingaporeRestructuringInsolvencyRoute: typeof SingaporeRestructuringInsolvencyRoute
   SingaporeRoboticsLawRoute: typeof SingaporeRoboticsLawRoute
   SingaporeSpaceLawRoute: typeof SingaporeSpaceLawRoute
@@ -689,6 +716,20 @@ declare module '@tanstack/react-router' {
       path: '/singapore-lender-finance-counsel'
       fullPath: '/singapore-lender-finance-counsel'
       preLoaderRoute: typeof SingaporeLenderFinanceCounselRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/singapore-manufacturing-supply-agreements': {
+      id: '/singapore-manufacturing-supply-agreements'
+      path: '/singapore-manufacturing-supply-agreements'
+      fullPath: '/singapore-manufacturing-supply-agreements'
+      preLoaderRoute: typeof SingaporeManufacturingSupplyAgreementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/singapore-pet-law': {
+      id: '/singapore-pet-law'
+      path: '/singapore-pet-law'
+      fullPath: '/singapore-pet-law'
+      preLoaderRoute: typeof SingaporePetLawRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/singapore-restructuring-insolvency': {
@@ -880,6 +921,9 @@ const rootRouteChildren: RootRouteChildren = {
   SingaporeBorrowerFinanceCounselRoute: SingaporeBorrowerFinanceCounselRoute,
   SingaporeEmploymentLawRoute: SingaporeEmploymentLawRoute,
   SingaporeLenderFinanceCounselRoute: SingaporeLenderFinanceCounselRoute,
+  SingaporeManufacturingSupplyAgreementsRoute:
+    SingaporeManufacturingSupplyAgreementsRoute,
+  SingaporePetLawRoute: SingaporePetLawRoute,
   SingaporeRestructuringInsolvencyRoute: SingaporeRestructuringInsolvencyRoute,
   SingaporeRoboticsLawRoute: SingaporeRoboticsLawRoute,
   SingaporeSpaceLawRoute: SingaporeSpaceLawRoute,
