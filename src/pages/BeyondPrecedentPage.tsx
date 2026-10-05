@@ -2,8 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "@/lib/router-compat";
 import { EMAIL, WHATSAPP_URL } from "@/config/business";
-import { Download, FileText } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import WordDocumentPreview from "@/components/WordDocumentPreview";
 import boyuanDocument from "@/assets/beyond-precedent-episode-1-zheng-bo-yuan.docx.asset.json";
 import harishDocument from "@/assets/beyond-precedent-episode-1-harish.docx.asset.json";
 
@@ -67,20 +66,6 @@ const participants = [
     document: harishDocument,
   },
 ];
-
-const DocumentDownload = ({ name, url, filename }: { name: string; url: string; filename: string }) => (
-  <div className="space-y-4 border-t border-border pt-4">
-    <p className="flex items-start gap-2 text-sm text-muted-foreground">
-      <FileText className="size-5 shrink-0" aria-hidden="true" />
-      Sponsorship agreement · Word document
-    </p>
-    <Button asChild variant="outline" size="sm">
-      <a href={url} download={filename} target="_blank" rel="noopener noreferrer" aria-label={`Download ${name}'s Word document`}>
-        <Download aria-hidden="true" />Download Word
-      </a>
-    </Button>
-  </div>
-);
 
 const BeyondPrecedentPage = () => (
   <div className="min-h-screen bg-background">
@@ -168,7 +153,7 @@ const BeyondPrecedentPage = () => (
                 <section key={p.id} className="min-w-0 space-y-3" aria-labelledby={p.id}>
                   <h4 id={p.id} className="font-display text-xl text-foreground">{p.name}</h4>
                   <p className="text-sm text-muted-foreground">{p.detail}</p>
-                  <DocumentDownload name={p.name} url={p.document.url} filename={p.document.original_filename} />
+                  <WordDocumentPreview name={p.name} url={p.document.url} filename={p.document.original_filename} />
                 </section>
               ))}
             </div>
