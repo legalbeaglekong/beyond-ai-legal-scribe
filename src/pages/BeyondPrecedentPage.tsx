@@ -2,7 +2,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "@/lib/router-compat";
 import { EMAIL, WHATSAPP_URL } from "@/config/business";
-import { FileText } from "lucide-react";
+import { Download, FileText } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import boyuanDocument from "@/assets/beyond-precedent-episode-1-zheng-bo-yuan.docx.asset.json";
+import harishDocument from "@/assets/beyond-precedent-episode-1-harish.docx.asset.json";
 
 const INSIGHTS_URL = "https://www.insights.beyondhorizons.sg/";
 const REUTERS_URL = "https://www.reuters.com/legal/transactional/these-law-students-got-use-ai-final-exams-howd-they-do-2023-08-29/";
@@ -55,30 +58,27 @@ const participants = [
     id: "zheng-work-product",
     name: "Zheng Bo Yuan",
     detail: "National University of Singapore · Rising second-year law student",
+    document: boyuanDocument,
   },
   {
     id: "harish-work-product",
     name: "Harish",
     detail: "National University of Singapore · First-year law student",
+    document: harishDocument,
   },
 ];
 
-const DocumentPlaceholder = ({ name }: { name: string }) => (
-  <div className="overflow-hidden rounded-md border border-border">
-    <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border bg-muted px-4 py-3">
-      <span className="text-sm text-foreground">Sponsorship agreement · Word document</span>
-      <span className="text-xs uppercase tracking-widest text-muted-foreground">Awaiting confirmation</span>
-    </div>
-    <div
-      className="flex h-[260px] flex-col items-center justify-center gap-3 bg-card px-6 text-center"
-      role="note"
-      aria-label={`${name}'s document is awaiting confirmation before it can be shown`}
-    >
-      <FileText className="size-6 shrink-0 text-muted-foreground" aria-hidden="true" />
-      <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-        {name}’s draft will appear here once they confirm it may be shared publicly.
-      </p>
-    </div>
+const DocumentDownload = ({ name, url, filename }: { name: string; url: string; filename: string }) => (
+  <div className="space-y-4 border-t border-border pt-4">
+    <p className="flex items-start gap-2 text-sm text-muted-foreground">
+      <FileText className="size-5 shrink-0" aria-hidden="true" />
+      Sponsorship agreement · Word document
+    </p>
+    <Button asChild variant="outline" size="sm">
+      <a href={url} download={filename} target="_blank" rel="noopener noreferrer" aria-label={`Download ${name}'s Word document`}>
+        <Download aria-hidden="true" />Download Word
+      </a>
+    </Button>
   </div>
 );
 
@@ -161,14 +161,14 @@ const BeyondPrecedentPage = () => (
                 <div><dt className="font-semibold text-foreground">Guest judges</dt><dd className="text-muted-foreground">Shen Yang, Hanyi Zeng and Hui Ling Teo</dd></div>
                 <div><dt className="font-semibold text-foreground">Hosted by</dt><dd className="text-muted-foreground">Sonia Motwani</dd></div>
               </dl>
-              <p className="border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted-foreground">Each participant drafted their document in only 15 minutes, using free AI tools under limits on font size and page count. The work products include redlines and comments, and are held back until each participant confirms they may be shown. Read them in that context: educational content only, not legal advice, and not for use with real counterparties.</p>
+              <p className="border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted-foreground">Each participant drafted their document in only 15 minutes, using free AI tools under limits on font size and page count. The work products include redlines and comments. Read them in that context: educational content only, not legal advice, and not for use with real counterparties.</p>
             </div>
             <div className="grid items-start gap-6 sm:grid-cols-2 sm:gap-8">
               {participants.map((p) => (
                 <section key={p.id} className="min-w-0 space-y-3" aria-labelledby={p.id}>
                   <h4 id={p.id} className="font-display text-xl text-foreground">{p.name}</h4>
                   <p className="text-sm text-muted-foreground">{p.detail}</p>
-                  <DocumentPlaceholder name={p.name} />
+                  <DocumentDownload name={p.name} url={p.document.url} filename={p.document.original_filename} />
                 </section>
               ))}
             </div>
