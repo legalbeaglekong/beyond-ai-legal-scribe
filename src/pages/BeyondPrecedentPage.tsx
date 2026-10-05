@@ -153,7 +153,7 @@ const BeyondPrecedentPage = () => (
           <p className="max-w-3xl text-muted-foreground leading-relaxed">
             A post-editing work product is what a student produces after the AI-assisted first pass: a revised draft plus a short edit log recording what the model got wrong, invented, or needed rewriting. Archive items, when cleared, are illustrative only — not legal advice and not client deliverables.
           </p>
-          <article className="space-y-8 border-t border-border pt-6" aria-labelledby="episode-one">
+          <article className="space-y-8 rounded-lg border border-border bg-card p-6 md:p-8" aria-labelledby="episode-one">
             <div className="max-w-3xl space-y-4">
               <p className="text-xs uppercase tracking-widest text-accent">Episode 1 · Student work products</p>
               <h3 id="episode-one" className="font-display text-2xl text-foreground">The Energy Drink Influencer</h3>
@@ -163,7 +163,7 @@ const BeyondPrecedentPage = () => (
               </dl>
               <p className="border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted-foreground">Each participant drafted their document in only 15 minutes, using free AI tools under limits on font size and page count. The work products include redlines and comments, and are held back until each participant confirms they may be shown. Read them in that context: educational content only, not legal advice, and not for use with real counterparties.</p>
             </div>
-            <div className="grid items-start gap-6 lg:grid-cols-2 lg:gap-8">
+            <div className="grid items-start gap-6 sm:grid-cols-2 sm:gap-8">
               {participants.map((p) => (
                 <section key={p.id} className="min-w-0 space-y-3" aria-labelledby={p.id}>
                   <h4 id={p.id} className="font-display text-xl text-foreground">{p.name}</h4>
