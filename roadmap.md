@@ -1,5 +1,8 @@
 # Roadmap
 
+- [ ] Build the supplied Singapore pet law and manufacturing/supply agreement pages as previews only.
+- [ ] Verify exact copy, metadata, initial-HTML FAQs, cross-links, and unchanged navigation/footer.
+
 - [x] Add Beyond Precedent Episode 1 participants and Word previews; verify both originals load and remain downloadable.
 
 - [x] Refresh the five approved employment, AI, and robotics pages and validate metadata, FAQ schema, claims, and links.
