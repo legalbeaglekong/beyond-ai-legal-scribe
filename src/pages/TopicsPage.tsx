@@ -32,6 +32,8 @@ const clusters = [
     heading: "Workforce & Employment",
     items: [
       { to: "/singapore-employment-law", title: "Singapore Employment Law", desc: "MOM compliance, work passes (COMPASS), retrenchments and executive separations." },
+      { to: "/singapore-pet-law", title: "Singapore Pet Law", desc: "Guidance for pet owners and pet businesses: licensing questions, client agreements and disputes." },
+      { to: "/singapore-manufacturing-supply-agreements", title: "Manufacturing & Supply Agreements", desc: "Singapore and English law supply, manufacturing and distribution agreements, with an optional AI review add-on." },
     ],
   },
   {
