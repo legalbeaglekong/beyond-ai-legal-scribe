@@ -23,6 +23,8 @@ const practiceLinks = [
   { name: "Space Law", href: "/singapore-space-law" },
   { name: "AI Governance", href: "/singapore-ai-governance" },
   { name: "Employment", href: "/singapore-employment-law" },
+  { name: "Manufacturing & Supply", href: "/singapore-manufacturing-supply-agreements" },
+  { name: "Pet Law", href: "/singapore-pet-law" },
   { name: "Restructuring & Insolvency", href: "/singapore-restructuring-insolvency" },
   { name: "Aviation", href: "/singapore-aviation-law" },
   { name: "Robotics", href: "/singapore-robotics-law" },
