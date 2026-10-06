@@ -66,10 +66,18 @@
       },
       {
         "@type": "Question",
+        "name": "My pet was injured or died and I suspect irregularities — can you help?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Where the matter is a civil one, yes. This includes a pet that was injured or died while in the care of a groomer, trainer, boarding facility, transporter, breeder, pet shop or veterinary clinic where you suspect the service was not provided as agreed. We review the contract, service terms, records and correspondence, assess what was promised and how exclusion or limitation clauses may apply, and set out the practical options: raising a complaint, negotiating a settlement, or a civil claim. Questions about clinical care usually need independent veterinary evidence, and we will tell you early if that is needed. We do not handle criminal matters, and we cannot promise a refund, compensation or that a claim will succeed. Email HL@beyondhorizons.sg."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "Is Beyond Horizons a dog-bite injury or criminal defence firm?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Beyond Horizons by Bethel Chambers LLC advises pet owners and pet businesses on regulatory and commercial matters: licensing, AVS notices and directions, and the contracts and disputes around them. We are not a personal injury or criminal defence practice. If your matter is mainly a personal injury claim or a criminal charge, we will say so early, and coordinate with or suggest that you instruct appropriate counsel. Email HL@beyondhorizons.sg."
+          "text": "No. Beyond Horizons by Bethel Chambers LLC advises pet owners and pet businesses on regulatory and commercial matters: licensing, AVS notices and directions, and the contracts and disputes around them. We do not defend criminal charges, and we are not a personal injury practice. We can handle civil liability matters arising from pets, however — for example, disputes about compensation for damage or loss, claims between a pet owner and a pet business, and questions about who bears responsibility under a contract. If your matter is mainly a personal injury claim or a criminal charge, we will say so early, and coordinate with or suggest that you instruct appropriate counsel. Email HL@beyondhorizons.sg."
         }
       }
     ]
