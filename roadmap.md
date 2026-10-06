@@ -12,3 +12,4 @@
 - [x] Verify /en-us, energy-transition wording, pack 08, and trade-tariff Section 232 invariants.
 - [x] Add the approved public Section 232 section to the merged Ascending Asia page and refresh the existing trade-tariff metadata.
 - [x] Validate raw HTML for the canary pages and report any external blocker.
+- [x] Embed the illustrative contract-risk control pane and dependency map on the manufacturing agreements preview page.
