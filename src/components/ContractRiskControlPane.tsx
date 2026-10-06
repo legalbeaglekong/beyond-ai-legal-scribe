@@ -109,6 +109,14 @@ const dependencies = [
 ];
 
 function DependencyMap() {
+  const paths = [
+    { source: "Sanctions & export", note: "Clause absent · Critical 81%", tone: "hot", targets: ["Screening & notices", "Termination & exit", "Liability & indemnities"] },
+    { source: "Anti-bribery", note: "Audit and termination controls", tone: "base", targets: ["Termination & exit"] },
+    { source: "Incoterms & title/risk", note: "Who bears transit risk", tone: "base", targets: ["Insurance & logistics", "Claims & insurance", "Quality & acceptance"], monitoring: [2] },
+    { source: "Payment timelines", note: "Invoice and milestone triggers", tone: "base", targets: ["Liability & indemnities", "Suspension / step-in"] },
+    { source: "Quality & acceptance", note: "Warranty and recall duties", tone: "watch", targets: ["Liability & indemnities", "Suspension / step-in"], monitoring: [1] },
+    { source: "Insurance & logistics", note: "Cover follows risk transfer", tone: "watch", targets: ["Liability & indemnities"], monitoring: [0] },
+  ];
   return (
     <div className="overflow-x-auto border border-border bg-card p-3 md:p-5">
       <div className="mb-4 flex min-w-[760px] flex-wrap gap-5 text-[11px] text-muted-foreground">
@@ -116,47 +124,42 @@ function DependencyMap() {
         <span className="flex items-center gap-2"><i className="block w-6 border-t-2 border-muted-foreground" />Direct dependency</span>
         <span className="flex items-center gap-2"><i className="block w-6 border-t-2 border-dashed border-accent" />Monitoring link</span>
       </div>
-      <svg className="h-auto min-w-[760px] w-full" viewBox="0 0 1040 540" role="img" aria-label="Illustrative contract dependency map connecting compliance controls, commercial terms, operational duties and remedies">
+      <svg className="h-auto min-w-[760px] w-full" viewBox="0 0 1040 730" role="img" aria-label="Illustrative contract dependency map connecting compliance controls, commercial terms, operational duties and remedies">
+        <title>Contract dependencies, grouped by originating clause</title>
+        <desc>Each row connects one originating clause to its related review points. Connections remain within their row and never cross a text box.</desc>
         <defs>
           <marker id="dependency-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5 0 10Z" className="fill-muted-foreground" /></marker>
           <marker id="dependency-arrow-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5 0 10Z" className="fill-primary" /></marker>
           <marker id="dependency-arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5 0 10Z" className="fill-accent" /></marker>
         </defs>
-        {[8, 270, 532, 794].map((x) => <rect key={x} x={x} y="32" width="238" height="490" rx="3" className="fill-background stroke-border" />)}
-        {[
-          [24, "01 · COMPLIANCE CONTROLS"], [286, "02 · COMMERCIAL MECHANICS"],
-          [548, "03 · OPERATIONAL DUTIES"], [810, "04 · REMEDIES & EXIT"],
-        ].map(([x, label]) => <text key={label} x={x} y="56" className="fill-muted-foreground text-[10px] font-bold">{label}</text>)}
-
-        <g fill="none" strokeLinecap="round">
-          <path d="M218 121C330 121 418 98 548 98" className="stroke-primary stroke-[2]" markerEnd="url(#dependency-arrow-hot)" />
-          <path d="M218 121C430 145 650 206 810 236" className="stroke-primary stroke-[2]" markerEnd="url(#dependency-arrow-hot)" />
-          <path d="M218 121C452 80 650 72 810 98" className="stroke-primary stroke-[2]" markerEnd="url(#dependency-arrow-hot)" />
-          <path d="M218 226C338 226 436 226 548 226" className="stroke-muted-foreground/60 stroke-[1.3]" markerEnd="url(#dependency-arrow)" />
-          <path d="M480 226C616 244 686 336 810 350" className="stroke-muted-foreground/60 stroke-[1.3]" markerEnd="url(#dependency-arrow)" />
-          <path d="M480 226C560 250 560 348 548 382" className="stroke-accent stroke-[1.5] [stroke-dasharray:5_4]" markerEnd="url(#dependency-arrow-accent)" />
-          <path d="M480 350C620 350 694 275 810 255" className="stroke-muted-foreground/60 stroke-[1.3]" markerEnd="url(#dependency-arrow)" />
-          <path d="M480 350C620 390 700 452 810 455" className="stroke-muted-foreground/60 stroke-[1.3]" markerEnd="url(#dependency-arrow)" />
-          <path d="M742 382C790 370 794 262 810 251" className="stroke-muted-foreground/60 stroke-[1.3]" markerEnd="url(#dependency-arrow)" />
-          <path d="M742 382C780 404 786 446 810 455" className="stroke-accent stroke-[1.5] [stroke-dasharray:5_4]" markerEnd="url(#dependency-arrow-accent)" />
-          <path d="M742 226C780 226 790 226 810 236" className="stroke-accent stroke-[1.5] [stroke-dasharray:5_4]" markerEnd="url(#dependency-arrow-accent)" />
-        </g>
-
-        {[
-          ["Sanctions & export", "Clause absent · Critical 81%", 30, 88, "hot"],
-          ["Anti-bribery", "Audit and termination controls", 30, 193, "base"],
-          ["Incoterms & title/risk", "Who bears transit risk", 292, 193, "base"],
-          ["Payment timelines", "Invoice and milestone triggers", 292, 317, "base"],
-          ["Screening & notices", "Linked review required", 548, 65, "hot"],
-          ["Insurance & logistics", "Cover follows risk transfer", 548, 193, "watch"],
-          ["Quality & acceptance", "Warranty and recall duties", 548, 349, "watch"],
-          ["Termination & exit", "Breach trigger may be unavailable", 810, 65, "hot"],
-          ["Liability & indemnities", "Allocation may not cover exposure", 810, 203, "hot"],
-          ["Claims & insurance", "Notice, evidence and recovery", 810, 317, "base"],
-          ["Suspension / step-in", "Operational continuity", 810, 422, "base"],
-        ].map(([title, subtitle, x, y, tone]) => {
-          const nodeClass = tone === "hot" ? "fill-primary/10 stroke-primary stroke-[2]" : tone === "watch" ? "fill-accent/10 stroke-accent stroke-[1.5]" : "fill-card stroke-border";
-          return <g key={title}><rect x={x} y={y} width={Number(x) > 500 ? 198 : 188} height="66" rx="3" className={nodeClass} /><text x={Number(x) + 15} y={Number(y) + 25} className="fill-foreground text-[12px] font-bold">{title}</text><text x={Number(x) + 15} y={Number(y) + 44} className="fill-muted-foreground text-[9px]">{subtitle}</text></g>;
+        <text x="28" y="24" className="fill-muted-foreground text-[10px] font-bold">ORIGINATING CLAUSE</text>
+        <text x="536" y="24" className="fill-muted-foreground text-[10px] font-bold">CONNECTED REVIEW POINTS</text>
+        {paths.map((row, index) => {
+          const top = 42 + index * 114;
+          const centre = top + 49;
+          const hot = row.tone === "hot";
+          const sourceClass = hot ? "fill-primary/10 stroke-primary" : row.tone === "watch" ? "fill-accent/10 stroke-accent/40" : "fill-background stroke-border";
+          const targetYs = row.targets.map((_, targetIndex) => centre + (targetIndex - (row.targets.length - 1) / 2) * 32);
+          return (
+            <g key={row.source}>
+              {index > 0 && <path d={`M16 ${top - 8}H1024`} className="stroke-border" />}
+              <rect x="28" y={centre - 30} width="310" height="60" rx="4" className={sourceClass} />
+              <text x="46" y={centre - 5} className="fill-foreground text-[13px] font-bold">{row.source}</text>
+              <text x="46" y={centre + 15} className="fill-muted-foreground text-[10px]">{row.note}</text>
+              <g fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <path d={`M338 ${centre}H420`} className={hot ? "stroke-primary stroke-[1.5]" : "stroke-muted-foreground/40 stroke-[1.3]"} />
+                {targetYs.length > 1 && <path d={`M420 ${targetYs[0]}V${targetYs[targetYs.length - 1]}`} className={hot ? "stroke-primary stroke-[1.5]" : "stroke-muted-foreground/40 stroke-[1.3]"} />}
+                {targetYs.map((y, targetIndex) => {
+                  const monitoring = row.monitoring?.includes(targetIndex);
+                  return <path key={y} d={`M420 ${y}H520`} className={hot ? "stroke-primary stroke-[1.5]" : monitoring ? "stroke-accent stroke-[1.3] [stroke-dasharray:4_4]" : "stroke-muted-foreground/50 stroke-[1.3]"} markerEnd={`url(#dependency-arrow${hot ? "-hot" : monitoring ? "-accent" : ""})`} />;
+                })}
+              </g>
+              {row.targets.map((target, targetIndex) => {
+                const y = targetYs[targetIndex] ?? centre;
+                return <g key={target}><rect x="536" y={y - 13} width="476" height="26" rx="3" className={hot ? "fill-primary/5 stroke-primary/20" : "fill-background stroke-border"} /><text x="552" y={y + 4} className="fill-foreground text-[11px]">{target}</text></g>;
+              })}
+            </g>
+          );
         })}
       </svg>
     </div>
