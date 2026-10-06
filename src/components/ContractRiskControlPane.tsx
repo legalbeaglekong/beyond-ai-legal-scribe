@@ -210,7 +210,7 @@ export default function ContractRiskControlPane() {
             <div className="overflow-x-auto border border-border bg-card">
               <table className="w-full min-w-[820px] table-fixed border-collapse text-left text-[11px]">
                 <thead><tr className="bg-secondary"><th className="w-[20%] border-b border-r border-border p-3">Key term</th>{agreementColumns.map((column) => <th key={column} className="border-b border-r border-border p-3 last:border-r-0">{column}</th>)}</tr></thead>
-                <tbody>{matrixRows.map((row) => <tr key={row.term}><th scope="row" className="border-b border-r border-border bg-card p-3 align-top font-bold last:border-b-0">{row.term}</th>{row.cells.map(([status, detail, tone], index) => <td key={`${row.term}-${index}`} className={`border-b border-r border-border p-3 align-top last:border-r-0 ${toneClasses[tone]}`}><strong className="block">{status}</strong><span className="mt-1 block font-normal leading-relaxed">{detail}</span></td>)}</tr>)}</tbody>
+                <tbody>{matrixRows.map((row) => <tr key={row.term}><th scope="row" className="border-b border-r border-border bg-card p-3 align-top font-bold last:border-b-0">{row.term}</th>{row.cells.map(([status, detail, tone], index) => <td key={`${row.term}-${index}`} className={`border-b border-r border-border p-3 align-top last:border-r-0 ${toneClasses[tone ?? "aligned"]}`}><strong className="block">{status}</strong><span className="mt-1 block font-normal leading-relaxed">{detail}</span></td>)}</tr>)}</tbody>
               </table>
             </div>
           </div>
