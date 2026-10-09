@@ -53,8 +53,9 @@ const ORGANIZATION_JSONLD = `{
     "url": "https://bethelchambers.com/"
   },
   "founder": {
-    "@type": "Person",
+"@type": "Person",
     "name": "Hui Ling Teo",
+    "alternateName": "Teo Hui Ling",
     "jobTitle": "Founder",
     "worksFor": "Beyond Horizons by Bethel Chambers LLC",
     "email": "HL@beyondhorizons.sg",
