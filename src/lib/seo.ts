@@ -58,7 +58,7 @@ export function createFaqScript(items: readonly FaqItem[]) {
 }
 
 export const STATIC_PAGE_SEO = {
-  "/about": ["About Beyond Horizons | Bethel Chambers LLC", "Meet the Singapore-based, cross-border legal team at Beyond Horizons, a specialist practice group of Bethel Chambers LLC."],
+  "/about": ["About Beyond Horizons by Bethel Chambers LLC | Singapore", "Beyond Horizons is a Singapore-based cross-border practice group of Bethel Chambers LLC, led by Hui Ling Teo: aviation finance, AI and corporate counsel."],
   "/ai-tools": ["AI Legal Tools | Beyond Horizons Singapore", "Explore purpose-built legal tools for regulatory monitoring, contract review, financial modelling and legal operations."],
   "/announcements": ["Announcements | Beyond Horizons Legal", "News, events and practice updates from Beyond Horizons by Bethel Chambers LLC in Singapore."],
   "/ascending-asia": ["Ascending Asia | AAM Market Entry & Section 232 UAS Counsel | Beyond Horizons", "Advanced Air Mobility market-entry guide for APAC — plus Section 232 UAS tariff and content-origin certification issues for suppliers into US programmes. Register for the playbook or schedule a consultation."],
@@ -67,11 +67,11 @@ export const STATIC_PAGE_SEO = {
   "/privacy": ["Data Protection Notice | Bethel Chambers LLC", "How Bethel Chambers LLC collects, uses, discloses and protects personal data under Singapore's Personal Data Protection Act 2012."],
   "/beyond-precedent": ["Beyond Precedent | Beyond Horizons", "Beyond Precedent explores how law students draft with free AI tools and how Beyond Horizons designs legal services and talent development for a post-AI age — not a job guarantee."],
   "/industry/ai-code-counsel": ["AI Code Counsel Singapore | PDPC GenAI, AI Verify & EU AI Act — Beyond Horizons", "AI governance counsel for Singapore operators — PDPC GenAI notifications, IMDA/FEAT programmes, EU AI Act readiness, and AI×IP issues. Book a consultation."],
-  "/industry/aviation": ["Aviation Lawyer & Finance Counsel Singapore | Repossession, Leasing & Docs — Beyond Horizons", "Aviation finance lawyer Singapore — English-law leases, aircraft recoveries, insolvency coordination, incomplete aircraft/engine docs, MRO, business jet & helicopter S&P. Beyond Horizons by Bethel Chambers LLC. Soft path to talk."],
-  "/industry/blockchain-digital-assets": ["Blockchain & Digital Assets Counsel | Beyond Horizons", "Singapore-anchored counsel for digital assets, token projects, blockchain contracts and evolving regulatory requirements."],
+  "/industry/aviation": ["Aviation Finance Lawyer Singapore | Leasing & Recoveries", "Aircraft leasing, aviation finance and recoveries counsel in Singapore: English-law leases, Cape Town filings, repossessions and incomplete records."],
+  "/industry/blockchain-digital-assets": ["Crypto & Blockchain Lawyer Singapore | Digital Assets", "Singapore counsel for digital asset businesses: token projects, tokenisation, blockchain contracts and MAS licensing questions."],
   "/industry/cybersecurity-tech": ["Cybersecurity & Technology Counsel | Beyond Horizons", "Legal guidance on cybersecurity, data governance, technology contracts, incident readiness and cross-border compliance."],
   "/industry/energy-transition": ["Energy Transition Counsel Singapore | Beyond Horizons", "Sustainability-aware counsel for renewable energy, green finance, project contracts and energy-transition matters across APAC."],
-  "/industry/fractional-gc": ["Fractional General Counsel Singapore | Beyond Horizons", "Compare ongoing legal support options and learn how a retained Singapore law practice can support contracts, boards and compliance."],
+  "/industry/fractional-gc": ["Fractional General Counsel Singapore | Fractional GC", "Fractional general counsel and fractional legal counsel for Singapore scale-ups: senior in-house-style support on a retainer, without a full-time hire."],
   "/industry/robotics": ["Robot Leasing & RaaS Counsel Singapore | Liability & Autonomous Systems — Beyond Horizons", "Robot leasing and Robotics-as-a-Service counsel in Singapore — RaaS contracts, liability, RLSS co-funding checks, and path/road AV hooks. Book a consultation."],
   "/industry/space": ["Space Law Counsel Singapore | Beyond Horizons", "Singapore-anchored legal counsel for space businesses, satellite projects, commercial contracts and cross-border regulatory matters."],
   "/industry/trade-tariff": ["Trade & Tariff Counsel Singapore | Contract Restructuring & UAS 232 | Beyond Horizons", "Trade and tariff counsel for APAC businesses — contractual restructuring, JV repositioning, and Section 232 UAS content-origin issues for suppliers into US programmes. Schedule a consultation."],
@@ -80,14 +80,14 @@ export const STATIC_PAGE_SEO = {
   "/join-us": ["Careers at Beyond Horizons Legal | Singapore", "Explore career opportunities with Beyond Horizons, a digital-first Singapore legal practice serving cross-border clients."],
   "/market-insights": ["Legal Market Insights | Beyond Horizons", "Market intelligence on APAC legal services, cross-border transactions, technology, sustainability and regulatory change."],
   "/our-clients": ["Our Clients | Beyond Horizons Legal", "See the businesses and organisations supported by Beyond Horizons across aviation, technology and cross-border matters."],
-  "/singapore-ai-governance": ["Singapore AI Governance Counsel | AI Verify, FEAT & PDPC GenAI — Beyond Horizons", "Singapore-anchored AI governance counsel — IMDA Model Framework, AI Verify, MAS FEAT, PDPC GenAI notifications, and MinLaw/IPOS AI×IP issues. Book a consultation."],
+  "/singapore-ai-governance": ["Singapore AI Governance Lawyer | MAS AI Risk Guidelines", "MAS AI Risk Management Guidelines (Oct 2026), AI Verify, FEAT and PDPC GenAI: AI governance counsel for Singapore FIs and the AI vendors that serve them."],
   "/singapore-alternative-energy-law": ["Singapore Renewable Energy Counsel | Beyond Horizons", "Counsel for electricity imports, solar, hydrogen, battery storage, carbon credits and green project finance in Singapore."],
-  "/singapore-aviation-law": ["Aviation Law Counsel Singapore Hub — CAAS Coordination, Cape Town & Recoveries | Beyond Horizons", "Cross-border aviation finance counsel with a Singapore physical presence — English-law leases, Cape Town/IDERA coordination, aircraft recoveries, incomplete aircraft/engine docs, MRO and vertiports. Available across time zones; developing-markets expertise."],
+  "/singapore-aviation-law": ["Singapore Aviation Law | CAAS, Cape Town & Private Jets", "Singapore aviation law: CAAS rules, Cape Town/IDERA, private and business aviation compliance, AOC checks and aircraft recoveries. HL@beyondhorizons.sg"],
   "/singapore-employment-law": ["Singapore Employment Law Counsel | Workplace Fairness & Exits — Beyond Horizons", "Employer-side employment counsel in Singapore — Workplace Fairness, contracts/policies, investigations, and exits. Book a consultation."],
-  "/singapore-restructuring-insolvency": ["Singapore Restructuring Counsel | Beyond Horizons", "Counsel for restructurings, insolvency risk, workouts, creditor negotiations and cross-border recovery strategies."],
+  "/singapore-restructuring-insolvency": ["Restructuring Lawyer Singapore | Insolvency & Workouts", "Singapore restructuring and insolvency counsel: workouts, schemes, creditor negotiations, lender and borrower positions and cross-border recoveries."],
   "/singapore-robotics-law": ["Singapore Robotics Law Counsel | AV, RaaS, Liability & RLSS — Beyond Horizons", "Singapore robotics and autonomous-systems counsel — path and road AV sandboxes, robot leasing / RaaS, product liability, and RLSS co-funding checks. Book a consultation."],
   "/singapore-space-law": ["Singapore Space Law Counsel | Beyond Horizons", "Singapore-anchored counsel for satellite, launch, space technology and cross-border commercial and regulatory matters."],
-  "/team": ["Our Legal Team | Beyond Horizons Singapore", "Meet the English and Singapore-qualified lawyers supporting Beyond Horizons clients across APAC and international markets."],
+  "/team": ["Our Lawyers | Hui Ling Teo & Team | Beyond Horizons", "Meet Hui Ling Teo and the English- and Singapore-qualified team at Beyond Horizons by Bethel Chambers LLC: aviation finance, cross-border and AI counsel."],
   "/topics": ["Legal Topics & Insights | Beyond Horizons", "Explore legal perspectives on aviation, AI, employment, transactions, energy, technology and cross-border business."],
   "/why-specialist-counsel": ["Why Specialist Counsel | Beyond Horizons", "Learn how focused, senior legal counsel supports complex cross-border, regulated and technology-driven matters."],
   "/work": ["Our Work | Beyond Horizons Legal", "Explore the work, industries and community initiatives of Beyond Horizons by Bethel Chambers LLC."],
@@ -135,7 +135,7 @@ export function createExpertiseHead(id: string) {
 }
 
 const TEAM_SEO: Record<string, readonly [string, string]> = {
-  "hui-ling-teo": ["Hui Ling Teo | Beyond Horizons by Bethel Chambers LLC", "Hui Ling Teo leads Beyond Horizons by Bethel Chambers LLC — dual-qualified Singapore and English law counsel for aviation finance and cross-border corporate matters. Chambers Asia-Pacific Band 3, Aviation: Finance — Singapore."],
+  "hui-ling-teo": ["Hui Ling Teo | Aviation Finance Lawyer | Beyond Horizons", "Hui Ling Teo (Teo Hui Ling) leads Beyond Horizons by Bethel Chambers LLC. Dual-qualified in Singapore and English law. Chambers Band 3, Aviation: Finance."],
   "sonia-motwani": ["Sonia Motwani | Beyond Horizons", "Sonia Motwani is Delivery Lead at Beyond Horizons and a solicitor qualified in England and Wales."],
 };
 
