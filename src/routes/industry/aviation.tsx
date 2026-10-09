@@ -1,12 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import AviationPage, { data } from "@/pages/industry/AviationPage";
-import { createPageHead } from "@/lib/seo";
+import AviationPage from "@/pages/industry/AviationPage";
+import { createStaticPageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/industry/aviation")({
-  head: () => createPageHead({
-    title: data.seo.title,
-    description: data.seo.description,
-    path: "/industry/aviation",
-  }),
+  head: () => createStaticPageHead("/industry/aviation"),
   component: AviationPage,
 });

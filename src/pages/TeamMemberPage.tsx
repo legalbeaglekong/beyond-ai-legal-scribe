@@ -132,6 +132,7 @@ const TeamMemberPage = () => {
             "@context": "https://schema.org",
             "@type": "Person",
             name: member.name,
+            ...(member.name === "Hui Ling Teo" ? { alternateName: "Teo Hui Ling" } : {}),
             jobTitle: language === "zh" ? member.roleZh : member.role,
             description: highlights.join(" "),
             worksFor: {
@@ -182,6 +183,7 @@ const TeamMemberPage = () => {
               {member.name === "Hui Ling Teo" ? (
                 <>
                   <p className="text-sm font-serif text-foreground">Founder, Beyond Horizons by Bethel Chambers LLC</p>
+                  <p className="text-xs text-muted-foreground">Also written as Teo Hui Ling.</p>
                   <p className="text-sm text-foreground mb-2">Dual-qualified — Singapore and English law</p>
                 </>
               ) : (
