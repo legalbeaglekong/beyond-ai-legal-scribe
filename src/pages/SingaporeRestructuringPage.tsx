@@ -1,3 +1,4 @@
+import { Link } from "@/lib/router-compat";
 import PillarPage from "@/components/PillarPage";
 import { FileText, Scale, Shield, Briefcase, Users, Calendar } from "lucide-react";
 
@@ -28,6 +29,13 @@ const SingaporeRestructuringPage = () => (
       { title: "Super-priority financing maturing", summary: "Section 67 IRDA super-priority rescue financing is now a routine feature of large schemes, with creditor and court practice rapidly aligning to global DIP norms." },
       { title: "Cross-border recognition active", summary: "Model Law recognition orders out of Singapore are being used in coordinated parallel proceedings with the US, UK, Hong Kong and offshore jurisdictions." },
     ]}
+    afterUpdates={
+      <section className="py-12">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <p className="text-muted-foreground leading-relaxed">Facility issues often come before a restructuring. For lender-side facilities, security, demands and recovery, see our <Link to="/singapore-lender-finance-counsel" className="text-primary hover:underline">Lender finance counsel</Link> page. If you are a sponsor or individual borrower dealing with facility terms, guarantees, margin calls or waivers, see our <Link to="/singapore-borrower-finance-counsel" className="text-primary hover:underline">Borrower finance counsel</Link> page.</p>
+        </div>
+      </section>
+    }
     faqs={[
       { q: "What is a scheme of arrangement in Singapore?", a: "A scheme is a court-supervised compromise between a company and its creditors (or members), governed by Sections 71–73 IRDA. It binds dissenting creditors within a class once approved by a majority in number representing 75% in value and sanctioned by the court. Singapore's regime offers world-class features including automatic moratorium, super-priority rescue financing and cross-class cram-down." },
       { q: "How does judicial management work?", a: "JM is a court-driven rescue process under IRDA Part 7. A judicial manager (an independent insolvency practitioner) takes over management to rehabilitate the company or achieve a better realisation than winding-up. Interim JM is available for urgent protection." },

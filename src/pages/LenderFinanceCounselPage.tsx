@@ -3,7 +3,7 @@ import { Link } from "@/lib/router-compat";
 import { EMAIL } from "@/config/business";
 
 export const LENDER_TITLE = "English Law & Singapore Lender Finance Counsel | Facilities, Security & Recovery — Beyond Horizons";
-export const LENDER_DESCRIPTION = "English law and Singapore law counsel for banks, private banks and credit funds as lenders — financing governed by Singapore law or English law with cross-border relevance: facilities, security, demands and recovery. Hui Ling Teo is qualified in England and Wales. Beyond Horizons by Bethel Chambers LLC. HL@beyondhorizons.sg.";
+export const LENDER_DESCRIPTION = "English law and Singapore law counsel for banks, private banks and credit funds as lenders — English-law facilities with Singapore obligors, security, demands and recovery. Hui Ling Teo is qualified in England and Wales. Beyond Horizons by Bethel Chambers LLC. HL@beyondhorizons.sg.";
 
 export const lenderFaqs = [
   { question: "When does a lender still need Singapore counsel if the facility is governed by English law?", answer: "Often. An English law facility agreement sets the commercial terms, but it does not replace Singapore rules on taking and registering security over Singapore assets, serving notices on a Singapore obligor, or enforcing in Singapore. Where the borrower, a guarantor, a share charge, or the collateral sits in Singapore, the Singapore law position needs its own check. Beyond Horizons by Bethel Chambers LLC advises on both Singapore law and English law. English law advice is given by Hui Ling Teo, who is qualified in England and Wales. We do not advise on the law of any other country. Email HL@beyondhorizons.sg." },
