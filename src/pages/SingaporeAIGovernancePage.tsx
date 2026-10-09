@@ -1,3 +1,4 @@
+import { Link } from "@/lib/router-compat";
 import PillarPage from "@/components/PillarPage";
 import { Brain, Shield, FileCheck, ScrollText, Building2, Globe } from "lucide-react";
 
@@ -30,7 +31,32 @@ const SingaporeAIGovernancePage = () => (
       { title: "AI Verify Foundation expansion", summary: "AI Verify continues to add testing modules and international interoperability (including alignment with NIST AI RMF and ISO/IEC 42001), strengthening Singapore's position as a global AI assurance hub." },
       { title: "PDPC GenAI Advisory Guidelines (July 2026)", summary: "PDPC’s Advisory Guidelines on Use of Personal Data in Generative AI clarify when organisations should use AI-Specific Notifications if personal data will train or fine-tune GenAI models. General “product improvement” notices are often not enough where consent is required for model development." },
       { title: "MinLaw / IPOS AI × Intellectual Property consultation", summary: "MinLaw and IPOS are consulting on AI and intellectual property issues, including training-data / computational data analysis themes and AI-assisted inventorship, with feedback open through 22 October 2026. Outcomes may refine practice, so treat current statutes and the published consultation papers as the source of truth. AI Code Counsel can help map training-data and inventorship risk while the consultation is open; close dates can move." },
+      { title: "MAS AI Risk Management Guidelines (October 2026)", summary: "MAS issued Guidelines on AI Risk Management on 7 October 2026. They take effect on 7 October 2027, with fuller life-cycle controls expected by 7 October 2028. Financial institutions stay accountable for third-party AI.", link: { label: "What AI vendors should prepare →", href: "#mas-ai-risk-management-guidelines" } },
     ]}
+    afterUpdates={
+      <section id="mas-ai-risk-management-guidelines" className="py-20 bg-secondary/20 scroll-mt-24">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">MAS AI Risk Management Guidelines: What AI Vendors Selling to Banks Should Prepare</h2>
+          <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <p>On 7 October 2026, the Monetary Authority of Singapore (MAS) issued its Guidelines on Artificial Intelligence (AI) Risk Management. They apply to all MAS-regulated financial institutions (FIs) and to all forms of AI. That covers traditional models, generative AI and, MAS signals, increasingly autonomous &ldquo;agentic&rdquo; systems. MAS plans to consult on more agentic AI guidance in 2027.</p>
+            <p><strong className="text-foreground">Timeline.</strong> The Guidelines take effect on 7 October 2027. By then, FIs are expected to have board and senior management oversight in place, an inventory of their AI use, and a way to assess the risk materiality of each use case. By 7 October 2028, they should apply proportionate life-cycle controls, including data governance, testing, human oversight, cybersecurity, monitoring and change management.</p>
+            <p><strong className="text-foreground">Why this matters if you sell to banks.</strong> MAS says FIs &ldquo;remain accountable for AI used in the services they deliver&rdquo;, including AI built, operated or provided by third parties. FIs are expected to get enough assurance from providers and check that a tool fits its intended use. If risks cannot be brought within appetite, they should consider limiting, suspending or replacing the service. In practice, we expect that pressure to flow down to fintechs, SaaS platforms and AI vendors through procurement and contract terms.</p>
+            <p><strong className="text-foreground">Terms banks and insurers are likely to push for</strong> (our view, not MAS wording):</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Disclosure of where AI sits in your product, including embedded third-party models, so the FI can log it in its inventory</li>
+              <li>Documentation on transparency, explainability, training data and known limitations</li>
+              <li>Testing evidence, and the right to commission or receive independent assessments</li>
+              <li>Notice of material model changes, incidents and unexpected behaviour</li>
+              <li>Human-override, contingency and exit or suspension rights, with transition help</li>
+              <li>Audit, information and data-handling rights consistent with existing outsourcing expectations</li>
+            </ul>
+            <p><strong className="text-foreground">What to do now.</strong> Map your AI components and your upstream model providers. Prepare an assurance pack that a bank&rsquo;s risk team can review. Check your standard terms before the first bank redline arrives. Expectations will vary by institution and use case, so treat this as a starting point, not a checklist.</p>
+            <p>We can help you review <Link to="/industry/ai-code-counsel" className="text-primary hover:underline">vendor terms</Link>, build an assurance pack, or set up an FI-side AI governance programme. Email <a href="mailto:HL@beyondhorizons.sg" className="text-primary hover:underline"><strong>HL@beyondhorizons.sg</strong></a>.</p>
+            <p className="text-sm italic">This section is general information, not legal advice. Outcomes depend on your facts and on how each institution applies the Guidelines.</p>
+          </div>
+        </div>
+      </section>
+    }
     guide={{
       id: "ai-verify-guide",
       eyebrow: "How-to · Compliance Leaders & CTOs",
@@ -89,6 +115,11 @@ const SingaporeAIGovernancePage = () => (
       { q: "What does counsel add beyond self-reading AI Verify / FEAT materials?", a: "Toolkits and principles are public; counsel helps turn outputs into policies, board reporting, vendor clauses, and regulated-sector alignment under privilege. Beyond Horizons by Bethel Chambers LLC. Soft next step: schedule a consultation, or instruct via AI Code Counsel: https://beyondhorizons.sg/industry/ai-code-counsel" },
       { q: "How should Singapore-anchored boards think about cross-border AI risk?", a: "SG-anchored groups often face parallel Singapore expectations and extraterritorial regimes (for example EU AI Act exposure where systems affect the EU). Map use cases early; do not assume “Singapore-only” is enough. Beyond Horizons by Bethel Chambers LLC. Soft next step: schedule a consultation." },
       { q: "When should we instruct via the AI Code Counsel page?", a: "When you are ready to appoint counsel for GenAI notifications, governance programmes, or EU readiness — not only educational reading. Soft CTA: https://beyondhorizons.sg/industry/ai-code-counsel · Hui Ling Teo: https://beyondhorizons.sg/team/hui-ling-teo · Beyond Horizons by Bethel Chambers LLC." },
+      { q: "Who do the MAS AI Risk Management Guidelines apply to?", a: "All financial institutions regulated by MAS, and all forms of AI they use, including AI developed or provided by third parties. MAS expects each FI to apply the Guidelines in proportion to the nature and scale of its AI use and the risk materiality involved." },
+      { q: "When do the MAS AI Risk Management Guidelines take effect?", a: "They take effect on 7 October 2027. FIs should meet the governance, inventory and risk-assessment expectations from that date, and the fuller life-cycle controls, such as testing and monitoring, by 7 October 2028." },
+      { q: "Are AI vendors and fintechs directly regulated by the Guidelines?", a: "The Guidelines are addressed to FIs, not vendors. But MAS says FIs remain accountable for third-party AI and should obtain sufficient assurance from providers. Vendors selling into banks and insurers should therefore expect more due diligence and tighter contract terms." },
+      { q: "What contract terms should AI vendors expect from banks?", a: "Requirements will vary by institution and use case. Likely asks include disclosure of AI components, documentation and testing evidence, notice of material model changes and incidents, audit and information rights, and contingency, suspension or exit rights. It is sensible to review your standard terms early." },
+      { q: "Do the Guidelines cover agentic AI?", a: "MAS says the Guidelines apply to all forms of AI. FIs should review their controls as agentic systems that act autonomously and use tools become more common. MAS intends to consult the industry in 2027 on whether more agentic AI guidance is needed." },
     ]}
     relatedKeywords={["ai", "artificial intelligence", "imda", "mas", "feat", "veritas", "model ai", "ai governance", "generative", "llm"]}
     relatedHeading="Related Insights — AI Governance & Risk"

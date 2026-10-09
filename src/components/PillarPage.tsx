@@ -33,6 +33,7 @@ export interface PillarService {
 export interface PillarUpdate {
   title: string;
   summary: string;
+  link?: { label: string; href: string };
 }
 
 export interface PillarFaq {
@@ -88,6 +89,7 @@ export interface PillarPageProps {
   rankings?: { items: string[]; notes?: string[] };
   lastUpdatedISO: string;       // e.g. "2026-06-09"
   lastUpdatedLabel: string;     // e.g. "June 2026"
+  afterUpdates?: ReactNode;
   editorial?: {
     entity: string;
     intro: ReactNode;
@@ -126,6 +128,7 @@ const PillarPage = ({
   lastUpdatedISO,
   lastUpdatedLabel,
   editorial,
+  afterUpdates,
 }: PillarPageProps) => {
   const canonical = `${SITE}/${slug}`;
 
@@ -295,6 +298,7 @@ const PillarPage = ({
                     <CardContent className="p-6">
                       <h3 className="font-serif text-lg text-foreground mb-3">{n.title}</h3>
                       <p className="text-muted-foreground text-sm leading-relaxed">{n.summary}</p>
+                      {n.link && <a href={n.link.href} className="inline-block mt-4 text-sm text-primary hover:underline">{n.link.label}</a>}
                     </CardContent>
                   </Card>
                 ))}
@@ -302,6 +306,8 @@ const PillarPage = ({
             </div>
           </section>
         )}
+
+        {afterUpdates}
 
         {guide && (
           <section id={guide.id} className="py-20 scroll-mt-24">
