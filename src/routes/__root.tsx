@@ -53,8 +53,9 @@ const ORGANIZATION_JSONLD = `{
     "url": "https://bethelchambers.com/"
   },
   "founder": {
-    "@type": "Person",
+"@type": "Person",
     "name": "Hui Ling Teo",
+    "alternateName": "Teo Hui Ling",
     "jobTitle": "Founder",
     "worksFor": "Beyond Horizons by Bethel Chambers LLC",
     "email": "HL@beyondhorizons.sg",
@@ -117,7 +118,8 @@ const WEBSITE_JSONLD = `{
 const FOUNDER_JSONLD = `{
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Hui Ling Teo",
+"name": "Hui Ling Teo",
+  "alternateName": "Teo Hui Ling",
   "jobTitle": "Founder",
   "description": "Dual-qualified lawyer — English solicitor and Singapore advocate & solicitor. Founder of Beyond Horizons by Bethel Chambers LLC.",
   "worksFor": {
