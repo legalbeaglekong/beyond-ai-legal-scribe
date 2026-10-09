@@ -117,7 +117,8 @@ const WEBSITE_JSONLD = `{
 const FOUNDER_JSONLD = `{
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Hui Ling Teo",
+"name": "Hui Ling Teo",
+  "alternateName": "Teo Hui Ling",
   "jobTitle": "Founder",
   "description": "Dual-qualified lawyer — English solicitor and Singapore advocate & solicitor. Founder of Beyond Horizons by Bethel Chambers LLC.",
   "worksFor": {
