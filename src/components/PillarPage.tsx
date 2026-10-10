@@ -18,6 +18,14 @@ import {
 } from "lucide-react";
 import RankingsFooter from "@/components/RankingsFooter";
 import RelatedInsights from "@/components/RelatedInsights";
+
+const renderFaqAnswer = (a: any) => {
+  if (typeof a !== "string" || !a.includes("<a href=")) return a;
+  return a.split(/(<a href="[^"]+">[^<]+<\/a>)/).map((part, i) => {
+    const m = part.match(/^<a href="([^"]+)">([^<]+)<\/a>$/);
+    return m ? <Link key={i} to={m[1] as string} className="text-primary underline underline-offset-2">{m[2]}</Link> : part;
+  });
+};
 import type { ReactNode } from "react";
 
 const BOOKING_URL =
@@ -346,7 +354,7 @@ const PillarPage = ({
               {faqs.map((f, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className={editorial ? "group" : undefined}>
                   <AccordionTrigger className="text-left font-serif text-lg">{f.q}</AccordionTrigger>
-                  <AccordionContent {...(editorial ? { forceMount: true as const } : {})} className={editorial ? "text-muted-foreground leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground leading-relaxed"}>{f.a}</AccordionContent>
+                  <AccordionContent {...(editorial ? { forceMount: true as const } : {})} className={editorial ? "text-muted-foreground leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground leading-relaxed"}>{renderFaqAnswer(f.a)}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
