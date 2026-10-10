@@ -18,6 +18,14 @@ import {
 } from "lucide-react";
 import RankingsFooter from "@/components/RankingsFooter";
 import RelatedInsights from "@/components/RelatedInsights";
+
+const renderFaqAnswer = (a: any) => {
+  if (typeof a !== "string" || !a.includes("<a href=")) return a;
+  return a.split(/(<a href="[^"]+">[^<]+<\/a>)/).map((part, i) => {
+    const m = part.match(/^<a href="([^"]+)">([^<]+)<\/a>$/);
+    return m ? <Link key={i} to={m[1]} className="text-primary underline underline-offset-2">{m[2]}</Link> : part;
+  });
+};
 import type { ReactNode } from "react";
 
 const BOOKING_URL =
