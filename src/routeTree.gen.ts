@@ -29,6 +29,7 @@ import { Route as SingaporeLenderFinanceCounselRouteImport } from './routes/sing
 import { Route as SingaporeManufacturingSupplyAgreementsRouteImport } from './routes/singapore-manufacturing-supply-agreements'
 import { Route as SingaporePetLawRouteImport } from './routes/singapore-pet-law'
 import { Route as SingaporeRestructuringInsolvencyRouteImport } from './routes/singapore-restructuring-insolvency'
+import { Route as SingaporeRetrenchmentLawRouteImport } from './routes/singapore-retrenchment-law'
 import { Route as SingaporeRoboticsLawRouteImport } from './routes/singapore-robotics-law'
 import { Route as SingaporeSpaceLawRouteImport } from './routes/singapore-space-law'
 import { Route as TopicsRouteImport } from './routes/topics'
@@ -156,6 +157,12 @@ const SingaporeRestructuringInsolvencyRoute =
   SingaporeRestructuringInsolvencyRouteImport.update({
     id: '/singapore-restructuring-insolvency',
     path: '/singapore-restructuring-insolvency',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SingaporeRetrenchmentLawRoute =
+  SingaporeRetrenchmentLawRouteImport.update({
+    id: '/singapore-retrenchment-law',
+    path: '/singapore-retrenchment-law',
     getParentRoute: () => rootRouteImport,
   } as any)
 const SingaporeRoboticsLawRoute = SingaporeRoboticsLawRouteImport.update({
@@ -298,6 +305,7 @@ export interface FileRoutesByFullPath {
   '/singapore-manufacturing-supply-agreements': typeof SingaporeManufacturingSupplyAgreementsRoute
   '/singapore-pet-law': typeof SingaporePetLawRoute
   '/singapore-restructuring-insolvency': typeof SingaporeRestructuringInsolvencyRoute
+  '/singapore-retrenchment-law': typeof SingaporeRetrenchmentLawRoute
   '/singapore-robotics-law': typeof SingaporeRoboticsLawRoute
   '/singapore-space-law': typeof SingaporeSpaceLawRoute
   '/topics': typeof TopicsRoute
@@ -343,6 +351,7 @@ export interface FileRoutesByTo {
   '/singapore-manufacturing-supply-agreements': typeof SingaporeManufacturingSupplyAgreementsRoute
   '/singapore-pet-law': typeof SingaporePetLawRoute
   '/singapore-restructuring-insolvency': typeof SingaporeRestructuringInsolvencyRoute
+  '/singapore-retrenchment-law': typeof SingaporeRetrenchmentLawRoute
   '/singapore-robotics-law': typeof SingaporeRoboticsLawRoute
   '/singapore-space-law': typeof SingaporeSpaceLawRoute
   '/topics': typeof TopicsRoute
@@ -389,6 +398,7 @@ export interface FileRoutesById {
   '/singapore-manufacturing-supply-agreements': typeof SingaporeManufacturingSupplyAgreementsRoute
   '/singapore-pet-law': typeof SingaporePetLawRoute
   '/singapore-restructuring-insolvency': typeof SingaporeRestructuringInsolvencyRoute
+  '/singapore-retrenchment-law': typeof SingaporeRetrenchmentLawRoute
   '/singapore-robotics-law': typeof SingaporeRoboticsLawRoute
   '/singapore-space-law': typeof SingaporeSpaceLawRoute
   '/topics': typeof TopicsRoute
@@ -436,6 +446,7 @@ export interface FileRouteTypes {
     | '/singapore-manufacturing-supply-agreements'
     | '/singapore-pet-law'
     | '/singapore-restructuring-insolvency'
+    | '/singapore-retrenchment-law'
     | '/singapore-robotics-law'
     | '/singapore-space-law'
     | '/topics'
@@ -481,6 +492,7 @@ export interface FileRouteTypes {
     | '/singapore-manufacturing-supply-agreements'
     | '/singapore-pet-law'
     | '/singapore-restructuring-insolvency'
+    | '/singapore-retrenchment-law'
     | '/singapore-robotics-law'
     | '/singapore-space-law'
     | '/topics'
@@ -526,6 +538,7 @@ export interface FileRouteTypes {
     | '/singapore-manufacturing-supply-agreements'
     | '/singapore-pet-law'
     | '/singapore-restructuring-insolvency'
+    | '/singapore-retrenchment-law'
     | '/singapore-robotics-law'
     | '/singapore-space-law'
     | '/topics'
@@ -572,6 +585,7 @@ export interface RootRouteChildren {
   SingaporeManufacturingSupplyAgreementsRoute: typeof SingaporeManufacturingSupplyAgreementsRoute
   SingaporePetLawRoute: typeof SingaporePetLawRoute
   SingaporeRestructuringInsolvencyRoute: typeof SingaporeRestructuringInsolvencyRoute
+  SingaporeRetrenchmentLawRoute: typeof SingaporeRetrenchmentLawRoute
   SingaporeRoboticsLawRoute: typeof SingaporeRoboticsLawRoute
   SingaporeSpaceLawRoute: typeof SingaporeSpaceLawRoute
   TopicsRoute: typeof TopicsRoute
@@ -737,6 +751,13 @@ declare module '@tanstack/react-router' {
       path: '/singapore-restructuring-insolvency'
       fullPath: '/singapore-restructuring-insolvency'
       preLoaderRoute: typeof SingaporeRestructuringInsolvencyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/singapore-retrenchment-law': {
+      id: '/singapore-retrenchment-law'
+      path: '/singapore-retrenchment-law'
+      fullPath: '/singapore-retrenchment-law'
+      preLoaderRoute: typeof SingaporeRetrenchmentLawRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/singapore-robotics-law': {
@@ -925,6 +946,7 @@ const rootRouteChildren: RootRouteChildren = {
     SingaporeManufacturingSupplyAgreementsRoute,
   SingaporePetLawRoute: SingaporePetLawRoute,
   SingaporeRestructuringInsolvencyRoute: SingaporeRestructuringInsolvencyRoute,
+  SingaporeRetrenchmentLawRoute: SingaporeRetrenchmentLawRoute,
   SingaporeRoboticsLawRoute: SingaporeRoboticsLawRoute,
   SingaporeSpaceLawRoute: SingaporeSpaceLawRoute,
   TopicsRoute: TopicsRoute,
