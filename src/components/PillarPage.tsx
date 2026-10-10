@@ -346,7 +346,7 @@ const PillarPage = ({
               {faqs.map((f, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className={editorial ? "group" : undefined}>
                   <AccordionTrigger className="text-left font-serif text-lg">{f.q}</AccordionTrigger>
-                  <AccordionContent {...(editorial ? { forceMount: true as const } : {})} className={editorial ? "text-muted-foreground leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground leading-relaxed"}>{f.a}</AccordionContent>
+                  <AccordionContent {...(editorial ? { forceMount: true as const } : {})} className={editorial ? "text-muted-foreground leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground leading-relaxed"}>{renderFaqAnswer(f.a)}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
