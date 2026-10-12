@@ -16,9 +16,6 @@ const GlobalPartners = () => {
   ];
 
   const regions = [
-    { name: t("globalPartners.europe"), description: t("globalPartners.europeDesc") },
-    { name: t("globalPartners.northAmerica"), description: t("globalPartners.northAmericaDesc") },
-    { name: t("globalPartners.asiaPacific"), description: t("globalPartners.asiaPacificDesc") },
     { name: t("globalPartners.middleEast"), description: t("globalPartners.middleEastDesc") },
   ];
 

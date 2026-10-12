@@ -32,7 +32,6 @@ const teamData: Record<string, {
     experienceZh: "14年经验",
     qualifications: [
       "Qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore",
-      "Dual English & Singapore Law Qualification",
       "ESG Investing Certification",
       "Green and Sustainable Finance Certification",
       "Blockchain Technology Certification",
