@@ -16,7 +16,7 @@ const WhyChooseUsDetail = () => {
       title: "Beyond Horizons: Digital-First Legal Services",
       gradient: "from-blue-600 to-purple-600",
       content: {
-        intro: "Beyond Horizons Legal stands at the forefront of digital-first legal services in Singapore and beyond. Founded in 2024 by Hui Ling Teo, our firm was built from the ground up to leverage modern technology deeply integrated into every aspect of legal practice.",
+        intro: "Beyond Horizons by Bethel Chambers LLC stands at the forefront of digital-first legal services in Singapore and beyond. Founded in 2024 by Hui Ling Teo, our firm was built from the ground up to leverage modern technology deeply integrated into every aspect of legal practice.",
         highlights: [
           "Founded in 2024 with technology integration as core architecture",
           "Workflows designed specifically for digital optimization",
@@ -32,7 +32,7 @@ const WhyChooseUsDetail = () => {
       title: "Cost Efficiency and Client Focus",
       gradient: "from-green-600 to-blue-600",
       content: {
-        intro: "At Beyond Horizons Legal, we understand that clients expect more than just legal advice — they want value, transparency, and speed. By utilizing efficient modern workflows, we keep overhead costs low.",
+        intro: "At Beyond Horizons by Bethel Chambers LLC, we understand that clients expect more than just legal advice — they want value, transparency, and speed. By utilizing efficient modern workflows, we keep overhead costs low.",
         highlights: [
           "Competitive and transparent pricing structure",
           "Lean operations through efficient digital workflows",
@@ -48,7 +48,7 @@ const WhyChooseUsDetail = () => {
       title: "Global Collaboration and Cross-Border Expertise",
       gradient: "from-purple-600 to-pink-600",
       content: {
-        intro: "Beyond Horizons Legal prides itself on its strong global network and cross-border capabilities. Where a matter needs advice on other laws, we coordinate with foreign counsel.",
+        intro: "Beyond Horizons by Bethel Chambers LLC prides itself on its strong global network and cross-border capabilities. Where a matter needs advice on other laws, we coordinate with foreign counsel.",
         highlights: [
           "Coordination with foreign counsel where needed",
           "Dual qualification in English and Singapore law",
@@ -64,7 +64,7 @@ const WhyChooseUsDetail = () => {
       title: "Commitment to Confidentiality and Legal Privilege",
       gradient: "from-orange-600 to-red-600",
       content: {
-        intro: "We recognize that confidentiality and legal privilege are non-negotiable in legal services. Beyond Horizons Legal has embedded rigorous data privacy and security protocols within its digital workflows to protect client information at every stage.",
+        intro: "We recognize that confidentiality and legal privilege are non-negotiable in legal services. Beyond Horizons by Bethel Chambers LLC has embedded rigorous data privacy and security protocols within its digital workflows to protect client information at every stage.",
         highlights: [
           "Secure data processing in controlled environments",
           "Lawyer-controlled data handling protocols",
@@ -165,7 +165,7 @@ const WhyChooseUsDetail = () => {
               <Card className="inline-block border-0 bg-gradient-to-br from-primary/5 to-primary/10 backdrop-blur-xs">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-4 text-foreground">Ready to Experience the Difference?</h3>
-                  <p className="text-muted-foreground mb-6">Schedule a consultation to discuss how Beyond Horizons Legal can serve your needs.</p>
+                  <p className="text-muted-foreground mb-6">Schedule a consultation to discuss how Beyond Horizons by Bethel Chambers LLC can serve your needs.</p>
                   <Button 
                     className="button-pulse bg-foreground text-background hover:bg-foreground/90"
                     onClick={() => navigate("/#contact")}
