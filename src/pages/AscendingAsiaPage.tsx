@@ -7,7 +7,6 @@ import EbookViewer from "@/components/ebook/EbookViewer";
 import { TranslationProvider } from "@/contexts/TranslationContext";
 import { SITE_URL, BRAND_FULL, WHATSAPP_URL } from "@/config/business";
 import { Button } from "@/components/ui/button";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";

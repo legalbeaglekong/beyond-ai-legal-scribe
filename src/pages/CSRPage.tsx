@@ -64,7 +64,7 @@ const CSRPage = () => {
                   Founding the Asia Sustainable Aviation Fuel Association
                 </h2>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  Hui Ling Teo, Head of Corporate &amp; Finance at Bethel Chambers LLC and practice lead of Beyond Horizons, founded the <strong>Asia Sustainable Aviation Fuel Association (ASAFA)</strong> — Asia's first independent non-profit dedicated to advancing the adoption and integration of sustainable aviation fuel across the region.
+                  Hui Ling Teo, Founder of Beyond Horizons by Bethel Chambers LLC, was Founder &amp; Director of Governance of the <strong>Asia Sustainable Aviation Fuel Association (ASAFA)</strong>, Aug 2024–Apr 2025 (past role), a non-profit focused on sustainable aviation fuel in the region.
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   ASAFA works to accelerate aviation decarbonisation in Asia by promoting SAF adoption, advancing robust policies and market integration, and ensuring a diverse SAF supply chain. The association brings together airlines, fuel producers, airports, regulators, and industry stakeholders to drive collective action on one of aviation's most critical sustainability challenges.

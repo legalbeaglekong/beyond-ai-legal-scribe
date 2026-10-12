@@ -21,7 +21,7 @@ const AboutPage = () => {
     { icon: BookOpen, title: "Bloomberg Law Author", description: "Strategic Business Advisory & ESG Implementation", highlight: "Thought Leadership" },
   ];
 
-  const certifications = ["ESG Investing Certification", "Green and Sustainable Finance", "Blockchain Technology", "Dual English & Singapore Law Qualification"];
+  const certifications = ["ESG Investing Certification", "Green and Sustainable Finance", "Blockchain Technology"];
 
   return (
     <>
