@@ -150,46 +150,6 @@ const WhySpecialistCounselPage = () => {
           </div>
         </section>
 
-        {/* Comparison Sections */}
-        {comparisonSections.map((section, sIdx) => (
-          <section key={sIdx} className={`section-padding ${sIdx % 2 === 0 ? "bg-secondary/20" : "bg-background"}`}>
-            <div className="max-w-5xl mx-auto container-padding fade-in">
-              <div className="text-center mb-8">
-                <div className="teal-line mx-auto mb-6" />
-                <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4">
-                  {section.heading}
-                </h2>
-                <p className="text-sm text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                  {section.description}
-                </p>
-              </div>
-              <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse">
-                  <thead>
-                    <tr className="border-b border-border/50">
-                      <th className="py-4 px-4 text-xs text-muted-foreground font-sans uppercase tracking-wider w-1/4">Consideration</th>
-                      <th className="py-4 px-4 text-xs text-muted-foreground font-sans uppercase tracking-wider w-[37.5%]">{section.otherLabel}</th>
-                      <th className="py-4 px-4 text-xs text-accent font-sans uppercase tracking-wider w-[37.5%]">Beyond Horizons</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {section.rows.map((row, i) => (
-                      <tr key={i} className="border-b border-border/20">
-                        <td className="py-4 px-4 text-sm text-foreground font-sans">{row.feature}</td>
-                        <td className="py-4 px-4 text-xs text-muted-foreground">{row.other}</td>
-                        <td className="py-4 px-4 text-xs text-foreground">{row.bh}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="text-xs text-muted-foreground mt-6 text-center italic">
-                Comparison reflects general service model characteristics. Individual firms and teams vary. Every engagement is unique.
-              </p>
-            </div>
-          </section>
-        ))}
-
         {/* Practice Areas */}
         <section className="section-padding bg-background">
           <div className="max-w-4xl mx-auto container-padding text-center fade-in">
