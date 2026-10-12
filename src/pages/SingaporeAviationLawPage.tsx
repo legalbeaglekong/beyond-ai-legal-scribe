@@ -2,11 +2,12 @@ import { AVIATION_RANKINGS, AVIATION_RANKINGS_NOTES } from "@/config/business";
 import PillarPage from "@/components/PillarPage";
 import { Plane, FileText, Scale, Briefcase, Shield, Calendar } from "lucide-react";
 import { Link } from "@/lib/router-compat";
+import type { ReactNode } from "react";
 
 const h3 = "font-serif text-xl text-foreground mt-8 mb-3";
 const p = "text-muted-foreground leading-relaxed";
 const a = "text-primary underline underline-offset-2";
-const Ext = ({ href, children }: { href: string; children: React.ReactNode }) => <a href={href} target="_blank" rel="noopener" className={a}>{children}</a>;
+const Ext = ({ href, children }: { href: string; children: ReactNode }) => <a href={href} target="_blank" rel="noopener" className={a}>{children}</a>;
 
 const privateAviationBody = (
   <>
