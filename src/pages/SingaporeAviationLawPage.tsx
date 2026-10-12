@@ -36,7 +36,7 @@ const privateAviationBody = (
       <li>record keeping, and who decides when to file a report with STRO.</li>
     </ul>
     <p className={p}><strong className="text-foreground">We can help private charter operators put in place KYC procedures, IPPC and a charter-specific risk framework.</strong> This is legal support; we do not issue licences, certifications or regulatory approvals. Write to <strong className="text-foreground"><a href="mailto:HL@beyondhorizons.sg" className={a}>HL@beyondhorizons.sg</a></strong>.</p>
-    <p className={p + " text-sm"}><em>General information on Singapore law as at October 2026, not legal advice. Regulatory requirements change; check CAAS, the Singapore Tourism Board, the Singapore Police Force's STRO pages and the official statutes for the current position. Beyond Horizons by Bethel Chambers LLC is a Singapore law practice group, not an English law firm; English law input is given through Hui Ling Teo, who is qualified as a solicitor in England and Wales, and advice on other laws is obtained through foreign counsel. Beyond Horizons by Bethel Chambers LLC.</em></p>
+    <p className={p + " text-sm"}><em>General information on Singapore law as at October 2026, not legal advice. Regulatory requirements change; check CAAS, the Singapore Tourism Board, the Singapore Police Force's STRO pages and the official statutes for the current position. Beyond Horizons by Bethel Chambers LLC is a Singapore law practice group, not an English law firm; English law input is given through Hui Ling Teo, who is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore, and advice on other laws is obtained through foreign counsel. Beyond Horizons by Bethel Chambers LLC.</em></p>
   </>
 );
 
