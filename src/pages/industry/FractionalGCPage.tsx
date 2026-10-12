@@ -142,7 +142,7 @@ export const data: IndustryPageData = {
         title: "3. Disagreements with customers and employees — before proceedings",
         bullets: [
           "Complaints, terminations and grievances while they can still be settled",
-          "If a matter goes to proceedings, Bethel Chambers’ disputes team can take it through",
+          "If a matter goes to proceedings, the disputes team at Bethel Chambers LLC can take it through",
           "Documents written properly the first time",
         ],
       },

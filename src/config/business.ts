@@ -40,8 +40,8 @@ export const INSIGHTS_URL = "https://www.insights.beyondhorizons.sg/";
 // Verified aviation rankings set — exact wording; do not add variants.
 export const AVIATION_RANKINGS = [
   "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
-  "Chambers Asia-Pacific — Band 4, Aviation: Finance — Asia-Pacific Region",
-  "Chambers Global Market Leaders — Band 3, Asset Finance",
+  "Chambers Asia-Pacific 2026 — Band 4, Aviation: Finance — Asia-Pacific Region",
+  "Chambers Global 2026 — Global Market Leaders, Band 3, Asset Finance",
   "Global Market Leader Asset Finance Lawyer (Chambers)",
   "Legal 500 Next Generation Partner",
   "ALB Law Firm to Watch 2026",

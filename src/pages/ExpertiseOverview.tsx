@@ -10,8 +10,8 @@ const ExpertiseOverview = () => {
   const navigate = useNavigate();
   
   const articles = [
-    { id: "ma-cross-border", title: "Cross-Border M&A Counsel — US, EU, UK, China & APAC" },
-    { id: "tech-general-counsel", title: "Experienced General Counsel for Tech Companies in US, EU, UK, China & APAC" },
+    { id: "ma-cross-border", title: "Cross-Border M&A Counsel — Singapore-anchored" },
+    { id: "tech-general-counsel", title: "General Counsel Support for Tech Companies — Singapore-anchored" },
     { id: "commercial-contracts", title: "Top Legal Experts in Commercial Contracts for Global Businesses" },
     { id: "corporate-transactions", title: "Corporate Law Specialists for Cross-Border Transactions" },
     { id: "regulatory-compliance", title: "Expert Legal Advisors for Regulatory Compliance in Various Industries" },

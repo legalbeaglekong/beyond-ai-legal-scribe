@@ -23,7 +23,7 @@ const SingaporeAIGovernancePage = () => (
       { icon: Shield, title: "AI Risk Mitigation", desc: "Operational controls, model documentation, red-teaming protocols, incident response playbooks, and AI risk dashboards for senior management and audit committees." },
       { icon: Building2, title: "MAS FEAT & Veritas", desc: "Implementation of FEAT principles and Veritas methodologies for AI use cases in banking, asset management, insurance and payments — coordinated with home-jurisdiction regulators." },
       { icon: Brain, title: "Generative AI & Foundation Models", desc: "Acceptable use policies, model and vendor due diligence, training-data lawfulness and AI-Specific Notifications / consent design under PDPC guidance, output IP and confidentiality, and deepfake response plans." },
-      { icon: Globe, title: "EU AI Act & Global Bridging", desc: "Mapping Singapore programmes onto EU AI Act obligations, US NIST AI RMF and emerging Asia-Pacific frameworks — risk classification, conformity assessments, transparency and post-market monitoring." },
+      { icon: Globe, title: "EU AI Act & Global Bridging", desc: "Aligning Singapore programmes with international standards such as ISO/IEC 42001, with foreign counsel coordinated where foreign rules apply." },
     ]}
     updates={[
       { title: "Generative AI Model Governance Framework", summary: "IMDA and the AI Verify Foundation's framework for generative AI sets out nine dimensions — from accountability and data to incident reporting — that Singapore deployers and developers are expected to operationalise." },
@@ -92,7 +92,7 @@ const SingaporeAIGovernancePage = () => (
           body: "Deploy ongoing monitoring for model drift, performance, bias and abuse. Define AI incident categories, escalation thresholds and notification timelines (including any cross-border regulator obligations). Equip the board and audit committee with a recurring AI risk dashboard covering inventory, tier mix, AI Verify status, open issues and incidents.",
         },
         {
-          title: "8. Bridge to the EU AI Act, NIST AI RMF and ISO/IEC 42001",
+          title: "8. Coordinate foreign-law questions with foreign counsel",
           body: "For Singapore companies placing AI on the EU market or whose AI output is used in the EU, map your Model Framework and AI Verify evidence onto EU AI Act risk classes, conformity assessments, transparency obligations and post-market monitoring. Use the same control set to satisfy the US NIST AI RMF and ISO/IEC 42001 — one programme, multiple jurisdictions.",
         },
       ],

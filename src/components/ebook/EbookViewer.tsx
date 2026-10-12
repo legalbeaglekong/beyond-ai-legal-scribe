@@ -278,7 +278,7 @@ const EbookViewer = () => {
           <ContentPage pageNumber={5}>
             <h1 className="ebook-h1">1. Market Entry & Structure</h1>
             <p className="ebook-body">
-              Singapore remains the premier jurisdiction for AAM headquarters due to its "open sky, open capital" 
+              Singapore is a frequently considered jurisdiction for AAM headquarters due to its "open sky, open capital" 
               policy. However, the corporate structure must be robust enough to handle regional liabilities.
             </p>
 
@@ -570,7 +570,7 @@ const EbookViewer = () => {
               distinct from traditional aviation coverage.
             </p>
             <p className="ebook-body">
-              <strong>The Singapore Advantage:</strong> As the leading insurance hub in Asia, Singapore hosts 
+              <strong>The Singapore Advantage:</strong> As an established insurance hub, Singapore hosts 
               a high concentration of global brokerages and Lloyd's of London syndicates. This ecosystem 
               provides AAM operators with direct access to underwriters capable of pricing novel aerial risks.
             </p>

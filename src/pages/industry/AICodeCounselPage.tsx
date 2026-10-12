@@ -8,7 +8,7 @@ export const data: IndustryPageData = {
     description: "AI governance counsel for Singapore operators — PDPC GenAI notifications, IMDA/FEAT programmes, EU AI Act readiness, and AI×IP issues. Book a consultation.",
   },
   hero: {
-    title: "AI Code Counsel Singapore — Governance, PDPC GenAI & EU AI Act Readiness",
+    title: "AI Code Counsel Singapore — Governance and PDPC GenAI",
     subtitle: "AI Code Counsel turns regulatory expectations into operational frameworks for GC, DPO, product, CTO and board teams — policies, inventories, notifications, contracts, controls and reporting rather than abstract memos. Schedule a consultation when you need privileged support to put the programme into practice.",
     badges: ["AI Governance Frameworks", "Singapore Regulatory Aligned", "EU AI Act Readiness"],
   },

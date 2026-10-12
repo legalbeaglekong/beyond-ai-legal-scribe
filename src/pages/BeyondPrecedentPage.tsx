@@ -11,7 +11,7 @@ const REUTERS_URL = "https://www.reuters.com/legal/transactional/these-law-stude
 const SSRN_URL = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6525800";
 
 export const beyondPrecedentFaqs = [
-  { question: "What is Beyond Precedent?", answer: "Beyond Precedent is Beyond Horizons’ educational drafting challenge — best understood as a non-contentious moot court for the AI era. It was initially envisioned in 2023 as vibe drafting — drafting with AI the way vibe coding uses AI for code. In each session, two law students from any country draft an agreement or legal document using ten prompts on free AI tools, then revise with a short edit log. Like mooting, it is supervised and scored; instead of advocacy, it tests judgment over AI-assisted drafting. The firm uses the programme to explore how talent develops and how legal services should be designed when generative AI is in the first draft." },
+  { question: "What is Beyond Precedent?", answer: "Beyond Precedent is Beyond Horizons’ educational drafting challenge — best understood as a supervised drafting challenge for the AI era. It was initially envisioned in 2023 as vibe drafting — drafting with AI the way vibe coding uses AI for code. In each session, two law students from any country draft an agreement or legal document using ten prompts on free AI tools, then revise with a short edit log. Like mooting, it is supervised and scored; instead of advocacy, it tests judgment over AI-assisted drafting. The firm uses the programme to explore how talent develops and how legal services should be designed when generative AI is in the first draft." },
   { question: "Who can take part?", answer: "Law students from any nation may be invited into a session. Participation is by selection for each cohort; this page describes the concept — it is not an open application portal unless a live apply form is added later." },
   { question: "What do the ten prompts and free AI tools mean in practice?", answer: "Each pair works from a fixed set of ten drafting prompts and may use publicly available free AI writing tools. The point is not a vendor bake-off. The point is to watch how students prompt, what the model returns, and what human editing must still do." },
   { question: "What are “post-editing work products”?", answer: "After the AI-assisted first pass, students revise the draft and record a short edit log. When cleared for public view, the session archive may show selected revised excerpts or artefacts — illustrative only, not client deliverables and not legal advice." },
@@ -75,7 +75,7 @@ const BeyondPrecedentPage = () => (
         <header className="space-y-6 border-b border-border pb-10">
           <p className="text-xs uppercase tracking-[0.2em] text-accent">Educational drafting challenge</p>
           <h1 className="font-display text-4xl md:text-6xl text-foreground">Beyond Precedent</h1>
-          <p className="font-display text-xl md:text-2xl text-accent">A non-contentious moot court for the AI era.</p>
+          <p className="font-display text-xl md:text-2xl text-accent">A supervised drafting challenge for the AI era.</p>
           <p className="text-lg leading-relaxed text-muted-foreground">
             Beyond Precedent is Beyond Horizons’ educational drafting challenge: two law students from any country draft an agreement or legal document using ten prompts and free public AI tools, then revise with a short edit log. Like a moot court, it is supervised and scored — but instead of advocacy, students are tested on judgment over AI-assisted drafting. The page centres the academic research that grounds the work and how our team — which started independently in 2023 — is designing legal services for a post-AI age, including how talent learns when generative AI sits in the first draft.
           </p>
@@ -143,7 +143,7 @@ const BeyondPrecedentPage = () => (
               <p className="text-xs uppercase tracking-widest text-accent">Episode 1 · Student work products</p>
               <h3 id="episode-one" className="font-display text-2xl text-foreground">The Energy Drink Influencer</h3>
               <dl className="grid gap-4 text-sm sm:grid-cols-2">
-                <div><dt className="font-semibold text-foreground">Guest judges</dt><dd className="text-muted-foreground">Shen Yang, Hanyi Zeng and Hui Ling Teo</dd></div>
+                <div><dt className="font-semibold text-foreground">Judging panel: experienced lawyers</dt><dd className="text-muted-foreground">Shen Yang, Hanyi Zeng and Hui Ling Teo</dd></div>
                 <div><dt className="font-semibold text-foreground">Hosted by</dt><dd className="text-muted-foreground">Sonia Motwani</dd></div>
               </dl>
               <p className="border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted-foreground">Each participant drafted their document in only 15 minutes, using free AI tools under limits on font size and page count. The work products include redlines and comments. Read them in that context: educational content only, not legal advice, and not for use with real counterparties.</p>

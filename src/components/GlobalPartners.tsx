@@ -29,7 +29,7 @@ const GlobalPartners = () => {
           <div className="text-center px-4">
             <div className="teal-line mx-auto mb-6" />
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-white drop-shadow-lg">{t("globalPartners.title")}</h2>
-            <p className="text-base md:text-lg text-white/80 mt-4 max-w-2xl mx-auto leading-relaxed drop-shadow">Together with our global network of leading law firms</p>
+            <p className="text-base md:text-lg text-white/80 mt-4 max-w-2xl mx-auto leading-relaxed drop-shadow">Together with foreign counsel instructed where needed</p>
           </div>
         </div>
       </VideoBackground>

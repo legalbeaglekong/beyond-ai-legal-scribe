@@ -31,7 +31,7 @@ const teamData: Record<string, {
     experience: "14 years of experience",
     experienceZh: "14年经验",
     qualifications: [
-      "Qualified in Singapore and English law",
+      "Qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore",
       "Dual English & Singapore Law Qualification",
       "ESG Investing Certification",
       "Green and Sustainable Finance Certification",
@@ -46,7 +46,7 @@ const teamData: Record<string, {
     ],
     highlights: [
       "Seasoned legal professional with over 14 years of experience in corporate and finance work",
-      "Successfully handled large merger and acquisitions transactions",
+      "Has acted on merger and acquisition transactions",
       "Well-versed in commercial negotiations",
       "Expertise in corporate and finance areas such as debt restructuring, blended finance, sale, purchase, leasing and trading of machinery",
       "Honoured as Legal 500's \"Next Generation Partner\" in 2023",
@@ -80,7 +80,7 @@ const teamData: Record<string, {
     ],
     highlights: [
       "Seasoned aerospace professional",
-      "Proven track record delivering high stakes transactions",
+      "Experience on aviation and commercial transactions",
     ],
     highlightsZh: [
       "资深航空法律助理",
@@ -93,8 +93,8 @@ const slugs = Object.keys(teamData);
 
 const CHAMBERS_LABELS = [
   "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
-  "Chambers Asia-Pacific — Band 4, Aviation: Finance — Asia-Pacific Region",
-  "Chambers Global Market Leaders — Band 3, Asset Finance",
+  "Chambers Asia-Pacific 2026 — Band 4, Aviation: Finance — Asia-Pacific Region",
+  "Chambers Global 2026 — Global Market Leaders, Band 3, Asset Finance",
 ];
 
 const INSTRUCT_PATHS = [
@@ -184,7 +184,7 @@ const TeamMemberPage = () => {
                 <>
                   <p className="text-sm font-serif text-foreground">Founder, Beyond Horizons by Bethel Chambers LLC</p>
                   <p className="text-xs text-muted-foreground">Also written as Teo Hui Ling.</p>
-                  <p className="text-sm text-foreground mb-2">Dual-qualified — Singapore and English law</p>
+                  <p className="text-sm text-foreground mb-2">Qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore</p>
                 </>
               ) : (
                 <p className="text-sm font-serif text-foreground mb-2">Beyond Horizons by Bethel Chambers LLC</p>

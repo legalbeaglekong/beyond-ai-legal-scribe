@@ -59,7 +59,7 @@ const faqs = [
   { question: "How does Beyond Horizons maintain specialist depth across so many sectors?", answer: "Our practice is deliberately structured around interconnected sectors — aviation, space, blockchain, AI governance, energy transition, and trade — where regulatory frameworks, commercial models, and risk profiles share common threads. This allows us to develop genuine depth rather than superficial breadth, with each engagement reinforcing expertise across related practice areas." },
   { question: "What is fractional general counsel and how does it differ from traditional outside counsel?", answer: "Fractional general counsel provides ongoing, embedded senior legal support on a part-time or retainer basis — functioning as an extension of your leadership team rather than a transactional outside advisor. This model is particularly effective for growth-stage companies and regional headquarters that need strategic legal guidance without the cost of a full-time general counsel appointment." },
   { question: "How does pricing work for specialist legal services?", answer: "We offer transparent pricing structures including fixed-fee packages for defined scope work, capped-fee arrangements for matters with variable scope, and monthly retainers for ongoing advisory relationships. We scope every engagement upfront and provide clear cost estimates before work begins — no surprise invoices, no scope creep." },
-  { question: "What jurisdictions does Beyond Horizons cover?", answer: "We are based in Singapore and advise across the Asia-Pacific region, with established alliance partnerships with leading firms in all major jurisdictions. For cross-border matters, we coordinate seamlessly with our global network — including Magic Circle and leading US and European firms — providing clients with a single point of contact for multi-jurisdictional engagements." },
+  { question: "What jurisdictions does Beyond Horizons cover?", answer: "We are based in Singapore. For cross-border matters, we coordinate with foreign counsel on laws other than Singapore and English law." },
 ];
 
 const WhySpecialistCounselPage = () => {
@@ -132,7 +132,7 @@ const WhySpecialistCounselPage = () => {
               {[
                 { icon: Scale, title: "Depth Over Breadth", desc: "Genuine expertise in defined practice areas — not surface-level coverage across everything." },
                 { icon: Users, title: "Senior-Led Delivery", desc: "The partner who scopes your matter is the one who delivers it. No delegation to junior associates." },
-                { icon: Globe, title: "Global Reach, Singapore Base", desc: "Coordinated cross-border advice through established alliances with leading international firms." },
+                { icon: Globe, title: "Global Reach, Singapore Base", desc: "Cross-border matters coordinated with foreign counsel." },
                 { icon: Shield, title: "Privileged & Independent", desc: "Full legal professional privilege and independence — no competing audit, tax, or consulting interests." },
                 { icon: Clock, title: "Cost Certainty", desc: "Fixed-fee and capped-fee structures as standard. Transparent scoping before work begins." },
                 { icon: Lightbulb, title: "Commercial Pragmatism", desc: "Legal advice grounded in commercial reality — we understand how businesses make decisions." },
