@@ -31,18 +31,6 @@ const data: IndustryPageData = {
     { heading: "Path-AV / AMA sandbox", paragraphs: ["Public-path autonomous mobility, such as robosweepers, is discussed under Active Mobility Act sandbox framing, while road AVs follow Road Traffic Act and LTA authorisation tracks. Expanded geofences or use cases may require fresh approvals, insurance and liability work."], links: [{ label: "Singapore Robotics Law", to: "/singapore-robotics-law" }] },
     { heading: "Commercial road-AV / on-demand fares", paragraphs: ["AV platform operators considering expansion beyond trial zones or commercial on-demand fares typically need to address current MOT/LTA approvals, fleet and operator contracts, liability and insurance, and employment terms for safety or remote operators. Public market developments are context only; rules evolve and official requirements should be confirmed before go-live."] },
   ],
-  comparison: {
-    heading: "Why Robotics Needs Specialist Legal Counsel",
-    otherLabel: "General Technology Firms",
-    rows: [
-      { feature: "Asset Finance Expertise", other: "Treat robot leasing as standard equipment lease", bh: "Apply Chambers-ranked aircraft finance leasing expertise to robot assets — sophisticated residual value, redelivery, and maintenance structures" },
-      { feature: "Liability Understanding", other: "Apply generic product liability templates", bh: "Bespoke autonomous system liability frameworks — addressing AI decision-making, shared liability, and evolving regulatory standards" },
-      { feature: "RaaS Structuring", other: "Use generic equipment or software templates", bh: "Purpose-built RaaS contracts addressing physical asset risks, performance commitments, data, and maintenance obligations unique to robotics" },
-      { feature: "Regulatory Navigation", other: "Wait for settled regulation", bh: "Proactive — tracking ASEAN, EU AI Act, and Singapore's autonomous systems regulatory development" },
-      { feature: "Cross-Sector Knowledge", other: "Pure technology focus", bh: "Unique intersection of asset finance, technology, and industrial expertise" },
-      { feature: "Commercial Delivery", other: "General technology or equipment models", bh: "A coordinated asset, service, data and liability framework for the deployment model" },
-    ],
-  },
   spotlight: {
     heading: "The Rise of Robot Leasing & RaaS",
     cards: [

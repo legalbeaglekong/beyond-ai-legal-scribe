@@ -22,18 +22,6 @@ const data: IndustryPageData = {
     ],
     stats: ["30+ healthcare and wellness matters advised", "10+ APAC jurisdictions", "Digital health & AI-in-medicine focus", "Dual English & Singapore law qualification"],
   },
-  comparison: {
-    heading: "Specialist Health & Wellness Counsel vs. General Practice",
-    otherLabel: "General Commercial Firms",
-    rows: [
-      { feature: "Regulatory Depth", other: "Broad regulatory practice, health is one of many sectors", bh: "Focused health regulatory expertise with cross-border ASEAN and international experience" },
-      { feature: "Digital Health Understanding", other: "Treat as standard technology contract", bh: "Understand SaMD classification, telemedicine licensing, and health AI governance frameworks" },
-      { feature: "Data Privacy in Health", other: "Generic PDPA/GDPR advice", bh: "Health-specific data protection — clinical data, patient consent architectures, cross-border health data transfers" },
-      { feature: "Pricing", other: "Premium hourly billing", bh: "Transparent, value-aligned pricing — fixed-fee options for regulatory submissions" },
-      { feature: "ESG & Sustainability", other: "Separate practice group", bh: "Integrated ESG advisory — health sector sustainability reporting, green healthcare facilities" },
-      { feature: "Innovation Mindset", other: "Conservative, precedent-driven", bh: "Forward-looking — advising on AI diagnostics, digital therapeutics, and next-gen wellness platforms" },
-    ],
-  },
   spotlight: {
     heading: "The APAC Digital Health Opportunity",
     cards: [

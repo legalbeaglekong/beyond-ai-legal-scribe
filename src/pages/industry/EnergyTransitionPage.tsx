@@ -22,18 +22,6 @@ const data: IndustryPageData = {
     ],
     stats: ["ESG and green finance work across both areas", "Sustainability-linked loan structuring", "ASEAN renewable energy project experience", "Published commentary on aviation ESG & greenwashing"],
   },
-  comparison: {
-    heading: "Integrated ESG Legal Counsel vs. Bolt-On Advisory",
-    otherLabel: "Traditional Firms with ESG Add-On",
-    rows: [
-      { feature: "ESG Integration", other: "Separate ESG team, brought in late in deals", bh: "ESG considered from deal inception — sustainability-aware counsel on ESG and green finance points" },
-      { feature: "Greenwashing Risk", other: "Generic compliance review", bh: "Proactive greenwashing risk management — published analysis on APAC aviation greenwashing enforcement" },
-      { feature: "Green Finance Structuring", other: "Outsource to specialist advisors", bh: "In-house green bond, SLL, and sustainability-linked facility structuring" },
-      { feature: "Regulatory Navigation", other: "Reactive to new ESG regulations", bh: "Proactive — tracking SGX sustainability reporting, ISSB standards, EU CSRD cross-border impact" },
-      { feature: "Pricing", other: "Premium rates for specialist ESG overlay", bh: "Integrated pricing — ESG advisory built into transaction fees, not billed as a separate workstream" },
-      { feature: "Cross-Sector Knowledge", other: "ESG siloed from industry expertise", bh: "ESG expertise combined with deep aviation, transport, and infrastructure sector knowledge" },
-    ],
-  },
   spotlight: {
     heading: "The APAC Energy Transition — By the Numbers",
     cards: [

@@ -22,18 +22,6 @@ const data: IndustryPageData = {
     ],
     stats: ["20+ satellite and launch transactions", "10+ jurisdiction coverage", "Advisory to sovereign space agencies", "Emerging space economy focus"],
   },
-  comparison: {
-    heading: "A Different Model for Space Legal Work",
-    otherLabel: "Traditional Big Law",
-    rows: [
-      { feature: "Sector Knowledge", other: "Generalist teams unfamiliar with space-specific treaties and regulations", bh: "Dedicated space law practitioners versed in the Outer Space Treaty, Liability Convention, and national space acts" },
-      { feature: "Regulatory Navigation", other: "Limited experience with ITAR, spectrum licensing, and orbital filings", bh: "Hands-on experience navigating ITU filings, export controls, and multi-jurisdictional space licensing" },
-      { feature: "Commercial Agility", other: "Slow to adapt to the pace of the new space economy", bh: "Built for the speed of commercial space — startup-friendly, venture-ready, and mission-aligned" },
-      { feature: "Cross-Border Reach", other: "Single-firm network with potential conflicts", bh: "Independent firm partnering with leading space law practices globally — conflict-free collaboration" },
-      { feature: "Pricing", other: "Premium hourly rates regardless of scope", bh: "Transparent, value-aligned pricing with fixed-fee and milestone-based options" },
-      { feature: "ESG & Sustainability", other: "Space sustainability as an afterthought", bh: "Integrated advisory on orbital debris mitigation, space sustainability guidelines, and responsible space operations" },
-    ],
-  },
   spotlight: {
     heading: "Representative Space Matters",
     cards: [

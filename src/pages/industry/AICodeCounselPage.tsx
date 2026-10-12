@@ -30,18 +30,6 @@ export const data: IndustryPageData = {
     { heading: "MinLaw / IPOS AI × IP consultation", paragraphs: ["MinLaw and IPOS are consulting on AI and intellectual property through 22 October 2026, including the computational data analysis exception for training, lawful-access and contractual limits, AI-assisted inventorship, and AI-generated prior art. Law and practice may change after feedback; do not assume the consultation’s outcome. Counsel can help scale-ups map training-data and inventorship risk now against current statutes and published consultation papers."] },
     { heading: "EU AI Act / IMDA / FEAT bridge", paragraphs: ["A readiness programme can map use cases once, then bridge controls and evidence across Singapore’s IMDA Model Framework, AI Verify, MAS FEAT where relevant, and the EU AI Act. Applicability is fact-specific and rules evolve; confirm current official guidance before relying on a classification."], links: [{ label: "Read the Singapore AI Governance playbook", to: "/singapore-ai-governance" }] },
   ],
-  comparison: {
-    heading: "A Different Approach to AI Legal Advisory",
-    otherLabel: "Traditional Tech Law Firms",
-    rows: [
-      { feature: "AI-Specific Expertise", other: "General technology lawyers advising on AI as a side practice", bh: "Dedicated AI governance practitioners with deep knowledge of FEAT, Singapore regulatory frameworks, and global AI governance standards" },
-      { feature: "Operational Focus", other: "Abstract legal opinions disconnected from implementation", bh: "Practical, operationalisable frameworks — we help you build the policies, controls, and processes, not just advise on them" },
-      { feature: "Risk Taxonomy Depth", other: "High-level risk categories without granular controls", bh: "Comprehensive AI risk taxonomies with materiality assessments, control libraries, and metrics — covering all key governance considerations" },
-      { feature: "Third-Party AI Risk", other: "Standard vendor due diligence templates", bh: "Specialised third-party AI risk management — model cards, open-source deployment risk, SaaS AI concentration risk, and supply chain governance" },
-      { feature: "Cross-Regulatory Alignment", other: "Jurisdiction-by-jurisdiction advice in silos", bh: "Harmonised compliance strategies across Singapore, EU AI Act, and APAC frameworks — avoiding duplicative governance" },
-      { feature: "Lifecycle Coverage", other: "Point-in-time compliance reviews", bh: "Continuous legal oversight across the AI lifecycle — from design through deployment and ongoing monitoring, including change management" },
-    ],
-  },
   spotlight: {
     heading: "Representative AI Governance Matters",
     cards: [

@@ -22,18 +22,6 @@ export const data: IndustryPageData = {
     ],
     stats: ["Cross-border contractual restructuring", "JV & shareholder agreement advisory", "Supply chain realignment support", "Trade dispute risk mitigation"],
   },
-  comparison: {
-    heading: "Strategic Trade Counsel — Beyond Compliance",
-    otherLabel: "General Commercial Firms",
-    rows: [
-      { feature: "Trade Policy Response", other: "Reactive advice after tariff changes hit", bh: "Proactive contractual and structural advisory — repositioning businesses before disruption" },
-      { feature: "Contractual Expertise", other: "Standard contract review", bh: "Deep restructuring of commercial agreements to address tariff impacts, force majeure, and pricing mechanisms" },
-      { feature: "JV & Partnerships", other: "Generic joint venture templates", bh: "Bespoke JV and shareholder agreements designed for shifting trade landscapes and cross-border partnerships" },
-      { feature: "Business Strategy Integration", other: "Legal advice disconnected from commercial reality", bh: "Combined legal, commercial, and strategic advisory — holistic repositioning solutions" },
-      { feature: "Scoping", other: "Unclear workstreams before review begins", bh: "Scoped engagement terms agreed around documents, counterparties, and filing responsibilities" },
-      { feature: "Speed of Response", other: "Lengthy turnaround on restructuring advice", bh: "Rapid-response advisory for urgent trade disruption scenarios" },
-    ],
-  },
   spotlight: {
     heading: "Recent Developments",
     cards: [

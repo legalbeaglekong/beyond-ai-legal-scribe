@@ -22,18 +22,6 @@ const data: IndustryPageData = {
     ],
     stats: ["PDPA & cross-border data protection expertise", "AI governance framework advisory", "Cybersecurity Act compliance", "Blockchain Technology Certified"],
   },
-  comparison: {
-    heading: "Specialist Cyber & Tech Counsel vs. General IT Law",
-    otherLabel: "General IT/IP Law Firms",
-    rows: [
-      { feature: "Cybersecurity Depth", other: "Broad IT law practice — cyber is one area", bh: "Deep cybersecurity governance expertise — Cybersecurity Act, CII frameworks, incident response" },
-      { feature: "AI Understanding", other: "Apply existing IP/contract templates to AI", bh: "Genuine AI governance expertise — Model Framework implementation, algorithmic accountability" },
-      { feature: "Data Protection Scope", other: "PDPA compliance as checklist exercise", bh: "Strategic privacy advisory — cross-border data transfers, privacy-by-design, health data, and sector-specific data rules" },
-      { feature: "Incident Response", other: "Provide legal opinion after breach", bh: "Pre-breach planning and post-breach rapid response — integrated legal and governance approach" },
-      { feature: "Emerging Tech Vision", other: "Cautious, precedent-dependent", bh: "Forward-looking — published on AI threats, blockchain governance, quantum risk" },
-      { feature: "Pricing", other: "Premium hourly for specialist cyber work", bh: "Transparent pricing — compliance programme packages and incident response retainers" },
-    ],
-  },
   spotlight: {
     heading: "When AI Pushes Back — Legal Reflections",
     cards: [

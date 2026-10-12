@@ -22,18 +22,6 @@ const data: IndustryPageData = {
     ],
     stats: ["Blockchain Technology Certified", "MAS PSA licensing expertise", "RWA tokenisation pioneer — aircraft asset tokenisation", "Multi-jurisdictional token structuring"],
   },
-  comparison: {
-    heading: "Why Choose Specialist Blockchain Counsel",
-    otherLabel: "Traditional Law Firms",
-    rows: [
-      { feature: "Technical Understanding", other: "Rely on external tech consultants for blockchain basics", bh: "Blockchain Technology Certified — genuine technical understanding of protocols, smart contracts, and consensus mechanisms" },
-      { feature: "Regulatory Agility", other: "Wait for settled regulation before advising", bh: "Proactive regulatory navigation — advise through regulatory uncertainty with structured risk frameworks" },
-      { feature: "Token Structuring", other: "Apply securities law templates to novel token structures", bh: "Bespoke token classification analysis — utility, security, payment token frameworks across jurisdictions" },
-      { feature: "Innovation Track Record", other: "Treated blockchain as niche/risky", bh: "Published thought leader — authored on RWA tokenisation of aircraft assets, STO frameworks" },
-      { feature: "Pricing", other: "Hourly billing at premium rates", bh: "Transparent pricing — fixed-fee options for regulatory opinions and token structuring" },
-      { feature: "Cross-Border", other: "Refer to local counsel on ad-hoc basis", bh: "Established global network for multi-jurisdictional token launches" },
-    ],
-  },
   spotlight: {
     heading: "Pioneering RWA Tokenisation in Aviation",
     cards: [
