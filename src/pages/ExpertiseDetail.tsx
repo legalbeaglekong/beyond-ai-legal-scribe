@@ -34,7 +34,7 @@ export const maFaqs = [
   },
   {
     question: "Do you advise on the laws of other countries in an M&A deal?",
-    answer: "We advise on Singapore law directly and give English law input through Hui Ling Teo, who is qualified as a solicitor in England and Wales. We do not advise on other laws, including US, EU, Chinese and other APAC laws; for those we work with local counsel and coordinate their advice.",
+    answer: "We advise on Singapore law directly and give English law input through Hui Ling Teo, who is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore. We do not advise on other laws, including US, EU, Chinese and other APAC laws; for those we work with local counsel and coordinate their advice.",
   },
   {
     question: "Is Singapore law commonly used for cross-border deals in Asia?",
@@ -257,7 +257,7 @@ const ExpertiseDetail = () => {
               </h1>
               {showMaFaqs && (
                 <p className="text-lg leading-relaxed text-muted-foreground text-left">
-                  <strong className="text-foreground">In short.</strong> Beyond Horizons by Bethel Chambers LLC acts as Singapore-based counsel on cross-border mergers and acquisitions: due diligence across legal systems, purchase and merger agreements, regulatory and antitrust clearance coordination, and how deal structures interact with tax. Singapore law advice is given directly; English law input is given through Hui Ling Teo, who is qualified as a solicitor in England and Wales; and advice on other laws, including local tax, is obtained from and coordinated with foreign counsel. We will say when a matter needs a specialist tax or disputes team instead. Beyond Horizons by Bethel Chambers LLC is a Singapore law practice group, not an English law firm.
+                  <strong className="text-foreground">In short.</strong> Beyond Horizons by Bethel Chambers LLC acts as Singapore-based counsel on cross-border mergers and acquisitions: due diligence across legal systems, purchase and merger agreements, regulatory and antitrust clearance coordination, and how deal structures interact with tax. Singapore law advice is given directly; English law input is given through Hui Ling Teo, who is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore; and advice on other laws, including local tax, is obtained from and coordinated with foreign counsel. We will say when a matter needs a specialist tax or disputes team instead. Beyond Horizons by Bethel Chambers LLC is a Singapore law practice group, not an English law firm.
                 </p>
               )}
             </div>
