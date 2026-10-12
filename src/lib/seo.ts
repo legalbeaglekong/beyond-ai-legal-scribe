@@ -100,7 +100,7 @@ export function createStaticPageHead(path: keyof typeof STATIC_PAGE_SEO) {
 }
 
 const EXPERTISE_SEO: Record<string, readonly [string, string]> = {
-  "ma-cross-border": ["Cross-Border M&A Counsel Singapore | Beyond Horizons", "Cross-border M&A counsel for due diligence, transaction documents, regulatory clearances and transactional tax structuring across APAC and major markets."],
+  "ma-cross-border": ["Cross-Border M&A Lawyer Singapore | Beyond Horizons", "Cross-border M&A lawyer in Singapore: due diligence, purchase agreements, regulatory clearances and deal structuring, with foreign counsel coordinated."],
   "tech-general-counsel": ["Technology General Counsel | Beyond Horizons", "Cross-border general counsel support for technology companies navigating contracts, data, intellectual property and regulation."],
   "commercial-contracts": ["Commercial Contracts Counsel | Beyond Horizons", "Commercial contract drafting and negotiation for businesses operating across Singapore, APAC and international markets."],
   "corporate-transactions": ["Cross-Border Corporate Counsel | Beyond Horizons", "Corporate legal counsel for cross-border investments, joint ventures, governance and transactions across APAC."],

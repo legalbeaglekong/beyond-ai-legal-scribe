@@ -28,6 +28,22 @@ export const maFaqs = [
     question: "How do I start?",
     answer: "Schedule a consultation or contact us via the site (including WhatsApp). Bring a one-paragraph summary: jurisdictions, timeline, and whether you already have a tax adviser. General website information is not legal advice and does not create a solicitor-client relationship.",
   },
+  {
+    question: "What does a cross-border M&A lawyer in Singapore do?",
+    answer: "Typically, coordinates due diligence across jurisdictions, drafts and negotiates the share or asset purchase agreement, manages regulatory and merger-control filings with local counsel, and aligns the deal structure with tax and post-closing integration.",
+  },
+  {
+    question: "Do you advise on the laws of other countries in an M&A deal?",
+    answer: "We advise on Singapore law directly and give English law input through Hui Ling Teo, who is qualified as a solicitor in England and Wales. We do not advise on other laws, including US, EU, Chinese and other APAC laws; for those we work with local counsel and coordinate their advice.",
+  },
+  {
+    question: "Is Singapore law commonly used for cross-border deals in Asia?",
+    answer: "Singapore law and Singapore-seated arbitration are often chosen for regional deals, but the right governing law depends on the parties, the assets and the financing. We can discuss the options at the outset.",
+  },
+  {
+    question: "When should we bring in cross-border M&A counsel?",
+    answer: "Usually before a term sheet or letter of intent is signed, so that structure, conditions, regulatory timing and key protections can be considered early rather than renegotiated later.",
+  },
 ];
 
 const ExpertiseDetail = () => {
@@ -41,7 +57,7 @@ const ExpertiseDetail = () => {
   }> = {
     "ma-cross-border": {
       title: "Cross-Border M&A Counsel — US, EU, UK, China & APAC",
-      content: "Mergers and acquisitions (M&A) involving multiple jurisdictions such as the US, EU, UK, China, and APAC demand legal counsel with deep expertise and global insight. Whether you are a China-based enterprise entering APAC markets or an APAC company expanding abroad, working with a highly regarded corporate lawyer can make a decisive difference. The Beyond Horizons legal team (delivered by Bethel Chambers LLC) is recognized as a top-tier advisor in cross-border M&A. Our team offers likely the best combination of local knowledge and international experience to navigate complex international transactions.",
+      content: "Mergers and acquisitions (M&A) involving multiple jurisdictions such as the US, EU, UK, China, and APAC demand legal counsel with deep expertise and global insight. Whether you are a China-based enterprise entering APAC markets or an APAC company expanding abroad, working with a highly regarded corporate lawyer can make a decisive difference. The Beyond Horizons legal team (delivered by Bethel Chambers LLC) advises on cross-border M&A from Singapore. We combine Singapore law advice with coordination of foreign counsel across the jurisdictions involved in a transaction.",
       highlights: [
         "Tailored due diligence across diverse legal systems",
         "Drafting and negotiation of purchase and merger agreements with jurisdictional precision",
@@ -170,7 +186,7 @@ const ExpertiseDetail = () => {
   }
 
   const seoTitleMap: Record<string, string> = {
-    "ma-cross-border": "Cross-Border M&A Counsel Singapore | Deal Structuring & Tax Issues | Beyond Horizons",
+    "ma-cross-border": "Cross-Border M&A Lawyer Singapore | Beyond Horizons",
     "tech-general-counsel": "General Counsel for Tech | Beyond Horizons",
     "commercial-contracts": "Commercial Contracts Counsel | Beyond Horizons",
     "corporate-transactions": "Cross-Border Corporate Counsel | Beyond Horizons",
@@ -183,7 +199,7 @@ const ExpertiseDetail = () => {
   };
   const seoTitle = (id && seoTitleMap[id]) || `${currentContent.title.slice(0, 50)} | Beyond Horizons`;
   const seoDescription = id === "ma-cross-border"
-    ? "Cross-border M&A counsel for US, EU, UK, China and APAC deals — due diligence, transaction documents, regulatory clearances, and cross-border tax structuring advice. Schedule a consultation."
+    ? "Cross-border M&A lawyer in Singapore: due diligence, purchase agreements, regulatory clearances and deal structuring, with foreign counsel coordinated."
     : currentContent.content.substring(0, 160);
   const showMaFaqs = id === "ma-cross-border";
 
@@ -239,6 +255,11 @@ const ExpertiseDetail = () => {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
                 {currentContent.title}
               </h1>
+              {showMaFaqs && (
+                <p className="text-lg leading-relaxed text-muted-foreground text-left">
+                  <strong className="text-foreground">In short.</strong> Beyond Horizons by Bethel Chambers LLC acts as Singapore-based counsel on cross-border mergers and acquisitions: due diligence across legal systems, purchase and merger agreements, regulatory and antitrust clearance coordination, and how deal structures interact with tax. Singapore law advice is given directly; English law input is given through Hui Ling Teo, who is qualified as a solicitor in England and Wales; and advice on other laws, including local tax, is obtained from and coordinated with foreign counsel. We will say when a matter needs a specialist tax or disputes team instead. Beyond Horizons by Bethel Chambers LLC is a Singapore law practice group, not an English law firm.
+                </p>
+              )}
             </div>
           </div>
         </section>
