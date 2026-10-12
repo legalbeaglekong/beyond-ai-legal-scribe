@@ -78,12 +78,6 @@ export const data: IndustryPageData = {
         "Unclear for a contractor who is not your employee",
       ],
       [
-        "EU Commission competition investigations",
-        "Independent external lawyers are the protected category under Akzo Nobel",
-        "In-house advice not protected under Akzo Nobel",
-        "No better",
-      ],
-      [
         "Conflicts check before acting",
         "Professional Conduct Rules 20–22 — the check can stop us taking the work",
         "One employer, one client",
