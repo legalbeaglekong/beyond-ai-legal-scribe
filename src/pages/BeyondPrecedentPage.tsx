@@ -83,6 +83,30 @@ const BeyondPrecedentPage = () => (
           <p className="text-sm text-muted-foreground italic">{PROGRAMME_DISCLAIMER}</p>
         </header>
 
+        <section className="space-y-6" aria-labelledby="trailer">
+          <h2 id="trailer" className="font-display text-2xl md:text-3xl text-foreground">Watch the trailer: Beyond Precedent, Episode 1</h2>
+          <p className="text-muted-foreground leading-relaxed">
+            Can free public AI tools draft a sponsorship agreement in 15 minutes? In Episode 1, The Energy Drink Influencer, two law students each draft a sponsorship agreement with a free AI tool of their choice, which they name. Experienced lawyers judge the challenge, and our host, Sonia Motwani, adds a twist. The full episode arrives on Friday 23 October 2026.
+          </p>
+          <div className="relative w-full overflow-hidden rounded-lg border border-border bg-card" style={{ aspectRatio: "16 / 9" }}>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/6DSyE53xVoE"
+              title="Beyond Precedent Episode 1 trailer"
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="absolute inset-0 h-full w-full"
+            />
+          </div>
+          <div className="rounded-lg border border-border bg-card p-6">
+            <p className="text-foreground leading-relaxed">
+              Want Beyond Precedent for your team? We run the challenge as a workshop with firms and schools. Email{" "}
+              <a href={`mailto:${EMAIL}`} className={ext}>{EMAIL}</a>
+            </p>
+          </div>
+          <p className="text-xs text-muted-foreground">Beyond Horizons by Bethel Chambers LLC. Educational content; not legal advice. Music generated with Google Gemini.</p>
+        </section>
+
         <section className="space-y-4">
           <H2>Why we started this</H2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
