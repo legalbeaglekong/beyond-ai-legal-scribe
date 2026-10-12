@@ -1,5 +1,30 @@
 import IndustryPageLayout, { type IndustryPageData } from "@/components/IndustryPageLayout";
+import type { ReactNode } from "react";
 import { Building2, ShieldCheck, Scale, CalendarClock, Bot } from "lucide-react";
+
+const ac = "text-primary underline underline-offset-2";
+const Ext = ({ href, children }: { href: string; children: ReactNode }) => <a href={href} target="_blank" rel="noopener" className={ac}>{children}</a>;
+const st = "text-foreground";
+
+const acraSection = (
+  <section className="section-padding bg-background">
+    <div className="max-w-3xl mx-auto container-padding fade-in">
+      <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-6">What changes for Singapore companies from 20 October 2026 (ACRA)?</h2>
+      <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+        <p>The Accounting and Corporate Regulatory Authority (ACRA) has announced that the next phase of the Corporate and Accounting Laws (Amendment) Act 2025 takes effect on 20 October 2026. ACRA's notice lists six groups of changes. Three matter to most companies when they file their annual return or deal with their registered office; the others concern filings that most private companies do not make, and accounting firms.</p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li><strong className={st}>Annual return.</strong> When filing, a company must confirm that what ACRA holds is correct for its directors, chief executive officers (CEOs), secretaries, auditors and relevant members. ACRA gives examples of the details covered, including names, identification details, nationality, contact and registered office addresses, appointment dates and, where relevant, shareholdings. There is also a new question on whether anyone is acting as CEO. A company limited by guarantee must also confirm the total number of members it last reported. ACRA suggests checking and updating records in <Ext href="https://www.bizfile.gov.sg/">Bizfile</Ext> (ACRA's online filing portal) before filing.</li>
+          <li><strong className={st}>Registered office and records.</strong> Companies no longer have to keep the registered office open to the public for set minimum hours each business day. Records must still be open to inspection: a person who wants to inspect must give reasonable notice, and the company must then make the records available for at least two hours on each relevant business day. A change of registered office address must still be filed within 14 days.</li>
+          <li><strong className={st}>Striking off.</strong> The process is shortened. For a voluntary striking off, the Gazette notice can be published as early as the day the notice is sent; for a striking off started by the Registrar, as early as 15 days after ACRA's letter to the company. ACRA's notice also covers changes to restoring struck-off entities.</li>
+          <li><strong className={st}>Filings removed.</strong> The statement in lieu of prospectus is abolished, and public limited companies with a share capital no longer need to hold a statutory meeting or prepare a statutory report. Most private companies are not affected.</li>
+          <li><strong className={st}>Accounting firms.</strong> Public accountants may renew their registration for one, two or three years, and professional indemnity insurance requirements are extended to accounting firms run as sole proprietorships or partnerships. These do not change what an ordinary company files.</li>
+        </ul>
+        <p><strong className={st}>Plain reading.</strong> For a lean company, the practical step is usually a records check in Bizfile before the next annual return, and a short note on who handles inspection requests. A fractional general counsel can run that check as part of a retainer. If that would be useful, you are welcome to write to <a href="mailto:HL@beyondhorizons.sg" className={ac}>HL@beyondhorizons.sg</a>.</p>
+        <p><em>General information on Singapore law as at October 2026, based on <Ext href="https://www.acra.gov.sg/news-events/news-announcements/commencement-of-key-changes-under-the-corporate-and-accounting-laws--amendment--act-2025-on-20-october-2026/">ACRA's notice of 6 October 2026</Ext>; not legal advice. Check ACRA's notice and the Act for the full position. Beyond Horizons by Bethel Chambers LLC is a Singapore law practice group, not an English law firm.</em></p>
+      </div>
+    </div>
+  </section>
+);
 
 export const data: IndustryPageData = {
   slug: "fractional-gc",
@@ -152,6 +177,7 @@ export const data: IndustryPageData = {
       "You retain a regulated Singapore law corporation: compulsory professional indemnity, practising certificates, PCR conflict checks, a Law Society complaints route, and privilege under Evidence Act s128 for solicitor–client communications. You get a named lead and a named deputy — not a single employed seat and not an agency placement that may expressly not offer legal advice. Scope and fees sit in the engagement letter; we do not publish a fee card or compare our fees with other law practices on this site.",
     ],
   },
+  afterClosing: acraSection,
   faqs: {
     heading: "FAQ",
     items: [
@@ -184,6 +210,9 @@ export const data: IndustryPageData = {
       { question: "When does fractional GC fit better than hiring in-house counsel in Singapore?", answer: "Hire in-house when you need daily physical presence or legal volume that truly fills a full-time seat. Choose a fractional GC when a Singapore scale-up needs senior legal judgment and continuity without a permanent headcount — commercial contracts, employment coordination, and vendor/AI policies as scoped. Beyond Horizons by Bethel Chambers LLC scopes ongoing support in a proposal-based engagement letter. Soft next step: schedule a consultation." },
       { question: "How does fractional GC differ from a full-service law firm retainer for day-to-day work?", answer: "Fractional GC emphasises named senior continuity for day-to-day legal judgment. Full-service firms remain appropriate when a large bench is required for specialised or multi-office matters. Beyond Horizons by Bethel Chambers LLC collaborates rather than claiming superiority or publishing fee comparisons. Soft next step: schedule a consultation to see which model fits your matter mix." },
       { question: "What does a scoped fractional GC engagement with Beyond Horizons typically cover?", answer: "Typically ongoing legal judgment with a named lead (and deputy where scoped): commercial contracts, employment coordination, vendor and AI policy support, and matter triage — not a full-time employment contract and not an agency placement of hands. Coverage is proposal-based; we do not publish a public price list or guarantee outcomes. Beyond Horizons by Bethel Chambers LLC. Soft next step: schedule a consultation." },
+      { question: "What must a Singapore company confirm in its annual return from 20 October 2026?", answer: "According to ACRA, the filer must confirm that the particulars last given to ACRA for the company's directors, chief executive officers, secretaries, auditors and relevant members are accurate, and say whether anyone is performing a chief executive officer role. A company limited by guarantee must also confirm the total number of members last given to ACRA." },
+      { question: "Does a Singapore registered office still need to be open to the public?", answer: "Not for set minimum hours from 20 October 2026. A person who wants to inspect company records must give reasonable notice; the company must then make the records available for at least two hours on each relevant business day. A change of registered office address must still be filed within 14 days." },
+      { question: "How quickly can a company be struck off after 20 October 2026?", answer: "According to ACRA, the timeline is shortened: for a voluntary striking off, the Gazette notice can be published as early as the day the notice is sent; for a Registrar-initiated striking off, as early as 15 days after ACRA's letter to the company." },
     ],
   },
   cta: {

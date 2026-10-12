@@ -66,6 +66,7 @@ export interface PillarGuide {
 export interface PillarContentSection {
   heading: string;
   paragraphs: string[];
+  body?: ReactNode;
   links?: { label: string; to: string }[];
 }
 
@@ -286,6 +287,7 @@ const PillarPage = ({
                   <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">{section.heading}</h2>
                   <div className="space-y-4">
                     {section.paragraphs.map((paragraph) => <p key={paragraph} className="text-muted-foreground leading-relaxed">{paragraph}</p>)}
+                    {section.body}
                   </div>
                   {section.links && <div className="flex flex-wrap gap-4 mt-5">{section.links.map((link) => link.to.startsWith("http") ? <a key={link.to} href={link.to} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">{link.label}</a> : <Link key={link.to} to={link.to} className="text-sm text-primary hover:underline">{link.label}</Link>)}</div>}
                 </article>

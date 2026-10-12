@@ -87,6 +87,8 @@ export interface IndustryPageData {
   };
   /** Optional closing prose section before the FAQ. */
   closing?: { heading?: string; paragraphs: string[] };
+  /** Optional rich section rendered after the closing prose, before the FAQ. */
+  afterClosing?: import("react").ReactNode;
   faqs: {
     heading: string;
     items: { question: string; answer: string }[];
@@ -450,6 +452,8 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
           </section>
         )}
+
+        {data.afterClosing}
 
         {/* FAQ */}
         <section className="section-padding bg-background">
