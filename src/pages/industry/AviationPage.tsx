@@ -308,10 +308,6 @@ export const data: IndustryPageData = {
           "An IDERA (Irrevocable De-Registration and Export Request Authorisation) is an educational shorthand for an authorisation that can support deregistration and export of an aircraft as part of enforcement or remedy planning under the Cape Town framework, where the state declarations and facts allow it. Detail and edge cases belong in a matter-specific engagement — not in a website FAQ. Free course for orientation; for a live repossession, deregistration or export path, Talk to us / Schedule consultation.",
       },
       {
-        question: "When do I need specialist aviation finance counsel instead of Big Law?",
-        answer: "When the matter is document-heavy English-law leasing/finance, needs multi-timezone / regional turns, involves developing markets, or is heading into recovery / incomplete-docs / insolvency coordination — and you want continuity from a cross-border specialist aviation finance desk with a Singapore hub. Full-service or Magic Circle collaboration remains available when the bench is needed. We do not claim superiority over any named firm and we do not compare fees.",
-      },
-      {
         question: "Do you handle aircraft repossession?",
         answer: "We advise on the documentary, Cape Town/IDERA and coordination path around aircraft recoveries / asset recovery and distressed scenarios. Local enforcement steps depend on jurisdiction and facts; we coordinate rather than promise possession.",
       },
