@@ -7,7 +7,7 @@ import {
   WHATSAPP_URL,
   LINKEDIN_URL,
   
-  PARENT_TERMS_URL,
+
   UEN,
   REGULATORY_BLURB,
   LEGAL_DISCLAIMER,
@@ -134,9 +134,6 @@ const Footer = () => {
               <Link to="/privacy" className="text-xs text-muted-foreground hover:text-accent transition-smooth">
                 {t("footer.privacyPolicy")}
               </Link>
-              <a href={PARENT_TERMS_URL} target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-accent transition-smooth">
-                Terms of Service
-              </a>
             </div>
           </div>
           <div className="mt-2 flex flex-wrap justify-center gap-6 text-xs text-muted-foreground">
