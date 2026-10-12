@@ -7,7 +7,7 @@ import {
   WHATSAPP_URL,
   LINKEDIN_URL,
   
-  PARENT_TERMS_URL,
+
   UEN,
   REGULATORY_BLURB,
   LEGAL_DISCLAIMER,
@@ -52,9 +52,9 @@ const Footer = () => {
               <p className="text-sm text-muted-foreground leading-relaxed">Singapore law practice group — cross-border counsel across aviation finance, fractional GC, employment, AI governance, and robotics.</p>
               <div className="space-y-2 text-xs text-muted-foreground">
                 <p>Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore</p>
-                <p>Chambers Asia-Pacific — Band 4, Aviation: Finance — Asia-Pacific Region</p>
-                <p>Chambers Global Market Leaders — Band 3, Asset Finance</p>
-                <p>Legal 500 Next Generation Partner</p>
+                <p>Chambers Asia-Pacific 2026 — Band 4, Aviation: Finance — Asia-Pacific Region</p>
+                <p>Chambers Global 2026 — Global Market Leaders, Band 3, Asset Finance</p>
+                <p>Legal 500 Next Generation Partner 2023</p>
               </div>
             </div>
 
@@ -134,9 +134,6 @@ const Footer = () => {
               <Link to="/privacy" className="text-xs text-muted-foreground hover:text-accent transition-smooth">
                 {t("footer.privacyPolicy")}
               </Link>
-              <a href={PARENT_TERMS_URL} target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-accent transition-smooth">
-                Terms of Service
-              </a>
             </div>
           </div>
           <div className="mt-2 flex flex-wrap justify-center gap-6 text-xs text-muted-foreground">

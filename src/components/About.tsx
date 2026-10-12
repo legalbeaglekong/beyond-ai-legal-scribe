@@ -18,7 +18,7 @@ const About = () => {
     { icon: BookOpen, title: t("about.achievement4Title"), description: t("about.achievement4Desc"), highlight: t("about.achievement4Highlight") },
   ];
 
-  const certifications = [t("about.cert1"), t("about.cert2"), t("about.cert3"), t("about.cert4")];
+  const certifications = [t("about.cert1"), t("about.cert2"), t("about.cert3")];
 
   return (
     <section id="about" className="relative">

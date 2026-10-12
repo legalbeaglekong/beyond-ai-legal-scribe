@@ -4,8 +4,8 @@ import { Shield, Code, Coins, Layers } from "lucide-react";
 const data: IndustryPageData = {
   slug: "blockchain-digital-assets",
   seo: {
-    title: "Blockchain & Digital Assets Law Singapore — Crypto Regulation, DeFi & Token Counsel | Beyond Horizons Legal",
-    description: "Digital assets counsel in Singapore — MAS Payment Services Act licensing, token offerings, DeFi and RWA tokenisation. Beyond Horizons Legal by Bethel Chambers LLC.",
+    title: "Blockchain & Digital Assets Law Singapore — Crypto Regulation, DeFi & Token Counsel | Beyond Horizons by Bethel Chambers",
+    description: "Digital assets counsel in Singapore — MAS Payment Services Act licensing, token offerings, DeFi and RWA tokenisation. Beyond Horizons by Bethel Chambers LLC.",
   },
   hero: {
     title: "Blockchain & Digital Assets Law — Token Regulation, DeFi & Web3 Counsel",
@@ -22,22 +22,10 @@ const data: IndustryPageData = {
     ],
     stats: ["Blockchain Technology Certified", "MAS PSA licensing expertise", "RWA tokenisation pioneer — aircraft asset tokenisation", "Multi-jurisdictional token structuring"],
   },
-  comparison: {
-    heading: "Why Choose Specialist Blockchain Counsel",
-    otherLabel: "Traditional Law Firms",
-    rows: [
-      { feature: "Technical Understanding", other: "Rely on external tech consultants for blockchain basics", bh: "Blockchain Technology Certified — genuine technical understanding of protocols, smart contracts, and consensus mechanisms" },
-      { feature: "Regulatory Agility", other: "Wait for settled regulation before advising", bh: "Proactive regulatory navigation — advise through regulatory uncertainty with structured risk frameworks" },
-      { feature: "Token Structuring", other: "Apply securities law templates to novel token structures", bh: "Bespoke token classification analysis — utility, security, payment token frameworks across jurisdictions" },
-      { feature: "Innovation Track Record", other: "Treated blockchain as niche/risky", bh: "Published thought leader — authored on RWA tokenisation of aircraft assets, STO frameworks" },
-      { feature: "Pricing", other: "Hourly billing at premium rates", bh: "Transparent pricing — fixed-fee options for regulatory opinions and token structuring" },
-      { feature: "Cross-Border", other: "Refer to local counsel on ad-hoc basis", bh: "Established global network for multi-jurisdictional token launches" },
-    ],
-  },
   spotlight: {
     heading: "Pioneering RWA Tokenisation in Aviation",
     cards: [
-      { title: "Who STO my (aircraft) ABS?", description: "Beyond Horizons Legal has published original research on real-world asset tokenisation of aircraft assets — exploring how securitised token offerings and decentralised finance can transform aviation asset financing.", link: "https://beyondhorizons.substack.com/p/who-sto-my-aircraft-abs-securitised", linkText: "Read the Full Analysis" },
+      { title: "Who STO my (aircraft) ABS?", description: "Beyond Horizons by Bethel Chambers has published original research on real-world asset tokenisation of aircraft assets — exploring how securitised token offerings and decentralised finance can transform aviation asset financing.", link: "https://beyondhorizons.substack.com/p/who-sto-my-aircraft-abs-securitised", linkText: "Read the Full Analysis" },
     ],
   },
   faqs: {

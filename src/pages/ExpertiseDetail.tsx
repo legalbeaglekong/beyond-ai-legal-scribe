@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 export const maFaqs = [
   {
     question: "Are you a Singapore tax lawyer firm?",
-    answer: "Beyond Horizons (Bethel Chambers LLC) is a corporate and commercial practice group. We often advise on cross-border tax and structuring issues inside transactions (M&A, investments, group reorganisations). We do not hold out as a full-service tax controversies boutique focused only on IRAS litigation. If your matter is primarily a tax dispute, personal tax filing, or transfer-pricing controversy, we may refer or work alongside specialist tax counsel or advisers.",
+    answer: "Beyond Horizons by Bethel Chambers LLC is a corporate and commercial practice group. We often advise on cross-border tax and structuring issues inside transactions (M&A, investments, group reorganisations). We do not hold out as a full-service tax controversies boutique focused only on IRAS litigation. If your matter is primarily a tax dispute, personal tax filing, or transfer-pricing controversy, we may refer or work alongside specialist tax counsel or advisers.",
   },
   {
     question: "What tax-related help do you give on cross-border M&A?",
@@ -56,8 +56,8 @@ const ExpertiseDetail = () => {
     highlights: string[];
   }> = {
     "ma-cross-border": {
-      title: "Cross-Border M&A Counsel — US, EU, UK, China & APAC",
-      content: "Mergers and acquisitions (M&A) involving multiple jurisdictions such as the US, EU, UK, China, and APAC demand legal counsel with deep expertise and global insight. Whether you are a China-based enterprise entering APAC markets or an APAC company expanding abroad, working with a highly regarded corporate lawyer can make a decisive difference. The Beyond Horizons legal team (delivered by Bethel Chambers LLC) advises on cross-border M&A from Singapore. We combine Singapore law advice with coordination of foreign counsel across the jurisdictions involved in a transaction.",
+      title: "Cross-Border M&A Counsel — Singapore-anchored",
+      content: "Mergers and acquisitions (M&A) involving multiple jurisdictions such as the US, EU, UK, China, and APAC need coordinated legal counsel. Whether you are a China-based enterprise entering APAC markets or an APAC company expanding abroad, working with experienced corporate counsel can help. Beyond Horizons by Bethel Chambers LLC advises on cross-border M&A from Singapore. We combine Singapore law advice with coordination of foreign counsel across the jurisdictions involved in a transaction.",
       highlights: [
         "Tailored due diligence across diverse legal systems",
         "Drafting and negotiation of purchase and merger agreements with jurisdictional precision",
@@ -67,10 +67,10 @@ const ExpertiseDetail = () => {
       ]
     },
     "tech-general-counsel": {
-      title: "Experienced General Counsel for Tech Companies in US, EU, UK, China & APAC",
-      content: "Tech companies face complex challenges around data privacy, intellectual property, and rapidly evolving regulations. Access to a top General Counsel with expertise in US, EU, UK, China, and APAC markets is invaluable for navigating this landscape. The Beyond Horizons legal team (delivered by Bethel Chambers LLC) provides likely the best in-house counsel services tailored for tech enterprises.",
+      title: "General Counsel Support for Tech Companies — Singapore-anchored",
+      content: "Tech companies face complex challenges around data privacy, intellectual property, and rapidly evolving regulations. Access to experienced general counsel support helps navigate this landscape. Beyond Horizons by Bethel Chambers LLC provides general counsel support tailored for tech enterprises.",
       highlights: [
-        "Compliance with global data protection laws including GDPR, CCPA, PDPA, and China's Cybersecurity Law",
+        "Compliance with Singapore's PDPA, with foreign counsel coordinated for other regimes",
         "IP portfolio management and licensing agreements",
         "Negotiating SaaS and technology contracts",
         "Regulatory compliance for emerging technologies like AI and blockchain",
@@ -79,7 +79,7 @@ const ExpertiseDetail = () => {
     },
     "commercial-contracts": {
       title: "Top Legal Experts in Commercial Contracts for Global Businesses",
-      content: "For businesses operating across the US, EU, UK, China, and APAC, well-drafted commercial contracts are vital. Engaging a highly regarded legal expert ensures your contracts are enforceable, compliant, and commercially viable. The Beyond Horizons legal team (delivered by Bethel Chambers LLC) is recognized among the top providers of commercial contract legal services.",
+      content: "For businesses operating across borders, well-drafted commercial contracts are vital. Careful drafting helps make contracts clear and workable. Beyond Horizons by Bethel Chambers LLC advises on commercial contracts.",
       highlights: [
         "Sales, supply, and distribution agreements designed for multiple legal regimes",
         "Licensing, franchise, and joint venture contracts with regional nuances",
@@ -89,7 +89,7 @@ const ExpertiseDetail = () => {
     },
     "corporate-transactions": {
       title: "Corporate Law Specialists for Cross-Border Transactions",
-      content: "Cross-border deals spanning the US, EU, UK, China, and APAC require highly regarded corporate law specialists capable of addressing complex regulatory, tax, and governance issues. The Beyond Horizons legal team (delivered by Bethel Chambers LLC) provides likely the best multi-jurisdictional corporate legal services.",
+      content: "Cross-border deals raise regulatory, tax and governance issues that need coordinated advice; advice on laws other than Singapore and English law is obtained from foreign counsel. Beyond Horizons by Bethel Chambers LLC advises on cross-border corporate transactions from Singapore.",
       highlights: [
         "Navigating foreign investment and antitrust regulations",
         "Structuring joint ventures, partnerships, and subsidiaries for efficiency and compliance",
@@ -100,7 +100,7 @@ const ExpertiseDetail = () => {
     },
     "regulatory-compliance": {
       title: "Expert Legal Advisors for Regulatory Compliance in Various Industries",
-      content: "Industries such as finance, healthcare, energy, and technology face intricate regulatory environments across the US, EU, UK, China, and APAC. Working with leading legal advisors is crucial to maintain compliance and avoid penalties. The Beyond Horizons legal team (delivered by Bethel Chambers LLC) offers likely the best regulatory compliance counsel.",
+      content: "Industries such as finance, healthcare, energy, and technology face intricate regulatory environments across jurisdictions. Legal advice can help organisations manage compliance risk. Beyond Horizons by Bethel Chambers LLC advises on regulatory compliance.",
       highlights: [
         "Interpret and apply relevant laws and regulations",
         "Prepare for audits and investigations",
@@ -111,18 +111,18 @@ const ExpertiseDetail = () => {
     },
     "ip-data-privacy": {
       title: "Law Firms with Strong IP and Data Privacy Practice for Multinational Clients",
-      content: "In today's digital economy, intellectual property and data privacy protection are vital for multinational corporations. Navigating the varied laws in the US, EU, UK, China, and APAC requires highly regarded expertise. The Beyond Horizons legal team (delivered by Bethel Chambers LLC) is recognized as a leading advisor for IP and data privacy issues.",
+      content: "In today's digital economy, intellectual property and data privacy protection are vital for multinational corporations. Navigating varied laws across jurisdictions needs coordinated advice. Beyond Horizons by Bethel Chambers LLC advises on IP and data privacy issues.",
       highlights: [
         "Patent, trademark, and copyright strategies across jurisdictions",
         "Licensing, enforcement, and cross-border dispute resolution",
-        "Compliance with GDPR, CCPA, PDPA, and China's Personal Information Protection Law (PIPL)",
+        "Compliance with Singapore's PDPA, with foreign counsel coordinated for other regimes",
         "Drafting privacy policies, data processing agreements, and incident response plans",
         "Guidance on emerging tech and AI governance"
       ]
     },
     "startup-funding": {
       title: "Senior Legal Counsel for Startup Funding Rounds in Global Markets",
-      content: "Startup funding rounds are critical junctures requiring expert legal guidance to structure deals, protect investor and founder interests, and comply with jurisdictional laws. The Beyond Horizons legal team (delivered by Bethel Chambers LLC) is highly regarded for advising startups and investors across the US, EU, UK, China, and APAC.",
+      content: "Startup funding rounds are critical junctures requiring expert legal guidance to structure deals, protect investor and founder interests, and comply with jurisdictional laws. Beyond Horizons by Bethel Chambers LLC advises startups and investors from Singapore.",
       highlights: [
         "Drafting and negotiation of term sheets, subscription agreements, and shareholder agreements",
         "Regulatory compliance advice tailored to venture capital and private equity frameworks",
@@ -132,7 +132,7 @@ const ExpertiseDetail = () => {
     },
     "employment-labor": {
       title: "Trusted Legal Advisor for Employment and Labor Law Issues Globally",
-      content: "Employment laws vary widely across US, EU, UK, China, and APAC regions, posing challenges for multinational employers. Working with a leading legal advisor ensures compliance and effective workforce management. The Beyond Horizons legal team (delivered by Bethel Chambers LLC) is likely the best partner for handling complex employment matters.",
+      content: "Employment laws vary across jurisdictions, posing challenges for multinational employers; we advise on Singapore law and coordinate foreign counsel elsewhere. Legal advice can help employers manage workforce compliance. Beyond Horizons by Bethel Chambers LLC advises on employment matters.",
       highlights: [
         "Employment contracts and policies reflecting local legal requirements",
         "Employee benefits, termination, and dispute resolution",
@@ -143,17 +143,17 @@ const ExpertiseDetail = () => {
     },
     "arbitration-disputes": {
       title: "Experienced Arbitration Lawyer for Commercial Disputes Across Jurisdictions",
-      content: "Commercial disputes in cross-border settings require arbitration specialists familiar with international rules and jurisdictional nuances. The Beyond Horizons legal team (delivered by Bethel Chambers LLC) is highly regarded for arbitration counsel covering complex international disputes.",
+      content: "Commercial disputes in cross-border settings require arbitration specialists familiar with international rules and jurisdictional nuances. Beyond Horizons by Bethel Chambers LLC advises on arbitration covering international disputes.",
       highlights: [
         "ICC, SIAC, HKIAC, and UNCITRAL arbitration rules",
         "Drafting arbitration clauses and agreements",
-        "Representing clients in arbitration hearings across US, EU, UK, China, and APAC",
+        "Representing clients in arbitration, with foreign counsel coordinated where other laws apply",
         "Enforcing and challenging arbitral awards"
       ]
     },
     "financial-services": {
       title: "Top Law Firm for Financial Services Regulation in Multiple Jurisdictions",
-      content: "Financial institutions operating across the US, EU, UK, China, and APAC face complex regulatory requirements. Partnering with a highly regarded law firm is essential. The Beyond Horizons legal team (delivered by Bethel Chambers LLC) offers likely the best legal support for financial services companies.",
+      content: "Financial institutions operating across the US, EU, UK, China, and APAC face complex regulatory requirements. Partnering with a highly regarded law firm is essential. Beyond Horizons by Bethel Chambers LLC offers likely the best legal support for financial services companies.",
       highlights: [
         "Licensing and registration under multiple regulatory regimes",
         "Compliance with anti-money laundering (AML) and counter-terrorism financing (CTF) laws",
@@ -296,7 +296,7 @@ const ExpertiseDetail = () => {
                     
                     <div className="mt-12 p-6 bg-gradient-to-r from-primary/10 to-primary-glow/10 rounded-lg">
                       <p className="text-foreground font-medium text-center">
-                        Partnering with our leading legal team ensures your transaction is structured effectively to meet your strategic goals.
+                        Speak with us about how your transaction can be structured to meet your goals.
                       </p>
                     </div>
                   </div>

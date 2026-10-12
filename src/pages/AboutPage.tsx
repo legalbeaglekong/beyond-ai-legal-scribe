@@ -21,7 +21,7 @@ const AboutPage = () => {
     { icon: BookOpen, title: "Bloomberg Law Author", description: "Strategic Business Advisory & ESG Implementation", highlight: "Thought Leadership" },
   ];
 
-  const certifications = ["ESG Investing Certification", "Green and Sustainable Finance", "Blockchain Technology", "Dual English & Singapore Law Qualification"];
+  const certifications = ["ESG Investing Certification", "Green and Sustainable Finance", "Blockchain Technology"];
 
   return (
     <>
@@ -30,9 +30,9 @@ const AboutPage = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "AboutPage",
-            name: "About Beyond Horizons Legal",
+            name: "About Beyond Horizons by Bethel Chambers",
             url: "https://beyondhorizons.sg/about",
-            description: "Chambers-ranked legal team delivering innovative, cost-effective legal solutions. Dual-qualified in English & Singapore law.",
+            description: "Beyond Horizons by Bethel Chambers LLC is a Singapore law practice group. Founder Hui Ling Teo is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore.",
             mainEntity: {
               "@type": "Organization",
               name: "Beyond Horizons by Bethel Chambers LLC",
@@ -65,7 +65,7 @@ const AboutPage = () => {
                 Meet Your Legal Team
               </h1>
               <p className="text-base md:text-lg text-white/80 max-w-3xl mx-auto leading-relaxed mb-8 drop-shadow">
-                Our experienced legal team combines unparalleled expertise with visionary business acumen.
+                Our legal team combines legal experience with commercial awareness.
               </p>
               <Button variant="default" size="lg" className="bg-white text-black font-semibold shadow-lg hover:bg-white/90" asChild>
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
@@ -83,13 +83,13 @@ const AboutPage = () => {
               <div className="teal-line mb-6" />
               <h2 className="text-3xl font-serif font-bold text-foreground">Genesis Story</h2>
               <p className="text-muted-foreground leading-relaxed">
-                In 2024, our founding team with decades of big law experience saw a unique opportunity: to build a new kind of law team from the ground up — proven lawyers united by one mission: to redesign legal services for tomorrow's visionaries.
+                In 2024, our founding team with decades of big law experience saw a unique opportunity: to build a new kind of law team from the ground up — lawyers united by one mission: to redesign legal services for tomorrow's visionaries.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                We built Beyond Horizons Legal to deliver cost-effective, precise, and innovative legal solutions. Our approach breaks traditional molds, making top-tier legal expertise accessible without the overhead or delays common in legacy firms.
+                We built Beyond Horizons by Bethel Chambers to deliver cost-effective, precise, and innovative legal solutions. Our approach uses lean, digital workflows to deliver legal services efficiently.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                We regularly work across and collaborate with Magic Circle, AM Law Top 100 and White Shoe firms worldwide, combining global experience with our AI-driven efficiency.
+                Where a matter needs advice on other laws, we work alongside foreign counsel instructed for that purpose.
               </p>
             </div>
           </div>

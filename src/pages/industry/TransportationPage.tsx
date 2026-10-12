@@ -4,8 +4,8 @@ import { Building, Truck, Shield, Globe } from "lucide-react";
 const data: IndustryPageData = {
   slug: "transportation",
   seo: {
-    title: "Transportation Law Singapore — Infrastructure, Logistics & Cross-Border Counsel | Beyond Horizons Legal",
-    description: "Specialist transportation lawyers in Singapore. Infrastructure PPPs, logistics contracts, maritime law, cross-border freight. Beyond Horizons Legal by Bethel Chambers LLC.",
+    title: "Transportation Law Singapore — Infrastructure, Logistics & Cross-Border Counsel | Beyond Horizons by Bethel Chambers",
+    description: "Specialist transportation lawyers in Singapore. Infrastructure PPPs, logistics contracts, maritime law, cross-border freight. Beyond Horizons by Bethel Chambers LLC.",
   },
   hero: {
     title: "Transportation Law — Infrastructure, Logistics & Cross-Border Trade Counsel",
@@ -21,18 +21,6 @@ const data: IndustryPageData = {
       { icon: Globe, title: "Cross-Border Transportation", description: "Multi-jurisdictional freight agreements, customs facilitation, cabotage rules, and international transport conventions." },
     ],
     stats: ["50+ transportation infrastructure matters", "20+ logistics and supply chain clients", "10+ ASEAN jurisdictions", "$8B+ in transaction value in 2024 & 2025"],
-  },
-  comparison: {
-    heading: "Why Specialist Transport Counsel Matters",
-    otherLabel: "Generalist Commercial Firms",
-    rows: [
-      { feature: "Industry Knowledge", other: "Learn your sector during the engagement", bh: "Deep, pre-existing understanding of transport economics, regulations, and commercial dynamics" },
-      { feature: "Regulatory Navigation", other: "Outsource specialist regulatory questions", bh: "In-house expertise spanning maritime, aviation, road, and rail regulatory frameworks" },
-      { feature: "Pricing", other: "Premium hourly rates, unpredictable costs", bh: "Transparent pricing with fixed-fee and capped options" },
-      { feature: "Cross-Border Coordination", other: "Refer out to local firms on ad-hoc basis", bh: "Established global partner network — Magic Circle and White Shoe firm alliances" },
-      { feature: "Technology", other: "Traditional document-heavy processes", bh: "Digital-first: automated contract management, virtual 24/7 operations" },
-      { feature: "Sustainability Expertise", other: "Limited or separate ESG practice", bh: "Integrated Green Finance and ESG advisory — certified expertise" },
-    ],
   },
   spotlight: {
     heading: "Transport Sectors We Serve",

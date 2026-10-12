@@ -61,8 +61,8 @@ const ORGANIZATION_JSONLD = `{
     "email": "HL@beyondhorizons.sg",
     "award": [
       "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
-      "Chambers Asia-Pacific — Band 4, Aviation: Finance — Asia-Pacific Region",
-      "Chambers Global Market Leaders — Band 3, Asset Finance",
+      "Chambers Asia-Pacific 2026 — Band 4, Aviation: Finance — Asia-Pacific Region",
+      "Chambers Global 2026 — Global Market Leaders, Band 3, Asset Finance",
       "Legal 500 Next Generation Partner 2023"
     ],
     "sameAs": [
@@ -121,15 +121,15 @@ const FOUNDER_JSONLD = `{
 "name": "Hui Ling Teo",
   "alternateName": "Teo Hui Ling",
   "jobTitle": "Founder",
-  "description": "Dual-qualified lawyer — English solicitor and Singapore advocate & solicitor. Founder of Beyond Horizons by Bethel Chambers LLC.",
+  "description": "Founder of Beyond Horizons by Bethel Chambers LLC; qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore.",
   "worksFor": {
     "@id": "https://beyondhorizons.sg/#organization"
   },
   "email": "HL@beyondhorizons.sg",
   "award": [
     "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
-      "Chambers Asia-Pacific — Band 4, Aviation: Finance — Asia-Pacific Region",
-      "Chambers Global Market Leaders — Band 3, Asset Finance",
+      "Chambers Asia-Pacific 2026 — Band 4, Aviation: Finance — Asia-Pacific Region",
+      "Chambers Global 2026 — Global Market Leaders, Band 3, Asset Finance",
     "Legal 500 Next Generation Partner 2023"
   ],
   "sameAs": [

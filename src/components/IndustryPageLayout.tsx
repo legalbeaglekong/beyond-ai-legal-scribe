@@ -154,7 +154,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org", "@type": "LegalService",
-            name: "Beyond Horizons Legal",
+            name: "Beyond Horizons by Bethel Chambers",
             provider: { "@type": "Organization", name: "Bethel Chambers LLC", url: "https://beyondhorizons.sg" },
             description: data.seo.description, areaServed: "Asia-Pacific",
             url: `https://beyondhorizons.sg/industry/${data.slug}`,

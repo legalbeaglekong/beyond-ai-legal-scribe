@@ -167,7 +167,7 @@ const JoinUsPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="default" size="lg" className="bg-accent text-accent-foreground font-semibold shadow-lg hover:bg-accent/90" asChild>
-                <a href="mailto:HL@beyondhorizons.sg?subject=Application — Beyond Horizons Legal">
+                <a href="mailto:HL@beyondhorizons.sg?subject=Application — Beyond Horizons by Bethel Chambers">
                   <Mail className="mr-2 h-4 w-4" /> Send Application
                 </a>
               </Button>

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { createFaqScript, createPageHead } from "@/lib/seo";
-import AscendingAsiaPage, { section232Faqs } from "@/pages/AscendingAsiaPage";
+import { createPageHead } from "@/lib/seo";
+import AscendingAsiaPage from "@/pages/AscendingAsiaPage";
 
 export const Route = createFileRoute("/ascending-asia")({
   head: () => createPageHead({
@@ -8,7 +8,6 @@ export const Route = createFileRoute("/ascending-asia")({
     description:
       "Advanced Air Mobility market-entry guide for APAC — plus Section 232 UAS tariff and content-origin certification issues for suppliers into US programmes. Register for the playbook or schedule a consultation.",
     path: "/ascending-asia",
-    scripts: [createFaqScript(section232Faqs)],
   }),
   component: AscendingAsiaPage,
 });

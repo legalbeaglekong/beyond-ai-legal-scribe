@@ -13,34 +13,34 @@ const WhyChooseUsDetail = () => {
   const detailContent = {
     "digital-first": {
       icon: Bot,
-      title: "Beyond Horizons: Leader in Digital-First Legal Services",
+      title: "Beyond Horizons: Digital-First Legal Services",
       gradient: "from-blue-600 to-purple-600",
       content: {
-        intro: "Beyond Horizons Legal stands at the forefront of digital-first legal services in Singapore and beyond. Founded in 2024 by Hui Ling Teo, our firm was built from the ground up to leverage modern technology deeply integrated into every aspect of legal practice.",
+        intro: "Beyond Horizons by Bethel Chambers LLC stands at the forefront of digital-first legal services in Singapore and beyond. Founded in 2024 by Hui Ling Teo, our firm was built from the ground up to leverage modern technology deeply integrated into every aspect of legal practice.",
         highlights: [
           "Founded in 2024 with technology integration as core architecture",
           "Workflows designed specifically for digital optimization",
           "Advanced data security protocols built for modern environments",
           "Client communications enhanced through digital capabilities"
         ],
-        analysis: "Unlike traditional law firms that retrofit digital tools as an afterthought, Beyond Horizons designed its workflows, data security protocols, and client communications to maximize technology benefits while maintaining strict confidentiality and legal privilege. Our modern approach delivers unprecedented cost efficiency, faster turnaround times, and enhanced accuracy. We regularly collaborate with Magic Circle and White Shoe firms globally, demonstrating our ability to meet the highest international standards while driving innovation.",
-        conclusion: "Choosing Beyond Horizons means choosing a future-focused law firm that combines proven legal expertise with cutting-edge technology to deliver exceptional client outcomes."
+        analysis: "Beyond Horizons designed its workflows, data security protocols, and client communications to maximize technology benefits while maintaining strict confidentiality and legal privilege. Our modern approach delivers unprecedented cost efficiency, faster turnaround times, and enhanced accuracy. We regularly collaborate with Magic Circle and White Shoe firms globally, demonstrating our ability to meet the highest international standards while driving innovation.",
+        conclusion: "Choosing Beyond Horizons means choosing a future-focused law firm that combines legal experience with technology."
       }
     },
     "cost-efficiency": {
       icon: DollarSign,
-      title: "Unmatched Cost Efficiency and Client Focus",
+      title: "Cost Efficiency and Client Focus",
       gradient: "from-green-600 to-blue-600",
       content: {
-        intro: "At Beyond Horizons Legal, we understand that clients expect more than just legal advice — they want value, transparency, and speed. By utilizing efficient modern workflows, we significantly reduce overhead costs typically associated with large law firms.",
+        intro: "At Beyond Horizons by Bethel Chambers LLC, we understand that clients expect more than just legal advice — they want value, transparency, and speed. By utilizing efficient modern workflows, we keep overhead costs low.",
         highlights: [
           "Competitive and transparent pricing structure",
           "Lean operations through efficient digital workflows",
           "Rapid response times and thorough due diligence",
           "Clear communication throughout legal processes"
         ],
-        analysis: "Our lean structure and efficient workflows allow us to offer competitive and transparent pricing without compromising quality. Clients benefit from rapid responses, thorough due diligence, and clear communication throughout the process. This approach ensures that proven legal services are accessible to a broader range of clients — from high-growth startups to established multinational corporations — without the premium price tag of traditional firms.",
-        conclusion: "We deliver exceptional value by combining operational efficiency with unwavering commitment to legal excellence."
+        analysis: "Our lean structure and efficient workflows allow us to offer competitive and transparent pricing without compromising quality. Clients benefit from rapid responses, thorough due diligence, and clear communication throughout the process. This approach ensures that proven legal services are accessible to a broader range of clients — from high-growth startups to established multinational corporations — with fees set out in the engagement letter.",
+        conclusion: "We aim to combine operational efficiency with careful legal work."
       }
     },
     "global-expertise": {
@@ -48,9 +48,9 @@ const WhyChooseUsDetail = () => {
       title: "Global Collaboration and Cross-Border Expertise",
       gradient: "from-purple-600 to-pink-600",
       content: {
-        intro: "Beyond Horizons Legal prides itself on its strong global network and cross-border capabilities. We regularly partner with Magic Circle and White Shoe firms in Europe, North America, and Asia to serve clients with complex, multi-jurisdictional legal needs.",
+        intro: "Beyond Horizons by Bethel Chambers LLC prides itself on its strong global network and cross-border capabilities. Where a matter needs advice on other laws, we coordinate with foreign counsel.",
         highlights: [
-          "Partnerships with Magic Circle and White Shoe firms globally",
+          "Coordination with foreign counsel where needed",
           "Dual qualification in English and Singapore law",
           "Multi-jurisdictional expertise across ASEAN and beyond",
           "Specialized in aviation finance, project finance, and corporate restructuring"
@@ -64,12 +64,12 @@ const WhyChooseUsDetail = () => {
       title: "Commitment to Confidentiality and Legal Privilege",
       gradient: "from-orange-600 to-red-600",
       content: {
-        intro: "We recognize that confidentiality and legal privilege are non-negotiable in legal services. Beyond Horizons Legal has embedded rigorous data privacy and security protocols within its digital workflows to protect client information at every stage.",
+        intro: "We recognize that confidentiality and legal privilege are non-negotiable in legal services. Beyond Horizons by Bethel Chambers LLC has embedded rigorous data privacy and security protocols within its digital workflows to protect client information at every stage.",
         highlights: [
           "Secure data processing in controlled environments",
           "Lawyer-controlled data handling protocols",
-          "Enhanced legal privilege protection",
-          "Zero exposure to public or unsecured platforms"
+          "Attention to preserving legal privilege",
+          "Client data is handled on controlled platforms"
         ],
         analysis: "Our comprehensive approach ensures that all data processing occurs within secure, lawyer-controlled environments. This preserves the essential legal privilege and builds trust with our clients through robust security measures.",
         conclusion: "Choosing Beyond Horizons means partnering with a law firm that safeguards your information as fiercely as it advances your legal objectives."
@@ -165,7 +165,7 @@ const WhyChooseUsDetail = () => {
               <Card className="inline-block border-0 bg-gradient-to-br from-primary/5 to-primary/10 backdrop-blur-xs">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-4 text-foreground">Ready to Experience the Difference?</h3>
-                  <p className="text-muted-foreground mb-6">Schedule a consultation to discuss how Beyond Horizons Legal can serve your needs.</p>
+                  <p className="text-muted-foreground mb-6">Schedule a consultation to discuss how Beyond Horizons by Bethel Chambers LLC can serve your needs.</p>
                   <Button 
                     className="button-pulse bg-foreground text-background hover:bg-foreground/90"
                     onClick={() => navigate("/#contact")}

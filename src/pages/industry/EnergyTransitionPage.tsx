@@ -4,8 +4,8 @@ import { Sun, Leaf, BarChart3, Building } from "lucide-react";
 const data: IndustryPageData = {
   slug: "energy-transition",
   seo: {
-    title: "Energy Transition Law Singapore — Renewable Energy, ESG & Green Finance Counsel | Beyond Horizons Legal",
-    description: "Energy transition counsel in Singapore — renewable energy projects, green bonds, sustainability-linked loans and ESG disclosure. Beyond Horizons Legal by Bethel Chambers LLC.",
+    title: "Energy Transition Law Singapore — Renewable Energy, ESG & Green Finance Counsel | Beyond Horizons by Bethel Chambers",
+    description: "Energy transition counsel in Singapore — renewable energy projects, green bonds, sustainability-linked loans and ESG disclosure. Beyond Horizons by Bethel Chambers LLC.",
   },
   hero: {
     title: "Energy Transition Law — Renewable Energy, Clean Tech & ESG Infrastructure Counsel",
@@ -22,18 +22,6 @@ const data: IndustryPageData = {
     ],
     stats: ["ESG and green finance work across both areas", "Sustainability-linked loan structuring", "ASEAN renewable energy project experience", "Published commentary on aviation ESG & greenwashing"],
   },
-  comparison: {
-    heading: "Integrated ESG Legal Counsel vs. Bolt-On Advisory",
-    otherLabel: "Traditional Firms with ESG Add-On",
-    rows: [
-      { feature: "ESG Integration", other: "Separate ESG team, brought in late in deals", bh: "ESG considered from deal inception — sustainability-aware counsel on ESG and green finance points" },
-      { feature: "Greenwashing Risk", other: "Generic compliance review", bh: "Proactive greenwashing risk management — published analysis on APAC aviation greenwashing enforcement" },
-      { feature: "Green Finance Structuring", other: "Outsource to specialist advisors", bh: "In-house green bond, SLL, and sustainability-linked facility structuring" },
-      { feature: "Regulatory Navigation", other: "Reactive to new ESG regulations", bh: "Proactive — tracking SGX sustainability reporting, ISSB standards, EU CSRD cross-border impact" },
-      { feature: "Pricing", other: "Premium rates for specialist ESG overlay", bh: "Integrated pricing — ESG advisory built into transaction fees, not billed as a separate workstream" },
-      { feature: "Cross-Sector Knowledge", other: "ESG siloed from industry expertise", bh: "ESG expertise combined with deep aviation, transport, and infrastructure sector knowledge" },
-    ],
-  },
   spotlight: {
     heading: "The APAC Energy Transition — By the Numbers",
     cards: [
@@ -41,7 +29,7 @@ const data: IndustryPageData = {
       { title: "Green Finance Opportunity", description: "$1.5T+ green finance opportunity in Asia-Pacific, driving demand for specialist legal structuring." },
       { title: "Anti-Greenwashing Compliance", description: "Rising greenwashing enforcement across APAC regulators, requiring proactive compliance strategies." },
     ],
-    analysis: "The energy transition creates both significant opportunity and legal complexity. Beyond Horizons Legal can help clients navigate this landscape, with sustainability and green finance considerations built into transaction documents rather than added afterwards. Educational overview only — not legal advice.",
+    analysis: "The energy transition creates both significant opportunity and legal complexity. Beyond Horizons by Bethel Chambers can help clients navigate this landscape, with sustainability and green finance considerations built into transaction documents rather than added afterwards. Educational overview only — not legal advice.",
   },
   faqs: {
     heading: "Frequently Asked Questions — Energy Transition Law",

@@ -11,55 +11,13 @@ import AccoladeBanner from "@/components/AccoladeBanner";
 
 const BOOKING_URL = "https://wa.me/6597265330";
 
-const comparisonSections = [
-  {
-    heading: "Specialist Practice vs Full-Service Firm",
-    otherLabel: "Full-Service Commercial Firms",
-    description: "Large full-service firms offer breadth — but specialist counsel offers depth. When your matter sits at the intersection of technology, regulation, and cross-border complexity, generalist coverage may not be enough.",
-    rows: [
-      { feature: "Sector Knowledge", other: "Lawyers learn your industry during the engagement, relying on general commercial principles", bh: "Pre-existing deep expertise in your sector — aviation, space, blockchain, AI governance, energy transition — from day one" },
-      { feature: "Regulatory Fluency", other: "Specialist regulatory questions often outsourced or referred to niche partners", bh: "In-house fluency across sector-specific regulations: MAS guidelines, EU AI Act, ICAO conventions, carbon market frameworks" },
-      { feature: "Commercial Acumen", other: "Strong on legal drafting, may lack operational and commercial context", bh: "Lawyers with industry backgrounds who understand both the legal and commercial dimensions of your decisions" },
-      { feature: "Team Continuity", other: "Work often delegated to junior associates; partner involvement can be limited", bh: "Senior-led engagement throughout — the lawyer who pitches is the lawyer who delivers" },
-      { feature: "Cross-Border Coordination", other: "Referrals to local firms on an ad-hoc, relationship-dependent basis", bh: "Established global alliance network including Magic Circle and White Shoe firm partnerships, coordinated from Singapore" },
-      { feature: "Pricing Transparency", other: "Hourly billing with limited cost visibility; scope creep common", bh: "Fixed-fee and capped-fee structures as standard, with transparent scoping from the outset" },
-    ],
-  },
-  {
-    heading: "Specialist Counsel vs Big Four Advisory",
-    otherLabel: "Big Four Advisory Practices",
-    description: "Advisory firms bring scale and process — but legal privilege, courtroom credibility, and regulatory representation require qualified legal counsel. The distinction matters when stakes are high.",
-    rows: [
-      { feature: "Legal Privilege", other: "Advisory work generally not protected by legal professional privilege", bh: "All advice protected by legal professional privilege — critical for sensitive regulatory and compliance matters" },
-      { feature: "Regulatory Representation", other: "Cannot represent clients before regulators or in legal proceedings", bh: "Full rights of audience and regulatory representation across multiple jurisdictions" },
-      { feature: "Independence", other: "Potential conflicts from concurrent audit, tax, and consulting relationships with counterparties", bh: "Independent legal practice with rigorous conflict management and no competing service lines" },
-      { feature: "Implementation Focus", other: "Strong on frameworks, process design, and slide decks; may lack legal enforceability analysis", bh: "Frameworks designed to be legally enforceable, operationally practical, and regulatory-compliant simultaneously" },
-      { feature: "Cost Structure", other: "Large engagement teams with significant junior staffing; costs can escalate", bh: "Lean, senior-led teams delivering focused outcomes without unnecessary overhead" },
-      { feature: "Sector Depth", other: "Broad industry coverage but legal analysis often surface-level", bh: "Deep legal analysis grounded in sector-specific knowledge and regulatory precedent" },
-    ],
-  },
-  {
-    heading: "Specialist Counsel vs Building In-House",
-    otherLabel: "Expanding Your In-House Team",
-    description: "In-house counsel are essential — but building specialist capabilities internally for every emerging area can be slow, expensive, and difficult to sustain. A hybrid model often delivers the best results.",
-    rows: [
-      { feature: "Speed to Capability", other: "Recruitment cycles of 3–6 months; onboarding and ramp-up time on top", bh: "Immediate access to specialist capability — operational from engagement day one" },
-      { feature: "Cost Efficiency", other: "Full-time salary, benefits, training, and retention costs — even for intermittent needs", bh: "Fractional and project-based engagement models that match cost to actual demand" },
-      { feature: "Breadth of Expertise", other: "Each hire covers one specialism; building a full specialist bench requires multiple hires", bh: "Access to a multi-disciplinary team spanning AI, aviation, blockchain, space, trade, and more — through a single relationship" },
-      { feature: "External Perspective", other: "In-house teams can develop blind spots from organisational proximity", bh: "Independent external perspective informed by cross-sector and cross-jurisdictional experience" },
-      { feature: "Scalability", other: "Headcount fixed; difficult to scale up for transactions or scale down in quiet periods", bh: "Flexible resourcing that scales with your needs — from a few hours a month to full transaction support" },
-      { feature: "Knowledge Currency", other: "Continuing education budgets often limited; hard to stay current across all emerging areas", bh: "Practitioners who work across multiple clients and jurisdictions, continuously exposed to the latest regulatory and market developments" },
-    ],
-  },
-];
 
 const faqs = [
-  { question: "When should I use specialist counsel instead of my regular law firm?", answer: "Specialist counsel adds the most value when your matter involves sector-specific regulation, cross-border complexity, or emerging technology areas where general commercial lawyers may lack the depth of experience to anticipate risks. Common triggers include entering regulated industries, deploying AI systems, structuring complex cross-border transactions, or navigating new regulatory frameworks." },
   { question: "Can specialist counsel work alongside my existing legal team?", answer: "Absolutely — and this is often the most effective model. We regularly work alongside in-house legal teams and other external counsel, providing specialist input on specific aspects of a matter while your primary advisors handle the broader relationship. We are experienced in collaborative, multi-firm engagements and prioritise seamless coordination." },
   { question: "How does Beyond Horizons maintain specialist depth across so many sectors?", answer: "Our practice is deliberately structured around interconnected sectors — aviation, space, blockchain, AI governance, energy transition, and trade — where regulatory frameworks, commercial models, and risk profiles share common threads. This allows us to develop genuine depth rather than superficial breadth, with each engagement reinforcing expertise across related practice areas." },
   { question: "What is fractional general counsel and how does it differ from traditional outside counsel?", answer: "Fractional general counsel provides ongoing, embedded senior legal support on a part-time or retainer basis — functioning as an extension of your leadership team rather than a transactional outside advisor. This model is particularly effective for growth-stage companies and regional headquarters that need strategic legal guidance without the cost of a full-time general counsel appointment." },
   { question: "How does pricing work for specialist legal services?", answer: "We offer transparent pricing structures including fixed-fee packages for defined scope work, capped-fee arrangements for matters with variable scope, and monthly retainers for ongoing advisory relationships. We scope every engagement upfront and provide clear cost estimates before work begins — no surprise invoices, no scope creep." },
-  { question: "What jurisdictions does Beyond Horizons cover?", answer: "We are based in Singapore and advise across the Asia-Pacific region, with established alliance partnerships with leading firms in all major jurisdictions. For cross-border matters, we coordinate seamlessly with our global network — including Magic Circle and leading US and European firms — providing clients with a single point of contact for multi-jurisdictional engagements." },
+  { question: "What jurisdictions does Beyond Horizons cover?", answer: "We are based in Singapore. For cross-border matters, we coordinate with foreign counsel on laws other than Singapore and English law." },
 ];
 
 const WhySpecialistCounselPage = () => {
@@ -96,7 +54,7 @@ const WhySpecialistCounselPage = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org", "@type": "LegalService",
-            name: "Beyond Horizons Legal",
+            name: "Beyond Horizons by Bethel Chambers",
             provider: { "@type": "Organization", name: "Bethel Chambers LLC", url: "https://www.bethelchambers.com" },
             description: "Specialist legal counsel for complex, cross-border, and regulated matters across Asia-Pacific.",
             areaServed: "Asia-Pacific",
@@ -132,7 +90,7 @@ const WhySpecialistCounselPage = () => {
               {[
                 { icon: Scale, title: "Depth Over Breadth", desc: "Genuine expertise in defined practice areas — not surface-level coverage across everything." },
                 { icon: Users, title: "Senior-Led Delivery", desc: "The partner who scopes your matter is the one who delivers it. No delegation to junior associates." },
-                { icon: Globe, title: "Global Reach, Singapore Base", desc: "Coordinated cross-border advice through established alliances with leading international firms." },
+                { icon: Globe, title: "Global Reach, Singapore Base", desc: "Cross-border matters coordinated with foreign counsel." },
                 { icon: Shield, title: "Privileged & Independent", desc: "Full legal professional privilege and independence — no competing audit, tax, or consulting interests." },
                 { icon: Clock, title: "Cost Certainty", desc: "Fixed-fee and capped-fee structures as standard. Transparent scoping before work begins." },
                 { icon: Lightbulb, title: "Commercial Pragmatism", desc: "Legal advice grounded in commercial reality — we understand how businesses make decisions." },
@@ -150,46 +108,6 @@ const WhySpecialistCounselPage = () => {
             </div>
           </div>
         </section>
-
-        {/* Comparison Sections */}
-        {comparisonSections.map((section, sIdx) => (
-          <section key={sIdx} className={`section-padding ${sIdx % 2 === 0 ? "bg-secondary/20" : "bg-background"}`}>
-            <div className="max-w-5xl mx-auto container-padding fade-in">
-              <div className="text-center mb-8">
-                <div className="teal-line mx-auto mb-6" />
-                <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4">
-                  {section.heading}
-                </h2>
-                <p className="text-sm text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                  {section.description}
-                </p>
-              </div>
-              <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse">
-                  <thead>
-                    <tr className="border-b border-border/50">
-                      <th className="py-4 px-4 text-xs text-muted-foreground font-sans uppercase tracking-wider w-1/4">Consideration</th>
-                      <th className="py-4 px-4 text-xs text-muted-foreground font-sans uppercase tracking-wider w-[37.5%]">{section.otherLabel}</th>
-                      <th className="py-4 px-4 text-xs text-accent font-sans uppercase tracking-wider w-[37.5%]">Beyond Horizons</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {section.rows.map((row, i) => (
-                      <tr key={i} className="border-b border-border/20">
-                        <td className="py-4 px-4 text-sm text-foreground font-sans">{row.feature}</td>
-                        <td className="py-4 px-4 text-xs text-muted-foreground">{row.other}</td>
-                        <td className="py-4 px-4 text-xs text-foreground">{row.bh}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="text-xs text-muted-foreground mt-6 text-center italic">
-                Comparison reflects general service model characteristics. Individual firms and teams vary. Every engagement is unique.
-              </p>
-            </div>
-          </section>
-        ))}
 
         {/* Practice Areas */}
         <section className="section-padding bg-background">

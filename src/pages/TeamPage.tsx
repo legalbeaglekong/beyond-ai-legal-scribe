@@ -16,7 +16,7 @@ const teamMembers = [
     roleZh: "创始人",
     image: teamHuiling,
     flag: "🇸🇬 🇬🇧",
-    summary: "Chambers ranked. Legal 500 \"Next Generation Partner\". English and Singapore law qualified.",
+    summary: "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore. Legal 500 \"Next Generation Partner\" (2023). Qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore.",
     summaryZh: "钱伯斯排名。Legal 500「新一代合伙人」。英格兰和新加坡法律资格。",
     experience: "14 years of experience",
     experienceZh: "14年经验",
@@ -47,7 +47,7 @@ const TeamPage = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "Our Team — Beyond Horizons Legal",
+            name: "Our Team — Beyond Horizons by Bethel Chambers",
             url: "https://beyondhorizons.sg/team",
             about: {
               "@type": "Organization",

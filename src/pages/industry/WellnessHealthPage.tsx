@@ -4,8 +4,8 @@ import { Heart, Cpu, Shield, Smartphone } from "lucide-react";
 const data: IndustryPageData = {
   slug: "wellness-health",
   seo: {
-    title: "Wellness & Health Law Singapore — Healthcare Regulation, Digital Health & MedTech | Beyond Horizons Legal",
-    description: "Specialist healthcare and wellness lawyers in Singapore. Medical device regulation, digital health, telemedicine, health data privacy. Beyond Horizons Legal by Bethel Chambers LLC.",
+    title: "Wellness & Health Law Singapore — Healthcare Regulation, Digital Health & MedTech | Beyond Horizons by Bethel Chambers",
+    description: "Specialist healthcare and wellness lawyers in Singapore. Medical device regulation, digital health, telemedicine, health data privacy. Beyond Horizons by Bethel Chambers LLC.",
   },
   hero: {
     title: "Wellness & Health Law — Healthcare Regulation, Digital Health & MedTech Counsel",
@@ -22,18 +22,6 @@ const data: IndustryPageData = {
     ],
     stats: ["30+ healthcare and wellness matters advised", "10+ APAC jurisdictions", "Digital health & AI-in-medicine focus", "Dual English & Singapore law qualification"],
   },
-  comparison: {
-    heading: "Specialist Health & Wellness Counsel vs. General Practice",
-    otherLabel: "General Commercial Firms",
-    rows: [
-      { feature: "Regulatory Depth", other: "Broad regulatory practice, health is one of many sectors", bh: "Focused health regulatory expertise with cross-border ASEAN and international experience" },
-      { feature: "Digital Health Understanding", other: "Treat as standard technology contract", bh: "Understand SaMD classification, telemedicine licensing, and health AI governance frameworks" },
-      { feature: "Data Privacy in Health", other: "Generic PDPA/GDPR advice", bh: "Health-specific data protection — clinical data, patient consent architectures, cross-border health data transfers" },
-      { feature: "Pricing", other: "Premium hourly billing", bh: "Transparent, value-aligned pricing — fixed-fee options for regulatory submissions" },
-      { feature: "ESG & Sustainability", other: "Separate practice group", bh: "Integrated ESG advisory — health sector sustainability reporting, green healthcare facilities" },
-      { feature: "Innovation Mindset", other: "Conservative, precedent-driven", bh: "Forward-looking — advising on AI diagnostics, digital therapeutics, and next-gen wellness platforms" },
-    ],
-  },
   spotlight: {
     heading: "The APAC Digital Health Opportunity",
     cards: [
@@ -41,7 +29,7 @@ const data: IndustryPageData = {
       { title: "Regulatory Complexity", description: "Rising regulatory complexity — HSA, TGA, PMDA, NMPA frameworks diverging, requiring specialist cross-border navigation." },
       { title: "AI in Healthcare", description: "AI-in-healthcare regulation emerging across ASEAN, creating new compliance requirements for digital health platforms." },
     ],
-    analysis: "Navigating this opportunity requires lawyers who understand both the technology and the regulation. Beyond Horizons Legal combines cross-border regulatory expertise with genuine understanding of digital health business models.",
+    analysis: "Navigating this opportunity requires lawyers who understand both the technology and the regulation. Beyond Horizons by Bethel Chambers combines cross-border regulatory expertise with genuine understanding of digital health business models.",
   },
   faqs: {
     heading: "Frequently Asked Questions — Wellness & Health Law",

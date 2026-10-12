@@ -22,18 +22,6 @@ export const data: IndustryPageData = {
     ],
     stats: ["Cross-border contractual restructuring", "JV & shareholder agreement advisory", "Supply chain realignment support", "Trade dispute risk mitigation"],
   },
-  comparison: {
-    heading: "Strategic Trade Counsel — Beyond Compliance",
-    otherLabel: "General Commercial Firms",
-    rows: [
-      { feature: "Trade Policy Response", other: "Reactive advice after tariff changes hit", bh: "Proactive contractual and structural advisory — repositioning businesses before disruption" },
-      { feature: "Contractual Expertise", other: "Standard contract review", bh: "Deep restructuring of commercial agreements to address tariff impacts, force majeure, and pricing mechanisms" },
-      { feature: "JV & Partnerships", other: "Generic joint venture templates", bh: "Bespoke JV and shareholder agreements designed for shifting trade landscapes and cross-border partnerships" },
-      { feature: "Business Strategy Integration", other: "Legal advice disconnected from commercial reality", bh: "Combined legal, commercial, and strategic advisory — holistic repositioning solutions" },
-      { feature: "Scoping", other: "Unclear workstreams before review begins", bh: "Scoped engagement terms agreed around documents, counterparties, and filing responsibilities" },
-      { feature: "Speed of Response", other: "Lengthy turnaround on restructuring advice", bh: "Rapid-response advisory for urgent trade disruption scenarios" },
-    ],
-  },
   spotlight: {
     heading: "Recent Developments",
     cards: [
@@ -53,8 +41,7 @@ export const data: IndustryPageData = {
       { question: "How do I reposition my supply chain in response to tariffs?", answer: "Repositioning involves legal structuring across multiple dimensions — new supplier agreements, entity restructuring, FTA utilisation, and potentially new JV or partnership arrangements in alternative jurisdictions." },
       { question: "What should a shareholder agreement include to address trade risks?", answer: "Key provisions include deadlock resolution for trade-related disputes, material adverse change definitions that capture tariff impacts, exit mechanisms, and governance structures that allow rapid response to policy shifts." },
       { question: "How quickly can contractual restructuring be completed?", answer: "Timelines depend on complexity, but we offer rapid-response advisory for urgent trade disruption scenarios. Simple contract amendments can be turned around in days; comprehensive restructuring programmes are scoped on a project basis." },
-      { question: "Do you advise on Section 232 UAS tariffs?", answer: "We advise APAC clients on the contractual and supply-chain documentation side of selling UAS / components into US programmes under the current Section 232 UAS measures — including who owns origin certification risk. We are not a substitute for a US customs broker or HTS specialist of record. Longer plain-English sketch: Ascending Asia AAM page." },
-      { question: "Should I use the Trade & Tariff page or Ascending Asia?", answer: "Use Ascending Asia for AAM / UAS market-entry context plus the Section 232 UAS sketch. Use this Trade & Tariff page for broader contractual restructuring and tariff-shock commercial work. Some matters need both pages." },
+      { question: "Should I use the Trade & Tariff page or Ascending Asia?", answer: "Use Ascending Asia for AAM / UAS market-entry context. Use this Trade & Tariff page for broader contractual restructuring and tariff-shock commercial work. Some matters need both pages." },
       { question: "How do I start?", answer: "Schedule a consultation or contact us via the site. Bring a short note on product type (UAS vs component), buyer geography, and whether you already have US customs counsel. General website information is not legal advice." },
     ],
   },

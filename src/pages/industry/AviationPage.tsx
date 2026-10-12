@@ -24,11 +24,11 @@ export const data: IndustryPageData = {
       { label: "Bizjet", href: "#work-menu" },
     ],
     subtitle:
-      "Most aviation finance and leasing matters we see are governed by English law. Beyond Horizons by Bethel Chambers LLC is a cross-border aviation finance desk with a physical presence in Singapore, dual English and Singapore law qualification on the team, Chambers-ranked aviation finance expertise, and coverage across time zones so counterparties are not waiting on a single close-of-play for every turn of the mark-up. We are comfortable across global matters, with specific expertise in developing markets. The same desk sits with lessors, airlines, financiers and private capital when files turn hard — distressed scenarios, aircraft recoveries / asset recovery, incomplete aircraft, engine or documentary packages, and insolvency-adjacent coordination — experience spanning aviation finance, leasing, restructuring and asset recovery.",
+      "Most aviation finance and leasing matters we see are governed by English law. Beyond Horizons by Bethel Chambers LLC is a cross-border aviation finance desk with a physical presence in Singapore, a Founder qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore, Chambers-ranked aviation finance expertise, and coverage across time zones so counterparties are not waiting on a single close-of-play for every turn of the mark-up. We are comfortable across global matters, with specific expertise in developing markets. The same desk sits with lessors, airlines, financiers and private capital when files turn hard — distressed scenarios, aircraft recoveries / asset recovery, incomplete aircraft, engine or documentary packages, and insolvency-adjacent coordination — experience spanning aviation finance, leasing, restructuring and asset recovery.",
     badges: [
       "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
-      "Chambers Asia-Pacific — Band 4, Aviation: Finance — Asia-Pacific Region",
-      "Chambers Global Market Leaders — Band 3, Asset Finance",
+      "Chambers Asia-Pacific 2026 — Band 4, Aviation: Finance — Asia-Pacific Region",
+      "Chambers Global 2026 — Global Market Leaders, Band 3, Asset Finance",
       "Global Market Leader Asset Finance Lawyer (Chambers)",
       "Legal 500 Next Generation Partner",
       "ALB Law Firm to Watch 2026",
@@ -38,7 +38,7 @@ export const data: IndustryPageData = {
   intro: {
     paragraphs: [
       "We use technology confidently in how we draft, version and track documents — and we stress-test key documents with our disputes and arbitration team before they have to survive a default, redelivery fight or enforcement path.",
-      "Magic Circle and White Shoe collaboration is available when a matter needs that bench.",
+      "Where a matter needs advice on other laws, we coordinate with foreign counsel.",
     ],
     note:
       "Out of scope on this page: we are a law practice. We do not underwrite securities, lend as a bank or private-credit fund, broker aircraft, or act as a CAMO/MRO. We do not compare our fees with those of any other law practice.",
@@ -50,7 +50,7 @@ export const data: IndustryPageData = {
         icon: Scale,
         title: "English law as the default document law",
         description:
-          "Operating leases, finance leases, sale-and-purchase, facility and security packages in this sector are commonly English-law governed. We advise on those documents as English-qualified counsel on the team, and coordinate Singapore-law pieces (security, filings, opinions, parties, or regulatory interfaces) when the deal needs them — without pretending every aviation file is “Singapore-law only.”",
+          "Operating leases, finance leases, sale-and-purchase, facility and security packages in this sector are commonly English-law governed. We advise on those documents through Hui Ling Teo, who is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore,, and coordinate Singapore-law pieces (security, filings, opinions, parties, or regulatory interfaces) when the deal needs them — without pretending every aviation file is “Singapore-law only.”",
       },
       {
         icon: Clock,
@@ -306,10 +306,6 @@ export const data: IndustryPageData = {
         question: "What is an IDERA under the Cape Town Convention?",
         answer:
           "An IDERA (Irrevocable De-Registration and Export Request Authorisation) is an educational shorthand for an authorisation that can support deregistration and export of an aircraft as part of enforcement or remedy planning under the Cape Town framework, where the state declarations and facts allow it. Detail and edge cases belong in a matter-specific engagement — not in a website FAQ. Free course for orientation; for a live repossession, deregistration or export path, Talk to us / Schedule consultation.",
-      },
-      {
-        question: "When do I need specialist aviation finance counsel instead of Big Law?",
-        answer: "When the matter is document-heavy English-law leasing/finance, needs multi-timezone / regional turns, involves developing markets, or is heading into recovery / incomplete-docs / insolvency coordination — and you want continuity from a cross-border specialist aviation finance desk with a Singapore hub. Full-service or Magic Circle collaboration remains available when the bench is needed. We do not claim superiority over any named firm and we do not compare fees.",
       },
       {
         question: "Do you handle aircraft repossession?",

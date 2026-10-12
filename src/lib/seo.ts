@@ -60,7 +60,7 @@ export function createFaqScript(items: readonly FaqItem[]) {
 export const STATIC_PAGE_SEO = {
   "/about": ["About Beyond Horizons by Bethel Chambers LLC | Singapore", "Beyond Horizons is a Singapore-based cross-border practice group of Bethel Chambers LLC, led by Hui Ling Teo: aviation finance, AI and corporate counsel."],
   "/ai-tools": ["AI Legal Tools | Beyond Horizons Singapore", "Explore purpose-built legal tools for regulatory monitoring, contract review, financial modelling and legal operations."],
-  "/announcements": ["Announcements | Beyond Horizons Legal", "News, events and practice updates from Beyond Horizons by Bethel Chambers LLC in Singapore."],
+  "/announcements": ["Announcements | Beyond Horizons by Bethel Chambers", "News, events and practice updates from Beyond Horizons by Bethel Chambers LLC in Singapore."],
   "/ascending-asia": ["Ascending Asia | AAM Market Entry & Section 232 UAS Counsel | Beyond Horizons", "Advanced Air Mobility market-entry guide for APAC — plus Section 232 UAS tariff and content-origin certification issues for suppliers into US programmes. Register for the playbook or schedule a consultation."],
   "/courses": ["Free Legal Courses | Aviation Finance & Jet SPAs", "Free legal and business courses on jet sale agreements, aviation finance, Cape Town, AI contracts and cross-border transactions."],
   "/expertise": ["Legal Expertise | Beyond Horizons Singapore", "Explore cross-border corporate, finance, regulatory, employment, technology and dispute-resolution legal expertise."],
@@ -77,9 +77,9 @@ export const STATIC_PAGE_SEO = {
   "/industry/trade-tariff": ["Trade & Tariff Counsel Singapore | Contract Restructuring & UAS 232 | Beyond Horizons", "Trade and tariff counsel for APAC businesses — contractual restructuring, JV repositioning, and Section 232 UAS content-origin issues for suppliers into US programmes. Schedule a consultation."],
   "/industry/transportation": ["Transportation Counsel Singapore | Beyond Horizons", "Cross-border legal counsel for transportation businesses, commercial agreements, financing, regulation and operational risk."],
   "/industry/wellness-health": ["Wellness & Health Counsel Singapore | Beyond Horizons", "Legal guidance for wellness and health businesses on commercial contracts, regulation, data, employment and expansion."],
-  "/join-us": ["Careers at Beyond Horizons Legal | Singapore", "Explore career opportunities with Beyond Horizons, a digital-first Singapore legal practice serving cross-border clients."],
+  "/join-us": ["Careers at Beyond Horizons by Bethel Chambers | Singapore", "Explore career opportunities with Beyond Horizons, a digital-first Singapore legal practice serving cross-border clients."],
   "/market-insights": ["Legal Market Insights | Beyond Horizons", "Market intelligence on APAC legal services, cross-border transactions, technology, sustainability and regulatory change."],
-  "/our-clients": ["Our Clients | Beyond Horizons Legal", "See the businesses and organisations supported by Beyond Horizons across aviation, technology and cross-border matters."],
+  "/our-clients": ["Our Clients | Beyond Horizons by Bethel Chambers", "See the businesses and organisations supported by Beyond Horizons across aviation, technology and cross-border matters."],
   "/singapore-ai-governance": ["Singapore AI Governance Lawyer | MAS AI Risk Guidelines", "MAS AI Risk Management Guidelines (Oct 2026), AI Verify, FEAT and PDPC GenAI: AI governance counsel for Singapore FIs and the AI vendors that serve them."],
   "/singapore-alternative-energy-law": ["Singapore Renewable Energy Counsel | Beyond Horizons", "Counsel for electricity imports, solar, hydrogen, battery storage, carbon credits and green project finance in Singapore."],
   "/singapore-aviation-law": ["Singapore Aviation Law | CAAS, Cape Town & Private Jets", "Singapore aviation law: CAAS rules, Cape Town/IDERA, private and business aviation compliance, AOC checks and aircraft recoveries. HL@beyondhorizons.sg"],
@@ -90,8 +90,8 @@ export const STATIC_PAGE_SEO = {
   "/team": ["Our Lawyers | Hui Ling Teo & Team | Beyond Horizons", "Meet Hui Ling Teo and the English- and Singapore-qualified team at Beyond Horizons by Bethel Chambers LLC: aviation finance, cross-border and AI counsel."],
   "/topics": ["Legal Topics & Insights | Beyond Horizons", "Explore legal perspectives on aviation, AI, employment, transactions, energy, technology and cross-border business."],
   "/why-specialist-counsel": ["Why Specialist Counsel | Beyond Horizons", "Learn how focused, senior legal counsel supports complex cross-border, regulated and technology-driven matters."],
-  "/work": ["Our Work | Beyond Horizons Legal", "Explore the work, industries and community initiatives of Beyond Horizons by Bethel Chambers LLC."],
-  "/work/csr": ["Society & Impact | Beyond Horizons Legal", "Beyond Horizons supports sustainable aviation initiatives and community programmes in Singapore and across APAC."],
+  "/work": ["Our Work | Beyond Horizons by Bethel Chambers", "Explore the work, industries and community initiatives of Beyond Horizons by Bethel Chambers LLC."],
+  "/work/csr": ["Society & Impact | Beyond Horizons by Bethel Chambers", "Beyond Horizons supports sustainable aviation initiatives and community programmes in Singapore and across APAC."],
 } as const;
 
 export function createStaticPageHead(path: keyof typeof STATIC_PAGE_SEO) {
@@ -135,7 +135,7 @@ export function createExpertiseHead(id: string) {
 }
 
 const TEAM_SEO: Record<string, readonly [string, string]> = {
-  "hui-ling-teo": ["Hui Ling Teo | Aviation Finance Lawyer | Beyond Horizons", "Hui Ling Teo (Teo Hui Ling) leads Beyond Horizons by Bethel Chambers LLC. Dual-qualified in Singapore and English law. Chambers Band 3, Aviation: Finance."],
+  "hui-ling-teo": ["Hui Ling Teo | Aviation Finance Lawyer | Beyond Horizons", "Hui Ling Teo (Teo Hui Ling) leads Beyond Horizons by Bethel Chambers LLC. Qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore. Chambers Band 3, Aviation: Finance."],
   "sonia-motwani": ["Sonia Motwani | Beyond Horizons", "Sonia Motwani is Delivery Lead at Beyond Horizons and a solicitor qualified in England and Wales."],
 };
 

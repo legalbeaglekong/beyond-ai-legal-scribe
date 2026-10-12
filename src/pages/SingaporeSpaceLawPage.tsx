@@ -37,7 +37,7 @@ const faqs = [
     a: "Singapore has expanded OSTIn's mandate and funding under the Space Technology Development Programme, supported new satellite startups (including Earth observation and IoT constellation operators), and hosted growing GSTC editions. Singapore continues to develop national space legislation and regulatory frameworks for commercial space activity.",
   },
   {
-    q: "How does Beyond Horizons Legal price Singapore space law engagements?",
+    q: "How does Beyond Horizons by Bethel Chambers price Singapore space law engagements?",
     a: "We offer transparent, value-aligned pricing — fixed fees for regulatory filings and licensing, milestone-based pricing for satellite and launch transactions, and retainer arrangements for ongoing advisory tailored to the pace of the new space economy.",
   },
 ];
@@ -131,7 +131,7 @@ const SingaporeSpaceLawPage = () => {
               Space Law — Singapore-anchored, Cross-border Counsel for the New Space Economy
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Singapore-anchored space law advisory for satellite operators, launch providers and commercial space ventures — OSTIn coordination and IMDA spectrum in Singapore, partnered with leading space counsel for US, UK, EU, Japan, India and Australia cross-border matters.
+              Singapore-anchored space law advisory for satellite operators, launch providers and commercial space ventures — OSTIn coordination and IMDA spectrum in Singapore, coordinating with foreign counsel on cross-border matters.
             </p>
             <div className="flex flex-wrap gap-3 justify-center mb-8">
               {["OSTIn-aligned advisory", "IMDA spectrum & ITU filings", "Cross-border launch & satellite deals"].map((b) => (
@@ -159,7 +159,7 @@ const SingaporeSpaceLawPage = () => {
                 { icon: Satellite, title: "Satellite Licensing & Spectrum", desc: "IMDA spectrum coordination, ITU filings via Singapore administration, orbital slot strategy, and earth-station authorisations for LEO/MEO/GEO operators." },
                 { icon: Rocket, title: "Launch Agreements & Liability", desc: "Launch services agreements, cross-waivers, third-party liability insurance structures, and indemnities aligned with the Outer Space and Liability Conventions." },
                 { icon: Building2, title: "OSTIn & Government Engagement", desc: "Engagement with OSTIn, EDB, and IMDA on Singapore space activity approvals, STDP grant participation, and emerging national space legislation." },
-                { icon: Globe, title: "Cross-Border Space Ventures", desc: "Joint ventures, foreign investment structuring, and APAC-wide commercial space transactions — partnering with leading global space counsel where needed." },
+                { icon: Globe, title: "Cross-Border Space Ventures", desc: "Joint ventures, foreign investment structuring, and APAC-wide commercial space transactions — coordinating with foreign counsel where needed." },
                 { icon: Shield, title: "Export Controls & Dual-Use", desc: "Strategic Goods (Control) Act, ITAR/EAR awareness, and technology transfer guardrails for satellite components, ground systems, and launch payloads." },
                 { icon: Calendar, title: "Space Sustainability & ESG", desc: "Orbital debris mitigation, space traffic management readiness, and ESG-aligned operational frameworks for long-term Singapore-licensed missions." },
               ].map((s) => (

@@ -23,7 +23,7 @@ const SingaporeAIGovernancePage = () => (
       { icon: Shield, title: "AI Risk Mitigation", desc: "Operational controls, model documentation, red-teaming protocols, incident response playbooks, and AI risk dashboards for senior management and audit committees." },
       { icon: Building2, title: "MAS FEAT & Veritas", desc: "Implementation of FEAT principles and Veritas methodologies for AI use cases in banking, asset management, insurance and payments — coordinated with home-jurisdiction regulators." },
       { icon: Brain, title: "Generative AI & Foundation Models", desc: "Acceptable use policies, model and vendor due diligence, training-data lawfulness and AI-Specific Notifications / consent design under PDPC guidance, output IP and confidentiality, and deepfake response plans." },
-      { icon: Globe, title: "EU AI Act & Global Bridging", desc: "Mapping Singapore programmes onto EU AI Act obligations, US NIST AI RMF and emerging Asia-Pacific frameworks — risk classification, conformity assessments, transparency and post-market monitoring." },
+      { icon: Globe, title: "EU AI Act & Global Bridging", desc: "Aligning Singapore programmes with international standards such as ISO/IEC 42001, with foreign counsel coordinated where foreign rules apply." },
     ]}
     updates={[
       { title: "Generative AI Model Governance Framework", summary: "IMDA and the AI Verify Foundation's framework for generative AI sets out nine dimensions — from accountability and data to incident reporting — that Singapore deployers and developers are expected to operationalise." },
@@ -92,8 +92,8 @@ const SingaporeAIGovernancePage = () => (
           body: "Deploy ongoing monitoring for model drift, performance, bias and abuse. Define AI incident categories, escalation thresholds and notification timelines (including any cross-border regulator obligations). Equip the board and audit committee with a recurring AI risk dashboard covering inventory, tier mix, AI Verify status, open issues and incidents.",
         },
         {
-          title: "8. Bridge to the EU AI Act, NIST AI RMF and ISO/IEC 42001",
-          body: "For Singapore companies placing AI on the EU market or whose AI output is used in the EU, map your Model Framework and AI Verify evidence onto EU AI Act risk classes, conformity assessments, transparency obligations and post-market monitoring. Use the same control set to satisfy the US NIST AI RMF and ISO/IEC 42001 — one programme, multiple jurisdictions.",
+          title: "8. Coordinate foreign-law questions with foreign counsel",
+          body: "Where EU or other foreign rules may apply, we coordinate with foreign counsel; we advise on Singapore law.",
         },
       ],
       closing: "Beyond Horizons works with boards, CTOs and General Counsel to operationalise this playbook end-to-end — from AI inventory and AI Verify testing through to MAS FEAT, EU AI Act and ISO/IEC 42001 readiness.",
@@ -105,7 +105,6 @@ const SingaporeAIGovernancePage = () => (
       { q: "What is AI Verify?", a: "AI Verify is Singapore's open-source AI governance testing framework and software toolkit, developed by IMDA and the AI Verify Foundation. It lets organisations technically test and process-check AI systems against international AI principles." },
       { q: "How does MAS regulate AI in financial services?", a: "MAS issued the FEAT Principles (Fairness, Ethics, Accountability, Transparency) and, through the Veritas Initiative, published assessment methodologies. AI in regulated activities must also satisfy MAS Notice 655 on technology risk, outsourcing, and model risk expectations." },
       { q: "How should businesses approach AI risk mitigation?", a: "Map AI use cases against risk tiers, deploy a written AI policy aligned to the Model Framework, run pre-deployment impact assessments, document datasets and prompts, embed human-in-the-loop controls, vendor-test against AI Verify, and align contracts to allocate liability and IP. Boards should receive periodic AI risk dashboards." },
-      { q: "Does the EU AI Act apply to Singapore companies?", a: "The EU AI Act has extraterritorial reach: it applies to providers placing AI systems on the EU market and to deployers whose AI output is used in the EU. Many Singapore SaaS, fintech and platform companies fall in scope and need a parallel readiness track to their Singapore obligations." },
       { q: "What about generative AI, copyright and confidentiality?", a: "Singapore's Copyright Act 2021 introduced a computational data analysis exception. Generative AI use raises issues on training data lawfulness, output IP ownership, deepfakes, and confidentiality — typically addressed through acceptable use policies, vendor terms, and DLP controls." },
       
       { q: "Do Singapore organisations need AI-Specific Notifications when training GenAI on personal data?", a: "Often yes when consent is the basis for using personal data to train or fine-tune a generative AI model — per PDPC’s July 2026 GenAI advisory guidelines. Broad product-improvement wording is frequently treated as insufficient for that purpose. Exceptions and deemed consent can change the analysis. See also our AI Code Counsel FAQs for more detail, or schedule a consultation." },
