@@ -254,8 +254,7 @@ const EbookViewer = () => {
             <AdvisoryBox variant="alert">
               <p>
                 The enactment of Singapore's Transport Sector (Critical Firms) Act in April 2025, 
-                Malaysia's impending AAM ConOps (Q1 2026), and Thailand's aggressive 2026 crackdown 
-                on nominee shareholders require a recalibration of market entry strategies.
+                developments in neighbouring markets require a recalibration of market entry strategies.
               </p>
             </AdvisoryBox>
             <AdvisoryBox title="The 2026 Pivot">
@@ -727,112 +726,17 @@ const EbookViewer = () => {
                 strictly to locally registered aircraft.
               </p>
               <p className="text-gray-300 text-sm">
-                <strong className="text-white">Example:</strong> A US-registered eVTOL can fly into India 
-                (International leg), but it cannot pick up a passenger in Mumbai and drop them in Pune (Domestic leg). 
+                <strong className="text-white">Example:</strong> cabotage rules generally restrict a foreign-registered aircraft from carrying passengers between two points within another state's territory (Chicago Convention, Art. 7). 
                 To operate an "Air Taxi" service, you must almost always register the aircraft locally or lease 
                 it to a local Air Operator Certificate (AOC) holder.
               </p>
             </AdvisoryBox>
           </ContentPage>
 
-          {/* INDIA - Page 23 */}
+          {/* OTHER MARKETS - Page 23 */}
           <ContentPage pageNumber={23}>
-            <h1 className="ebook-h1">🇮🇳 India: The Scale Market</h1>
             <p className="ebook-body">
-              India represents the largest volume opportunity in APAC. The government is aggressively promoting aviation.
-            </p>
-
-            <h2 className="ebook-h2">GIFT City (IFSC)</h2>
-            <p className="ebook-body">
-              India's tax-neutral enclave in Gujarat offers massive incentives for aircraft leasing:
-            </p>
-            <ul className="ebook-list">
-              <li><strong>100% Tax Holiday:</strong> For 10 consecutive years out of a 15-year block.</li>
-              <li>
-                <strong>Capital Gains:</strong> Zero Capital Gains Tax on aircraft transfer if the unit 
-                commences operations by March 31, 2026.
-              </li>
-            </ul>
-
-            <h2 className="ebook-h2">Ownership Rules</h2>
-            <p className="ebook-body">
-              <strong>Non-Scheduled (Air Taxi):</strong> 100% Foreign Direct Investment (FDI) is permitted 
-              via the automatic route.
-            </p>
-            <p className="ebook-body">
-              <strong>Scheduled Airlines:</strong> Foreign airlines investing in scheduled carriers are capped at 49%.
-            </p>
-          </ContentPage>
-
-          {/* MALAYSIA - Page 24 */}
-          <ContentPage pageNumber={24}>
-            <h1 className="ebook-h1">🇲🇾 Malaysia: The Green Lane</h1>
-            <p className="ebook-body">
-              Malaysia positions itself as the "Test Bed" for the region, with lower land costs and a proactive regulator.
-            </p>
-
-            <h2 className="ebook-h2">AAM ConOps (Q1 2026)</h2>
-            <p className="ebook-body">
-              The Civil Aviation Authority of Malaysia (CAAM) has released its Concept of Operations, creating 
-              a clear pathway for commercial trials.
-            </p>
-
-            <h2 className="ebook-h2">The RTS Corridor</h2>
-            <p className="ebook-body">
-              The primary opportunity is the cross-border shuttle between Singapore and Johor Bahru. However, 
-              this requires <strong>Dual-Certification</strong>.
-            </p>
-
-            <AdvisoryBox>
-              <p>
-                <strong>Strategy:</strong> Consider establishing a Malaysian subsidiary (Sdn Bhd) to hold the 
-                local AOC and validate the Singapore-registered aircraft for Malaysian operations.
-              </p>
-            </AdvisoryBox>
-          </ContentPage>
-
-          {/* THAILAND & VIETNAM - Page 25 */}
-          <ContentPage pageNumber={25}>
-            <h1 className="ebook-h1">🇹🇭 Thailand</h1>
-            <h2 className="ebook-h2">The Nominee Crackdown</h2>
-            <p className="ebook-body">
-              Effective Jan 1, 2026, the DBD enforces strict proof of financial means for Thai shareholders. 
-              The traditional "49% Foreign / 51% Thai Nominee" structure is now high-risk. 
-              <strong> Use legitimate Joint Ventures.</strong>
-            </p>
-
-            <h1 className="ebook-h1 mt-8">🇻🇳 Vietnam</h1>
-            <h2 className="ebook-h2">The Hard Cap</h2>
-            <p className="ebook-body">
-              Decree 89/2019 strictly caps foreign ownership in air transport at <strong>34%</strong>.
-            </p>
-            <p className="ebook-body">
-              <strong>Military Control:</strong> Unlike Singapore, Vietnam's airspace is managed by the Ministry 
-              of National Defense. Every drone flight plan typically requires individual permits, creating 
-              operational friction.
-            </p>
-          </ContentPage>
-
-          {/* PHILIPPINES & INDONESIA - Page 26 */}
-          <ContentPage pageNumber={26}>
-            <h1 className="ebook-h1">🇵🇭 Philippines</h1>
-            <h2 className="ebook-h2">The Public Service Act</h2>
-            <p className="ebook-body">
-              RA 11659 allows <strong>100% foreign ownership</strong> of airlines.
-            </p>
-
-            <AdvisoryBox variant="alert" title="The Cabotage Trap">
-              <p>
-                Ownership does not guarantee traffic rights. The Civil Aviation Board (CAB) may deny domestic 
-                routes based on reciprocity clauses with your home country.
-              </p>
-            </AdvisoryBox>
-
-            <h1 className="ebook-h1 mt-8">🇮🇩 Indonesia</h1>
-            <h2 className="ebook-h2">Single Majority Rule</h2>
-            <p className="ebook-body">
-              Foreign ownership is capped at <strong>49%</strong>. Crucially, a foreign investor cannot hold 
-              a larger stake than the largest single Indonesian shareholder, forcing a complex cap table structure.
+              For markets outside Singapore, we coordinate with local counsel; we do not advise on those laws.
             </p>
           </ContentPage>
 
@@ -872,8 +776,7 @@ const EbookViewer = () => {
 
             <AdvisoryBox title="Final Recommendation">
               <p>
-                Establish the HoldCo in Singapore for IP protection and tax efficiency. Use local Joint Ventures 
-                for operations in Vietnam and Indonesia. Monitor the "Critical Entity" designation carefully.
+                Establish the HoldCo in Singapore for IP protection and tax efficiency. Take local advice on operating structures outside Singapore. Monitor the "Critical Entity" designation carefully.
               </p>
             </AdvisoryBox>
           </ContentPage>
