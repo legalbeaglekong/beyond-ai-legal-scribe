@@ -47,7 +47,7 @@ const TeamPage = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "Our Team — Beyond Horizons Legal",
+            name: "Our Team — Beyond Horizons by Bethel Chambers",
             url: "https://beyondhorizons.sg/team",
             about: {
               "@type": "Organization",

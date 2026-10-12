@@ -30,7 +30,7 @@ const AboutPage = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "AboutPage",
-            name: "About Beyond Horizons Legal",
+            name: "About Beyond Horizons by Bethel Chambers",
             url: "https://beyondhorizons.sg/about",
             description: "Beyond Horizons by Bethel Chambers LLC is a Singapore law practice group. Founder Hui Ling Teo is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore.",
             mainEntity: {
@@ -86,7 +86,7 @@ const AboutPage = () => {
                 In 2024, our founding team with decades of big law experience saw a unique opportunity: to build a new kind of law team from the ground up — lawyers united by one mission: to redesign legal services for tomorrow's visionaries.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                We built Beyond Horizons Legal to deliver cost-effective, precise, and innovative legal solutions. Our approach uses lean, digital workflows to deliver legal services efficiently.
+                We built Beyond Horizons by Bethel Chambers to deliver cost-effective, precise, and innovative legal solutions. Our approach uses lean, digital workflows to deliver legal services efficiently.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Where a matter needs advice on other laws, we work alongside foreign counsel instructed for that purpose.

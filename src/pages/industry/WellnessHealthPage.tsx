@@ -4,8 +4,8 @@ import { Heart, Cpu, Shield, Smartphone } from "lucide-react";
 const data: IndustryPageData = {
   slug: "wellness-health",
   seo: {
-    title: "Wellness & Health Law Singapore — Healthcare Regulation, Digital Health & MedTech | Beyond Horizons Legal",
-    description: "Specialist healthcare and wellness lawyers in Singapore. Medical device regulation, digital health, telemedicine, health data privacy. Beyond Horizons Legal by Bethel Chambers LLC.",
+    title: "Wellness & Health Law Singapore — Healthcare Regulation, Digital Health & MedTech | Beyond Horizons by Bethel Chambers",
+    description: "Specialist healthcare and wellness lawyers in Singapore. Medical device regulation, digital health, telemedicine, health data privacy. Beyond Horizons by Bethel Chambers LLC.",
   },
   hero: {
     title: "Wellness & Health Law — Healthcare Regulation, Digital Health & MedTech Counsel",
@@ -41,7 +41,7 @@ const data: IndustryPageData = {
       { title: "Regulatory Complexity", description: "Rising regulatory complexity — HSA, TGA, PMDA, NMPA frameworks diverging, requiring specialist cross-border navigation." },
       { title: "AI in Healthcare", description: "AI-in-healthcare regulation emerging across ASEAN, creating new compliance requirements for digital health platforms." },
     ],
-    analysis: "Navigating this opportunity requires lawyers who understand both the technology and the regulation. Beyond Horizons Legal combines cross-border regulatory expertise with genuine understanding of digital health business models.",
+    analysis: "Navigating this opportunity requires lawyers who understand both the technology and the regulation. Beyond Horizons by Bethel Chambers combines cross-border regulatory expertise with genuine understanding of digital health business models.",
   },
   faqs: {
     heading: "Frequently Asked Questions — Wellness & Health Law",

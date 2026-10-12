@@ -109,7 +109,7 @@ const AIToolsPage = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org", "@type": "LegalService",
-            name: "Beyond Horizons Legal — AI Tools",
+            name: "Beyond Horizons by Bethel Chambers — AI Tools",
             provider: { "@type": "Organization", name: "Bethel Chambers LLC", url: "https://www.bethelchambers.com" },
             description: "Purpose-built AI legal tools for regulatory compliance, contract review, financial modelling, and legal operations.",
             areaServed: "Asia-Pacific",

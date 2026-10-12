@@ -4,8 +4,8 @@ import { Shield, Code, Coins, Layers } from "lucide-react";
 const data: IndustryPageData = {
   slug: "blockchain-digital-assets",
   seo: {
-    title: "Blockchain & Digital Assets Law Singapore — Crypto Regulation, DeFi & Token Counsel | Beyond Horizons Legal",
-    description: "Digital assets counsel in Singapore — MAS Payment Services Act licensing, token offerings, DeFi and RWA tokenisation. Beyond Horizons Legal by Bethel Chambers LLC.",
+    title: "Blockchain & Digital Assets Law Singapore — Crypto Regulation, DeFi & Token Counsel | Beyond Horizons by Bethel Chambers",
+    description: "Digital assets counsel in Singapore — MAS Payment Services Act licensing, token offerings, DeFi and RWA tokenisation. Beyond Horizons by Bethel Chambers LLC.",
   },
   hero: {
     title: "Blockchain & Digital Assets Law — Token Regulation, DeFi & Web3 Counsel",
@@ -37,7 +37,7 @@ const data: IndustryPageData = {
   spotlight: {
     heading: "Pioneering RWA Tokenisation in Aviation",
     cards: [
-      { title: "Who STO my (aircraft) ABS?", description: "Beyond Horizons Legal has published original research on real-world asset tokenisation of aircraft assets — exploring how securitised token offerings and decentralised finance can transform aviation asset financing.", link: "https://beyondhorizons.substack.com/p/who-sto-my-aircraft-abs-securitised", linkText: "Read the Full Analysis" },
+      { title: "Who STO my (aircraft) ABS?", description: "Beyond Horizons by Bethel Chambers has published original research on real-world asset tokenisation of aircraft assets — exploring how securitised token offerings and decentralised finance can transform aviation asset financing.", link: "https://beyondhorizons.substack.com/p/who-sto-my-aircraft-abs-securitised", linkText: "Read the Full Analysis" },
     ],
   },
   faqs: {

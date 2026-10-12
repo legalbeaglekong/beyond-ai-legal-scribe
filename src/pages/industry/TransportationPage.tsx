@@ -4,8 +4,8 @@ import { Building, Truck, Shield, Globe } from "lucide-react";
 const data: IndustryPageData = {
   slug: "transportation",
   seo: {
-    title: "Transportation Law Singapore — Infrastructure, Logistics & Cross-Border Counsel | Beyond Horizons Legal",
-    description: "Specialist transportation lawyers in Singapore. Infrastructure PPPs, logistics contracts, maritime law, cross-border freight. Beyond Horizons Legal by Bethel Chambers LLC.",
+    title: "Transportation Law Singapore — Infrastructure, Logistics & Cross-Border Counsel | Beyond Horizons by Bethel Chambers",
+    description: "Specialist transportation lawyers in Singapore. Infrastructure PPPs, logistics contracts, maritime law, cross-border freight. Beyond Horizons by Bethel Chambers LLC.",
   },
   hero: {
     title: "Transportation Law — Infrastructure, Logistics & Cross-Border Trade Counsel",

@@ -37,7 +37,7 @@ const faqs = [
     a: "Singapore has expanded OSTIn's mandate and funding under the Space Technology Development Programme, supported new satellite startups (including Earth observation and IoT constellation operators), and hosted growing GSTC editions. Singapore continues to develop national space legislation and regulatory frameworks for commercial space activity.",
   },
   {
-    q: "How does Beyond Horizons Legal price Singapore space law engagements?",
+    q: "How does Beyond Horizons by Bethel Chambers price Singapore space law engagements?",
     a: "We offer transparent, value-aligned pricing — fixed fees for regulatory filings and licensing, milestone-based pricing for satellite and launch transactions, and retainer arrangements for ongoing advisory tailored to the pace of the new space economy.",
   },
 ];

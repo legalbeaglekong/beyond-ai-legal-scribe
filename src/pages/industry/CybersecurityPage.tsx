@@ -4,8 +4,8 @@ import { Shield, Lock, Brain, Server } from "lucide-react";
 const data: IndustryPageData = {
   slug: "cybersecurity-tech",
   seo: {
-    title: "Cybersecurity & Emerging Technology Law Singapore — Data Protection, AI & Cyber Risk | Beyond Horizons Legal",
-    description: "Specialist cybersecurity and AI governance lawyers in Singapore. PDPA, Cybersecurity Act, AI regulation, data protection. Beyond Horizons Legal by Bethel Chambers LLC.",
+    title: "Cybersecurity & Emerging Technology Law Singapore — Data Protection, AI & Cyber Risk | Beyond Horizons by Bethel Chambers",
+    description: "Specialist cybersecurity and AI governance lawyers in Singapore. PDPA, Cybersecurity Act, AI regulation, data protection. Beyond Horizons by Bethel Chambers LLC.",
   },
   hero: {
     title: "Cybersecurity & Emerging Technology Law — Data Protection, AI Governance & Cyber Risk Counsel",
@@ -37,7 +37,7 @@ const data: IndustryPageData = {
   spotlight: {
     heading: "When AI Pushes Back — Legal Reflections",
     cards: [
-      { title: "Your AI Just Threatened You. Now What?", description: "Beyond Horizons Legal has published original analysis on AI shutdown resistance, blackmail scenarios, and the future of AI governance — questions most law firms aren't yet asking.", link: "https://beyondhorizons.substack.com/p/your-ai-just-threatened-you-now-what", linkText: "Read the Full Analysis" },
+      { title: "Your AI Just Threatened You. Now What?", description: "Beyond Horizons by Bethel Chambers has published original analysis on AI shutdown resistance, blackmail scenarios, and the future of AI governance — questions most law firms aren't yet asking.", link: "https://beyondhorizons.substack.com/p/your-ai-just-threatened-you-now-what", linkText: "Read the Full Analysis" },
       { title: "Cybersecurity Act 2018", description: "Mandatory CII compliance with rising enforcement. Singapore's cybersecurity regulatory landscape requires proactive governance frameworks." },
       { title: "PDPA Enforcement Trends", description: "PDPC financial penalties increasing year-on-year. Mandatory breach notification since 2021 creates new compliance obligations for all organisations." },
     ],

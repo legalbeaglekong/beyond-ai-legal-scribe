@@ -96,7 +96,7 @@ const WhySpecialistCounselPage = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org", "@type": "LegalService",
-            name: "Beyond Horizons Legal",
+            name: "Beyond Horizons by Bethel Chambers",
             provider: { "@type": "Organization", name: "Bethel Chambers LLC", url: "https://www.bethelchambers.com" },
             description: "Specialist legal counsel for complex, cross-border, and regulated matters across Asia-Pacific.",
             areaServed: "Asia-Pacific",

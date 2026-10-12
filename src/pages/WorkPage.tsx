@@ -18,7 +18,7 @@ const platforms = [
   {
     title: "Ascending Asia",
     subtitle: "Cross-Border Business Advisory",
-    description: "Beyond Horizons Legal's dedicated cross-border business advisory platform, helping companies navigate market entry, regulatory compliance, and strategic growth across Asia-Pacific.",
+    description: "Beyond Horizons by Bethel Chambers's dedicated cross-border business advisory platform, helping companies navigate market entry, regulatory compliance, and strategic growth across Asia-Pacific.",
     highlights: ["Market entry strategy & corporate structuring", "Cross-border regulatory navigation", "Strategic partnership facilitation across ASEAN", "Investment and joint venture advisory"],
     url: "https://ascendingasia.beyondhorizons.sg",
     icon: Globe,
@@ -59,7 +59,7 @@ const WorkPage = () => {
             "@type": "CollectionPage",
             name: "Our Work — Platforms & Industry Expertise",
             url: "https://beyondhorizons.sg/work",
-            description: "Specialist platforms and industry expertise from Beyond Horizons Legal.",
+            description: "Specialist platforms and industry expertise from Beyond Horizons by Bethel Chambers.",
             hasPart: [
               ...platforms.map((p) => ({ "@type": "WebSite", name: p.title, url: p.url, description: p.description })),
               ...industryPages.map((p) => ({ "@type": "WebPage", name: p.title, url: `https://beyondhorizons.sg/industry/${p.slug}`, description: p.description })),
