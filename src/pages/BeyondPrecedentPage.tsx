@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "@/lib/router-compat";
 import { EMAIL, WHATSAPP_URL } from "@/config/business";
+import { Linkedin, Youtube, Twitter, Instagram, Newspaper } from "lucide-react";
 import WordDocumentPreview from "@/components/WordDocumentPreview";
 import boyuanDocument from "@/assets/beyond-precedent-episode-1-zheng-bo-yuan.docx.asset.json";
 import harishDocument from "@/assets/beyond-precedent-episode-1-harish.docx.asset.json";
@@ -11,7 +12,7 @@ const REUTERS_URL = "https://www.reuters.com/legal/transactional/these-law-stude
 const SSRN_URL = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6525800";
 
 export const beyondPrecedentFaqs = [
-  { question: "What is Beyond Precedent?", answer: "Beyond Precedent is Beyond Horizons’ educational drafting challenge — best understood as a supervised drafting challenge for the AI era. It was initially envisioned in 2023 as vibe drafting — drafting with AI the way vibe coding uses AI for code. In each session, two law students from any country draft an agreement or legal document using ten prompts on free AI tools, then revise with a short edit log. Think of it as a moot, but for the AI era: it is supervised and scored, and instead of advocacy, it tests judgment over AI-assisted drafting. The firm uses the programme to explore how talent develops and how legal services should be designed when generative AI is in the first draft." },
+  { question: "What is Beyond Precedent?", answer: "Beyond Precedent is Beyond Horizons’ educational drafting challenge — best understood as a supervised drafting challenge for the AI era. Beyond Precedent began when Hui Ling Teo pitched a vibe drafting challenge in 2024. In each session, two law students from any country draft an agreement or legal document using ten prompts on free AI tools, then revise with a short edit log. Think of it as a moot, but for the AI era: it is supervised and scored, and instead of advocacy, it tests judgment over AI-assisted drafting. The firm uses the programme to explore how talent develops and how legal services should be designed when generative AI is in the first draft." },
   { question: "Who can take part?", answer: "Law students from any nation may be invited into a session. Participation is by selection for each cohort; this page describes the concept — it is not an open application portal unless a live apply form is added later." },
   { question: "What do the ten prompts and free AI tools mean in practice?", answer: "Each pair works from a fixed set of ten drafting prompts and may use publicly available free AI writing tools. The point is not a vendor bake-off. The point is to watch how students prompt, what the model returns, and what human editing must still do." },
   { question: "What are “post-editing work products”?", answer: "After the AI-assisted first pass, students revise the draft and record a short edit log. When cleared for public view, the session archive may show selected revised excerpts or artefacts — illustrative only, not client deliverables and not legal advice." },
@@ -36,6 +37,14 @@ const CtaRow = () => (
     <a href={INSIGHTS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-md border border-border px-5 py-3 text-sm font-medium text-foreground hover:bg-muted">Read Insights</a>
   </div>
 );
+
+const follow = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/beyondhorizonslegal", Icon: Linkedin },
+  { label: "YouTube", href: "https://www.youtube.com/@BeyondHorizonsHuiLing", Icon: Youtube },
+  { label: "X @BYDHRZSGLAWYRUP", href: "https://x.com/BYDHRZSGLAWYRUP", Icon: Twitter },
+  { label: "Instagram @beyondhorizonslegal", href: "https://www.instagram.com/beyondhorizonslegal/", Icon: Instagram },
+  { label: "Insights on Substack", href: "https://www.insights.beyondhorizons.sg/", Icon: Newspaper },
+];
 
 const steps = [
   "Invite two law students (any nation) into a supervised session.",
@@ -86,7 +95,7 @@ const BeyondPrecedentPage = () => (
         <section className="space-y-6" aria-labelledby="trailer">
           <h2 id="trailer" className="font-display text-2xl md:text-3xl text-foreground">Watch the trailer: Beyond Precedent, Episode 1</h2>
           <p className="text-muted-foreground leading-relaxed">
-            Can free public AI tools draft a sponsorship agreement in 15 minutes? In Episode 1, The Energy Drink Influencer, two law students each draft a sponsorship agreement with a free AI tool of their choice, which they name. Experienced lawyers judge the challenge, and our host, Sonia Motwani, adds a twist. The full episode arrives on Friday 23 October 2026.
+            Can free public AI tools draft a sponsorship agreement in 15 minutes? In Episode 1, The Energy Drink Influencer, two law students each draft a sponsorship agreement with a free AI tool of their choice, which they name. Experienced legal professionals judge the challenge, and our host, Sonia Motwani, adds a twist. The full episode arrives on Friday 23 October 2026.
           </p>
           <div className="relative w-full overflow-hidden rounded-lg border border-border bg-card" style={{ aspectRatio: "16 / 9" }}>
             <iframe
@@ -104,6 +113,17 @@ const BeyondPrecedentPage = () => (
               <a href={`mailto:${EMAIL}`} className={ext}>{EMAIL}</a>
             </p>
           </div>
+          <div className="space-y-3">
+            <h3 className="font-display text-lg text-foreground">Follow Beyond Precedent</h3>
+            <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+              {follow.map(({ label, href, Icon }) => (
+                <a key={href} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className={`inline-flex items-center gap-2 ${ext}`}>
+                  <Icon className="h-4 w-4" aria-hidden="true" />
+                  {label}
+                </a>
+              ))}
+            </div>
+          </div>
           <p className="text-xs text-muted-foreground">Beyond Horizons by Bethel Chambers LLC. Educational content; not legal advice. Music generated with Google Gemini.</p>
         </section>
 
@@ -111,7 +131,7 @@ const BeyondPrecedentPage = () => (
           <H2>Why we started this</H2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>Beyond Horizons’ team began independently in 2023.</p>
-            <p>Beyond Precedent was initially envisioned as vibe drafting — drafting with AI the way “vibe coding” uses AI for code.</p>
+            <p>Beyond Precedent began when Hui Ling Teo pitched a vibe drafting challenge in 2024.</p>
             <p>As a practice we took on a further challenge: design legal services for a post-AI age, including how to develop legal talent when models produce the first draft.</p>
           </div>
         </section>
@@ -167,7 +187,7 @@ const BeyondPrecedentPage = () => (
               <p className="text-xs uppercase tracking-widest text-accent">Episode 1 · Student work products</p>
               <h3 id="episode-one" className="font-display text-2xl text-foreground">The Energy Drink Influencer</h3>
               <dl className="grid gap-4 text-sm sm:grid-cols-2">
-                <div><dt className="font-semibold text-foreground">Judging panel: experienced lawyers</dt><dd className="text-muted-foreground">Shen Yang, Hanyi Zeng and Hui Ling Teo</dd></div>
+                <div><dt className="font-semibold text-foreground">Judging panel: experienced legal professionals</dt><dd className="text-muted-foreground">Shen Yang (in-house counsel), Zeng Hanyi and Hui Ling Teo</dd></div>
                 <div><dt className="font-semibold text-foreground">Hosted by</dt><dd className="text-muted-foreground">Sonia Motwani</dd></div>
               </dl>
               <p className="border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted-foreground">Each participant drafted their document in only 15 minutes, using free AI tools under limits on font size and page count. The work products include redlines and comments. Read them in that context: educational content only, not legal advice, and not for use with real counterparties.</p>
@@ -215,12 +235,10 @@ const BeyondPrecedentPage = () => (
         <section className="space-y-5 rounded-lg border border-border bg-card p-8">
           <H2>Ask about the next cohort</H2>
           <p className="text-muted-foreground leading-relaxed">
-            If you advise juniors, run a legal team, or would like to guest-judge a session, ask about the next cohort. Schedule a consultation, contact us at {EMAIL}, or chat on WhatsApp.
+            Want Beyond Precedent for your team? Email {EMAIL}
           </p>
           <div className="flex flex-wrap gap-3">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90">Schedule Consultation</a>
-            <a href={`mailto:${EMAIL}`} className="inline-flex items-center rounded-md border border-border px-5 py-3 text-sm font-medium text-foreground hover:bg-muted">Contact Us</a>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-md border border-border px-5 py-3 text-sm font-medium text-foreground hover:bg-muted">Chat on WhatsApp</a>
+            <a href={`mailto:${EMAIL}`} className="inline-flex items-center rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90">Email {EMAIL}</a>
           </div>
           <p className="text-sm text-muted-foreground italic">{PROGRAMME_DISCLAIMER}</p>
         </section>
