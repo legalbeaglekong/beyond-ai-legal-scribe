@@ -213,7 +213,7 @@ export const data: IndustryPageData = {
     heading: "Next step",
     description: "Schedule a consultation, or email HL@beyondhorizons.sg.",
     note:
-      "Related tools (optional): employers building Workplace Fairness Act readiness or reviewing the first published Employment Claims Tribunals decision can use workplacefairness.beyondhorizons.sg — a separate microsite, not a substitute for this page. Beyond Horizons is the practice of Bethel Chambers LLC, a Singapore law corporation regulated by the Law Society of Singapore. This page is general information only. It is not legal advice and does not create a solicitor–client relationship.",
+      "Related tools (optional): employers building Workplace Fairness Act readiness or reviewing the first published Employment Claims Tribunals decision can use workplacefairness.beyondhorizons.sg — a separate microsite, not a substitute for this page. Beyond Horizons is the practice of Bethel Chambers LLC, which is licensed and regulated by the Legal Services Regulatory Authority (LSRA), a department under the Singapore Ministry of Law. This page is general information only. It is not legal advice and does not create a solicitor–client relationship.",
   },
   relatedPages: [
     { title: "Singapore Employment Law", slug: "/singapore-employment-law" },
