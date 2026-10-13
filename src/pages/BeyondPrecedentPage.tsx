@@ -109,7 +109,7 @@ const BeyondPrecedentPage = () => (
           </div>
           <div className="rounded-lg border border-border bg-card p-6">
             <p className="text-foreground leading-relaxed">
-              Want Beyond Precedent for your team? We run the challenge as a workshop with firms and schools. Email{" "}
+              They called us the new kids on the block. We say we&rsquo;re beyond precedent. We&rsquo;re building talent that thrives in a post-AI age. Email{" "}
               <a href={`mailto:${EMAIL}`} className={ext}>{EMAIL}</a>
             </p>
           </div>
