@@ -13,7 +13,7 @@ import { exportTracker } from './exports';
 
 export const trackerData = raw as ChecklistData;
 type Review = { ref: string; status: string; note: string; reviewer_name: string; reviewer_email: string; created_at: string };
-export function Tracker({ reviews }: { reviews: Review[] }) {
+export function Tracker({ reviews, publicView = false }: { reviews: Review[]; publicView?: boolean }) {
   const data = trackerData;
   const [items, setItems] = useState<CpItem[]>(() => data.cps.map(item => {
     const review = reviews.find(r => r.ref === item.ref);
@@ -25,7 +25,7 @@ export function Tracker({ reviews }: { reviews: Review[] }) {
   const visible = items.filter(i => (!filter || i.status === filter) && (!gate || i.gate === gate) && `${i.ref} ${i.title} ${i.requirement}`.toLowerCase().includes(search.toLowerCase()));
   const counts = Object.fromEntries(Object.keys(statuses).map(s => [s, items.filter(i => i.status === s).length]));
   async function save(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault(); if (!selected) return;
+    event.preventDefault(); if (!selected || publicView) return;
     const form = new FormData(event.currentTarget);
     const status = String(form.get('decision')) as CpStatus;
     const name = String(form.get('name')).trim(); const email = String(form.get('email')).trim(); const note = String(form.get('note')).trim();
@@ -43,9 +43,9 @@ export function Tracker({ reviews }: { reviews: Review[] }) {
   }
   async function signOut() { await queryClient.cancelQueries(); queryClient.clear(); await supabase.auth.signOut(); await navigate({ to: '/auth', replace: true }); await router.invalidate(); }
   function jump(ref: string) { setFilter(''); setGate(''); setSearch(''); requestAnimationFrame(() => requestAnimationFrame(() => { const nodes = document.querySelectorAll(`[data-cp-ref="${ref}"]`); const element = Array.from(nodes).find(n => n.getBoundingClientRect().width > 0); element?.scrollIntoView({ behavior: 'smooth', block: 'center' }); })); }
-  const statusBlock = (item: CpItem) => <div className="cp-status-block"><span className={`cp-chip cp-${item.status}`}>{['satisfied','waived','na'].includes(item.status) && <Check size={12}/>} {statuses[item.status]}</span>{item.reviewedBy && <><small>{item.reviewedBy}</small><small>{item.reviewedAt ? new Date(item.reviewedAt).toLocaleString('en-SG') : ''}</small><small>{item.statusNote}</small></>}<Button variant="outline" className="cp-button cp-review-button" size="sm" onClick={() => setSelected(item)}>Record review</Button></div>;
+  const statusBlock = (item: CpItem) => <div className="cp-status-block"><span className={`cp-chip cp-${item.status}`}>{['satisfied','waived','na'].includes(item.status) && <Check size={12}/>} {statuses[item.status]}</span>{item.reviewedBy && <><small>{item.reviewedBy}</small><small>{item.reviewedAt ? new Date(item.reviewedAt).toLocaleString('en-SG') : ''}</small><small>{item.statusNote}</small></>}{!publicView && <Button variant="outline" className="cp-button cp-review-button" size="sm" onClick={() => setSelected(item)}>Record review</Button>}</div>;
   return <main className={`cp-tracker ${dark ? 'cp-dark' : ''}`}><div className="cp-container">
-    <header className="cp-header"><img src={logo} width="88" height="88" alt="Beyond Horizons"/><div className="cp-header-right"><span>PRIVATE &amp; CONFIDENTIAL</span><div><Button variant="outline" className="cp-button" size="icon" aria-label={dark ? 'Light mode' : 'Dark mode'} title={dark ? 'Light mode' : 'Dark mode'} onClick={() => setDark(!dark)}>{dark ? <Sun/> : <Moon/>}</Button><Button variant="outline" className="cp-button" size="icon" aria-label="Sign out" title="Sign out" onClick={signOut}><LogOut/></Button></div></div></header>
+    <header className="cp-header"><img src={logo} width="88" height="88" alt="Beyond Horizons"/><div className="cp-header-right"><span>{publicView ? 'PUBLIC DEMO · READ ONLY' : 'PRIVATE & CONFIDENTIAL'}</span><div><Button variant="outline" className="cp-button" size="icon" aria-label={dark ? 'Light mode' : 'Dark mode'} title={dark ? 'Light mode' : 'Dark mode'} onClick={() => setDark(!dark)}>{dark ? <Sun/> : <Moon/>}</Button>{!publicView && <Button variant="outline" className="cp-button" size="icon" aria-label="Sign out" title="Sign out" onClick={signOut}><LogOut/></Button>}</div></div></header>
     <p className="cp-template">Template - no client data</p>
     <aside className="cp-notice"><p className="cp-eyebrow">NO RELIANCE</p><p>{data.notice}</p></aside>
     <section className="cp-title"><p className="cp-eyebrow">CONDITIONS PRECEDENT TRACKER</p><h1>{data.matter.title}</h1><p>{data.matter.basis}</p></section>
