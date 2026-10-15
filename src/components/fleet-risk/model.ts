@@ -1,7 +1,7 @@
 import raw from '@/data/fleetRisk.json';
 export const fleetSeed = raw;
 export type Aircraft = typeof raw.aircraft[number];
-export type Position = { hex: string; lat: number; lon: number; heading: number; observed_at: string; on_ground: boolean; altitude_ft: number; country: string; airport?: string };
+export type Position = { hex: string; lat: number; lon: number; heading: number; observed_at: string; on_ground: boolean; altitude_ft: number; country: string; airport?: string | undefined };
 export type FleetEvent = { id: string; detected_at: string; source: string; source_url: string; headline: string; category: string; severity: string; countries: string[]; airports: string[]; lat: number | null; lon: number | null; radius_km: number; test: boolean; expires_at?: string; verified?: boolean };
 export type SourceStatus = { key: string; name: string; status: string; last_run: string | null; cadence: number; licence: string; url: string };
 export type Review = { alert_key: string; reviewer_name: string; decision: string; note: string; created_at: string };
