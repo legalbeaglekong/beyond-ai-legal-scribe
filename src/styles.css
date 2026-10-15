@@ -552,7 +552,7 @@ html {
 .fd-mono{font-family:'JetBrains Mono',ui-monospace,monospace;font-variant-numeric:tabular-nums}
 .fd-banner{background:var(--fd-accent);color:var(--fd-bg);font-size:12px;font-weight:600;padding:6px 16px;text-align:center;position:sticky;top:0;z-index:1100}
 .fd-header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 20px;border-bottom:1px solid var(--fd-line);flex-wrap:wrap}
-.fd-brand{display:flex;align-items:center;gap:12px}.fd-brand img{height:30px;filter:brightness(0) invert(1)}.fd-brand h1{font-size:18px;font-weight:600}.fd-brand span{font-size:11px;color:var(--fd-mute);text-transform:uppercase;letter-spacing:.08em}
+.fd-brand{display:flex;align-items:center;gap:12px}.fd-brand img{height:34px;width:auto;background:var(--fd-ink);border-radius:4px;padding:3px}.fd-brand h1{font-size:18px;font-weight:600}.fd-brand span{font-size:11px;color:var(--fd-mute);text-transform:uppercase;letter-spacing:.08em}
 .fd-back{color:var(--fd-mute);display:grid;place-items:center;width:28px;height:28px;border:1px solid var(--fd-line);border-radius:4px}
 .fd-kpis{display:flex;gap:4px}.fd-kpis div{background:var(--fd-panel);border:1px solid var(--fd-line);padding:6px 14px;border-radius:4px;min-width:84px}.fd-kpis span{display:block;font-size:10px;color:var(--fd-mute);text-transform:uppercase;letter-spacing:.08em}.fd-kpis b{font:600 20px 'JetBrains Mono',monospace}
 .fd-t-red{color:var(--fd-red)}.fd-t-amber{color:var(--fd-amber)}
@@ -562,7 +562,7 @@ html {
 .fd-scrub{display:flex;align-items:center;gap:8px;flex:1;min-width:220px;font-size:12px}.fd-scrub input{flex:1;accent-color:var(--fd-accent)}
 .fd-clock{font-size:12px;color:var(--fd-accent)}.fd-toggle{font-size:12px;display:flex;gap:6px;align-items:center;color:var(--fd-mute)}
 .fd-stage{position:relative}.fd-map{height:min(62vh,620px);min-height:380px;background:#0a0f1a}.fd-loading{display:grid;place-items:center;color:var(--fd-mute)}
-.fd .leaflet-container{background:#0a0f1a;font-family:inherit}.fd .leaflet-control-attribution{background:rgba(11,18,32,.8);color:var(--fd-mute);font-size:9px}.fd .leaflet-control-attribution a{color:var(--fd-mute)}
+.fd-tiles{filter:invert(1) hue-rotate(200deg) brightness(.85) contrast(.9) saturate(.4)}.fd .leaflet-container{background:#0a0f1a;font-family:inherit}.fd .leaflet-control-attribution{background:rgba(11,18,32,.8);color:var(--fd-mute);font-size:9px}.fd .leaflet-control-attribution a{color:var(--fd-mute)}
 .fd .leaflet-tooltip{background:var(--fd-panel);color:var(--fd-ink);border:1px solid var(--fd-line);font:11px 'JetBrains Mono',monospace;box-shadow:none}
 .fd-plane{width:28px;height:28px;display:grid;place-items:center;font-size:20px;transition:transform .8s linear;text-shadow:0 0 6px rgba(0,0,0,.9)}.fd-plane.fd-green{color:var(--fd-green)}.fd-plane.fd-amber{color:var(--fd-amber)}.fd-plane.fd-red{color:var(--fd-red)}.fd-plane.fd-dark{color:var(--fd-mute);opacity:.6;outline:1px dashed var(--fd-mute);border-radius:50%}.fd-plane.fd-sel{outline:2px solid var(--fd-accent);border-radius:50%}
 .fd .leaflet-marker-icon{transition:transform 1s linear}

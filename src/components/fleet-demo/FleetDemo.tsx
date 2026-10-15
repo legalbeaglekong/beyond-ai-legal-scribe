@@ -2,7 +2,7 @@ import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } fro
 import { Link } from '@tanstack/react-router';
 import { toast } from 'sonner';
 import { ArrowLeft, Download, Pause, Play, X } from 'lucide-react';
-import logo from '@/assets/bh-logo.svg';
+import logo from '@/assets/beyond-horizons-logo.png';
 import { airports, countries, DAY, defaultJurisdictions, fleet as baseFleet, HOUR, news, SIM_DAYS, SIM_START, type Aircraft, type JurisdictionRow, type Level, type Terms } from './data';
 import { assess, defaultWeights, fmtSim, groundByCountry, releasedNews, schedule, trail, type FactorKey, type Flag, type Risk, type Weights } from './engine';
 import { exportCsv, exportPdf } from './report';

@@ -21,7 +21,7 @@ export default function DemoMap({ fleet, risks, selected, trail, showZones, onSe
   useEffect(() => {
     if (!host.current) return;
     const m = L.map(host.current, { scrollWheelZoom: true, worldCopyJump: true, zoomControl: true }).setView([12, 85], 3);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { attribution: '© OpenStreetMap contributors © CARTO', maxZoom: 12, subdomains: 'abcd' }).addTo(m);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors', maxZoom: 12, className: 'fd-tiles' }).addTo(m);
     overlay.current = L.layerGroup().addTo(m); map.current = m;
     const ro = new ResizeObserver(() => m.invalidateSize()); ro.observe(host.current);
     return () => { ro.disconnect(); m.remove(); map.current = null; markers.current = {}; };
