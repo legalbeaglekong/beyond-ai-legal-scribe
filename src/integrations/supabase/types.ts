@@ -228,6 +228,7 @@ export type Database = {
     Functions: {
       has_private_demo_access: { Args: never; Returns: boolean }
       initialize_fleet_monitor: { Args: never; Returns: undefined }
+      private_demo_email_allowed: { Args: { _email: string }; Returns: boolean }
     }
     Enums: {
       [_ in never]: never
