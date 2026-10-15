@@ -6,9 +6,11 @@ import { requestDemoLink } from '@/lib/private-demos.functions';
 import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import logo from '@/assets/bh-logo.svg';
+import { demoDestination, rememberDemoDestination, rememberedDemoDestination, clearDemoDestination } from '@/lib/demo-return';
+import { useQuery } from '@tanstack/react-query';
 
 export const Route = createFileRoute('/auth')({
-  validateSearch: (search: Record<string, unknown>): { redirect?: '/fleet-risk' | '/cp-tracker' | '/demos' } => search['redirect'] === '/fleet-risk' ? { redirect: '/fleet-risk' } : search['redirect'] === '/cp-tracker' ? { redirect: '/cp-tracker' } : {},
+  validateSearch: (search: Record<string, unknown>) => ({ redirect: demoDestination(search['redirect']) }),
   head: () => ({ meta: [{ title: 'Private demo sign-in | Beyond Horizons' }, { name: 'description', content: 'Email-only access to the private Beyond Horizons demonstrations for approved recipients.' }, { name: 'robots', content: 'noindex, nofollow' }, { property: 'og:title', content: 'Private demo sign-in | Beyond Horizons' }, { property: 'og:description', content: 'Approved-recipient access to private Beyond Horizons demos.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary' }] }),
   component: TrackerSignIn,
 });
@@ -20,20 +22,31 @@ function TrackerSignIn() {
   const [sent, setSent] = useState(false);
   const destination = Route.useSearch().redirect ?? '/demos';
   const sendLink = useServerFn(requestDemoLink);
+  const { data: signedIn } = useQuery({ queryKey: ['private-demo-session'], queryFn: async () => {
+    const { data } = await supabase.auth.getUser();
+    if (!data.user) return false;
+    const { data: allowed, error: accessError } = await supabase.rpc('has_private_demo_access');
+    if (accessError) throw accessError;
+    return allowed === true;
+  }, retry: false });
   useEffect(() => {
-    let active = true;
-    supabase.auth.getUser().then(async ({ data }) => {
-      if (!active || !data.user) return;
-      const { data: allowed } = await supabase.rpc('has_private_demo_access');
-      if (!active) return;
-      if (allowed) void navigate({ to: destination, replace: true });
-      else { await supabase.auth.signOut(); setError('This account does not have private demo access.'); }
-    });
-    return () => { active = false; };
-  }, [navigate, destination]);
+    const hash = new URLSearchParams(window.location.hash.slice(1));
+    if (hash.has('error') || hash.has('error_code')) {
+      setError('This sign-in link has expired or already been used. Request a new link below and open the newest email once.');
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  }, []);
+  useEffect(() => {
+    if (!signedIn) return;
+    const target = Route.useSearch;
+    const next = destination === '/demos' ? rememberedDemoDestination() ?? destination : destination;
+    clearDemoDestination();
+    void navigate({ to: next, replace: true });
+  }, [signedIn, navigate, destination]);
   async function signIn(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setBusy(true); setError('');
+    rememberDemoDestination(destination);
     try {
       await sendLink({ data: { email, destination } });
       setSent(true);
