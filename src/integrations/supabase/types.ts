@@ -89,6 +89,96 @@ export type Database = {
         }
         Relationships: []
       }
+      fleet_monitor_audit: {
+        Row: {
+          action: string
+          after_value: Json | null
+          before_value: Json | null
+          created_at: string
+          id: string
+          user_id: string
+        }
+        Insert: {
+          action: string
+          after_value?: Json | null
+          before_value?: Json | null
+          created_at?: string
+          id?: string
+          user_id: string
+        }
+        Update: {
+          action?: string
+          after_value?: Json | null
+          before_value?: Json | null
+          created_at?: string
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      fleet_monitor_reviews: {
+        Row: {
+          alert_key: string
+          created_at: string
+          decision: string
+          id: string
+          note: string
+          reviewer_name: string
+          user_id: string
+        }
+        Insert: {
+          alert_key: string
+          created_at?: string
+          decision: string
+          id?: string
+          note: string
+          reviewer_name: string
+          user_id?: string
+        }
+        Update: {
+          alert_key?: string
+          created_at?: string
+          decision?: string
+          id?: string
+          note?: string
+          reviewer_name?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      fleet_monitor_roles: {
+        Row: {
+          role: string
+          user_id: string
+        }
+        Insert: {
+          role?: string
+          user_id: string
+        }
+        Update: {
+          role?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      fleet_monitor_workspaces: {
+        Row: {
+          payload: Json
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          payload?: Json
+          updated_at?: string
+          user_id?: string
+        }
+        Update: {
+          payload?: Json
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       translation_cache: {
         Row: {
           created_at: string
@@ -121,7 +211,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      initialize_fleet_monitor: { Args: never; Returns: undefined }
     }
     Enums: {
       [_ in never]: never
