@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Make CP Dashboard and Fleet Risk Monitor public read-only demos; retain protection of saved user records and verify signed-out access.
+- [x] Make CP Dashboard and Fleet Risk Monitor public read-only demos; verified signed-out access, checklist search, aircraft details and zero requests for private records. Existing saved records remain protected.
 - [x] Extend private-demo access to verified mailboxes at bethelchambers.com and beyondhorizons.sg; preserve the four individually approved addresses. Checked exact-domain matching, case handling, and rejection of unrelated domains, subdomains and malformed addresses; recipient email completion remains unverified below.
 - [x] Replace private-demo Google sign-in with verified email links restricted to the four approved addresses; verify generic unapproved-email response, signed-in denial, blocked private data reads and workspace creation.
 
