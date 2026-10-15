@@ -7,6 +7,8 @@ import { distance, fleetSeed, type FleetEvent, type Position, type SourceStatus 
 export const refreshFleetFeeds = createServerFn({ method: 'POST' }).middleware([requireSupabaseAuth])
  .inputValidator(z.object({ mode: z.enum(['example','client']) }))
  .handler(async ({ data, context }) => {
+  const { data: allowed, error: accessError } = await context.supabase.rpc('has_private_demo_access');
+  if (accessError || !allowed) throw new Error('Private demo access required');
   let aircraft = fleetSeed.aircraft;
   if(data.mode === 'client') {
    const { data: row, error } = await context.supabase.from('fleet_monitor_workspaces').select('payload').eq('user_id',context.userId).single();

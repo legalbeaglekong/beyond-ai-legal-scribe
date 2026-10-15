@@ -1,5 +1,8 @@
 # Architecture rules
 
+- Authorize private demos through a server-managed email allowlist and verified mailbox ownership, with restrictive access policies in addition to owner RLS; UI redirects alone never grant data access.
+- Send demo magic links only after server-side allowlist checks, return the same result for unapproved addresses, and keep destinations on approved app origins.
+
 - Keep the fleet monitor under the existing authenticated gate with separate user-owned workspace, role and append-only review/audit tables; every user administers only their own demo workspace, never another user's records.
 - Fetch fleet feeds through authenticated server functions with at most six concurrent requests; no paid-provider credentials or private watch lists reach browser requests.
 - Load fleet maps and exports client-side and pre-optimize their packages; unknown data and unverified reports never become fabricated positions or verified scores.

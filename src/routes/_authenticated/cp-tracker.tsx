@@ -1,8 +1,9 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute, redirect } from '@tanstack/react-router';
 import { supabase } from '@/integrations/supabase/client';
 import { Tracker } from '@/components/cp-tracker/Tracker';
 
 export const Route = createFileRoute('/_authenticated/cp-tracker')({
+  beforeLoad: async () => { const { data } = await supabase.rpc('has_private_demo_access'); if (!data) throw redirect({ to: '/auth', search: { redirect: '/cp-tracker' } }); },
   head: () => ({ meta: [
     { title: 'CP Closing Tracker Demo | Beyond Horizons' },
     { name: 'description', content: 'Private demonstration of an unsecured aircraft-lessor loan conditions precedent tracker with human review gates.' },

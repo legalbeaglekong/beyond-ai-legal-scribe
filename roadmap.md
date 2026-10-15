@@ -1,12 +1,15 @@
 # Roadmap
 
+- [x] Replace private-demo Google sign-in with verified email links restricted to the four approved addresses; verify generic unapproved-email response, signed-in denial, blocked private data reads and workspace creation.
+- [ ] Verify approved-recipient email delivery and link completion — requires an approved recipient to receive and open their sign-in email. No recipient emails were sent during testing.
+
 - [x] Add private Fleet Risk Monitor under Demos with isolated example/client modes, map, explicit unverified scores and human review.
 - [x] Connect available live sources, persistent client workspace and review history; verify signed-in access, test review persistence, exports and mobile layout.
 - [ ] Complete production fleet monitoring: licensed positions/NOTAMs, sanctions-screening adapter, full historical scoring and background schedules, provider selection and alert delivery. Requires provider access/licensing and confirmed recipients; current demo explicitly labels these unavailable. Free news source returned 429 and OpenSky timed out during verification.
 
 - [x] Build private CP tracker demo, exact checklist, reviewer controls and exports without menu/sitemap changes.
 - [x] Verify downloads, access protection and mobile layout (isolated demo; no runtime errors).
-- [ ] Verify CP tracker signed-in review persistence — not yet tested; managed test-session minting is now available.
+- [ ] Verify CP tracker signed-in review persistence — requires an approved recipient session under the new access restrictions.
 
 - [x] Build the supplied Singapore pet law and manufacturing/supply agreement pages as previews only.
 - [x] Verify exact copy, metadata, initial-HTML FAQs, cross-links, and unchanged navigation/footer.
