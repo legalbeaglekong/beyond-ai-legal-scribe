@@ -14,6 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
+      cp_reviews: {
+        Row: {
+          created_at: string
+          id: string
+          note: string
+          ref: string
+          reviewer_email: string
+          reviewer_name: string
+          status: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          note?: string
+          ref: string
+          reviewer_email: string
+          reviewer_name: string
+          status: string
+          user_id?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          note?: string
+          ref?: string
+          reviewer_email?: string
+          reviewer_name?: string
+          status?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       ebook_leads: {
         Row: {
           company_name: string | null

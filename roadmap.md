@@ -1,5 +1,9 @@
 # Roadmap
 
+- [x] Build private CP tracker demo, exact checklist, reviewer controls and exports without menu/sitemap changes.
+- [x] Verify downloads, access protection and mobile layout (isolated demo; no runtime errors).
+- [ ] Verify signed-in review persistence — blocked until the requesting user signs in; no matching app account exists for managed test-session minting.
+
 - [x] Build the supplied Singapore pet law and manufacturing/supply agreement pages as previews only.
 - [x] Verify exact copy, metadata, initial-HTML FAQs, cross-links, and unchanged navigation/footer.
 
