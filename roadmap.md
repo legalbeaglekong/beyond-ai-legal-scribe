@@ -1,5 +1,6 @@
 # Roadmap
 
+- [ ] Extend private-demo access to verified mailboxes at bethelchambers.com and beyondhorizons.sg; preserve the four individually approved addresses.
 - [x] Replace private-demo Google sign-in with verified email links restricted to the four approved addresses; verify generic unapproved-email response, signed-in denial, blocked private data reads and workspace creation.
 - [ ] Verify approved-recipient email delivery and link completion — requires an approved recipient to receive and open their sign-in email. No recipient emails were sent during testing.
 
