@@ -1,5 +1,9 @@
 # Architecture rules
 
+- Keep the fleet monitor under the existing authenticated gate with separate user-owned workspace, role and append-only review/audit tables; every user administers only their own demo workspace, never another user's records.
+- Fetch fleet feeds through authenticated server functions with at most six concurrent requests; no paid-provider credentials or private watch lists reach browser requests.
+- Load fleet maps and exports client-side and pre-optimize their packages; unknown data and unverified reports never become fabricated positions or verified scores.
+
 - Use the existing PillarPage template for editorial topic pages; route heads own their supplied schema and shared FAQ data drives both visible answers and structured data to prevent copy drift.
 - Keep the private CP tracker in its own scoped interface with client-only protected routing and append-only, user-owned review records; this isolates demo state and prevents review-history deletion or cross-user access.
 - Build CP exports from the same checklist and notice as the screen using client-side imports; this keeps exports consistent without bundling document libraries into server handlers.

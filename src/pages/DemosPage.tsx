@@ -3,9 +3,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileCheck2, Layers, ArrowRight, ExternalLink, Lock } from "lucide-react";
+import { FileCheck2, Layers, Plane, ArrowRight, ExternalLink, Lock } from "lucide-react";
 
 const demos = [
+  {
+    icon: Plane,
+    title: "Fleet Risk Monitor",
+    tag: "Aircraft Fleet Risk",
+    description: "Aircraft fleet monitoring for attachment, jurisdiction and sanctions risk, with source transparency, an isolated example fleet and named human review.",
+    note: "Sign-in required — private demo",
+    href: "/fleet-risk",
+    external: false,
+  },
   {
     icon: FileCheck2,
     title: "CP Dashboard",
@@ -44,7 +53,7 @@ export default function DemosPage() {
           </h1>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Working demonstrations of the tools and trackers we build for transactional
-            and disputes work. All demos use illustrative data only.
+            and disputes work. No client information is shown on this page.
           </p>
         </div>
       </section>

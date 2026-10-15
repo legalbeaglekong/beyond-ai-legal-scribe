@@ -5,10 +5,10 @@ export const Route = createFileRoute("/demos")({
   head: () => ({
     meta: [
       { title: "Interactive Demos | Beyond Horizons" },
-      { name: "description", content: "Working demonstrations of Beyond Horizons tools: the CP Dashboard conditions-precedent tracker and the Tiered DR dispute resolution walkthrough. Illustrative data only." },
+      { name: "description", content: "Explore Beyond Horizons demonstrations: Fleet Risk Monitor, CP Dashboard and Tiered DR. Private demos require sign-in." },
       { name: "robots", content: "noindex, nofollow" },
       { property: "og:title", content: "Interactive Demos | Beyond Horizons" },
-      { property: "og:description", content: "Working demonstrations of Beyond Horizons tools: CP Dashboard and Tiered DR." },
+      { property: "og:description", content: "Beyond Horizons demos: Fleet Risk Monitor, CP Dashboard and Tiered DR." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
