@@ -11,6 +11,7 @@ const workSubLinks = [
   { name: "AI Tools", href: "/ai-tools" },
   { name: "Courses", href: "/courses" },
   { name: "Beyond Precedent", href: "/beyond-precedent" },
+  { name: "Demos", href: "/demos" },
   { name: "Ascending Asia (AAM Guide)", href: "/ascending-asia" },
   { name: "Why Specialist Counsel", href: "/why-specialist-counsel" },
   { name: "Join Us", href: "/join-us" },
