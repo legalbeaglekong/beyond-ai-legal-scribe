@@ -277,6 +277,12 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const router = useRouter();
   useEffect(() => {
+    const returnHash = new URLSearchParams(window.location.hash.slice(1));
+    const isEmailReturn = returnHash.has('access_token') || returnHash.has('error') || returnHash.has('error_code');
+    if (isEmailReturn && window.location.pathname === '/') {
+      // Preserve the auth payload while routing a provider homepage fallback to sign-in.
+      void router.navigate({ to: '/auth', search: {}, hash: window.location.hash.slice(1), replace: true });
+    }
     const { data: { subscription } } = supabase.auth.onAuthStateChange(event => {
       if (event !== 'SIGNED_IN' && event !== 'SIGNED_OUT' && event !== 'USER_UPDATED') return;
       void router.invalidate();

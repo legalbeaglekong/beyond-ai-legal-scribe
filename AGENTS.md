@@ -2,6 +2,7 @@
 
 - Authorize private demos through a shared server-managed exact-email/domain eligibility function and verified mailbox ownership, with restrictive access policies in addition to owner RLS; UI redirects alone never grant data access.
 - Send demo magic links only after server-side allowlist checks, return the same result for unapproved addresses, and keep destinations on approved app origins.
+- Preserve a sanitized demo destination across email sign-in and recover provider homepage callbacks through the public auth page; verify access before navigating to a demo.
 
 - Keep the fleet monitor under the existing authenticated gate with separate user-owned workspace, role and append-only review/audit tables; every user administers only their own demo workspace, never another user's records.
 - Fetch fleet feeds through authenticated server functions with at most six concurrent requests; no paid-provider credentials or private watch lists reach browser requests.
