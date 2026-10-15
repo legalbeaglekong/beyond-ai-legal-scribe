@@ -1,0 +1,12 @@
+CREATE TABLE public.private_demo_access (email text PRIMARY KEY CHECK (email = lower(email)), enabled boolean NOT NULL DEFAULT true);
+GRANT ALL ON public.private_demo_access TO service_role;
+ALTER TABLE public.private_demo_access ENABLE ROW LEVEL SECURITY;
+CREATE OR REPLACE FUNCTION public.has_private_demo_access() RETURNS boolean LANGUAGE sql STABLE SECURITY DEFINER SET search_path = public AS $$ SELECT EXISTS (SELECT 1 FROM auth.users u JOIN public.private_demo_access a ON a.email = lower(u.email) WHERE u.id = auth.uid() AND u.email_confirmed_at IS NOT NULL AND a.enabled); $$;
+REVOKE ALL ON FUNCTION public.has_private_demo_access() FROM PUBLIC, anon;
+GRANT EXECUTE ON FUNCTION public.has_private_demo_access() TO authenticated;
+CREATE POLICY approved_demo_access ON public.cp_reviews AS RESTRICTIVE FOR ALL TO authenticated USING (public.has_private_demo_access()) WITH CHECK (public.has_private_demo_access());
+CREATE POLICY approved_demo_access ON public.fleet_monitor_workspaces AS RESTRICTIVE FOR ALL TO authenticated USING (public.has_private_demo_access()) WITH CHECK (public.has_private_demo_access());
+CREATE POLICY approved_demo_access ON public.fleet_monitor_reviews AS RESTRICTIVE FOR ALL TO authenticated USING (public.has_private_demo_access()) WITH CHECK (public.has_private_demo_access());
+CREATE POLICY approved_demo_access ON public.fleet_monitor_roles AS RESTRICTIVE FOR ALL TO authenticated USING (public.has_private_demo_access()) WITH CHECK (public.has_private_demo_access());
+CREATE POLICY approved_demo_access ON public.fleet_monitor_audit AS RESTRICTIVE FOR ALL TO authenticated USING (public.has_private_demo_access()) WITH CHECK (public.has_private_demo_access());
+CREATE OR REPLACE FUNCTION public.initialize_fleet_monitor() RETURNS void LANGUAGE plpgsql SECURITY DEFINER SET search_path = public AS $$ BEGIN IF NOT public.has_private_demo_access() THEN RAISE EXCEPTION 'Private demo access required'; END IF; INSERT INTO public.fleet_monitor_roles(user_id) VALUES(auth.uid()) ON CONFLICT DO NOTHING; INSERT INTO public.fleet_monitor_workspaces(user_id) VALUES(auth.uid()) ON CONFLICT DO NOTHING; END; $$;

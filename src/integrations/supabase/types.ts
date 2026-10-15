@@ -179,6 +179,21 @@ export type Database = {
         }
         Relationships: []
       }
+      private_demo_access: {
+        Row: {
+          email: string
+          enabled: boolean
+        }
+        Insert: {
+          email: string
+          enabled?: boolean
+        }
+        Update: {
+          email?: string
+          enabled?: boolean
+        }
+        Relationships: []
+      }
       translation_cache: {
         Row: {
           created_at: string
@@ -211,6 +226,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      has_private_demo_access: { Args: never; Returns: boolean }
       initialize_fleet_monitor: { Args: never; Returns: undefined }
     }
     Enums: {
