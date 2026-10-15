@@ -5,8 +5,8 @@
 - Preserve a sanitized demo destination across email sign-in and recover provider homepage callbacks through the public auth page; verify access before navigating to a demo.
 
 - Serve CP and fleet demos as public read-only routes using only supplied example data; preserve owner-scoped database policies and never read saved workspaces, reviews or audit records in public views.
-- Fetch fleet feeds through authenticated server functions with at most six concurrent requests; no paid-provider credentials or private watch lists reach browser requests.
-- Load fleet maps and exports client-side and pre-optimize their packages; unknown data and unverified reports never become fabricated positions or verified scores.
+- Run the Fleet Risk Monitor demo entirely client-side from a deterministic simulator and fictional local data; no live feeds or keys, so the demo is reproducible and never presents real aircraft facts.
+- Load fleet maps and exports client-side and pre-optimize their packages; covenant outputs are flags for review, never legal conclusions.
 
 - Use the existing PillarPage template for editorial topic pages; route heads own their supplied schema and shared FAQ data drives both visible answers and structured data to prevent copy drift.
 - Keep the CP tracker in its own scoped interface with append-only, user-owned review records protected separately from public example viewing; this prevents review-history deletion or cross-user access.
