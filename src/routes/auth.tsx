@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import logo from '@/assets/bh-logo.svg';
 
 export const Route = createFileRoute('/auth')({
-  validateSearch: (search: Record<string, unknown>) => ({ redirect: search['redirect'] === '/fleet-risk' ? '/fleet-risk' as const : search['redirect'] === '/cp-tracker' ? '/cp-tracker' as const : '/demos' as const }),
+  validateSearch: (search: Record<string, unknown>): { redirect?: '/fleet-risk' | '/cp-tracker' | '/demos' } => search['redirect'] === '/fleet-risk' ? { redirect: '/fleet-risk' } : search['redirect'] === '/cp-tracker' ? { redirect: '/cp-tracker' } : {},
   head: () => ({ meta: [{ title: 'Private demo sign-in | Beyond Horizons' }, { name: 'description', content: 'Email-only access to the private Beyond Horizons demonstrations for approved recipients.' }, { name: 'robots', content: 'noindex, nofollow' }, { property: 'og:title', content: 'Private demo sign-in | Beyond Horizons' }, { property: 'og:description', content: 'Approved-recipient access to private Beyond Horizons demos.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary' }] }),
   component: TrackerSignIn,
 });
@@ -18,7 +18,7 @@ function TrackerSignIn() {
   const [busy, setBusy] = useState(false);
   const [email, setEmail] = useState('');
   const [sent, setSent] = useState(false);
-  const { redirect: destination } = Route.useSearch();
+  const destination = Route.useSearch().redirect ?? '/demos';
   const sendLink = useServerFn(requestDemoLink);
   useEffect(() => {
     let active = true;
