@@ -1,5 +1,9 @@
 # Roadmap
 
+- [ ] Add private Fleet Risk Monitor under Demos with isolated example/client modes, maps, transparent scores and human review.
+- [ ] Connect available live sources, persistent client records and review history; verify access and exports.
+- [ ] Configure licensed feeds and alert delivery — requires provider access and confirmed recipients.
+
 - [x] Build private CP tracker demo, exact checklist, reviewer controls and exports without menu/sitemap changes.
 - [x] Verify downloads, access protection and mobile layout (isolated demo; no runtime errors).
 - [ ] Verify signed-in review persistence — blocked until the requesting user signs in; no matching app account exists for managed test-session minting.
