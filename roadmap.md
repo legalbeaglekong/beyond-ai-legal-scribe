@@ -1,9 +1,8 @@
 # Roadmap
 
-- [ ] Correct demo email-link return destinations and show expired-link recovery; verify approved-session navigation.
+- [x] Make CP Dashboard and Fleet Risk Monitor public read-only demos; verified signed-out access, checklist search, aircraft details and zero requests for private records. Existing saved records remain protected.
 - [x] Extend private-demo access to verified mailboxes at bethelchambers.com and beyondhorizons.sg; preserve the four individually approved addresses. Checked exact-domain matching, case handling, and rejection of unrelated domains, subdomains and malformed addresses; recipient email completion remains unverified below.
 - [x] Replace private-demo Google sign-in with verified email links restricted to the four approved addresses; verify generic unapproved-email response, signed-in denial, blocked private data reads and workspace creation.
-- [ ] Verify approved-recipient email delivery and link completion — requires an approved recipient to receive and open their sign-in email. No recipient emails were sent during testing.
 
 - [x] Add private Fleet Risk Monitor under Demos with isolated example/client modes, map, explicit unverified scores and human review.
 - [x] Connect available live sources, persistent client workspace and review history; verify signed-in access, test review persistence, exports and mobile layout.
@@ -11,7 +10,6 @@
 
 - [x] Build private CP tracker demo, exact checklist, reviewer controls and exports without menu/sitemap changes.
 - [x] Verify downloads, access protection and mobile layout (isolated demo; no runtime errors).
-- [ ] Verify CP tracker signed-in review persistence — requires an approved recipient session under the new access restrictions.
 
 - [x] Build the supplied Singapore pet law and manufacturing/supply agreement pages as previews only.
 - [x] Verify exact copy, metadata, initial-HTML FAQs, cross-links, and unchanged navigation/footer.

@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileCheck2, Layers, Plane, ArrowRight, ExternalLink, Lock } from "lucide-react";
+import { FileCheck2, Layers, Plane, ArrowRight, ExternalLink } from "lucide-react";
 
 const demos = [
   {
@@ -11,7 +11,7 @@ const demos = [
     title: "Fleet Risk Monitor",
     tag: "Aircraft Fleet Risk",
     description: "Aircraft fleet monitoring for attachment, jurisdiction and sanctions risk, with source transparency, an isolated example fleet and named human review.",
-    note: "Sign-in required — private demo",
+    note: "Public demo",
     href: "/fleet-risk",
     external: false,
   },
@@ -21,7 +21,7 @@ const demos = [
     tag: "Conditions Precedent Tracker",
     description:
       "A live demonstration of how we track conditions precedent on a cross-border transaction — checklist status, document log, reviewer sign-off, and one-click Excel and Word exports. Illustrative data only; no client information.",
-    note: "Sign-in required — private demo",
+    note: "Public demo",
     href: "/cp-tracker",
     external: false,
   },
@@ -86,7 +86,6 @@ export default function DemosPage() {
                     </Button>
                   )}
                   <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
-                    {!demo.external && <Lock className="h-3 w-3" />}
                     {demo.note}
                   </span>
                 </div>
