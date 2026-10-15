@@ -18,6 +18,7 @@ import { Route as AscendingAsiaRouteImport } from './routes/ascending-asia'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as BeyondPrecedentRouteImport } from './routes/beyond-precedent'
 import { Route as CoursesRouteImport } from './routes/courses'
+import { Route as DemosRouteImport } from './routes/demos'
 import { Route as JoinUsRouteImport } from './routes/join-us'
 import { Route as MarketInsightsRouteImport } from './routes/market-insights'
 import { Route as OurClientsRouteImport } from './routes/our-clients'
@@ -99,6 +100,11 @@ const BeyondPrecedentRoute = BeyondPrecedentRouteImport.update({
 const CoursesRoute = CoursesRouteImport.update({
   id: '/courses',
   path: '/courses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemosRoute = DemosRouteImport.update({
+  id: '/demos',
+  path: '/demos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JoinUsRoute = JoinUsRouteImport.update({
@@ -310,6 +316,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/beyond-precedent': typeof BeyondPrecedentRoute
   '/courses': typeof CoursesRoute
+  '/demos': typeof DemosRoute
   '/join-us': typeof JoinUsRoute
   '/market-insights': typeof MarketInsightsRoute
   '/our-clients': typeof OurClientsRoute
@@ -358,6 +365,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/beyond-precedent': typeof BeyondPrecedentRoute
   '/courses': typeof CoursesRoute
+  '/demos': typeof DemosRoute
   '/join-us': typeof JoinUsRoute
   '/market-insights': typeof MarketInsightsRoute
   '/our-clients': typeof OurClientsRoute
@@ -408,6 +416,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/beyond-precedent': typeof BeyondPrecedentRoute
   '/courses': typeof CoursesRoute
+  '/demos': typeof DemosRoute
   '/join-us': typeof JoinUsRoute
   '/market-insights': typeof MarketInsightsRoute
   '/our-clients': typeof OurClientsRoute
@@ -458,6 +467,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/beyond-precedent'
     | '/courses'
+    | '/demos'
     | '/join-us'
     | '/market-insights'
     | '/our-clients'
@@ -506,6 +516,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/beyond-precedent'
     | '/courses'
+    | '/demos'
     | '/join-us'
     | '/market-insights'
     | '/our-clients'
@@ -555,6 +566,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/beyond-precedent'
     | '/courses'
+    | '/demos'
     | '/join-us'
     | '/market-insights'
     | '/our-clients'
@@ -605,6 +617,7 @@ export interface RootRouteChildren {
   AuthRoute: typeof AuthRoute
   BeyondPrecedentRoute: typeof BeyondPrecedentRoute
   CoursesRoute: typeof CoursesRoute
+  DemosRoute: typeof DemosRoute
   JoinUsRoute: typeof JoinUsRoute
   MarketInsightsRoute: typeof MarketInsightsRoute
   OurClientsRoute: typeof OurClientsRoute
@@ -707,6 +720,13 @@ declare module '@tanstack/react-router' {
       path: '/courses'
       fullPath: '/courses'
       preLoaderRoute: typeof CoursesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demos': {
+      id: '/demos'
+      path: '/demos'
+      fullPath: '/demos'
+      preLoaderRoute: typeof DemosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/join-us': {
@@ -999,6 +1019,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthRoute: AuthRoute,
   BeyondPrecedentRoute: BeyondPrecedentRoute,
   CoursesRoute: CoursesRoute,
+  DemosRoute: DemosRoute,
   JoinUsRoute: JoinUsRoute,
   MarketInsightsRoute: MarketInsightsRoute,
   OurClientsRoute: OurClientsRoute,
