@@ -10,7 +10,7 @@ import { demoDestination, rememberDemoDestination, rememberedDemoDestination, cl
 import { useQuery } from '@tanstack/react-query';
 
 export const Route = createFileRoute('/auth')({
-  validateSearch: (search: Record<string, unknown>) => ({ redirect: demoDestination(search['redirect']) }),
+  validateSearch: (search: Record<string, unknown>): { redirect?: '/fleet-risk' | '/cp-tracker' | '/demos' } => ({ redirect: demoDestination(search['redirect']) }),
   head: () => ({ meta: [{ title: 'Private demo sign-in | Beyond Horizons' }, { name: 'description', content: 'Email-only access to the private Beyond Horizons demonstrations for approved recipients.' }, { name: 'robots', content: 'noindex, nofollow' }, { property: 'og:title', content: 'Private demo sign-in | Beyond Horizons' }, { property: 'og:description', content: 'Approved-recipient access to private Beyond Horizons demos.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary' }] }),
   component: TrackerSignIn,
 });
@@ -38,7 +38,6 @@ function TrackerSignIn() {
   }, []);
   useEffect(() => {
     if (!signedIn) return;
-    const target = Route.useSearch;
     const next = destination === '/demos' ? rememberedDemoDestination() ?? destination : destination;
     clearDemoDestination();
     void navigate({ to: next, replace: true });
