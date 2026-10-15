@@ -155,7 +155,7 @@ function Drawer({ a, r, t, tab, setTab, onClose, onContact, onTerms, onReset }: 
 function FlagCard({ f, t, onContact }: { f: Flag; t: number; onContact?: () => void }) {
   const left = f.deadline ? (f.deadline - t) / HOUR : null;
   return <div className={`fd-flag fd-flag-${f.level}`}><b>{f.title}</b><span className="fd-mono">{f.ref}</span><p>{f.detail} {f.consequence} <strong>Next step: review with counsel.</strong></p>
-    {left !== null && <p className="fd-mono fd-countdown">Lessee must notify within {Math.round((f.deadline! - t + (left < 0 ? 0 : 0)) / HOUR + (t - f.deadline!) / HOUR + Math.round(left))}h — {left > 0 ? `${Math.floor(left)}h left` : `deadline passed ${Math.floor(-left)}h ago`}</p>}
+    {left !== null && <p className="fd-mono fd-countdown">Lessee must notify within {f.noticeHours}h — {left > 0 ? `${Math.floor(left)}h left` : `deadline passed ${Math.floor(-left)}h ago`}</p>}
     {f.level === 'red' && onContact && <button className="fd-link" onClick={onContact}>{CTA}</button>}</div>;
 }
 

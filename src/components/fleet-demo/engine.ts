@@ -77,7 +77,7 @@ function enteredExcludedAt(a: Aircraft, t: number) {
   return at;
 }
 
-export type Flag = { key: string; check: string; level: 'amber' | 'red'; title: string; ref: string; consequence: string; detail: string; deadline?: number };
+export type Flag = { key: string; check: string; level: 'amber' | 'red'; title: string; ref: string; consequence: string; detail: string; deadline?: number; noticeHours?: number };
 export type Factor = { label: string; value: number; why: string };
 export type Risk = { overall: number; level: Level; factors: Record<FactorKey, Factor>; flags: Flag[]; pos: Pos; covenant: Level; insurance: Level };
 export type FactorKey = 'attachment' | 'jurisdiction' | 'drift' | 'operator' | 'covenant';
@@ -95,7 +95,7 @@ export function assess(a: Aircraft, t: number, juris: JurisdictionRow[], weights
   // Covenant checks — flags for review, never conclusions.
   if (here && L.excludedCountries.includes(here)) {
     const entered = enteredExcludedAt(a, t) ?? t; const deadline = entered + L.noticeHours * HOUR;
-    flags.push({ key: 'excluded', check: 'Excluded Country', level: 'red', title: 'Lease breach risk: Excluded Country', ref: L.refs.excluded, consequence: 'May require lessor consent or notice under sample terms.', detail: `On ground in ${countries[here]?.name ?? here}, listed as an Excluded Country.`, deadline });
+    flags.push({ key: 'excluded', check: 'Excluded Country', level: 'red', title: 'Lease breach risk: Excluded Country', ref: L.refs.excluded, consequence: 'May require lessor consent or notice under sample terms.', detail: `On ground in ${countries[here]?.name ?? here}, listed as an Excluded Country.`, deadline, noticeHours: L.noticeHours });
   } else if (dest && L.excludedCountries.includes(dest)) {
     flags.push({ key: 'excluded-plan', check: 'Excluded Country', level: 'red', title: 'Lease breach risk: route to Excluded Country', ref: L.refs.excluded, consequence: 'May require lessor consent before operation under sample terms.', detail: `Current routing ends in ${countries[dest]?.name ?? dest}.` });
   }
@@ -133,7 +133,7 @@ export function assess(a: Aircraft, t: number, juris: JurisdictionRow[], weights
   const overall = Math.round((Object.keys(factors) as FactorKey[]).reduce((s, k) => s + factors[k].value * weights[k], 0) / wsum);
   const insFlags = flags.filter(f => f.check === 'Insurance'); const covFlags = flags.filter(f => f.check !== 'Insurance');
   const worst = (fs: Flag[]): Level => fs.some(f => f.level === 'red') ? 'red' : fs.length ? 'amber' : 'green';
-  return { overall, level: covenant === 90 ? (lvl(overall) === 'green' ? 'amber' : lvl(overall)) : lvl(overall), factors, flags, pos, covenant: worst(covFlags), insurance: worst(insFlags) };
+  return { overall, level: covenant === 90 ? 'red' : covenant === 50 && lvl(overall) === 'green' ? 'amber' : lvl(overall), factors, flags, pos, covenant: worst(covFlags), insurance: worst(insFlags) };
 }
 
 export const fmtSim = (t: number) => new Date(t).toISOString().slice(0, 16).replace('T', ' ') + 'Z';
