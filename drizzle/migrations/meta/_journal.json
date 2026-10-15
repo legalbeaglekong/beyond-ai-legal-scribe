@@ -15,6 +15,13 @@
       "when": 1792058320333,
       "tag": "0001_create_cp_reviews",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1792060337493,
+      "tag": "0002_fleet_monitor_private_workspaces",
+      "breakpoints": true
     }
   ]
 }

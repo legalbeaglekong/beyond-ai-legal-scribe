@@ -38,6 +38,7 @@ import { Route as SingaporeSpaceLawRouteImport } from './routes/singapore-space-
 import { Route as TopicsRouteImport } from './routes/topics'
 import { Route as WhySpecialistCounselRouteImport } from './routes/why-specialist-counsel'
 import { Route as AuthenticatedCpTrackerRouteImport } from './routes/_authenticated/cp-tracker'
+import { Route as AuthenticatedFleetRiskRouteImport } from './routes/_authenticated/fleet-risk'
 import { Route as EnUsSplatRouteImport } from './routes/en-us/$'
 import { Route as ExpertiseIndexRouteImport } from './routes/expertise/index'
 import { Route as ExpertiseIdRouteImport } from './routes/expertise/$id'
@@ -208,6 +209,11 @@ const AuthenticatedCpTrackerRoute = AuthenticatedCpTrackerRouteImport.update({
   path: '/cp-tracker',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedFleetRiskRoute = AuthenticatedFleetRiskRouteImport.update({
+  id: '/fleet-risk',
+  path: '/fleet-risk',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const EnUsSplatRoute = EnUsSplatRouteImport.update({
   id: '/en-us/$',
   path: '/en-us/$',
@@ -336,6 +342,7 @@ export interface FileRoutesByFullPath {
   '/topics': typeof TopicsRoute
   '/why-specialist-counsel': typeof WhySpecialistCounselRoute
   '/cp-tracker': typeof AuthenticatedCpTrackerRoute
+  '/fleet-risk': typeof AuthenticatedFleetRiskRoute
   '/en-us/$': typeof EnUsSplatRoute
   '/expertise/$id': typeof ExpertiseIdRoute
   '/industry/ai-code-counsel': typeof IndustryAiCodeCounselRoute
@@ -385,6 +392,7 @@ export interface FileRoutesByTo {
   '/topics': typeof TopicsRoute
   '/why-specialist-counsel': typeof WhySpecialistCounselRoute
   '/cp-tracker': typeof AuthenticatedCpTrackerRoute
+  '/fleet-risk': typeof AuthenticatedFleetRiskRoute
   '/en-us/$': typeof EnUsSplatRoute
   '/expertise/$id': typeof ExpertiseIdRoute
   '/industry/ai-code-counsel': typeof IndustryAiCodeCounselRoute
@@ -436,6 +444,7 @@ export interface FileRoutesById {
   '/topics': typeof TopicsRoute
   '/why-specialist-counsel': typeof WhySpecialistCounselRoute
   '/_authenticated/cp-tracker': typeof AuthenticatedCpTrackerRoute
+  '/_authenticated/fleet-risk': typeof AuthenticatedFleetRiskRoute
   '/en-us/$': typeof EnUsSplatRoute
   '/expertise/$id': typeof ExpertiseIdRoute
   '/industry/ai-code-counsel': typeof IndustryAiCodeCounselRoute
@@ -487,6 +496,7 @@ export interface FileRouteTypes {
     | '/topics'
     | '/why-specialist-counsel'
     | '/cp-tracker'
+    | '/fleet-risk'
     | '/en-us/$'
     | '/expertise/$id'
     | '/industry/ai-code-counsel'
@@ -536,6 +546,7 @@ export interface FileRouteTypes {
     | '/topics'
     | '/why-specialist-counsel'
     | '/cp-tracker'
+    | '/fleet-risk'
     | '/en-us/$'
     | '/expertise/$id'
     | '/industry/ai-code-counsel'
@@ -586,6 +597,7 @@ export interface FileRouteTypes {
     | '/topics'
     | '/why-specialist-counsel'
     | '/_authenticated/cp-tracker'
+    | '/_authenticated/fleet-risk'
     | '/en-us/$'
     | '/expertise/$id'
     | '/industry/ai-code-counsel'
@@ -862,6 +874,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedCpTrackerRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/fleet-risk': {
+      id: '/_authenticated/fleet-risk'
+      path: '/fleet-risk'
+      fullPath: '/fleet-risk'
+      preLoaderRoute: typeof AuthenticatedFleetRiskRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/en-us/$': {
       id: '/en-us/$'
       path: '/en-us/$'
@@ -1000,10 +1019,12 @@ declare module '@tanstack/react-router' {
 
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedCpTrackerRoute: typeof AuthenticatedCpTrackerRoute
+  AuthenticatedFleetRiskRoute: typeof AuthenticatedFleetRiskRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedCpTrackerRoute: AuthenticatedCpTrackerRoute,
+  AuthenticatedFleetRiskRoute: AuthenticatedFleetRiskRoute,
 }
 
 const AuthenticatedRouteRouteWithChildren =

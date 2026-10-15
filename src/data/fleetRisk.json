@@ -1,0 +1,451 @@
+{
+  "notice": "NO RELIANCE. Beyond Horizons by Bethel Chambers LLC (BH) provides this monitor to its client only. It is a triage tool built on third-party data that can be late, incomplete or wrong. Other persons must not rely on it. BH accepts no responsibility or liability for any inaccuracy to any person except its client. An alert means only that a rule matched. It does not mean that a risk exists. Every alert needs human review.",
+  "disclaimer": "Beyond Horizons is a specialist practice group of Bethel Chambers LLC, a Singapore law corporation licensed and regulated by the Legal Services Regulatory Authority (LSRA), a department under the Singapore Ministry of Law. UEN: 202007868D. Content here is general information only and does not constitute legal advice.",
+  "settings": {
+    "alert_emails": [
+      "[TO CONFIRM]"
+    ],
+    "webhook_url": "",
+    "proximity_km": 50,
+    "ground_hours_threshold": 72,
+    "silent_days_threshold": 7
+  },
+  "aircraft": [
+    {
+      "registration": "HZ-NS22",
+      "msn": "8443",
+      "type": "A320neo (A320-251N)",
+      "icao24_hex": "710149",
+      "operator": "flynas",
+      "lessee": "flynas",
+      "lessee_country": "SA",
+      "operator_country": "SA",
+      "registry_country": "SA",
+      "home_base_icao": "OERK",
+      "lease_expiry": null,
+      "client_role": "public_example",
+      "arrears_days": null,
+      "msn_source": "https://www.worldairlinenews.com/tag/msn-8443",
+      "example": true
+    },
+    {
+      "registration": "HZ-ARF",
+      "msn": "41549",
+      "type": "B787-9",
+      "icao24_hex": "7103D7",
+      "operator": "Saudia",
+      "lessee": "Saudia",
+      "lessee_country": "SA",
+      "operator_country": "SA",
+      "registry_country": "SA",
+      "home_base_icao": "OEJN",
+      "lease_expiry": null,
+      "client_role": "public_example",
+      "arrears_days": null,
+      "msn_source": "https://www.worldairlinenews.com/tag/hz-arf",
+      "example": true
+    },
+    {
+      "registration": "A6-MAX",
+      "msn": "60966",
+      "type": "B737-8",
+      "icao24_hex": "8964CF",
+      "operator": "flydubai",
+      "lessee": "flydubai",
+      "lessee_country": "AE",
+      "operator_country": "AE",
+      "registry_country": "AE",
+      "home_base_icao": "OMDB",
+      "lease_expiry": null,
+      "client_role": "public_example",
+      "arrears_days": null,
+      "msn_source": "https://www.worldairlinenews.com/tag/60966",
+      "example": true
+    },
+    {
+      "registration": "TC-JNR",
+      "msn": "1311",
+      "type": "A330-300 (A330-343)",
+      "icao24_hex": "4BA9D2",
+      "operator": "Turkish Airlines",
+      "lessee": "Turkish Airlines",
+      "lessee_country": "TR",
+      "operator_country": "TR",
+      "registry_country": "TR",
+      "home_base_icao": "LTFM",
+      "lease_expiry": null,
+      "client_role": "public_example",
+      "arrears_days": null,
+      "msn_source": "https://www.worldairlinenews.com/tag/tc-jnr",
+      "example": true
+    },
+    {
+      "registration": "VT-ITY",
+      "msn": "6946",
+      "type": "A320neo (A320-271N)",
+      "icao24_hex": "800C39",
+      "operator": "IndiGo",
+      "lessee": "IndiGo",
+      "lessee_country": "IN",
+      "operator_country": "IN",
+      "registry_country": "IN",
+      "home_base_icao": "VIDP",
+      "lease_expiry": null,
+      "client_role": "public_example",
+      "arrears_days": null,
+      "msn_source": "https://www.worldairlinenews.com/tag/vt-ity",
+      "example": true
+    },
+    {
+      "registration": "9V-OJA",
+      "msn": "37112",
+      "type": "B787-9",
+      "icao24_hex": "76BD41",
+      "operator": "Scoot",
+      "lessee": "Scoot",
+      "lessee_country": "SG",
+      "operator_country": "SG",
+      "registry_country": "SG",
+      "home_base_icao": "WSSS",
+      "lease_expiry": null,
+      "client_role": "public_example",
+      "arrears_days": null,
+      "msn_source": "https://www.worldairlinenews.com/tag/37112",
+      "example": true
+    },
+    {
+      "registration": "ZS-ARF",
+      "msn": "19020190",
+      "type": "E195-E2",
+      "icao24_hex": null,
+      "operator": "Airlink",
+      "lessee": "Airlink",
+      "lessee_country": "ZA",
+      "operator_country": "ZA",
+      "registry_country": "ZA",
+      "home_base_icao": "FAOR",
+      "lease_expiry": null,
+      "client_role": "public_example",
+      "arrears_days": null,
+      "msn_source": "https://www.airdatanews.com/airlink-takes-delivery-of-first-embraer-e195-e2",
+      "example": true,
+      "history_note": "Delivered September 2025 (Air Data News). ICAO hex not yet in public database: resolve from registration at seed time."
+    },
+    {
+      "registration": "RA-73730",
+      "msn": "10126",
+      "type": "A320neo (A320-251N)",
+      "icao24_hex": "152002",
+      "operator": "Aeroflot",
+      "lessee": "Aeroflot",
+      "lessee_country": "RU",
+      "operator_country": "RU",
+      "registry_country": "RU",
+      "home_base_icao": "UUEE",
+      "lease_expiry": null,
+      "client_role": "public_example",
+      "arrears_days": null,
+      "msn_source": "https://www.airfleets.net/ficheapp/plane-a320-10126.htm",
+      "example": true,
+      "history_note": "Delivered 05/2021 as VP-BPQ, leased from CDB Aviation. Re-registered RA-73730 in 04/2022 (airfleets.net). Verify."
+    }
+  ],
+  "airports": [
+    {
+      "icao": "OERK",
+      "iata": "RUH",
+      "name": "King Khalid International, Riyadh",
+      "country_iso2": "SA",
+      "lat": 24.9576,
+      "lon": 46.6988,
+      "status": "closed",
+      "status_note": "Closed after repeated attacks in October 2026. Flights diverted or cancelled. Verify current status before use.",
+      "status_source_url": "https://www.stlpr.org/npr/2026-10-10/attack-on-riyadh-airport-killed-12-people-and-wounded-over-300-more-saudi-authorities-say"
+    },
+    {
+      "icao": "OEDF",
+      "iata": "DMM",
+      "name": "King Fahd International, Dammam",
+      "country_iso2": "SA",
+      "lat": 26.4712,
+      "lon": 49.7979,
+      "status": "unknown",
+      "status_note": "Saudi authorities reported an attack in October 2026. Few details. Verify.",
+      "status_source_url": "https://www.stlpr.org/npr/2026-10-10/attack-on-riyadh-airport-killed-12-people-and-wounded-over-300-more-saudi-authorities-say"
+    },
+    {
+      "icao": "OEJN",
+      "iata": "JED",
+      "name": "King Abdulaziz International, Jeddah",
+      "country_iso2": "SA",
+      "lat": 21.6796,
+      "lon": 39.1565,
+      "status": "unknown"
+    },
+    {
+      "icao": "OMDB",
+      "iata": "DXB",
+      "name": "Dubai International",
+      "country_iso2": "AE",
+      "lat": 25.2532,
+      "lon": 55.3657,
+      "status": "unknown"
+    },
+    {
+      "icao": "OTHH",
+      "iata": "DOH",
+      "name": "Hamad International, Doha",
+      "country_iso2": "QA",
+      "lat": 25.2731,
+      "lon": 51.6081,
+      "status": "unknown"
+    },
+    {
+      "icao": "LTFM",
+      "iata": "IST",
+      "name": "Istanbul Airport",
+      "country_iso2": "TR",
+      "lat": 41.2753,
+      "lon": 28.7519,
+      "status": "unknown"
+    },
+    {
+      "icao": "VABB",
+      "iata": "BOM",
+      "name": "Chhatrapati Shivaji Maharaj International, Mumbai",
+      "country_iso2": "IN",
+      "lat": 19.0896,
+      "lon": 72.8656,
+      "status": "unknown"
+    },
+    {
+      "icao": "WSSS",
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "country_iso2": "SG",
+      "lat": 1.3644,
+      "lon": 103.9915,
+      "status": "unknown"
+    },
+    {
+      "icao": "VTBS",
+      "iata": "BKK",
+      "name": "Suvarnabhumi, Bangkok",
+      "country_iso2": "TH",
+      "lat": 13.69,
+      "lon": 100.7501,
+      "status": "unknown"
+    },
+    {
+      "icao": "FAOR",
+      "iata": "JNB",
+      "name": "O. R. Tambo International, Johannesburg",
+      "country_iso2": "ZA",
+      "lat": -26.1392,
+      "lon": 28.246,
+      "status": "unknown"
+    },
+    {
+      "icao": "FACT",
+      "iata": "CPT",
+      "name": "Cape Town International",
+      "country_iso2": "ZA",
+      "lat": -33.9715,
+      "lon": 18.6021,
+      "status": "unknown"
+    },
+    {
+      "icao": "UUEE",
+      "iata": "SVO",
+      "name": "Sheremetyevo, Moscow",
+      "country_iso2": "RU",
+      "lat": 55.9726,
+      "lon": 37.4146,
+      "status": "unknown"
+    },
+    {
+      "icao": "VIDP",
+      "iata": "DEL",
+      "name": "Indira Gandhi International, Delhi",
+      "country_iso2": "IN",
+      "lat": 28.5562,
+      "lon": 77.1,
+      "status": "unknown"
+    }
+  ],
+  "jurisdictions": [
+    {
+      "iso2": "SA",
+      "name": "Saudi Arabia",
+      "ctc_status": "verify",
+      "ctc_alt_a": null,
+      "awg_index_score": null,
+      "czib_active": "verify",
+      "aviation_sanctions": "none known - verify",
+      "travel_advice_level": "verify",
+      "detention_lien_note": ""
+    },
+    {
+      "iso2": "AE",
+      "name": "United Arab Emirates",
+      "ctc_status": "verify",
+      "ctc_alt_a": null,
+      "awg_index_score": null,
+      "czib_active": "verify",
+      "aviation_sanctions": "none known - verify",
+      "travel_advice_level": "verify",
+      "detention_lien_note": ""
+    },
+    {
+      "iso2": "QA",
+      "name": "Qatar",
+      "ctc_status": "verify",
+      "ctc_alt_a": null,
+      "awg_index_score": null,
+      "czib_active": "verify",
+      "aviation_sanctions": "none known - verify",
+      "travel_advice_level": "verify",
+      "detention_lien_note": ""
+    },
+    {
+      "iso2": "TR",
+      "name": "T\u00fcrkiye",
+      "ctc_status": "verify",
+      "ctc_alt_a": null,
+      "awg_index_score": null,
+      "czib_active": "verify",
+      "aviation_sanctions": "none known - verify",
+      "travel_advice_level": "verify",
+      "detention_lien_note": ""
+    },
+    {
+      "iso2": "IN",
+      "name": "India",
+      "ctc_status": "verify",
+      "ctc_alt_a": null,
+      "awg_index_score": null,
+      "czib_active": "verify",
+      "aviation_sanctions": "none known - verify",
+      "travel_advice_level": "verify",
+      "detention_lien_note": ""
+    },
+    {
+      "iso2": "SG",
+      "name": "Singapore",
+      "ctc_status": "verify",
+      "ctc_alt_a": null,
+      "awg_index_score": null,
+      "czib_active": "verify",
+      "aviation_sanctions": "none known - verify",
+      "travel_advice_level": "verify",
+      "detention_lien_note": ""
+    },
+    {
+      "iso2": "TH",
+      "name": "Thailand",
+      "ctc_status": "verify",
+      "ctc_alt_a": null,
+      "awg_index_score": null,
+      "czib_active": "verify",
+      "aviation_sanctions": "none known - verify",
+      "travel_advice_level": "verify",
+      "detention_lien_note": ""
+    },
+    {
+      "iso2": "ZA",
+      "name": "South Africa",
+      "ctc_status": "verify",
+      "ctc_alt_a": null,
+      "awg_index_score": null,
+      "czib_active": "verify",
+      "aviation_sanctions": "none known - verify",
+      "travel_advice_level": "verify",
+      "detention_lien_note": ""
+    },
+    {
+      "iso2": "RU",
+      "name": "Russia",
+      "ctc_status": "verify",
+      "ctc_alt_a": null,
+      "awg_index_score": null,
+      "czib_active": "verify",
+      "aviation_sanctions": "EU, UK and US aviation restrictions since 2022 - verify current scope",
+      "travel_advice_level": "verify",
+      "detention_lien_note": "Leased aircraft were kept in the country after 2022 sanctions - verify"
+    },
+    {
+      "iso2": "YE",
+      "name": "Yemen",
+      "ctc_status": "verify",
+      "ctc_alt_a": null,
+      "awg_index_score": null,
+      "czib_active": "verify",
+      "aviation_sanctions": "verify",
+      "travel_advice_level": "verify",
+      "detention_lien_note": ""
+    }
+  ],
+  "events": [
+    {
+      "detected_at": "2026-10-10T12:00:00Z",
+      "source": "NPR / AP via St. Louis Public Radio",
+      "source_url": "https://www.stlpr.org/npr/2026-10-10/attack-on-riyadh-airport-killed-12-people-and-wounded-over-300-more-saudi-authorities-say",
+      "headline": "Riyadh King Khalid airport closed after repeated attacks; deaths and injuries reported",
+      "category": "conflict",
+      "severity": "critical",
+      "countries": [
+        "SA"
+      ],
+      "airports": [
+        "OERK"
+      ],
+      "lat": 24.9576,
+      "lon": 46.6988,
+      "radius_km": 50,
+      "test": false
+    },
+    {
+      "detected_at": "2026-10-10T10:00:00Z",
+      "source": "AAP via The Senior",
+      "source_url": "https://www.thesenior.com.au/story/9366069/third-attack-on-riyadh-airport-prompts-evacuations/",
+      "headline": "Riyadh flights diverted or cancelled; one aircraft badly damaged; several airlines suspend services",
+      "category": "conflict",
+      "severity": "critical",
+      "countries": [
+        "SA"
+      ],
+      "airports": [
+        "OERK"
+      ],
+      "lat": 24.9576,
+      "lon": 46.6988,
+      "radius_km": 50,
+      "test": false
+    },
+    {
+      "detected_at": "2026-10-11T08:00:00Z",
+      "source": "NPR / AP via St. Louis Public Radio",
+      "source_url": "https://www.stlpr.org/npr/2026-10-10/attack-on-riyadh-airport-killed-12-people-and-wounded-over-300-more-saudi-authorities-say",
+      "headline": "Attack also reported at Dammam King Fahd airport; few details released",
+      "category": "conflict",
+      "severity": "high",
+      "countries": [
+        "SA"
+      ],
+      "airports": [
+        "OEDF"
+      ],
+      "lat": 26.4712,
+      "lon": 49.7979,
+      "radius_km": 50,
+      "test": false
+    }
+  ],
+  "test_event_template": {
+    "source": "TEST EVENT - NOT REAL",
+    "category": "test",
+    "severity": "critical",
+    "radius_km": 50,
+    "headline": "Test event created by [user] to check alerts"
+  }
+}
