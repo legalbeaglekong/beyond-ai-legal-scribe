@@ -13,10 +13,10 @@ export const requestDemoLink = createServerFn({ method: 'POST' })
     if (!allowedHost.includes(url.hostname) || (url.protocol !== 'https:' && url.hostname !== 'localhost')) throw new Error('Invalid sign-in origin');
     const email = data.email.toLowerCase();
     const { supabaseAdmin } = await import('@/integrations/supabase/client.server');
-    const { data: access, error } = await supabaseAdmin.from('private_demo_access').select('enabled').eq('email', email).maybeSingle();
+    const { data: access, error } = await supabaseAdmin.rpc('private_demo_email_allowed', { _email: email });
     if (error) throw new Error('Sign-in is temporarily unavailable');
     // Same response for unapproved emails; never disclose the private list.
-    if (!access?.enabled) return { accepted: true };
+    if (!access) return { accepted: true };
     const key = process.env['SUPABASE_PUBLISHABLE_KEY'];
     const backend = process.env['SUPABASE_URL'];
     if (!key || !backend) throw new Error('Sign-in is temporarily unavailable');

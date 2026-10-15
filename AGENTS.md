@@ -1,6 +1,6 @@
 # Architecture rules
 
-- Authorize private demos through a server-managed email allowlist and verified mailbox ownership, with restrictive access policies in addition to owner RLS; UI redirects alone never grant data access.
+- Authorize private demos through a shared server-managed exact-email/domain eligibility function and verified mailbox ownership, with restrictive access policies in addition to owner RLS; UI redirects alone never grant data access.
 - Send demo magic links only after server-side allowlist checks, return the same result for unapproved addresses, and keep destinations on approved app origins.
 
 - Keep the fleet monitor under the existing authenticated gate with separate user-owned workspace, role and append-only review/audit tables; every user administers only their own demo workspace, never another user's records.

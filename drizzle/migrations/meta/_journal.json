@@ -29,6 +29,13 @@
       "when": 1792061118701,
       "tag": "0003_restrict_private_demos_to_verified_email_access",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1792061437956,
+      "tag": "0004_extend_private_demo_verified_domains",
+      "breakpoints": true
     }
   ]
 }
