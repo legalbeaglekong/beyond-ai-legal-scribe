@@ -10,10 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AiToolsRouteImport } from './routes/ai-tools'
 import { Route as AnnouncementsRouteImport } from './routes/announcements'
 import { Route as AscendingAsiaRouteImport } from './routes/ascending-asia'
+import { Route as AuthRouteImport } from './routes/auth'
 import { Route as BeyondPrecedentRouteImport } from './routes/beyond-precedent'
 import { Route as CoursesRouteImport } from './routes/courses'
 import { Route as JoinUsRouteImport } from './routes/join-us'
@@ -34,6 +36,7 @@ import { Route as SingaporeRoboticsLawRouteImport } from './routes/singapore-rob
 import { Route as SingaporeSpaceLawRouteImport } from './routes/singapore-space-law'
 import { Route as TopicsRouteImport } from './routes/topics'
 import { Route as WhySpecialistCounselRouteImport } from './routes/why-specialist-counsel'
+import { Route as AuthenticatedCpTrackerRouteImport } from './routes/_authenticated/cp-tracker'
 import { Route as EnUsSplatRouteImport } from './routes/en-us/$'
 import { Route as ExpertiseIndexRouteImport } from './routes/expertise/index'
 import { Route as ExpertiseIdRouteImport } from './routes/expertise/$id'
@@ -59,6 +62,10 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -77,6 +84,11 @@ const AnnouncementsRoute = AnnouncementsRouteImport.update({
 const AscendingAsiaRoute = AscendingAsiaRouteImport.update({
   id: '/ascending-asia',
   path: '/ascending-asia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BeyondPrecedentRoute = BeyondPrecedentRouteImport.update({
@@ -185,6 +197,11 @@ const WhySpecialistCounselRoute = WhySpecialistCounselRouteImport.update({
   path: '/why-specialist-counsel',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedCpTrackerRoute = AuthenticatedCpTrackerRouteImport.update({
+  id: '/cp-tracker',
+  path: '/cp-tracker',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const EnUsSplatRoute = EnUsSplatRouteImport.update({
   id: '/en-us/$',
   path: '/en-us/$',
@@ -290,6 +307,7 @@ export interface FileRoutesByFullPath {
   '/ai-tools': typeof AiToolsRoute
   '/announcements': typeof AnnouncementsRoute
   '/ascending-asia': typeof AscendingAsiaRoute
+  '/auth': typeof AuthRoute
   '/beyond-precedent': typeof BeyondPrecedentRoute
   '/courses': typeof CoursesRoute
   '/join-us': typeof JoinUsRoute
@@ -310,6 +328,7 @@ export interface FileRoutesByFullPath {
   '/singapore-space-law': typeof SingaporeSpaceLawRoute
   '/topics': typeof TopicsRoute
   '/why-specialist-counsel': typeof WhySpecialistCounselRoute
+  '/cp-tracker': typeof AuthenticatedCpTrackerRoute
   '/en-us/$': typeof EnUsSplatRoute
   '/expertise/$id': typeof ExpertiseIdRoute
   '/industry/ai-code-counsel': typeof IndustryAiCodeCounselRoute
@@ -336,6 +355,7 @@ export interface FileRoutesByTo {
   '/ai-tools': typeof AiToolsRoute
   '/announcements': typeof AnnouncementsRoute
   '/ascending-asia': typeof AscendingAsiaRoute
+  '/auth': typeof AuthRoute
   '/beyond-precedent': typeof BeyondPrecedentRoute
   '/courses': typeof CoursesRoute
   '/join-us': typeof JoinUsRoute
@@ -356,6 +376,7 @@ export interface FileRoutesByTo {
   '/singapore-space-law': typeof SingaporeSpaceLawRoute
   '/topics': typeof TopicsRoute
   '/why-specialist-counsel': typeof WhySpecialistCounselRoute
+  '/cp-tracker': typeof AuthenticatedCpTrackerRoute
   '/en-us/$': typeof EnUsSplatRoute
   '/expertise/$id': typeof ExpertiseIdRoute
   '/industry/ai-code-counsel': typeof IndustryAiCodeCounselRoute
@@ -379,10 +400,12 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/ai-tools': typeof AiToolsRoute
   '/announcements': typeof AnnouncementsRoute
   '/ascending-asia': typeof AscendingAsiaRoute
+  '/auth': typeof AuthRoute
   '/beyond-precedent': typeof BeyondPrecedentRoute
   '/courses': typeof CoursesRoute
   '/join-us': typeof JoinUsRoute
@@ -403,6 +426,7 @@ export interface FileRoutesById {
   '/singapore-space-law': typeof SingaporeSpaceLawRoute
   '/topics': typeof TopicsRoute
   '/why-specialist-counsel': typeof WhySpecialistCounselRoute
+  '/_authenticated/cp-tracker': typeof AuthenticatedCpTrackerRoute
   '/en-us/$': typeof EnUsSplatRoute
   '/expertise/$id': typeof ExpertiseIdRoute
   '/industry/ai-code-counsel': typeof IndustryAiCodeCounselRoute
@@ -431,6 +455,7 @@ export interface FileRouteTypes {
     | '/ai-tools'
     | '/announcements'
     | '/ascending-asia'
+    | '/auth'
     | '/beyond-precedent'
     | '/courses'
     | '/join-us'
@@ -451,6 +476,7 @@ export interface FileRouteTypes {
     | '/singapore-space-law'
     | '/topics'
     | '/why-specialist-counsel'
+    | '/cp-tracker'
     | '/en-us/$'
     | '/expertise/$id'
     | '/industry/ai-code-counsel'
@@ -477,6 +503,7 @@ export interface FileRouteTypes {
     | '/ai-tools'
     | '/announcements'
     | '/ascending-asia'
+    | '/auth'
     | '/beyond-precedent'
     | '/courses'
     | '/join-us'
@@ -497,6 +524,7 @@ export interface FileRouteTypes {
     | '/singapore-space-law'
     | '/topics'
     | '/why-specialist-counsel'
+    | '/cp-tracker'
     | '/en-us/$'
     | '/expertise/$id'
     | '/industry/ai-code-counsel'
@@ -519,10 +547,12 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/_authenticated'
     | '/about'
     | '/ai-tools'
     | '/announcements'
     | '/ascending-asia'
+    | '/auth'
     | '/beyond-precedent'
     | '/courses'
     | '/join-us'
@@ -543,6 +573,7 @@ export interface FileRouteTypes {
     | '/singapore-space-law'
     | '/topics'
     | '/why-specialist-counsel'
+    | '/_authenticated/cp-tracker'
     | '/en-us/$'
     | '/expertise/$id'
     | '/industry/ai-code-counsel'
@@ -566,10 +597,12 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AboutRoute: typeof AboutRoute
   AiToolsRoute: typeof AiToolsRoute
   AnnouncementsRoute: typeof AnnouncementsRoute
   AscendingAsiaRoute: typeof AscendingAsiaRoute
+  AuthRoute: typeof AuthRoute
   BeyondPrecedentRoute: typeof BeyondPrecedentRoute
   CoursesRoute: typeof CoursesRoute
   JoinUsRoute: typeof JoinUsRoute
@@ -620,6 +653,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -646,6 +686,13 @@ declare module '@tanstack/react-router' {
       path: '/ascending-asia'
       fullPath: '/ascending-asia'
       preLoaderRoute: typeof AscendingAsiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/beyond-precedent': {
@@ -788,6 +835,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WhySpecialistCounselRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/cp-tracker': {
+      id: '/_authenticated/cp-tracker'
+      path: '/cp-tracker'
+      fullPath: '/cp-tracker'
+      preLoaderRoute: typeof AuthenticatedCpTrackerRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/en-us/$': {
       id: '/en-us/$'
       path: '/en-us/$'
@@ -924,12 +978,25 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedCpTrackerRoute: typeof AuthenticatedCpTrackerRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedCpTrackerRoute: AuthenticatedCpTrackerRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AboutRoute: AboutRoute,
   AiToolsRoute: AiToolsRoute,
   AnnouncementsRoute: AnnouncementsRoute,
   AscendingAsiaRoute: AscendingAsiaRoute,
+  AuthRoute: AuthRoute,
   BeyondPrecedentRoute: BeyondPrecedentRoute,
   CoursesRoute: CoursesRoute,
   JoinUsRoute: JoinUsRoute,

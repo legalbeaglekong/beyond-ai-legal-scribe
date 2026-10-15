@@ -1,5 +1,8 @@
 # Roadmap
 
+- [ ] Build private CP tracker demo, exact checklist, reviewer controls and exports without menu/sitemap changes.
+- [ ] Verify signed-in review persistence, downloads, access protection and mobile layout.
+
 - [x] Build the supplied Singapore pet law and manufacturing/supply agreement pages as previews only.
 - [x] Verify exact copy, metadata, initial-HTML FAQs, cross-links, and unchanged navigation/footer.
 
