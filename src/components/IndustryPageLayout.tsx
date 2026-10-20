@@ -85,15 +85,17 @@ export interface IndustryPageData {
     notes?: string[];
     hideDefaultCaption?: boolean;
     hideAccolades?: boolean;
+    /** Optional route-specific recognition strip rendered instead of the shared AccoladeBanner. */
+    accoladesOverride?: string[];
   };
   spotlight?: {
     heading: string;
     id?: string;
     cards: { title: string; description?: string; bullets?: string[]; link?: string; linkText?: string; icon?: LucideIcon }[];
-    analysis?: string;
+    analysis?: import("react").ReactNode;
   };
   /** Optional closing prose section before the FAQ. */
-  closing?: { heading?: string; paragraphs: string[] };
+  closing?: { heading?: string; paragraphs: import("react").ReactNode[] };
   /** Optional rich section rendered after the closing prose, before the FAQ. */
   afterClosing?: import("react").ReactNode;
   faqs: {
