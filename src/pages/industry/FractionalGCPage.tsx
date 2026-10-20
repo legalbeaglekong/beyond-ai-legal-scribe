@@ -112,11 +112,23 @@ export const data: IndustryPageData = {
       "Daily presence. If you need someone physically in your meetings most days, employ them. A retainer cannot honestly replace that.",
     ],
     hideDefaultCaption: true,
+    accoladesOverride: [
+      "Hui Ling Teo is ranked Band 3 for Aviation: Finance in Singapore by Chambers Asia-Pacific 2026.",
+      "Hui Ling Teo — Legal 500 Next Generation Partner, 2023",
+    ],
   },
   overview: {
     heading: "What a Beyond Horizons retainer covers",
-    intro:
-      "Fees and scope are fixed in the engagement letter before work begins. There is no published monthly fee cap on this page — requirements vary, including complex multi-workstream retainers.",
+    intro: (<>
+      <h3 className="text-xl md:text-2xl font-serif font-bold text-foreground">Plans, scope and turnaround</h3>
+      <ul className="list-disc pl-6 space-y-2">
+        <li><strong className={st}>Plans:</strong> Fractional GC plans start from SGD 4,000 per month to access Chambers (2026) and Legal 500 (2023) ranked counsel, Hui Ling Teo, with more than a decade of experience, including at international law firms.</li>
+        <li><strong className={st}>Day-to-day documentation:</strong> unlimited review of day-to-day documentation, one at a time, within the scope of your engagement letter, with a typical 3 to 5 business day substantive response timeline.</li>
+        <li><strong className={st}>Faster or larger work:</strong> Faster responses, or larger, more complex or high-stakes work, can be accessed at surge or upsize pricing. Because we already hold the context and understanding of your business, you do not need to pay twice for that understanding.</li>
+        <li><strong className={st}>Deal work:</strong> equity rounds, joint ventures, acquisitions and debt raises can sit within the plan; where a transaction is complex and high value, it is scoped as a separate matter with its own engagement terms.</li>
+      </ul>
+      <p>Fees and scope for your plan are fixed in the engagement letter before work begins.</p>
+    </>),
     services: [
       {
         icon: Building2,
@@ -165,14 +177,26 @@ export const data: IndustryPageData = {
           "These contracts are usually drafted by the vendor, for the vendor, and presented as “standard.”",
         ],
       },
+      {
+        icon: Briefcase,
+        title: "6. Transactions and capital raising — the company's side, across workstreams",
+        bullets: [
+          <><a className={ac} href="/expertise/startup-funding">Equity rounds</a>: term sheets, subscription and shareholder agreements, equity incentive plans, and the board and shareholder approvals a round needs</>,
+          <><a className={ac} href="/singapore-borrower-finance-counsel">Debt and green finance as borrower</a>: facility, guarantee and security review before signing, sustainability-linked loan terms, and waivers</>,
+          <><a className={ac} href="/expertise/corporate-transactions">Joint ventures</a>: joint venture and shareholder agreements, governance terms and negotiation with co-venturers</>,
+          <><a className={ac} href="/expertise/ma-cross-border">Acquisitions</a>: due diligence coordination, purchase agreements and post-closing integration from a compliance perspective</>,
+          <><a className={ac} href="/industry/energy-transition">Project and commercial contracts</a>: power purchase agreements (PPAs), virtual PPAs, hedging, EPC and supply terms, reviewed for consistency with your financing documents</>,
+          "Equity rounds, joint ventures, acquisitions and debt raises can sit within the retainer; where a transaction is complex and high value, it is scoped as a separate matter with its own engagement terms.",
+        ],
+      },
     ],
     note:
-      "We do not charge by the hour for retained work, and we do not bill for the first conversation. We give no guarantee of outcome. We commit to a named lead counsel, a named deputy, and a response time stated in the engagement letter.",
+      "We do not charge by the hour for retained work, and we do not bill for the first conversation. We give no guarantee of outcome. We commit to a named lead counsel, a named deputy, and a typical 3 to 5 business day substantive response timeline.",
   },
   closing: {
     heading: "How we differ (in one paragraph)",
     paragraphs: [
-      "You retain a regulated Singapore law corporation: compulsory professional indemnity, practising certificates, PCR conflict checks, a Law Society complaints route, and privilege under Evidence Act s128 for solicitor–client communications. You get a named lead and a named deputy — not a single employed seat and not an agency placement that may expressly not offer legal advice. Scope and fees sit in the engagement letter; we do not publish a fee card or compare our fees with other law practices on this site. Your named lead is Hui Ling Teo, Founder of Beyond Horizons by Bethel Chambers LLC, who is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore.",
+      <>You retain a regulated Singapore law corporation: compulsory professional indemnity, practising certificates, PCR conflict checks, a Law Society complaints route, and privilege under Evidence Act s128 for solicitor–client communications. You get a named lead and a named deputy — not a single employed seat and not an agency placement that may expressly not offer legal advice. Scope and fees sit in the engagement letter; we do not compare our fees with those of other law practices. Your lead counsel is <a className={ac} href="/team/hui-ling-teo">Hui Ling Teo</a>, Founder of Beyond Horizons by Bethel Chambers LLC, who is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore. Meet <a className={ac} href="/team">the team</a> behind your retainer, including <a className={ac} href="/team/sonia-motwani">Sonia Motwani</a>.</>,
     ],
   },
   afterClosing: acraSection,
