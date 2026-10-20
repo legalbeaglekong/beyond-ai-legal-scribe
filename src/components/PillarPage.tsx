@@ -36,6 +36,7 @@ export interface PillarService {
   icon: LucideIcon;
   title: string;
   desc: string;
+  content?: import("react").ReactNode;
 }
 
 export interface PillarUpdate {
@@ -269,7 +270,7 @@ const PillarPage = ({
                   <CardContent className="p-6">
                     <s.icon className="h-6 w-6 text-primary mb-3" />
                     <h3 className="font-serif text-xl text-foreground mb-2">{s.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{s.content ?? s.desc}</p>
                   </CardContent>
                 </Card>
               ))}

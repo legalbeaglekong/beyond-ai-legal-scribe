@@ -39,6 +39,7 @@ const SingaporeRestructuringPage = () => (
       <section className="py-12">
         <div className="container mx-auto px-6 max-w-4xl">
           <p className="text-muted-foreground leading-relaxed">Facility issues often come before a restructuring. For lender-side facilities, security, demands and recovery, see our <Link to="/singapore-lender-finance-counsel" className="text-primary hover:underline">Lender finance counsel</Link> page. If you are a sponsor or individual borrower dealing with facility terms, guarantees, margin calls or waivers, see our <Link to="/singapore-borrower-finance-counsel" className="text-primary hover:underline">Borrower finance counsel</Link> page.</p>
+          <p className="text-muted-foreground leading-relaxed">Where the file involves an aircraft lease, see <Link to="/industry/aviation" className="text-primary hover:underline">aircraft lease restructurings and lessor workouts</Link>.</p>
         </div>
       </section>
     </>}

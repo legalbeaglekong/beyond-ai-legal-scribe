@@ -97,7 +97,7 @@ const CHAMBERS_LABELS = [
 ];
 
 const INSTRUCT_PATHS = [
-  { label: "aviation finance counsel", to: "/industry/aviation" },
+  { label: "aviation finance leasing practice", to: "/industry/aviation" },
   { label: "fractional GC Singapore", to: "/industry/fractional-gc" },
   { label: "employment counsel", to: "/singapore-employment-law" },
   { label: "AI Code Counsel", to: "/industry/ai-code-counsel" },

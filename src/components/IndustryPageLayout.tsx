@@ -44,6 +44,11 @@ const BOOKING_URL = "https://wa.me/6597265330";
 
 export interface IndustryPageData {
   slug: string;
+  beforeOverview?: import("react").ReactNode;
+  afterOverview?: import("react").ReactNode;
+  heroSubhead?: string;
+  updated?: string;
+  serviceSchema?: boolean;
   seo: { title: string; description: string };
   hero: {
     title: string;
@@ -154,12 +159,13 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org", "@type": "LegalService",
-            name: "Beyond Horizons by Bethel Chambers",
+            name: data.serviceSchema ? "Beyond Horizons by Bethel Chambers LLC" : "Beyond Horizons by Bethel Chambers",
             provider: { "@type": "Organization", name: "Bethel Chambers LLC", url: "https://beyondhorizons.sg" },
             description: data.seo.description, areaServed: "Asia-Pacific",
             url: `https://beyondhorizons.sg/industry/${data.slug}`,
           })}
         </script>
+        {data.serviceSchema && <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Service", "name": "Fractional General Counsel Singapore", "serviceType": "Fractional general counsel", "url": "https://beyondhorizons.sg/industry/fractional-gc", "description": "Fractional general counsel and fractional legal counsel in Singapore: scoped retainer support from Beyond Horizons by Bethel Chambers LLC.", "provider": {"@id": "https://beyondhorizons.sg/#organization"}, "areaServed": {"@type": "Country", "name": "Singapore"}})}</script>}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org", "@type": "FAQPage",
@@ -187,6 +193,8 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight tracking-tight" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.9)' }}>
                 {data.hero.title}
               </h1>
+              {data.heroSubhead && <p className="text-white/90 mb-4">{data.heroSubhead}</p>}
+              {data.updated && <p className="text-white/90 mb-4">{data.updated}</p>}
               <p className="text-base md:text-lg text-white max-w-3xl mx-auto leading-relaxed mb-10" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.7), 0 1px 2px rgba(0,0,0,0.8)' }}>
                 {data.hero.subtitle}
               </p>
@@ -246,6 +254,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
           </section>
         )}
 
+        {data.beforeOverview}
         {/* Overview */}
         <section id="overview" className="section-padding bg-secondary/20">
           <div className="max-w-6xl mx-auto container-padding fade-in">
@@ -298,6 +307,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
           </div>
         </section>
 
+        {data.afterOverview}
         {data.contentSections && data.contentSections.length > 0 && (
           <section className="section-padding bg-background">
             <div className="max-w-4xl mx-auto container-padding fade-in space-y-12">
@@ -466,13 +476,11 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
             <Accordion type="single" collapsible className="w-full">
               {data.faqs.items.map((faq, i) => (
-                <AccordionItem key={i} value={`faq-${i}`} className="border-border/30">
+                <AccordionItem key={i} value={`faq-${i}`} className={["aviation", "fractional-gc"].includes(data.slug) ? "group border-border/30" : "border-border/30"}>
                   <AccordionTrigger className="text-left text-foreground text-sm hover:no-underline hover:text-accent">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-sm leading-relaxed">
-                    {faq.answer}
-                  </AccordionContent>
+                  {["aviation", "fractional-gc"].includes(data.slug) ? <div className="pb-4 text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden">{faq.answer}</div> : <AccordionContent className="text-muted-foreground text-sm leading-relaxed">{faq.answer}</AccordionContent>}
                 </AccordionItem>
               ))}
             </Accordion>

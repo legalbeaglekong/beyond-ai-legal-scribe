@@ -1,8 +1,8 @@
 export const RETRENCHMENT_PATH = "/singapore-retrenchment-law";
 export const RETRENCHMENT_URL = "https://beyondhorizons.sg/singapore-retrenchment-law";
-export const RETRENCHMENT_TITLE = "Singapore Retrenchment Law 2026: What Employers Must Do";
+export const RETRENCHMENT_TITLE = "Singapore Retrenchment: Is a Benefit Mandatory? (2026)";
 export const RETRENCHMENT_DESCRIPTION =
-  "Singapore retrenchment rules in 2026: the legal duties, what is only tripartite norm, retrenchment benefits, and when the Workplace Fairness Act starts.";
+  "Singapore retrenchment in 2026: no general statutory benefit; MOM notification duties, norms and Workplace Fairness timing for employers.";
 export const RETRENCHMENT_OG_IMAGE = "https://beyondhorizons.sg/images/retrenchment/01-national-kpi-keyed.png";
 
 export const retrenchmentFaqs = [
