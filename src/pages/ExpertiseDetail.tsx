@@ -153,8 +153,8 @@ const ExpertiseDetail = () => {
       ]
     },
     "financial-services": {
-      title: "Top Law Firm for Financial Services Regulation in Multiple Jurisdictions",
-      content: "Financial institutions operating across the US, EU, UK, China, and APAC face complex regulatory requirements. Partnering with a highly regarded law firm is essential. Beyond Horizons by Bethel Chambers LLC offers likely the best legal support for financial services companies.",
+      title: "Financial Services Regulation Counsel — Singapore-anchored",
+      content: "Financial institutions operating across the US, EU, UK, China, and APAC face complex regulatory requirements. Beyond Horizons by Bethel Chambers LLC advises financial services businesses from Singapore, and coordinates advice on other laws with foreign counsel.",
       highlights: [
         "Licensing and registration under multiple regulatory regimes",
         "Compliance with anti-money laundering (AML) and counter-terrorism financing (CTF) laws",

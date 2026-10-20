@@ -66,10 +66,12 @@ export interface IndustryPageData {
   /** Optional lead-in prose rendered directly under the hero. */
   intro?: { paragraphs: string[]; note?: string };
   contentSections?: { heading: string; paragraphs: string[]; links?: { label: string; to: string }[] }[];
+  /** Optional override for the body "Schedule Consultation" buttons (hero + CTA). */
+  consultHref?: string;
   overview: {
     heading: string;
-    intro?: string;
-    services: { icon: LucideIcon; title: string; description?: string; bullets?: string[] }[];
+    intro?: import("react").ReactNode;
+    services: { icon: LucideIcon; title: string; description?: string; bullets?: import("react").ReactNode[] }[];
     stats?: string[];
     note?: string;
   };
