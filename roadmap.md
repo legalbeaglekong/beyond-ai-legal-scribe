@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Keep closed FAQ answers in initial HTML on employment, Singapore aviation law, restructuring and transportation; verify unchanged answers and accordion interaction.
+- [x] Keep closed FAQ answers in initial HTML on employment, Singapore aviation law, restructuring and transportation; verified all 47 answers against FAQ schema and every accordion opening/closing with no page errors.
 
 - [x] Make CP Dashboard and Fleet Risk Monitor public read-only demos; verified signed-out access, checklist search, aircraft details and zero requests for private records. Existing saved records remain protected.
 - [x] Extend private-demo access to verified mailboxes at bethelchambers.com and beyondhorizons.sg; preserve the four individually approved addresses. Checked exact-domain matching, case handling, and rejection of unrelated domains, subdomains and malformed addresses; recipient email completion remains unverified below.
