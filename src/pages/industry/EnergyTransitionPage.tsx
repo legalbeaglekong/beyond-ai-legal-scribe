@@ -29,7 +29,7 @@ const data: IndustryPageData = {
       { title: "Green Finance Opportunity", description: "$1.5T+ green finance opportunity in Asia-Pacific, driving demand for specialist legal structuring." },
       { title: "Anti-Greenwashing Compliance", description: "Rising greenwashing enforcement across APAC regulators, requiring proactive compliance strategies." },
     ],
-    analysis: "The energy transition creates both significant opportunity and legal complexity. Beyond Horizons by Bethel Chambers can help clients navigate this landscape, with sustainability and green finance considerations built into transaction documents rather than added afterwards. Educational overview only — not legal advice.",
+    analysis: <>The energy transition creates both significant opportunity and legal complexity. Beyond Horizons by Bethel Chambers can help clients navigate this landscape, with sustainability and green finance considerations built into transaction documents rather than added afterwards. Growing energy companies that need senior legal judgment regularly across fundraising, financing and joint ventures, without a full-time general counsel, can also consider <a className="text-primary underline" href="/industry/fractional-gc">fractional general counsel support</a>. Educational overview only — not legal advice.</>,
   },
   faqs: {
     heading: "Frequently Asked Questions — Energy Transition Law",

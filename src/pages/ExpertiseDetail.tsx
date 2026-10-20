@@ -276,6 +276,9 @@ const ExpertiseDetail = () => {
                       {currentContent.content}
                       {id === "tech-general-counsel" && <> Where a tech company needs that support on a continuing, part-time basis rather than through a full-time hire, see <Link to="/industry/fractional-gc" className="text-primary underline">fractional general counsel in Singapore</Link>.</>}
                       {id === "commercial-contracts" && <> Companies that need that contract support continuously, as part of wider senior legal cover, can also retain <Link to="/industry/fractional-gc" className="text-primary underline">fractional general counsel support</Link>.</>}
+                      {id === "startup-funding" && <> Companies that raise in successive rounds can also hold this work within <Link to="/industry/fractional-gc" className="text-primary underline">fractional general counsel</Link> support, alongside their other legal matters.</>}
+                      {id === "corporate-transactions" && <> Where joint ventures and shareholder matters are a continuing part of the business, they can be covered by <Link to="/industry/fractional-gc" className="text-primary underline">fractional in-house legal counsel</Link> on a retainer.</>}
+                      {id === "ma-cross-border" && <> Growing companies with an acquisition alongside fundraising or joint venture work can also retain a <Link to="/industry/fractional-gc" className="text-primary underline">fractional GC</Link> to hold the company's side across those workstreams.</>}
                     </p>
                     
                     <h3 className="text-2xl font-bold mb-6 text-foreground">

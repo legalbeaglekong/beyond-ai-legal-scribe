@@ -75,7 +75,7 @@ export interface PillarPageProps {
   slug: string;                 // e.g. "singapore-restructuring-insolvency"
   eyebrow: string;              // e.g. "Singapore · Restructuring & Insolvency"
   h1: string;
-  intro: string;
+  intro: ReactNode;
   badges: string[];
   metaTitle: string;            // <60 chars ideal
   metaDescription: string;      // <160 chars
