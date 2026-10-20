@@ -172,6 +172,7 @@ export default function ContractRiskControlPane() {
       <div className="container mx-auto max-w-7xl px-4 md:px-6">
         <header className="mb-8 flex flex-col justify-between gap-4 border-b border-border pb-6 md:flex-row md:items-end">
           <div>
+            <p className="mb-3 text-sm leading-relaxed text-foreground">Illustrative example only — every figure below is fictitious.</p>
             <p className="mb-2 text-xs font-bold uppercase text-primary">Illustrative control pane</p>
             <h2 id="control-pane-title" className="font-serif text-3xl text-foreground md:text-4xl">Deviation risk matrix</h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">A sample view of how the add-on can compare live agreements against an agreed playbook, trace connected clauses and route consequential findings for counsel review.</p>

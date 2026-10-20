@@ -316,6 +316,8 @@ const ExpertiseDetail = () => {
                       ))}
                     </ul>
 
+                    {id === "commercial-contracts" && <p className="mt-8 text-muted-foreground leading-relaxed">For Singapore and English law supply and manufacturing contracts, see our <Link to="/singapore-manufacturing-supply-agreements" className="text-primary underline">manufacturing and supply agreement counsel</Link> page.</p>}
+
                     {showMaFaqs && (
                       <p className="mt-8 text-muted-foreground leading-relaxed">
                         On tax, we advise as <strong className="text-foreground">corporate / transactional counsel</strong> on how deals and structures interact with tax issues across borders. We are not a substitute for a dedicated tax disputes practice or Big Four return preparation — and we will say so when you need that specialist lane.
