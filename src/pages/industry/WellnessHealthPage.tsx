@@ -10,7 +10,7 @@ const data: IndustryPageData = {
   hero: {
     title: "Wellness & Health Law — Healthcare Regulation, Digital Health & MedTech Counsel",
     subtitle: "Specialised legal expertise for healthcare providers, wellness technology companies, medical device manufacturers, and digital health platforms navigating Asia-Pacific's evolving regulatory landscape.",
-    badges: ["Chambers-Ranked Firm", "ESG & Green Finance Certified", "Cross-Border Health Regulation Expertise"],
+    badges: ["ESG & Green Finance Certified", "Cross-Border Health Regulation Expertise"],
   },
   overview: {
     heading: "What We Do in Wellness & Health Law",
@@ -20,12 +20,11 @@ const data: IndustryPageData = {
       { icon: Smartphone, title: "Digital Health Solutions", description: "Telemedicine platform structuring, health data privacy (PDPA, HIPAA cross-border), SaMD regulatory classification, and AI-in-healthcare governance." },
       { icon: Heart, title: "Wellness Technology Frameworks", description: "Legal structures for wellness apps, wearable health technology, nutraceutical regulation, and health-related consumer protection compliance." },
     ],
-    stats: ["30+ healthcare and wellness matters advised", "10+ APAC jurisdictions", "Digital health & AI-in-medicine focus", "Dual English & Singapore law qualification"],
+    stats: ["10+ APAC jurisdictions", "Digital health & AI-in-medicine focus", "Dual English & Singapore law qualification"],
   },
   spotlight: {
     heading: "The APAC Digital Health Opportunity",
     cards: [
-      { title: "Market Growth", description: "APAC digital health market projected at $100B+ by 2028, with Singapore positioned as Southeast Asia's MedTech hub." },
       { title: "Regulatory Complexity", description: "Rising regulatory complexity — HSA, TGA, PMDA, NMPA frameworks diverging, requiring specialist cross-border navigation." },
       { title: "AI in Healthcare", description: "AI-in-healthcare regulation emerging across ASEAN, creating new compliance requirements for digital health platforms." },
     ],

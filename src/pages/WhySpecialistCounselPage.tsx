@@ -79,7 +79,7 @@ const WhySpecialistCounselPage = () => {
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
               This page offers an honest comparison of different legal service models to help you make an informed decision about the right counsel for your needs.
             </p>
-            <AccoladeBanner variant="inline" />
+            <AccoladeBanner omitTitles={["ALB — Law Firm to Watch 2026"]} variant="inline" />
           </div>
         </section>
 

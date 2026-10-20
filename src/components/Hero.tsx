@@ -39,7 +39,7 @@ const Hero = () => {
             </Link>
           ))}
         </nav>
-        <AccoladeBanner variant="inline" className="mt-10 max-w-2xl mx-auto" />
+        <AccoladeBanner omitTitles={["ALB — Law Firm to Watch 2026"]} variant="inline" className="mt-10 max-w-2xl mx-auto" />
       </div>
 
       <div className="px-4 md:px-8 pb-16">
@@ -61,8 +61,6 @@ const Hero = () => {
           {[
             { value: t("hero.stat1"), label: t("hero.stat1Label") },
             { value: t("hero.stat2"), label: t("hero.stat2Label") },
-            { value: t("hero.stat3"), label: t("hero.stat3Label") },
-            { value: t("hero.stat4"), label: t("hero.stat4Label") },
           ].map((s, i) => (
             <div key={i}>
               <div className="text-3xl md:text-4xl font-serif font-bold text-accent">{s.value}</div>

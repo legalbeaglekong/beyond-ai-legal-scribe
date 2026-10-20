@@ -13,8 +13,7 @@ const About = () => {
 
   const achievements = [
     { icon: Award, title: "Chambers Asia-Pacific 2026", description: "Band 3, Aviation: Finance — Singapore", highlight: "Chambers & Partners" },
-    { icon: TrendingUp, title: t("about.achievement2Title"), description: t("about.achievement2Desc"), highlight: t("about.achievement2Highlight") },
-    { icon: Users, title: "Chambers Global Market Leaders", description: "Band 3, Asset Finance", highlight: "Chambers & Partners" },
+    { icon: TrendingUp, title: t("about.achievement2Title"), description: "Hui Ling Teo \u2014 Legal 500 Next Generation Partner, 2023", highlight: "" },
     { icon: BookOpen, title: t("about.achievement4Title"), description: t("about.achievement4Desc"), highlight: t("about.achievement4Highlight") },
   ];
 
@@ -104,7 +103,7 @@ const About = () => {
                     </a>
                   </Button>
                 </div>
-                <AccoladeBanner variant="inline" className="mt-8" />
+                <AccoladeBanner omitTitles={["ALB — Law Firm to Watch 2026"]} variant="inline" className="mt-8" />
               </div>
             </div>
           </div>
