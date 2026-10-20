@@ -9,6 +9,7 @@
 - Load fleet maps and exports client-side and pre-optimize their packages; covenant outputs are flags for review, never legal conclusions.
 
 - Use the existing PillarPage template for editorial topic pages; route heads own their supplied schema and shared FAQ data drives both visible answers and structured data to prevent copy drift.
+- Keep FAQ answers mounted in initial HTML on employment, Singapore aviation law, restructuring and transportation pages; accordion state controls visibility without removing search-readable answer text.
 - Keep the CP tracker in its own scoped interface with append-only, user-owned review records protected separately from public example viewing; this prevents review-history deletion or cross-user access.
 - Build CP exports from the same checklist and notice as the screen using client-side imports; this keeps exports consistent without bundling document libraries into server handlers.
 - Pre-optimize the tracker export libraries alongside the archived document reader; first-use downloads must not trigger dependency discovery and reload the preview.

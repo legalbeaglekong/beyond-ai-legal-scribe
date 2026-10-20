@@ -476,11 +476,11 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
             <Accordion type="single" collapsible className="w-full">
               {data.faqs.items.map((faq, i) => (
-                <AccordionItem key={i} value={`faq-${i}`} className={["aviation", "fractional-gc"].includes(data.slug) ? "group border-border/30" : "border-border/30"}>
+                <AccordionItem key={i} value={`faq-${i}`} className={["aviation", "fractional-gc", "transportation"].includes(data.slug) ? "group border-border/30" : "border-border/30"}>
                   <AccordionTrigger className="text-left text-foreground text-sm hover:no-underline hover:text-accent">
                     {faq.question}
                   </AccordionTrigger>
-                  {["aviation", "fractional-gc"].includes(data.slug) ? <div className="pb-4 text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden">{faq.answer}</div> : <AccordionContent className="text-muted-foreground text-sm leading-relaxed">{faq.answer}</AccordionContent>}
+                  {["aviation", "fractional-gc"].includes(data.slug) ? <div className="pb-4 text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden">{faq.answer}</div> : <AccordionContent {...(data.slug === "transportation" ? { forceMount: true as const } : {})} className={data.slug === "transportation" ? "text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground text-sm leading-relaxed"}>{faq.answer}</AccordionContent>}
                 </AccordionItem>
               ))}
             </Accordion>
