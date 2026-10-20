@@ -204,9 +204,15 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
                 <Button variant="default" size="lg" className="bg-accent text-accent-foreground border-2 border-accent font-semibold shadow-xl hover:bg-accent/90" asChild>
-                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                    Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
+                  {data.consultHref ? (
+                    <a href={data.consultHref}>
+                      Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  ) : (
+                    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                      Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  )}
                 </Button>
                 <Button variant="outline" size="lg" className="border-2 border-white text-white font-semibold hover:bg-white hover:text-black shadow-lg backdrop-blur-xs bg-white/5" asChild>
                   {data.hero.emailCta ? (
@@ -268,7 +274,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                 {data.overview.heading}
               </h2>
               {data.overview.intro && (
-                <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-6">{data.overview.intro}</p>
+                <div className="text-sm text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-6 text-left space-y-3">{data.overview.intro}</div>
               )}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -395,7 +401,17 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                 Comparison reflects general industry models. Every engagement is unique.
               </p>
             )}
-            {!data.comparison.hideAccolades && <AccoladeBanner variant="compact" className="mt-8" />}
+            {!data.comparison.hideAccolades && (data.comparison.accoladesOverride ? (
+              <div className="flex flex-wrap justify-center gap-2 mt-8">
+                {data.comparison.accoladesOverride.map((line, i) => (
+                  <span key={i} className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border border-accent/40 bg-accent/5 text-accent font-medium">
+                    {line}
+                  </span>
+                ))}
+              </div>
+            ) : (
+              <AccoladeBanner variant="compact" className="mt-8" />
+            ))}
           </div>
         </section>
         )}
@@ -503,9 +519,15 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="default" size="lg" className="bg-white text-black font-semibold shadow-lg hover:bg-white/90" asChild>
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                  Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
+                {data.consultHref ? (
+                  <a href={data.consultHref}>
+                    Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                ) : (
+                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                    Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                )}
               </Button>
               <Button variant="outline" size="lg" className="border-2 border-white text-white font-semibold hover:bg-white hover:text-black shadow-lg" asChild>
                 <a href="mailto:HL@beyondhorizons.sg">
