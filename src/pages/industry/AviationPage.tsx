@@ -4,6 +4,8 @@ import { Scale, Clock, Laptop, Gavel } from "lucide-react";
 
 export const data: IndustryPageData = {
   slug: "aviation",
+  heroSubhead: "English-law leases negotiated in APAC hours, with recoveries and incomplete-document support when files turn hard.",
+  updated: "Last updated: October 2026",
   seo: {
     title: "Aviation Lawyer & Finance Counsel Singapore | Repossession, Leasing & Docs — Beyond Horizons",
     description:
@@ -11,7 +13,7 @@ export const data: IndustryPageData = {
   },
   hero: {
     entity: "Beyond Horizons by Bethel Chambers LLC",
-    title: "Aviation lawyer & finance counsel Singapore — leasing, recoveries, incomplete docs, APAC hours",
+    title: "Aviation finance and leasing counsel in Singapore",
     emailCta: "HL@beyondhorizons.sg",
     ctaLine: "Instruct aviation finance counsel — schedule a consultation.",
     jumpLinks: [
@@ -43,6 +45,7 @@ export const data: IndustryPageData = {
     note:
       "Out of scope on this page: we are a law practice. We do not underwrite securities, lend as a bank or private-credit fund, broker aircraft, or act as a CAMO/MRO. We do not compare our fees with those of any other law practice.",
   },
+  beforeOverview: (<><section className="section-padding bg-background"><div className="max-w-3xl mx-auto container-padding space-y-4"><h2 className="text-2xl md:text-3xl font-serif font-bold">Aviation finance and leasing in Singapore</h2><p>Beyond Horizons by Bethel Chambers LLC acts for lessors, lessee airlines and operators, and financiers taking an interest in a lease, from Singapore. Most aviation finance and leasing matters we see are governed by English law, and operating leases, finance leases, sale-and-purchase, facility and security packages in this sector are commonly English-law governed. We advise on those documents through Hui Ling Teo, who is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore, and we coordinate Singapore-law pieces — security, filings, opinions, parties, or regulatory interfaces — when the deal needs them, without pretending every aviation file is Singapore-law only. Counterparties, lessors, airlines and financiers running APAC processes need turns in Asian working hours, and the desk works in those hours. The lease work itself covers English-law operating and finance lease drafting and negotiation, delivery and redelivery conditions, maintenance reserves and supplemental rent, events of default and remedies, quiet enjoyment, assignment and novation, and insurance and indemnities. Where the asset and parties require it, Cape Town, International Registry and IDERA steps sit inside the deal, coordinated with local counsel for non-English registration states. That leasing core sits next to the desk's recoveries and incomplete-document work: the same desk works with the parties when files turn hard, including distressed scenarios, aircraft recoveries, and incomplete aircraft, engine or documentary packages. We are a law practice: we do not underwrite securities, lend as a bank or private-credit fund, broker aircraft, or act as a CAMO or MRO. For the Singapore regulatory map that can sit beside a transaction, see <a className={"text-primary underline"} href="/singapore-aviation-law">Singapore aviation regulation (CAAS)</a>.</p></div></section><section className="section-padding bg-background"><div className="max-w-3xl mx-auto container-padding space-y-4"><h2 className="text-2xl md:text-3xl font-serif font-bold">Operating leases and finance leases</h2><p>The parties are the lessor, the lessee airline or operator, or a financier taking an interest in the lease. The work covers English-law operating and finance lease drafting and negotiation, delivery and redelivery conditions, maintenance reserves and supplemental rent, events of default and remedies, quiet enjoyment, assignment and novation, insurance and indemnities, and Cape Town, International Registry and IDERA steps where the asset and parties require them.</p><p>Parties: lessor, lessee airline/operator, or financier taking an interest in the lease.</p><ul><li>English-law operating / finance lease drafting and negotiation</li><li>Delivery and redelivery conditions; maintenance reserves / supplemental rent</li><li>Events of default and remedies; quiet enjoyment; assignment and novation</li><li>Insurance and indemnities</li><li>Cape Town / International Registry / IDERA where the asset and parties require it</li><li>Coordination of local counsel for non-English registration states</li></ul></div></section></>),
   overview: {
     heading: "How we work",
     services: [
@@ -50,7 +53,7 @@ export const data: IndustryPageData = {
         icon: Scale,
         title: "English law as the default document law",
         description:
-          "Operating leases, finance leases, sale-and-purchase, facility and security packages in this sector are commonly English-law governed. We advise on those documents through Hui Ling Teo, who is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore,, and coordinate Singapore-law pieces (security, filings, opinions, parties, or regulatory interfaces) when the deal needs them — without pretending every aviation file is “Singapore-law only.”",
+          "Operating leases, finance leases, sale-and-purchase, facility and security packages in this sector are commonly English-law governed. We advise on those documents through Hui Ling Teo, who is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore, and coordinate Singapore-law pieces (security, filings, opinions, parties, or regulatory interfaces) when the deal needs them — without pretending every aviation file is “Singapore-law only.”",
       },
       {
         icon: Clock,
@@ -76,18 +79,6 @@ export const data: IndustryPageData = {
     heading: "Work menu",
     id: "work-menu",
     cards: [
-      {
-        title: "1. Leasing (aircraft operating leases and finance leases)",
-        description: "Parties: lessor, lessee airline/operator, or financier taking an interest in the lease.",
-        bullets: [
-          "English-law operating / finance lease drafting and negotiation",
-          "Delivery and redelivery conditions; maintenance reserves / supplemental rent",
-          "Events of default and remedies; quiet enjoyment; assignment and novation",
-          "Insurance and indemnities",
-          "Cape Town / International Registry / IDERA where the asset and parties require it",
-          "Coordination of local counsel for non-English registration states",
-        ],
-      },
       {
         title: "2. Subleasing",
         description: "Parties: head lessor, sublessor, sublessee.",
@@ -239,6 +230,24 @@ export const data: IndustryPageData = {
         answer:
           "Yes. That is the usual pattern in this sector. We staff English-law document work and add Singapore-law or local counsel where the closing requires it.",
       },
+{
+        question: "How is aircraft leasing different from an aircraft loan?",
+        answer:
+          "At a high level (from our Aviation Finance 101 educational series): a lease is a right to use the aircraft for rent under a lease contract; a loan is debt secured against the aircraft or related cashflows. Risk, residual value, default remedies and documentation packs differ. The course uses simple analogies before moving into leasing and loan lessons — educational only, not legal or credit advice. We do not lend. For English-law lease or facility documents, Talk to us on this page.",
+      },
+{
+        question: "What are portfolio trading, warehouse financing and PDP financing in aviation?",
+        answer:
+          "Educational labels only: portfolio trading is buying or selling a pool of aircraft and/or leases rather than a single asset; warehouse financing is short-term funding while assets are aggregated before a take-out; PDP (pre-delivery payment) financing supports manufacturer progress payments before delivery. Aviation Finance 101 introduces these themes for orientation. Structuring a live portfolio, warehouse or PDP deal is counsel work — Schedule consultation; we document and negotiate, we do not provide the capital.",
+      },
+{
+        question: "Can you help if aircraft, engine or records packages are incomplete?",
+        answer: "Yes — issue lists, CP/escrow mechanics and risk allocation in the paper. Scope starts with a short conversation.",
+      },
+{"question": "What is aviation finance leasing, and how is an operating lease different from a finance lease?", "answer": "Aviation finance leasing on this page covers aircraft operating leases and finance leases. In both, the parties are the lessor, the lessee airline or operator, or a financier taking an interest in the lease. The documents deal with delivery and redelivery conditions, maintenance reserves or supplemental rent, events of default and remedies, quiet enjoyment, assignment and novation, and insurance and indemnities. Which lease form is used, and how its terms are set, is in the signed documents for the deal."},
+{"question": "What does a sale-and-leaseback involve for an airline and a lessor?", "answer": "In outline, an airline sells an aircraft and leases it back, so the sale documents and the lease documents have to be read together. On this desk that work sits with lease drafting and negotiation, delivery and redelivery conditions, assignment and novation, and, where the asset and parties require it, Cape Town, International Registry and IDERA steps. The signed documents set the terms for the particular aircraft."},
+{"question": "What should delivery and redelivery conditions cover in an aircraft lease?", "answer": "The lease itself should set the delivery and redelivery conditions, maintenance reserves or supplemental rent, insurance and indemnities, and what happens on an event of default. Cape Town, International Registry and IDERA steps also sit in the documents where the asset and parties require them. Those points are in the signed lease for the aircraft, not in a standard form that fits every deal."},
+{"question": "When do Cape Town, the International Registry and an IDERA matter in a lease?", "answer": "Where the asset and parties require it, Cape Town, International Registry and IDERA steps sit inside the lease deal, coordinated with local counsel for non-English registration states. The detail for a particular aircraft depends on the documents and the registration position, so it is scoped on the file. The Singapore regulatory side of Cape Town is covered on our Singapore aviation law page."},
       {
         question: "What do you mean by time-zone coverage?",
         answer:
@@ -287,16 +296,8 @@ export const data: IndustryPageData = {
         answer:
           "Business jets are often run under a management agreement. On sale, the educational playbook distinguishes novating the existing manager arrangement versus terminating and putting a new manager in place — with knock-on effects for insurance, ops manuals, and who holds the keys at closing. Jet SPA 101 covers that transition as a learning module. If your purchase needs a manager novation or termination package, soft CTA: Schedule consultation on this aviation page.",
       },
-      {
-        question: "How is aircraft leasing different from an aircraft loan?",
-        answer:
-          "At a high level (from our Aviation Finance 101 educational series): a lease is a right to use the aircraft for rent under a lease contract; a loan is debt secured against the aircraft or related cashflows. Risk, residual value, default remedies and documentation packs differ. The course uses simple analogies before moving into leasing and loan lessons — educational only, not legal or credit advice. We do not lend. For English-law lease or facility documents, Talk to us on this page.",
-      },
-      {
-        question: "What are portfolio trading, warehouse financing and PDP financing in aviation?",
-        answer:
-          "Educational labels only: portfolio trading is buying or selling a pool of aircraft and/or leases rather than a single asset; warehouse financing is short-term funding while assets are aggregated before a take-out; PDP (pre-delivery payment) financing supports manufacturer progress payments before delivery. Aviation Finance 101 introduces these themes for orientation. Structuring a live portfolio, warehouse or PDP deal is counsel work — Schedule consultation; we document and negotiate, we do not provide the capital.",
-      },
+      
+      
       {
         question: "What problem does the Cape Town Convention solve for aircraft financiers?",
         answer:
@@ -311,10 +312,7 @@ export const data: IndustryPageData = {
         question: "Do you handle aircraft repossession?",
         answer: "We advise on the documentary, Cape Town/IDERA and coordination path around aircraft recoveries / asset recovery and distressed scenarios. Local enforcement steps depend on jurisdiction and facts; we coordinate rather than promise possession.",
       },
-      {
-        question: "Can you help if aircraft, engine or records packages are incomplete?",
-        answer: "Yes — issue lists, CP/escrow mechanics and risk allocation in the paper. Scope starts with a short conversation.",
-      },
+      
       {
         question: "Business jet and helicopter deals?",
         answer: "Yes — business-jet S&P path is covered in the FAQ and work menu; helicopter S&P and co-ownership documentation are in the work menu. Schedule a consultation to scope.",

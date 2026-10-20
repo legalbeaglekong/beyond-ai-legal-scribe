@@ -46,7 +46,7 @@ const data: IndustryPageData = {
     description: "From infrastructure PPPs to cross-border logistics, our specialist team is ready to help. Book a free strategic consultation.",
   },
   relatedPages: [
-    { title: "Aviation", slug: "aviation" },
+    { title: "aviation finance and leasing", slug: "aviation" },
     { title: "Trade & Tariff", slug: "trade-tariff" },
     { title: "Energy Transition", slug: "energy-transition" },
   ],

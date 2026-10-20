@@ -87,7 +87,7 @@ const Industries = () => {
                     </a>
                   ) : industry.route ? (
                     <Link to={industry.route} className="text-sm text-foreground link-underline inline-flex items-center" aria-label={`Explore ${industry.title} services`}>
-                      {`Explore ${industry.title}`} <ArrowRight className="ml-1 h-3 w-3" />
+                      {industry.route === "/industry/aviation" ? "Aircraft financing & leasing" : `Explore ${industry.title}`} <ArrowRight className="ml-1 h-3 w-3" />
                     </Link>
                   ) : null}
                 </div>

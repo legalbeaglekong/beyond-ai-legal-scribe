@@ -1,3 +1,4 @@
+import { Link } from "@/lib/router-compat";
 import { useParams, useNavigate } from "@/lib/router-compat";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
@@ -273,6 +274,8 @@ const ExpertiseDetail = () => {
                   <div className="prose prose-lg max-w-none">
                     <p className="text-lg leading-relaxed text-muted-foreground mb-8">
                       {currentContent.content}
+                      {id === "tech-general-counsel" && <> Where a tech company needs that support on a continuing, part-time basis rather than through a full-time hire, see <Link to="/industry/fractional-gc" className="text-primary underline">fractional general counsel in Singapore</Link>.</>}
+                      {id === "commercial-contracts" && <> Companies that need that contract support continuously, as part of wider senior legal cover, can also retain <Link to="/industry/fractional-gc" className="text-primary underline">fractional general counsel support</Link>.</>}
                     </p>
                     
                     <h3 className="text-2xl font-bold mb-6 text-foreground">
@@ -294,6 +297,7 @@ const ExpertiseDetail = () => {
                       </p>
                     )}
                     
+                    {id === "financial-services" && <p className="mt-6 text-muted-foreground">Where a financing involves aircraft or a lease interest, see our <Link to="/industry/aviation" className="text-primary underline">aviation finance leasing</Link> page for English-law lease and finance documents coordinated from Singapore.</p>}
                     <div className="mt-12 p-6 bg-gradient-to-r from-primary/10 to-primary-glow/10 rounded-lg">
                       <p className="text-foreground font-medium text-center">
                         Speak with us about how your transaction can be structured to meet your goals.
