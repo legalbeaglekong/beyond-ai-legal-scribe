@@ -49,6 +49,7 @@ const data: IndustryPageData = {
     { title: "Cybersecurity & Emerging Technology", slug: "cybersecurity-tech" },
     { title: "Blockchain & Digital Assets", slug: "blockchain-digital-assets" },
     { title: "Energy Transition", slug: "energy-transition" },
+    { title: "Singapore Pet Law", slug: "/singapore-pet-law" },
   ],
 };
 
