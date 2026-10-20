@@ -1,5 +1,6 @@
 # Roadmap
 
+- [x] 20 Oct strict brief: financial-services superlative fix (H1/intro/JSON-LD) and Fractional GC P0 (plans/pricing wording, 6 new FAQs = 23 total, recognition strip, mailto CTAs, Part B cross-links, footer + Person JSON-LD award cleanup). Verified SSR HTML; preview-only.
 - [x] Keep closed FAQ answers in initial HTML on employment, Singapore aviation law, restructuring and transportation; verified all 47 answers against FAQ schema and every accordion opening/closing with no page errors.
 
 - [x] Make CP Dashboard and Fleet Risk Monitor public read-only demos; verified signed-out access, checklist search, aircraft details and zero requests for private records. Existing saved records remain protected.
