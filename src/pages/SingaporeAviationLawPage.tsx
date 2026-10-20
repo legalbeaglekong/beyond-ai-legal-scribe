@@ -44,14 +44,14 @@ const SingaporeAviationLawPage = () => (
   <PillarPage
     slug="singapore-aviation-law"
     eyebrow="Singapore aviation regulation · CAAS · Private aviation compliance"
-    h1="Singapore aviation law and regulation \u2014 CAAS, private aviation compliance and Cape Town interfaces"
+    h1="Singapore aviation law and regulation — CAAS, private aviation compliance and Cape Town interfaces"
     intro="This page is our guide to Singapore aviation law and regulation: CAAS approvals, private and business aviation regulatory compliance, charter operator checks and KYC, and Cape Town interfaces. Beyond Horizons by Bethel Chambers LLC advises from Singapore; English law input is given through Hui Ling Teo, who is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore. We are cross-border lawyers with a physical presence in Singapore, available across time zones, comfortable across global matters, with specific expertise in developing markets. From our Singapore hub we coordinate CAAS regulatory interfaces, security, filings and opinions when the deal needs Singapore pieces — and we run the same desk across APAC and global working hours on multi-jurisdictional files, including developing markets. Where files turn distressed, we work the cross-border documentary path around aircraft recoveries / asset recovery, Cape Town Convention priority and IDERA strategy (with local counsel as needed), and insolvency-adjacent coordination. Documents can be stress-tested with our disputes and arbitration team before they have to survive a default, redelivery fight or enforcement path. We are a law practice: we do not underwrite securities, lend, broker aircraft, or act as a CAMO/MRO."
     badges={["Beyond Horizons by Bethel Chambers LLC", "English-law Leases & Financings", "Cape Town / IDERA Coordination", "CAAS Regulatory Coordination", "Aircraft Recoveries & Incomplete Docs"]}
     metaTitle="Aviation Law Counsel Singapore Hub — CAAS Coordination, Cape Town & Recoveries | Beyond Horizons"
     metaDescription="Singapore aviation regulatory guide: CAAS approvals, AOC and foreign operator permit checks, private aviation compliance, charter KYC and Cape Town."
     ogTitle="Aviation Law Counsel Singapore Hub — CAAS Coordination, Cape Town & Recoveries | Beyond Horizons"
     ogDescription="Cross-border aviation finance counsel with a Singapore physical presence — English-law leases, Cape Town/IDERA coordination, aircraft recoveries, incomplete aircraft/engine docs, MRO and vertiports. Available across time zones; developing-markets expertise."
-    articleHeadline="Singapore aviation law and regulation \u2014 CAAS, private aviation compliance and Cape Town interfaces"
+    articleHeadline="Singapore aviation law and regulation — CAAS, private aviation compliance and Cape Town interfaces"
     breadcrumbName="Singapore Aviation Law"
     serviceType="Aviation and Aerospace Law"
     serviceDescription="Singapore aviation law and regulatory counsel — CAAS approvals and coordination, private and business aviation compliance, charter operator KYC, Cape Town and IDERA coordination with local counsel, SAF and advanced air mobility."
