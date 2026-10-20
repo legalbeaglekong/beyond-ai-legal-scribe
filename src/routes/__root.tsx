@@ -28,7 +28,8 @@ const ORGANIZATION_JSONLD = `{
   "@type": "LegalService",
   "@id": "https://beyondhorizons.sg/#organization",
   "name": "Beyond Horizons",
-  "alternateName": "Beyond Horizons by Bethel Chambers LLC",
+  "alternateName": ["Beyond Horizons by Bethel Chambers LLC", "Beyond Horizons by Bethel Chambers"],
+  "legalName": "Bethel Chambers LLC",
   "url": "https://beyondhorizons.sg/",
   "logo": {
     "@type": "ImageObject",
@@ -153,46 +154,16 @@ const ASSOCIATE_JSONLD = `{
   ]
 }`;
 
-const REVIEW_1_JSONLD = `{
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": { "@id": "https://beyondhorizons.sg/#organization" },
-  "author": { "@type": "Organization", "name": "Chambers and Partners" },
-  "publisher": { "@type": "Organization", "name": "Chambers Asia-Pacific" },
-  "datePublished": "2025",
-  "reviewBody": "A fantastic lawyer and strategist with significant industry expertise."
-}`;
-
-const REVIEW_2_JSONLD = `{
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": { "@id": "https://beyondhorizons.sg/#organization" },
-  "author": { "@type": "Organization", "name": "Chambers and Partners" },
-  "publisher": { "@type": "Organization", "name": "Chambers Asia-Pacific" },
-  "datePublished": "2025",
-  "reviewBody": "Offers very high-quality advice."
-}`;
-
-const REVIEW_3_JSONLD = `{
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": { "@id": "https://beyondhorizons.sg/#organization" },
-  "author": { "@type": "Organization", "name": "Chambers and Partners" },
-  "publisher": { "@type": "Organization", "name": "Chambers Global" },
-  "datePublished": "2024",
-  "reviewBody": "Can always find the key issues and present solutions."
-}`;
-
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1.0" },
-      { title: "Beyond Horizons | Singapore Cross-border Legal Counsel" },
+      { title: "Beyond Horizons by Bethel Chambers | Singapore Legal Counsel" },
       {
         name: "description",
         content:
-          "Beyond Horizons by Bethel Chambers LLC: Singapore-based cross-border legal counsel with AI efficiency, aviation and energy expertise; Chambers Global-ranked.",
+          "Beyond Horizons by Bethel Chambers LLC: Singapore-based cross-border legal counsel with AI efficiency, across aviation finance, energy and technology.",
       },
       { name: "author", content: "Beyond Horizons, Bethel Chambers LLC" },
       {
@@ -204,25 +175,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       
       {
         property: "og:title",
-        content: "Beyond Horizons | Singapore Cross-border Legal Counsel",
+        content: "Beyond Horizons by Bethel Chambers | Singapore Legal Counsel",
       },
       {
         property: "og:description",
         content:
-          "Beyond Horizons by Bethel Chambers LLC: Singapore-based cross-border legal counsel with AI efficiency, aviation and energy expertise; Chambers Global-ranked.",
+          "Beyond Horizons by Bethel Chambers LLC: Singapore-based cross-border legal counsel with AI efficiency, across aviation finance, energy and technology.",
       },
-      { property: "og:image", content: "https://beyondhorizons.sg/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "Beyond Horizons | Singapore Cross-border Legal Counsel",
+        content: "Beyond Horizons by Bethel Chambers | Singapore Legal Counsel",
       },
       {
         name: "twitter:description",
         content:
-          "Beyond Horizons by Bethel Chambers LLC: Singapore-based cross-border legal counsel with AI efficiency, aviation and energy expertise; Chambers Global-ranked.",
+          "Beyond Horizons by Bethel Chambers LLC: Singapore-based cross-border legal counsel with AI efficiency, across aviation finance, energy and technology.",
       },
-      { name: "twitter:image", content: "https://beyondhorizons.sg/og-image.jpg" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -244,9 +213,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { type: "application/ld+json", children: WEBSITE_JSONLD },
       { type: "application/ld+json", children: FOUNDER_JSONLD },
       { type: "application/ld+json", children: ASSOCIATE_JSONLD },
-      { type: "application/ld+json", children: REVIEW_1_JSONLD },
-      { type: "application/ld+json", children: REVIEW_2_JSONLD },
-      { type: "application/ld+json", children: REVIEW_3_JSONLD },
     ],
   }),
   shellComponent: RootShell,

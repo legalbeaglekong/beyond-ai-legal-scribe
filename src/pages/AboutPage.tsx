@@ -16,8 +16,7 @@ const AboutPage = () => {
 
   const achievements = [
     { icon: Award, title: "Chambers Asia-Pacific 2026", description: "Band 3, Aviation: Finance — Singapore", highlight: "Chambers & Partners" },
-    { icon: TrendingUp, title: "Legal 500 Recognition", description: "Next Generation Partner 2023", highlight: "Industry Leader" },
-    { icon: Users, title: "Chambers Global Market Leaders", description: "Band 3, Asset Finance", highlight: "Chambers & Partners" },
+    { icon: TrendingUp, title: "Legal 500 Recognition", description: "Hui Ling Teo — Legal 500 Next Generation Partner, 2023", highlight: "" },
     { icon: BookOpen, title: "Bloomberg Law Author", description: "Strategic Business Advisory & ESG Implementation", highlight: "Thought Leadership" },
   ];
 
@@ -91,6 +90,7 @@ const AboutPage = () => {
               <p className="text-muted-foreground leading-relaxed">
                 Where a matter needs advice on other laws, we work alongside foreign counsel instructed for that purpose.
               </p>
+              <p className="text-muted-foreground leading-relaxed">Growing companies that need senior legal judgment regularly, without a full-time in-house lawyer, can retain us as <a href="/industry/fractional-gc" className="text-primary underline">fractional general counsel</a>. Fractional GC plans start from SGD 4,000 per month to access Chambers (2026) and Legal 500 (2023) ranked counsel, Hui Ling Teo, with more than a decade of experience, including at international law firms. What each plan covers is agreed in an engagement letter. To discuss, email <a href="mailto:HL@beyondhorizons.sg" className="text-primary underline">HL@beyondhorizons.sg</a>.</p>
             </div>
           </div>
         </section>

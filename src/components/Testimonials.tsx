@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Quote, ExternalLink, Brain, Lightbulb, Globe, TrendingUp } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { Brain, Lightbulb, Globe, TrendingUp } from "lucide-react";
 import VideoBackground from "@/components/VideoBackground";
 import { useLanguage } from "@/i18n/LanguageContext";
 import testimonialsVideo from "@/assets/testimonials-vessel-bg.mp4.asset.json";
@@ -8,15 +7,7 @@ import testimonialsVideo from "@/assets/testimonials-vessel-bg.mp4.asset.json";
 const Testimonials = () => {
   const { t } = useLanguage();
 
-  const chambersTestimonials = [
-    { quote: t("testimonials.quote1"), source: t("testimonials.source1"), location: t("testimonials.location1") },
-    { quote: t("testimonials.quote2"), source: t("testimonials.source2"), location: t("testimonials.location2") },
-    { quote: t("testimonials.quote3"), source: t("testimonials.source3"), location: t("testimonials.location3") },
-  ];
-
   const recognition = [
-    { title: t("testimonials.rec1Title"), description: t("testimonials.rec1Desc"), years: t("testimonials.rec1Years") },
-    { title: t("testimonials.rec2Title"), description: t("testimonials.rec2Desc"), years: t("testimonials.rec2Years") },
     { title: t("testimonials.rec3Title"), description: t("testimonials.rec3Desc"), years: t("testimonials.rec3Years") },
   ];
 
@@ -27,32 +18,8 @@ const Testimonials = () => {
     { title: t("testimonials.attr4Title"), desc: t("testimonials.attr4Desc"), icon: TrendingUp },
   ];
 
-  // Review JSON-LD — marks up the third-party quotes already visible on this page.
-  // Authors are real publications; no ratings invented.
-  const reviewJsonLd = chambersTestimonials.map((te) => {
-    const yearMatch = te.source.match(/(20\d{2})/);
-    return {
-      "@context": "https://schema.org",
-      "@type": "Review",
-      reviewBody: te.quote,
-      author: { "@type": "Organization", name: "Chambers and Partners" },
-      publisher: { "@type": "Organization", name: te.source },
-      datePublished: yearMatch ? yearMatch[1] : undefined,
-      itemReviewed: {
-        "@type": "LegalService",
-        "@id": "https://beyondhorizons.sg/#organization",
-        name: "Beyond Horizons by Bethel Chambers LLC",
-      },
-    };
-  });
-
   return (
     <section className="relative">
-      <Helmet>
-        {reviewJsonLd.map((r, i) => (
-          <script key={i} type="application/ld+json">{JSON.stringify(r)}</script>
-        ))}
-      </Helmet>
       <VideoBackground src={testimonialsVideo.url} className="h-[35vh]" overlayClassName="absolute inset-0 bg-black/60">
         <div className="h-[35vh] flex items-center justify-center">
           <div className="text-center">
@@ -65,27 +32,6 @@ const Testimonials = () => {
 
       <div className="section-padding bg-background">
         <div className="max-w-6xl mx-auto container-padding">
-          <div className="text-center mb-16">
-            <a href="https://chambers.com/lawyer/hui-ling-teo-global-2:25705527" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-accent/30 bg-accent/5 px-6 py-3 rounded-full text-accent text-sm hover:bg-accent/10 transition-smooth">
-              {t("testimonials.chambersApproved")} <ExternalLink className="h-3.5 w-3.5" />
-            </a>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-16 items-stretch">
-            {chambersTestimonials.map((te, i) => (
-              <Card key={i} className="border-border/50 bg-card card-lift flex flex-col">
-                <CardContent className="p-6 flex flex-col flex-1">
-                  <Quote className="h-5 w-5 text-accent/40 mb-3 flex-shrink-0" />
-                  <blockquote className="text-foreground text-base leading-relaxed mb-4 font-serif italic text-justify flex-1">"{te.quote}"</blockquote>
-                  <div className="text-right flex-shrink-0 mt-auto">
-                    <div className="text-xs text-accent font-sans uppercase tracking-wider">{te.source}</div>
-                    <div className="text-xs text-muted-foreground mt-1">{te.location}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {recognition.map((item, i) => (
               <div key={i} className="text-center p-6 border border-border/30 rounded">

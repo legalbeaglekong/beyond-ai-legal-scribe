@@ -12,7 +12,7 @@ const GlobalPartners = () => {
     { icon: Building, label: t("globalPartners.partnerFirms"), value: "10+" },
     { icon: Globe, label: t("globalPartners.globalRegions"), value: "4" },
     { icon: Users, label: t("globalPartners.yearsPartnership"), value: "10+" },
-    { icon: Scale, label: t("globalPartners.crossBorderDeals"), value: "$8B+" },
+    { icon: Scale, label: "Cross-border matters", value: "APAC" },
   ];
 
   const regions = [

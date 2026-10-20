@@ -47,6 +47,25 @@ export const maFaqs = [
   },
 ];
 
+export const techFaqs = [
+  {
+    "question": "What is product counsel for a SaaS or AI company?",
+    "answer": "Product counsel is legal support that sits close to the product team: reviewing new features and data flows, keeping customer terms and privacy notices consistent with how the product works, and flagging licensing and regulatory questions for emerging technologies such as AI before launch. Beyond Horizons by Bethel Chambers LLC provides this from Singapore."
+  },
+  {
+    "question": "Do you advise on data protection laws outside Singapore?",
+    "answer": "We advise on Singapore's PDPA. Where other data protection regimes apply to your users or customers, advice on those laws is obtained from and coordinated with foreign counsel, so you keep one point of contact."
+  },
+  {
+    "question": "How is this different from fractional general counsel?",
+    "answer": "This page covers technology and product legal work for tech companies, scoped matter by matter. Fractional general counsel is an ongoing retainer in which a senior lawyer acts as your in-house legal function across your legal matters within the agreed scope, including corporate, employment and board work. A tech company can use either, or both."
+  },
+  {
+    "question": "How do we start?",
+    "answer": "Send a short email to HL@beyondhorizons.sg describing your product, your stage and the contracts or questions you need help with. Scope and fees are set in an engagement letter before work begins."
+  }
+];
+
 const ExpertiseDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -68,9 +87,11 @@ const ExpertiseDetail = () => {
       ]
     },
     "tech-general-counsel": {
-      title: "General Counsel Support for Tech Companies — Singapore-anchored",
-      content: "Tech companies face complex challenges around data privacy, intellectual property, and rapidly evolving regulations. Access to experienced general counsel support helps navigate this landscape. Beyond Horizons by Bethel Chambers LLC provides general counsel support tailored for tech enterprises.",
+      title: "Legal Counsel for Tech Companies — SaaS, Platforms, Data and AI Products",
+      content: "Tech companies face complex challenges around data privacy, intellectual property, and rapidly evolving regulations. Beyond Horizons by Bethel Chambers LLC advises SaaS, platform, data and AI product companies from Singapore on the legal work that sits closest to the product: product counsel, customer terms and privacy, IP and licensing, and technology commercial contracts. Advice on other laws is coordinated with foreign counsel.",
       highlights: [
+        "Product counsel for SaaS, platform and AI products: feature and data-flow reviews, and terms that match how the product works",
+        "Customer terms, platform terms of use and privacy notices",
         "Compliance with Singapore's PDPA, with foreign counsel coordinated for other regimes",
         "IP portfolio management and licensing agreements",
         "Negotiating SaaS and technology contracts",
@@ -188,7 +209,7 @@ const ExpertiseDetail = () => {
 
   const seoTitleMap: Record<string, string> = {
     "ma-cross-border": "Cross-Border M&A Lawyer Singapore | Beyond Horizons",
-    "tech-general-counsel": "General Counsel for Tech | Beyond Horizons",
+    "tech-general-counsel": "Legal Counsel for Tech Companies Singapore | Beyond Horizons",
     "commercial-contracts": "Commercial Contracts Counsel | Beyond Horizons",
     "corporate-transactions": "Cross-Border Corporate Counsel | Beyond Horizons",
     "regulatory-compliance": "Regulatory Compliance Counsel | Beyond Horizons",
@@ -201,8 +222,9 @@ const ExpertiseDetail = () => {
   const seoTitle = (id && seoTitleMap[id]) || `${currentContent.title.slice(0, 50)} | Beyond Horizons`;
   const seoDescription = id === "ma-cross-border"
     ? "Cross-border M&A lawyer in Singapore: due diligence, purchase agreements, regulatory clearances and deal structuring, with foreign counsel coordinated."
-    : currentContent.content.substring(0, 160);
+    : id === "tech-general-counsel" ? "Singapore-anchored counsel for SaaS, platform, data and AI product companies: product counsel, terms and privacy, IP and licensing, technology contracts." : currentContent.content.substring(0, 160);
   const showMaFaqs = id === "ma-cross-border";
+  const pageFaqs = showMaFaqs ? maFaqs : id === "tech-general-counsel" ? techFaqs : [];
 
   return (
     <div className="min-h-screen">
@@ -214,21 +236,21 @@ const ExpertiseDetail = () => {
             name: currentContent.title,
             provider: {
               "@type": "Organization",
-              name: "Bethel Chambers LLC",
+              name: id === "tech-general-counsel" ? "Beyond Horizons by Bethel Chambers LLC" : "Bethel Chambers LLC",
               url: "https://beyondhorizons.sg"
             },
-            description: currentContent.content,
+            description: id === "tech-general-counsel" ? "Beyond Horizons by Bethel Chambers LLC advises SaaS, platform, data and AI product companies from Singapore on product counsel, customer terms and privacy, IP and licensing, and technology commercial contracts. Advice on other laws is coordinated with foreign counsel." : currentContent.content,
             areaServed: "Asia-Pacific",
             url: `https://beyondhorizons.sg/expertise/${id}`,
             serviceType: "Legal Service"
           })}
         </script>
-        {showMaFaqs && (
+        {pageFaqs.length > 0 && (
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              mainEntity: maFaqs.map((faq) => ({
+              mainEntity: pageFaqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,
                 acceptedAnswer: { "@type": "Answer", text: faq.answer },
@@ -274,13 +296,13 @@ const ExpertiseDetail = () => {
                   <div className="prose prose-lg max-w-none">
                     <p className="text-lg leading-relaxed text-muted-foreground mb-8">
                       {currentContent.content}
-                      {id === "tech-general-counsel" && <> Where a tech company needs that support on a continuing, part-time basis rather than through a full-time hire, see <Link to="/industry/fractional-gc" className="text-primary underline">fractional general counsel in Singapore</Link>.</>}
                       {id === "commercial-contracts" && <> Companies that need that contract support continuously, as part of wider senior legal cover, can also retain <Link to="/industry/fractional-gc" className="text-primary underline">fractional general counsel support</Link>.</>}
                       {id === "startup-funding" && <> Companies that raise in successive rounds can also hold this work within <Link to="/industry/fractional-gc" className="text-primary underline">fractional general counsel</Link> support, alongside their other legal matters.</>}
                       {id === "corporate-transactions" && <> Where joint ventures and shareholder matters are a continuing part of the business, they can be covered by <Link to="/industry/fractional-gc" className="text-primary underline">fractional in-house legal counsel</Link> on a retainer.</>}
                       {id === "ma-cross-border" && <> Growing companies with an acquisition alongside fundraising or joint venture work can also retain a <Link to="/industry/fractional-gc" className="text-primary underline">fractional GC</Link> to hold the company's side across those workstreams.</>}
                     </p>
                     
+                    {id === "tech-general-counsel" && (<>{/* Tech-company answer */}<h2 className="text-2xl font-bold mb-6 text-foreground">What does legal counsel for a tech company in Singapore cover?</h2><p className="text-lg leading-relaxed text-muted-foreground mb-8">For SaaS, platform, data and AI product companies, it usually covers four strands of work: product counsel; customer terms and privacy, including compliance with Singapore's PDPA; IP and licensing; and technology commercial contracts such as SaaS and vendor agreements. Beyond Horizons by Bethel Chambers LLC advises on these from Singapore and coordinates foreign counsel for other regimes.</p></>)}
                     <h3 className="text-2xl font-bold mb-6 text-foreground">
                       Key Areas of Expertise
                     </h3>
@@ -301,6 +323,7 @@ const ExpertiseDetail = () => {
                     )}
                     
                     {id === "financial-services" && <p className="mt-6 text-muted-foreground">Where a financing involves aircraft or a lease interest, see our <Link to="/industry/aviation" className="text-primary underline">aviation finance leasing</Link> page for English-law lease and finance documents coordinated from Singapore.</p>}
+                    {id === "tech-general-counsel" && (<div className="mt-8 space-y-4"><h3 className="text-2xl font-bold text-foreground">Ongoing general counsel cover</h3><p className="text-muted-foreground leading-relaxed">For companies that want ongoing general counsel cover across their legal matters, not only technology and product work, see <Link to="/industry/fractional-gc" className="text-primary underline">fractional general counsel</Link>. Fractional GC plans start from SGD 4,000 per month to access Chambers (2026) and Legal 500 (2023) ranked counsel, Hui Ling Teo, with more than a decade of experience, including at international law firms. What each plan covers is agreed in an engagement letter. To discuss your product, your contracts or ongoing cover, email <a href="mailto:HL@beyondhorizons.sg" className="text-primary underline">HL@beyondhorizons.sg</a>.</p></div>)}
                     <div className="mt-12 p-6 bg-gradient-to-r from-primary/10 to-primary-glow/10 rounded-lg">
                       <p className="text-foreground font-medium text-center">
                         Speak with us about how your transaction can be structured to meet your goals.
@@ -313,7 +336,7 @@ const ExpertiseDetail = () => {
           </div>
         </section>
 
-        {showMaFaqs && (
+        {pageFaqs.length > 0 && (
           <section className="py-16 bg-background">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
@@ -321,10 +344,10 @@ const ExpertiseDetail = () => {
                   Frequently Asked Questions
                 </h2>
                 <Accordion type="single" collapsible className="w-full">
-                  {maFaqs.map((faq, index) => (
-                    <AccordionItem key={faq.question} value={`ma-faq-${index}`}>
+                  {pageFaqs.map((faq, index) => (
+                    <AccordionItem key={faq.question} value={`ma-faq-${index}`} className={id === "tech-general-counsel" ? "group" : undefined}>
                       <AccordionTrigger className="text-left text-lg">{faq.question}</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground leading-relaxed">{faq.answer}</AccordionContent>
+                      <AccordionContent {...(id === "tech-general-counsel" ? { forceMount: true as const } : {})} className={id === "tech-general-counsel" ? "text-muted-foreground leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground leading-relaxed"}>{faq.answer}</AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>
@@ -341,7 +364,7 @@ const ExpertiseDetail = () => {
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Contact our expert legal team to discuss your specific needs and how we can help.
+                Contact us to discuss your specific needs and how we can help.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="flex items-center gap-2">

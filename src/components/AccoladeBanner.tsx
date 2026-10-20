@@ -3,6 +3,7 @@ import { Award, ExternalLink } from "lucide-react";
 interface AccoladeBannerProps {
   variant?: "featured" | "inline" | "compact";
   className?: string;
+  omitTitles?: string[];
 }
 
 const accolades = [
@@ -24,7 +25,7 @@ const accolades = [
   },
 ];
 
-const AccoladeBanner = ({ variant = "inline", className = "" }: AccoladeBannerProps) => {
+const AccoladeBanner = ({ variant = "inline", className = "", omitTitles = [] }: AccoladeBannerProps) => {
   if (variant === "featured") {
     return (
       <div className={`${className}`}>
@@ -62,7 +63,7 @@ const AccoladeBanner = ({ variant = "inline", className = "" }: AccoladeBannerPr
   if (variant === "compact") {
     return (
       <div className={`flex flex-wrap justify-center gap-2 ${className}`}>
-        {accolades.map((a, i) => (
+        {accolades.filter((a) => !omitTitles.includes(a.title)).map((a, i) => (
           <span
             key={i}
             className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border border-accent/40 bg-accent/5 text-accent font-medium"
@@ -77,7 +78,7 @@ const AccoladeBanner = ({ variant = "inline", className = "" }: AccoladeBannerPr
 
   return (
     <div className={`flex flex-wrap justify-center gap-3 ${className}`}>
-      {accolades.map((a, i) => (
+      {accolades.filter((a) => !omitTitles.includes(a.title)).map((a, i) => (
         <a
           key={i}
           href={a.url}

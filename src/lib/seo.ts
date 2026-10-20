@@ -67,7 +67,7 @@ export const STATIC_PAGE_SEO = {
   "/privacy": ["Data Protection Notice | Bethel Chambers LLC", "How Bethel Chambers LLC collects, uses, discloses and protects personal data under Singapore's Personal Data Protection Act 2012."],
   "/beyond-precedent": ["Beyond Precedent | Beyond Horizons", "Beyond Precedent explores how law students draft with free AI tools and how Beyond Horizons designs legal services and talent development for a post-AI age — not a job guarantee."],
   "/industry/ai-code-counsel": ["AI Code Counsel Singapore | PDPC GenAI, AI Verify & EU AI Act — Beyond Horizons", "AI governance counsel for Singapore operators — PDPC GenAI notifications, IMDA/FEAT programmes, EU AI Act readiness, and AI×IP issues. Book a consultation."],
-  "/industry/aviation": ["Aviation Finance Leasing Singapore | Beyond Horizons", "Aviation finance and leasing counsel in Singapore for lessors, airlines and financiers: English-law leases and portfolio deals. HL@beyondhorizons.sg"],
+  "/industry/aviation": ["Aviation Finance & Leasing Lawyer Singapore | Beyond Horizons", "Aviation finance, aircraft finance and leasing counsel in Singapore for lessors, airlines and financiers: English-law leases, financings and recoveries."],
   "/industry/blockchain-digital-assets": ["Crypto & Blockchain Lawyer Singapore | Digital Assets", "Singapore counsel for digital asset businesses: token projects, tokenisation, blockchain contracts and MAS licensing questions."],
   "/industry/cybersecurity-tech": ["Cybersecurity & Technology Counsel | Beyond Horizons", "Legal guidance on cybersecurity, data governance, technology contracts, incident readiness and cross-border compliance."],
   "/industry/energy-transition": ["Energy Transition Counsel Singapore | Beyond Horizons", "Sustainability-aware counsel for renewable energy, green finance, project contracts and energy-transition matters across APAC."],
@@ -80,9 +80,9 @@ export const STATIC_PAGE_SEO = {
   "/join-us": ["Careers at Beyond Horizons by Bethel Chambers | Singapore", "Explore career opportunities with Beyond Horizons, a digital-first Singapore legal practice serving cross-border clients."],
   "/market-insights": ["Legal Market Insights | Beyond Horizons", "Market intelligence on APAC legal services, cross-border transactions, technology, sustainability and regulatory change."],
   "/our-clients": ["Our Clients | Beyond Horizons by Bethel Chambers", "See the businesses and organisations supported by Beyond Horizons across aviation, technology and cross-border matters."],
-  "/singapore-ai-governance": ["Singapore AI Governance Lawyer | MAS AI Risk Guidelines", "MAS AI Risk Management Guidelines (Oct 2026), AI Verify, FEAT and PDPC GenAI: AI governance counsel for Singapore FIs and the AI vendors that serve them."],
+  "/singapore-ai-governance": ["Singapore AI Governance Lawyer | AI Verify, IMDA & MAS", "AI governance counsel in Singapore: IMDA Model AI Governance Framework, AI Verify testing, MAS FEAT and the MAS AI Risk Management Guidelines (Oct 2026)."],
   "/singapore-alternative-energy-law": ["Singapore Renewable Energy Counsel | Beyond Horizons", "Counsel for electricity imports, solar, hydrogen, battery storage, carbon credits and green project finance in Singapore."],
-  "/singapore-aviation-law": ["Singapore Aviation Law | CAAS, Cape Town & Private Jets", "Singapore aviation law: CAAS rules, Cape Town/IDERA, private and business aviation compliance, AOC checks and aircraft recoveries. HL@beyondhorizons.sg"],
+  "/singapore-aviation-law": ["Singapore Aviation Law & Regulation | CAAS, Private Aviation", "Singapore aviation regulatory guide: CAAS approvals, AOC and foreign operator permit checks, private aviation compliance, charter KYC and Cape Town."],
   "/singapore-employment-law": ["Singapore Employment Law & Workplace Fairness Act Guide", "Singapore employment law for employers: the Workplace Fairness Act is not yet in force (MOM aims for end-2027) — contracts, exits and investigations."],
   "/singapore-restructuring-insolvency": ["Restructuring Lawyer Singapore | Insolvency & Workouts", "Singapore restructuring and insolvency counsel: workouts, schemes, creditor negotiations, lender and borrower positions and cross-border recoveries."],
   "/singapore-robotics-law": ["Singapore Robotics Law Counsel | AV, RaaS, Liability & RLSS — Beyond Horizons", "Singapore robotics and autonomous-systems counsel — path and road AV sandboxes, robot leasing / RaaS, product liability, and RLSS co-funding checks. Book a consultation."],
@@ -101,7 +101,7 @@ export function createStaticPageHead(path: keyof typeof STATIC_PAGE_SEO) {
 
 const EXPERTISE_SEO: Record<string, readonly [string, string]> = {
   "ma-cross-border": ["Cross-Border M&A Lawyer Singapore | Beyond Horizons", "Cross-border M&A lawyer in Singapore: due diligence, purchase agreements, regulatory clearances and deal structuring, with foreign counsel coordinated."],
-  "tech-general-counsel": ["Technology General Counsel | Beyond Horizons", "Cross-border general counsel support for technology companies navigating contracts, data, intellectual property and regulation."],
+  "tech-general-counsel": ["Legal Counsel for Tech Companies Singapore | Beyond Horizons", "Singapore-anchored counsel for SaaS, platform, data and AI product companies: product counsel, terms and privacy, IP and licensing, technology contracts."],
   "commercial-contracts": ["Commercial Contracts Counsel | Beyond Horizons", "Commercial contract drafting and negotiation for businesses operating across Singapore, APAC and international markets."],
   "corporate-transactions": ["Cross-Border Corporate Counsel | Beyond Horizons", "Corporate legal counsel for cross-border investments, joint ventures, governance and transactions across APAC."],
   "regulatory-compliance": ["Regulatory Compliance Counsel | Beyond Horizons", "Practical legal guidance on licensing, governance, investigations and regulatory compliance across regulated industries."],
@@ -123,13 +123,9 @@ const EXPERTISE_SEO: Record<string, readonly [string, string]> = {
 };
 
 export function createExpertiseHead(id: string) {
-  const page = EXPERTISE_SEO[id];
+  const page = PUBLIC_EXPERTISE_IDS.includes(id) ? EXPERTISE_SEO[id] : undefined;
   if (!page) {
-    return createPageHead({
-      title: "Legal Expertise | Beyond Horizons",
-      description: "Explore cross-border legal expertise from Beyond Horizons by Bethel Chambers LLC.",
-      path: `/expertise/${id}`,
-    });
+    return createMissingPageHead();
   }
   return createPageHead({ title: page[0], description: page[1], path: `/expertise/${id}`, type: "article" });
 }
@@ -140,7 +136,8 @@ const TEAM_SEO: Record<string, readonly [string, string]> = {
 };
 
 export function createTeamHead(slug: string) {
-  const page = TEAM_SEO[slug] ?? ["Legal Team | Beyond Horizons", "Meet the legal team at Beyond Horizons by Bethel Chambers LLC."];
+  const page = TEAM_SEO[slug];
+  if (!page) return createMissingPageHead();
   return createPageHead({ title: page[0], description: page[1], path: `/team/${slug}`, type: "article" });
 }
 
@@ -154,4 +151,9 @@ const WHY_SEO: Record<string, readonly [string, string]> = {
 export function createWhyHead(id: string) {
   const page = WHY_SEO[id] ?? ["Why Beyond Horizons", "Learn about Beyond Horizons by Bethel Chambers LLC."];
   return createPageHead({ title: page[0], description: page[1], path: `/why-choose-us/${id}`, type: "article" });
+}
+export const PUBLIC_EXPERTISE_IDS = ["ma-cross-border", "tech-general-counsel", "commercial-contracts", "corporate-transactions", "regulatory-compliance", "ip-data-privacy", "startup-funding", "employment-labor", "arbitration-disputes", "financial-services"];
+
+export function createMissingPageHead() {
+  return { meta: [{ title: "Page not found | Beyond Horizons" }, { name: "robots", content: "noindex" }], links: [] };
 }
