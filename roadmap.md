@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Apply 20 Oct GSC strict batch: tech counsel and links, aviation split, head tags, Review removal, missing-page handling and named compliance cleanup; verify protected content and report exact unmatched anchors. Preview only.
+
 - [x] 20 Oct strict brief: financial-services superlative fix (H1/intro/JSON-LD) and Fractional GC P0 (plans/pricing wording, 6 new FAQs = 23 total, recognition strip, mailto CTAs, Part B cross-links, footer + Person JSON-LD award cleanup). Verified SSR HTML; preview-only.
 - [x] Keep closed FAQ answers in initial HTML on employment, Singapore aviation law, restructuring and transportation; verified all 47 answers against FAQ schema and every accordion opening/closing with no page errors.
 
