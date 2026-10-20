@@ -42,6 +42,7 @@ const BorrowerFinanceCounselPage = () => (
       { label: "Singapore lender finance counsel for banks, private banks and credit funds", to: "/singapore-lender-finance-counsel" },
       { label: "Singapore restructuring and insolvency: schemes, judicial management and Model Law", to: "/singapore-restructuring-insolvency" },
       { label: "Cross-border M&A counsel", to: "/expertise/ma-cross-border" },
+      { label: "Fractional general counsel retainer", to: "/industry/fractional-gc" },
       { label: "Meet Hui Ling Teo", to: "/team/hui-ling-teo" },
       { label: "Beyond Horizons home", to: "/" },
     ]}

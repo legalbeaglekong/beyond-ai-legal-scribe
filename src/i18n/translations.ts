@@ -159,7 +159,7 @@ export const translations: Record<string, any> = {
       cyber: "Cybersecurity & Emerging Tech",
       cyberDesc: "Advising on data protection, cybersecurity governance, and emerging technology risks.",
       space: "Space", spaceDesc: "Advising on satellite transactions, launch agreements, and commercial space ventures across the new space economy.",
-      fractionalGC: "Fractional General Counsel", fractionalGCDesc: "Senior legal leadership on-demand for startups, scale-ups, and growing businesses.",
+      fractionalGC: "Fractional General Counsel", fractionalGCDesc: "Fractional general counsel and fractional in-house legal counsel for Singapore scale-ups and growing companies, on a scoped retainer.",
       aiCounsel: "AI Code Counsel", aiCounselDesc: "AI governance, risk management, and regulatory compliance advisory aligned with global frameworks.",
       employment: "Employment Law",
       employmentDesc: "Singapore-anchored employment counsel for MOM compliance, work passes, executive separations and cross-border workforce strategy.",

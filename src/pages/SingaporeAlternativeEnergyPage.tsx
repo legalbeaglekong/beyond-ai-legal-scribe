@@ -6,7 +6,7 @@ const SingaporeAlternativeEnergyPage = () => (
     slug="singapore-alternative-energy-law"
     eyebrow="Singapore-anchored · Cross-border Energy"
     h1="Alternative & Renewable Energy — Singapore-anchored, Cross-border Counsel"
-    intro="Singapore's energy transition is import-led, hydrogen-curious and grid-constrained. We advise developers, financiers, offtakers and corporates on EMA-regulated electricity imports, solar PV, low-carbon hydrogen and ammonia, BESS, and Article 6 carbon credits — anchored in Singapore and coordinated with counsel in Indonesia, Vietnam, Lao PDR, Australia and the Middle East."
+    intro={<>Singapore's energy transition is import-led, hydrogen-curious and grid-constrained. We advise developers, financiers, offtakers and corporates on EMA-regulated electricity imports, solar PV, low-carbon hydrogen and ammonia, BESS, and Article 6 carbon credits — anchored in Singapore and coordinated with counsel in Indonesia, Vietnam, Lao PDR, Australia and the Middle East. Energy companies that need continuing corporate support can also retain <a className="text-primary underline" href="/industry/fractional-gc">fractional legal counsel</a> in Singapore.</>}
     badges={["Electricity Imports", "Hydrogen & Ammonia", "BESS & Solar"]}
     metaTitle="Singapore Renewable Energy Lawyer — Imports, Hydrogen | Beyond Horizons"
     metaDescription="Singapore alternative energy counsel: cross-border electricity imports (EMA), solar PV, hydrogen/ammonia, BESS, Article 6 carbon credits and green project finance."
