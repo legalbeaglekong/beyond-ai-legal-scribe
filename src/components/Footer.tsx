@@ -51,10 +51,8 @@ const Footer = () => {
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">Singapore law practice group — cross-border counsel across aviation finance, fractional GC, employment, AI governance, and robotics.</p>
               <div className="space-y-2 text-xs text-muted-foreground">
-                <p>Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore</p>
-                <p>Chambers Asia-Pacific 2026 — Band 4, Aviation: Finance — Asia-Pacific Region</p>
-                <p>Chambers Global 2026 — Global Market Leaders, Band 3, Asset Finance</p>
-                <p>Legal 500 Next Generation Partner 2023</p>
+                <p>Hui Ling Teo is ranked Band 3 for Aviation: Finance in Singapore by Chambers Asia-Pacific 2026.</p>
+                <p>Hui Ling Teo — Legal 500 Next Generation Partner, 2023</p>
               </div>
             </div>
 
@@ -139,7 +137,6 @@ const Footer = () => {
           <div className="mt-2 flex flex-wrap justify-center gap-6 text-xs text-muted-foreground">
             <div className="flex items-center space-x-1.5"><Rocket className="h-3 w-3 text-accent" /><span>{t("footer.strategicInnovation")}</span></div>
             <div className="flex items-center space-x-1.5"><BookOpen className="h-3 w-3 text-accent" /><span>{t("footer.globalAdvisory")}</span></div>
-            <div className="flex items-center space-x-1.5"><Scale className="h-3 w-3 text-accent" /><span>{t("footer.dealValue")}</span></div>
           </div>
         </div>
       </div>
