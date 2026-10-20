@@ -13,8 +13,8 @@ import {
 export const Route = createFileRoute("/singapore-retrenchment-law")({
   head: () => {
     const head = createPageHead({
-      title: RETRENCHMENT_TITLE,
-      description: RETRENCHMENT_DESCRIPTION,
+      title: "Retrenchment Law Singapore 2026: Benefits, MOM Rules, Notice",
+      description: "Singapore retrenchment law for employers (2026): is a retrenchment benefit mandatory, notifying MOM within 5 working days, notice and fair selection.",
       path: RETRENCHMENT_PATH,
       type: "article",
       scripts: [retrenchmentArticleSchema, retrenchmentFaqSchema].map((s) => ({

@@ -50,6 +50,7 @@ export interface IndustryPageData {
   updated?: string;
   serviceSchema?: boolean;
   seo: { title: string; description: string };
+  legalService?: { description: string; serviceType: string; employee: { "@type": "Person"; name: string; jobTitle: string; description: string } };
   hero: {
     title: string;
     subtitle: string;
@@ -102,7 +103,7 @@ export interface IndustryPageData {
     heading: string;
     items: { question: string; answer: string }[];
   };
-  cta: { heading: string; description?: string; note?: string };
+  cta: { heading: string; description?: string; note?: string; beforeHeading?: import("react").ReactNode; afterDescription?: import("react").ReactNode };
   /** slug may be an absolute path starting with "/" */
   relatedPages: { title: string; slug: string }[];
   relatedExternal?: { label: string; href: string }[];
@@ -165,7 +166,8 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             "@context": "https://schema.org", "@type": "LegalService",
             name: data.serviceSchema ? "Beyond Horizons by Bethel Chambers LLC" : "Beyond Horizons by Bethel Chambers",
             provider: { "@type": "Organization", name: "Bethel Chambers LLC", url: "https://beyondhorizons.sg" },
-            description: data.seo.description, areaServed: "Asia-Pacific",
+            description: data.legalService?.description ?? data.seo.description,
+            ...(data.legalService ? { serviceType: data.legalService.serviceType, employee: data.legalService.employee } : {}), areaServed: "Asia-Pacific",
             url: `https://beyondhorizons.sg/industry/${data.slug}`,
           })}
         </script>
@@ -496,11 +498,11 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
             <Accordion type="single" collapsible className="w-full">
               {data.faqs.items.map((faq, i) => (
-                <AccordionItem key={i} value={`faq-${i}`} className={["aviation", "fractional-gc", "transportation"].includes(data.slug) ? "group border-border/30" : "border-border/30"}>
+                <AccordionItem key={i} value={`faq-${i}`} className={["aviation", "fractional-gc", "transportation", "ai-code-counsel"].includes(data.slug) ? "group border-border/30" : "border-border/30"}>
                   <AccordionTrigger className="text-left text-foreground text-sm hover:no-underline hover:text-accent">
                     {faq.question}
                   </AccordionTrigger>
-                  {["aviation", "fractional-gc"].includes(data.slug) ? <div className="pb-4 text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden">{faq.answer}</div> : <AccordionContent {...(data.slug === "transportation" ? { forceMount: true as const } : {})} className={data.slug === "transportation" ? "text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground text-sm leading-relaxed"}>{faq.answer}</AccordionContent>}
+                  {["aviation", "fractional-gc", "ai-code-counsel"].includes(data.slug) ? <div className="pb-4 text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden">{faq.answer}</div> : <AccordionContent {...(data.slug === "transportation" ? { forceMount: true as const } : {})} className={data.slug === "transportation" ? "text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground text-sm leading-relaxed"}>{faq.answer}</AccordionContent>}
                 </AccordionItem>
               ))}
             </Accordion>
@@ -511,12 +513,14 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         <VideoBackground src={getCtaVideoForSlug(data.slug)} className="py-24" overlayClassName="absolute inset-0 bg-black/60">
           <div className="max-w-3xl mx-auto container-padding text-center fade-in py-16">
             <div className="teal-line mx-auto mb-8" />
+            {data.cta.beforeHeading}
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 drop-shadow-lg">
               {data.cta.heading}
             </h2>
             {data.cta.description && (
               <p className="text-white/85 leading-relaxed mb-10 text-lg drop-shadow-md">{data.cta.description}</p>
             )}
+            {data.cta.afterDescription}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="default" size="lg" className="bg-white text-black font-semibold shadow-lg hover:bg-white/90" asChild>
                 {data.consultHref ? (

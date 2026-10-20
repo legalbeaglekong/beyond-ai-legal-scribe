@@ -48,6 +48,7 @@ export interface PillarUpdate {
 export interface PillarFaq {
   q: string;
   a: string;
+  content?: ReactNode;
 }
 
 export interface PillarGuideStep {
@@ -100,6 +101,8 @@ export interface PillarPageProps {
   lastUpdatedISO: string;       // e.g. "2026-06-09"
   lastUpdatedLabel: string;     // e.g. "June 2026"
   afterUpdates?: ReactNode;
+  afterHero?: ReactNode;
+  articleHeadline?: string;
   editorial?: {
     entity: string;
     intro: ReactNode;
@@ -139,6 +142,8 @@ const PillarPage = ({
   lastUpdatedLabel,
   editorial,
   afterUpdates,
+  afterHero,
+  articleHeadline,
 }: PillarPageProps) => {
   const canonical = `${SITE}/${slug}`;
   const keepFaqAnswersMounted = Boolean(editorial) || [
@@ -180,7 +185,7 @@ const PillarPage = ({
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: metaTitle,
+    headline: articleHeadline ?? metaTitle,
     description: metaDescription,
     dateModified: lastUpdatedISO,
     author: {
@@ -256,6 +261,7 @@ const PillarPage = ({
           </div>
         </section>
 
+        {afterHero}
         {callout && (
           <section className="py-10 bg-secondary/30">
             <div className="container mx-auto px-6 max-w-4xl border-l-2 border-primary pl-6">
@@ -362,7 +368,7 @@ const PillarPage = ({
               {faqs.map((f, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className={keepFaqAnswersMounted ? "group" : undefined}>
                   <AccordionTrigger className="text-left font-serif text-lg">{f.q}</AccordionTrigger>
-                  <AccordionContent {...(keepFaqAnswersMounted ? { forceMount: true as const } : {})} className={keepFaqAnswersMounted ? "text-muted-foreground leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground leading-relaxed"}>{renderFaqAnswer(f.a)}</AccordionContent>
+                  <AccordionContent {...(keepFaqAnswersMounted ? { forceMount: true as const } : {})} className={keepFaqAnswersMounted ? "text-muted-foreground leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground leading-relaxed"}>{f.content ?? renderFaqAnswer(f.a)}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>

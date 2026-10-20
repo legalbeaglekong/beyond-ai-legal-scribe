@@ -1,3 +1,4 @@
+import { Link } from "@/lib/router-compat";
 import { useNavigate } from "@/lib/router-compat";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
@@ -11,7 +12,7 @@ const ExpertiseOverview = () => {
   
   const articles = [
     { id: "ma-cross-border", title: "Cross-Border M&A Counsel — Singapore-anchored" },
-    { id: "tech-general-counsel", title: "General Counsel Support for Tech Companies — Singapore-anchored" },
+    { id: "tech-general-counsel", title: "Legal Counsel for Tech Companies — SaaS, Platforms, Data and AI Products" },
     { id: "commercial-contracts", title: "Top Legal Experts in Commercial Contracts for Global Businesses" },
     { id: "corporate-transactions", title: "Corporate Law Specialists for Cross-Border Transactions" },
     { id: "regulatory-compliance", title: "Expert Legal Advisors for Regulatory Compliance in Various Industries" },
@@ -19,7 +20,7 @@ const ExpertiseOverview = () => {
     { id: "startup-funding", title: "Senior Legal Counsel for Startup Funding Rounds in Global Markets" },
     { id: "employment-labor", title: "Trusted Legal Advisor for Employment and Labor Law Issues Globally" },
     { id: "arbitration-disputes", title: "Experienced Arbitration Lawyer for Commercial Disputes Across Jurisdictions" },
-    { id: "financial-services", title: "Top Law Firm for Financial Services Regulation in Multiple Jurisdictions" },
+    { id: "financial-services", title: "Financial Services Regulation Counsel — Singapore-anchored" },
   ];
 
   return (
@@ -46,8 +47,9 @@ const ExpertiseOverview = () => {
                 Specialized Legal Expertise
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Together with our global network, we provide comprehensive legal services across major global jurisdictions
+                From Singapore, we advise on cross-border matters, working with foreign counsel where other laws apply.
               </p>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Companies that need continuing cover across several of these areas can retain <Link to="/industry/fractional-gc" className="text-primary underline">fractional general counsel</Link>; technology companies can start with our <Link to="/expertise/tech-general-counsel" className="text-primary underline">technology and product counsel</Link>.</p>
             </div>
           </div>
         </section>

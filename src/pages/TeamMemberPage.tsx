@@ -92,8 +92,6 @@ const slugs = Object.keys(teamData);
 
 const CHAMBERS_LABELS = [
   "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
-  "Chambers Asia-Pacific 2026 — Band 4, Aviation: Finance — Asia-Pacific Region",
-  "Chambers Global 2026 — Global Market Leaders, Band 3, Asset Finance",
 ];
 
 const INSTRUCT_PATHS = [
