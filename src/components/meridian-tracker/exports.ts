@@ -22,8 +22,20 @@ export async function exportTracker(format: 'excel' | 'word', data: MeridianData
     return;
   }
   const { Document, Packer, Paragraph, Table, TableRow, TableCell, PageOrientation, HeadingLevel, WidthType, TextRun, ShadingType } = await import('docx');
-  const runs = (text: string, opts?: { bold?: boolean | undefined; color?: string | undefined; font?: string | undefined; size?: number | undefined }) => text.split('\n').flatMap((line, index) => index === 0 ? [new TextRun({ text: line, ...opts })] : [new TextRun({ break: 1, ...opts }), new TextRun({ text: line, ...opts })]);
-  const cell = (text: string, opts?: { bold?: boolean; fill?: string; color?: string }) => new TableCell({ ...(opts?.fill ? { shading: { type: ShadingType.CLEAR, fill: opts.fill } } : {}), children: [new Paragraph({ children: runs(text, { bold: opts?.bold, color: opts?.color, font: 'Calibri', size: 18 }) })] });
+  type RunStyle = { bold?: boolean; color?: string; font?: string; size?: number };
+  const cleanStyle = (opts: RunStyle) => {
+    const style: RunStyle = {};
+    if (opts.bold !== undefined) style.bold = opts.bold;
+    if (opts.color !== undefined) style.color = opts.color;
+    if (opts.font !== undefined) style.font = opts.font;
+    if (opts.size !== undefined) style.size = opts.size;
+    return style;
+  };
+  const runs = (text: string, opts: RunStyle = {}) => {
+    const style = cleanStyle(opts);
+    return text.split('\n').flatMap((line, index) => index === 0 ? [new TextRun({ text: line, ...style })] : [new TextRun({ break: 1, ...style }), new TextRun({ text: line, ...style })]);
+  };
+  const cell = (text: string, opts: { bold?: boolean; fill?: string; color?: string } = {}) => new TableCell({ ...(opts.fill ? { shading: { type: ShadingType.CLEAR, fill: opts.fill } } : {}), children: [new Paragraph({ children: runs(text, { bold: opts.bold, color: opts.color, font: 'Calibri', size: 18 }) })] });
   const table = (header: string[], body: string[][]) => new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, rows: [new TableRow({ children: header.map(h => cell(h, { bold: true, fill: 'F4F3F0', color: '80302C' })) }), ...body.map(row => new TableRow({ children: row.map(text => cell(text)) }))] });
   const heading = (text: string) => new Paragraph({ heading: HeadingLevel.HEADING_1, children: runs(text, { font: 'Georgia', bold: true, color: '1F1F1F' }), spacing: { before: 240, after: 120 } });
   const maroonBorder = { style: 'single' as const, size: 12, color: '80302C' };
