@@ -32,4 +32,4 @@
 - [x] Validate raw HTML for the canary pages and report any external blocker.
 - [x] Embed the illustrative contract-risk control pane and dependency map on the manufacturing agreements preview page.
 - [x] Add Demos to the main site menu and confirm the demos page opens on desktop and mobile; demos.beyondhorizons.sg verified and active.
-- [ ] Build Project Meridian CP closing tracker demo subpage (/meridian-tracker): 59-row fictional LMA data centre checklist, localStorage reviews, Word/Excel exports, system dark mode, Demos listing card. Verify acceptance checks (59 rows, filters, persistence, exports, 400px layout). Preview only.
+- [x] Build Project Meridian CP closing tracker demo subpage (/meridian-tracker): 59-row fictional LMA data centre checklist, localStorage reviews, Word/Excel exports, system dark mode, Demos listing card. Verified 59 rows in 8 sections, combined filters, review persistence + reset, both exports download, zero 400px overflow, dark mode. Preview only.
