@@ -8,6 +8,29 @@ import { ArrowLeft, Phone, Mail } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+const ac = "text-primary underline underline-offset-2";
+const st = "text-foreground";
+const Ext = ({ href, children }: { href: string; children: import("react").ReactNode }) => <a href={href} target="_blank" rel="noopener" className={ac}>{children}</a>;
+const acraSection = (
+  <section className="section-padding bg-background">
+    <div className="max-w-3xl mx-auto container-padding">
+      <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-6">What changes for Singapore companies from 20 October 2026 (ACRA)?</h2>
+      <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+        <p>The Accounting and Corporate Regulatory Authority (ACRA) has announced that the next phase of the Corporate and Accounting Laws (Amendment) Act 2025 takes effect on 20 October 2026. ACRA's notice lists six groups of changes. Three matter to most companies when they file their annual return or deal with their registered office; the others concern filings that most private companies do not make, and accounting firms.</p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li><strong className={st}>Annual return.</strong> When filing, a company must confirm that what ACRA holds is correct for its directors, chief executive officers (CEOs), secretaries, auditors and relevant members. ACRA gives examples of the details covered, including names, identification details, nationality, contact and registered office addresses, appointment dates and, where relevant, shareholdings. There is also a new question on whether anyone is acting as CEO. A company limited by guarantee must also confirm the total number of members it last reported. ACRA suggests checking and updating records in <Ext href="https://www.bizfile.gov.sg/">Bizfile</Ext> (ACRA's online filing portal) before filing.</li>
+          <li><strong className={st}>Registered office and records.</strong> Companies no longer have to keep the registered office open to the public for set minimum hours each business day. Records must still be open to inspection: a person who wants to inspect must give reasonable notice, and the company must then make the records available for at least two hours on each relevant business day. A change of registered office address must still be filed within 14 days.</li>
+          <li><strong className={st}>Striking off.</strong> The process is shortened. For a voluntary striking off, the Gazette notice can be published as early as the day the notice is sent; for a striking off started by the Registrar, as early as 15 days after ACRA's letter to the company. ACRA's notice also covers changes to restoring struck-off entities.</li>
+          <li><strong className={st}>Filings removed.</strong> The statement in lieu of prospectus is abolished, and public limited companies with a share capital no longer need to hold a statutory meeting or prepare a statutory report. Most private companies are not affected.</li>
+          <li><strong className={st}>Accounting firms.</strong> Public accountants may renew their registration for one, two or three years, and professional indemnity insurance requirements are extended to accounting firms run as sole proprietorships or partnerships. These do not change what an ordinary company files.</li>
+        </ul>
+        <p><strong className={st}>Plain reading.</strong> For a lean company, the practical step is usually a records check in Bizfile before the next annual return, and a short note on who handles inspection requests. A fractional general counsel can run that check as part of a retainer. If that would be useful, you are welcome to write to <a href="mailto:HL@beyondhorizons.sg" className={ac}>HL@beyondhorizons.sg</a>.</p>
+        <p><em>General information on Singapore law as at October 2026, based on <Ext href="https://www.acra.gov.sg/news-events/news-announcements/commencement-of-key-changes-under-the-corporate-and-accounting-laws--amendment--act-2025-on-20-october-2026/">ACRA's notice of 6 October 2026</Ext>; not legal advice. Check ACRA's notice and the Act for the full position. Beyond Horizons by Bethel Chambers LLC is a Singapore law practice group, not an English law firm.</em></p>
+      </div>
+    </div>
+  </section>
+);
+
 export const maFaqs = [
   {
     question: "Are you a Singapore tax lawyer firm?",
@@ -316,6 +339,7 @@ const ExpertiseDetail = () => {
                       ))}
                     </ul>
 
+                    {id === "regulatory-compliance" && <><p className="mt-8 text-muted-foreground leading-relaxed">Where compliance work is continuing rather than one-off, it can sit within a <Link to="/industry/fractional-gc" className={ac}>fractional general counsel retainer</Link>.</p>{acraSection}</>}
                     {id === "commercial-contracts" && <p className="mt-8 text-muted-foreground leading-relaxed">For Singapore and English law supply and manufacturing contracts, see our <Link to="/singapore-manufacturing-supply-agreements" className="text-primary underline">manufacturing and supply agreement counsel</Link> page.</p>}
 
                     {showMaFaqs && (
@@ -325,6 +349,7 @@ const ExpertiseDetail = () => {
                     )}
                     
                     {id === "financial-services" && <p className="mt-6 text-muted-foreground">Where a financing involves aircraft or a lease interest, see our <Link to="/industry/aviation" className="text-primary underline">aviation finance leasing</Link> page for English-law lease and finance documents coordinated from Singapore.</p>}
+                    {id === "financial-services" && <p className="mt-6 text-muted-foreground">For continuing regulatory and contract support, see <Link to="/industry/fractional-gc" className={ac}>fractional general counsel in Singapore</Link>.</p>}
                     {id === "tech-general-counsel" && (<div className="mt-8 space-y-4"><h3 className="text-2xl font-bold text-foreground">Ongoing general counsel cover</h3><p className="text-muted-foreground leading-relaxed">For companies that want ongoing general counsel cover across their legal matters, not only technology and product work, see <Link to="/industry/fractional-gc" className="text-primary underline">fractional general counsel</Link>. Fractional GC plans start from SGD 4,000 per month to access Chambers (2026) and Legal 500 (2023) ranked counsel, Hui Ling Teo, with more than a decade of experience, including at international law firms. What each plan covers is agreed in an engagement letter. To discuss your product, your contracts or ongoing cover, email <a href="mailto:HL@beyondhorizons.sg" className="text-primary underline">HL@beyondhorizons.sg</a>.</p></div>)}
                     <div className="mt-12 p-6 bg-gradient-to-r from-primary/10 to-primary-glow/10 rounded-lg">
                       <p className="text-foreground font-medium text-center">

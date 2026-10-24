@@ -65,7 +65,7 @@ export interface IndustryPageData {
     jumpLinks?: { label: string; href: string }[];
   };
   /** Optional lead-in prose rendered directly under the hero. */
-  intro?: { paragraphs: string[]; note?: string };
+  intro?: { paragraphs: import("react").ReactNode[]; note?: string };
   contentSections?: { heading: string; paragraphs: string[]; links?: { label: string; to: string }[] }[];
   /** Optional override for the body "Schedule Consultation" buttons (hero + CTA). */
   consultHref?: string;
@@ -101,9 +101,9 @@ export interface IndustryPageData {
   afterClosing?: import("react").ReactNode;
   faqs: {
     heading: string;
-    items: { question: string; answer: string }[];
+    items: { question: string; answer: string; content?: import("react").ReactNode }[];
   };
-  cta: { heading: string; description?: string; note?: string; beforeHeading?: import("react").ReactNode; afterDescription?: import("react").ReactNode };
+  cta: { heading: string; description?: import("react").ReactNode; note?: string; beforeHeading?: import("react").ReactNode; afterDescription?: import("react").ReactNode };
   /** slug may be an absolute path starting with "/" */
   relatedPages: { title: string; slug: string }[];
   relatedExternal?: { label: string; href: string }[];
@@ -502,7 +502,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                   <AccordionTrigger className="text-left text-foreground text-sm hover:no-underline hover:text-accent">
                     {faq.question}
                   </AccordionTrigger>
-                  {["aviation", "fractional-gc", "ai-code-counsel"].includes(data.slug) ? <div className="pb-4 text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden">{faq.answer}</div> : <AccordionContent {...(data.slug === "transportation" ? { forceMount: true as const } : {})} className={data.slug === "transportation" ? "text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground text-sm leading-relaxed"}>{faq.answer}</AccordionContent>}
+                  {["aviation", "fractional-gc", "ai-code-counsel"].includes(data.slug) ? <div className="pb-4 text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden">{faq.content ?? faq.answer}</div> : <AccordionContent {...(data.slug === "transportation" ? { forceMount: true as const } : {})} className={data.slug === "transportation" ? "text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground text-sm leading-relaxed"}>{faq.content ?? faq.answer}</AccordionContent>}
                 </AccordionItem>
               ))}
             </Accordion>
