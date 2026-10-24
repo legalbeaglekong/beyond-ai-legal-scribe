@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileCheck2, Layers, Plane, ArrowRight, ExternalLink } from "lucide-react";
+import { FileCheck2, Layers, Plane, Database, ArrowRight, ExternalLink } from "lucide-react";
 
 const demos = [
   {
@@ -23,6 +23,16 @@ const demos = [
       "A live demonstration of how we track conditions precedent on a cross-border transaction — checklist status, document log, reviewer sign-off, and one-click Excel and Word exports. Illustrative data only; no client information.",
     note: "Public demo",
     href: "/cp-tracker",
+    external: false,
+  },
+  {
+    icon: Database,
+    title: "Project Meridian",
+    tag: "CP Closing Tracker",
+    description:
+      "A multi-party, multi-jurisdiction CP and CS closing tracker for a fictional US$850m LMA-based data centre financing — status by jurisdiction, named human review gates, and Word and Excel exports. Dummy data only.",
+    note: "Public demo",
+    href: "/meridian-tracker",
     external: false,
   },
   {

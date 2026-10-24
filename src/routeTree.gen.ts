@@ -22,6 +22,7 @@ import { Route as DemosRouteImport } from './routes/demos'
 import { Route as FleetRiskRouteImport } from './routes/fleet-risk'
 import { Route as JoinUsRouteImport } from './routes/join-us'
 import { Route as MarketInsightsRouteImport } from './routes/market-insights'
+import { Route as MeridianTrackerRouteImport } from './routes/meridian-tracker'
 import { Route as OurClientsRouteImport } from './routes/our-clients'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SingaporeAiGovernanceRouteImport } from './routes/singapore-ai-governance'
@@ -121,6 +122,11 @@ const JoinUsRoute = JoinUsRouteImport.update({
 const MarketInsightsRoute = MarketInsightsRouteImport.update({
   id: '/market-insights',
   path: '/market-insights',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MeridianTrackerRoute = MeridianTrackerRouteImport.update({
+  id: '/meridian-tracker',
+  path: '/meridian-tracker',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OurClientsRoute = OurClientsRouteImport.update({
@@ -322,6 +328,7 @@ export interface FileRoutesByFullPath {
   '/fleet-risk': typeof FleetRiskRoute
   '/join-us': typeof JoinUsRoute
   '/market-insights': typeof MarketInsightsRoute
+  '/meridian-tracker': typeof MeridianTrackerRoute
   '/our-clients': typeof OurClientsRoute
   '/privacy': typeof PrivacyRoute
   '/singapore-ai-governance': typeof SingaporeAiGovernanceRoute
@@ -372,6 +379,7 @@ export interface FileRoutesByTo {
   '/fleet-risk': typeof FleetRiskRoute
   '/join-us': typeof JoinUsRoute
   '/market-insights': typeof MarketInsightsRoute
+  '/meridian-tracker': typeof MeridianTrackerRoute
   '/our-clients': typeof OurClientsRoute
   '/privacy': typeof PrivacyRoute
   '/singapore-ai-governance': typeof SingaporeAiGovernanceRoute
@@ -423,6 +431,7 @@ export interface FileRoutesById {
   '/fleet-risk': typeof FleetRiskRoute
   '/join-us': typeof JoinUsRoute
   '/market-insights': typeof MarketInsightsRoute
+  '/meridian-tracker': typeof MeridianTrackerRoute
   '/our-clients': typeof OurClientsRoute
   '/privacy': typeof PrivacyRoute
   '/singapore-ai-governance': typeof SingaporeAiGovernanceRoute
@@ -475,6 +484,7 @@ export interface FileRouteTypes {
     | '/fleet-risk'
     | '/join-us'
     | '/market-insights'
+    | '/meridian-tracker'
     | '/our-clients'
     | '/privacy'
     | '/singapore-ai-governance'
@@ -525,6 +535,7 @@ export interface FileRouteTypes {
     | '/fleet-risk'
     | '/join-us'
     | '/market-insights'
+    | '/meridian-tracker'
     | '/our-clients'
     | '/privacy'
     | '/singapore-ai-governance'
@@ -575,6 +586,7 @@ export interface FileRouteTypes {
     | '/fleet-risk'
     | '/join-us'
     | '/market-insights'
+    | '/meridian-tracker'
     | '/our-clients'
     | '/privacy'
     | '/singapore-ai-governance'
@@ -626,6 +638,7 @@ export interface RootRouteChildren {
   FleetRiskRoute: typeof FleetRiskRoute
   JoinUsRoute: typeof JoinUsRoute
   MarketInsightsRoute: typeof MarketInsightsRoute
+  MeridianTrackerRoute: typeof MeridianTrackerRoute
   OurClientsRoute: typeof OurClientsRoute
   PrivacyRoute: typeof PrivacyRoute
   SingaporeAiGovernanceRoute: typeof SingaporeAiGovernanceRoute
@@ -754,6 +767,13 @@ declare module '@tanstack/react-router' {
       path: '/market-insights'
       fullPath: '/market-insights'
       preLoaderRoute: typeof MarketInsightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/meridian-tracker': {
+      id: '/meridian-tracker'
+      path: '/meridian-tracker'
+      fullPath: '/meridian-tracker'
+      preLoaderRoute: typeof MeridianTrackerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/our-clients': {
@@ -1018,6 +1038,7 @@ const rootRouteChildren: RootRouteChildren = {
   FleetRiskRoute: FleetRiskRoute,
   JoinUsRoute: JoinUsRoute,
   MarketInsightsRoute: MarketInsightsRoute,
+  MeridianTrackerRoute: MeridianTrackerRoute,
   OurClientsRoute: OurClientsRoute,
   PrivacyRoute: PrivacyRoute,
   SingaporeAiGovernanceRoute: SingaporeAiGovernanceRoute,
