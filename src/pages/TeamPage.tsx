@@ -81,7 +81,7 @@ const TeamPage = () => {
 
       <div className="section-padding bg-background">
         <div className="max-w-5xl mx-auto container-padding">
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-16 leading-relaxed">{t("team.teamDesc")}</p>
+          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-16 leading-relaxed">{t("team.teamDesc")} For continuing, scoped legal support, see <Link to="/industry/fractional-gc" className="text-primary underline">fractional general counsel in Singapore</Link>.</p>
 
           <div className="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto">
             {teamMembers.map((member) => (

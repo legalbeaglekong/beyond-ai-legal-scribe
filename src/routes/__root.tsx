@@ -155,11 +155,12 @@ const ASSOCIATE_JSONLD = `{
 }`;
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
+  head: ({ match }) => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1.0" },
-      { title: "Beyond Horizons by Bethel Chambers | Singapore Legal Counsel" },
+      { title: match._notFound ? "Page not found | Beyond Horizons" : "Beyond Horizons by Bethel Chambers | Singapore Legal Counsel" },
+      ...(match._notFound ? [{ name: "robots", content: "noindex" }] : []),
       {
         name: "description",
         content:

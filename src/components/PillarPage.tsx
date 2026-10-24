@@ -95,7 +95,10 @@ export interface PillarPageProps {
   relatedKeywords: string[];
   relatedHeading: string;
   ctaHeading: string;
-  ctaBody: string;
+  ctaBody: ReactNode;
+  beforeServices?: ReactNode;
+  serviceOffers?: { name: string; description?: string }[];
+  serviceCatalogName?: string;
   exploreLink?: { label: string; to: string };
   rankings?: { items: string[]; notes?: string[] };
   lastUpdatedISO: string;       // e.g. "2026-06-09"
@@ -144,9 +147,14 @@ const PillarPage = ({
   afterUpdates,
   afterHero,
   articleHeadline,
+  beforeServices,
+  serviceOffers,
+  serviceCatalogName,
 }: PillarPageProps) => {
   const canonical = `${SITE}/${slug}`;
   const keepFaqAnswersMounted = Boolean(editorial) || [
+    "singapore-robotics-law",
+    "singapore-ai-governance",
     "singapore-employment-law",
     "singapore-aviation-law",
     "singapore-restructuring-insolvency",
@@ -170,6 +178,7 @@ const PillarPage = ({
     serviceType,
     url: canonical,
     description: serviceDescription,
+    ...(serviceOffers ? { hasOfferCatalog: { "@type": "OfferCatalog", name: serviceCatalogName ?? serviceType, itemListElement: serviceOffers.map((offer) => ({ "@type": "Offer", itemOffered: { "@type": "Service", ...offer } })) } } : {}),
   };
 
   const breadcrumbJsonLd = {
@@ -272,6 +281,7 @@ const PillarPage = ({
           </section>
         )}
 
+        {beforeServices}
         {services.length > 0 && <section className="py-20">
           <div className="container mx-auto px-6 max-w-5xl">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-10 text-center">How We Advise</h2>

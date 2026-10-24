@@ -1,8 +1,13 @@
 import { describe, test } from "node:test";
 import assert from "node:assert/strict";
-import { createExpertiseHead, createTeamHead } from "./seo";
+import { createExpertiseHead, createTeamHead, createMissingPageHead } from "./seo";
 
 describe("removed resources cannot be indexed", () => {
+  test("generic missing pages cannot be indexed or canonicalized", () => {
+    const head = createMissingPageHead();
+    assert.deepEqual(head.meta, [{ title: "Page not found | Beyond Horizons" }, { name: "robots", content: "noindex" }]);
+    assert.equal(head.links.length, 0);
+  });
   test("removed expertise pages carry noindex and no canonical", () => {
     for (const id of ["family-business-governance", "succession-planning-founders", "tech-legacy-planning", "cross-border-wealth-planning", "business-legacies-apac", "trusts-foundations-wealth", "singapore-legacy-hub", "ip-business-legacy", "crisis-proofing-legacy", "esg-legacy-business"]) {
       const head = createExpertiseHead(id);

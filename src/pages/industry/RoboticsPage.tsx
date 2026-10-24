@@ -12,7 +12,7 @@ const data: IndustryPageData = {
     subtitle: "Plain-English counsel for robot leasing and Robotics-as-a-Service: asset ownership, maintenance, performance, data, insurance, liability and regulatory pathways for deployments across Asia-Pacific.",
     badges: ["Robot Leasing", "Asset Finance & Leasing Experience", "Autonomous Systems Regulatory"],
   },
-  intro: { paragraphs: ["A robot lease should allocate who owns and maintains the asset, how residual value and redelivery work, what happens on damage or obsolescence, and how insurance and liability sit across lessor, lessee, and any RaaS operator. Beyond Horizons adapts aircraft leasing disciplines — including maintenance, redelivery, and risk allocation — to industrial, surgical, and service robots rather than treating robots as generic office equipment."] },
+  intro: { paragraphs: [<>A robot lease should allocate who owns and maintains the asset, how residual value and redelivery work, what happens on damage or obsolescence, and how insurance and liability sit across lessor, lessee, and any RaaS operator. Beyond Horizons adapts aircraft leasing disciplines — including maintenance, redelivery, and risk allocation — to industrial, surgical, and service robots rather than treating robots as generic office equipment. For robotics equipment financing and import/export control checks, see our <a href="/singapore-robotics-law" className="text-primary underline">robotics law hub</a>.</>] },
   overview: {
     heading: "What We Do in Robotics & Automation Law",
     services: [
