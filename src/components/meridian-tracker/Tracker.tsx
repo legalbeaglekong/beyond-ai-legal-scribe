@@ -75,6 +75,7 @@ export function MeridianTracker() {
       <img src={logo} width="88" height="88" alt="Beyond Horizons" />
       <div className="md-header-right">
         <span className="md-badge">DEMO · DUMMY DATA</span>
+        <span className="md-badge md-badge-outline">Powered by Lexhy</span>
         <span className="md-confidential">PRIVATE & CONFIDENTIAL</span>
         <Button variant="outline" className="md-button" size="sm" onClick={resetDemo}><RotateCcw />Reset demo data</Button>
       </div>
