@@ -93,6 +93,7 @@
 .md-header img { width: 88px; height: 88px; flex-shrink: 0; }
 .md-header-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: flex-end; }
 .md-badge { background: var(--md-maroon); color: var(--md-paper); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; padding: 6px 10px; border-radius: 2px; white-space: nowrap; }
+.md-badge-outline { background: transparent; color: var(--md-maroon); border: 1.5px solid var(--md-maroon); }
 .md-confidential { font-size: 11px; letter-spacing: 0.3em; color: var(--md-nav); white-space: nowrap; }
 .md-eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: 0.22em; color: var(--md-maroon); font-weight: 700; margin-bottom: 8px; }
 .md-title { padding: 40px 0 32px; }
