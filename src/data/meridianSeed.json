@@ -1,0 +1,951 @@
+{
+ "JUR": {
+  "EN": "England & Wales",
+  "MY": "Malaysia",
+  "SG": "Singapore",
+  "KY": "Cayman Islands",
+  "XX": "Commercial / technical"
+ },
+ "GATES": {
+  "EN": {
+   "order": 1,
+   "gate": "English law gate",
+   "name": "Alistair Reid",
+   "firm": "Ashcombe & Reid LLP",
+   "role": "Lenders' English counsel (transaction counsel)",
+   "email": "a.reid@ashcombereid.example",
+   "scope": "English law finance documents, intercreditor, hedging, process agent, English law opinion."
+  },
+  "MY": {
+   "order": 2,
+   "gate": "Malaysian law gate",
+   "name": "Nurul Rahman",
+   "firm": "Tan Rahman & Partners",
+   "role": "Lenders' Malaysian counsel",
+   "email": "nurul.rahman@tanrahman.example",
+   "scope": "Borrower corporate CPs, Malaysian security, land charge, permits, exchange control, Malaysian opinion and filings."
+  },
+  "SG": {
+   "order": 3,
+   "gate": "Singapore law gate",
+   "name": "Demo Reviewer",
+   "firm": "Beyond Horizons by Bethel Chambers LLC",
+   "role": "Lenders' Singapore counsel and tracker administrator",
+   "email": "demo.reviewer@beyondhorizons.example",
+   "scope": "Holdco and Sponsor corporate CPs, Singapore share charge, subordinated loan assignment, Singapore opinion and filings."
+  },
+  "KY": {
+   "order": 4,
+   "gate": "Cayman law gate",
+   "name": "Caroline Bodden",
+   "firm": "Harbourside Cayman Attorneys",
+   "role": "Lenders' Cayman counsel",
+   "email": "c.bodden@harbourside.example",
+   "scope": "Co-sponsor fund documents, capital call security, Cayman registers and opinion."
+  },
+  "AG": {
+   "order": 5,
+   "gate": "Agent gate",
+   "name": "Laura Whitmore",
+   "firm": "Northbridge Agency Services Pte. Ltd.",
+   "role": "Facility Agent",
+   "email": "agency.meridian@northbridge.example",
+   "scope": "Utilisation mechanics, funds flow, refinancing payoff, KYC, fees, equity evidence, final CP satisfaction notice."
+  },
+  "TA": {
+   "order": 6,
+   "gate": "Technical gate",
+   "name": "Rotimi Okafor",
+   "firm": "Voltaic Engineering Advisory",
+   "role": "Lenders' Technical Adviser",
+   "email": "r.okafor@voltaic.example",
+   "scope": "Technical report, base case model inputs, power and cooling, construction programme."
+  },
+  "IA": {
+   "order": 7,
+   "gate": "Insurance gate",
+   "name": "Priya Menon",
+   "firm": "Harrow Risk Advisory",
+   "role": "Lenders' Insurance Adviser",
+   "email": "p.menon@harrowrisk.example",
+   "scope": "Insurance report, certificates, loss payee and co-insured endorsements."
+  }
+ },
+ "PARTIES": [
+  {
+   "group": "Obligors and sponsors",
+   "items": [
+    {
+     "name": "Meridian DC (Johor) Sdn. Bhd.",
+     "role": "Borrower \u00b7 Malaysia",
+     "counsel": "Counsel: Azhar Chong & Co (MY)",
+     "email": "treasury@meridiandc.example"
+    },
+    {
+     "name": "Meridian DC Holdings Pte. Ltd.",
+     "role": "Holdco and chargor of Borrower shares \u00b7 Singapore",
+     "counsel": "Counsel: Mercer Quay LLC (SG)",
+     "email": "cosec@meridianholdings.example"
+    },
+    {
+     "name": "Halcyon Digital Infrastructure Pte. Ltd.",
+     "role": "Sponsor (70%) \u00b7 Singapore",
+     "counsel": "Counsel: Mercer Quay LLC (SG); Whitcombe Lane LLP (EN)",
+     "email": "legal@halcyondi.example"
+    },
+    {
+     "name": "Fjordline DC Fund L.P.",
+     "role": "Co-sponsor (30%) \u00b7 Cayman exempted limited partnership",
+     "counsel": "Counsel: Seven Mile Legal (KY)",
+     "email": "gp@fjordline.example"
+    }
+   ]
+  },
+  {
+   "group": "Finance parties",
+   "items": [
+    {
+     "name": "Northbridge Bank, Singapore Branch",
+     "role": "Mandated Lead Arranger \u00b7 Original Lender \u00b7 Hedge Counterparty",
+     "counsel": "Lenders' counsel: Ashcombe & Reid LLP (EN)",
+     "email": "dcm@northbridge.example"
+    },
+    {
+     "name": "Pacifica Banking Corporation Berhad",
+     "role": "Mandated Lead Arranger \u00b7 Onshore Security Agent \u00b7 Account Bank",
+     "counsel": "Lenders' counsel: Tan Rahman & Partners (MY)",
+     "email": "loans@pacifica.example"
+    },
+    {
+     "name": "Orient Capital Bank Limited",
+     "role": "Mandated Lead Arranger \u00b7 Hedge Counterparty",
+     "counsel": "Lenders' counsel: Ashcombe & Reid LLP (EN)",
+     "email": "syndications@orientcap.example"
+    },
+    {
+     "name": "Northbridge Agency Services Pte. Ltd.",
+     "role": "Facility Agent",
+     "counsel": "",
+     "email": "agency.meridian@northbridge.example"
+    },
+    {
+     "name": "Orient Trustee Services (S) Pte. Ltd.",
+     "role": "Offshore Security Agent",
+     "counsel": "",
+     "email": "trustee@orientcap.example"
+    }
+   ]
+  },
+  {
+   "group": "Existing financier (refinanced)",
+   "items": [
+    {
+     "name": "Kestrel Bank Ltd",
+     "role": "Lender under US$300m bridge facility \u00b7 holds existing Malaysian debenture and Singapore share charge",
+     "counsel": "Counsel: Lim & Varga (MY)",
+     "email": "credit.ops@kestrel.example"
+    }
+   ]
+  },
+  {
+   "group": "Lenders' advisers",
+   "items": [
+    {
+     "name": "Voltaic Engineering Advisory",
+     "role": "Lenders' Technical Adviser",
+     "counsel": "",
+     "email": "r.okafor@voltaic.example"
+    },
+    {
+     "name": "Ledgerline Model Audit",
+     "role": "Model Auditor",
+     "counsel": "",
+     "email": "audit@ledgerline.example"
+    },
+    {
+     "name": "Harrow Risk Advisory",
+     "role": "Insurance Adviser",
+     "counsel": "",
+     "email": "p.menon@harrowrisk.example"
+    },
+    {
+     "name": "Greenfield E&S Consultants",
+     "role": "Environmental and social adviser (Equator Principles)",
+     "counsel": "",
+     "email": "es@greenfield.example"
+    }
+   ]
+  },
+  {
+   "group": "Counsel by jurisdiction",
+   "items": [
+    {
+     "name": "England & Wales",
+     "role": "Lenders: Ashcombe & Reid LLP \u00b7 Obligors and Sponsor: Whitcombe Lane LLP",
+     "counsel": "",
+     "email": ""
+    },
+    {
+     "name": "Malaysia",
+     "role": "Lenders: Tan Rahman & Partners \u00b7 Borrower: Azhar Chong & Co \u00b7 Existing financier: Lim & Varga",
+     "counsel": "",
+     "email": ""
+    },
+    {
+     "name": "Singapore",
+     "role": "Lenders: Beyond Horizons by Bethel Chambers LLC \u00b7 Holdco and Sponsor: Mercer Quay LLC",
+     "counsel": "",
+     "email": ""
+    },
+    {
+     "name": "Cayman Islands",
+     "role": "Lenders: Harbourside Cayman Attorneys \u00b7 Co-sponsor: Seven Mile Legal",
+     "counsel": "",
+     "email": ""
+    }
+   ]
+  }
+ ],
+ "DATES": [
+  {
+   "label": "Signing",
+   "date": "Fri 13 Nov 2026",
+   "note": "Facilities agreement and intercreditor signed"
+  },
+  {
+   "label": "Utilisation Request",
+   "date": "Tue 24 Nov 2026",
+   "note": "3 Business Days before the Utilisation Date"
+  },
+  {
+   "label": "Target first Utilisation",
+   "date": "Fri 27 Nov 2026",
+   "note": "All initial CPs satisfied or waived; refinancing paid"
+  },
+  {
+   "label": "Filings and stamping",
+   "date": "Sun 13 Dec 2026",
+   "note": "Demo: 30 days after signing (charge registrations, stamping)"
+  },
+  {
+   "label": "Release filings",
+   "date": "Sun 27 Dec 2026",
+   "note": "Demo: 30 days after first Utilisation (existing security)"
+  },
+  {
+   "label": "Land charge",
+   "date": "Thu 25 Feb 2027",
+   "note": "Demo: 90 days after first Utilisation, after State Authority consent"
+  }
+ ],
+ "ROWS": [
+  {
+   "sec": "Part 1 \u00b7 Obligors: corporate documents",
+   "ref": "CP-1.1",
+   "jur": "MY",
+   "title": "Constitution and SSM records: Borrower",
+   "req": "Certified constitution, certificate of incorporation and SSM company profile of the Borrower.",
+   "by": "Borrower / Azhar Chong & Co",
+   "gate": "MY",
+   "status": "satisfied",
+   "note": "Confirmed by N. Rahman, 20 Oct 2026.",
+   "due": ""
+  },
+  {
+   "sec": "Part 1 \u00b7 Obligors: corporate documents",
+   "ref": "CP-1.2",
+   "jur": "SG",
+   "title": "Constitution and ACRA profile: Holdco",
+   "req": "Certified constitution, certificate of incorporation and ACRA business profile of Holdco.",
+   "by": "Holdco / Mercer Quay LLC",
+   "gate": "SG",
+   "status": "satisfied",
+   "note": "Confirmed 21 Oct 2026.",
+   "due": ""
+  },
+  {
+   "sec": "Part 1 \u00b7 Obligors: corporate documents",
+   "ref": "CP-1.3",
+   "jur": "SG",
+   "title": "Constitution and ACRA profile: Sponsor",
+   "req": "Certified constitution and ACRA business profile of Halcyon Digital Infrastructure Pte. Ltd.",
+   "by": "Sponsor / Mercer Quay LLC",
+   "gate": "SG",
+   "status": "received",
+   "note": "Received 22 Oct 2026 from Mercer Quay LLC.",
+   "due": ""
+  },
+  {
+   "sec": "Part 1 \u00b7 Obligors: corporate documents",
+   "ref": "CP-1.4",
+   "jur": "KY",
+   "title": "Fund documents: Co-sponsor",
+   "req": "Certificate of registration, LPA (certified), GP certificate of good standing, register of mortgages and charges.",
+   "by": "Co-sponsor / Seven Mile Legal",
+   "gate": "KY",
+   "status": "issue",
+   "note": "C. Bodden, 23 Oct 2026: certificate of good standing dated 14 Aug 2026. A new certificate (not older than 30 days at Signing) is required.",
+   "due": ""
+  },
+  {
+   "sec": "Part 1 \u00b7 Obligors: corporate documents",
+   "ref": "CP-1.5",
+   "jur": "MY",
+   "title": "Board resolutions: Borrower",
+   "req": "Board resolutions approving the Finance Documents and Transaction Security, and naming authorised signatories.",
+   "by": "Borrower / Azhar Chong & Co",
+   "gate": "MY",
+   "status": "received",
+   "note": "Draft received 22 Oct 2026; signed copy to follow.",
+   "due": ""
+  },
+  {
+   "sec": "Part 1 \u00b7 Obligors: corporate documents",
+   "ref": "CP-1.6",
+   "jur": "SG",
+   "title": "Board and shareholder resolutions: Holdco",
+   "req": "Board resolutions and shareholder resolution approving the share charge over the Borrower and the guarantee.",
+   "by": "Holdco / Mercer Quay LLC",
+   "gate": "SG",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 1 \u00b7 Obligors: corporate documents",
+   "ref": "CP-1.7",
+   "jur": "SG",
+   "title": "Board resolutions: Sponsor",
+   "req": "Board resolutions approving the Sponsor Support and Equity Contribution Agreement and the Singapore share charge.",
+   "by": "Sponsor / Mercer Quay LLC",
+   "gate": "SG",
+   "status": "received",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 1 \u00b7 Obligors: corporate documents",
+   "ref": "CP-1.8",
+   "jur": "KY",
+   "title": "GP resolutions: Co-sponsor",
+   "req": "Resolutions of the general partner approving the equity commitment and the capital call security; LPAC consent if the LPA requires it.",
+   "by": "Co-sponsor / Seven Mile Legal",
+   "gate": "KY",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 1 \u00b7 Obligors: corporate documents",
+   "ref": "CP-1.9",
+   "jur": "EN",
+   "title": "Specimen signatures",
+   "req": "Specimen signature of each authorised signatory of each Obligor.",
+   "by": "Each Obligor / Whitcombe Lane LLP",
+   "gate": "EN",
+   "status": "received",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 1 \u00b7 Obligors: corporate documents",
+   "ref": "CP-1.10",
+   "jur": "EN",
+   "title": "Officer's certificate (each Obligor)",
+   "req": "Certificate: borrowing and guarantee limits not exceeded, documents are true copies and in force, no Default. Dated on or near the Utilisation Date.",
+   "by": "Each Obligor / Whitcombe Lane LLP",
+   "gate": "EN",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 1 \u00b7 Obligors: corporate documents",
+   "ref": "CP-1.11",
+   "jur": "MY",
+   "title": "Company and winding-up searches",
+   "req": "SSM company search and winding-up search on the Borrower; ACRA and Cayman searches on the other Obligors (updated within 2 Business Days of Utilisation).",
+   "by": "Lenders' local counsel",
+   "gate": "MY",
+   "status": "received",
+   "note": "Initial searches clear. Update searches due 25 Nov 2026.",
+   "due": ""
+  },
+  {
+   "sec": "Part 2 \u00b7 Finance documents",
+   "ref": "CP-2.1",
+   "jur": "EN",
+   "title": "Senior Facilities Agreement",
+   "req": "LMA-based (APLMA form) facilities agreement signed by all parties. Agreed form v.9.",
+   "by": "All parties / Ashcombe & Reid LLP",
+   "gate": "EN",
+   "status": "received",
+   "note": "Signed pages held in escrow by Ashcombe & Reid (Borrower, MLAs). Agent page outstanding.",
+   "due": ""
+  },
+  {
+   "sec": "Part 2 \u00b7 Finance documents",
+   "ref": "CP-2.2",
+   "jur": "EN",
+   "title": "Intercreditor Agreement",
+   "req": "Senior lenders, hedge counterparties, Sponsor and Co-sponsor (subordinated creditors), Security Agents.",
+   "by": "All parties / Ashcombe & Reid LLP",
+   "gate": "EN",
+   "status": "outstanding",
+   "note": "Co-sponsor comments on turnover clause pending.",
+   "due": ""
+  },
+  {
+   "sec": "Part 2 \u00b7 Finance documents",
+   "ref": "CP-2.3",
+   "jur": "EN",
+   "title": "Fee letters",
+   "req": "Arrangement, agency and security agency fee letters.",
+   "by": "Borrower / Whitcombe Lane LLP",
+   "gate": "EN",
+   "status": "satisfied",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 2 \u00b7 Finance documents",
+   "ref": "CP-2.4",
+   "jur": "EN",
+   "title": "Hedging documents",
+   "req": "ISDA 2002 master agreements, schedules and hedging letter with each Hedge Counterparty.",
+   "by": "Borrower and Hedge Counterparties",
+   "gate": "EN",
+   "status": "received",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 2 \u00b7 Finance documents",
+   "ref": "CP-2.5",
+   "jur": "EN",
+   "title": "Sponsor Support and Equity Contribution Agreement",
+   "req": "Equity commitment of US$343m, cost overrun support and completion undertakings.",
+   "by": "Sponsor, Co-sponsor / Whitcombe Lane LLP",
+   "gate": "EN",
+   "status": "received",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 2 \u00b7 Finance documents",
+   "ref": "CP-2.6",
+   "jur": "EN",
+   "title": "Subordination Deed",
+   "req": "Subordination of shareholder loans from Holdco to the Borrower.",
+   "by": "Holdco, Borrower",
+   "gate": "EN",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 2 \u00b7 Finance documents",
+   "ref": "CP-2.7",
+   "jur": "MY",
+   "title": "Malaysian Security Trust Deed",
+   "req": "Appointment of the Onshore Security Agent as security trustee for the Finance Parties.",
+   "by": "Pacifica / Tan Rahman & Partners",
+   "gate": "MY",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 2 \u00b7 Finance documents",
+   "ref": "CP-2.8",
+   "jur": "MY",
+   "title": "Account Bank Agreement",
+   "req": "Onshore project accounts, waterfall and signing mandates.",
+   "by": "Borrower, Account Bank",
+   "gate": "MY",
+   "status": "received",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 2 \u00b7 Finance documents",
+   "ref": "CP-2.9",
+   "jur": "EN",
+   "title": "Utilisation Request",
+   "req": "Signed Utilisation Request for the first Utilisation, delivered 3 Business Days before the Utilisation Date.",
+   "by": "Borrower",
+   "gate": "AG",
+   "status": "outstanding",
+   "note": "",
+   "due": "2026-11-24"
+  },
+  {
+   "sec": "Part 3 \u00b7 Transaction security",
+   "ref": "CP-3.1",
+   "jur": "MY",
+   "title": "Malaysian Debenture",
+   "req": "Fixed and floating charges over all present and future assets of the Borrower.",
+   "by": "Borrower / Azhar Chong & Co",
+   "gate": "MY",
+   "status": "received",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 3 \u00b7 Transaction security",
+   "ref": "CP-3.2",
+   "jur": "MY",
+   "title": "Assignment of contract proceeds",
+   "req": "Assignment of EPC contract, tenant lease, grid connection agreement and O&M contract, with notices.",
+   "by": "Borrower / Azhar Chong & Co",
+   "gate": "MY",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 3 \u00b7 Transaction security",
+   "ref": "CP-3.3",
+   "jur": "MY",
+   "title": "Charge over Borrower shares",
+   "req": "Share charge by Holdco, original share certificates, undated share transfer forms and blank-dated director resignation letters.",
+   "by": "Holdco / Azhar Chong & Co",
+   "gate": "MY",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 3 \u00b7 Transaction security",
+   "ref": "CP-3.4",
+   "jur": "SG",
+   "title": "Singapore share charge over Holdco shares",
+   "req": "Share charge by Sponsor, share certificates, undated instruments of transfer, letter of undertaking and authorisation.",
+   "by": "Sponsor / Mercer Quay LLC",
+   "gate": "SG",
+   "status": "received",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 3 \u00b7 Transaction security",
+   "ref": "CP-3.5",
+   "jur": "MY",
+   "title": "Assignment of insurances",
+   "req": "Assignment of construction and operational insurances; loss payee clause in favour of the Onshore Security Agent.",
+   "by": "Borrower / Azhar Chong & Co",
+   "gate": "MY",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 3 \u00b7 Transaction security",
+   "ref": "CP-3.6",
+   "jur": "MY",
+   "title": "Account charge and notice",
+   "req": "Charge over onshore project accounts, with notice to and acknowledgement from the Account Bank.",
+   "by": "Borrower, Account Bank",
+   "gate": "MY",
+   "status": "received",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 3 \u00b7 Transaction security",
+   "ref": "CP-3.7",
+   "jur": "MY",
+   "title": "Charge over leasehold land",
+   "req": "Charge over the data centre site under the National Land Code. Needs State Authority consent to charge.",
+   "by": "Borrower / Azhar Chong & Co",
+   "gate": "MY",
+   "status": "issue",
+   "note": "N. Rahman, 22 Oct 2026: consent not yet granted. Proposal: Majority Lenders agree to move this item to conditions subsequent (see CS-4).",
+   "due": ""
+  },
+  {
+   "sec": "Part 3 \u00b7 Transaction security",
+   "ref": "CP-3.8",
+   "jur": "SG",
+   "title": "Assignment of subordinated loans",
+   "req": "Assignment by Sponsor of its rights under shareholder loans to Holdco.",
+   "by": "Sponsor / Mercer Quay LLC",
+   "gate": "SG",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 3 \u00b7 Transaction security",
+   "ref": "CP-3.9",
+   "jur": "KY",
+   "title": "Capital call security (Co-sponsor)",
+   "req": "Security over uncalled capital commitments of Fjordline DC Fund L.P., with notices to investors and power of attorney to issue calls.",
+   "by": "Co-sponsor / Seven Mile Legal",
+   "gate": "KY",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 4 \u00b7 Direct agreements",
+   "ref": "CP-4.1",
+   "jur": "MY",
+   "title": "EPC direct agreement",
+   "req": "Direct agreement with the EPC contractor (Stratus Build Asia Sdn. Bhd.) with step-in rights.",
+   "by": "Borrower, EPC contractor",
+   "gate": "MY",
+   "status": "received",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 4 \u00b7 Direct agreements",
+   "ref": "CP-4.2",
+   "jur": "MY",
+   "title": "Tenant direct agreement and lease consent",
+   "req": "Direct agreement and consent to assignment from the anchor hyperscale tenant (Tenant A).",
+   "by": "Borrower, Tenant A",
+   "gate": "MY",
+   "status": "issue",
+   "note": "Tenant A asks to limit lender step-in to 60 days. Commercial decision for the MLAs.",
+   "due": ""
+  },
+  {
+   "sec": "Part 4 \u00b7 Direct agreements",
+   "ref": "CP-4.3",
+   "jur": "MY",
+   "title": "Grid connection consent",
+   "req": "Consent of the grid operator to the assignment of the connection agreement.",
+   "by": "Borrower, grid operator",
+   "gate": "MY",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 5 \u00b7 Refinancing of existing debt",
+   "ref": "CP-5.1",
+   "jur": "MY",
+   "title": "Payoff letter: Kestrel Bank",
+   "req": "Payoff letter stating the outstanding amount, daily interest, break costs and payment account; undertaking to release security on receipt.",
+   "by": "Kestrel Bank / Lim & Varga",
+   "gate": "AG",
+   "status": "received",
+   "note": "Payoff amount at 27 Nov 2026: US$301.84m (fictional).",
+   "due": ""
+  },
+  {
+   "sec": "Part 5 \u00b7 Refinancing of existing debt",
+   "ref": "CP-5.2",
+   "jur": "MY",
+   "title": "Deeds of release (existing security)",
+   "req": "Releases of the existing Malaysian debenture and Singapore share charge in agreed form, signed and held in escrow until payoff.",
+   "by": "Kestrel Bank / Lim & Varga",
+   "gate": "MY",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 5 \u00b7 Refinancing of existing debt",
+   "ref": "CP-5.3",
+   "jur": "SG",
+   "title": "Return of share certificates",
+   "req": "Kestrel Bank returns original Holdco share certificates and transfer forms to the Offshore Security Agent at payoff.",
+   "by": "Kestrel Bank",
+   "gate": "SG",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 5 \u00b7 Refinancing of existing debt",
+   "ref": "CP-5.4",
+   "jur": "EN",
+   "title": "Funds flow memorandum",
+   "req": "Agreed funds flow for the first Utilisation: payoff, fees, costs, equity and project accounts.",
+   "by": "Facility Agent / Ashcombe & Reid LLP",
+   "gate": "AG",
+   "status": "received",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 6 \u00b7 Legal opinions",
+   "ref": "CP-6.1",
+   "jur": "EN",
+   "title": "English law opinion",
+   "req": "Enforceability opinion on the English law Finance Documents.",
+   "by": "Ashcombe & Reid LLP",
+   "gate": "EN",
+   "status": "received",
+   "note": "Draft opinion v.2 circulated 21 Oct 2026.",
+   "due": ""
+  },
+  {
+   "sec": "Part 6 \u00b7 Legal opinions",
+   "ref": "CP-6.2",
+   "jur": "MY",
+   "title": "Malaysian law opinion",
+   "req": "Capacity, authority and enforceability of Malaysian Finance Documents and Transaction Security.",
+   "by": "Tan Rahman & Partners",
+   "gate": "MY",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 6 \u00b7 Legal opinions",
+   "ref": "CP-6.3",
+   "jur": "SG",
+   "title": "Singapore law opinion",
+   "req": "Capacity of Holdco and Sponsor; enforceability of the Singapore share charge and assignment.",
+   "by": "Beyond Horizons by Bethel Chambers LLC",
+   "gate": "SG",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 6 \u00b7 Legal opinions",
+   "ref": "CP-6.4",
+   "jur": "KY",
+   "title": "Cayman law opinion",
+   "req": "Capacity and authority of the Co-sponsor and its general partner; capital call security.",
+   "by": "Harbourside Cayman Attorneys",
+   "gate": "KY",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 7 \u00b7 Other documents and evidence",
+   "ref": "CP-7.1",
+   "jur": "EN",
+   "title": "Process agent appointment",
+   "req": "Acceptance of appointment by the process agent for each non-English Obligor.",
+   "by": "Obligors / Whitcombe Lane LLP",
+   "gate": "EN",
+   "status": "satisfied",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 7 \u00b7 Other documents and evidence",
+   "ref": "CP-7.2",
+   "jur": "XX",
+   "title": "Base case model and model audit",
+   "req": "Agreed base case financial model and Model Auditor's report (minimum DSCR 1.30x).",
+   "by": "Borrower; Ledgerline Model Audit",
+   "gate": "TA",
+   "status": "received",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 7 \u00b7 Other documents and evidence",
+   "ref": "CP-7.3",
+   "jur": "XX",
+   "title": "Lenders' Technical Adviser report",
+   "req": "Final report: construction programme, power supply, cooling design, PUE and budget.",
+   "by": "Voltaic Engineering Advisory",
+   "gate": "TA",
+   "status": "received",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 7 \u00b7 Other documents and evidence",
+   "ref": "CP-7.4",
+   "jur": "XX",
+   "title": "Insurance report and certificates",
+   "req": "Insurance Adviser report and certificates of insurance with lender endorsements.",
+   "by": "Borrower's brokers; Harrow Risk Advisory",
+   "gate": "IA",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 7 \u00b7 Other documents and evidence",
+   "ref": "CP-7.5",
+   "jur": "XX",
+   "title": "E&S due diligence and ESAP",
+   "req": "Environmental and social report (Equator Principles) and agreed action plan.",
+   "by": "Greenfield E&S Consultants",
+   "gate": "TA",
+   "status": "satisfied",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 7 \u00b7 Other documents and evidence",
+   "ref": "CP-7.6",
+   "jur": "XX",
+   "title": "Evidence of equity contribution",
+   "req": "Evidence that equity of at least 30% of project costs is paid in or secured by acceptable credit support.",
+   "by": "Sponsor, Co-sponsor",
+   "gate": "AG",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 7 \u00b7 Other documents and evidence",
+   "ref": "CP-7.7",
+   "jur": "MY",
+   "title": "Exchange control confirmation",
+   "req": "Confirmation that the foreign currency borrowing complies with Bank Negara Malaysia foreign exchange policy (demo assumption).",
+   "by": "Borrower / Azhar Chong & Co",
+   "gate": "MY",
+   "status": "received",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 7 \u00b7 Other documents and evidence",
+   "ref": "CP-7.8",
+   "jur": "MY",
+   "title": "Key project permits",
+   "req": "Development order, building plan approval and power supply approval for Phase 1 (demo list).",
+   "by": "Borrower / Azhar Chong & Co",
+   "gate": "MY",
+   "status": "received",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 7 \u00b7 Other documents and evidence",
+   "ref": "CP-7.9",
+   "jur": "XX",
+   "title": "KYC",
+   "req": "Each Lender's KYC on each Obligor, Sponsor, Co-sponsor and ultimate beneficial owners.",
+   "by": "Each Lender via Facility Agent",
+   "gate": "AG",
+   "status": "satisfied",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 7 \u00b7 Other documents and evidence",
+   "ref": "CP-7.10",
+   "jur": "XX",
+   "title": "Original financial statements",
+   "req": "Latest audited financial statements of each Obligor and the Sponsor.",
+   "by": "Obligors",
+   "gate": "AG",
+   "status": "satisfied",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Part 7 \u00b7 Other documents and evidence",
+   "ref": "CP-7.11",
+   "jur": "XX",
+   "title": "Fees and costs",
+   "req": "Evidence that fees, costs and expenses due at first Utilisation are paid, or are paid from the first Utilisation under the funds flow.",
+   "by": "Borrower",
+   "gate": "AG",
+   "status": "waived",
+   "note": "Agent, 23 Oct 2026: paid from first Utilisation proceeds under CP-5.4.",
+   "due": ""
+  },
+  {
+   "sec": "Part 7 \u00b7 Other documents and evidence",
+   "ref": "CP-7.12",
+   "jur": "EN",
+   "title": "Hedging in place",
+   "req": "Evidence that interest rate hedging covers at least 75% of the term loan for the agreed tenor.",
+   "by": "Borrower, Hedge Counterparties",
+   "gate": "EN",
+   "status": "outstanding",
+   "note": "",
+   "due": ""
+  },
+  {
+   "sec": "Conditions subsequent",
+   "ref": "CS-1",
+   "jur": "MY",
+   "title": "Register Malaysian security with SSM",
+   "req": "Lodge the Debenture, share charge and assignments with SSM (demo: 30 days after creation).",
+   "by": "Borrower / Azhar Chong & Co",
+   "gate": "MY",
+   "status": "outstanding",
+   "note": "",
+   "due": "2026-12-13"
+  },
+  {
+   "sec": "Conditions subsequent",
+   "ref": "CS-2",
+   "jur": "SG",
+   "title": "Register Singapore share charge with ACRA",
+   "req": "Register the share charge and assignment granted by the Singapore companies (demo: 30 days after creation).",
+   "by": "Sponsor, Holdco / Mercer Quay LLC",
+   "gate": "SG",
+   "status": "outstanding",
+   "note": "",
+   "due": "2026-12-13"
+  },
+  {
+   "sec": "Conditions subsequent",
+   "ref": "CS-3",
+   "jur": "MY",
+   "title": "Stamping of Malaysian documents",
+   "req": "Stamp the Malaysian Finance Documents and Transaction Security (demo: 30 days after execution).",
+   "by": "Borrower / Azhar Chong & Co",
+   "gate": "MY",
+   "status": "outstanding",
+   "note": "",
+   "due": "2026-12-13"
+  },
+  {
+   "sec": "Conditions subsequent",
+   "ref": "CS-4",
+   "jur": "MY",
+   "title": "Land charge registration",
+   "req": "Obtain State Authority consent and present the land charge for registration at the land office.",
+   "by": "Borrower / Azhar Chong & Co",
+   "gate": "MY",
+   "status": "outstanding",
+   "note": "Depends on CP-3.7 decision.",
+   "due": "2027-02-25"
+  },
+  {
+   "sec": "Conditions subsequent",
+   "ref": "CS-5",
+   "jur": "MY",
+   "title": "File releases of existing security",
+   "req": "File satisfaction of the Kestrel Bank charges at SSM and ACRA.",
+   "by": "Kestrel Bank / Lim & Varga",
+   "gate": "MY",
+   "status": "outstanding",
+   "note": "",
+   "due": "2026-12-27"
+  },
+  {
+   "sec": "Conditions subsequent",
+   "ref": "CS-6",
+   "jur": "XX",
+   "title": "Insurance endorsements",
+   "req": "Final policy endorsements naming the Security Agents as loss payee and co-insured.",
+   "by": "Borrower's brokers",
+   "gate": "IA",
+   "status": "outstanding",
+   "note": "",
+   "due": "2026-12-27"
+  },
+  {
+   "sec": "Conditions subsequent",
+   "ref": "CS-7",
+   "jur": "KY",
+   "title": "Cayman register of mortgages and charges",
+   "req": "Enter the capital call security in the Co-sponsor's register (demo: promptly, within 10 Business Days).",
+   "by": "Co-sponsor / Seven Mile Legal",
+   "gate": "KY",
+   "status": "outstanding",
+   "note": "",
+   "due": "2026-12-11"
+  }
+ ]
+}
