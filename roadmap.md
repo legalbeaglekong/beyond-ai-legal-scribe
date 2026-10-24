@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Apply 24 Oct Page 1 strict brief to listed aviation, Fractional GC, robotics, AI governance and not-found pages; verify exact anchors, FAQ/schema parity and frozen metadata. Preview only.
+
 - [x] Apply 20 Oct GSC strict batch: verified tech counsel, aviation split, linked FAQs, head tags and Review removal; all 56 sitemap pages return 200 with no prohibited visible claims or dead links. All 10 removed expertise pages and Amanda return 404/noindex/no canonical. Protected bodies, Person awards and footer recognition unchanged; no unmatched anchors. Preview only.
 
 - [x] 20 Oct strict brief: financial-services superlative fix (H1/intro/JSON-LD) and Fractional GC P0 (plans/pricing wording, 6 new FAQs = 23 total, recognition strip, mailto CTAs, Part B cross-links, footer + Person JSON-LD award cleanup). Verified SSR HTML; preview-only.
