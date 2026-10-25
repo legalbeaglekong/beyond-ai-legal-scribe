@@ -146,7 +146,7 @@ const TeamMemberPage = () => {
             },
             image: member.image,
             url: `https://beyondhorizons.sg/team/${slug}`,
-            sameAs: member.name === "Hui Ling Teo" ? ["https://chambers.com/lawyer/hui-ling-teo-global-2:25705527", "https://www.linkedin.com/in/huilingt"] : member.linkedin ? [member.linkedin] : undefined,
+            sameAs: member.name === "Hui Ling Teo" ? ["https://chambers.com/lawyer/hui-ling-teo-global-2:25705527", "https://chambers.com/lawyer/hui-ling-teo-asia-pacific-8:25705527", "https://www.linkedin.com/in/huilingt"] : member.linkedin ? [member.linkedin] : undefined,
             award: member.name === "Hui Ling Teo" ? [
               ...CHAMBERS_LABELS,
               "Legal 500 Next Generation Partner 2023"
@@ -216,9 +216,15 @@ const TeamMemberPage = () => {
                 <div>
                   <h2 className="text-sm uppercase tracking-[0.2em] text-accent mb-4 font-sans">Chambers recognition</h2>
                   <ul className="flex flex-wrap gap-2">
-                    {CHAMBERS_LABELS.map((label) => (
-                      <li key={label} className="text-xs px-3 py-1.5 rounded-full border border-accent/40 bg-accent/5 text-accent font-medium">{label}</li>
-                    ))}
+                    <li className="text-xs px-3 py-1.5 rounded-full border border-accent/40 bg-accent/5 text-accent font-medium">
+                      <a href="https://chambers.com/lawyer/hui-ling-teo-asia-pacific-8:25705527" target="_blank" rel="noopener" className="hover:underline">Hui Ling Teo is ranked Band 3 for Aviation: Finance in Singapore by Chambers Asia-Pacific 2026.</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h2 className="text-sm uppercase tracking-[0.2em] text-accent mb-4 font-sans">Publications</h2>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>Hui Ling Teo wrote <a href="https://www.reedsmith.com/articles/esg-issues-for-aerospace-defense-companies/" target="_blank" rel="noopener" className="text-accent underline underline-offset-4">“ESG Issues for Aerospace &amp; Defense Companies”</a>, an overview and checklist for Bloomberg Law’s ESG Toolkits, published in July 2023 while she was at Reed Smith.</li>
                   </ul>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
