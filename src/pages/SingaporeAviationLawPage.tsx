@@ -9,6 +9,17 @@ const p = "text-muted-foreground leading-relaxed";
 const a = "text-primary underline underline-offset-2";
 const Ext = ({ href, children }: { href: string; children: ReactNode }) => <a href={href} target="_blank" rel="noopener" className={a}>{children}</a>;
 
+const CHAMBERS_APAC_PROFILE_URL = "https://chambers.com/lawyer/hui-ling-teo-asia-pacific-8:25705527";
+
+const AVIATION_PUBLICATIONS = (
+  <div className="mt-5">
+    <h3 className="text-sm font-serif font-bold text-foreground mb-2">Publications</h3>
+    <ul className="space-y-1 text-xs text-muted-foreground">
+      <li>Hui Ling Teo wrote <a href="https://www.reedsmith.com/articles/esg-issues-for-aerospace-defense-companies/" target="_blank" rel="noopener" className="text-accent hover:underline">“ESG Issues for Aerospace &amp; Defense Companies”</a>, an overview and checklist for Bloomberg Law’s ESG Toolkits, published in July 2023 while she was at Reed Smith.</li>
+    </ul>
+  </div>
+);
+
 const privateAviationBody = (
   <>
     <p className={p}><strong className="text-foreground">In short.</strong> Before a private or business jet carries paying passengers into or out of Singapore, the operator, not the broker, needs the right aviation approvals. A Singapore-based operator needs a <Ext href="https://www.caas.gov.sg/industry/aircraft-operators/singapore-air-operator/air-operator-certificate/">Singapore Air Operator Certificate (AOC)</Ext> from the Civil Aviation Authority of Singapore (CAAS). A foreign operator needs its home state's AOC, a CAAS <Ext href="https://www.caas.gov.sg/industry/aircraft-operators/foreign-air-operator/">Foreign Operator's Permit</Ext>, and usually a permit for each charter flight. Separately, anti-money-laundering and sanctions laws reach everyone in business in Singapore. That is why know-your-customer (KYC) checks matter for charter operators even though, as far as we are aware, they are not a sector with their own prescribed anti-money-laundering rules.</p>
