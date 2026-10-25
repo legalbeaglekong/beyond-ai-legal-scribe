@@ -11,10 +11,10 @@ import { useLanguage } from "@/i18n/LanguageContext";
 const About = () => {
   const { t } = useLanguage();
 
-  const achievements = [
+  const achievements: { icon: typeof Award; title: string; description: string; highlight: string; url?: string }[] = [
     { icon: Award, title: "Chambers Asia-Pacific 2026", description: "Band 3, Aviation: Finance — Singapore", highlight: "Chambers & Partners" },
     { icon: TrendingUp, title: t("about.achievement2Title"), description: "Hui Ling Teo \u2014 Legal 500 Next Generation Partner, 2023", highlight: "" },
-    { icon: BookOpen, title: t("about.achievement4Title"), description: t("about.achievement4Desc"), highlight: t("about.achievement4Highlight") },
+    { icon: BookOpen, title: t("about.achievement4Title"), description: t("about.achievement4Desc"), highlight: t("about.achievement4Highlight"), url: "https://www.reedsmith.com/articles/esg-issues-for-aerospace-defense-companies/" },
   ];
 
   const certifications = [t("about.cert1"), t("about.cert2"), t("about.cert3")];
