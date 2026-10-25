@@ -79,7 +79,13 @@ const About = () => {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center justify-between mb-2">
-                          <h4 className="text-base font-serif font-bold text-foreground">{achievement.title}</h4>
+                          {achievement.url ? (
+                            <a href={achievement.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                              <h4 className="text-base font-serif font-bold text-foreground">{achievement.title}</h4>
+                            </a>
+                          ) : (
+                            <h4 className="text-base font-serif font-bold text-foreground">{achievement.title}</h4>
+                          )}
                           <span className="text-xs text-accent uppercase tracking-wider">{achievement.highlight}</span>
                         </div>
                         <p className="text-sm text-muted-foreground text-justify">{achievement.description}</p>
