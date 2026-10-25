@@ -1,13 +1,18 @@
 import { Award } from "lucide-react";
 import { CHAMBERS_PROFILE_URL } from "@/config/business";
+import type { ReactNode } from "react";
 
 interface RankingsFooterProps {
   items: string[];
   notes?: string[] | undefined;
+  /** Optional route-specific Chambers profile link (defaults to the shared profile URL). */
+  chambersUrl?: string;
+  /** Optional publications block rendered after the notes, inside the same section. */
+  publications?: ReactNode;
 }
 
 /** Compact rankings footer — repeats the full verified awards set so nothing is dropped on mobile. */
-const RankingsFooter = ({ items, notes }: RankingsFooterProps) => (
+const RankingsFooter = ({ items, notes, chambersUrl, publications }: RankingsFooterProps) => (
   <section className="py-12 bg-secondary/20 border-t border-border/30" aria-labelledby="rankings-heading">
     <div className="max-w-5xl mx-auto container-padding text-center">
       <h2 id="rankings-heading" className="text-lg font-serif font-bold text-foreground mb-6">Rankings &amp; recognition</h2>
@@ -24,7 +29,8 @@ const RankingsFooter = ({ items, notes }: RankingsFooterProps) => (
           {notes.map((n) => <p key={n} className="text-xs text-muted-foreground">{n}</p>)}
         </div>
       )}
-      <a href={CHAMBERS_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-xs text-accent hover:underline">
+      {publications}
+      <a href={chambersUrl ?? CHAMBERS_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-xs text-accent hover:underline">
         View Hui Ling Teo on Chambers &amp; Partners
       </a>
     </div>

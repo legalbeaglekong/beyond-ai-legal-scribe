@@ -32,9 +32,10 @@ const AnalyticsTracker = () => {
       }
 
       if (CONSULT_PATTERNS.some((pattern) => lower.includes(pattern))) {
-        const label =
+        const rawLabel =
           (anchor.getAttribute("aria-label") || anchor.textContent || "").trim().slice(0, 100) ||
           "consult";
+        const label = rawLabel.includes("@") ? "Email" : rawLabel;
         trackEvent("consult_click", {
           page_path: pagePath,
           cta_label: label,

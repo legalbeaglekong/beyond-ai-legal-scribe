@@ -16,7 +16,7 @@ const accolades = [
   {
     title: "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
     org: "Chambers & Partners",
-    url: "https://chambers.com/lawyer/hui-ling-teo-global-2:25705527",
+    url: "https://chambers.com/lawyer/hui-ling-teo-asia-pacific-8:25705527",
   },
   {
     title: "Legal 500 Asia Pacific",
