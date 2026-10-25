@@ -6,9 +6,9 @@ interface RankingsFooterProps {
   items: string[];
   notes?: string[] | undefined;
   /** Optional route-specific Chambers profile link (defaults to the shared profile URL). */
-  chambersUrl?: string;
+  chambersUrl?: string | undefined;
   /** Optional publications block rendered after the notes, inside the same section. */
-  publications?: ReactNode;
+  publications?: ReactNode | undefined;
 }
 
 /** Compact rankings footer — repeats the full verified awards set so nothing is dropped on mobile. */
