@@ -100,7 +100,9 @@ export interface PillarPageProps {
   serviceOffers?: { name: string; description?: string }[];
   serviceCatalogName?: string;
   exploreLink?: { label: string; to: string };
-  rankings?: { items: string[]; notes?: string[] };
+  rankings?: { items: string[]; notes?: string[]; chambersUrl?: string; publications?: ReactNode };
+  /** Optional extra paragraph rendered immediately after the intro, same style. */
+  introExtra?: ReactNode;
   lastUpdatedISO: string;       // e.g. "2026-06-09"
   lastUpdatedLabel: string;     // e.g. "June 2026"
   afterUpdates?: ReactNode;
@@ -141,6 +143,7 @@ const PillarPage = ({
   ctaBody,
   exploreLink,
   rankings,
+  introExtra,
   lastUpdatedISO,
   lastUpdatedLabel,
   editorial,
@@ -252,7 +255,8 @@ const PillarPage = ({
             {editorial && <p className="text-xs text-muted-foreground mb-4">{editorial.entity}</p>}
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">{eyebrow}</p>
             <h1 className="font-serif text-4xl md:text-6xl text-foreground mb-6 leading-tight">{h1}</h1>
-            {editorial ? <div className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 space-y-5 text-left leading-relaxed">{editorial.intro}</div> : <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">{intro}</p>}
+{editorial ? <div className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 space-y-5 text-left leading-relaxed">{editorial.intro}</div> : <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">{intro}</p>}
+            {introExtra}
             <div className="flex flex-wrap gap-3 justify-center mb-6">
               {badges.map((b) => (
                 <span key={b} className="px-4 py-2 rounded-full bg-background/60 border border-border text-sm text-foreground">{b}</span>
@@ -387,7 +391,7 @@ const PillarPage = ({
 
         {!editorial && <RelatedInsights keywords={relatedKeywords} heading={relatedHeading} />}
 
-        {rankings && <RankingsFooter items={rankings.items} notes={rankings.notes} />}
+        {rankings && <RankingsFooter items={rankings.items} notes={rankings.notes} chambersUrl={rankings.chambersUrl} publications={rankings.publications} />}
 
         {relatedPages && relatedPages.length > 0 && (
           <section className="py-12 bg-background">

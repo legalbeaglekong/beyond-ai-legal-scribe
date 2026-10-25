@@ -132,6 +132,7 @@ const FOUNDER_JSONLD = `{
   ],
   "sameAs": [
     "https://chambers.com/lawyer/hui-ling-teo-global-2:25705527",
+    "https://chambers.com/lawyer/hui-ling-teo-asia-pacific-8:25705527",
     "https://www.linkedin.com/in/huilingt"
   ]
 }`;

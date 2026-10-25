@@ -50,7 +50,7 @@ export const translations: Record<string, any> = {
       achievement3Title: "Early Career Excellence",
       achievement3Desc: "Top 10 Most Influential Lawyers",
       achievement3Highlight: "Proven Track Record",
-      achievement4Title: "Bloomberg Law Author",
+      achievement4Title: "Bloomberg Law contributor: ESG Issues for Aerospace & Defense Companies (2023)",
       achievement4Desc: "Strategic Business Advisory & ESG Implementation",
       achievement4Highlight: "Thought Leadership",
       ctaTitle: "Ready to Transform Your Legal Strategy?",

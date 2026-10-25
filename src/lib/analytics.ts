@@ -15,9 +15,11 @@ declare global {
   }
 }
 
+// gtag.js only processes the special "arguments" object — push it, not a plain array.
 function gtag(...args: unknown[]) {
+  void args;
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push(args);
+  window.dataLayer.push(arguments);
 }
 
 let initialized = false;
@@ -79,8 +81,17 @@ export function initAnalytics() {
 
 export function trackPageView(pathWithSearch: string, pathname: string) {
   if (!MEASUREMENT_ID) return;
+  // page_location carries the path plus only the five utm_ parameters; all other query params are dropped.
+  const queryIndex = pathWithSearch.indexOf("?");
+  const params = new URLSearchParams(queryIndex >= 0 ? pathWithSearch.slice(queryIndex + 1) : "");
+  const kept = new URLSearchParams();
+  UTM_KEYS.forEach((key) => {
+    const value = params.get(key);
+    if (value) kept.set(key, value);
+  });
+  const query = kept.toString();
   gtag("event", "page_view", {
-    page_location: canonicalUrl(pathWithSearch),
+    page_location: `${CANONICAL_ORIGIN}${pathname}${query ? `?${query}` : ""}`,
     page_path: pathname,
     page_title: document.title,
     ...getUtms(),

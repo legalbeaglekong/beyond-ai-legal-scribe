@@ -11,10 +11,10 @@ import { useLanguage } from "@/i18n/LanguageContext";
 const About = () => {
   const { t } = useLanguage();
 
-  const achievements = [
+  const achievements: { icon: typeof Award; title: string; description: string; highlight: string; url?: string }[] = [
     { icon: Award, title: "Chambers Asia-Pacific 2026", description: "Band 3, Aviation: Finance — Singapore", highlight: "Chambers & Partners" },
     { icon: TrendingUp, title: t("about.achievement2Title"), description: "Hui Ling Teo \u2014 Legal 500 Next Generation Partner, 2023", highlight: "" },
-    { icon: BookOpen, title: t("about.achievement4Title"), description: t("about.achievement4Desc"), highlight: t("about.achievement4Highlight") },
+    { icon: BookOpen, title: t("about.achievement4Title"), description: t("about.achievement4Desc"), highlight: t("about.achievement4Highlight"), url: "https://www.reedsmith.com/articles/esg-issues-for-aerospace-defense-companies/" },
   ];
 
   const certifications = [t("about.cert1"), t("about.cert2"), t("about.cert3")];
@@ -79,7 +79,13 @@ const About = () => {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center justify-between mb-2">
-                          <h4 className="text-base font-serif font-bold text-foreground">{achievement.title}</h4>
+                          {achievement.url ? (
+                            <a href={achievement.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                              <h4 className="text-base font-serif font-bold text-foreground">{achievement.title}</h4>
+                            </a>
+                          ) : (
+                            <h4 className="text-base font-serif font-bold text-foreground">{achievement.title}</h4>
+                          )}
                           <span className="text-xs text-accent uppercase tracking-wider">{achievement.highlight}</span>
                         </div>
                         <p className="text-sm text-muted-foreground text-justify">{achievement.description}</p>
