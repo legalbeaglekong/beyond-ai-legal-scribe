@@ -60,7 +60,7 @@ export interface IndustryPageData {
     /** Optional secondary email CTA (replaces "View Expertise"). */
     emailCta?: string;
     /** Optional soft line under the CTAs. */
-    ctaLine?: string;
+    ctaLine?: import("react").ReactNode;
     /** Optional jump chips to an in-page anchor. */
     jumpLinks?: { label: string; href: string }[];
   };
@@ -107,7 +107,7 @@ export interface IndustryPageData {
   /** slug may be an absolute path starting with "/" */
   relatedPages: { title: string; slug: string }[];
   relatedExternal?: { label: string; href: string }[];
-  rankings?: { items: string[]; notes?: string[] };
+  rankings?: { items: string[]; notes?: string[]; chambersUrl?: string; publications?: import("react").ReactNode };
 }
 
 // Pick a hero video + matching poster based on slug
@@ -545,7 +545,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
           </div>
         </VideoBackground>
 
-        {data.rankings && <RankingsFooter items={data.rankings.items} notes={data.rankings.notes} />}
+        {data.rankings && <RankingsFooter items={data.rankings.items} notes={data.rankings.notes} chambersUrl={data.rankings.chambersUrl} publications={data.rankings.publications} />}
 
         {/* Related */}
         {(data.relatedPages.length > 0 || (data.relatedExternal?.length ?? 0) > 0) && (
