@@ -15,6 +15,7 @@ const About = () => {
   const achievements: { icon: typeof Award; title: string; description: string; highlight: string; url?: string }[] = [
     { icon: Award, title: "Chambers Asia-Pacific 2026", description: "Band 3, Aviation: Finance — Singapore", highlight: "Chambers & Partners" },
     { icon: TrendingUp, title: t("about.achievement2Title"), description: "Hui Ling Teo \u2014 Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore).", highlight: "" },
+    { icon: Users, title: t("about.achievement3Title"), description: t("about.achievement3Desc"), highlight: "" },
     { icon: BookOpen, title: t("about.achievement4Title"), description: t("about.achievement4Desc"), highlight: t("about.achievement4Highlight"), url: "https://www.reedsmith.com/articles/esg-issues-for-aerospace-defense-companies/" },
   ];
 
