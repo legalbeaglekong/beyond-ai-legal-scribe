@@ -18,6 +18,7 @@ const AboutPage = () => {
   const achievements = [
     { icon: Award, title: "Chambers Asia-Pacific 2026", description: "Band 3, Aviation: Finance — Singapore", highlight: "Chambers & Partners" },
     { icon: TrendingUp, title: "Legal 500 Recognition", description: "Hui Ling Teo — Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore).", highlight: "" },
+    { icon: Users, title: "Business Today 2023", description: "Named in Business Today's 2023 list of the \"Top 10 Influential Aviation Finance Lawyers Revolutionizing Singapore's Industry\".", highlight: "" },
     { icon: BookOpen, title: <a href="https://www.reedsmith.com/articles/esg-issues-for-aerospace-defense-companies/" target="_blank" rel="noopener noreferrer" className="hover:underline">Bloomberg Law contributor: ESG Issues for Aerospace &amp; Defense Companies (2023)</a>, description: "Strategic Business Advisory & ESG Implementation", highlight: "Thought Leadership" },
   ];
 
