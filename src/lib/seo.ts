@@ -1,5 +1,15 @@
 const SITE_URL = "https://beyondhorizons.sg";
 
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og/beyond-horizons-default.jpg`;
+export const DEFAULT_OG_IMAGE_META = [
+  { property: "og:image", content: DEFAULT_OG_IMAGE },
+  { property: "og:image:width", content: "1200" },
+  { property: "og:image:height", content: "627" },
+  { property: "og:image:type", content: "image/jpeg" },
+  { property: "og:image:alt", content: "Beyond Horizons by Bethel Chambers LLC" },
+  { name: "twitter:image", content: DEFAULT_OG_IMAGE },
+];
+
 type PageHeadOptions = {
   title: string;
   description: string;
@@ -34,6 +44,7 @@ export function createPageHead({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
+      ...DEFAULT_OG_IMAGE_META,
     ],
     links: [{ rel: "canonical", href: resolvedCanonical }],
     ...(scripts ? { scripts } : {}),
