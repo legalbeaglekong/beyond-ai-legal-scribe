@@ -25,7 +25,7 @@ export const Route = createFileRoute("/singapore-retrenchment-law")({
     return {
       ...head,
       meta: [
-        ...head.meta,
+        ...head.meta.filter((m) => !("property" in m && String(m.property).startsWith("og:image")) && !("name" in m && m.name === "twitter:image")),
         { property: "og:image", content: RETRENCHMENT_OG_IMAGE },
         { name: "twitter:image", content: RETRENCHMENT_OG_IMAGE },
         { name: "robots", content: "index, follow" },
