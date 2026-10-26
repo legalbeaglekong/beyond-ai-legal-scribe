@@ -64,7 +64,7 @@ export default function SingaporeRetrenchmentLawPage() {
             Retrenchment law in Singapore (2026): what employers must do, and what is only good practice
           </h1>
           <p className="text-sm text-muted-foreground mb-8">
-            By Hui Ling Teo, Beyond Horizons by Bethel Chambers LLC (a specialist practice group of Bethel Chambers LLC) · Updated <time dateTime="2026-10-10">10 October 2026</time>
+            By Hui Ling Teo, Beyond Horizons by Bethel Chambers LLC (a practice group of Bethel Chambers LLC) · Updated <time dateTime="2026-10-10">10 October 2026</time>
           </p>
 
           <P><B>In short.</B> In Singapore, only a few retrenchment duties are hard law today. An employer with at least 10 employees must notify the Ministry of Manpower (MOM) within five working days after telling an employee, and must give contractual or Employment Act notice. Singapore law does not set a general retrenchment benefit. The amount depends on the employment contract or collective agreement, or on negotiation if neither provides for it, and MOM describes a prevailing norm of two weeks' to one month's salary per year of service. Fair selection is expected now under tripartite guidelines. The Workplace Fairness Act, passed in January 2025, is not yet in force; it is slated to take effect at the end of 2027. For context, MOM reported 4,620 retrenchments in April to June 2026, up from 3,830 in January to March, while employment kept growing.</P>
@@ -169,7 +169,7 @@ export default function SingaporeRetrenchmentLawPage() {
           <H2>Talk to us</H2>
           <P>If useful, a short note to <a href="mailto:HL@beyondhorizons.sg" className="font-semibold text-primary hover:underline">HL@beyondhorizons.sg</a> is enough to compare how a planned exercise reads from either side.</P>
 
-          <p className="text-sm italic text-muted-foreground leading-relaxed mt-8 border-t border-border pt-6">Beyond Horizons is a specialist practice group of Bethel Chambers LLC, which is licensed and regulated by the Legal Services Regulatory Authority (LSRA), a department under the Singapore Ministry of Law. This page is general information on Singapore law as at October 2026, drawn from Ministry of Manpower, tripartite, statutory and Parliamentary sources (checked 10 October 2026). It does not constitute legal advice, and reading it or contacting us does not create a solicitor–client relationship. Any actual exercise turns on its contracts, collective agreements, facts and the law in force at the time.</p>
+          <p className="text-sm italic text-muted-foreground leading-relaxed mt-8 border-t border-border pt-6">Beyond Horizons is a practice group of Bethel Chambers LLC, which is licensed and regulated by the Legal Services Regulatory Authority (LSRA), a department under the Singapore Ministry of Law. This page is general information on Singapore law as at October 2026, drawn from Ministry of Manpower, tripartite, statutory and Parliamentary sources (checked 10 October 2026). It does not constitute legal advice, and reading it or contacting us does not create a solicitor–client relationship. Any actual exercise turns on its contracts, collective agreements, facts and the law in force at the time.</p>
 
           <p className="font-semibold text-foreground mt-8 mb-2">Sources:</p>
           <ol className="list-decimal pl-6 space-y-1 text-sm text-muted-foreground break-words">

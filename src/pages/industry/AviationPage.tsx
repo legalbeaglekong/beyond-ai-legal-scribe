@@ -347,7 +347,7 @@ export const data: IndustryPageData = {
     description:
       <>Tell us which line items you need (for example: English-law operating lease + engine SPA + Cape Town filings + disputes stress-test on default clauses + recovery pathway review). Email <a href="mailto:HL@beyondhorizons.sg" className="underline">HL@beyondhorizons.sg</a> with the asset type, each party's role and your target closing date.</>,
     note:
-      "Beyond Horizons is a specialist practice group of Bethel Chambers LLC, a Singapore law corporation. This page is general information only. It is not legal advice and does not create a solicitor–client relationship.",
+      "Beyond Horizons is a practice group of Bethel Chambers LLC, a Singapore law corporation. This page is general information only. It is not legal advice and does not create a solicitor–client relationship.",
   },
   relatedPages: [
     { title: "Fractional GC", slug: "fractional-gc" },

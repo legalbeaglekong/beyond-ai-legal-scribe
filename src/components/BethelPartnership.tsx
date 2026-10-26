@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Users, Building } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { Link } from "@tanstack/react-router";
 
 const BethelPartnership = () => {
   const { t, language } = useLanguage();
@@ -40,8 +41,9 @@ const BethelPartnership = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {sections.map((section, i) => (
-            <Card key={i} className="p-6 border-border/30 bg-card card-lift">
+          {sections.map((section, i) => {
+            const card = (
+            <Card className={`p-6 border-border/30 bg-card card-lift${i === 1 ? " h-full hover:border-primary/40 transition-colors" : ""}`}>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 rounded bg-accent/10 flex items-center justify-center">
                   <section.icon className="h-4 w-4 text-accent" />
@@ -60,21 +62,9 @@ const BethelPartnership = () => {
                 ))}
               </ul>
             </Card>
-          ))}
-        </div>
-
-        <div className="border border-border/30 rounded p-8 mb-8">
-          <h3 className="text-lg font-serif font-bold text-foreground mb-6 text-center">{t("bethel.statsTitle")}</h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-serif font-bold text-accent mb-2">{t("bethel.stat1")}</div>
-              <p className="text-sm text-muted-foreground">{t("bethel.stat1Desc")}</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-serif font-bold text-accent mb-2">{t("bethel.stat2")}</div>
-              <p className="text-sm text-muted-foreground">{t("bethel.stat2Desc")}</p>
-            </div>
-          </div>
+            );
+            return i === 1 ? <Link key={i} to="/singapore-business-succession-lawyer" className="block">{card}</Link> : <div key={i}>{card}</div>;
+          })}
         </div>
 
         <div className="text-center">

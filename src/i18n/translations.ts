@@ -115,11 +115,6 @@ export const translations: Record<string, any> = {
       col2Desc: "Comprehensive services spanning both corporate and personal needs for high-net-worth individuals.",
       col3Title: "Bethel Chambers LLC",
       col3Desc: "Traditional legal services for personal and family matters.",
-      statsTitle: "Family Business Landscape in APAC",
-      stat1: "85%",
-      stat1Desc: "of businesses in APAC are family-owned",
-      stat2: "50%+",
-      stat2Desc: "of the region's largest companies are family-controlled",
       visitBethel: "Visit Bethel Chambers",
     },
     whyChooseUs: {
@@ -356,8 +351,7 @@ export const translations: Record<string, any> = {
       col1Title: "Beyond Horizons", col1Subtitle: "（Bethel Chambers LLC旗下）", col1Desc: "为企业和机构提供专业的公司和商业法律服务。",
       col2Title: "私人客户与家族办公室", col2Desc: "为高净值人士提供涵盖公司和个人需求的综合服务。",
       col3Title: "Bethel Chambers LLC", col3Desc: "为个人和家庭事务提供传统法律服务。",
-      statsTitle: "亚太家族企业概况", stat1: "85%", stat1Desc: "亚太地区的企业为家族所有",
-      stat2: "50%+", stat2Desc: "该地区最大的企业由家族控制", visitBethel: "访问Bethel Chambers",
+      visitBethel: "访问Bethel Chambers",
     },
     whyChooseUs: {
       title: "为什么选择Beyond Horizons", subtitle: "探索我们在不断发展的法律服务领域中的独特优势",
@@ -497,8 +491,7 @@ export const translations: Record<string, any> = {
       col1Title: "Beyond Horizons", col1Subtitle: "(Bethel Chambers LLC)", col1Desc: "企業・機関向けの法人・商業法務サービス。",
       col2Title: "プライベートクライアント＆ファミリーオフィス", col2Desc: "富裕層向けの包括的サービス。",
       col3Title: "Bethel Chambers LLC", col3Desc: "個人・家族の法的事項に関するサービス。",
-      statsTitle: "APACのファミリービジネスの状況", stat1: "85%", stat1Desc: "APACの企業が家族経営",
-      stat2: "50%+", stat2Desc: "地域最大の企業が家族支配", visitBethel: "Bethel Chambersを訪問",
+      visitBethel: "Bethel Chambersを訪問",
     },
     whyChooseUs: {
       title: "Beyond Horizonsを選ぶ理由", subtitle: "進化する法律サービスにおける私たちの差別化要因",
@@ -638,8 +631,7 @@ export const translations: Record<string, any> = {
       col1Title: "Beyond Horizons", col1Subtitle: "(Bethel Chambers LLC)", col1Desc: "기업 및 기관을 위한 전문 법인/상업 법률 서비스.",
       col2Title: "프라이빗 클라이언트 & 패밀리 오피스", col2Desc: "고액 자산가를 위한 종합 서비스.",
       col3Title: "Bethel Chambers LLC", col3Desc: "개인 및 가족 법률 서비스.",
-      statsTitle: "APAC 가족 기업 현황", stat1: "85%", stat1Desc: "APAC 기업이 가족 소유",
-      stat2: "50%+", stat2Desc: "지역 최대 기업이 가족 지배", visitBethel: "Bethel Chambers 방문",
+      visitBethel: "Bethel Chambers 방문",
     },
     whyChooseUs: {
       title: "Beyond Horizons를 선택하는 이유", subtitle: "진화하는 법률 서비스에서 우리의 차별화 요소",
@@ -779,8 +771,7 @@ export const translations: Record<string, any> = {
       col1Title: "Beyond Horizons", col1Subtitle: "(oleh Bethel Chambers LLC)", col1Desc: "Perkhidmatan undang-undang korporat dan komersial khusus.",
       col2Title: "Pelanggan Persendirian & Pejabat Keluarga", col2Desc: "Perkhidmatan komprehensif untuk individu bernilai tinggi.",
       col3Title: "Bethel Chambers LLC", col3Desc: "Perkhidmatan undang-undang untuk hal peribadi dan keluarga.",
-      statsTitle: "Landskap Perniagaan Keluarga di APAC", stat1: "85%", stat1Desc: "perniagaan di APAC dimiliki keluarga",
-      stat2: "50%+", stat2Desc: "syarikat terbesar di rantau ini dikawal keluarga", visitBethel: "Lawati Bethel Chambers",
+      visitBethel: "Lawati Bethel Chambers",
     },
     whyChooseUs: {
       title: "Mengapa Pilih Beyond Horizons", subtitle: "Ketahui apa yang membezakan kami",
@@ -920,8 +911,7 @@ export const translations: Record<string, any> = {
       col1Title: "Beyond Horizons", col1Subtitle: "(par Bethel Chambers LLC)", col1Desc: "Services juridiques corporate et commercial spécialisés.",
       col2Title: "Client privé et family office", col2Desc: "Services complets pour les particuliers fortunés.",
       col3Title: "Bethel Chambers LLC", col3Desc: "Services juridiques pour les affaires personnelles et familiales.",
-      statsTitle: "Paysage des entreprises familiales en APAC", stat1: "85%", stat1Desc: "des entreprises en APAC sont familiales",
-      stat2: "50%+", stat2Desc: "des plus grandes entreprises sont contrôlées par des familles", visitBethel: "Visiter Bethel Chambers",
+      visitBethel: "Visiter Bethel Chambers",
     },
     whyChooseUs: {
       title: "Pourquoi choisir Beyond Horizons", subtitle: "Découvrez ce qui nous distingue dans le paysage juridique en évolution",
@@ -1061,8 +1051,7 @@ export const translations: Record<string, any> = {
       col1Title: "Beyond Horizons", col1Subtitle: "(por Bethel Chambers LLC)", col1Desc: "Servicios legales corporativos y comerciales especializados.",
       col2Title: "Cliente privado y family office", col2Desc: "Servicios integrales para individuos de alto patrimonio.",
       col3Title: "Bethel Chambers LLC", col3Desc: "Servicios legales para asuntos personales y familiares.",
-      statsTitle: "Panorama de empresas familiares en APAC", stat1: "85%", stat1Desc: "de las empresas en APAC son familiares",
-      stat2: "50%+", stat2Desc: "de las empresas más grandes son controladas por familias", visitBethel: "Visitar Bethel Chambers",
+      visitBethel: "Visitar Bethel Chambers",
     },
     whyChooseUs: {
       title: "Por qué elegir Beyond Horizons", subtitle: "Descubra lo que nos diferencia",
@@ -1202,8 +1191,7 @@ export const translations: Record<string, any> = {
       col1Title: "Beyond Horizons", col1Subtitle: "(por Bethel Chambers LLC)", col1Desc: "Serviços jurídicos corporativos e comerciais especializados.",
       col2Title: "Cliente privado e family office", col2Desc: "Serviços abrangentes para indivíduos de alto patrimônio.",
       col3Title: "Bethel Chambers LLC", col3Desc: "Serviços jurídicos para assuntos pessoais e familiares.",
-      statsTitle: "Panorama de empresas familiares na APAC", stat1: "85%", stat1Desc: "das empresas na APAC são familiares",
-      stat2: "50%+", stat2Desc: "das maiores empresas são controladas por famílias", visitBethel: "Visitar Bethel Chambers",
+      visitBethel: "Visitar Bethel Chambers",
     },
     whyChooseUs: {
       title: "Por que escolher Beyond Horizons", subtitle: "Descubra o que nos diferencia",
@@ -1343,8 +1331,7 @@ export const translations: Record<string, any> = {
       col1Title: "Beyond Horizons", col1Subtitle: "(من Bethel Chambers LLC)", col1Desc: "خدمات قانونية مؤسسية وتجارية متخصصة.",
       col2Title: "العملاء الخاصون ومكاتب العائلة", col2Desc: "خدمات شاملة للأفراد ذوي الثروات العالية.",
       col3Title: "Bethel Chambers LLC", col3Desc: "خدمات قانونية للشؤون الشخصية والعائلية.",
-      statsTitle: "مشهد الأعمال العائلية في آسيا والمحيط الهادئ", stat1: "85%", stat1Desc: "من الشركات في المنطقة مملوكة عائلياً",
-      stat2: "50%+", stat2Desc: "من أكبر الشركات تحت سيطرة عائلية", visitBethel: "زيارة Bethel Chambers",
+      visitBethel: "زيارة Bethel Chambers",
     },
     whyChooseUs: {
       title: "لماذا تختار Beyond Horizons", subtitle: "اكتشف ما يميزنا",
@@ -1484,8 +1471,7 @@ export const translations: Record<string, any> = {
       col1Title: "Beyond Horizons", col1Subtitle: "(Bethel Chambers LLC द्वारा)", col1Desc: "विशेष कॉर्पोरेट और वाणिज्यिक कानूनी सेवाएं।",
       col2Title: "प्राइवेट क्लाइंट और फैमिली ऑफिस", col2Desc: "उच्च निवल मूल्य वाले व्यक्तियों के लिए व्यापक सेवाएं।",
       col3Title: "Bethel Chambers LLC", col3Desc: "व्यक्तिगत और पारिवारिक मामलों के लिए कानूनी सेवाएं।",
-      statsTitle: "APAC में पारिवारिक व्यापार परिदृश्य", stat1: "85%", stat1Desc: "APAC के व्यवसाय पारिवारिक स्वामित्व वाले हैं",
-      stat2: "50%+", stat2Desc: "क्षेत्र की सबसे बड़ी कंपनियां पारिवारिक नियंत्रण में हैं", visitBethel: "Bethel Chambers पर जाएं",
+      visitBethel: "Bethel Chambers पर जाएं",
     },
     whyChooseUs: {
       title: "Beyond Horizons क्यों चुनें", subtitle: "जानें कि हमें क्या अलग बनाता है",
@@ -1625,8 +1611,7 @@ export const translations: Record<string, any> = {
       col1Title: "Beyond Horizons", col1Subtitle: "(โดย Bethel Chambers LLC)", col1Desc: "บริการกฎหมายองค์กรและพาณิชย์เฉพาะทาง",
       col2Title: "ลูกค้าส่วนบุคคลและแฟมิลี่ออฟฟิศ", col2Desc: "บริการครอบคลุมสำหรับบุคคลที่มีสินทรัพย์สูง",
       col3Title: "Bethel Chambers LLC", col3Desc: "บริการกฎหมายสำหรับเรื่องส่วนบุคคลและครอบครัว",
-      statsTitle: "ภาพรวมธุรกิจครอบครัวใน APAC", stat1: "85%", stat1Desc: "ของธุรกิจใน APAC เป็นของครอบครัว",
-      stat2: "50%+", stat2Desc: "ของบริษัทที่ใหญ่ที่สุดอยู่ภายใต้การควบคุมของครอบครัว", visitBethel: "เยี่ยมชม Bethel Chambers",
+      visitBethel: "เยี่ยมชม Bethel Chambers",
     },
     whyChooseUs: {
       title: "ทำไมต้องเลือก Beyond Horizons", subtitle: "ค้นพบสิ่งที่ทำให้เราแตกต่าง",

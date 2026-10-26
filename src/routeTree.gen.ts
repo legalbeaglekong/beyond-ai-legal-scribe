@@ -29,6 +29,7 @@ import { Route as SingaporeAiGovernanceRouteImport } from './routes/singapore-ai
 import { Route as SingaporeAlternativeEnergyLawRouteImport } from './routes/singapore-alternative-energy-law'
 import { Route as SingaporeAviationLawRouteImport } from './routes/singapore-aviation-law'
 import { Route as SingaporeBorrowerFinanceCounselRouteImport } from './routes/singapore-borrower-finance-counsel'
+import { Route as SingaporeBusinessSuccessionLawyerRouteImport } from './routes/singapore-business-succession-lawyer'
 import { Route as SingaporeEmploymentLawRouteImport } from './routes/singapore-employment-law'
 import { Route as SingaporeLenderFinanceCounselRouteImport } from './routes/singapore-lender-finance-counsel'
 import { Route as SingaporeManufacturingSupplyAgreementsRouteImport } from './routes/singapore-manufacturing-supply-agreements'
@@ -159,6 +160,12 @@ const SingaporeBorrowerFinanceCounselRoute =
   SingaporeBorrowerFinanceCounselRouteImport.update({
     id: '/singapore-borrower-finance-counsel',
     path: '/singapore-borrower-finance-counsel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SingaporeBusinessSuccessionLawyerRoute =
+  SingaporeBusinessSuccessionLawyerRouteImport.update({
+    id: '/singapore-business-succession-lawyer',
+    path: '/singapore-business-succession-lawyer',
     getParentRoute: () => rootRouteImport,
   } as any)
 const SingaporeEmploymentLawRoute = SingaporeEmploymentLawRouteImport.update({
@@ -335,6 +342,7 @@ export interface FileRoutesByFullPath {
   '/singapore-alternative-energy-law': typeof SingaporeAlternativeEnergyLawRoute
   '/singapore-aviation-law': typeof SingaporeAviationLawRoute
   '/singapore-borrower-finance-counsel': typeof SingaporeBorrowerFinanceCounselRoute
+  '/singapore-business-succession-lawyer': typeof SingaporeBusinessSuccessionLawyerRoute
   '/singapore-employment-law': typeof SingaporeEmploymentLawRoute
   '/singapore-lender-finance-counsel': typeof SingaporeLenderFinanceCounselRoute
   '/singapore-manufacturing-supply-agreements': typeof SingaporeManufacturingSupplyAgreementsRoute
@@ -386,6 +394,7 @@ export interface FileRoutesByTo {
   '/singapore-alternative-energy-law': typeof SingaporeAlternativeEnergyLawRoute
   '/singapore-aviation-law': typeof SingaporeAviationLawRoute
   '/singapore-borrower-finance-counsel': typeof SingaporeBorrowerFinanceCounselRoute
+  '/singapore-business-succession-lawyer': typeof SingaporeBusinessSuccessionLawyerRoute
   '/singapore-employment-law': typeof SingaporeEmploymentLawRoute
   '/singapore-lender-finance-counsel': typeof SingaporeLenderFinanceCounselRoute
   '/singapore-manufacturing-supply-agreements': typeof SingaporeManufacturingSupplyAgreementsRoute
@@ -438,6 +447,7 @@ export interface FileRoutesById {
   '/singapore-alternative-energy-law': typeof SingaporeAlternativeEnergyLawRoute
   '/singapore-aviation-law': typeof SingaporeAviationLawRoute
   '/singapore-borrower-finance-counsel': typeof SingaporeBorrowerFinanceCounselRoute
+  '/singapore-business-succession-lawyer': typeof SingaporeBusinessSuccessionLawyerRoute
   '/singapore-employment-law': typeof SingaporeEmploymentLawRoute
   '/singapore-lender-finance-counsel': typeof SingaporeLenderFinanceCounselRoute
   '/singapore-manufacturing-supply-agreements': typeof SingaporeManufacturingSupplyAgreementsRoute
@@ -491,6 +501,7 @@ export interface FileRouteTypes {
     | '/singapore-alternative-energy-law'
     | '/singapore-aviation-law'
     | '/singapore-borrower-finance-counsel'
+    | '/singapore-business-succession-lawyer'
     | '/singapore-employment-law'
     | '/singapore-lender-finance-counsel'
     | '/singapore-manufacturing-supply-agreements'
@@ -542,6 +553,7 @@ export interface FileRouteTypes {
     | '/singapore-alternative-energy-law'
     | '/singapore-aviation-law'
     | '/singapore-borrower-finance-counsel'
+    | '/singapore-business-succession-lawyer'
     | '/singapore-employment-law'
     | '/singapore-lender-finance-counsel'
     | '/singapore-manufacturing-supply-agreements'
@@ -593,6 +605,7 @@ export interface FileRouteTypes {
     | '/singapore-alternative-energy-law'
     | '/singapore-aviation-law'
     | '/singapore-borrower-finance-counsel'
+    | '/singapore-business-succession-lawyer'
     | '/singapore-employment-law'
     | '/singapore-lender-finance-counsel'
     | '/singapore-manufacturing-supply-agreements'
@@ -645,6 +658,7 @@ export interface RootRouteChildren {
   SingaporeAlternativeEnergyLawRoute: typeof SingaporeAlternativeEnergyLawRoute
   SingaporeAviationLawRoute: typeof SingaporeAviationLawRoute
   SingaporeBorrowerFinanceCounselRoute: typeof SingaporeBorrowerFinanceCounselRoute
+  SingaporeBusinessSuccessionLawyerRoute: typeof SingaporeBusinessSuccessionLawyerRoute
   SingaporeEmploymentLawRoute: typeof SingaporeEmploymentLawRoute
   SingaporeLenderFinanceCounselRoute: typeof SingaporeLenderFinanceCounselRoute
   SingaporeManufacturingSupplyAgreementsRoute: typeof SingaporeManufacturingSupplyAgreementsRoute
@@ -816,6 +830,13 @@ declare module '@tanstack/react-router' {
       path: '/singapore-borrower-finance-counsel'
       fullPath: '/singapore-borrower-finance-counsel'
       preLoaderRoute: typeof SingaporeBorrowerFinanceCounselRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/singapore-business-succession-lawyer': {
+      id: '/singapore-business-succession-lawyer'
+      path: '/singapore-business-succession-lawyer'
+      fullPath: '/singapore-business-succession-lawyer'
+      preLoaderRoute: typeof SingaporeBusinessSuccessionLawyerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/singapore-employment-law': {
@@ -1045,6 +1066,8 @@ const rootRouteChildren: RootRouteChildren = {
   SingaporeAlternativeEnergyLawRoute: SingaporeAlternativeEnergyLawRoute,
   SingaporeAviationLawRoute: SingaporeAviationLawRoute,
   SingaporeBorrowerFinanceCounselRoute: SingaporeBorrowerFinanceCounselRoute,
+  SingaporeBusinessSuccessionLawyerRoute:
+    SingaporeBusinessSuccessionLawyerRoute,
   SingaporeEmploymentLawRoute: SingaporeEmploymentLawRoute,
   SingaporeLenderFinanceCounselRoute: SingaporeLenderFinanceCounselRoute,
   SingaporeManufacturingSupplyAgreementsRoute:
