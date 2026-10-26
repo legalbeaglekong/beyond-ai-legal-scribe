@@ -1,4 +1,5 @@
 import RankingsFooter from "@/components/RankingsFooter";
+import Legal500Text from "@/components/Legal500Text";
 import { useEffect, useRef } from "react";
 // Cinematic hero videos (compressed local MP4s ~500KB each, with poster JPGs)
 import spaceVideo from "@/assets/space-hero.mp4";
@@ -243,7 +244,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               <div className="flex flex-wrap justify-center gap-3">
                 {data.hero.badges.map((badge, i) => (
                   <span key={i} className="text-xs text-white/90 font-medium border border-white/20 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md tracking-wide uppercase">
-                    {badge}
+                    <Legal500Text text={badge} />
                   </span>
                 ))}
               </div>
@@ -407,7 +408,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               <div className="flex flex-wrap justify-center gap-2 mt-8">
                 {data.comparison.accoladesOverride.map((line, i) => (
                   <span key={i} className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border border-accent/40 bg-accent/5 text-accent font-medium">
-                    {line}
+                    <Legal500Text text={line} />
                   </span>
                 ))}
               </div>
@@ -502,7 +503,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                   <AccordionTrigger className="text-left text-foreground text-sm hover:no-underline hover:text-accent">
                     {faq.question}
                   </AccordionTrigger>
-                  {["aviation", "fractional-gc", "ai-code-counsel"].includes(data.slug) ? <div className="pb-4 text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden">{faq.content ?? faq.answer}</div> : <AccordionContent {...(data.slug === "transportation" ? { forceMount: true as const } : {})} className={data.slug === "transportation" ? "text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground text-sm leading-relaxed"}>{faq.content ?? faq.answer}</AccordionContent>}
+                  {["aviation", "fractional-gc", "ai-code-counsel"].includes(data.slug) ? <div className="pb-4 text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden">{faq.content ?? <Legal500Text text={faq.answer} />}</div> : <AccordionContent {...(data.slug === "transportation" ? { forceMount: true as const } : {})} className={data.slug === "transportation" ? "text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground text-sm leading-relaxed"}>{faq.content ?? <Legal500Text text={faq.answer} />}</AccordionContent>}
                 </AccordionItem>
               ))}
             </Accordion>

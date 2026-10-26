@@ -1,5 +1,7 @@
 # Architecture rules
 
+- Render Legal 500 links through the shared text helper while keeping schema answers plain; this preserves visible/schema wording and prevents nested links in team cards.
+
 - Reject missing expertise/team resources in route beforeLoad and emit noindex without a canonical; missing resources must return HTTP 404 rather than indexable fallback content.
 - Keep route-specific linked FAQ rendering separate from plain schema answer strings; both derive from the same answer data without HTML in JSON-LD.
 - Scope shared recognition omissions and LegalService overrides through optional page data; this preserves protected pages while allowing explicitly approved route changes.

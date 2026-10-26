@@ -1,6 +1,7 @@
 import { Award } from "lucide-react";
 import { CHAMBERS_PROFILE_URL } from "@/config/business";
 import type { ReactNode } from "react";
+import Legal500Text from "@/components/Legal500Text";
 
 interface RankingsFooterProps {
   items: string[];
@@ -20,7 +21,7 @@ const RankingsFooter = ({ items, notes, chambersUrl, publications }: RankingsFoo
         {items.map((item) => (
           <li key={item} className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border border-accent/40 bg-accent/5 text-foreground">
             <Award className="h-3 w-3 text-accent shrink-0" aria-hidden="true" />
-            {item}
+            <Legal500Text text={item} />
           </li>
         ))}
       </ul>

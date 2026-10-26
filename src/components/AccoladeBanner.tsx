@@ -19,9 +19,9 @@ const accolades = [
     url: "https://chambers.com/lawyer/hui-ling-teo-asia-pacific-8:25705527",
   },
   {
-    title: "Legal 500 Asia Pacific",
+    title: "Legal 500 Asia Pacific 2026 — Next Generation Partner, Asset Finance — Singapore",
     org: "The Legal 500",
-    url: "https://www.legal500.com/",
+    url: "https://www.legal500.com/c/singapore/asset-finance/lawyers",
   },
 ];
 
@@ -69,7 +69,7 @@ const AccoladeBanner = ({ variant = "inline", className = "", omitTitles = [] }:
             className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border border-accent/40 bg-accent/5 text-accent font-medium"
           >
             <Award className="h-3 w-3" />
-            {a.title}
+            {a.org === "The Legal 500" ? <a href={a.url} target="_blank" rel="noopener" className="hover:underline">{a.title}</a> : a.title}
           </span>
         ))}
       </div>

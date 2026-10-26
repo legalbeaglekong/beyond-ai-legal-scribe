@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import teamHuiling from "@/assets/team-huiling.png";
 import teamSonia from "@/assets/team-sonia.webp.asset.json";
 import { useLanguage } from "@/i18n/LanguageContext";
+import Legal500Text from "@/components/Legal500Text";
 
 const teamData: Record<string, {
   name: string;
@@ -205,7 +206,7 @@ const TeamMemberPage = () => {
               <div className="space-y-3">
                 {highlights.map((h, i) => (
                   <div key={i} className="text-sm text-muted-foreground py-2 border-b border-border/50 flex items-start">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent mr-3 flex-shrink-0 mt-1.5" />{h}
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent mr-3 flex-shrink-0 mt-1.5" /><span><Legal500Text text={h} /></span>
                   </div>
                 ))}
               </div>
