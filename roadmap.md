@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Apply October 26 Legal 500 exact-string updates, translated years and Business Today labels; link accolades and verify sitemap pages, FAQ parity and protected metadata.
+- [x] Apply October 26 Legal 500 exact-string updates, translated years and Business Today labels; linked accolades, verified 56 sitemap pages and unchanged FAQ counts, metadata, sameAs and protected links. Preview only; unused Business Today translation labels updated without adding a card.
 
 - [x] Apply 24 Oct Page 1 strict brief: all anchors matched; FAQ visible/schema counts 31/15/21/18/23; frozen Fractional GC head/H1 and canonicals unchanged; generic 404/noindex/title verified. Preview only.
 
