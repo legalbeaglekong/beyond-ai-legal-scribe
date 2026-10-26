@@ -252,8 +252,8 @@ const PillarPage = ({
               <span className="mx-2">/</span>
               <span className="text-foreground">{breadcrumbName}</span>
             </nav>
-            {editorial && <p className="text-xs text-muted-foreground mb-4">{editorial.entity}</p>}
-            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">{eyebrow}</p>
+            {editorial?.entity && <p className="text-xs text-muted-foreground mb-4">{editorial.entity}</p>}
+            {eyebrow && <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">{eyebrow}</p>}
             <h1 className="font-serif text-4xl md:text-6xl text-foreground mb-6 leading-tight">{h1}</h1>
 {editorial ? <div className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 space-y-5 text-left leading-relaxed">{editorial.intro}</div> : <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">{intro}</p>}
             {introExtra}
@@ -406,7 +406,7 @@ const PillarPage = ({
 
         <section className="py-20 bg-primary text-primary-foreground">
           <div className="container mx-auto px-6 max-w-3xl text-center">
-            <h2 className="font-serif text-3xl md:text-4xl mb-4">{ctaHeading}</h2>
+            {ctaHeading && <h2 className="font-serif text-3xl md:text-4xl mb-4">{ctaHeading}</h2>}
             <p className="text-primary-foreground/85 text-lg mb-8">{ctaBody}</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
