@@ -7,6 +7,7 @@ import planeTakeoff from "@/assets/plane-takeoff.jpg";
 import teamHuiling from "@/assets/team-huiling.png";
 import teamSonia from "@/assets/team-sonia.webp.asset.json";
 import { useLanguage } from "@/i18n/LanguageContext";
+import Legal500Text from "@/components/Legal500Text";
 
 const teamMembers = [
   {
@@ -85,19 +86,19 @@ const TeamPage = () => {
 
           <div className="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto">
             {teamMembers.map((member) => (
-              <Link key={member.slug} to={`/team/${member.slug}`} className="group text-left">
-                <div className="aspect-[3/4] overflow-hidden rounded mb-6 bg-muted">
+              <div key={member.slug} className="group text-left">
+                <Link to={`/team/${member.slug}`} className="block aspect-[3/4] overflow-hidden rounded mb-6 bg-muted">
                   <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
-                </div>
+                </Link>
                 <p className="text-xs text-muted-foreground mb-1">{member.flag}</p>
                 <p className="text-sm italic text-accent font-serif mb-1">{language === "zh" ? member.roleZh : member.role}</p>
-                <h3 className="text-xl font-serif font-bold text-foreground mb-3 group-hover:text-accent transition-colors">{member.name}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-2">{language === "zh" ? member.summaryZh : member.summary}</p>
+                <h3 className="text-xl font-serif font-bold text-foreground mb-3 group-hover:text-accent transition-colors"><Link to={`/team/${member.slug}`}>{member.name}</Link></h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-2"><Legal500Text text={language === "zh" ? member.summaryZh : member.summary} /></p>
                 <p className="text-xs text-muted-foreground">{language === "zh" ? member.experienceZh : member.experience}</p>
-                <span className="inline-flex items-center text-sm text-accent mt-4 group-hover:gap-2 transition-all">
+                <Link to={`/team/${member.slug}`} className="inline-flex items-center text-sm text-accent mt-4 group-hover:gap-2 transition-all">
                   {t("team.viewProfile")} <ArrowRight className="h-4 w-4 ml-1" />
-                </span>
-              </Link>
+                </Link>
+              </div>
             ))}
           </div>
         </div>

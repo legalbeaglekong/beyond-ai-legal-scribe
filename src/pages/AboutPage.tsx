@@ -8,6 +8,7 @@ import { Award, BookOpen, Users, TrendingUp, ExternalLink, ArrowRight } from "lu
 import VideoBackground from "@/components/VideoBackground";
 import { STOCK_VIDEOS } from "@/lib/stock-videos";
 import { ADDRESS_PARTS } from "@/config/business";
+import Legal500Text from "@/components/Legal500Text";
 
 const BOOKING_URL = "https://wa.me/6597265330";
 
@@ -112,9 +113,9 @@ const AboutPage = () => {
                         <div className="flex-1">
                           <div className="flex items-center justify-between mb-2">
                             <h3 className="text-sm font-serif font-bold text-foreground">{a.title}</h3>
-                            <span className="text-xs text-accent uppercase tracking-wider">{a.highlight}</span>
+                            {a.highlight && <span className="text-xs text-accent uppercase tracking-wider">{a.highlight}</span>}
                           </div>
-                          <p className="text-xs text-muted-foreground">{a.description}</p>
+                          <p className="text-xs text-muted-foreground"><Legal500Text text={a.description} /></p>
                         </div>
                       </div>
                     </CardContent>
