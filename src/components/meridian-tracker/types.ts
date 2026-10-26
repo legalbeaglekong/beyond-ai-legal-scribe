@@ -30,4 +30,4 @@ export const keyFacts: [string, string][] = [
   ['Debt : equity', '70 : 30'],
   ['Closing mailbox', 'closingtracker.meridian@example.com'],
 ];
-export const disclaimer = 'Beyond Horizons is a specialist practice group of Bethel Chambers LLC, a Singapore law corporation licensed and regulated by the Legal Services Regulatory Authority (LSRA), a department under the Singapore Ministry of Law. UEN: 202007868D. Content here is general information only and does not constitute legal advice. This page is a demonstration with fictional data.';
+export const disclaimer = 'Beyond Horizons is a practice group of Bethel Chambers LLC, a Singapore law corporation licensed and regulated by the Legal Services Regulatory Authority (LSRA), a department under the Singapore Ministry of Law. UEN: 202007868D. Content here is general information only and does not constitute legal advice. This page is a demonstration with fictional data.';

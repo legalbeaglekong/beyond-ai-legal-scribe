@@ -5,7 +5,7 @@ import { Link } from "@/lib/router-compat";
 import { EMAIL, WHATSAPP_URL } from "@/config/business";
 
 export const ENTITY_FULL =
-  "Beyond Horizons by Bethel Chambers LLC (a specialist practice group of Bethel Chambers LLC)";
+  "Beyond Horizons by Bethel Chambers LLC (a practice group of Bethel Chambers LLC)";
 
 export const linkCls = "text-accent underline underline-offset-4 hover:opacity-80";
 
@@ -105,7 +105,7 @@ const FinanceCounselLayout = ({ h1, lead, second, heroNote, children, faqs, rela
           <P>{ctaBody}</P>
           <CtaRow />
           <p className="text-xs text-muted-foreground">
-            Beyond Horizons is a specialist practice group of Bethel Chambers LLC. Content is general information only and does not create a solicitor–client relationship.
+            Beyond Horizons is a practice group of Bethel Chambers LLC. Content is general information only and does not create a solicitor–client relationship.
           </p>
         </section>
       </div>

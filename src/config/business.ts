@@ -26,7 +26,7 @@ export const PARENT_PRIVACY_URL = "https://bethelchambers.com/privacy-policy/";
 export const PARENT_TERMS_URL = "https://bethelchambers.com/terms-of-service/";
 
 export const REGULATORY_BLURB =
-  "Beyond Horizons is a specialist practice group of Bethel Chambers LLC, which is licensed and regulated by the Legal Services Regulatory Authority (LSRA), a department under the Singapore Ministry of Law.";
+  "Beyond Horizons is a practice group of Bethel Chambers LLC, which is licensed and regulated by the Legal Services Regulatory Authority (LSRA), a department under the Singapore Ministry of Law.";
 
 export const LEGAL_DISCLAIMER =
   "Content on this site is general information only and does not constitute legal advice. Use of this site does not create a solicitor-client relationship.";
