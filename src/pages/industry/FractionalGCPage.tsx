@@ -1,3 +1,4 @@
+import Legal500Text from "@/components/Legal500Text";
 import IndustryPageLayout, { type IndustryPageData } from "@/components/IndustryPageLayout";
 import type { ReactNode } from "react";
 import { Building2, ShieldCheck, Scale, CalendarClock, Bot, Briefcase } from "lucide-react";
@@ -95,7 +96,7 @@ export const data: IndustryPageData = {
     hideDefaultCaption: true,
     accoladesOverride: [
       "Hui Ling Teo is ranked Band 3 for Aviation: Finance in Singapore by Chambers Asia-Pacific 2026.",
-      "Hui Ling Teo — Legal 500 Next Generation Partner, 2023",
+      "Hui Ling Teo — Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore).",
     ],
   },
   overview: {
@@ -103,7 +104,7 @@ export const data: IndustryPageData = {
     intro: (<>
       <h3 className="text-xl md:text-2xl font-serif font-bold text-foreground">Plans, scope and turnaround</h3>
       <ul className="list-disc pl-6 space-y-2">
-        <li><strong className={st}>Plans:</strong> Fractional GC plans start from SGD 4,000 per month to access Chambers (2026) and Legal 500 (2023) ranked counsel, Hui Ling Teo, with more than a decade of experience, including at international law firms.</li>
+        <li><strong className={st}>Plans:</strong> Fractional GC plans start from SGD 4,000 per month to access <Legal500Text text="Chambers Asia-Pacific 2026 (Aviation: Finance) and Legal 500 Asia Pacific 2026 (Asset Finance) ranked counsel" />, Hui Ling Teo, with more than a decade of experience, including at international law firms.</li>
         <li><strong className={st}>Day-to-day documentation:</strong> unlimited review of day-to-day documentation, one at a time, within the scope of your engagement letter, with a typical 3 to 5 business day substantive response timeline.</li>
         <li><strong className={st}>Faster or larger work:</strong> Faster responses, or larger, more complex or high-stakes work, can be accessed at surge or upsize pricing. Because we already hold the context and understanding of your business, you do not need to pay twice for that understanding.</li>
         <li><strong className={st}>Deal work:</strong> equity rounds, joint ventures, acquisitions and debt raises can sit within the plan; where a transaction is complex and high value, it is scoped as a separate matter with its own engagement terms.</li>
@@ -194,7 +195,7 @@ export const data: IndustryPageData = {
       },
       {
         question: "How much does a fractional general counsel cost in Singapore?",
-        answer: "At Beyond Horizons by Bethel Chambers LLC, fractional GC plans start from SGD 4,000 per month to access Chambers (2026) and Legal 500 (2023) ranked counsel, Hui Ling Teo, with more than a decade of experience, including at international law firms. Plans include unlimited review of day-to-day documentation, one at a time, within the scope of your engagement letter, with a typical 3 to 5 business day substantive response timeline. Faster responses, or larger, more complex or high-stakes work, can be accessed at surge or upsize pricing. Because we already hold the context and understanding of your business, you do not need to pay twice for that understanding. Your lead counsel is Hui Ling Teo, Founder of Beyond Horizons by Bethel Chambers LLC. The scope and fees for your plan are set in the engagement letter before work begins.",
+        answer: "At Beyond Horizons by Bethel Chambers LLC, fractional GC plans start from SGD 4,000 per month to access Chambers Asia-Pacific 2026 (Aviation: Finance) and Legal 500 Asia Pacific 2026 (Asset Finance) ranked counsel, Hui Ling Teo, with more than a decade of experience, including at international law firms. Plans include unlimited review of day-to-day documentation, one at a time, within the scope of your engagement letter, with a typical 3 to 5 business day substantive response timeline. Faster responses, or larger, more complex or high-stakes work, can be accessed at surge or upsize pricing. Because we already hold the context and understanding of your business, you do not need to pay twice for that understanding. Your lead counsel is Hui Ling Teo, Founder of Beyond Horizons by Bethel Chambers LLC. The scope and fees for your plan are set in the engagement letter before work begins.",
       },
       {
         question: "Do you compare your fees with other law firms?",

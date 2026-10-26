@@ -8,6 +8,7 @@ import { Award, BookOpen, Users, TrendingUp, ExternalLink, ArrowRight } from "lu
 import VideoBackground from "@/components/VideoBackground";
 import { STOCK_VIDEOS } from "@/lib/stock-videos";
 import { ADDRESS_PARTS } from "@/config/business";
+import Legal500Text from "@/components/Legal500Text";
 
 const BOOKING_URL = "https://wa.me/6597265330";
 
@@ -16,7 +17,7 @@ const AboutPage = () => {
 
   const achievements = [
     { icon: Award, title: "Chambers Asia-Pacific 2026", description: "Band 3, Aviation: Finance — Singapore", highlight: "Chambers & Partners" },
-    { icon: TrendingUp, title: "Legal 500 Recognition", description: "Hui Ling Teo — Legal 500 Next Generation Partner, 2023", highlight: "" },
+    { icon: TrendingUp, title: "Legal 500 Recognition", description: "Hui Ling Teo — Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore).", highlight: "" },
     { icon: BookOpen, title: <a href="https://www.reedsmith.com/articles/esg-issues-for-aerospace-defense-companies/" target="_blank" rel="noopener noreferrer" className="hover:underline">Bloomberg Law contributor: ESG Issues for Aerospace &amp; Defense Companies (2023)</a>, description: "Strategic Business Advisory & ESG Implementation", highlight: "Thought Leadership" },
   ];
 
@@ -90,7 +91,7 @@ const AboutPage = () => {
               <p className="text-muted-foreground leading-relaxed">
                 Where a matter needs advice on other laws, we work alongside foreign counsel instructed for that purpose.
               </p>
-              <p className="text-muted-foreground leading-relaxed">Growing companies that need senior legal judgment regularly, without a full-time in-house lawyer, can retain us as <a href="/industry/fractional-gc" className="text-primary underline">fractional general counsel</a>. Fractional GC plans start from SGD 4,000 per month to access Chambers (2026) and Legal 500 (2023) ranked counsel, Hui Ling Teo, with more than a decade of experience, including at international law firms. What each plan covers is agreed in an engagement letter. To discuss, email <a href="mailto:HL@beyondhorizons.sg" className="text-primary underline">HL@beyondhorizons.sg</a>.</p>
+              <p className="text-muted-foreground leading-relaxed">Growing companies that need senior legal judgment regularly, without a full-time in-house lawyer, can retain us as <a href="/industry/fractional-gc" className="text-primary underline">fractional general counsel</a>. Fractional GC plans start from SGD 4,000 per month to access <Legal500Text text="Chambers Asia-Pacific 2026 (Aviation: Finance) and Legal 500 Asia Pacific 2026 (Asset Finance) ranked counsel" />, Hui Ling Teo, with more than a decade of experience, including at international law firms. What each plan covers is agreed in an engagement letter. To discuss, email <a href="mailto:HL@beyondhorizons.sg" className="text-primary underline">HL@beyondhorizons.sg</a>.</p>
             </div>
           </div>
         </section>
@@ -112,9 +113,9 @@ const AboutPage = () => {
                         <div className="flex-1">
                           <div className="flex items-center justify-between mb-2">
                             <h3 className="text-sm font-serif font-bold text-foreground">{a.title}</h3>
-                            <span className="text-xs text-accent uppercase tracking-wider">{a.highlight}</span>
+                            {a.highlight && <span className="text-xs text-accent uppercase tracking-wider">{a.highlight}</span>}
                           </div>
-                          <p className="text-xs text-muted-foreground">{a.description}</p>
+                          <p className="text-xs text-muted-foreground"><Legal500Text text={a.description} /></p>
                         </div>
                       </div>
                     </CardContent>

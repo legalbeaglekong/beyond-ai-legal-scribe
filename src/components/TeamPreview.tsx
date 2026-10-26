@@ -2,6 +2,7 @@ import { Link } from "@/lib/router-compat";
 import { ArrowRight } from "lucide-react";
 import { teamMembers } from "@/pages/TeamPage";
 import { useLanguage } from "@/i18n/LanguageContext";
+import Legal500Text from "@/components/Legal500Text";
 
 const TeamPreview = () => {
   const { t, language } = useLanguage();
@@ -17,15 +18,15 @@ const TeamPreview = () => {
 
         <div className="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto">
           {teamMembers.map((member) => (
-            <Link key={member.slug} to={`/team/${member.slug}`} className="group text-left">
-              <div className="aspect-[3/4] overflow-hidden rounded mb-6 bg-muted">
+            <div key={member.slug} className="group text-left">
+              <Link to={`/team/${member.slug}`} className="block aspect-[3/4] overflow-hidden rounded mb-6 bg-muted">
                 <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
-              </div>
+              </Link>
               
               <p className="text-sm italic text-accent font-serif mb-1">{language === "zh" ? member.roleZh : member.role}</p>
-              <h3 className="text-xl font-serif font-bold text-foreground mb-3 group-hover:text-accent transition-colors">{member.name}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed text-justify">{language === "zh" ? member.summaryZh : member.summary}</p>
-            </Link>
+              <h3 className="text-xl font-serif font-bold text-foreground mb-3 group-hover:text-accent transition-colors"><Link to={`/team/${member.slug}`}>{member.name}</Link></h3>
+              <p className="text-sm text-muted-foreground leading-relaxed text-justify"><Legal500Text text={language === "zh" ? member.summaryZh : member.summary} /></p>
+            </div>
           ))}
         </div>
 

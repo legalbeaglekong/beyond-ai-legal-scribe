@@ -63,7 +63,7 @@ const ORGANIZATION_JSONLD = `{
     "email": "HL@beyondhorizons.sg",
     "award": [
       "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
-      "Legal 500 Next Generation Partner, 2023"
+      "Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore)"
     ],
     "sameAs": [
       "https://chambers.com/lawyer/hui-ling-teo-global-2:25705527",
@@ -128,7 +128,7 @@ const FOUNDER_JSONLD = `{
   "email": "HL@beyondhorizons.sg",
   "award": [
     "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
-    "Legal 500 Next Generation Partner, 2023"
+    "Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore)"
   ],
   "sameAs": [
     "https://chambers.com/lawyer/hui-ling-teo-global-2:25705527",

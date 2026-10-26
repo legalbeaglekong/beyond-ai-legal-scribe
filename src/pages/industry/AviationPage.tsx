@@ -41,7 +41,7 @@ export const data: IndustryPageData = {
       "Most aviation finance and leasing matters we see are governed by English law. Beyond Horizons by Bethel Chambers LLC is a cross-border aviation finance desk with a physical presence in Singapore, a Founder qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore, Chambers-ranked aviation finance expertise, and coverage across time zones so counterparties are not waiting on a single close-of-play for every turn of the mark-up. We are comfortable across global matters, with specific expertise in developing markets. The same desk sits with lessors, airlines, financiers and private capital when files turn hard — distressed scenarios, aircraft recoveries / asset recovery, incomplete aircraft, engine or documentary packages, and insolvency-adjacent coordination — experience spanning aviation finance, leasing, restructuring and asset recovery.",
     badges: [
       "Hui Ling Teo is ranked Band 3 for Aviation: Finance in Singapore by Chambers Asia-Pacific 2026.",
-      "Hui Ling Teo \u2014 Legal 500 Next Generation Partner, 2023",
+      "Hui Ling Teo \u2014 Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore).",
     ],
   },
   intro: {
@@ -362,7 +362,7 @@ export const data: IndustryPageData = {
     { label: "International Future Fuels Week (IFFW)", href: IFFW_URL },
     { label: "Jet fuel hedges & lease residual risk (LinkedIn video)", href: FUEL_VIDEO_URL },
   ],
-  rankings: { items: AVIATION_RANKINGS.filter((item) => !["Chambers Asia-Pacific 2026 — Band 4, Aviation: Finance — Asia-Pacific Region", "Chambers Global 2026 — Global Market Leaders, Band 3, Asset Finance", "Global Market Leader Asset Finance Lawyer (Chambers)", "ALB Law Firm to Watch 2026", "$8B+ deal value (2024 & 2025)"].includes(item)).map((item) => item === "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore" ? "Hui Ling Teo is ranked Band 3 for Aviation: Finance in Singapore by Chambers Asia-Pacific 2026." : item === "Legal 500 Next Generation Partner" ? "Hui Ling Teo — Legal 500 Next Generation Partner, 2023" : item), notes: AVIATION_RANKINGS_NOTES, chambersUrl: CHAMBERS_APAC_PROFILE_URL, publications: AVIATION_PUBLICATIONS },
+  rankings: { items: AVIATION_RANKINGS.filter((item) => !["Chambers Asia-Pacific 2026 — Band 4, Aviation: Finance — Asia-Pacific Region", "Chambers Global 2026 — Global Market Leaders, Band 3, Asset Finance", "Global Market Leader Asset Finance Lawyer (Chambers)", "ALB Law Firm to Watch 2026", "$8B+ deal value (2024 & 2025)"].includes(item)).map((item) => item === "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore" ? "Hui Ling Teo is ranked Band 3 for Aviation: Finance in Singapore by Chambers Asia-Pacific 2026." : item === "Legal 500 Next Generation Partner" ? "Hui Ling Teo — Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore)." : item), notes: AVIATION_RANKINGS_NOTES, chambersUrl: CHAMBERS_APAC_PROFILE_URL, publications: AVIATION_PUBLICATIONS },
 };
 
 const AviationPage = () => <IndustryPageLayout data={data} />;

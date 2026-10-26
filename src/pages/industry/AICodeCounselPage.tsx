@@ -1,3 +1,4 @@
+import Legal500Text from "@/components/Legal500Text";
 import IndustryPageLayout, { type IndustryPageData } from "@/components/IndustryPageLayout";
 import { Brain, Shield, Scale, FileCheck } from "lucide-react";
 
@@ -60,7 +61,7 @@ export const data: IndustryPageData = {
   cta: {
     heading: "Ready to operationalise AI governance?",
     description: "From Singapore regulatory alignment to EU AI Act readiness, we help GC, DPO and product teams operationalise AI governance. Schedule a consultation or email HL@beyondhorizons.sg.",
-    afterDescription: <p className="text-primary-foreground leading-relaxed mb-10 text-lg">For ongoing cover across AI governance and your other legal matters, see <a href="/industry/fractional-gc" className="underline">fractional general counsel</a>. Fractional GC plans start from SGD 4,000 per month to access Chambers (2026) and Legal 500 (2023) ranked counsel, Hui Ling Teo, with more than a decade of experience, including at international law firms. What each plan covers is agreed in an engagement letter.</p>,
+    afterDescription: <p className="text-primary-foreground leading-relaxed mb-10 text-lg">For ongoing cover across AI governance and your other legal matters, see <a href="/industry/fractional-gc" className="underline">fractional general counsel</a>. Fractional GC plans start from SGD 4,000 per month to access <Legal500Text text="Chambers Asia-Pacific 2026 (Aviation: Finance) and Legal 500 Asia Pacific 2026 (Asset Finance) ranked counsel" />, Hui Ling Teo, with more than a decade of experience, including at international law firms. What each plan covers is agreed in an engagement letter.</p>,
   },
   relatedPages: [
     { title: "Fractional GC", slug: "fractional-gc" },

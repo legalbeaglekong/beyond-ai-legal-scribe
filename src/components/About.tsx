@@ -7,13 +7,14 @@ import planeTakeoff from "@/assets/plane-takeoff.jpg";
 import aboutVideo from "@/assets/landing-about-plane.mp4.asset.json";
 import VideoBackground from "@/components/VideoBackground";
 import { useLanguage } from "@/i18n/LanguageContext";
+import Legal500Text from "@/components/Legal500Text";
 
 const About = () => {
   const { t } = useLanguage();
 
   const achievements: { icon: typeof Award; title: string; description: string; highlight: string; url?: string }[] = [
     { icon: Award, title: "Chambers Asia-Pacific 2026", description: "Band 3, Aviation: Finance — Singapore", highlight: "Chambers & Partners" },
-    { icon: TrendingUp, title: t("about.achievement2Title"), description: "Hui Ling Teo \u2014 Legal 500 Next Generation Partner, 2023", highlight: "" },
+    { icon: TrendingUp, title: t("about.achievement2Title"), description: "Hui Ling Teo \u2014 Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore).", highlight: "" },
     { icon: BookOpen, title: t("about.achievement4Title"), description: t("about.achievement4Desc"), highlight: t("about.achievement4Highlight"), url: "https://www.reedsmith.com/articles/esg-issues-for-aerospace-defense-companies/" },
   ];
 
@@ -86,9 +87,9 @@ const About = () => {
                           ) : (
                             <h4 className="text-base font-serif font-bold text-foreground">{achievement.title}</h4>
                           )}
-                          <span className="text-xs text-accent uppercase tracking-wider">{achievement.highlight}</span>
+                          {achievement.highlight && <span className="text-xs text-accent uppercase tracking-wider">{achievement.highlight}</span>}
                         </div>
-                        <p className="text-sm text-muted-foreground text-justify">{achievement.description}</p>
+                        <p className="text-sm text-muted-foreground text-justify"><Legal500Text text={achievement.description} /></p>
                       </div>
                     </div>
                   </CardContent>

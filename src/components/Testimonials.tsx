@@ -3,6 +3,7 @@ import { Brain, Lightbulb, Globe, TrendingUp } from "lucide-react";
 import VideoBackground from "@/components/VideoBackground";
 import { useLanguage } from "@/i18n/LanguageContext";
 import testimonialsVideo from "@/assets/testimonials-vessel-bg.mp4.asset.json";
+import { LEGAL500_URL } from "@/components/Legal500Text";
 
 const Testimonials = () => {
   const { t } = useLanguage();
@@ -35,7 +36,7 @@ const Testimonials = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {recognition.map((item, i) => (
               <div key={i} className="text-center p-6 border border-border/30 rounded">
-                <h3 className="text-base font-serif font-bold text-foreground mb-2">{item.title}</h3>
+                <h3 className="text-base font-serif font-bold text-foreground mb-2"><a href={LEGAL500_URL} target="_blank" rel="noopener" className="hover:underline">{item.title}</a></h3>
                 <p className="text-sm text-muted-foreground mb-2">{item.description}</p>
                 <span className="text-xs text-accent uppercase tracking-wider">{item.years}</span>
               </div>

@@ -6,6 +6,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import contactBanner from "@/assets/contact-banner.jpg";
 import contactVideo from "@/assets/contact-neutral-bg.mp4.asset.json";
 import { ADDRESS_PARTS } from "@/config/business";
+import Legal500Text from "@/components/Legal500Text";
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -82,7 +83,7 @@ const Contact = () => {
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <p>{t("contact.trust1")}</p>
                   <p>{t("contact.trust2")}</p>
-                  <p>{t("contact.trust3")}</p>
+                  <p><Legal500Text text={t("contact.trust3")} /></p>
                   <p>{t("contact.trust4")}</p>
                 </div>
               </div>
