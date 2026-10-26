@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Apply October 26 Legal 500 exact-string updates, translated years and Business Today labels; link accolades and verify sitemap pages, FAQ parity and protected metadata.
+
 - [x] Apply 24 Oct Page 1 strict brief: all anchors matched; FAQ visible/schema counts 31/15/21/18/23; frozen Fractional GC head/H1 and canonicals unchanged; generic 404/noindex/title verified. Preview only.
 
 - [x] Apply 20 Oct GSC strict batch: verified tech counsel, aviation split, linked FAQs, head tags and Review removal; all 56 sitemap pages return 200 with no prohibited visible claims or dead links. All 10 removed expertise pages and Amanda return 404/noindex/no canonical. Protected bodies, Person awards and footer recognition unchanged; no unmatched anchors. Preview only.
