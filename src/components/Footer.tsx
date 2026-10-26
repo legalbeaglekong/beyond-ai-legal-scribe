@@ -53,7 +53,7 @@ const Footer = () => {
               <p className="text-sm text-muted-foreground leading-relaxed">Singapore law practice group — cross-border counsel across aviation finance, fractional GC, employment, AI governance, and robotics.</p>
               <div className="space-y-2 text-xs text-muted-foreground">
                 <p>Hui Ling Teo is ranked Band 3 for Aviation: Finance in Singapore by Chambers Asia-Pacific 2026.</p>
-                <p>Hui Ling Teo — Legal 500 Next Generation Partner, 2023</p>
+                <p>Hui Ling Teo — Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore).</p>
               </div>
             </div>
 

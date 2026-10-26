@@ -48,14 +48,14 @@ const teamData: Record<string, {
       "Has acted on merger and acquisition transactions",
       "Well-versed in commercial negotiations",
       "Expertise in corporate and finance areas such as debt restructuring, blended finance, sale, purchase, leasing and trading of machinery",
-      "Honoured as Legal 500's \"Next Generation Partner\" in 2023",
+      "Hui Ling Teo — Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore).",
     ],
     highlightsZh: [
       "资深法律专业人士，拥有超过14年的公司和金融工作经验",
       "成功处理大型并购交易",
       "精通商业谈判",
       "在债务重组、混合融资、机械买卖、租赁和贸易等公司和金融领域的专业知识",
-      "2023年荣获Legal 500「新一代合伙人」",
+      "2026年荣获Legal 500「新一代合伙人」",
     ],
     linkedin: "https://www.linkedin.com/in/hui-ling-teo-7bb8b812b/",
   },
@@ -149,7 +149,7 @@ const TeamMemberPage = () => {
             sameAs: member.name === "Hui Ling Teo" ? ["https://chambers.com/lawyer/hui-ling-teo-global-2:25705527", "https://chambers.com/lawyer/hui-ling-teo-asia-pacific-8:25705527", "https://www.linkedin.com/in/huilingt"] : member.linkedin ? [member.linkedin] : undefined,
             award: member.name === "Hui Ling Teo" ? [
               ...CHAMBERS_LABELS,
-              "Legal 500 Next Generation Partner 2023"
+              "Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore)"
             ] : undefined,
             alumniOf: member.name === "Sonia Motwani" ? {
               "@type": "EducationalOrganization",
