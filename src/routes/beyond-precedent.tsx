@@ -17,7 +17,7 @@ export const Route = createFileRoute("/beyond-precedent")({
             "@context": "https://schema.org",
             "@type": "VideoObject",
             name: "Beyond Precedent Episode 1 Trailer",
-            description: "Trailer for Beyond Precedent, a supervised AI drafting challenge for law students from Beyond Horizons by Bethel Chambers LLC. Episode 1, The Energy Drink Influencer, is released on 23 October 2026.",
+            description: "Trailer for Beyond Precedent, a supervised AI drafting challenge for law students from Beyond Horizons by Bethel Chambers LLC. Episode 1, The Energy Drink Influencer, is arriving soon.",
             thumbnailUrl: "https://i.ytimg.com/vi/6DSyE53xVoE/maxresdefault.jpg",
             uploadDate: "2026-10-12T00:00:00+08:00",
             duration: "PT1M13S",

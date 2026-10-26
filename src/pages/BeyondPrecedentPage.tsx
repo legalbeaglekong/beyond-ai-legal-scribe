@@ -95,7 +95,7 @@ const BeyondPrecedentPage = () => (
         <section className="space-y-6" aria-labelledby="trailer">
           <h2 id="trailer" className="font-display text-2xl md:text-3xl text-foreground">Watch the trailer: Beyond Precedent, Episode 1</h2>
           <p className="text-muted-foreground leading-relaxed">
-            Can free public AI tools draft a sponsorship agreement in 15 minutes? In Episode 1, The Energy Drink Influencer, two law students each draft a sponsorship agreement with a free AI tool of their choice, which they name. Experienced legal professionals judge the challenge, and our host, Sonia Motwani, adds a twist. The full episode arrives on Friday 23 October 2026.
+            Can public AI tools draft a sponsorship agreement in 15 minutes? In Episode 1, The Energy Drink Influencer, two law students each draft a sponsorship agreement with public AI tools of their choice, which they name. Experienced legal professionals judge the challenge, and our host, Sonia Motwani, adds a twist. The full episode is arriving soon.
           </p>
           <div className="relative w-full overflow-hidden rounded-lg border border-border bg-card" style={{ aspectRatio: "16 / 9" }}>
             <iframe
@@ -190,7 +190,7 @@ const BeyondPrecedentPage = () => (
                 <div><dt className="font-semibold text-foreground">Judging panel: experienced legal professionals</dt><dd className="text-muted-foreground">Shen Yang (in-house counsel), Zeng Hanyi and Hui Ling Teo</dd></div>
                 <div><dt className="font-semibold text-foreground">Hosted by</dt><dd className="text-muted-foreground">Sonia Motwani</dd></div>
               </dl>
-              <p className="border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted-foreground">Each participant drafted their document in only 15 minutes, using free AI tools under limits on font size and page count. The work products include redlines and comments. Read them in that context: educational content only, not legal advice, and not for use with real counterparties.</p>
+              <p className="border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted-foreground">Each participant drafted their document in only 15 minutes, using public AI tools under limits on font size and page count. The work products include redlines and comments. Read them in that context: educational content only, not legal advice, and not for use with real counterparties.</p>
             </div>
             <div className="grid items-start gap-6 sm:grid-cols-2 sm:gap-8">
               {participants.map((p) => (
