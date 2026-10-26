@@ -47,7 +47,7 @@ const AccoladeBanner = ({ variant = "inline", className = "", omitTitles = [] }:
               key={i}
               href={a.url}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={a.org === "The Legal 500" ? "noopener" : "noopener noreferrer"}
               className="inline-flex items-center gap-1.5 border border-border/40 bg-card px-4 py-2 rounded-full text-xs text-muted-foreground hover:text-accent hover:border-accent/30 transition-smooth"
             >
               <Award className="h-3 w-3" />
@@ -83,7 +83,7 @@ const AccoladeBanner = ({ variant = "inline", className = "", omitTitles = [] }:
           key={i}
           href={a.url}
           target="_blank"
-          rel="noopener noreferrer"
+          rel={a.org === "The Legal 500" ? "noopener" : "noopener noreferrer"}
           className="inline-flex items-center gap-1.5 border border-accent/40 bg-accent/5 text-accent font-medium px-4 py-2 rounded-full text-xs transition-smooth hover:bg-accent/10"
         >
           <Award className="h-3 w-3" />

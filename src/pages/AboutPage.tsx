@@ -91,7 +91,7 @@ const AboutPage = () => {
               <p className="text-muted-foreground leading-relaxed">
                 Where a matter needs advice on other laws, we work alongside foreign counsel instructed for that purpose.
               </p>
-              <p className="text-muted-foreground leading-relaxed">Growing companies that need senior legal judgment regularly, without a full-time in-house lawyer, can retain us as <a href="/industry/fractional-gc" className="text-primary underline">fractional general counsel</a>. Fractional GC plans start from SGD 4,000 per month to access Chambers Asia-Pacific 2026 (Aviation: Finance) and Legal 500 Asia Pacific 2026 (Asset Finance) ranked counsel, Hui Ling Teo, with more than a decade of experience, including at international law firms. What each plan covers is agreed in an engagement letter. To discuss, email <a href="mailto:HL@beyondhorizons.sg" className="text-primary underline">HL@beyondhorizons.sg</a>.</p>
+              <p className="text-muted-foreground leading-relaxed">Growing companies that need senior legal judgment regularly, without a full-time in-house lawyer, can retain us as <a href="/industry/fractional-gc" className="text-primary underline">fractional general counsel</a>. Fractional GC plans start from SGD 4,000 per month to access <Legal500Text text="Chambers Asia-Pacific 2026 (Aviation: Finance) and Legal 500 Asia Pacific 2026 (Asset Finance) ranked counsel" />, Hui Ling Teo, with more than a decade of experience, including at international law firms. What each plan covers is agreed in an engagement letter. To discuss, email <a href="mailto:HL@beyondhorizons.sg" className="text-primary underline">HL@beyondhorizons.sg</a>.</p>
             </div>
           </div>
         </section>
