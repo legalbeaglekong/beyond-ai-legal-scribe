@@ -95,7 +95,7 @@ const BeyondPrecedentPage = () => (
         <section className="space-y-6" aria-labelledby="trailer">
           <h2 id="trailer" className="font-display text-2xl md:text-3xl text-foreground">Watch the trailer: Beyond Precedent, Episode 1</h2>
           <p className="text-muted-foreground leading-relaxed">
-            Can public AI tools draft a sponsorship agreement in 15 minutes? In Episode 1, The Energy Drink Influencer, two law students each draft a sponsorship agreement with public AI tools of their choice, which they name. Experienced legal professionals judge the challenge, and our host, Sonia Motwani, adds a twist. The full episode is arriving soon.
+            Can public AI tools draft a sponsorship agreement in 15 minutes? In Episode 1, The Energy Drink Influencer, two law students each draft a sponsorship agreement with public AI tools of their choice, which they name. Experienced legal professionals judge the challenge, and our host, Sonia Motwani, adds a twist. <a href="https://www.youtube.com/watch?v=jrI5cN94hCw" target="_blank" rel="noopener noreferrer" className={ext}>Watch the full episode.</a>
           </p>
           <div className="relative w-full overflow-hidden rounded-lg border border-border bg-card" style={{ aspectRatio: "16 / 9" }}>
             <iframe
@@ -107,6 +107,20 @@ const BeyondPrecedentPage = () => (
               className="absolute inset-0 h-full w-full"
             />
           </div>
+          <div className="relative w-full overflow-hidden rounded-lg border border-border bg-card" style={{ aspectRatio: "16 / 9" }}>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/jrI5cN94hCw"
+              title="Law Students Draft a Contract with AI in 15 Minutes, Then a Twist | Beyond Precedent Ep 1"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              className="absolute inset-0 h-full w-full"
+            />
+          </div>
+          <p className="text-muted-foreground leading-relaxed">
+            In Episode 1 of Beyond Precedent, "The Energy Drink Influencer", law students Harish and Boyuan each draft a contract between an energy drink brand called Rest (fictional) and an influencer, using public AI tools of their choice. Host Sonia Motwani keeps the clock and delivers the twist. Judging the challenge: Hui Ling Teo and Zeng Hanyi, with guest in-house counsel Shen Yang. Producer and director: Amrita.
+          </p>
           <div className="rounded-lg border border-border bg-card p-6">
             <p className="text-foreground leading-relaxed">
               They called us the new kids on the block. We say we&rsquo;re beyond precedent. We&rsquo;re building talent that thrives in a post-AI age. Email{" "}
@@ -180,7 +194,7 @@ const BeyondPrecedentPage = () => (
         <div className="mx-auto max-w-4xl space-y-4">
           <h2 id="session-archive" className="font-display text-2xl md:text-3xl text-foreground">Session archive</h2>
           <p className="max-w-3xl text-muted-foreground leading-relaxed">
-            A post-editing work product is what a student produces after the AI-assisted first pass: a revised draft plus a short edit log recording what the model got wrong, invented, or needed rewriting. Archive items, when cleared, are illustrative only — not legal advice and not client deliverables.
+            A post-editing work product is what a student produces after the AI-assisted first pass: a revised draft plus a short edit log recording what the model got wrong, invented, or needed rewriting. Archive items are illustrative only — not legal advice and not client deliverables.
           </p>
           <article className="space-y-8 rounded-lg border border-border bg-card p-6 md:p-8" aria-labelledby="episode-one">
             <div className="max-w-3xl space-y-4">
