@@ -188,6 +188,29 @@ const BeyondPrecedentPage = () => (
           </p>
           <p className="text-sm text-muted-foreground italic border-l-2 border-accent pl-4">{RESEARCH_DISCLAIMER}</p>
         </section>
+
+        <section className="space-y-6">
+          <H2>Context: AI and how young lawyers learn</H2>
+          <p className="text-muted-foreground leading-relaxed">
+            On 9 April 2026, Chief Justice Sundaresh Menon gave the opening keynote at the Asia-Pacific (APAC) Legal Congress 2026, hosted by the Singapore Corporate Counsel Association. He spoke to in-house counsel about AI risk, using AI in legal teams, and training junior lawyers. A few short passages touch on the questions Beyond Precedent explores.
+          </p>
+          <blockquote className="text-muted-foreground leading-relaxed italic border-l-2 border-accent pl-4">
+            “The legal profession has long been sustained by apprenticeship, where tacit knowledge and professional instinct are acquired through years of practice and observation. The problem is that the formative tasks central to building one’s craft tend to be the very tasks that are most vulnerable to automation.” (para 26)
+          </blockquote>
+          <blockquote className="text-muted-foreground leading-relaxed italic border-l-2 border-accent pl-4">
+            “As opportunities for learning by repetition and osmosis contract, we must do more to safeguard the training ground for our younger colleagues. This may include introducing deliberate friction by requiring certain tasks to be performed manually or with limited AI assistance, coupled with structured feedback and a process of internalisation.” (para 35)
+          </blockquote>
+          <blockquote className="text-muted-foreground leading-relaxed italic border-l-2 border-accent pl-4">
+            “The goal of AI adoption should be to expand our capacity for higher-order and higher-impact work, not to provide cover for vacating our judgment.” (para 24)
+          </blockquote>
+          <p className="text-sm text-muted-foreground">
+            — The Honourable the Chief Justice Sundaresh Menon, “Corporate Counsel: Shepherds in an Age of Generative AI”, Opening Keynote, APAC Legal Congress 2026, 9 April 2026. Short excerpts quoted word for word; footnote markers left out.
+          </p>
+          <a href="https://www.judiciary.gov.sg/news-and-resources/news/news-details/chief-justice-sundaresh-menon--opening-keynote-at-the-asia-pacific-(apac)-legal-congress-2026" target="_blank" rel="noopener noreferrer" className={ext}>Read the full speech on the Singapore Courts website</a>
+          <p className="text-muted-foreground leading-relaxed">
+            We read these passages as a question for anyone who trains young lawyers: if AI produces more of the first draft, how do they still learn the craft? Beyond Precedent is our small, practical way of working on that question: law students draft with AI, then show in an edit log what they checked, fixed or rejected, and get feedback from the judging panel. We quote the speech for discussion and review only. The Chief Justice and the Singapore Judiciary are not associated with Beyond Horizons or Beyond Precedent and do not endorse either.
+          </p>
+        </section>
       </div>
 
       <section className="px-6 pb-16 md:pb-24" aria-labelledby="session-archive">
