@@ -21,6 +21,7 @@ export default function SingaporeBusinessSuccessionPage() {
     relatedHeading=""
     ctaHeading=""
     ctaBody={<>To discuss a succession, exit or reorganisation, email <a href="mailto:HL@beyondhorizons.sg" className="underline">HL@beyondhorizons.sg</a>.</>}
+    ctaNote="Free first consultation, up to 30 minutes, subject to a conflict check, once per new matter."
     lastUpdatedISO="2026-10-26"
     lastUpdatedLabel="October 2026"
     h1={SUCCESSION_H1} intro="" badges={[]} metaTitle={SUCCESSION_TITLE} metaDescription={SUCCESSION_DESCRIPTION} ogTitle={SUCCESSION_TITLE} ogDescription={SUCCESSION_DESCRIPTION}

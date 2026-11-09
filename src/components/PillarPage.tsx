@@ -96,6 +96,7 @@ export interface PillarPageProps {
   relatedHeading: string;
   ctaHeading: string;
   ctaBody: ReactNode;
+  ctaNote?: string;
   beforeServices?: ReactNode;
   serviceOffers?: { name: string; description?: string }[];
   serviceCatalogName?: string;
@@ -141,6 +142,7 @@ const PillarPage = ({
   relatedHeading,
   ctaHeading,
   ctaBody,
+  ctaNote,
   exploreLink,
   rankings,
   introExtra,
@@ -408,6 +410,7 @@ const PillarPage = ({
           <div className="container mx-auto px-6 max-w-3xl text-center">
             {ctaHeading && <h2 className="font-serif text-3xl md:text-4xl mb-4">{ctaHeading}</h2>}
             <p className="text-primary-foreground/85 text-lg mb-8">{ctaBody}</p>
+            {ctaNote ? <p className="text-primary-foreground/85 text-lg mb-8">{ctaNote}</p> : null}
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
