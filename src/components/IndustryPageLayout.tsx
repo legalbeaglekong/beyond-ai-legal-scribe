@@ -241,8 +241,6 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                 <p className="text-sm text-white/90 mb-6" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.8)' }}>{data.hero.ctaLine}</p>
               )}
               {data.hero.ctaBox && <div className="mb-8">{data.hero.ctaBox}</div>}
-              {data.hero.ctaBox && <div className="mb-8">{data.hero.ctaBox}</div>}
-              {data.hero.ctaBox && <div className="mb-8">{data.hero.ctaBox}</div>}
               {data.hero.jumpLinks && data.hero.jumpLinks.length > 0 && (
                 <nav aria-label="Jump to section" className="flex flex-wrap justify-center gap-2 mb-8">
                   {data.hero.jumpLinks.map((j) => (
