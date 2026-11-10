@@ -239,6 +239,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                 <p className="text-sm text-white/90 mb-6" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.8)' }}>{data.hero.ctaLine}</p>
               )}
               {data.hero.ctaBox && <div className="mb-8">{data.hero.ctaBox}</div>}
+              {data.hero.ctaBox && <div className="mb-8">{data.hero.ctaBox}</div>}
               {data.hero.jumpLinks && data.hero.jumpLinks.length > 0 && (
                 <nav aria-label="Jump to section" className="flex flex-wrap justify-center gap-2 mb-8">
                   {data.hero.jumpLinks.map((j) => (
@@ -546,7 +547,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                   <Mail className="mr-2 h-4 w-4" /> Email Us
                 </a>
               </Button>
-            </div>}
+            </div>}}
             {data.cta.note && (
               <p className="text-xs text-white/75 leading-relaxed mt-8 max-w-2xl mx-auto">{data.cta.note}</p>
             )}
