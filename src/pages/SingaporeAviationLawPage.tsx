@@ -15,7 +15,7 @@ const AVIATION_PUBLICATIONS = (
   <div className="mt-5">
     <h3 className="text-sm font-serif font-bold text-foreground mb-2">Publications</h3>
     <ul className="space-y-1 text-xs text-muted-foreground">
-      <li>Hui Ling Teo wrote <a href="https://www.reedsmith.com/articles/esg-issues-for-aerospace-defense-companies/" target="_blank" rel="noopener" className="text-accent hover:underline">“ESG Issues for Aerospace &amp; Defense Companies”</a>, an overview and checklist for Bloomberg Law’s ESG Toolkits, published in July 2023 while she was at Reed Smith.</li>
+      <li>Hui Ling Teo wrote <a href="https://www.reedsmith.com/articles/esg-issues-for-aerospace-defense-companies/" target="_blank" rel="noopener" className="text-accent hover:underline">“ESG Issues for Aerospace &amp; Defense Companies”</a>, an overview and checklist for Bloomberg Law’s ESG Toolkits, published in July 2023.</li>
     </ul>
   </div>
 );
