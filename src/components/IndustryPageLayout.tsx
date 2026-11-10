@@ -64,10 +64,6 @@ export interface IndustryPageData {
     ctaLine?: import("react").ReactNode;
     /** Optional boxed block under the CTAs (rendered as a div). */
     ctaBox?: import("react").ReactNode;
-    /** Optional boxed block under the CTAs (rendered as a div). */
-    ctaBox?: import("react").ReactNode;
-    /** Optional boxed block under the CTAs (rendered as a div). */
-    ctaBox?: import("react").ReactNode;
     /** Optional jump chips to an in-page anchor. */
     jumpLinks?: { label: string; href: string }[];
   };
