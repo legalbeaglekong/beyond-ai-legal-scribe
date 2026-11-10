@@ -69,7 +69,7 @@ export function createFaqScript(items: readonly FaqItem[]) {
 }
 
 export const STATIC_PAGE_SEO = {
-  "/about": ["About Beyond Horizons by Bethel Chambers LLC | Singapore", "Beyond Horizons is a Singapore-based cross-border practice group of Bethel Chambers LLC, led by Hui Ling Teo: aviation finance, AI and corporate counsel."],
+  "/about": ["About Beyond Horizons | Bethel Chambers LLC", "Beyond Horizons, led by Hui Ling Teo, is a practice group of Bethel Chambers LLC, a Singapore law corporation: aviation finance, AI and corporate counsel."],
   "/ai-tools": ["AI Legal Tools | Beyond Horizons Singapore", "Explore purpose-built legal tools for regulatory monitoring, contract review, financial modelling and legal operations."],
   "/announcements": ["Announcements | Beyond Horizons by Bethel Chambers", "News, events and practice updates from Beyond Horizons by Bethel Chambers LLC in Singapore."],
   "/ascending-asia": ["Ascending Asia | AAM Market Entry & Section 232 UAS Counsel | Beyond Horizons", "Advanced Air Mobility market-entry guide for APAC — plus Section 232 UAS tariff and content-origin certification issues for suppliers into US programmes. Register for the playbook or schedule a consultation."],
