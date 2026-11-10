@@ -74,7 +74,7 @@ export default function SingaporeBusinessSuccessionPage() {
         </div></section>
         <section className="py-12 bg-secondary/20"><div className={wrap}>
           <h2 className={h2}>Who we help</h2>
-          <p className={p}>We act for founders and family-owned businesses with interests in aviation, wellness and healthcare, fintech and more.</p>
+          <p className={p}>We act for founders and family-owned businesses with interests in aviation, wellness and healthcare, fintech and more. Where a family holding company owns a business jet or helicopter, its ownership and financing documents should be aligned with the succession plan; see <a href="/industry/aviation#business-jet-financing" className="text-primary underline underline-offset-2">business jet financing</a>.</p>
           <p className={p}>Typical starting points include a founder planning to step back, a family preparing the next generation to take over, shareholders who want clear exit terms, and owners who want their personal and company documents aligned.</p>
         </div></section>
         <section className="py-12"><div className={wrap}>

@@ -1,3 +1,4 @@
+import ConsultCallout from "@/components/ConsultCallout";
 import { AVIATION_RANKINGS, AVIATION_RANKINGS_NOTES } from "@/config/business";
 import PillarPage from "@/components/PillarPage";
 import { Plane, FileText, Scale, Briefcase, Shield, Calendar } from "lucide-react";
@@ -15,7 +16,7 @@ const AVIATION_PUBLICATIONS = (
   <div className="mt-5">
     <h3 className="text-sm font-serif font-bold text-foreground mb-2">Publications</h3>
     <ul className="space-y-1 text-xs text-muted-foreground">
-      <li>Hui Ling Teo wrote <a href="https://www.reedsmith.com/articles/esg-issues-for-aerospace-defense-companies/" target="_blank" rel="noopener" className="text-accent hover:underline">“ESG Issues for Aerospace &amp; Defense Companies”</a>, an overview and checklist for Bloomberg Law’s ESG Toolkits, published in July 2023 while she was at Reed Smith.</li>
+      <li>Hui Ling Teo wrote <a href="https://www.reedsmith.com/articles/esg-issues-for-aerospace-defense-companies/" target="_blank" rel="noopener" className="text-accent hover:underline">“ESG Issues for Aerospace &amp; Defense Companies”</a>, an overview and checklist for Bloomberg Law’s ESG Toolkits, published in July 2023.</li>
     </ul>
   </div>
 );
@@ -57,12 +58,13 @@ const SingaporeAviationLawPage = () => (
     eyebrow="Singapore aviation regulation · CAAS · Private aviation compliance"
     h1="Singapore aviation law and regulation — CAAS, private aviation compliance and Cape Town interfaces"
     intro="This page is our guide to Singapore aviation law and regulation: CAAS approvals, private and business aviation regulatory compliance, charter operator checks and KYC, and Cape Town interfaces. Beyond Horizons by Bethel Chambers LLC advises from Singapore; English law input is given through Hui Ling Teo, who is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore. We are cross-border lawyers with a physical presence in Singapore, available across time zones, comfortable across global matters, with specific expertise in developing markets. From our Singapore hub we coordinate CAAS regulatory interfaces, security, filings and opinions when the deal needs Singapore pieces — and we run the same desk across APAC and global working hours on multi-jurisdictional files, including developing markets. Where files turn distressed, we work the cross-border documentary path around aircraft recoveries / asset recovery, Cape Town Convention priority and IDERA strategy (with local counsel as needed), and insolvency-adjacent coordination. Documents can be stress-tested with our disputes and arbitration team before they have to survive a default, redelivery fight or enforcement path. We are a law practice: we do not underwrite securities, lend, broker aircraft, or act as a CAMO/MRO."
-    introExtra={<p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">Hui Ling Teo is ranked Band 3 for Aviation: Finance in Singapore by Chambers Asia-Pacific 2026. For a CAAS, charter or Cape Town question on a live matter, email <a href="mailto:HL@beyondhorizons.sg" className="text-primary underline underline-offset-2">HL@beyondhorizons.sg</a> with the aircraft, the operator and your timing.</p>}
+    introExtra={<p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">Hui Ling Teo is ranked Band 3 for Aviation: Finance in Singapore by Chambers Asia-Pacific 2026.</p>}
+    afterIntroCallout={<div className="mb-8"><ConsultCallout mailto="mailto:HL@beyondhorizons.sg?subject=Singapore%20aviation%20enquiry%20%28singapore-aviation-law%2C%20top%29" freeLine /></div>}
     badges={["Beyond Horizons by Bethel Chambers LLC", "English-law Leases & Financings", "Cape Town / IDERA Coordination", "CAAS Regulatory Coordination", "Aircraft Recoveries & Incomplete Docs"]}
-    metaTitle="Aviation Law Counsel Singapore Hub — CAAS Coordination, Cape Town & Recoveries | Beyond Horizons"
-    metaDescription="Singapore aviation regulatory guide: CAAS approvals, AOC and foreign operator permit checks, private aviation compliance, charter KYC and Cape Town."
-    ogTitle="Aviation Law Counsel Singapore Hub — CAAS Coordination, Cape Town & Recoveries | Beyond Horizons"
-    ogDescription="Cross-border aviation finance counsel with a Singapore physical presence — English-law leases, Cape Town/IDERA coordination, aircraft recoveries, incomplete aircraft/engine docs, MRO and vertiports. Available across time zones; developing-markets expertise."
+    metaTitle="Aviation Lawyer Singapore: CAAS, Private Jets and Cape Town"
+    metaDescription="Singapore aviation law and counsel: CAAS approvals, AOC and foreign operator permit checks, charter broker rules, KYC and Cape Town Convention filings."
+    ogTitle="Aviation Lawyer Singapore: CAAS, Private Jets and Cape Town"
+    ogDescription="Singapore aviation law and counsel: CAAS approvals, AOC and foreign operator permit checks, charter broker rules, KYC and Cape Town Convention filings."
     articleHeadline="Singapore aviation law and regulation — CAAS, private aviation compliance and Cape Town interfaces"
     breadcrumbName="Singapore Aviation Law"
     serviceType="Aviation and Aerospace Law"
@@ -78,7 +80,7 @@ const SingaporeAviationLawPage = () => (
     ]}
     updates={[]}
     contentSections={[
-      { heading: "Aircraft recoveries / repossession-adjacent counsel & aviation insolvency", paragraphs: ["Through a cross-border Cape Town / IDERA lens, we advise on the documentary and coordination path around default, termination, possession and recovery, with Singapore hub coordination where Singapore registration or CAAS pieces matter. Local enforcement steps sit with instructed local counsel and depend on the facts. We do not guarantee possession outcomes."] },
+      { heading: "Aircraft recoveries / repossession-adjacent counsel & aviation insolvency", paragraphs: ["Through a cross-border Cape Town / IDERA lens, we advise on the documentary and coordination path around default, termination, possession and recovery, with Singapore hub coordination where Singapore registration or CAAS pieces matter. Local enforcement steps sit with instructed local counsel and depend on the facts. We do not guarantee possession outcomes."], body: <p className="text-muted-foreground leading-relaxed">For a country-by-country comparison of Indonesia, Malaysia and Vietnam, read our Insights article: <a href="https://www.insights.beyondhorizons.sg/p/aircraft-repossession-indonesia-malaysia-vietnam?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=insights-aircraft-repossession-2026-11&amp;utm_content=website-singapore-aviation-law-article" target="_blank" rel="noopener" className="text-primary underline underline-offset-2">Airline default in Asia: where does a lessor get the aircraft back?</a> For lease-side recovery work, see <a href="/industry/aviation#aircraft-repossession" className="text-primary underline underline-offset-2">aircraft repossession and lessor enforcement</a>.</p> },
       { heading: "Incomplete aircraft, engines & documentary packages", paragraphs: ["Issue lists on missing or incomplete technical and title records, conditions precedent and escrow mechanics, and risk allocation in SPAs and leases — including Singapore registration and CP interfaces where the deal needs them."] },
       { heading: "Landing gear & equipment finance", paragraphs: ["Equipment and landing-gear lease / SPA documentation, security and priority language, and interaction with airframe and engine packages."] },
       { heading: "Business jet & helicopter S&P; co-ownership", paragraphs: ["Pre-owned business-jet and helicopter sale-and-purchase documentation, and co-ownership / fractional ownership document sets. English-law SPA depth sits on our aviation finance page."], links: [{ label: "Aviation finance counsel — English-law SPA depth", to: "/industry/aviation" }] },
@@ -106,7 +108,9 @@ const SingaporeAviationLawPage = () => (
     relatedKeywords={["aviation", "aircraft", "lessor", "caas", "saf", "cape town", "evtol", "drone", "uas", "aerospace"]}
     relatedHeading="Related Insights — Aviation & Aerospace"
     ctaHeading="Schedule a Singapore Aviation Consultation"
-    ctaBody={<> Whether you are placing a cross-border lease (Singapore hub or elsewhere), working a recovery or incomplete-docs file in a developing or other market, building a SAF offtake, or advancing an airport/vertiport / AAM venture — tell us what you need. Email <a href="mailto:HL@beyondhorizons.sg" className="text-primary underline underline-offset-2">HL@beyondhorizons.sg</a> or book a consultation.</>}
+    ctaBody={<> Whether you are placing a cross-border lease (Singapore hub or elsewhere), working a recovery or incomplete-docs file in a developing or other market, building a SAF offtake, or advancing an airport/vertiport / AAM venture — tell us what you need.</>}
+    ctaHideBookButton
+    ctaAfterBody={<div className="mb-8"><ConsultCallout mailto="mailto:HL@beyondhorizons.sg?subject=Singapore%20aviation%20enquiry%20%28singapore-aviation-law%2C%20end%29" /></div>}
     exploreLink={{ label: "Looking to instruct counsel? Aviation finance counsel in Singapore", to: "/industry/aviation" }}
     lastUpdatedISO="2026-10-12"
     lastUpdatedLabel="October 2026"

@@ -62,6 +62,8 @@ export interface IndustryPageData {
     emailCta?: string;
     /** Optional soft line under the CTAs. */
     ctaLine?: import("react").ReactNode;
+    /** Optional boxed block under the CTAs (rendered as a div). */
+    ctaBox?: import("react").ReactNode;
     /** Optional jump chips to an in-page anchor. */
     jumpLinks?: { label: string; href: string }[];
   };
@@ -103,8 +105,10 @@ export interface IndustryPageData {
   faqs: {
     heading: string;
     items: { question: string; answer: string; content?: import("react").ReactNode }[];
+    /** Questions answered elsewhere on the page, appended to FAQPage schema only. */
+    schemaExtra?: { question: string; answer: string }[];
   };
-  cta: { heading: string; description?: import("react").ReactNode; note?: string; beforeHeading?: import("react").ReactNode; afterDescription?: import("react").ReactNode };
+  cta: { heading: string; hideButtons?: boolean; description?: import("react").ReactNode; note?: string; beforeHeading?: import("react").ReactNode; afterDescription?: import("react").ReactNode };
   /** slug may be an absolute path starting with "/" */
   relatedPages: { title: string; slug: string }[];
   relatedExternal?: { label: string; href: string }[];
@@ -176,7 +180,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org", "@type": "FAQPage",
-            mainEntity: data.faqs.items.map((faq) => ({
+            mainEntity: [...data.faqs.items, ...(data.faqs.schemaExtra ?? [])].map((faq) => ({
               "@type": "Question", name: faq.question,
               acceptedAnswer: { "@type": "Answer", text: faq.answer },
             })),
@@ -232,6 +236,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               {data.hero.ctaLine && (
                 <p className="text-sm text-white/90 mb-6" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.8)' }}>{data.hero.ctaLine}</p>
               )}
+              {data.hero.ctaBox && <div className="mb-8">{data.hero.ctaBox}</div>}
               {data.hero.jumpLinks && data.hero.jumpLinks.length > 0 && (
                 <nav aria-label="Jump to section" className="flex flex-wrap justify-center gap-2 mb-8">
                   {data.hero.jumpLinks.map((j) => (
@@ -522,7 +527,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               <p className="text-white/85 leading-relaxed mb-10 text-lg drop-shadow-md">{data.cta.description}</p>
             )}
             {data.cta.afterDescription}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {!data.cta.hideButtons && <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="default" size="lg" className="bg-white text-black font-semibold shadow-lg hover:bg-white/90" asChild>
                 {data.consultHref ? (
                   <a href={data.consultHref}>
@@ -539,7 +544,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                   <Mail className="mr-2 h-4 w-4" /> Email Us
                 </a>
               </Button>
-            </div>
+            </div>}
             {data.cta.note && (
               <p className="text-xs text-white/75 leading-relaxed mt-8 max-w-2xl mx-auto">{data.cta.note}</p>
             )}

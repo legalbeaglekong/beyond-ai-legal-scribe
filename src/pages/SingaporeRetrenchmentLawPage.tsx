@@ -103,7 +103,7 @@ export default function SingaporeRetrenchmentLawPage() {
             <li><B>Main reason:</B> reorganisation or restructuring, for 72.1% of retrenchments (employers may give more than one reason).</li>
             <li><B>Back in work:</B> 54.9% of retrenched residents were re-employed within six months, down from 60.7%. The 12-month rate, 69.8%, was broadly stable.</li>
           </UL>
-          <P>For aviation readers: MOM's tables show 520 retrenchments in air transport and supporting services across 2025, and 20 in the second quarter of 2026. We draw no wider conclusion from that. (See our <A href="https://beyondhorizons.sg/industry/aviation">aviation practice</A>.)</P>
+          <P>For aviation readers: MOM's tables show 520 retrenchments in air transport and supporting services across 2025, and 20 in the second quarter of 2026. We draw no wider conclusion from that. (See our <A href="https://beyondhorizons.sg/industry/aviation">aviation finance and aircraft leasing page</A>.)</P>
 
           <H2>What must a Singapore employer do by law when retrenching?</H2>
           <Figure src="/images/retrenchment/03-rules-matrix-keyed.png" alt="Table of employer duties when retrenching in Singapore: which are statute, which are tripartite guidance or norm, and that the Workplace Fairness Act is not yet in force." />
