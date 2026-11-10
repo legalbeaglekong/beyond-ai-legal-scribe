@@ -104,6 +104,11 @@ export interface PillarPageProps {
   rankings?: { items: string[]; notes?: string[]; chambersUrl?: string; publications?: ReactNode };
   /** Optional extra paragraph rendered immediately after the intro, same style. */
   introExtra?: ReactNode;
+  /** Optional block rendered after introExtra. */
+  afterIntroCallout?: ReactNode;
+  /** Optional block after the CTA body; ctaHideBookButton hides the default booking button. */
+  ctaAfterBody?: ReactNode;
+  ctaHideBookButton?: boolean;
   lastUpdatedISO: string;       // e.g. "2026-06-09"
   lastUpdatedLabel: string;     // e.g. "June 2026"
   afterUpdates?: ReactNode;
@@ -146,6 +151,9 @@ const PillarPage = ({
   exploreLink,
   rankings,
   introExtra,
+  afterIntroCallout,
+  ctaAfterBody,
+  ctaHideBookButton,
   lastUpdatedISO,
   lastUpdatedLabel,
   editorial,
@@ -259,6 +267,7 @@ const PillarPage = ({
             <h1 className="font-serif text-4xl md:text-6xl text-foreground mb-6 leading-tight">{h1}</h1>
 {editorial ? <div className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 space-y-5 text-left leading-relaxed">{editorial.intro}</div> : <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">{intro}</p>}
             {introExtra}
+            {afterIntroCallout}
             <div className="flex flex-wrap gap-3 justify-center mb-6">
               {badges.map((b) => (
                 <span key={b} className="px-4 py-2 rounded-full bg-background/60 border border-border text-sm text-foreground">{b}</span>
@@ -411,12 +420,13 @@ const PillarPage = ({
             {ctaHeading && <h2 className="font-serif text-3xl md:text-4xl mb-4">{ctaHeading}</h2>}
             <p className="text-primary-foreground/85 text-lg mb-8">{ctaBody}</p>
             {ctaNote ? <p className="text-primary-foreground/85 text-lg mb-8">{ctaNote}</p> : null}
+            {ctaAfterBody}
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary">
+              {!ctaHideBookButton && <Button asChild size="lg" variant="secondary">
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                   {editorial ? "Schedule a consultation" : "Book a Consultation"} <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
-              </Button>
+              </Button>}
               {editorial && <Button asChild size="lg" variant="secondary"><a href="mailto:HL@beyondhorizons.sg"><Mail className="mr-2 h-4 w-4" />Email HL@beyondhorizons.sg</a></Button>}
               {exploreLink && (
                 <Button asChild size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10">

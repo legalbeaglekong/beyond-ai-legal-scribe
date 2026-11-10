@@ -21,6 +21,7 @@ const singaporePillars: { label: string; to: string }[] = [
   { label: "Singapore Employment Law", to: "/singapore-employment-law" },
   { label: "Restructuring & Insolvency", to: "/singapore-restructuring-insolvency" },
   { label: "Aviation Law", to: "/singapore-aviation-law" },
+  { label: "Aviation Finance & Leasing", to: "/industry/aviation" },
   { label: "Robotics Law", to: "/singapore-robotics-law" },
   { label: "Alternative Energy", to: "/singapore-alternative-energy-law" },
   { label: "Fractional General Counsel", to: "/industry/fractional-gc" },
