@@ -23,7 +23,7 @@ const BackCover = () => {
           crafted for visionaries shaping the future of transportation.
         </p>
         <p className="text-sm text-gray-700 mb-4 leading-relaxed">
-          Founded by <strong>Hui Ling Teo</strong>, we specialize in high-stakes cross-border 
+          Founded by <strong>Hui Ling Teo</strong>, we advise on high-stakes cross-border 
           transactions under dual English and Singapore law.
         </p>
         

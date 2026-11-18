@@ -48,4 +48,4 @@ export const successionFaqs = [
 ] as const;
 
 export const SUCCESSION_DISCLAIMER =
-  "This page gives general information about the services of Beyond Horizons, a practice group of Bethel Chambers LLC, a Singapore law corporation. It is not legal, tax or financial advice, and reading it does not create a lawyer-client relationship. We advise on Singapore law. Where a matter involves the law of another country, or tax, we work with qualified advisers in that jurisdiction, engaged with your approval. Any engagement is subject to conflict checks, client due diligence and a signed engagement letter.";
+  "This page gives general information about the services of Beyond Horizons, part of Bethel Chambers LLC, a Singapore law practice. It is not legal, tax or financial advice, and reading it does not create a lawyer-client relationship. We advise on Singapore law. Where a matter involves the law of another country, or tax, we work with qualified advisers in that jurisdiction, engaged with your approval. Any engagement is subject to conflict checks, client due diligence and a signed engagement letter.";

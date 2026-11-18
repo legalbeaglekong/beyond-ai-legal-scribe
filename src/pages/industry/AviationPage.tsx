@@ -351,7 +351,7 @@ export const data: IndustryPageData = {
     hideButtons: true,
     afterDescription: <div className="mb-10"><ConsultCallout mailto="mailto:HL@beyondhorizons.sg?subject=Aviation%20finance%20enquiry%20%28industry%2Faviation%2C%20end%29" /></div>,
     note:
-      "Beyond Horizons is a practice group of Bethel Chambers LLC, a Singapore law corporation. This page is general information only. It is not legal advice and does not create a solicitor–client relationship.",
+      "Beyond Horizons is part of Bethel Chambers LLC, a Singapore law practice. This page is general information only. It is not legal advice and does not create a solicitor–client relationship.",
   },
   relatedPages: [
     { title: "Fractional GC", slug: "fractional-gc" },

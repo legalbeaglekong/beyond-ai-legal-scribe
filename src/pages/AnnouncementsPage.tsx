@@ -10,6 +10,48 @@ import snefTalk from "@/assets/snef-hr-forward-talk.jpg.asset.json";
 
 const announcements = [
   {
+    id: 3,
+    title: "Beyond Horizons Speaks at the 5th Marine & Offshore Renewables Forum 2026",
+    date: "10 November 2026",
+    tag: "Speaking Engagement",
+    excerpt:
+      "On 10 November 2026, Hui Ling Teo spoke on “Transboundary Agreements: Navigating Risks and Liabilities” in Session 1 (Policy, Finance & Legal Challenges) of the 5th Marine & Offshore Renewables Forum 2026, organised by MediaComz at Concorde Hotel Singapore, and joined the session’s panel discussion.",
+    content: (
+      <div className="prose prose-sm md:prose-base max-w-none text-muted-foreground leading-relaxed space-y-6">
+        {/* PACK-A-PHOTO-SLOT: leave empty. Add the FC-cleared Pack A photographs (QR-blurred 1 and 2, and 3 and 4) only after the Pack A LinkedIn Page post is live (scheduled Thu 19 Nov 2026 10:25 SGT) and HL has OKed the site use. When photographs are added, add the credit line "Event photographs by MediaComz." directly under them. No placeholder image or text. */}
+
+        <p>
+          At the 5th Marine &amp; Offshore Renewables Forum on 10 November, at Concorde Hotel Singapore, Session 1 put policy, finance and legal challenges on the same panel.
+        </p>
+
+        <div>
+          <p className="text-foreground font-medium mb-2">From Hui Ling's talk, three points for owners, financiers and lessors of offshore assets:</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Money, contracts and investigations all cross borders. Price governance risk segment by segment, and remember that the exposure can be personal for directors.</li>
+            <li>At sea, the flag, the forum and the limitation regime (the rules that cap a shipowner's liability) decide what you recover. Plan insurance, security and evidence before a casualty, not after.</li>
+            <li>Write contracts for the notice and the border. Forum, security, cabotage (rules that reserve domestic sea trade for local vessels), sanctions and war risk clauses should anticipate the event.</li>
+          </ul>
+        </div>
+
+        <p>
+          The longer read behind Hui Ling's talk:{" "}
+          <a href="https://www.insights.beyondhorizons.sg/p/transboundary-agreements-offshore-wind-risk?utm_source=beyondhorizons.sg&utm_medium=referral&utm_campaign=morf-2026-11&utm_content=announcements-morf" target="_blank" rel="noopener" className="text-accent underline underline-offset-4">When offshore wind contracts cross borders, where does the risk land?</a>
+        </p>
+
+        {/* MORF-DECK-SLOT: leave empty. Add the 20-slide Insights deck link only after the deck page is live and HL has OKed it. No placeholder URL or text. */}
+
+        <p className="text-sm italic">Educational only; not legal or financial advice, and no lawyer-client relationship is created.</p>
+
+        <div className="pt-6 border-t border-border">
+          <h4 className="text-base font-serif text-foreground font-medium mb-2">About Beyond Horizons by Bethel Chambers LLC</h4>
+          <p className="text-sm">
+            Beyond Horizons is part of Bethel Chambers LLC, a Singapore law practice.
+          </p>
+        </div>
+      </div>
+    ),
+  },
+  {
     id: 2,
     title: "Beyond Horizons Speaks at SNEF HR Forward Series: Navigating AI in HR — Hire, Manage, Comply",
     date: "28 May 2026",
@@ -53,7 +95,7 @@ const announcements = [
         <div className="pt-6 border-t border-border">
           <h4 className="text-base font-serif text-foreground font-medium mb-2">About Beyond Horizons by Bethel Chambers LLC</h4>
           <p className="text-sm">
-            Beyond Horizons is a Singapore-based boutique law firm specialising in aviation, maritime, space, advanced air mobility, robotics and AI governance. Named in the ALB Singapore Firms to Watch 2026 ranking, the firm provides tailored cross-border legal solutions under English and Singapore law.
+            Beyond Horizons is part of Bethel Chambers LLC, a Singapore law practice. It advises on aviation, maritime, space, advanced air mobility, robotics and AI governance, under English and Singapore law.
           </p>
         </div>
       </div>
@@ -91,7 +133,7 @@ const announcements = [
         </div>
 
         <p>
-          With dual qualification in English and Singapore law and deep cross-border expertise spanning aviation, maritime, space, and advanced air mobility, we are well positioned to support enterprises navigating the commercial and legal complexities of the current tariff environment.
+          Through Hui Ling Teo's qualifications in English and Singapore law, and cross-border work spanning aviation, maritime, space and advanced air mobility, we can assist enterprises navigating the commercial and legal questions raised by the current tariff environment.
         </p>
 
         <h3 className="text-lg font-serif text-foreground mt-8 mb-4">Illustrative Case Studies</h3>
@@ -152,7 +194,7 @@ const announcements = [
         <div className="pt-6 border-t border-border">
           <h4 className="text-base font-serif text-foreground font-medium mb-2">About Beyond Horizons by Bethel Chambers LLC</h4>
           <p className="text-sm">
-            Beyond Horizons is a Singapore-based boutique law firm specialising in aviation, maritime, space, advanced air mobility, and robot law. Named in the ALB Singapore Firms to Watch 2026 ranking, the firm provides tailored cross-border legal solutions under English and Singapore law.
+            Beyond Horizons is part of Bethel Chambers LLC, a Singapore law practice. It advises on aviation, maritime, space, advanced air mobility and robotics law, under English and Singapore law.
           </p>
         </div>
 

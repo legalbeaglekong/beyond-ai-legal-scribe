@@ -5,12 +5,12 @@ const data: IndustryPageData = {
   slug: "wellness-health",
   seo: {
     title: "Wellness & Health Law Singapore — Healthcare Regulation, Digital Health & MedTech | Beyond Horizons by Bethel Chambers",
-    description: "Specialist healthcare and wellness lawyers in Singapore. Medical device regulation, digital health, telemedicine, health data privacy. Beyond Horizons by Bethel Chambers LLC.",
+    description: "Healthcare and wellness lawyers in Singapore. Medical device regulation, digital health, telemedicine, health data privacy. Beyond Horizons by Bethel Chambers LLC.",
   },
   hero: {
     title: "Wellness & Health Law — Healthcare Regulation, Digital Health & MedTech Counsel",
-    subtitle: "Specialised legal expertise for healthcare providers, wellness technology companies, medical device manufacturers, and digital health platforms navigating Asia-Pacific's evolving regulatory landscape.",
-    badges: ["ESG & Green Finance Certified", "Cross-Border Health Regulation Expertise"],
+    subtitle: "Legal advice for healthcare providers, wellness technology companies, medical device manufacturers, and digital health platforms navigating Asia-Pacific's evolving regulatory landscape.",
+    badges: ["ESG and green finance", "Cross-Border Health Regulation Practice"],
   },
   overview: {
     heading: "What We Do in Wellness & Health Law",
@@ -25,10 +25,10 @@ const data: IndustryPageData = {
   spotlight: {
     heading: "The APAC Digital Health Opportunity",
     cards: [
-      { title: "Regulatory Complexity", description: "Rising regulatory complexity — HSA, TGA, PMDA, NMPA frameworks diverging, requiring specialist cross-border navigation." },
+      { title: "Regulatory Complexity", description: "Rising regulatory complexity — HSA, TGA, PMDA, NMPA frameworks diverging, requiring cross-border navigation." },
       { title: "AI in Healthcare", description: "AI-in-healthcare regulation emerging across ASEAN, creating new compliance requirements for digital health platforms." },
     ],
-    analysis: "Navigating this opportunity requires lawyers who understand both the technology and the regulation. Beyond Horizons by Bethel Chambers combines cross-border regulatory expertise with genuine understanding of digital health business models.",
+    analysis: "Navigating this opportunity requires lawyers who understand both the technology and the regulation. Beyond Horizons by Bethel Chambers LLC combines cross-border regulatory practice with genuine understanding of digital health business models.",
   },
   faqs: {
     heading: "Frequently Asked Questions — Wellness & Health Law",
@@ -43,7 +43,8 @@ const data: IndustryPageData = {
   },
   cta: {
     heading: "Navigating health regulation with confidence",
-    description: "From medical device registration to digital health platform structuring, our specialist team is ready to help. Book a free strategic consultation.",
+    description: "From medical device registration to digital health platform structuring, our team is ready to help. Your first consultation is free. To discuss your matter, contact us.",
+    afterDescription: <p className="text-white/85 leading-relaxed mb-10 text-lg drop-shadow-md">The free consultation is a one-time initial discussion for each new matter of up to 30 minutes, subject to a conflict check, to understand your matter and explain how we can help and what it would cost. It is not legal advice on your matter, and you are under no obligation to instruct us. Any advice or work after that is charged as agreed in writing.</p>,
   },
   relatedPages: [
     { title: "Cybersecurity & Emerging Technology", slug: "cybersecurity-tech" },

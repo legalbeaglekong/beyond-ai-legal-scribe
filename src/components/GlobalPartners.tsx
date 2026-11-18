@@ -1,6 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Globe, Users, Building, Scale } from "lucide-react";
+import { Scale } from "lucide-react";
 import VideoBackground from "@/components/VideoBackground";
 import { STOCK_VIDEOS } from "@/lib/stock-videos";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -9,14 +8,7 @@ const GlobalPartners = () => {
   const { t } = useLanguage();
 
   const stats = [
-    { icon: Building, label: t("globalPartners.partnerFirms"), value: "10+" },
-    { icon: Globe, label: t("globalPartners.globalRegions"), value: "4" },
-    { icon: Users, label: t("globalPartners.yearsPartnership"), value: "10+" },
     { icon: Scale, label: "Cross-border matters", value: "APAC" },
-  ];
-
-  const regions = [
-    { name: t("globalPartners.middleEast"), description: t("globalPartners.middleEastDesc") },
   ];
 
   return (
@@ -43,16 +35,6 @@ const GlobalPartners = () => {
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {regions.map((region) => (
-              <Card key={region.name} className="border-border/30 bg-card card-lift hover:border-accent/30">
-                <CardContent className="p-6">
-                  <h3 className="text-base font-serif font-bold text-foreground mb-3">{region.name}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed text-justify">{region.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
 
           <div className="text-center">
             <Button size="lg" className="mr-4 animate-blink-glow" asChild>

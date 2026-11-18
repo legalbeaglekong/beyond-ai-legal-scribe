@@ -8,20 +8,15 @@ interface AccoladeBannerProps {
 
 const accolades = [
   {
-    title: "ALB — Law Firm to Watch 2026",
+    title: "ALB Singapore Firms to Watch 2026",
     org: "Asia Legal Business",
-    url: "https://www.legalbusinessonline.com/",
+    url: "https://www.legalbusinessonline.com/features/rankings-alb-singapore-firms-watch-2026",
     featured: true,
   },
   {
     title: "Chambers Asia-Pacific 2026 — Band 3, Aviation: Finance — Singapore",
     org: "Chambers & Partners",
     url: "https://chambers.com/lawyer/hui-ling-teo-asia-pacific-8:25705527",
-  },
-  {
-    title: "Legal 500 Asia Pacific 2026 — Next Generation Partner, Asset Finance — Singapore",
-    org: "The Legal 500",
-    url: "https://www.legal500.com/c/singapore/asset-finance/lawyers",
   },
 ];
 
@@ -35,10 +30,7 @@ const AccoladeBanner = ({ variant = "inline", className = "", omitTitles = [] }:
             <span className="text-xs uppercase tracking-[0.2em] text-accent font-sans font-medium">Latest Recognition</span>
           </div>
           <p className="text-lg font-serif font-bold text-foreground mb-1">
-            Asia Legal Business — Law Firm to Watch 2026
-          </p>
-          <p className="text-xs text-muted-foreground">
-            Recognised by ALB (Thomson Reuters) for excellence in specialist legal advisory
+            Bethel Chambers — ALB Singapore Firms to Watch 2026
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-3">

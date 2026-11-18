@@ -57,9 +57,9 @@ const WorkPage = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "Our Work — Platforms & Industry Expertise",
+            name: "Our Work — Platforms & Industry Focus",
             url: "https://beyondhorizons.sg/work",
-            description: "Specialist platforms and industry expertise from Beyond Horizons by Bethel Chambers.",
+            description: "Platforms and industry focus from Beyond Horizons by Bethel Chambers LLC.",
             hasPart: [
               ...platforms.map((p) => ({ "@type": "WebSite", name: p.title, url: p.url, description: p.description })),
               ...industryPages.map((p) => ({ "@type": "WebPage", name: p.title, url: `https://beyondhorizons.sg/industry/${p.slug}`, description: p.description })),
@@ -78,10 +78,10 @@ const WorkPage = () => {
               <div className="teal-line mx-auto mb-6" />
               <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-sans drop-shadow">Our Work</p>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 drop-shadow-lg">
-                Platforms & Industry Expertise
+                Platforms & Industry Focus
               </h1>
               <p className="text-base md:text-lg text-white/80 max-w-3xl mx-auto leading-relaxed drop-shadow">
-                Specialist platforms and deep industry expertise — combining global reach with focused legal innovation.
+                Our platforms and industry focus — combining global reach with focused legal innovation.
               </p>
             </div>
           </div>
@@ -92,7 +92,7 @@ const WorkPage = () => {
           <div className="max-w-6xl mx-auto container-padding">
             <div className="text-center mb-12">
               <div className="teal-line mx-auto mb-6" />
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Specialist Platforms</h2>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Our Platforms</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">Purpose-built legal advisory platforms serving distinct markets.</p>
             </div>
             <div className="grid lg:grid-cols-2 gap-6">
@@ -136,8 +136,8 @@ const WorkPage = () => {
           <div className="max-w-6xl mx-auto container-padding">
             <div className="text-center mb-12">
               <div className="teal-line mx-auto mb-6" />
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Industry Expertise</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">Deep specialisation across key sectors.</p>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Industry Focus</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">Focused work across key sectors.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {industryPages.map((page, i) => (

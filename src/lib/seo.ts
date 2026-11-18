@@ -69,12 +69,12 @@ export function createFaqScript(items: readonly FaqItem[]) {
 }
 
 export const STATIC_PAGE_SEO = {
-  "/about": ["About Beyond Horizons | Bethel Chambers LLC", "Beyond Horizons, led by Hui Ling Teo, is a practice group of Bethel Chambers LLC, a Singapore law corporation: aviation finance, AI and corporate counsel."],
+  "/about": ["About Beyond Horizons | Bethel Chambers LLC", "Beyond Horizons by Bethel Chambers LLC, a Singapore law practice, led by Hui Ling Teo: aviation finance, AI and corporate counsel."],
   "/ai-tools": ["AI Legal Tools | Beyond Horizons Singapore", "Explore purpose-built legal tools for regulatory monitoring, contract review, financial modelling and legal operations."],
   "/announcements": ["Announcements | Beyond Horizons by Bethel Chambers", "News, events and practice updates from Beyond Horizons by Bethel Chambers LLC in Singapore."],
   "/ascending-asia": ["Ascending Asia | AAM Market Entry & Section 232 UAS Counsel | Beyond Horizons", "Advanced Air Mobility market-entry guide for APAC — plus Section 232 UAS tariff and content-origin certification issues for suppliers into US programmes. Register for the playbook or schedule a consultation."],
   "/courses": ["Free Legal Courses | Aviation Finance & Jet SPAs", "Free legal and business courses on jet sale agreements, aviation finance, Cape Town, AI contracts and cross-border transactions."],
-  "/expertise": ["Legal Expertise | Beyond Horizons Singapore", "Explore cross-border corporate, finance, regulatory, employment, technology and dispute-resolution legal expertise."],
+  "/expertise": ["Legal Practice Areas | Beyond Horizons Singapore", "Explore cross-border corporate, finance, regulatory, employment, technology and dispute-resolution practice areas."],
   "/privacy": ["Data Protection Notice | Bethel Chambers LLC", "How Bethel Chambers LLC collects, uses, discloses and protects personal data under Singapore's Personal Data Protection Act 2012."],
   "/beyond-precedent": ["Beyond Precedent | Beyond Horizons", "Beyond Precedent explores how law students draft with free AI tools and how Beyond Horizons designs legal services and talent development for a post-AI age — not a job guarantee."],
   "/industry/ai-code-counsel": ["AI Code Counsel Singapore | PDPC GenAI, AI Verify & EU AI Act — Beyond Horizons", "AI governance counsel for Singapore operators — PDPC GenAI notifications, IMDA/FEAT programmes, EU AI Act readiness, and AI×IP issues. Book a consultation."],

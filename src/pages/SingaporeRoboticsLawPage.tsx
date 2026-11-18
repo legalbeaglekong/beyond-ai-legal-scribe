@@ -11,7 +11,7 @@ const SingaporeRoboticsLawPage = () => (
     metaTitle="Robot Leasing & Robotics Financing Lawyer Singapore | RaaS"
     metaDescription="Robot leasing and RaaS contracts, robotics equipment financing and cross-border import/export checks, led from Singapore by asset-finance counsel."
     ogTitle="Singapore Robotics Law — Autonomous Systems, Liability & Commercial"
-    ogDescription="Specialist Singapore robotics counsel for OEMs, integrators, deployers and investors across AVs, service robots and industrial automation."
+    ogDescription="Robot leasing and RaaS contracts, robotics equipment financing and cross-border import/export checks, led from Singapore by asset-finance counsel."
     breadcrumbName="Singapore Robotics Law"
     serviceType="Robotics and Autonomous Systems Law"
     serviceDescription="Robot leasing and Robotics-as-a-Service contracts, robotics equipment financing, import and export control checks, and Singapore autonomous vehicle, safety and liability advice. Beyond Horizons by Bethel Chambers LLC."

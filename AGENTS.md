@@ -25,3 +25,4 @@
 - Store original archived documents as Lovable asset pointers rather than repository binaries; this keeps downloads unchanged and available to the document reader.
 - Pre-optimize dynamically imported document readers in Vite; first-opening an archive must not trigger dependency discovery and reload the preview.
 - Keep the manufacturing contract control pane in a dedicated presentational component; this isolates its dense illustrative data and SVG dependency map from the editorial page template.
+- Gate the header language switcher with SHOW_LANGUAGE_SWITCHER in LanguageContext; while false the site is English-only and stored non-English choices are reset, so it can be re-enabled in one place.

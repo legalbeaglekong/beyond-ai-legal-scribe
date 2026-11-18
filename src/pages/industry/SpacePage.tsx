@@ -5,7 +5,7 @@ const data: IndustryPageData = {
   slug: "space",
   seo: {
     title: "Space Law Singapore — Satellite, Launch & Commercial Space Counsel | Beyond Horizons by Bethel Chambers",
-    description: "Space law specialists in Singapore advising on satellite transactions, launch agreements, orbital debris liability, and commercial space ventures across Asia-Pacific and globally.",
+    description: "Space law counsel in Singapore advising on satellite transactions, launch agreements, orbital debris liability, and commercial space ventures across Asia-Pacific and globally.",
   },
   hero: {
     title: "Space Law — Satellite, Launch & Commercial Space Counsel",
@@ -38,12 +38,13 @@ const data: IndustryPageData = {
       { question: "Do I need regulatory approval to launch a satellite from or operate in Singapore?", answer: "Yes. Most jurisdictions, including Singapore, require licensing for space activities. This may involve spectrum coordination through the ITU, compliance with national space legislation, and adherence to export control regulations such as ITAR or EAR for US-origin components." },
       { question: "What are the key legal risks in commercial space ventures?", answer: "Key risks include launch failure liability, orbital debris obligations, spectrum interference disputes, regulatory non-compliance, insurance coverage gaps, and cross-border intellectual property challenges." },
       { question: "How is liability allocated in space activities?", answer: "Under the Liability Convention, launching states bear international liability for damage caused by their space objects. Commercially, liability is allocated through launch agreements, insurance policies, and cross-waivers of liability between participating parties." },
-      { question: "How does Beyond Horizons by Bethel Chambers price space law work?", answer: "We offer transparent, value-aligned pricing including fixed-fee engagements for regulatory filings, milestone-based pricing for transactions, and retainer arrangements for ongoing advisory — tailored to the pace of the new space economy." },
+      { question: "How does Beyond Horizons by Bethel Chambers price space law work?", answer: "Fees are agreed in writing. They may be a fixed fee for a defined regulatory filing, a fee tied to agreed transaction milestones, or a retainer for ongoing work." },
     ],
   },
   cta: {
     heading: "Ready to discuss your space law needs?",
-    description: "From satellite licensing to launch agreements, our team is ready to guide your mission. Book a free strategic consultation.",
+    description: "From satellite licensing to launch agreements, our team is ready to guide your mission. Your first consultation is free. To discuss your matter, contact us.",
+    afterDescription: <p className="text-white/85 leading-relaxed mb-10 text-lg drop-shadow-md">The free consultation is a one-time initial discussion for each new matter of up to 30 minutes, subject to a conflict check, to understand your matter and explain how we can help and what it would cost. It is not legal advice on your matter, and you are under no obligation to instruct us. Any advice or work after that is charged as agreed in writing.</p>,
   },
   relatedPages: [
     { title: "Aviation", slug: "aviation" },

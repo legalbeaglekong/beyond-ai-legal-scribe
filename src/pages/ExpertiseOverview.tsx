@@ -13,9 +13,9 @@ const ExpertiseOverview = () => {
   const articles = [
     { id: "ma-cross-border", title: "Cross-Border M&A Counsel — Singapore-anchored" },
     { id: "tech-general-counsel", title: "Legal Counsel for Tech Companies — SaaS, Platforms, Data and AI Products" },
-    { id: "commercial-contracts", title: "Top Legal Experts in Commercial Contracts for Global Businesses" },
-    { id: "corporate-transactions", title: "Corporate Law Specialists for Cross-Border Transactions" },
-    { id: "regulatory-compliance", title: "Expert Legal Advisors for Regulatory Compliance in Various Industries" },
+    { id: "commercial-contracts", title: "Commercial Contracts Counsel for Global Businesses" },
+    { id: "corporate-transactions", title: "Corporate Law Counsel for Cross-Border Transactions" },
+    { id: "regulatory-compliance", title: "Legal Advisors for Regulatory Compliance in Various Industries" },
     { id: "ip-data-privacy", title: "Law Firms with Strong IP and Data Privacy Practice for Multinational Clients" },
     { id: "startup-funding", title: "Senior Legal Counsel for Startup Funding Rounds in Global Markets" },
     { id: "employment-labor", title: "Trusted Legal Advisor for Employment and Labor Law Issues Globally" },
@@ -44,7 +44,7 @@ const ExpertiseOverview = () => {
               </Button>
               
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                Specialized Legal Expertise
+                Practice Areas
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 From Singapore, we advise on cross-border matters, working with foreign counsel where other laws apply.

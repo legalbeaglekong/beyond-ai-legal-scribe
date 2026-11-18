@@ -5,7 +5,7 @@ const data: IndustryPageData = {
   slug: "transportation",
   seo: {
     title: "Transportation Law Singapore — Infrastructure, Logistics & Cross-Border Counsel | Beyond Horizons by Bethel Chambers",
-    description: "Specialist transportation lawyers in Singapore. Infrastructure PPPs, logistics contracts, maritime law, cross-border freight. Beyond Horizons by Bethel Chambers LLC.",
+    description: "Transportation lawyers in Singapore. Infrastructure PPPs, logistics contracts, maritime law, cross-border freight. Beyond Horizons by Bethel Chambers LLC.",
   },
   hero: {
     title: "Transportation Law — Infrastructure, Logistics & Cross-Border Trade Counsel",
@@ -36,14 +36,15 @@ const data: IndustryPageData = {
       { question: "What legal issues are common in transportation infrastructure projects?", answer: "Common issues include PPP structuring, regulatory approvals, land acquisition, environmental compliance, construction contract disputes, and multi-jurisdictional financing arrangements." },
       { question: "How does Singapore regulate cross-border logistics operations?", answer: "Singapore regulates logistics through customs, trade facilitation agreements, and sector-specific licensing. Cross-border operations must comply with ASEAN framework agreements and bilateral arrangements." },
       { question: "What is a PPP in transportation law?", answer: "A Public-Private Partnership (PPP) is a contractual arrangement between government and private sector for infrastructure development, including build-operate-transfer, concession, and availability payment models." },
-      { question: "Do I need specialist transport lawyers for supply chain contracts?", answer: "Specialist transport lawyers understand the unique risks in logistics — cargo liability, warehousing regulations, customs compliance, and technology integration — that generalist commercial lawyers may overlook." },
+      { question: "Do I need transport lawyers for supply chain contracts?", answer: "Transport lawyers understand the unique risks in logistics — cargo liability, warehousing regulations, customs compliance, and technology integration — that generalist commercial lawyers may overlook." },
       { question: "What international conventions apply to cross-border freight?", answer: "Key conventions include the CMR (road), CIM-COTIF (rail), Hague-Visby Rules and Rotterdam Rules (maritime), and Montreal Convention (air), each governing liability and documentation requirements." },
-      { question: "How does Beyond Horizons price transportation legal work?", answer: "We offer transparent pricing including fixed-fee packages for defined scope work and capped-fee arrangements, providing cost certainty on complex transportation matters." },
+      { question: "How does Beyond Horizons price transportation legal work?", answer: "Scope and fees are agreed in writing before work begins." },
     ],
   },
   cta: {
     heading: "Let's move your transport project forward",
-    description: "From infrastructure PPPs to cross-border logistics, our specialist team is ready to help. Book a free strategic consultation.",
+    description: "From infrastructure PPPs to cross-border logistics, our team is ready to help. Your first consultation is free. To discuss your matter, contact us.",
+    afterDescription: <p className="text-white/85 leading-relaxed mb-10 text-lg drop-shadow-md">The free consultation is a one-time initial discussion for each new matter of up to 30 minutes, subject to a conflict check, to understand your matter and explain how we can help and what it would cost. It is not legal advice on your matter, and you are under no obligation to instruct us. Any advice or work after that is charged as agreed in writing.</p>,
   },
   relatedPages: [
     { title: "aviation finance and leasing", slug: "aviation" },

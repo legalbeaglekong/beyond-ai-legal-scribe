@@ -11,7 +11,7 @@ const SingaporeAlternativeEnergyPage = () => (
     metaTitle="Singapore Renewable Energy Lawyer — Imports, Hydrogen | Beyond Horizons"
     metaDescription="Singapore alternative energy counsel: cross-border electricity imports (EMA), solar PV, hydrogen/ammonia, BESS, Article 6 carbon credits and green project finance."
     ogTitle="Singapore Alternative Energy Law — Transition Infrastructure & Finance"
-    ogDescription="Specialist Singapore energy-transition counsel for developers, financiers, offtakers and corporates."
+    ogDescription="Counsel for electricity imports, solar, hydrogen, battery storage, carbon credits and green project finance in Singapore."
     breadcrumbName="Singapore Alternative Energy Law"
     serviceType="Energy and Infrastructure Law"
     serviceDescription="Singapore alternative and renewable energy legal counsel — electricity imports, solar PV, hydrogen and ammonia, BESS, REC frameworks and Article 6 carbon."
@@ -36,7 +36,8 @@ const SingaporeAlternativeEnergyPage = () => (
     relatedKeywords={["energy", "renewable", "solar", "hydrogen", "ammonia", "ema", "bess", "battery", "carbon", "article 6", "transition"]}
     relatedHeading="Related Insights — Alternative & Renewable Energy"
     ctaHeading="Schedule a Singapore Energy Transition Consultation"
-    ctaBody="Whether you are bidding for an import allocation, structuring an offtake, or anchoring a hydrogen project, we can help. Book a complimentary strategic consultation."
+    ctaNote="The free consultation is a one-time initial discussion for each new matter of up to 30 minutes, subject to a conflict check, to understand your matter and explain how we can help and what it would cost. It is not legal advice on your matter, and you are under no obligation to instruct us. Any advice or work after that is charged as agreed in writing."
+    ctaBody="Whether you are bidding for an import allocation, structuring an offtake, or anchoring a hydrogen project, we can help. Your first consultation is free. To discuss your matter, contact us."
     exploreLink={{ label: "Explore our Energy Practice", to: "/industry/energy-transition" }}
     lastUpdatedISO="2026-06-09"
     lastUpdatedLabel="June 2026"

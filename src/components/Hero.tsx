@@ -39,7 +39,7 @@ const Hero = () => {
             </Link>
           ))}
         </nav>
-        <AccoladeBanner omitTitles={["ALB — Law Firm to Watch 2026"]} variant="inline" className="mt-10 max-w-2xl mx-auto" />
+        <AccoladeBanner omitTitles={["ALB Singapore Firms to Watch 2026"]} variant="inline" className="mt-10 max-w-2xl mx-auto" />
       </div>
 
       <div className="px-4 md:px-8 pb-16">

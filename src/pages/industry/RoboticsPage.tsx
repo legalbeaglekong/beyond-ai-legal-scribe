@@ -36,7 +36,7 @@ const data: IndustryPageData = {
     cards: [
       { icon: TrendingUp, title: "Market Growth", description: "Robot leasing and RaaS models continue to expand across industrial, service, and autonomous deployments." },
       { icon: MapPin, title: "Singapore Investment", description: "Singapore investing heavily in robotics adoption through the National Robotics Programme, driving demand for legal frameworks." },
-      { icon: AlertTriangle, title: "Liability Gap", description: "Liability and insurance frameworks lagging behind deployment, creating urgent need for specialist legal structuring." },
+      { icon: AlertTriangle, title: "Liability Gap", description: "Liability and insurance frameworks lagging behind deployment, creating urgent need for legal structuring." },
     ],
     analysis: "The robotics legal landscape is evolving rapidly. Early legal structuring — drawing on proven asset finance frameworks — gives companies a competitive advantage in deploying and financing robotics at scale.",
   },

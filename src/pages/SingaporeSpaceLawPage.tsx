@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     q: "How does Beyond Horizons by Bethel Chambers price Singapore space law engagements?",
-    a: "We offer transparent, value-aligned pricing — fixed fees for regulatory filings and licensing, milestone-based pricing for satellite and launch transactions, and retainer arrangements for ongoing advisory tailored to the pace of the new space economy.",
+    a: "Fees are agreed in writing. They may be a fixed fee for a defined regulatory filing or licence application, a fee tied to agreed milestones on a satellite or launch transaction, or a retainer for ongoing work.",
   },
 ];
 
@@ -256,7 +256,10 @@ const SingaporeSpaceLawPage = () => {
           <div className="container mx-auto px-6 max-w-3xl text-center">
             <h2 className="font-serif text-3xl md:text-4xl mb-4">Schedule a Singapore Space Law Consultation</h2>
             <p className="text-primary-foreground/85 text-lg mb-8">
-              From OSTIn engagement to satellite licensing and launch agreements, our team is ready to support your mission. Book a complimentary strategic consultation.
+              From OSTIn engagement to satellite licensing and launch agreements, our team is ready to support your mission. Your first consultation is free. To discuss your matter, contact us.
+            </p>
+            <p className="text-primary-foreground/85 text-lg mb-8">
+              The free consultation is a one-time initial discussion for each new matter of up to 30 minutes, subject to a conflict check, to understand your matter and explain how we can help and what it would cost. It is not legal advice on your matter, and you are under no obligation to instruct us. Any advice or work after that is charged as agreed in writing.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">

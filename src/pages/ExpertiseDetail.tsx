@@ -26,7 +26,7 @@ const acraSection = (
           <li><strong className={st}>Accounting firms.</strong> Public accountants may renew their registration for one, two or three years, and professional indemnity insurance requirements are extended to accounting firms run as sole proprietorships or partnerships. These do not change what an ordinary company files.</li>
         </ul>
         <p><strong className={st}>Plain reading.</strong> For a lean company, the practical step is usually a records check in Bizfile before the next annual return, and a short note on who handles inspection requests. A fractional general counsel can run that check as part of a retainer. If that would be useful, you are welcome to write to <a href="mailto:HL@beyondhorizons.sg" className={ac}>HL@beyondhorizons.sg</a>.</p>
-        <p><em>General information on Singapore law as at October 2026, based on <Ext href="https://www.acra.gov.sg/news-events/news-announcements/commencement-of-key-changes-under-the-corporate-and-accounting-laws--amendment--act-2025-on-20-october-2026/">ACRA's notice of 6 October 2026</Ext>; not legal advice. Check ACRA's notice and the Act for the full position. Beyond Horizons by Bethel Chambers LLC is a Singapore law practice group, not an English law firm.</em></p>
+        <p><em>General information on Singapore law as at October 2026, based on <Ext href="https://www.acra.gov.sg/news-events/news-announcements/commencement-of-key-changes-under-the-corporate-and-accounting-laws--amendment--act-2025-on-20-october-2026/">ACRA's notice of 6 October 2026</Ext>; not legal advice. Check ACRA's notice and the Act for the full position. Beyond Horizons by Bethel Chambers LLC is a Singapore law practice, not an English law firm.</em></p>
       </div>
     </div>
   </section>
@@ -35,15 +35,15 @@ const acraSection = (
 export const maFaqs = [
   {
     question: "Are you a Singapore tax lawyer firm?",
-    answer: "Beyond Horizons by Bethel Chambers LLC is a corporate and commercial practice group. We often advise on cross-border tax and structuring issues inside transactions (M&A, investments, group reorganisations). We do not hold out as a full-service tax controversies boutique focused only on IRAS litigation. If your matter is primarily a tax dispute, personal tax filing, or transfer-pricing controversy, we may refer or work alongside specialist tax counsel or advisers.",
+    answer: "Beyond Horizons by Bethel Chambers LLC is a corporate and commercial practice. We often advise on cross-border tax and structuring issues inside transactions (M&A, investments, group reorganisations). We do not hold out as a full-service tax controversies boutique focused only on IRAS litigation. If your matter is primarily a tax dispute, personal tax filing, or transfer-pricing controversy, we may refer or work alongside tax counsel or advisers.",
   },
   {
     question: "What tax-related help do you give on cross-border M&A?",
     answer: "Typically: flagging structuring and jurisdictional issues in diligence, coordinating with tax advisers on the deal timeline, reflecting tax allocation and covenant points in transaction documents, and aligning Singapore / English-law workstreams with overseas counsel. Exact scope depends on the deal — we do not quote a fixed tax “package” on this page.",
   },
   {
-    question: "When should I hire a specialist tax lawyer or Big Four tax team instead?",
-    answer: "Often when you need IRAS investigations or appeals, complex transfer pricing controversies, tax opinion letters as the main deliverable, or compliance filings and returns. Dedicated tax partners at large firms and Big Four tax practices are built for that lane. We remain useful when the buying moment is the deal and you want counsel who can run the transaction while plugging into tax specialists.",
+    question: "When should I hire a tax lawyer or Big Four tax team instead?",
+    answer: "Often when you need IRAS investigations or appeals, complex transfer pricing controversies, tax opinion letters as the main deliverable, or compliance filings and returns. Dedicated tax partners at large firms and Big Four tax practices are built for that lane. We remain useful when the buying moment is the deal and you want counsel who can run the transaction while plugging into tax counsel or advisers.",
   },
   {
     question: "Can Beyond Horizons help if my issue is a company deal or restructuring?",
@@ -124,7 +124,7 @@ const ExpertiseDetail = () => {
       ]
     },
     "commercial-contracts": {
-      title: "Top Legal Experts in Commercial Contracts for Global Businesses",
+      title: "Commercial Contracts Counsel for Global Businesses",
       content: "For businesses operating across borders, well-drafted commercial contracts are vital. Careful drafting helps make contracts clear and workable. Beyond Horizons by Bethel Chambers LLC advises on commercial contracts.",
       highlights: [
         "Sales, supply, and distribution agreements designed for multiple legal regimes",
@@ -134,7 +134,7 @@ const ExpertiseDetail = () => {
       ]
     },
     "corporate-transactions": {
-      title: "Corporate Law Specialists for Cross-Border Transactions",
+      title: "Corporate Law Counsel for Cross-Border Transactions",
       content: "Cross-border deals raise regulatory, tax and governance issues that need coordinated advice; advice on laws other than Singapore and English law is obtained from foreign counsel. Beyond Horizons by Bethel Chambers LLC advises on cross-border corporate transactions from Singapore.",
       highlights: [
         "Navigating foreign investment and antitrust regulations",
@@ -145,7 +145,7 @@ const ExpertiseDetail = () => {
       ]
     },
     "regulatory-compliance": {
-      title: "Expert Legal Advisors for Regulatory Compliance in Various Industries",
+      title: "Legal Advisors for Regulatory Compliance in Various Industries",
       content: "Industries such as finance, healthcare, energy, and technology face intricate regulatory environments across jurisdictions. Legal advice can help organisations manage compliance risk. Beyond Horizons by Bethel Chambers LLC advises on regulatory compliance.",
       highlights: [
         "Interpret and apply relevant laws and regulations",
@@ -168,7 +168,7 @@ const ExpertiseDetail = () => {
     },
     "startup-funding": {
       title: "Senior Legal Counsel for Startup Funding Rounds in Global Markets",
-      content: "Startup funding rounds are critical junctures requiring expert legal guidance to structure deals, protect investor and founder interests, and comply with jurisdictional laws. Beyond Horizons by Bethel Chambers LLC advises startups and investors from Singapore.",
+      content: "Startup funding rounds are critical junctures requiring legal guidance to structure deals, protect investor and founder interests, and comply with jurisdictional laws. Beyond Horizons by Bethel Chambers LLC advises startups and investors from Singapore.",
       highlights: [
         "Drafting and negotiation of term sheets, subscription agreements, and shareholder agreements",
         "Regulatory compliance advice tailored to venture capital and private equity frameworks",
@@ -304,7 +304,7 @@ const ExpertiseDetail = () => {
               </h1>
               {showMaFaqs && (
                 <p className="text-lg leading-relaxed text-muted-foreground text-left">
-                  <strong className="text-foreground">In short.</strong> Beyond Horizons by Bethel Chambers LLC acts as Singapore-based counsel on cross-border mergers and acquisitions: due diligence across legal systems, purchase and merger agreements, regulatory and antitrust clearance coordination, and how deal structures interact with tax. Singapore law advice is given directly; English law input is given through Hui Ling Teo, who is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore; and advice on other laws, including local tax, is obtained from and coordinated with foreign counsel. We will say when a matter needs a specialist tax or disputes team instead. Beyond Horizons by Bethel Chambers LLC is a Singapore law practice group, not an English law firm.
+                  <strong className="text-foreground">In short.</strong> Beyond Horizons by Bethel Chambers LLC acts as Singapore-based counsel on cross-border mergers and acquisitions: due diligence across legal systems, purchase and merger agreements, regulatory and antitrust clearance coordination, and how deal structures interact with tax. Singapore law advice is given directly; English law input is given through Hui Ling Teo, who is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore; and advice on other laws, including local tax, is obtained from and coordinated with foreign counsel. We will say when a matter needs a tax or disputes team instead. Beyond Horizons by Bethel Chambers LLC is a Singapore law practice, not an English law firm.
                 </p>
               )}
             </div>
@@ -328,7 +328,7 @@ const ExpertiseDetail = () => {
                     
                     {id === "tech-general-counsel" && (<>{/* Tech-company answer */}<h2 className="text-2xl font-bold mb-6 text-foreground">What does legal counsel for a tech company in Singapore cover?</h2><p className="text-lg leading-relaxed text-muted-foreground mb-8">For SaaS, platform, data and AI product companies, it usually covers four strands of work: product counsel; customer terms and privacy, including compliance with Singapore's PDPA; IP and licensing; and technology commercial contracts such as SaaS and vendor agreements. Beyond Horizons by Bethel Chambers LLC advises on these from Singapore and coordinates foreign counsel for other regimes.</p></>)}
                     <h3 className="text-2xl font-bold mb-6 text-foreground">
-                      Key Areas of Expertise
+                      Key Practice Areas
                     </h3>
                     
                     <ul className="space-y-4">
@@ -345,7 +345,7 @@ const ExpertiseDetail = () => {
 
                     {showMaFaqs && (
                       <p className="mt-8 text-muted-foreground leading-relaxed">
-                        On tax, we advise as <strong className="text-foreground">corporate / transactional counsel</strong> on how deals and structures interact with tax issues across borders. We are not a substitute for a dedicated tax disputes practice or Big Four return preparation — and we will say so when you need that specialist lane.
+                        On tax, we advise as <strong className="text-foreground">corporate / transactional counsel</strong> on how deals and structures interact with tax issues across borders. We are not a substitute for a dedicated tax disputes practice or Big Four return preparation — and we will say so when you need that tax lane.
                       </p>
                     )}
                     

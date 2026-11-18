@@ -56,7 +56,8 @@ const SingaporeRestructuringPage = () => (
     relatedKeywords={["restructuring", "insolvency", "scheme", "judicial management", "irda", "distressed", "workout", "creditor", "default"]}
     relatedHeading="Related Insights — Restructuring & Insolvency"
     ctaHeading="Schedule a Singapore Restructuring Consultation"
-    ctaBody="If you are facing covenant pressure, contemplating a scheme, or evaluating a distressed opportunity, we can help you move quickly and decisively. Book a complimentary strategic consultation."
+    ctaNote="The free consultation is a one-time initial discussion for each new matter of up to 30 minutes, subject to a conflict check, to understand your matter and explain how we can help and what it would cost. It is not legal advice on your matter, and you are under no obligation to instruct us. Any advice or work after that is charged as agreed in writing."
+    ctaBody="If you are facing covenant pressure, contemplating a scheme, or evaluating a distressed opportunity, we can help. Your first consultation is free. To discuss your matter, contact us."
     exploreLink={{ label: "Explore our Practice", to: "/expertise" }}
     lastUpdatedISO="2026-10-12"
     lastUpdatedLabel="June 2026"

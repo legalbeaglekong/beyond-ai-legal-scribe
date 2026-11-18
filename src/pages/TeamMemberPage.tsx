@@ -48,7 +48,7 @@ const teamData: Record<string, {
       "Seasoned legal professional with over 14 years of experience in corporate and finance work",
       "Has acted on merger and acquisition transactions",
       "Well-versed in commercial negotiations",
-      "Expertise in corporate and finance areas such as debt restructuring, blended finance, sale, purchase, leasing and trading of machinery",
+      "Work in corporate and finance areas such as debt restructuring, blended finance, sale, purchase, leasing and trading of machinery",
       "Hui Ling Teo — Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore).",
     ],
     highlightsZh: [
@@ -225,7 +225,15 @@ const TeamMemberPage = () => {
                 <div>
                   <h2 className="text-sm uppercase tracking-[0.2em] text-accent mb-4 font-sans">Publications</h2>
                   <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>Hui Ling Teo wrote “<a href="https://www.insights.beyondhorizons.sg/p/transboundary-agreements-offshore-wind-risk?utm_source=beyondhorizons.sg&utm_medium=referral&utm_campaign=morf-2026-11&utm_content=hl-profile-publications" target="_blank" rel="noopener" className="text-accent underline underline-offset-4">When offshore wind contracts cross borders, where does the risk land?</a>”, five lessons from her talk on transboundary agreements at the Marine &amp; Offshore Renewables Forum 2026 in Singapore, published on Beyond Horizons Insights in November 2026.</li>
+                    {/* MORF-DECK-SLOT: leave empty. Add the 20-slide Insights deck link only after the deck page is live and HL has OKed it. No placeholder URL or text. */}
                     <li>Hui Ling Teo wrote <a href="https://www.reedsmith.com/articles/esg-issues-for-aerospace-defense-companies/" target="_blank" rel="noopener" className="text-accent underline underline-offset-4">“ESG Issues for Aerospace &amp; Defense Companies”</a>, an overview and checklist for Bloomberg Law’s ESG Toolkits, published in July 2023 while she was at Reed Smith.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h2 className="text-sm uppercase tracking-[0.2em] text-accent mb-4 font-sans">Speaking</h2>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>On 10 November 2026, Hui Ling Teo spoke on “Transboundary Agreements: Navigating Risks and Liabilities” in Session 1 (Policy, Finance &amp; Legal Challenges) of the 5th Marine &amp; Offshore Renewables Forum 2026, organised by MediaComz at Concorde Hotel Singapore, and joined the session’s panel discussion.</li>
                   </ul>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">

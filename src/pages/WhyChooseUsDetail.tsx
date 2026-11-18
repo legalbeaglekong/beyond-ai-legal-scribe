@@ -16,15 +16,15 @@ const WhyChooseUsDetail = () => {
       title: "Beyond Horizons: Digital-First Legal Services",
       gradient: "from-blue-600 to-purple-600",
       content: {
-        intro: "Beyond Horizons by Bethel Chambers LLC stands at the forefront of digital-first legal services in Singapore and beyond. Founded in 2024 by Hui Ling Teo, our firm was built from the ground up to leverage modern technology deeply integrated into every aspect of legal practice.",
+        intro: "Beyond Horizons by Bethel Chambers LLC is a digital-first law practice in Singapore. Founded in 2024 by Hui Ling Teo, our firm was built from the ground up to leverage modern technology deeply integrated into every aspect of legal practice.",
         highlights: [
           "Founded in 2024 with technology integration as core architecture",
           "Workflows designed specifically for digital optimization",
           "Advanced data security protocols built for modern environments",
           "Client communications enhanced through digital capabilities"
         ],
-        analysis: "Beyond Horizons designed its workflows, data security protocols, and client communications to maximize technology benefits while maintaining strict confidentiality and legal privilege. Our modern approach delivers unprecedented cost efficiency, faster turnaround times, and enhanced accuracy. We regularly collaborate with Magic Circle and White Shoe firms globally, demonstrating our ability to meet the highest international standards while driving innovation.",
-        conclusion: "Choosing Beyond Horizons means choosing a future-focused law firm that combines legal experience with technology."
+        analysis: "Beyond Horizons designed its workflows, data security protocols, and client communications to maximize technology benefits while maintaining strict confidentiality and legal privilege. Our work uses modern workflows.",
+        conclusion: "Choosing Beyond Horizons means choosing a future-focused law practice that combines legal experience with technology."
       }
     },
     "cost-efficiency": {
@@ -32,14 +32,14 @@ const WhyChooseUsDetail = () => {
       title: "Cost Efficiency and Client Focus",
       gradient: "from-green-600 to-blue-600",
       content: {
-        intro: "At Beyond Horizons by Bethel Chambers LLC, we understand that clients expect more than just legal advice — they want value, transparency, and speed. By utilizing efficient modern workflows, we keep overhead costs low.",
+        intro: "At Beyond Horizons by Bethel Chambers LLC, we understand that clients expect more than just legal advice — they want clear advice and a defined scope of work. By utilizing efficient modern workflows, we keep overhead costs low.",
         highlights: [
-          "Competitive and transparent pricing structure",
+          "Scope and fees agreed in writing before work begins",
           "Lean operations through efficient digital workflows",
-          "Rapid response times and thorough due diligence",
+          "Thorough due diligence",
           "Clear communication throughout legal processes"
         ],
-        analysis: "Our lean structure and efficient workflows allow us to offer competitive and transparent pricing without compromising quality. Clients benefit from rapid responses, thorough due diligence, and clear communication throughout the process. This approach ensures that proven legal services are accessible to a broader range of clients — from high-growth startups to established multinational corporations — with fees set out in the engagement letter.",
+        analysis: "Scope and fees are agreed in writing before work begins. We keep in touch throughout the work, and fees are set out in the engagement letter.",
         conclusion: "We aim to combine operational efficiency with careful legal work."
       }
     },
@@ -72,7 +72,7 @@ const WhyChooseUsDetail = () => {
           "Client data is handled on controlled platforms"
         ],
         analysis: "Our comprehensive approach ensures that all data processing occurs within secure, lawyer-controlled environments. This preserves the essential legal privilege and builds trust with our clients through robust security measures.",
-        conclusion: "Choosing Beyond Horizons means partnering with a law firm that safeguards your information as fiercely as it advances your legal objectives."
+        conclusion: "Choosing Beyond Horizons means working with a law practice that treats your information as confidential."
       }
     }
   };

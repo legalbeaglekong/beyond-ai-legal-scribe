@@ -9,8 +9,8 @@ const data: IndustryPageData = {
   },
   hero: {
     title: "Blockchain & Digital Assets Law — Token Regulation, DeFi & Web3 Counsel",
-    subtitle: "Cutting-edge legal frameworks for blockchain ventures, digital asset issuers, crypto exchanges, and Web3 projects — with certified blockchain technology expertise and deep understanding of MAS regulatory requirements.",
-    badges: ["Blockchain Technology Certified", "MAS Regulatory Expertise", "Cross-Border Token Structuring"],
+    subtitle: "Cutting-edge legal frameworks for blockchain ventures, digital asset issuers, crypto exchanges, and Web3 projects — with blockchain technology knowledge and deep understanding of MAS regulatory requirements.",
+    badges: ["Blockchain technology", "MAS Regulatory Practice", "Cross-Border Token Structuring"],
   },
   overview: {
     heading: "What We Do in Blockchain & Digital Assets Law",
@@ -20,7 +20,7 @@ const data: IndustryPageData = {
       { icon: Coins, title: "Token Offerings & Structuring", description: "Security token offerings (STOs), utility token classifications, real-world asset (RWA) tokenisation, and cross-border token distribution frameworks." },
       { icon: Layers, title: "DeFi Legal Frameworks", description: "Decentralised finance protocol governance, DeFi lending/borrowing legal structures, yield farming compliance, and cross-border DeFi regulatory analysis." },
     ],
-    stats: ["Blockchain Technology Certified", "MAS PSA licensing expertise", "RWA tokenisation pioneer — aircraft asset tokenisation", "Multi-jurisdictional token structuring"],
+    stats: ["Blockchain technology", "MAS PSA licensing advice", "RWA tokenisation pioneer — aircraft asset tokenisation", "Multi-jurisdictional token structuring"],
   },
   spotlight: {
     heading: "Pioneering RWA Tokenisation in Aviation",
@@ -41,7 +41,7 @@ const data: IndustryPageData = {
   },
   cta: {
     heading: "Building on blockchain? Build on solid legal ground.",
-    description: "From token structuring to MAS licensing, our blockchain-certified team is ready to help. Book a free strategic consultation.",
+    description: "From token structuring to MAS licensing, our team can help. To discuss a matter, email HL@beyondhorizons.sg.",
   },
   relatedPages: [
     { title: "Cybersecurity & Emerging Technology", slug: "cybersecurity-tech" },

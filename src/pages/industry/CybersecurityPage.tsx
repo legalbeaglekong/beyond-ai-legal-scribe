@@ -5,12 +5,12 @@ const data: IndustryPageData = {
   slug: "cybersecurity-tech",
   seo: {
     title: "Cybersecurity & Emerging Technology Law Singapore — Data Protection, AI & Cyber Risk | Beyond Horizons by Bethel Chambers",
-    description: "Specialist cybersecurity and AI governance lawyers in Singapore. PDPA, Cybersecurity Act, AI regulation, data protection. Beyond Horizons by Bethel Chambers LLC.",
+    description: "Cybersecurity and AI governance lawyers in Singapore. PDPA, Cybersecurity Act, AI regulation, data protection. Beyond Horizons by Bethel Chambers LLC.",
   },
   hero: {
     title: "Cybersecurity & Emerging Technology Law — Data Protection, AI Governance & Cyber Risk Counsel",
     subtitle: "Advising on data protection, cybersecurity governance, AI regulation, and emerging technology risks — from Singapore's Cybersecurity Act compliance to cross-border data transfer frameworks and AI liability.",
-    badges: ["Blockchain Technology Certified", "AI Governance & Regulation", "Cross-Border Data Protection"],
+    badges: ["Blockchain technology", "AI Governance & Regulation", "Cross-Border Data Protection"],
   },
   overview: {
     heading: "What We Do in Cybersecurity & Emerging Technology Law",
@@ -20,7 +20,7 @@ const data: IndustryPageData = {
       { icon: Brain, title: "AI Regulation & Liability", description: "Singapore's Model AI Governance Framework implementation, AI ethics advisory, algorithmic accountability, and AI-related liability structuring." },
       { icon: Server, title: "Critical Infrastructure Defence", description: "Legal frameworks for critical infrastructure protection, OT/IT convergence governance, supply chain cybersecurity requirements, and government security clearance processes." },
     ],
-    stats: ["PDPA & cross-border data protection expertise", "AI governance framework advisory", "Cybersecurity Act compliance", "Blockchain Technology Certified"],
+    stats: ["PDPA & cross-border data protection advice", "AI governance framework advisory", "Cybersecurity Act compliance", "Blockchain technology"],
   },
   spotlight: {
     heading: "When AI Pushes Back — Legal Reflections",
@@ -43,7 +43,8 @@ const data: IndustryPageData = {
   },
   cta: {
     heading: "Secure your technology — and your legal position",
-    description: "From cybersecurity governance to AI regulation, our specialist team is ready to help. Book a free strategic consultation.",
+    description: "From cybersecurity governance to AI regulation, our team is ready to help. Your first consultation is free. To discuss your matter, contact us.",
+    afterDescription: <p className="text-white/85 leading-relaxed mb-10 text-lg drop-shadow-md">The free consultation is a one-time initial discussion for each new matter of up to 30 minutes, subject to a conflict check, to understand your matter and explain how we can help and what it would cost. It is not legal advice on your matter, and you are under no obligation to instruct us. Any advice or work after that is charged as agreed in writing.</p>,
   },
   relatedPages: [
     { title: "Blockchain & Digital Assets", slug: "blockchain-digital-assets" },

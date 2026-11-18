@@ -18,7 +18,6 @@ const AboutPage = () => {
   const achievements = [
     { icon: Award, title: "Chambers Asia-Pacific 2026", description: "Band 3, Aviation: Finance — Singapore", highlight: "Chambers & Partners" },
     { icon: TrendingUp, title: "Legal 500 Recognition", description: "Hui Ling Teo — Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore).", highlight: "" },
-    { icon: Users, title: "Business Today 2023", description: "Named in Business Today's 2023 list of the \"Top 10 Influential Aviation Finance Lawyers Revolutionizing Singapore's Industry\".", highlight: "" },
     { icon: BookOpen, title: <a href="https://www.reedsmith.com/articles/esg-issues-for-aerospace-defense-companies/" target="_blank" rel="noopener noreferrer" className="hover:underline">Bloomberg Law contributor: ESG Issues for Aerospace &amp; Defense Companies (2023)</a>, description: "Strategic Business Advisory & ESG Implementation", highlight: "Thought Leadership" },
   ];
 
@@ -33,7 +32,7 @@ const AboutPage = () => {
             "@type": "AboutPage",
             name: "About Beyond Horizons by Bethel Chambers",
             url: "https://beyondhorizons.sg/about",
-            description: "Beyond Horizons by Bethel Chambers LLC is a Singapore law practice group. Founder Hui Ling Teo is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore.",
+            description: "Beyond Horizons by Bethel Chambers LLC, a Singapore law practice, led by Hui Ling Teo: aviation finance, AI and corporate counsel.",
             mainEntity: {
               "@type": "Organization",
               name: "Beyond Horizons by Bethel Chambers LLC",
@@ -61,7 +60,7 @@ const AboutPage = () => {
           <div className="min-h-[60vh] flex items-center justify-center w-full pt-20">
             <div className="max-w-4xl mx-auto container-padding text-center">
               <div className="teal-line mx-auto mb-6" />
-              <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-sans drop-shadow">Global Authority</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-sans drop-shadow">Our team</p>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 drop-shadow-lg">
                 Meet Your Legal Team
               </h1>
@@ -84,7 +83,7 @@ const AboutPage = () => {
               <div className="teal-line mb-6" />
               <h2 className="text-3xl font-serif font-bold text-foreground">Genesis Story</h2>
               <p className="text-muted-foreground leading-relaxed">
-                In 2024, our founding team with decades of big law experience saw a unique opportunity: to build a new kind of law team from the ground up — lawyers united by one mission: to redesign legal services for tomorrow's visionaries.
+                In 2024, our founding team saw a unique opportunity: to build a new kind of law team from the ground up — lawyers united by one mission: to redesign legal services for tomorrow's visionaries.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 We built Beyond Horizons by Bethel Chambers to deliver cost-effective, precise, and innovative legal solutions. Our approach uses lean, digital workflows to deliver legal services efficiently.

@@ -1,5 +1,8 @@
 import React, { createContext, useContext, useState } from "react";
 
+/** Set to true to show the header language switcher again; while false the site is English-only. */
+export const SHOW_LANGUAGE_SWITCHER = false;
+
 export type Language = "en" | "zh" | "ja" | "ko" | "ms" | "fr" | "es" | "pt" | "ar" | "hi" | "th";
 
 export const LANGUAGE_OPTIONS: { code: Language; label: string; nativeLabel: string }[] = [
@@ -39,6 +42,12 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const [language, setLanguageState] = useState<Language>("en");
 
   React.useEffect(() => {
+    if (!SHOW_LANGUAGE_SWITCHER) {
+      if (localStorage.getItem("site-language") !== null && localStorage.getItem("site-language") !== "en") {
+        localStorage.setItem("site-language", "en");
+      }
+      return;
+    }
     const stored = localStorage.getItem("site-language") as Language | null;
     if (stored && stored !== "en") setLanguageState(stored);
   }, []);

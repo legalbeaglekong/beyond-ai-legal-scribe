@@ -345,8 +345,8 @@ const CoursesPage = () => {
         <section className="py-10 bg-background">
           <div className="max-w-4xl mx-auto container-padding">
             <p className="text-xs text-muted-foreground leading-relaxed">
-              Beyond Horizons is a practice group of Bethel Chambers LLC, a Singapore law
-              corporation. Content on this page and the linked courses is general educational
+              Beyond Horizons is part of Bethel Chambers LLC, a Singapore law
+              practice. Content on this page and the linked courses is general educational
               information only. It is not legal advice and does not create a solicitor–client
               relationship.
             </p>

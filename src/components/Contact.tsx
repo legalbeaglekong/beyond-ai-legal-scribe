@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Mail, Calendar, ArrowRight, Globe, Clock, MessageCircle } from "lucide-react";
+import { MapPin, Mail, Calendar, ArrowRight, Globe, MessageCircle } from "lucide-react";
 import VideoBackground from "@/components/VideoBackground";
 import { useLanguage } from "@/i18n/LanguageContext";
 import contactBanner from "@/assets/contact-banner.jpg";
@@ -13,7 +13,7 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: MapPin, title: t("contact.singaporeOffice"), details: [ADDRESS_PARTS.streetAddress, `${ADDRESS_PARTS.addressLocality} ${ADDRESS_PARTS.postalCode}`] },
-    { icon: Mail, title: t("contact.email"), details: ["HL@beyondhorizons.sg", t("contact.emailResponse")] },
+    { icon: Mail, title: t("contact.email"), details: ["HL@beyondhorizons.sg"] },
     { icon: MessageCircle, title: t("contact.whatsapp"), details: [t("contact.whatsappChat"), t("contact.whatsappDesc")] },
     { icon: Globe, title: t("contact.globalPartnersLabel"), details: [t("contact.globalPartnersDesc1"), t("contact.globalPartnersDesc2")] },
   ];
@@ -59,6 +59,31 @@ const Contact = () => {
                   </div>
                 ))}
               </div>
+              <div>
+                <h4 className="text-sm font-sans font-bold text-foreground mb-1 uppercase tracking-wider">Follow Beyond Horizons</h4>
+                <ul className="space-y-1.5">
+                  <li><a href="https://www.linkedin.com/in/huilingt" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-smooth">LinkedIn · Hui Ling Teo</a></li>
+                  <li><a href="https://www.linkedin.com/company/beyondhorizonslegal" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-smooth">LinkedIn · Beyond Horizons</a></li>
+                  <li><a href="https://www.instagram.com/beyondhorizonslegal/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-smooth">Instagram · @beyondhorizonslegal</a></li>
+                  <li><a href="https://x.com/BYDHRZSGLAWYRUP" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-smooth">X · @BYDHRZSGLAWYRUP</a></li>
+                  <li><a href="https://www.youtube.com/@BeyondHorizonsHuiLing" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-smooth">YouTube · Beyond Horizons</a></li>
+                  <li><a href="https://www.insights.beyondhorizons.sg/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-smooth">Insights · Beyond Horizons on Substack</a></li>
+                  {/* FACEBOOK: OMIT-UNTIL-CONFIRMED. Candidate Page URL (Social Content: the URL used for the firm; provisional until HL confirms): https://www.facebook.com/people/Beyond-Horizons-Legal-Official/61569657579677/ . Un-hide as a link with text "Facebook · Beyond Horizons Legal - Official" only after HL confirms it in her own words. Do not add any other Facebook URL. */}
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-sm font-sans font-bold text-foreground mb-1 uppercase tracking-wider">Latest from Beyond Horizons</h4>
+                <ul className="space-y-1.5">
+                  <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7520725502081335296/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-smooth">LinkedIn, Hui Ling Teo: Beyond Precedent, Episode 1</a></li>
+                  <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7521036874321195008/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-smooth">LinkedIn, Beyond Horizons: When AI writes the first draft</a></li>
+                  <li><a href="https://www.instagram.com/beyondhorizonslegal/reel/DeagT-pMrkh/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-smooth">Instagram: the Beyond Precedent trailer</a></li>
+                  <li><a href="https://x.com/BYDHRZSGLAWYRUP/status/2115256083858292816" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-smooth">X: JOLCOs and where an airline default lands</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=Zwwc-e5A6cY" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-smooth">YouTube: who looks after your pet when you are gone?</a></li>
+                  <li><a href="https://www.insights.beyondhorizons.sg/p/asset-finance-and-alternatives-in-b8d" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-smooth">Insights: Asset Finance & Alternatives in APAC &amp; Beyond</a></li>
+                  {/* FACEBOOK LATEST: none. No Facebook post is on record; add one here only when its exact URL is confirmed. Do not guess a URL. */}
+                  {/* LATEST-LIST: hand-curated, one item per channel, refreshed at each paste (last refreshed 18 Nov 2026). Replace the LinkedIn Beyond Horizons item with the Pack A Page post only after that post is live. No embeds or third-party scripts. */}
+                </ul>
+              </div>
             </div>
 
             <div className="space-y-8">
@@ -72,9 +97,6 @@ const Contact = () => {
                       {t("contact.bookButton")} <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
-                  <div className="flex items-center justify-center text-muted-foreground text-xs mt-4">
-                    <Clock className="h-3.5 w-3.5 mr-2" />{t("contact.responseTime")}
-                  </div>
                 </CardContent>
               </Card>
 

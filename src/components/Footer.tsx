@@ -52,7 +52,7 @@ const Footer = () => {
                 <h3 className="text-lg font-serif font-bold text-foreground mb-1">Beyond Horizons by Bethel Chambers LLC</h3>
                 <div className="teal-line mt-3" />
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">Singapore law practice group — cross-border counsel across aviation finance, fractional GC, employment, AI governance, and robotics.</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">Singapore law practice — cross-border counsel across aviation finance, fractional GC, employment, AI governance, and robotics.</p>
               <div className="space-y-2 text-xs text-muted-foreground">
                 <p>Hui Ling Teo is ranked Band 3 for Aviation: Finance in Singapore by Chambers Asia-Pacific 2026.</p>
                 <p><Legal500Text text="Hui Ling Teo — Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore)." /></p>

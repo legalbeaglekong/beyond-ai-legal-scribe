@@ -15,7 +15,6 @@ const About = () => {
   const achievements: { icon: typeof Award; title: string; description: string; highlight: string; url?: string }[] = [
     { icon: Award, title: "Chambers Asia-Pacific 2026", description: "Band 3, Aviation: Finance — Singapore", highlight: "Chambers & Partners" },
     { icon: TrendingUp, title: t("about.achievement2Title"), description: "Hui Ling Teo \u2014 Legal 500 Asia Pacific 2026, Next Generation Partner, Asset Finance (Singapore).", highlight: "" },
-    { icon: Users, title: t("about.achievement3Title"), description: t("about.achievement3Desc"), highlight: "" },
     { icon: BookOpen, title: t("about.achievement4Title"), description: t("about.achievement4Desc"), highlight: t("about.achievement4Highlight"), url: "https://www.reedsmith.com/articles/esg-issues-for-aerospace-defense-companies/" },
   ];
 
@@ -53,11 +52,11 @@ const About = () => {
               <p className="text-muted-foreground leading-relaxed">{t("about.genesis2")}</p>
               <p className="text-muted-foreground leading-relaxed">{t("about.genesis3")}</p>
               <p className="text-muted-foreground leading-relaxed">
-                Beyond Horizons is a practice group within{" "}
+                Beyond Horizons is part of{" "}
                 <a href="https://www.bethelchambers.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline font-medium">
                   Bethel Chambers LLC
                 </a>
-                , a full-service Singapore law firm. We share seamless collaboration across practice areas and provide strategic support to clients navigating complex, cross-border matters.
+                , a Singapore law practice. We share seamless collaboration across practice areas and provide strategic support to clients navigating complex, cross-border matters.
               </p>
               <div className="mt-12">
                 <h4 className="text-sm uppercase tracking-[0.2em] text-accent mb-6 font-sans">{t("about.certTitle")}</h4>
@@ -111,7 +110,7 @@ const About = () => {
                     </a>
                   </Button>
                 </div>
-                <AccoladeBanner omitTitles={["ALB — Law Firm to Watch 2026"]} variant="inline" className="mt-8" />
+                <AccoladeBanner omitTitles={["ALB Singapore Firms to Watch 2026"]} variant="inline" className="mt-8" />
               </div>
             </div>
           </div>

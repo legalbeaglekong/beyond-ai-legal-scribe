@@ -125,7 +125,7 @@ const AIToolsPage = () => {
         <section className="pt-32 pb-20 bg-secondary/20">
           <div className="max-w-4xl mx-auto container-padding text-center fade-in">
             <div className="teal-line mx-auto mb-8" />
-            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4 font-sans">Technology × Legal Expertise</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4 font-sans">Technology × Legal Practice</p>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 leading-tight tracking-tight">
               AI Tools Built for Clients
             </h1>
@@ -133,7 +133,7 @@ const AIToolsPage = () => {
               We don't just advise on technology — we build it. Our team designs and deploys purpose-built AI tools that solve specific legal, regulatory, and commercial challenges for our clients.
             </p>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Each tool is developed in-house, grounded in practitioner expertise, and tailored to the regulatory and commercial context of the sector it serves.
+              Each tool is developed in-house, grounded in legal practice, and tailored to the regulatory and commercial context of the sector it serves.
             </p>
           </div>
         </section>
@@ -153,7 +153,7 @@ const AIToolsPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { icon: Search, title: "Problem-First Design", desc: "We identify specific pain points in legal workflows and regulatory compliance — then build targeted solutions rather than generic platforms." },
-                { icon: Shield, title: "Practitioner-Built", desc: "Every tool is designed by lawyers who understand the domain. AI augments legal expertise — it doesn't replace the judgment that complex matters require." },
+                { icon: Shield, title: "Practitioner-Built", desc: "Every tool is designed by lawyers who understand the domain. AI augments legal work — it doesn't replace the judgment that complex matters require." },
                 { icon: Globe, title: "Client-Deployed", desc: "Our tools are built for real-world deployment — used by airport operators, financial institutions, and in-house legal teams across Asia-Pacific." },
               ].map((item, i) => (
                 <Card key={i} className="border border-border bg-card shadow-md card-lift fade-in" style={{ transitionDelay: `${i * 80}ms` }}>

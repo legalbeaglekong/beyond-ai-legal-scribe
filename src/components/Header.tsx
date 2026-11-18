@@ -2,11 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "@/lib/router-compat";
-import { useLanguage, LANGUAGE_OPTIONS } from "@/i18n/LanguageContext";
+import { useLanguage, LANGUAGE_OPTIONS, SHOW_LANGUAGE_SWITCHER } from "@/i18n/LanguageContext";
 
 const workSubLinks = [
-  { name: "Specialist Platforms", href: "/work#platforms" },
-  { name: "Industry Expertise", href: "/work#industries" },
+  { name: "Our Platforms", href: "/work#platforms" },
+  { name: "Industry Focus", href: "/work#industries" },
   { name: "Our Clients", href: "/our-clients" },
   { name: "AI Tools", href: "/ai-tools" },
   { name: "Courses", href: "/courses" },
@@ -227,6 +227,7 @@ const Header = () => {
               );
             })}
 
+            {SHOW_LANGUAGE_SWITCHER && (<>
             {/* Separator */}
             <div className="w-px h-5 bg-border/60" />
 
@@ -257,6 +258,7 @@ const Header = () => {
                 </div>
               )}
             </div>
+            </>)}
 
             {/* CTA */}
             <Button variant="outline" size="sm" className="tracking-wider text-xs uppercase whitespace-nowrap shadow-md border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent" asChild>
@@ -372,6 +374,7 @@ const Header = () => {
               })}
 
               {/* Mobile language selector */}
+              {SHOW_LANGUAGE_SWITCHER && (
               <div className="border-t border-border/30 pt-4">
                 <button
                   onClick={() => setIsMobileLangOpen(!isMobileLangOpen)}
@@ -397,6 +400,7 @@ const Header = () => {
                   </div>
                 )}
               </div>
+              )}
               <Button variant="outline" size="lg" className="w-full mt-4 border-accent text-accent hover:bg-accent hover:text-accent-foreground" asChild>
                 <a 
                   href="https://wa.me/6597265330"

@@ -228,7 +228,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                     </a>
                   ) : (
                     <a href="#overview">
-                      View Expertise <ChevronDown className="ml-2 h-4 w-4" />
+                      View services <ChevronDown className="ml-2 h-4 w-4" />
                     </a>
                   )}
                 </Button>

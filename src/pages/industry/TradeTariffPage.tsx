@@ -54,7 +54,7 @@ export const data: IndustryPageData = {
   },
   cta: {
     heading: "Reposition with confidence — get strategic counsel",
-    description: "From contractual restructuring to JV realignment, our specialist trade team can help you scope the file. Schedule a consultation.",
+    description: "From contractual restructuring to JV realignment, our trade team can help you scope the file. Schedule a consultation.",
   },
   relatedPages: [
     { title: "Transportation", slug: "transportation" },
