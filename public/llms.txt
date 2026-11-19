@@ -62,6 +62,7 @@ Educational only; not legal or financial advice, and no lawyer-client relationsh
 - [Cybersecurity & Technology](https://beyondhorizons.sg/industry/cybersecurity-tech): Data protection, incident response, and tech transactions.
 - [Energy Transition](https://beyondhorizons.sg/industry/energy-transition): Renewable energy, carbon markets, and ESG compliance.
 - [Transportation](https://beyondhorizons.sg/industry/transportation): Maritime, logistics, and mobility infrastructure.
+- [Marine & Offshore Renewables](https://beyondhorizons.sg/industry/marine-offshore-renewables): Offshore wind and marine contracts: transboundary agreements, risk allocation and liabilities, vessels and casualties, and subsea cables.
 - [Health & wellness clinics](https://beyondhorizons.sg/industry/wellness-health): Clinic licensing under the Healthcare Services Act, advertising rules, leases, doctor and staff contracts, patient data, and buying or selling a clinic.
 - [Trade & Tariff](https://beyondhorizons.sg/industry/trade-tariff): Cross-border trade, sanctions, and customs advisory.
 - [Fractional GC Services](https://beyondhorizons.sg/industry/fractional-gc): Outsourced general counsel and in-house legal support.

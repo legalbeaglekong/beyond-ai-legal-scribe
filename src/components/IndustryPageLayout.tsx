@@ -120,7 +120,7 @@ export interface IndustryPageData {
 }
 
 /** Slugs whose https consultHref "Schedule Consultation" links open in a new tab. */
-const NEW_TAB_CONSULT_SLUGS = ["wellness-health"];
+const NEW_TAB_CONSULT_SLUGS = ["wellness-health", "marine-offshore-renewables"];
 
 // Pick a hero video + matching poster based on slug
 const getHeroForSlug = (slug: string): { src: string; poster?: string } => {
@@ -512,11 +512,11 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
             <Accordion type="single" collapsible className="w-full">
               {data.faqs.items.map((faq, i) => (
-                <AccordionItem key={i} value={`faq-${i}`} className={["aviation", "fractional-gc", "transportation", "ai-code-counsel", "wellness-health"].includes(data.slug) ? "group border-border/30" : "border-border/30"}>
+                <AccordionItem key={i} value={`faq-${i}`} className={["aviation", "fractional-gc", "transportation", "ai-code-counsel", "wellness-health", "marine-offshore-renewables"].includes(data.slug) ? "group border-border/30" : "border-border/30"}>
                   <AccordionTrigger className="text-left text-foreground text-sm hover:no-underline hover:text-accent">
                     {faq.question}
                   </AccordionTrigger>
-                  {["aviation", "fractional-gc", "ai-code-counsel", "wellness-health"].includes(data.slug) ? <div className="pb-4 text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden">{faq.content ?? <Legal500Text text={faq.answer} />}</div> : <AccordionContent {...(data.slug === "transportation" ? { forceMount: true as const } : {})} className={data.slug === "transportation" ? "text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground text-sm leading-relaxed"}>{faq.content ?? <Legal500Text text={faq.answer} />}</AccordionContent>}
+                  {["aviation", "fractional-gc", "ai-code-counsel", "wellness-health", "marine-offshore-renewables"].includes(data.slug) ? <div className="pb-4 text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden">{faq.content ?? <Legal500Text text={faq.answer} />}</div> : <AccordionContent {...(data.slug === "transportation" ? { forceMount: true as const } : {})} className={data.slug === "transportation" ? "text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground text-sm leading-relaxed"}>{faq.content ?? <Legal500Text text={faq.answer} />}</AccordionContent>}
                 </AccordionItem>
               ))}
             </Accordion>

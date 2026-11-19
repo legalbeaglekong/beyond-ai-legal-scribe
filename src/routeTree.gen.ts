@@ -49,6 +49,7 @@ import { Route as IndustryBlockchainDigitalAssetsRouteImport } from './routes/in
 import { Route as IndustryCybersecurityTechRouteImport } from './routes/industry/cybersecurity-tech'
 import { Route as IndustryEnergyTransitionRouteImport } from './routes/industry/energy-transition'
 import { Route as IndustryFractionalGcRouteImport } from './routes/industry/fractional-gc'
+import { Route as IndustryMarineOffshoreRenewablesRouteImport } from './routes/industry/marine-offshore-renewables'
 import { Route as IndustryRoboticsRouteImport } from './routes/industry/robotics'
 import { Route as IndustrySpaceRouteImport } from './routes/industry/space'
 import { Route as IndustryTradeTariffRouteImport } from './routes/industry/trade-tariff'
@@ -270,6 +271,12 @@ const IndustryFractionalGcRoute = IndustryFractionalGcRouteImport.update({
   path: '/industry/fractional-gc',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IndustryMarineOffshoreRenewablesRoute =
+  IndustryMarineOffshoreRenewablesRouteImport.update({
+    id: '/industry/marine-offshore-renewables',
+    path: '/industry/marine-offshore-renewables',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndustryRoboticsRoute = IndustryRoboticsRouteImport.update({
   id: '/industry/robotics',
   path: '/industry/robotics',
@@ -361,6 +368,7 @@ export interface FileRoutesByFullPath {
   '/industry/cybersecurity-tech': typeof IndustryCybersecurityTechRoute
   '/industry/energy-transition': typeof IndustryEnergyTransitionRoute
   '/industry/fractional-gc': typeof IndustryFractionalGcRoute
+  '/industry/marine-offshore-renewables': typeof IndustryMarineOffshoreRenewablesRoute
   '/industry/robotics': typeof IndustryRoboticsRoute
   '/industry/space': typeof IndustrySpaceRoute
   '/industry/trade-tariff': typeof IndustryTradeTariffRoute
@@ -413,6 +421,7 @@ export interface FileRoutesByTo {
   '/industry/cybersecurity-tech': typeof IndustryCybersecurityTechRoute
   '/industry/energy-transition': typeof IndustryEnergyTransitionRoute
   '/industry/fractional-gc': typeof IndustryFractionalGcRoute
+  '/industry/marine-offshore-renewables': typeof IndustryMarineOffshoreRenewablesRoute
   '/industry/robotics': typeof IndustryRoboticsRoute
   '/industry/space': typeof IndustrySpaceRoute
   '/industry/trade-tariff': typeof IndustryTradeTariffRoute
@@ -466,6 +475,7 @@ export interface FileRoutesById {
   '/industry/cybersecurity-tech': typeof IndustryCybersecurityTechRoute
   '/industry/energy-transition': typeof IndustryEnergyTransitionRoute
   '/industry/fractional-gc': typeof IndustryFractionalGcRoute
+  '/industry/marine-offshore-renewables': typeof IndustryMarineOffshoreRenewablesRoute
   '/industry/robotics': typeof IndustryRoboticsRoute
   '/industry/space': typeof IndustrySpaceRoute
   '/industry/trade-tariff': typeof IndustryTradeTariffRoute
@@ -520,6 +530,7 @@ export interface FileRouteTypes {
     | '/industry/cybersecurity-tech'
     | '/industry/energy-transition'
     | '/industry/fractional-gc'
+    | '/industry/marine-offshore-renewables'
     | '/industry/robotics'
     | '/industry/space'
     | '/industry/trade-tariff'
@@ -572,6 +583,7 @@ export interface FileRouteTypes {
     | '/industry/cybersecurity-tech'
     | '/industry/energy-transition'
     | '/industry/fractional-gc'
+    | '/industry/marine-offshore-renewables'
     | '/industry/robotics'
     | '/industry/space'
     | '/industry/trade-tariff'
@@ -624,6 +636,7 @@ export interface FileRouteTypes {
     | '/industry/cybersecurity-tech'
     | '/industry/energy-transition'
     | '/industry/fractional-gc'
+    | '/industry/marine-offshore-renewables'
     | '/industry/robotics'
     | '/industry/space'
     | '/industry/trade-tariff'
@@ -677,6 +690,7 @@ export interface RootRouteChildren {
   IndustryCybersecurityTechRoute: typeof IndustryCybersecurityTechRoute
   IndustryEnergyTransitionRoute: typeof IndustryEnergyTransitionRoute
   IndustryFractionalGcRoute: typeof IndustryFractionalGcRoute
+  IndustryMarineOffshoreRenewablesRoute: typeof IndustryMarineOffshoreRenewablesRoute
   IndustryRoboticsRoute: typeof IndustryRoboticsRoute
   IndustrySpaceRoute: typeof IndustrySpaceRoute
   IndustryTradeTariffRoute: typeof IndustryTradeTariffRoute
@@ -972,6 +986,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustryFractionalGcRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/industry/marine-offshore-renewables': {
+      id: '/industry/marine-offshore-renewables'
+      path: '/industry/marine-offshore-renewables'
+      fullPath: '/industry/marine-offshore-renewables'
+      preLoaderRoute: typeof IndustryMarineOffshoreRenewablesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/industry/robotics': {
       id: '/industry/robotics'
       path: '/industry/robotics'
@@ -1087,6 +1108,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndustryCybersecurityTechRoute: IndustryCybersecurityTechRoute,
   IndustryEnergyTransitionRoute: IndustryEnergyTransitionRoute,
   IndustryFractionalGcRoute: IndustryFractionalGcRoute,
+  IndustryMarineOffshoreRenewablesRoute: IndustryMarineOffshoreRenewablesRoute,
   IndustryRoboticsRoute: IndustryRoboticsRoute,
   IndustrySpaceRoute: IndustrySpaceRoute,
   IndustryTradeTariffRoute: IndustryTradeTariffRoute,
