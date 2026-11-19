@@ -73,6 +73,10 @@ export interface PillarContentSection {
 }
 
 export interface PillarPageProps {
+  /** Optional override for the hero and bottom WhatsApp consultation buttons. */
+  whatsappHref?: string;
+  /** Optional override for the editorial "Email HL@beyondhorizons.sg" links. */
+  emailHref?: string;
   slug: string;                 // e.g. "singapore-restructuring-insolvency"
   eyebrow: string;              // e.g. "Singapore · Restructuring & Insolvency"
   h1: string;
@@ -163,6 +167,8 @@ const PillarPage = ({
   beforeServices,
   serviceOffers,
   serviceCatalogName,
+  whatsappHref,
+  emailHref,
 }: PillarPageProps) => {
   const canonical = `${SITE}/${slug}`;
   const keepFaqAnswersMounted = Boolean(editorial) || [
@@ -277,11 +283,11 @@ const PillarPage = ({
               Last updated <time dateTime={lastUpdatedISO}>{lastUpdatedLabel}</time>
             </p>
             <Button asChild size="lg" className="bg-primary text-primary-foreground">
-              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+              <a href={whatsappHref ?? BOOKING_URL} target="_blank" rel="noopener noreferrer">
                 {editorial ? "Schedule a consultation" : "Schedule a Consultation"} <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
-            {editorial && <a href="mailto:HL@beyondhorizons.sg" className="block mt-5 text-sm text-primary hover:underline">Email HL@beyondhorizons.sg</a>}
+            {editorial && <a href={emailHref ?? "mailto:HL@beyondhorizons.sg"} className="block mt-5 text-sm text-primary hover:underline">Email HL@beyondhorizons.sg</a>}
           </div>
         </section>
 
@@ -423,11 +429,11 @@ const PillarPage = ({
             {ctaAfterBody}
             <div className="flex flex-wrap gap-4 justify-center">
               {!ctaHideBookButton && <Button asChild size="lg" variant="secondary">
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                <a href={whatsappHref ?? BOOKING_URL} target="_blank" rel="noopener noreferrer">
                   {editorial ? "Schedule a consultation" : "Book a Consultation"} <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>}
-              {editorial && <Button asChild size="lg" variant="secondary"><a href="mailto:HL@beyondhorizons.sg"><Mail className="mr-2 h-4 w-4" />Email HL@beyondhorizons.sg</a></Button>}
+              {editorial && <Button asChild size="lg" variant="secondary"><a href={emailHref ?? "mailto:HL@beyondhorizons.sg"}><Mail className="mr-2 h-4 w-4" />Email HL@beyondhorizons.sg</a></Button>}
               {exploreLink && (
                 <Button asChild size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10">
                   <Link to={exploreLink.to}>

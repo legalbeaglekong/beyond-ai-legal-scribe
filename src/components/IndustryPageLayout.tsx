@@ -72,6 +72,8 @@ export interface IndustryPageData {
   contentSections?: { heading: string; paragraphs: string[]; links?: { label: string; to: string }[] }[];
   /** Optional override for the body "Schedule Consultation" buttons (hero + CTA). */
   consultHref?: string;
+  /** Optional override for the bottom CTA "Email Us" button href. */
+  ctaEmailHref?: string;
   /** When true, LegalService provider references the site-wide Organization @id. */
   orgRef?: boolean;
   /** Optional extra JSON-LD objects rendered after the FAQPage script. */
@@ -120,7 +122,7 @@ export interface IndustryPageData {
 }
 
 /** Slugs whose https consultHref "Schedule Consultation" links open in a new tab. */
-const NEW_TAB_CONSULT_SLUGS = ["wellness-health", "marine-offshore-renewables"];
+const NEW_TAB_CONSULT_SLUGS = ["wellness-health", "marine-offshore-renewables", "aviation"];
 
 // Pick a hero video + matching poster based on slug
 const getHeroForSlug = (slug: string): { src: string; poster?: string } => {
@@ -548,7 +550,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
                 )}
               </Button>
               <Button variant="outline" size="lg" className="border-2 border-white text-white font-semibold hover:bg-white hover:text-black shadow-lg" asChild>
-                <a href="mailto:HL@beyondhorizons.sg">
+                <a href={data.ctaEmailHref ?? "mailto:HL@beyondhorizons.sg"}>
                   <Mail className="mr-2 h-4 w-4" /> Email Us
                 </a>
               </Button>

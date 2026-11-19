@@ -38,7 +38,7 @@ const GlobalPartners = () => {
 
           <div className="text-center">
             <Button size="lg" className="mr-4 animate-blink-glow" asChild>
-              <a href="https://wa.me/6597265330" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/6597265330?text=Enquiry%20via%20beyondhorizons.sg%2F" target="_blank" rel="noopener noreferrer">
                 {t("globalPartners.scheduleConsultation")}
               </a>
             </Button>

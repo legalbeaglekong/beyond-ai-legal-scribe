@@ -49,9 +49,9 @@ const Contact = () => {
                       {info.details.map((detail, di) => (
                         <p key={di} className="text-sm text-muted-foreground">
                           {info.title === t("contact.email") && di === 0 ? (
-                            <a href={`mailto:${detail}`} className="hover:text-accent transition-smooth">{detail}</a>
+                            <a href={`mailto:${detail}?subject=Enquiry%20via%20beyondhorizons.sg%2F`} className="hover:text-accent transition-smooth">{detail}</a>
                           ) : info.title === t("contact.whatsapp") && di === 0 ? (
-                            <a href="https://wa.me/6597265330" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-smooth">{detail}</a>
+                            <a href="https://wa.me/6597265330?text=Enquiry%20via%20beyondhorizons.sg%2F" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-smooth">{detail}</a>
                           ) : detail}
                         </p>
                       ))}
@@ -93,7 +93,7 @@ const Contact = () => {
                   <h3 className="text-xl font-serif font-bold mb-4 text-foreground">{t("contact.bookTitle")}</h3>
                   <p className="text-sm text-muted-foreground mb-8 leading-relaxed text-justify">{t("contact.bookDesc")}</p>
                   <Button variant="default" size="lg" className="w-full animate-blink-glow" asChild>
-                    <a href="https://wa.me/6597265330" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/6597265330?text=Enquiry%20via%20beyondhorizons.sg%2F" target="_blank" rel="noopener noreferrer">
                       {t("contact.bookButton")} <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   </Button>

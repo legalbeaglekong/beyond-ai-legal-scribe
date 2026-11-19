@@ -47,7 +47,7 @@ const privateAviationBody = (
       <li>source of funds, with red flags for cash, third-party payers and unusual routings or last-minute changes;</li>
       <li>record keeping, and who decides when to file a report with STRO.</li>
     </ul>
-    <p className={p}><strong className="text-foreground">We can help private charter operators put in place KYC procedures, IPPC and a charter-specific risk framework.</strong> This is legal support; we do not issue licences, certifications or regulatory approvals. Write to <strong className="text-foreground"><a href="mailto:HL@beyondhorizons.sg" className={a}>HL@beyondhorizons.sg</a></strong>.</p>
+    <p className={p}><strong className="text-foreground">We can help private charter operators put in place KYC procedures, IPPC and a charter-specific risk framework.</strong> This is legal support; we do not issue licences, certifications or regulatory approvals. Write to <strong className="text-foreground"><a href="mailto:HL@beyondhorizons.sg?subject=Enquiry%20via%20beyondhorizons.sg%2Fsingapore-aviation-law" className={a}>HL@beyondhorizons.sg</a></strong>.</p>
     <p className={p}>Owners and operators who want ongoing support can use our <Link to="/industry/fractional-gc" className={a}>fractional general counsel service</Link>.</p>
     <p className={p + " text-sm"}><em>General information on Singapore law as at October 2026, not legal advice. Regulatory requirements change; check CAAS, the Singapore Tourism Board, the Singapore Police Force's STRO pages and the official statutes for the current position. Beyond Horizons by Bethel Chambers LLC is a Singapore law practice, not an English law firm; English law input is given through Hui Ling Teo, who is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore, and advice on other laws is obtained through foreign counsel. Beyond Horizons by Bethel Chambers LLC.</em></p>
   </>
@@ -56,11 +56,13 @@ const privateAviationBody = (
 const SingaporeAviationLawPage = () => (
   <PillarPage
     slug="singapore-aviation-law"
+    whatsappHref="https://wa.me/6597265330?text=Enquiry%20via%20beyondhorizons.sg%2Fsingapore-aviation-law"
+    emailHref="mailto:HL@beyondhorizons.sg?subject=Enquiry%20via%20beyondhorizons.sg%2Fsingapore-aviation-law"
     eyebrow="Singapore aviation regulation · CAAS · Private aviation compliance"
     h1="Singapore aviation law and regulation — CAAS, private aviation compliance and Cape Town interfaces"
     intro="This page is our guide to Singapore aviation law and regulation: CAAS approvals, private and business aviation regulatory compliance, charter operator checks and KYC, and Cape Town interfaces. Beyond Horizons by Bethel Chambers LLC advises from Singapore; English law input is given through Hui Ling Teo, who is qualified as a solicitor in England and Wales and as an advocate and solicitor in Singapore. We are cross-border lawyers with a physical presence in Singapore, available across time zones, comfortable across global matters, with specific expertise in developing markets. From our Singapore hub we coordinate CAAS regulatory interfaces, security, filings and opinions when the deal needs Singapore pieces — and we run the same desk across APAC and global working hours on multi-jurisdictional files, including developing markets. Where files turn distressed, we work the cross-border documentary path around aircraft recoveries / asset recovery, Cape Town Convention priority and IDERA strategy (with local counsel as needed), and insolvency-adjacent coordination. Documents can be stress-tested with our disputes and arbitration team before they have to survive a default, redelivery fight or enforcement path. We are a law practice: we do not underwrite securities, lend, broker aircraft, or act as a CAMO/MRO."
     introExtra={<p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">Hui Ling Teo is ranked Band 3 for Aviation: Finance in Singapore by Chambers Asia-Pacific 2026.</p>}
-    afterIntroCallout={<div className="mb-8"><ConsultCallout mailto="mailto:HL@beyondhorizons.sg?subject=Singapore%20aviation%20enquiry%20%28singapore-aviation-law%2C%20top%29" freeLine /></div>}
+    afterIntroCallout={<div className="mb-8"><ConsultCallout mailto="mailto:HL@beyondhorizons.sg?subject=Enquiry%20via%20beyondhorizons.sg%2Fsingapore-aviation-law" freeLine /></div>}
     badges={["Beyond Horizons by Bethel Chambers LLC", "English-law Leases & Financings", "Cape Town / IDERA Coordination", "CAAS Regulatory Coordination", "Aircraft Recoveries & Incomplete Docs"]}
     metaTitle="Aviation Lawyer Singapore: CAAS, Private Jets and Cape Town"
     metaDescription="Singapore aviation law and counsel: CAAS approvals, AOC and foreign operator permit checks, charter broker rules, KYC and Cape Town Convention filings."
@@ -111,7 +113,7 @@ const SingaporeAviationLawPage = () => (
     ctaHeading="Schedule a Singapore Aviation Consultation"
     ctaBody={<> Whether you are placing a cross-border lease (Singapore hub or elsewhere), working a recovery or incomplete-docs file in a developing or other market, building a SAF offtake, or advancing an airport/vertiport / AAM venture — tell us what you need.</>}
     ctaHideBookButton
-    ctaAfterBody={<div className="mb-8"><ConsultCallout mailto="mailto:HL@beyondhorizons.sg?subject=Singapore%20aviation%20enquiry%20%28singapore-aviation-law%2C%20end%29" /></div>}
+    ctaAfterBody={<div className="mb-8"><ConsultCallout mailto="mailto:HL@beyondhorizons.sg?subject=Enquiry%20via%20beyondhorizons.sg%2Fsingapore-aviation-law" /></div>}
     exploreLink={{ label: "Looking to instruct counsel? Aviation finance counsel in Singapore", to: "/industry/aviation" }}
     lastUpdatedISO="2026-10-12"
     lastUpdatedLabel="October 2026"
