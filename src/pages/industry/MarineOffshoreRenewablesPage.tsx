@@ -31,6 +31,16 @@ const data: IndustryPageData = {
       { icon: Cable, title: "Subsea cables and interconnectors", description: "When a third-party ship damages a cable, recovery may depend on a contractual route to revenue, insurance of the owner's own loss, and agreement on who pursues the ship, at whose cost and for whose benefit.", bullets: ["Business interruption cover on the export cable", "Recovery plans that do not rely on breaking the limit", "Enforcement where the assets and insurers are"] },
     ],
   },
+  beforeOverview: (
+    <section className="section-padding bg-background">
+      <div className="max-w-3xl mx-auto container-padding fade-in space-y-6">
+        <figure>
+          <img src="/images/marine/offshore-wind-turbines-pexels-27197661.webp" alt="A line of offshore wind turbines on the horizon over open sea, with waves in the foreground." width={1600} height={1067} loading="lazy" decoding="async" className="w-full h-auto rounded-md border border-border/40" />
+          <figcaption className="text-xs text-muted-foreground mt-2 leading-relaxed">Illustrative photograph of an offshore wind farm. Photograph: Patrick, Pexels.</figcaption>
+        </figure>
+      </div>
+    </section>
+  ),
   afterOverview: (
     <section className="section-padding bg-background">
       <div className="max-w-4xl mx-auto container-padding fade-in space-y-6">
