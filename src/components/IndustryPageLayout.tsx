@@ -72,6 +72,10 @@ export interface IndustryPageData {
   contentSections?: { heading: string; paragraphs: string[]; links?: { label: string; to: string }[] }[];
   /** Optional override for the body "Schedule Consultation" buttons (hero + CTA). */
   consultHref?: string;
+  /** When true, LegalService provider references the site-wide Organization @id. */
+  orgRef?: boolean;
+  /** Optional extra JSON-LD objects rendered after the FAQPage script. */
+  pageSchema?: Record<string, unknown>[];
   overview: {
     heading: string;
     intro?: import("react").ReactNode;
@@ -114,6 +118,9 @@ export interface IndustryPageData {
   relatedExternal?: { label: string; href: string }[];
   rankings?: { items: string[]; notes?: string[]; chambersUrl?: string; publications?: import("react").ReactNode };
 }
+
+/** Slugs whose https consultHref "Schedule Consultation" links open in a new tab. */
+const NEW_TAB_CONSULT_SLUGS = ["wellness-health"];
 
 // Pick a hero video + matching poster based on slug
 const getHeroForSlug = (slug: string): { src: string; poster?: string } => {
@@ -169,8 +176,8 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org", "@type": "LegalService",
-            name: data.serviceSchema ? "Beyond Horizons by Bethel Chambers LLC" : "Beyond Horizons by Bethel Chambers",
-            provider: { "@type": "Organization", name: "Bethel Chambers LLC", url: "https://beyondhorizons.sg" },
+            name: data.orgRef || data.serviceSchema ? "Beyond Horizons by Bethel Chambers LLC" : "Beyond Horizons by Bethel Chambers",
+            provider: data.orgRef ? { "@id": "https://beyondhorizons.sg/#organization" } : { "@type": "Organization", name: "Bethel Chambers LLC", url: "https://beyondhorizons.sg" },
             description: data.legalService?.description ?? data.seo.description,
             ...(data.legalService ? { serviceType: data.legalService.serviceType, employee: data.legalService.employee } : {}), areaServed: "Asia-Pacific",
             url: `https://beyondhorizons.sg/industry/${data.slug}`,
@@ -186,6 +193,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             })),
           })}
         </script>
+        {data.pageSchema?.map((obj, i) => <script key={`page-schema-${i}`} type="application/ld+json">{JSON.stringify(obj)}</script>)}
       </Helmet>
 
       <div className="min-h-screen bg-background" ref={containerRef}>
@@ -212,7 +220,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
                 <Button variant="default" size="lg" className="bg-accent text-accent-foreground border-2 border-accent font-semibold shadow-xl hover:bg-accent/90" asChild>
                   {data.consultHref ? (
-                    <a href={data.consultHref}>
+                    <a href={data.consultHref} {...(NEW_TAB_CONSULT_SLUGS.includes(data.slug) && data.consultHref.startsWith("https://") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
                       Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   ) : (
@@ -504,11 +512,11 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             </div>
             <Accordion type="single" collapsible className="w-full">
               {data.faqs.items.map((faq, i) => (
-                <AccordionItem key={i} value={`faq-${i}`} className={["aviation", "fractional-gc", "transportation", "ai-code-counsel"].includes(data.slug) ? "group border-border/30" : "border-border/30"}>
+                <AccordionItem key={i} value={`faq-${i}`} className={["aviation", "fractional-gc", "transportation", "ai-code-counsel", "wellness-health"].includes(data.slug) ? "group border-border/30" : "border-border/30"}>
                   <AccordionTrigger className="text-left text-foreground text-sm hover:no-underline hover:text-accent">
                     {faq.question}
                   </AccordionTrigger>
-                  {["aviation", "fractional-gc", "ai-code-counsel"].includes(data.slug) ? <div className="pb-4 text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden">{faq.content ?? <Legal500Text text={faq.answer} />}</div> : <AccordionContent {...(data.slug === "transportation" ? { forceMount: true as const } : {})} className={data.slug === "transportation" ? "text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground text-sm leading-relaxed"}>{faq.content ?? <Legal500Text text={faq.answer} />}</AccordionContent>}
+                  {["aviation", "fractional-gc", "ai-code-counsel", "wellness-health"].includes(data.slug) ? <div className="pb-4 text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden">{faq.content ?? <Legal500Text text={faq.answer} />}</div> : <AccordionContent {...(data.slug === "transportation" ? { forceMount: true as const } : {})} className={data.slug === "transportation" ? "text-muted-foreground text-sm leading-relaxed group-data-[state=closed]:hidden" : "text-muted-foreground text-sm leading-relaxed"}>{faq.content ?? <Legal500Text text={faq.answer} />}</AccordionContent>}
                 </AccordionItem>
               ))}
             </Accordion>
@@ -530,7 +538,7 @@ const IndustryPageLayout = ({ data }: { data: IndustryPageData }) => {
             {!data.cta.hideButtons && <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="default" size="lg" className="bg-white text-black font-semibold shadow-lg hover:bg-white/90" asChild>
                 {data.consultHref ? (
-                  <a href={data.consultHref}>
+                  <a href={data.consultHref} {...(NEW_TAB_CONSULT_SLUGS.includes(data.slug) && data.consultHref.startsWith("https://") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
                     Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 ) : (
